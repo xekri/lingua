@@ -1,0 +1,39 @@
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+  font-family: "Noto Serif Japanese", "Noto Serif CJK JP", serif;
+  font-size: 16px; }
+  @media screen and (max-device-width: 480px) {
+    html, body {
+      font-size: 12px; } }
+  html main, body main {
+    width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0; }
+    @media screen and (max-device-width: 480px) {
+      html main, body main {
+        width: 100%; } }
+  html section, body section {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 20px;
+    border: solid #fff;
+    border-width: 1px 0 0 1px; }
+  html figure, body figure {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    html figure img, body figure img {
+      width: 160px; }
+  html nav, body nav {
+    position: fixed;
+    height: 32px;
+    margin: 0 auto; }
+  html li, body li {
+    list-style-type: square; }
