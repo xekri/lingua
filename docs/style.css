@@ -37,3 +37,7 @@ html, body {
     margin: 0 auto; }
   html li, body li {
     list-style-type: square; }
+  html a, body a {
+    color: white; }
+    html a:visited, body a:visited {
+      color: gray; }
