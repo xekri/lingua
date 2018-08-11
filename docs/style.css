@@ -5,11 +5,12 @@ html, body {
   padding: 0;
   color: white;
   background-color: black;
-  font-family: "Noto Serif Japanese", "Noto Serif CJK JP", serif;
-  font-size: 16px; }
+  font-family: "Noto Sans Japanese", "Noto Sans CJK JP", sans;
+  font-weight: lighter;
+  font-size: 12pt; }
   @media screen and (max-device-width: 480px) {
     html, body {
-      font-size: 12px; } }
+      font-size: 10pt; } }
   html main, body main {
     width: 640px;
     margin: 0 auto;
@@ -41,3 +42,5 @@ html, body {
     color: white; }
     html a:visited, body a:visited {
       color: gray; }
+  html h1, body h1 {
+    font-weight: normal; }
