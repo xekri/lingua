@@ -22,12 +22,12 @@ gulp.task("browser-sync", () => {
             baseDir: "./docs"
         }
     });
-    gulp.watch("./src/*.js", ["reload"]);
-    gulp.watch("./docs/*.html", ["reload"]);
+    gulp.watch("./src/**/*.js", ["reload"]);
+    gulp.watch("./docs/**/*.html", ["reload"]);
 });
 
 gulp.task("sass", () => {
-    gulp.src("./src/*.sass")
+    gulp.src("./src/**/*.sass")
         .pipe(plumber({
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
@@ -40,7 +40,7 @@ gulp.task("pug", () => {
     var option = {
         pretty: true
     }
-    gulp.src("./src/*.pug")
+    gulp.src("./src/**/*.pug")
         .pipe(plumber({
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))

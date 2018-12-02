@@ -1,0 +1,50 @@
+- var title = "suzuri"
+
+mixin mySection(title)
+	section(id=title)
+		h1= title
+		block
+
+doctype html
+html(lang="en-GB")
+	head
+		meta(charset="UTF-8")
+		title= title
+		link(href="https://fonts.googleapis.com/css?family=Noto+Sans", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed", rel="stylesheet")
+		link(href="../style.css", rel="stylesheet")
+
+	body
+		main
+			+mySection(title)
+				+mySection("picture")
+					figure
+						img#suzuri(src="../images/suzuri.png", alt="the icon of suzuri")
+
+				+mySection("facts")
+					p (these may be changed)
+
+					ul
+						li his name is <ruby>硯<rt>suzuri</rt></ruby>
+						li he is a virtual personality
+						li he is 1.75 meters tall
+						li he weighs 56 kilograms
+						li he has a complex about his mascular body
+							ul: li because he likes feminine clothes, which he actually does not wear
+						li he was born and raised in Japan
+						li he is 2X years old.
+						li he is a graduate student of science and technology
+						li he is a cisgendered bisexual androromantic male
+						li he is a versatile but prefers to be a bottom when he has sex
+						li he speaks japanese and english
+						li he likes to play the bass
+							ul: li using <i>Synapse XS-15FPA PB</i>
+						li he loves to listen to japanese alternative rocks
+							ul: li <i>Zazen Boys</i> is his best
+						li he rarely smokes but always carries a pack of <i>Marlboro Ice Blast</i>
+						li he likes to drink beer and can drink a lot
+							ul: li he likes to make physical contacts, pretending to be a drunk
+						li he is a hedonist
+						li he is an polyamorist
+						li he is an antinatalist
+						li he is a liberalist
