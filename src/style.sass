@@ -5,63 +5,65 @@ $navWidth: 32px
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
 
 html, body
-    box-sizing: border-box
-    height: 100%
-    margin: 0
-    padding: 0
-    color: white
-    background-color: black
-    font-family: "Roboto", "Noto Sans TC", sans
+  box-sizing: border-box
+  height: 100%
+  margin: 0
+  padding: 0
+  color: white
+  background-color: black
+  font-family: "Roboto", "Noto Sans TC", sans
 
-    font-size: 12pt
+  font-size: 12pt
+  @media screen and (max-device-width:480px)
+    font-size: 10pt
+
+  article
+    width: 720px
     @media screen and (max-device-width:480px)
-        font-size: 10pt
+      width: 100%
+    // overflow-y: scroll
+    margin: 0 auto
+    padding: $space
+    padding-bottom: 0
 
-    main
-        width: 720px
-        @media screen and (max-device-width:480px)
-            width: 100%
-        // overflow-y: scroll
-        margin: 0 auto
-        padding: $space
-        padding-bottom: 0
+    // margin-top: $navWidth
 
-        // margin-top: $navWidth
+  section
+    margin: 0
+    margin-bottom: $space
+    padding: 0
+    padding-left: $space
 
-    section
-        margin: 0
-        margin-bottom: $space
-        padding: 0
-        padding-left: $space
+    border: solid #fff
+    border-width: 1px 0 0 1px
 
-        border: solid #fff
-        border-width: 1px 0 0 1px
+    // background-color: #ffffff08
 
-        &:last-child
-            // margin-bottom: -$space
+    &:last-child
+      // margin-bottom: -$space
 
-    figure
-        display: flex
-        justify-content: space-around
-        align-items: center
-        img
-            width: 160px
+  figure
+    display: flex
+    justify-content: space-around
+    align-items: center
+    img
+      width: 160px
 
-    nav
-        position: fixed
-        height: $navWidth
-        margin: 0 auto
+  nav
+    position: fixed
+    height: $navWidth
+    margin: 0 auto
 
-    li
-        list-style-type: square
+  li
+    list-style-type: square
 
-    a
-        color: white
-        &:link
-        &:visited
-            color: gray
-        &:hover
-        &:active
+  a
+    color: white
+    &:link
+    &:visited
+      color: gray
+    &:hover
+    &:active
 
-    h1
-        font-weight: normal
+  h1
+    font-weight: normal
