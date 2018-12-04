@@ -1,54 +1,68 @@
-- var title = "suzuri"
+extend /_layout.pug
 
-mixin mySection(title)
-	section(id=title)
-		h1= title
-		block
+block vars
+	- var title = "suzuri"
 
-doctype html
-html(lang="en-GB")
-	head
-		meta(charset="UTF-8")
-		title= title
-		link(href="https://fonts.googleapis.com/css?family=Noto+Sans", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed", rel="stylesheet")
-		link(href="../style.css", rel="stylesheet")
+block main
+	+mySection(title)
+		+mySection("picture")
+			figure
+				img#suzuri(src="../images/suzuri.png", alt="a picture of suzuri")
 
-	body
-		main
-			+mySection(title)
-				+mySection("picture")
-					figure
-						img#suzuri(src="../images/suzuri.png", alt="a picture of suzuri")
+		+mySection("facts")
+			p (these may be changed)
 
-				+mySection("facts")
-					p (these may be changed)
-
+			ul
+				li basic
 					ul
 						li his name is <ruby>硯<rt>suzuri</rt></ruby>
 						li he is a virtual personality
-						li he is 1.75 meters tall
-						li he weighs 56 kilograms
-						li he has a complex about his mascular body
-							ul: li because he likes feminine clothes, which he actually does not wear
 						li he was born and raised in Japan
-						li he is living alone in a 1DK apartment in a provincial city in eastern japan
-						li he is 2X years old.
-						li he is a graduate student of science and technology
-						li he is a cisgendered bisexual androromantic male
-						li he is a versatile but prefers to be a bottom when he has sex
 						li he speaks japanese and english
+						li he is a graduate student of science and technology
+						li he is living alone in a 1DK apartment in a provincial city in eastern japan
+				li physical
+					ul
+						li he is 1.75 meters tall
+						li he weighs 60 kilograms
+						li he is 2X years old
+				li mental
+					ul
+						li he does not like his muscular body
+						ul: li it is because he likes gender-neutral or feminine clothes, which he actually does not wear
 						li he likes to play the bass
-							ul: li using <i>Synapse XS-15FPA PB</i>
+							ul: li he uses <i>Synapse XS-15FPA PB</i>
 						li he loves to listen to japanese alternative rocks
 							ul: li <i>Zazen Boys</i> is his best
 						li he rarely smokes but always carries a pack of <i>Marlboro Ice Blast</i>
 						li he likes to drink beer and can drink a lot
 							ul: li he likes to make physical contacts, pretending to be a drunk
 						li he is a hedonist
-						li he is a polyamorist
 						li he is an antinatalist
 						li he is a liberalist
+				li sexual
+					ul
+						li he is a cisgendered bisexual androromantic male
+						li he is a versatile but prefers to be a bottom when he has sex with men
+						li he is a polyamorist
 
-				+mySection("episodes")
-					p (in preparation)
+		+mySection("episodes")
+			p (in preparation)
+
+		+mySection("talks")
+			a(href="https://twitter.com/search?f=tweets&q=from%3Amelanizo%20suzuri%20OR%20%E7%A1%AF") tweets by sumi
+			p these are just unofficial ideas and are not definitive.
+
+		+mySection("arts")
+			p fan arts are always welcome and greatly appreciated!!
+
+			+mySection("by 一人 sensei")
+				center
+					<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+				p
+					| 記念すべき最初の硯君です
+					| 　激エモなんだが！！？？？
+					| 　LOVE…………
+					| 　もうこれが公式でしょ

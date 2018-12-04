@@ -1,232 +1,219 @@
-- var title = "sumi"
+extend /_layout.pug
 
-mixin mySection(title)
-	section(id=title)
-		h1= title
-		block
+block vars
+	- var title = "sumi"
 
-doctype html
-html(lang="en-GB")
-	head
-		meta(charset="UTF-8")
-		title= title
-		link(href="https://fonts.googleapis.com/css?family=Noto+Sans", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed", rel="stylesheet")
-		link(href="style.css", rel="stylesheet")
+block main
+	+mySection(title)
+		+mySection("icon")
+			figure
+				img#sumi(src="../../images/sumi.jpg", alt="the icon of sumi")
 
-	body
-		main
-			+mySection(title)
+		+mySection("names")
+			| 志村スミト
+			dl
+				dt: a(href="https://gist.github.com/46ra/3f45fc4f3dbbfc35bba2ff96c33bddb7#file-srj-md") sumi-romanised
+				dd simura sumito
+				dt english
+				dd Sumito Shimura
+				dt nickname
+				dd sumi
 
-				+mySection("icon")
-					figure
-						img#sumi(src="../../images/sumi.jpg", alt="the icon of sumi")
+		+mySection("ideologies"): ul
+			li
+				del determinism
+				| &nbsp;
+				del physicalism
+				| &nbsp;(i deny both free will and determinism. what should i call it?)
+			li antinatalism
+			li antimonogamism
+			li anthropocentrism (involuntarily adopted and desired to be withdrawn)
+			li scepticism
+			li
+				del social liberalism
+				| &nbsp; egalitarianism (?)
 
-				+mySection("names")
-					| 志村スミト
+		+mySection("gender")
+			ul
+				li cisgendered
+				li androsexual
+				li androromantic
+				li
+					| polyamorous
+					| &nbsp;
+					del (but trying to be monoamorous)
+
+		+mySection("interests")
+			+mySection("languages")
+				+mySection("human")
 					dl
-						dt: a(href="https://gist.github.com/46ra/3f45fc4f3dbbfc35bba2ff96c33bddb7#file-srj-md") sumi-romanised
-						dd simura sumito
-						dt english
-						dd Sumito Shimura
-						dt nickname
-						dd sumi
+						dt zeroth
+						dd japanese
+						dt first
+						dd english (B2-C1)
+						dt learning or to learn
+						dd: ul
+							li german (A1)
+							li attic greek
+							li chinese
+							li lojban
+							li lingua franca nova
+							li french
 
-				+mySection("ideologies"): ul
-					li
-						del determinism
-						| &nbsp;
-						del physicalism
-						| &nbsp;(i deny both free will and determinism. what should i call it?)
-					li antinatalism
-					li antimonogamism
-					li anthropocentrism (involuntarily adopted and desired to be withdrawn)
-					li scepticism
-					li
-						del social liberalism
-						| &nbsp; egalitarianism (?)
+				+mySection("programming")
+					dl
+						dt using
+						dd: ul
+							li Python
+							li Haskell
+							li Scala
+						dt learning or to learn
+						dd: ul
+							li Coq
+							li Agda
+							li Crystal
+							li Nim
 
-				+mySection("gender")
-					ul
-						li cisgendered
-						li androsexual
-						li androromantic
-						li
-							| polyamorous
-							| &nbsp;
-							del (but trying to be monoamorous)
+			+mySection("computer science")
+				ul
+					li lambda-calculus
+					li substructural logics
+					li proof theory
 
-				+mySection("interests")
-					+mySection("languages")
-						+mySection("human")
-							dl
-								dt zeroth
-								dd japanese
-								dt first
-								dd english (B2-C1)
-								dt learning or to learn
-								dd: ul
-									li german (A1)
-									li attic greek
-									li chinese
-									li lojban
-									li lingua franca nova
-									li french
+			+mySection("accounts")
+				ul
+					li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twitter
+					li: a(href="https://melanizo.tumblr.com/") Tumblr
+					li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
+					li: a(href="https://peing.net/ja/sumi") Peing
+					li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
 
-						+mySection("programming")
-							dl
-								dt using
-								dd: ul
-									li Python
-									li Haskell
-									li Scala
-								dt learning or to learn
-								dd: ul
-									li Coq
-									li Agda
-									li Crystal
-									li Nim
+		+mySection("favourites")
+			+mySection("music (by musicians)"): details: ul
+				li 385
+				li ACIDMAN
+				li Amazarashi
+				li Bon Jovi
+				li BOOM BOOM SATELLITES
+				li fox capture plan
+				li H ZETTRIO
+				li kimonos
+				li LEO今井
+				li METAFIVE
+				li Mr.Children
+				li Queen
+				li Rammstein
+				li School Food Punishment
+				li SOUL’d OUT
+				li ZAZEN BOYS
+				li アルカラ
+				li 大森靖子
+				li 倉橋ヨエコ
+				li サカナクション
+				li 椎名林檎
+				li 神聖かまってちゃん
+				li 相対性理論
+				li チャットモンチー
+				li 東京事変
+				li ネクライトーキー
+				li パスピエ
+				li 八十八ヶ所巡礼
+				li 平沢進
+				li ピロカルピン
+				li フジファブリック
+				li フレデリック
+				li ねごと
+				li 凛として時雨
 
-					+mySection("computer science")
-						ul
-							li lambda-calculus
-							li substructural logics
-							li proof theory
+			+mySection("animes"): ul
+				li 銀河機攻隊 マジェスティックプリンス
+				li プリティーリズム レインボーライブ
 
-					+mySection("accounts")
-						ul
-							li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twitter
-							li: a(href="https://melanizo.tumblr.com/") Tumblr
-							li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
-							li: a(href="https://peing.net/ja/sumi") Peing
-							li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
+			+mySection("games"): ul
+				li <ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト
+				li アイドリッシュセブン
+				li ダンガンロンパV3
+				li ファイナルファンタジーXIV
+				li 女神異聞録デビルサバイバー
+				li メギド72
 
-				+mySection("favourites")
-					+mySection("music (by musicians)"): details: ul
-						li 385
-						li ACIDMAN
-						li Amazarashi
-						li Bon Jovi
-						li BOOM BOOM SATELLITES
-						li fox capture plan
-						li H ZETTRIO
-						li kimonos
-						li LEO今井
-						li METAFIVE
-						li Mr.Children
-						li Queen
-						li Rammstein
-						li School Food Punishment
-						li SOUL’d OUT
-						li ZAZEN BOYS
-						li アルカラ
-						li 大森靖子
-						li 倉橋ヨエコ
-						li サカナクション
-						li 椎名林檎
-						li 神聖かまってちゃん
-						li 相対性理論
-						li チャットモンチー
-						li 東京事変
-						li ネクライトーキー
-						li パスピエ
-						li 八十八ヶ所巡礼
-						li 平沢進
-						li ピロカルピン
-						li フジファブリック
-						li フレデリック
-						li ねごと
-						li 凛として時雨
+			+mySection("novels"): details: ul(lang="ja-JP")
+				li 一つの大陸の物語シリーズ
+				li 空の境界
+				li 1984
+				li Darren Shan
+				li 虐殺器官
+				li ハーモニー
+				li know
+				li [映]アムリタ
+				li 天帝シリーズ
+				li 戯言シリーズ
+				li 凜一シリーズ
+				li 古典部シリーズ
+				li 新世界より
 
-					+mySection("animes"): ul
-						li 銀河機攻隊 マジェスティックプリンス
-						li プリティーリズム レインボーライブ
+			+mySection("mangas")
+				+mySection("boys' loves (by authors)"): details: ul(lang="ja-JP")
+					li CTK
+					li 青丸
+					li アマミヤ
+					li 阿弥陀しずく
+					li 網野素
+					li 鮎川ハル
+					li 新井煮干し子
+					li イイモ
+					li イシノアヤ
+					li 英数字
+					li おまる
+					li 織島ユポポ
+					li 夏糖
+					li 紀伊カンナ
+					li 京山あつき
+					li 巨小
+					li ぐりだそうむ
+					li 伍堂なめ
+					li こめり
+					li 小指
+					li さがの
+					li さがのひお
+					li 里つばめ
+					li 志村貴子
+					li 春泥
+					li 橘ミズキ
+					li 田中森よこた
+					li たなと
+					li 東条さかな
+					li 中田アキラ
+					li 那梧なゆた
+					li にやま
+					li ニャンニャ
+					li 猫田リコ
+					li 八川キュウ
+					li 日野雄飛
+					li 平喜田ゆや
+					li 藤谷陽子
+					li フジマコ
+					li 文川じみ
+					li 古矢渚
+					li 三月エミ
+					li 松本ノダ
+					li ムノ
+					li ymz
+					li ゆくえ浅葱
+					li らくたしょうこ
+					li 楽田トリノ
+					li 倫敦巴里子
+					li わかちこ
 
-					+mySection("games"): ul
-						li <ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト
-						li アイドリッシュセブン
-						li ダンガンロンパV3
-						li ファイナルファンタジーXIV
-						li 女神異聞録デビルサバイバー
-						li メギド72
-
-					+mySection("novels"): details: ul(lang="ja-JP")
-						li 一つの大陸の物語シリーズ
-						li 空の境界
-						li 1984
-						li Darren Shan
-						li 虐殺器官
-						li ハーモニー
-						li know
-						li [映]アムリタ
-						li 天帝シリーズ
-						li 戯言シリーズ
-						li 凜一シリーズ
-						li 古典部シリーズ
-						li 新世界より
-
-					+mySection("mangas")
-						+mySection("boys' loves (by authors)"): details: ul(lang="ja-JP")
-							li CTK
-							li 青丸
-							li アマミヤ
-							li 阿弥陀しずく
-							li 網野素
-							li 鮎川ハル
-							li 新井煮干し子
-							li イイモ
-							li イシノアヤ
-							li 英数字
-							li おまる
-							li 織島ユポポ
-							li 夏糖
-							li 紀伊カンナ
-							li 京山あつき
-							li 巨小
-							li ぐりだそうむ
-							li 伍堂なめ
-							li こめり
-							li 小指
-							li さがの
-							li さがのひお
-							li 里つばめ
-							li 志村貴子
-							li 春泥
-							li 橘ミズキ
-							li 田中森よこた
-							li たなと
-							li 東条さかな
-							li 中田アキラ
-							li 那梧なゆた
-							li にやま
-							li ニャンニャ
-							li 猫田リコ
-							li 八川キュウ
-							li 日野雄飛
-							li 平喜田ゆや
-							li 藤谷陽子
-							li フジマコ
-							li 文川じみ
-							li 古矢渚
-							li 三月エミ
-							li 松本ノダ
-							li ムノ
-							li ymz
-							li ゆくえ浅葱
-							li らくたしょうこ
-							li 楽田トリノ
-							li 倫敦巴里子
-							li わかちこ
-
-						+mySection("non-boys' loves"): details: ul(lang="ja-JP")
-							li Landreaall
-							li 青のフラッグ
-							li ヴォイニッチホテル
-							li 彼方のアストラ
-							li しまなみ誰そ彼
-							li 昭和元禄落語心中
-							li ダンジョン飯
-							li ブルーピリオド
-							li 魔法が使えなくても
-							li メイドインアビス
-							li ロッキンユー!!!
+				+mySection("non-boys' loves"): details: ul(lang="ja-JP")
+					li Landreaall
+					li 青のフラッグ
+					li ヴォイニッチホテル
+					li 彼方のアストラ
+					li しまなみ誰そ彼
+					li 昭和元禄落語心中
+					li ダンジョン飯
+					li ブルーピリオド
+					li 魔法が使えなくても
+					li メイドインアビス
+					li ロッキンユー!!!

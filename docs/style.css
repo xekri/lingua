@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300");
 html, body {
   box-sizing: border-box;
   height: 100%;
@@ -5,14 +7,13 @@ html, body {
   padding: 0;
   color: white;
   background-color: black;
-  font-family: "Noto Sans Japanese", "Noto Sans CJK JP", sans;
-  font-weight: lighter;
+  font-family: "Roboto", "Noto Sans TC", sans;
   font-size: 12pt; }
   @media screen and (max-device-width: 480px) {
     html, body {
       font-size: 10pt; } }
   html main, body main {
-    width: 640px;
+    width: 720px;
     margin: 0 auto;
     padding: 20px;
     padding-bottom: 0; }

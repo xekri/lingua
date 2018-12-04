@@ -38,7 +38,8 @@ gulp.task("sass", () => {
 
 gulp.task("pug", () => {
     var option = {
-        pretty: true
+        pretty: true,
+        basedir: "src"
     }
     gulp.src("./src/**/*.pug")
         .pipe(plumber({
