@@ -32,7 +32,7 @@ html, body {
     justify-content: space-around;
     align-items: center; }
     html figure img, body figure img {
-      width: 240px; }
+      width: 33%; }
   html nav, body nav {
     position: fixed;
     height: 32px;

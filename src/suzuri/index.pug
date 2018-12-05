@@ -7,7 +7,7 @@ block main
 	+mySection(title)
 		+mySection("picture")
 			figure
-				img#suzuri(src="../images/suzuri.png", alt="a picture of suzuri")
+				img#suzuri(src="/images/suzuri.png", alt="a picture of suzuri")
 
 		+mySection("facts")
 			p (these may be changed)
@@ -52,10 +52,11 @@ block main
 
 		+mySection("talks")
 			a(href="https://twitter.com/search?f=tweets&q=from%3Amelanizo%20suzuri%20OR%20%E7%A1%AF") tweets by sumi
-			p these are just unofficial ideas and are not definitive.
+			p (these are just unofficial ideas and are not definitive)
 
 		+mySection("arts")
-			p fan arts are always welcome and greatly appreciated!!
+			p
+				| (fan arts (including NSFW things) are always welcome and greatly appreciated!
 
 			+mySection("by 一人-sensei")
 				center
