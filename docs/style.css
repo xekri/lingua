@@ -27,6 +27,9 @@ html, body {
     padding-left: 20px;
     border: solid #fff;
     border-width: 1px 0 0 1px; }
+    html section h1, body section h1 {
+      font-weight: bold;
+      font-size: 100%; }
   html figure, body figure {
     display: flex;
     justify-content: space-around;
@@ -45,5 +48,3 @@ html, body {
       text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5); }
     html a:visited, body a:visited {
       text-shadow: none; }
-  html h1, body h1 {
-    font-weight: normal; }
