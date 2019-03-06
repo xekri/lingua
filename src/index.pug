@@ -1,13 +1,10 @@
 extend /_layout.pug
 
-block vars
-	- var title = "sumi"
-
 block main
-	+mySection(title)
+	+mySection("sumi")
 		+mySection("icon")
 			figure
-				img#sumi(src="/images/sumi.png", alt="the icon of sumi")
+				img#image-icon(src="/images/sumi.png", alt="the icon of sumi")
 
 		+mySection("names")
 			ul
@@ -82,11 +79,15 @@ block main
 					li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
 						ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wishlists
 					li: a(href="https://peing.net/ja/sumi") Peing (deprecated)
-					li: a(href="https://marshmallow-qa.com/sumi") Peing (deprecated)
+					li: a(href="https://marshmallow-qa.com/sumi") Marshmallow
 					li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
 						ul
 							li: a(href="https://www.pixiv.net/fanbox/creator/13912025") FANBOX
 							li: a(href="https://melanizo.booth.pm/") BOOTH
+
+			+mySection("donation")
+				p sumi is always in poverty. any amount of money will be great help. thank you!
+				figure: img#image-kyash(src="/images/kyash.png")
 
 		+mySection("favourites")
 			+mySection("music (by musicians)"): details: ul
