@@ -35,7 +35,7 @@ html, body {
     justify-content: space-around;
     align-items: center; }
     html figure img, body figure img {
-      width: 33%; }
+      width: 50%; }
   html nav, body nav {
     position: fixed;
     height: 32px;
