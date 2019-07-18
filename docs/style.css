@@ -6,8 +6,9 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: #343434;
-  font-family: "Roboto", "Noto Sans TC", sans;
+  background-color: #000000;
+  font-family: "Roboto", "Noto Sans JP", sans;
+  font-weight: 100;
   font-size: 12pt; }
   @media screen and (max-device-width: 480px) {
     html, body {
