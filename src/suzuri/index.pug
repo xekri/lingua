@@ -1,5 +1,9 @@
 extend /_layout.pug
 
+mixin a_img(src, width)
+	a(href=src)
+		img(src=src, width=width)
+
 block vars
 	- var title = "suzuri"
 
@@ -97,13 +101,18 @@ block main
 					<blockquote class="twitter-tweet" data-lang="ja" data-theme="dark"><p lang="ja" dir="ltr"><a href="https://t.co/tRtU7KUMdD">https://t.co/tRtU7KUMdD</a><a href="https://twitter.com/sikotamazou?ref_src=twsrc%5Etfw">@sikotamazou</a> 先生に依頼していたスズリ君が納品されました　最高に可愛い　文句無し　依頼して良かった</p>&mdash; 𝗦𝗨𝗠𝗜 (@melanophil) <a href="https://twitter.com/melanophil/status/1151805582556352513?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-			+mySection("2019-07-26")
+			+mySection("2019-07-26 0")
 				p 作：まぁく先生 @MK2ma_c
 				center
 					<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja" data-theme="dark"><p lang="ja" dir="ltr">遅くなりましたが誕生日おめでとう御座います!スズリくん描かせて頂きました… <a href="https://t.co/3JS1r6kXg2">pic.twitter.com/3JS1r6kXg2</a></p>&mdash; まぁく (@MK2ma_c) <a href="https://twitter.com/MK2ma_c/status/1154736325766942720?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-		+mySection("リンク")
+			+mySection("2019-07-26 1")
+				p 詳細非公開
+				center
+					+a_img("http://web.archive.org/save/_embed/https://pbs.twimg.com/media/EAawLRZUIAAcdCx.jpg", 480)
+
+		+mySection("連結")
 			ul
 				li
 					a(href="https://twitter.com/intent/user?user_id=1069897257120460800") Twitter
