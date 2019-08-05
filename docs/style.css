@@ -32,6 +32,16 @@ html, body {
     @media screen and (max-device-width: 480px) {
       html menu, body menu {
         display: none; } }
+  html img#img-menu, body img#img-menu {
+    width: 50%;
+    margin-top: 32px;
+    animation: rot 1s; }
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
   html section, body section {
     margin: 0;
     margin-bottom: 20px;

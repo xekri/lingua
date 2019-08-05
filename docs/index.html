@@ -16,6 +16,7 @@
   </head>
   <body>
     <menu>
+      <center><img id="img-menu" src="images/sumi.png"></center>
       <ul>
         <li><a href="/">sumi</a>
           <ul>
@@ -29,10 +30,6 @@
       <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
       <section id="sumi"><a href="#sumi">
           <h1>sumi</h1></a>
-        <section id="icon"><a href="#icon">
-            <h1>icon</h1></a>
-          <figure><img id="image-icon" src="/images/sumi.png" alt="the icon of sumi"></figure>
-        </section>
         <section id="names"><a href="#names">
             <h1>names</h1></a>
           <ul>
@@ -334,25 +331,22 @@
           </section>
         </section>
       </section>
-      <section id="footer"><a href="#footer">
-          <h1>footer</h1></a>
-        <section id="comment"><a href="#comment">
-            <h1>comment</h1></a>
-          <div id="disqus_thread"></div>
-          <script>
-            var disqus_config = function () {
-            	this.page.url = "http://sumi.space";
-            	this.page.identifier = "sumi";
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://sumi-2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </section>
+      <section id="comment"><a href="#comment">
+          <h1>comment</h1></a>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+          	this.page.url = "http://sumi.space";
+          	this.page.identifier = "sumi";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://sumi-2.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </section>
     </article>
   </body>

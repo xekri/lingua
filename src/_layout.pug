@@ -20,6 +20,9 @@ html(lang="en-GB")
 
 	body
 		menu
+			center
+				img#img-menu(src="images/sumi.png")
+
 			ul
 				li
 					a(href="/") sumi
@@ -33,20 +36,19 @@ html(lang="en-GB")
 
 			block main
 
-			+mySection("footer")
-				+mySection("comment")
-					div(id="disqus_thread")
-					script.
-						var disqus_config = function () {
-							this.page.url = "http://sumi.space";
-							this.page.identifier = "sumi";
-						};
-						(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = 'https://sumi-2.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-						})();
-					noscript
-						| Please enable JavaScript to view the
-						a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+			+mySection("comment")
+				div(id="disqus_thread")
+				script.
+					var disqus_config = function () {
+						this.page.url = "http://sumi.space";
+						this.page.identifier = "sumi";
+					};
+					(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+					s.src = 'https://sumi-2.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+				noscript
+					| Please enable JavaScript to view the
+					a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
