@@ -11,7 +11,7 @@ html, body
   margin: 0
   padding: 0
   color: white
-  background-color: #000000
+  background-color: black
   font-family: "Roboto", "Noto Sans JP", sans
   font-weight: 100
 
@@ -30,6 +30,17 @@ html, body
 
     // margin-top: $navWidth
 
+  menu
+    width: 200px
+    height: 100%
+    margin: 0
+    padding: 0
+    position: fixed
+    border-right: 1px white solid
+
+    @media screen and (max-device-width:480px)
+      display: none
+
   section
     margin: 0
     margin-bottom: $space
@@ -39,7 +50,7 @@ html, body
     border: solid #fff
     border-width: 1px 0 0 1px
 
-    // background-color: #ffffff08
+    background-color: transparent
 
     &:last-child
       // margin-bottom: -$space
