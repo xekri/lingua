@@ -15,7 +15,10 @@
     <link href="/style.css" rel="stylesheet">
     <script>
       const url = window.location.href;
-      document.title = url.replace(/.+sumi\.space/, "sumi").replace("/", " / ");
+      document.title = url
+      	.replace(/\/$/, "")
+      	.replace(/.+sumi\.space/, "sumi")
+      	.replace("/", " / ");
       
     </script>
   </head>
