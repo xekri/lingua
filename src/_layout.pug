@@ -18,6 +18,10 @@ html(lang="en-GB")
 		title= title
 		link(href="/style.css", rel="stylesheet")
 
+		script.
+			const url = window.location.href;
+			document.title = url.replace(/.+sumi\.space/, "sumi").replace("/", " / ");
+
 	body
 		menu
 			center
