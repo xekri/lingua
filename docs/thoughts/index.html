@@ -14,107 +14,112 @@
     <title></title>
     <link href="/style.css" rel="stylesheet">
     <script>
-      const url = window.location.href;
-      document.title = url
+      document.title = window.location.href
       	.replace(/\/$/, "")
       	.replace(/.+sumi\.space/, "sumi")
       	.replace("/", " / ");
       
+      window.onload = () => {
+      	document.getElementById("nav-switch").onclick = () => {
+      		const e = document.getElementsByTagName("nav")[0];
+      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+      	}
+      };
+      
     </script>
   </head>
   <body>
-    <menu>
-      <center><img id="img-menu" src="/images/sumi.png"></center>
+    <label id="nav-switch">☰</label>
+    <nav>
+      <center><a href="/"><img src="/images/sumi.png"></a></center>
       <ul>
-        <li><a href="/">sumi</a>
-          <ul>
-            <li><a href="/suzuri">suzuri</a></li>
-            <li><a href="/favorite">favorite</a></li>
-            <li><a href="/thoughts">thoughts</a></li>
-            <li><a href="/documents">documents</a></li>
-          </ul>
-        </li>
+        <li><a href="/suzuri">suzuri</a></li>
+        <li><a href="/favorite">favorite</a></li>
+        <li><a href="/thoughts">thoughts</a></li>
+        <li><a href="/documents">documents</a></li>
       </ul>
-    </menu>
-    <article>
-      <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-      <section id="thoughts"><a href="#thoughts">
-          <h1>thoughts</h1></a>
-        <section id="性"><a href="#性">
-            <h1>性</h1></a>
-          <p>
-            （2019-08-14）
-            性は少なくとも食と同じくらい公然とすべきだ。
-            昨日の夕飯と同じくらい昨日の自慰について訊けるべきだし、
-            誰と食べたかと同じくらい誰と寝たかを話せるべきだ。
-          </p>
+    </nav>
+    <main>
+      <article>
+        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <section id="thoughts"><a href="#thoughts">
+            <h1>thoughts</h1></a>
+          <section id="性"><a href="#性">
+              <h1>性</h1></a>
+            <p>
+              （2019-08-14）
+              性は少なくとも食と同じくらい公然とすべきだ。
+              昨日の夕飯と同じくらい昨日の自慰について訊けるべきだし、
+              誰と食べたかと同じくらい誰と寝たかを話せるべきだ。
+            </p>
+          </section>
+          <section id="婚姻"><a href="#婚姻">
+              <h1>婚姻</h1></a>
+            <p>
+              （2019-08-14）
+              一対一・男対女に限定された婚姻制度は破壞されるべきだ。
+              例えば私が植物状態にあって安楽死に同意できる人間が一人だけだったり異性だったりする必要は無い。
+            </p>
+          </section>
+          <section id="大麻"><a href="#大麻">
+              <h1>大麻</h1></a>
+            <p>
+              （2019-08-14）
+              日本で大麻が解禁されない理由は単に歴史的なものでしかない。
+            </p>
+          </section>
+          <section id="生殖"><a href="#生殖">
+              <h1>生殖</h1></a>
+            <p>
+              （2019-08-14）
+              人は基本的に苦しむものであり、苦しみの主体を生みだすことは合理化されない。
+            </p>
+          </section>
+          <section id="猥褻"><a href="#猥褻">
+              <h1>猥褻</h1></a>
+            <p>
+              （2019-08-14）
+              刑法175条は違憲だし、違憲でなくても悪法だ。
+              性的なことと不道徳なこととは全く関連しないし、
+              性器表現から覆いを取って損なわれるものは無い。
+            </p>
+          </section>
+          <section id="安楽死"><a href="#安楽死">
+              <h1>安楽死</h1></a>
+            <p>
+              （2019-08-14）
+              安楽死の権利は保障されるべきだ。
+              死によってしか止められない苦しみが続くのを強制するのは拷問と異ならない。
+            </p>
+          </section>
+          <section id="自由意思"><a href="#自由意思">
+              <h1>自由意思</h1></a>
+            <p>
+              （2019-08-14）
+              我々の意識は肉体と言う自動運転車に乗っている。
+              この車の進路が確定的であろうとなかろうと、我々が働きかけられないことに変わりは無い。
+              この車が事故を起こしても責任を我々に認めることはできない。
+            </p>
+          </section>
         </section>
-        <section id="婚姻"><a href="#婚姻">
-            <h1>婚姻</h1></a>
-          <p>
-            （2019-08-14）
-            一対一・男対女に限定された婚姻制度は破壞されるべきだ。
-            例えば私が植物状態にあって安楽死に同意できる人間が一人だけだったり異性だったりする必要は無い。
-          </p>
+        <section id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
-        <section id="大麻"><a href="#大麻">
-            <h1>大麻</h1></a>
-          <p>
-            （2019-08-14）
-            日本で大麻が解禁されない理由は単に歴史的なものでしかない。
-          </p>
-        </section>
-        <section id="生殖"><a href="#生殖">
-            <h1>生殖</h1></a>
-          <p>
-            （2019-08-14）
-            人は基本的に苦しむものであり、苦しみの主体を生みだすことは合理化されない。
-          </p>
-        </section>
-        <section id="猥褻"><a href="#猥褻">
-            <h1>猥褻</h1></a>
-          <p>
-            （2019-08-14）
-            刑法175条は違憲だし、違憲でなくても悪法だ。
-            性的なことと不道徳なこととは全く関連しないし、
-            性器表現から覆いを取って損なわれるものは無い。
-          </p>
-        </section>
-        <section id="安楽死"><a href="#安楽死">
-            <h1>安楽死</h1></a>
-          <p>
-            （2019-08-14）
-            安楽死の権利は保障されるべきだ。
-            死によってしか止められない苦しみが続くのを強制するのは拷問と異ならない。
-          </p>
-        </section>
-        <section id="自由意思"><a href="#自由意思">
-            <h1>自由意思</h1></a>
-          <p>
-            （2019-08-14）
-            我々の意識は肉体と言う自動運転車に乗っている。
-            この車の進路が確定的であろうとなかろうと、我々が働きかけられないことに変わりは無い。
-            この車が事故を起こしても責任を我々に認めることはできない。
-          </p>
-        </section>
-      </section>
-      <section id="comment"><a href="#comment">
-          <h1>comment</h1></a>
-        <div id="disqus_thread"></div>
-        <script>
-          var disqus_config = function () {
-          	this.page.url = "http://sumi.space";
-          	this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </section>
-    </article>
+      </article>
+    </main>
   </body>
 </html>

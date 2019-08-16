@@ -19,45 +19,50 @@ html(lang="en-GB")
 		link(href="/style.css", rel="stylesheet")
 
 		script.
-			const url = window.location.href;
-			document.title = url
+			document.title = window.location.href
 				.replace(/\/$/, "")
 				.replace(/.+sumi\.space/, "sumi")
 				.replace("/", " / ");
 
+			window.onload = () => {
+				document.getElementById("nav-switch").onclick = () => {
+					const e = document.getElementsByTagName("nav")[0];
+					e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+				}
+			};
+
 	body
-		menu
+		label#nav-switch ☰
+		nav
 			center
-				img#img-menu(src="/images/sumi.png")
+				a(href="/"): img(src="/images/sumi.png")
 
 			ul
-				li
-					a(href="/") sumi
-					ul
-						li: a(href="/suzuri") suzuri
-						li: a(href="/favorite") favorite
-						li: a(href="/thoughts") thoughts
-						li: a(href="/documents") documents
+				li: a(href="/suzuri") suzuri
+				li: a(href="/favorite") favorite
+				li: a(href="/thoughts") thoughts
+				li: a(href="/documents") documents
 
-		article
-			div(align="right")
-				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		main
+			article
+				div(align="right")
+					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-			block main
+				block main
 
-			+mySection("comment")
-				div(id="disqus_thread")
-				script.
-					var disqus_config = function () {
-						this.page.url = "http://sumi.space";
-						this.page.identifier = "sumi";
-					};
-					(function() { // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
-					s.src = 'https://sumi-2.disqus.com/embed.js';
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-					})();
-				noscript
-					| Please enable JavaScript to view the
-					a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+				+mySection("comment")
+					div(id="disqus_thread")
+					script.
+						var disqus_config = function () {
+							this.page.url = "http://sumi.space";
+							this.page.identifier = "sumi";
+						};
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://sumi-2.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+					noscript
+						| Please enable JavaScript to view the
+						a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.

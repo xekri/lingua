@@ -14,232 +14,237 @@
     <title></title>
     <link href="/style.css" rel="stylesheet">
     <script>
-      const url = window.location.href;
-      document.title = url
+      document.title = window.location.href
       	.replace(/\/$/, "")
       	.replace(/.+sumi\.space/, "sumi")
       	.replace("/", " / ");
       
+      window.onload = () => {
+      	document.getElementById("nav-switch").onclick = () => {
+      		const e = document.getElementsByTagName("nav")[0];
+      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+      	}
+      };
+      
     </script>
   </head>
   <body>
-    <menu>
-      <center><img id="img-menu" src="/images/sumi.png"></center>
+    <label id="nav-switch">☰</label>
+    <nav>
+      <center><a href="/"><img src="/images/sumi.png"></a></center>
       <ul>
-        <li><a href="/">sumi</a>
-          <ul>
-            <li><a href="/suzuri">suzuri</a></li>
-            <li><a href="/favorite">favorite</a></li>
-            <li><a href="/thoughts">thoughts</a></li>
-            <li><a href="/documents">documents</a></li>
-          </ul>
-        </li>
+        <li><a href="/suzuri">suzuri</a></li>
+        <li><a href="/favorite">favorite</a></li>
+        <li><a href="/thoughts">thoughts</a></li>
+        <li><a href="/documents">documents</a></li>
       </ul>
-    </menu>
-    <article>
-      <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-      <section id="favorite"><a href="#favorite">
-          <h1>favorite</h1></a>
-        <section id="music (by musicians)"><a href="#music (by musicians)">
-            <h1>music (by musicians)</h1></a>
-          <details>
-            <ul>
-              <li>385</li>
-              <li>ACIDMAN</li>
-              <li>Amazarashi</li>
-              <li>Bon Jovi</li>
-              <li>BOOM BOOM SATELLITES</li>
-              <li>fox capture plan</li>
-              <li>H ZETTRIO</li>
-              <li>ichika</li>
-              <li>kimonos</li>
-              <li>King Gnu</li>
-              <li>LEO今井</li>
-              <li>METAFIVE</li>
-              <li>Mr.Children</li>
-              <li>Number Girl</li>
-              <li>Polyphia</li>
-              <li>Rammstein</li>
-              <li>School Food Punishment</li>
-              <li>SOUL’d OUT</li>
-              <li>tricot</li>
-              <li>ZAZEN BOYS</li>
-              <li>アルカラ</li>
-              <li>宇多田ヒカル</li>
-              <li>大森靖子</li>
-              <li>倉橋ヨエコ</li>
-              <li>ゲスの極み乙女。</li>
-              <li>サカナクション</li>
-              <li>椎名林檎</li>
-              <li>時速36km</li>
-              <li>神聖かまってちゃん</li>
-              <li>相対性理論</li>
-              <li>チャットモンチー</li>
-              <li>東京事変</li>
-              <li>西島尊大</li>
-              <li>ネクライトーキー</li>
-              <li>パスピエ</li>
-              <li>八十八ヶ所巡礼</li>
-              <li>平沢進</li>
-              <li>ピロカルピン</li>
-              <li>フジファブリック</li>
-              <li>フレデリック</li>
-              <li>ねごと</li>
-              <li>凛として時雨</li>
-            </ul>
-          </details>
-        </section>
-        <section id="animes"><a href="#animes">
-            <h1>animes</h1></a>
-          <ul>
-            <li>銀河機攻隊 マジェスティックプリンス</li>
-            <li>さらざんまい</li>
-            <li>プリティーリズム レインボーライブ</li>
-          </ul>
-        </section>
-        <section id="games"><a href="#games">
-            <h1>games</h1></a>
-          <ul>
-            <li><ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト</li>
-            <li>アイドリッシュセブン</li>
-            <li>ダンガンロンパV3</li>
-            <li>ファイナルファンタジーXIV</li>
-            <li>女神異聞録デビルサバイバー</li>
-            <li>メギド72</li>
-          </ul>
-        </section>
-        <section id="novels"><a href="#novels">
-            <h1>novels</h1></a>
-          <details>
-            <ul>
-              <li></li>
-              <li>1984（George Orwell）</li>
-              <li>Darren Shan（Darren Shan）</li>
-              <li>know（野崎まど）</li>
-              <li>[映]アムリタ（野崎まど）</li>
-              <li>魚住くんシリーズ（榎田尤利）</li>
-              <li>空の境界（奈須きのこ）</li>
-              <li>虐殺器官（伊藤計劃）</li>
-              <li>古典部シリーズ（米澤穂信）</li>
-              <li>戯言シリーズ（西尾維新）</li>
-              <li>新世界より（貴志祐介）</li>
-              <li>天帝シリーズ（古野まほろ）</li>
-              <li>ハーモニー（伊藤計劃）</li>
-              <li>一つの大陸の物語シリーズ（時雨沢恵一）</li>
-              <!-- li 凜一シリーズ（長野まゆみ）-->
-            </ul>
-          </details>
-        </section>
-        <section id="mangas"><a href="#mangas">
-            <h1>mangas</h1></a>
-          <section id="boys' loves (by authors)"><a href="#boys' loves (by authors)">
-              <h1>boys' loves (by authors)</h1></a>
+    </nav>
+    <main>
+      <article>
+        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <section id="favorite"><a href="#favorite">
+            <h1>favorite</h1></a>
+          <section id="music (by musicians)"><a href="#music (by musicians)">
+              <h1>music (by musicians)</h1></a>
             <details>
               <ul>
-                <li>CTK</li>
-                <li>青丸</li>
-                <li>アマミヤ</li>
-                <li>阿弥陀しずく</li>
-                <li>網野素</li>
-                <li>鮎川ハル</li>
-                <li>新井煮干し子</li>
-                <li>イイモ</li>
-                <li>イシノアヤ</li>
-                <li>英数字</li>
-                <!-- li おまる-->
-                <li>織島ユポポ</li>
-                <li>夏糖</li>
-                <li>紀伊カンナ</li>
-                <!-- li 京山あつき-->
-                <!-- li 巨小-->
-                <!-- li 金魚鉢でめ-->
-                <li>ぐりだそうむ</li>
-                <li>伍堂なめ</li>
-                <li>こめり</li>
-                <li>小指</li>
-                <li>さがの</li>
-                <li>さがのひを</li>
-                <li>里つばめ</li>
-                <li>志村貴子</li>
-                <li>春泥</li>
-                <!-- li 橘ミズキ-->
-                <!-- li 田中森よこた-->
-                <li>たなと</li>
-                <li>つきづきよし</li>
-                <li>東条さかな</li>
-                <!-- li 中田アキラ-->
-                <li>中陸なか</li>
-                <li>那梧なゆた</li>
-                <li>夏野寛子</li>
-                <li>にたこ</li>
-                <!-- li にやま-->
-                <li>ニャンニャ</li>
-                <!-- li 猫田リコ-->
-                <li>博士</li>
-                <li>八川キュウ</li>
-                <li>はやりやまい</li>
-                <li>日野雄飛</li>
-                <li>平喜田ゆや</li>
-                <!-- li 藤谷陽子-->
-                <li>フジマコ</li>
-                <!-- li 文川じみ-->
-                <!-- li 古矢渚-->
-                <li>三坂ニウム</li>
-                <li>三月エミ</li>
-                <li>松本ノダ</li>
-                <li>ムノ</li>
-                <li>柳沢ゆきお</li>
-                <li>ymz</li>
-                <li>ゆくえ浅葱</li>
-                <li>湯煎温子</li>
-                <!-- li らくたしょうこ-->
-                <!-- li 楽田トリノ-->
-                <li>倫敦巴里子</li>
-                <li>わかちこ</li>
+                <li>385</li>
+                <li>ACIDMAN</li>
+                <li>Amazarashi</li>
+                <li>Bon Jovi</li>
+                <li>BOOM BOOM SATELLITES</li>
+                <li>fox capture plan</li>
+                <li>H ZETTRIO</li>
+                <li>ichika</li>
+                <li>kimonos</li>
+                <li>King Gnu</li>
+                <li>LEO今井</li>
+                <li>METAFIVE</li>
+                <li>Mr.Children</li>
+                <li>Number Girl</li>
+                <li>Polyphia</li>
+                <li>Rammstein</li>
+                <li>School Food Punishment</li>
+                <li>SOUL’d OUT</li>
+                <li>tricot</li>
+                <li>ZAZEN BOYS</li>
+                <li>アルカラ</li>
+                <li>宇多田ヒカル</li>
+                <li>大森靖子</li>
+                <li>倉橋ヨエコ</li>
+                <li>ゲスの極み乙女。</li>
+                <li>サカナクション</li>
+                <li>椎名林檎</li>
+                <li>時速36km</li>
+                <li>神聖かまってちゃん</li>
+                <li>相対性理論</li>
+                <li>チャットモンチー</li>
+                <li>東京事変</li>
+                <li>西島尊大</li>
+                <li>ネクライトーキー</li>
+                <li>パスピエ</li>
+                <li>八十八ヶ所巡礼</li>
+                <li>平沢進</li>
+                <li>ピロカルピン</li>
+                <li>フジファブリック</li>
+                <li>フレデリック</li>
+                <li>ねごと</li>
+                <li>凛として時雨</li>
               </ul>
             </details>
           </section>
-          <section id="non-boys' loves"><a href="#non-boys' loves">
-              <h1>non-boys' loves</h1></a>
+          <section id="animes"><a href="#animes">
+              <h1>animes</h1></a>
+            <ul>
+              <li>銀河機攻隊 マジェスティックプリンス</li>
+              <li>さらざんまい</li>
+              <li>プリティーリズム レインボーライブ</li>
+            </ul>
+          </section>
+          <section id="games"><a href="#games">
+              <h1>games</h1></a>
+            <ul>
+              <li><ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト</li>
+              <li>アイドリッシュセブン</li>
+              <li>ダンガンロンパV3</li>
+              <li>ファイナルファンタジーXIV</li>
+              <li>女神異聞録デビルサバイバー</li>
+              <li>メギド72</li>
+            </ul>
+          </section>
+          <section id="novels"><a href="#novels">
+              <h1>novels</h1></a>
             <details>
               <ul>
-                <li>Landreaall</li>
-                <!-- li 青のフラッグ-->
-                <li>或るアホウの一生</li>
-                <li>ヴォイニッチホテル</li>
-                <li>彼方のアストラ</li>
-                <li>しまなみ誰そ彼</li>
-                <li>昭和元禄落語心中</li>
-                <li>スピリット・サークル</li>
-                <li>ダンジョン飯</li>
-                <li>はしっこアンサンブル</li>
-                <li>ブルーピリオド</li>
-                <li>魔法が使えなくても</li>
-                <li>メイドインアビス</li>
-                <li>めしにしましょう</li>
-                <li>ロッキンユー!!!</li>
+                <li></li>
+                <li>1984（George Orwell）</li>
+                <li>Darren Shan（Darren Shan）</li>
+                <li>know（野崎まど）</li>
+                <li>[映]アムリタ（野崎まど）</li>
+                <li>魚住くんシリーズ（榎田尤利）</li>
+                <li>空の境界（奈須きのこ）</li>
+                <li>虐殺器官（伊藤計劃）</li>
+                <li>古典部シリーズ（米澤穂信）</li>
+                <li>戯言シリーズ（西尾維新）</li>
+                <li>新世界より（貴志祐介）</li>
+                <li>天帝シリーズ（古野まほろ）</li>
+                <li>ハーモニー（伊藤計劃）</li>
+                <li>一つの大陸の物語シリーズ（時雨沢恵一）</li>
+                <!-- li 凜一シリーズ（長野まゆみ）-->
               </ul>
             </details>
           </section>
+          <section id="mangas"><a href="#mangas">
+              <h1>mangas</h1></a>
+            <section id="boys' loves (by authors)"><a href="#boys' loves (by authors)">
+                <h1>boys' loves (by authors)</h1></a>
+              <details>
+                <ul>
+                  <li>CTK</li>
+                  <li>青丸</li>
+                  <li>アマミヤ</li>
+                  <li>阿弥陀しずく</li>
+                  <li>網野素</li>
+                  <li>鮎川ハル</li>
+                  <li>新井煮干し子</li>
+                  <li>イイモ</li>
+                  <li>イシノアヤ</li>
+                  <li>英数字</li>
+                  <!-- li おまる-->
+                  <li>織島ユポポ</li>
+                  <li>夏糖</li>
+                  <li>紀伊カンナ</li>
+                  <!-- li 京山あつき-->
+                  <!-- li 巨小-->
+                  <!-- li 金魚鉢でめ-->
+                  <li>ぐりだそうむ</li>
+                  <li>伍堂なめ</li>
+                  <li>こめり</li>
+                  <li>小指</li>
+                  <li>さがの</li>
+                  <li>さがのひを</li>
+                  <li>里つばめ</li>
+                  <li>志村貴子</li>
+                  <li>春泥</li>
+                  <!-- li 橘ミズキ-->
+                  <!-- li 田中森よこた-->
+                  <li>たなと</li>
+                  <li>つきづきよし</li>
+                  <li>東条さかな</li>
+                  <!-- li 中田アキラ-->
+                  <li>中陸なか</li>
+                  <li>那梧なゆた</li>
+                  <li>夏野寛子</li>
+                  <li>にたこ</li>
+                  <!-- li にやま-->
+                  <li>ニャンニャ</li>
+                  <!-- li 猫田リコ-->
+                  <li>博士</li>
+                  <li>八川キュウ</li>
+                  <li>はやりやまい</li>
+                  <li>日野雄飛</li>
+                  <li>平喜田ゆや</li>
+                  <!-- li 藤谷陽子-->
+                  <li>フジマコ</li>
+                  <!-- li 文川じみ-->
+                  <!-- li 古矢渚-->
+                  <li>三坂ニウム</li>
+                  <li>三月エミ</li>
+                  <li>松本ノダ</li>
+                  <li>ムノ</li>
+                  <li>柳沢ゆきお</li>
+                  <li>ymz</li>
+                  <li>ゆくえ浅葱</li>
+                  <li>湯煎温子</li>
+                  <!-- li らくたしょうこ-->
+                  <!-- li 楽田トリノ-->
+                  <li>倫敦巴里子</li>
+                  <li>わかちこ</li>
+                </ul>
+              </details>
+            </section>
+            <section id="non-boys' loves"><a href="#non-boys' loves">
+                <h1>non-boys' loves</h1></a>
+              <details>
+                <ul>
+                  <li>Landreaall</li>
+                  <!-- li 青のフラッグ-->
+                  <li>或るアホウの一生</li>
+                  <li>ヴォイニッチホテル</li>
+                  <li>彼方のアストラ</li>
+                  <li>しまなみ誰そ彼</li>
+                  <li>昭和元禄落語心中</li>
+                  <li>スピリット・サークル</li>
+                  <li>ダンジョン飯</li>
+                  <li>はしっこアンサンブル</li>
+                  <li>ブルーピリオド</li>
+                  <li>魔法が使えなくても</li>
+                  <li>メイドインアビス</li>
+                  <li>めしにしましょう</li>
+                  <li>ロッキンユー!!!</li>
+                </ul>
+              </details>
+            </section>
+          </section>
         </section>
-      </section>
-      <section id="comment"><a href="#comment">
-          <h1>comment</h1></a>
-        <div id="disqus_thread"></div>
-        <script>
-          var disqus_config = function () {
-          	this.page.url = "http://sumi.space";
-          	this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </section>
-    </article>
+        <section id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

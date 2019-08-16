@@ -11,37 +11,58 @@ html, body {
   font-family: "Roboto", "Noto Sans JP", sans;
   font-weight: 100;
   font-size: 12pt; }
-  @media screen and (max-device-width: 480px) {
+  @media screen and (max-device-width: 720px) {
     html, body {
       font-size: 10pt; } }
-  html article, body article {
-    width: 720px;
-    margin: 0 auto;
-    padding: 20px;
-    padding-bottom: 0; }
-    @media screen and (max-device-width: 480px) {
-      html article, body article {
-        width: 100%; } }
-  html menu, body menu {
-    width: 200px;
+  html main, body main {
+    margin: 0;
+    margin-left: 240px;
+    padding: 0; }
+    @media screen and (max-device-width: 720px) {
+      html main, body main {
+        margin-left: 0; } }
+    html main article, body main article {
+      width: 720px;
+      margin: 0 auto;
+      padding: 20px;
+      padding-bottom: 0; }
+      @media screen and (max-device-width: 720px) {
+        html main article, body main article {
+          width: 100%; } }
+  html nav, body nav {
+    z-index: 50;
+    width: 240px;
     height: 100%;
     margin: 0;
     padding: 0;
     position: fixed;
-    border-right: 1px white solid; }
-    @media screen and (max-device-width: 480px) {
-      html menu, body menu {
+    border-right: 1px white solid;
+    background-color: black; }
+    @media screen and (max-device-width: 720px) {
+      html nav, body nav {
         display: none; } }
-  html img#img-menu, body img#img-menu {
-    width: 50%;
-    margin-top: 32px;
-    animation: rot 1s; }
+    html nav img, body nav img {
+      width: 50%;
+      margin-top: 32px;
+      animation: rot 1s; }
 
 @keyframes rot {
   0% {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+  html label#nav-switch, body label#nav-switch {
+    display: none;
+    z-index: 100; }
+    @media screen and (max-device-width: 720px) {
+      html label#nav-switch, body label#nav-switch {
+        display: block;
+        margin: 0;
+        padding: 8px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 32pt; } }
   html section, body section {
     margin: 0;
     margin-bottom: 20px;
@@ -59,10 +80,6 @@ html, body {
     align-items: center; }
     html figure img, body figure img {
       width: 33%; }
-  html nav, body nav {
-    position: fixed;
-    height: 32px;
-    margin: 0 auto; }
   html li, body li {
     list-style-type: square; }
   html a, body a {

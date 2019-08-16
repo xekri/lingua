@@ -14,47 +14,52 @@
     <title></title>
     <link href="/style.css" rel="stylesheet">
     <script>
-      const url = window.location.href;
-      document.title = url
+      document.title = window.location.href
       	.replace(/\/$/, "")
       	.replace(/.+sumi\.space/, "sumi")
       	.replace("/", " / ");
       
+      window.onload = () => {
+      	document.getElementById("nav-switch").onclick = () => {
+      		const e = document.getElementsByTagName("nav")[0];
+      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+      	}
+      };
+      
     </script>
   </head>
   <body>
-    <menu>
-      <center><img id="img-menu" src="/images/sumi.png"></center>
+    <label id="nav-switch">☰</label>
+    <nav>
+      <center><a href="/"><img src="/images/sumi.png"></a></center>
       <ul>
-        <li><a href="/">sumi</a>
-          <ul>
-            <li><a href="/suzuri">suzuri</a></li>
-            <li><a href="/favorite">favorite</a></li>
-            <li><a href="/thoughts">thoughts</a></li>
-            <li><a href="/documents">documents</a></li>
-          </ul>
-        </li>
+        <li><a href="/suzuri">suzuri</a></li>
+        <li><a href="/favorite">favorite</a></li>
+        <li><a href="/thoughts">thoughts</a></li>
+        <li><a href="/documents">documents</a></li>
       </ul>
-    </menu>
-    <article>
-      <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-      <section id="comment"><a href="#comment">
-          <h1>comment</h1></a>
-        <div id="disqus_thread"></div>
-        <script>
-          var disqus_config = function () {
-          	this.page.url = "http://sumi.space";
-          	this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </section>
-    </article>
+    </nav>
+    <main>
+      <article>
+        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <section id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

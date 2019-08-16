@@ -1,5 +1,5 @@
 $space: 20px
-$navWidth: 32px
+$navWidth: 240px
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
@@ -16,41 +16,59 @@ html, body
   font-weight: 100
 
   font-size: 12pt
-  @media screen and (max-device-width:480px)
+  @media screen and (max-device-width:720px)
     font-size: 10pt
 
-  article
-    width: 720px
-    @media screen and (max-device-width:480px)
-      width: 100%
-    // overflow-y: scroll
-    margin: 0 auto
-    padding: $space
-    padding-bottom: 0
+  main
+    margin: 0
+    margin-left: $navWidth
+    @media screen and (max-device-width:720px)
+      margin-left: 0
+    padding: 0
 
-    // margin-top: $navWidth
+    article
+      width: 720px
+      margin: 0 auto
+      padding: $space
+      padding-bottom: 0
+      @media screen and (max-device-width:720px)
+        width: 100%
 
-  menu
-    width: 200px
+  nav
+    z-index: 50
+    width: $navWidth
     height: 100%
     margin: 0
     padding: 0
     position: fixed
     border-right: 1px white solid
-
-    @media screen and (max-device-width:480px)
+    background-color: black
+    @media screen and (max-device-width:720px)
       display: none
 
-  img#img-menu
-    width: 50%
-    margin-top: 32px
-    animation: rot 1s
+    img
+      width: 50%
+      margin-top: 32px
+      animation: rot 1s
 
-    @keyframes rot
-      0%
-        transform: rotate(0deg)
-      100%
-        transform: rotate(360deg)
+      @keyframes rot
+        0%
+          transform: rotate(0deg)
+        100%
+          transform: rotate(360deg)
+
+
+  label#nav-switch
+    display: none
+    z-index: 100
+    @media screen and (max-device-width:720px)
+      display: block
+      margin: 0
+      padding: 8px
+      position: fixed
+      top: 0
+      left: 0
+      font-size: 32pt
 
   section
     margin: 0
@@ -77,11 +95,6 @@ html, body
 
     img
       width: 33%
-
-  nav
-    position: fixed
-    height: $navWidth
-    margin: 0 auto
 
   li
     list-style-type: square
