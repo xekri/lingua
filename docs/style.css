@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300");
-@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
+@import url("https://fonts.googleapis.com/css?family=Nova+Round");
 html, body {
   box-sizing: border-box;
   height: 100%;
@@ -29,6 +30,10 @@ html, body {
       @media screen and (max-device-width: 720px) {
         html main article, body main article {
           width: 100%; } }
+    html main h1, body main h1 {
+      font-family: "Nova Round";
+      font-weight: normal;
+      font-size: 12pt; }
   html nav, body nav {
     z-index: 50;
     width: 240px;
@@ -40,9 +45,12 @@ html, body {
     background-color: black; }
     @media screen and (max-device-width: 720px) {
       html nav, body nav {
-        display: none; } }
+        display: none;
+        width: 33.3%;
+        font-size: 30pt;
+        background-color: #000000DD; } }
     html nav img, body nav img {
-      width: 50%;
+      width: 128px;
       margin-top: 32px;
       animation: rot 1s; }
 
@@ -51,6 +59,13 @@ html, body {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+    html nav ul, body nav ul {
+      width: 60%;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Nova Round";
+      font-weight: normal; }
   html label#nav-switch, body label#nav-switch {
     display: none;
     z-index: 100; }
@@ -62,7 +77,7 @@ html, body {
         position: fixed;
         top: 0;
         left: 0;
-        font-size: 32pt; } }
+        font-size: 50pt; } }
   html section, body section {
     margin: 0;
     margin-bottom: 20px;
@@ -71,9 +86,6 @@ html, body {
     border: solid #fff;
     border-width: 1px 0 0 1px;
     background-color: transparent; }
-    html section h1, body section h1 {
-      font-weight: bold;
-      font-size: 12pt; }
   html figure, body figure {
     display: flex;
     justify-content: space-around;
@@ -84,7 +96,3 @@ html, body {
     list-style-type: square; }
   html a, body a {
     color: white; }
-    html a:link, body a:link {
-      text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5); }
-    html a:visited, body a:visited {
-      text-shadow: none; }
