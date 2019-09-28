@@ -24,7 +24,7 @@ html, body
     margin: 0
     margin-left: $navWidth
     @media screen and (max-device-width:720px)
-      margin-left: 0
+      margin-left: 56px
     padding: 0
 
     article
@@ -51,9 +51,13 @@ html, body
     background-color: black
     @media screen and (max-device-width:720px)
       display: none
-      width: 33.3%
-      font-size: 30pt
+      width: 50%
+      font-size: 28pt
       background-color: #000000DD
+
+      li
+        margin-top: 16px
+        margin-bottom: 16px
 
     img
       width: 128px
@@ -66,13 +70,17 @@ html, body
         100%
           transform: rotate(360deg)
 
-    ul
+    & > ul
       width: 60%
       margin-top: 32px
       margin-left: auto
       margin-right: auto
       font-family: "Nova Round"
-      font-weight: normal
+
+  ul#sub-menu
+    border-top: 1px solid
+    border-left: 1px solid
+    padding-top: 8px
 
   label#nav-switch
     display: none
@@ -110,6 +118,7 @@ html, body
 
   li
     list-style-type: square
+    list-style-position: inside
 
   a
     color: white

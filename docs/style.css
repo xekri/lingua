@@ -21,7 +21,7 @@ html, body {
     padding: 0; }
     @media screen and (max-device-width: 720px) {
       html main, body main {
-        margin-left: 0; } }
+        margin-left: 56px; } }
     html main article, body main article {
       width: 720px;
       margin: 0 auto;
@@ -46,9 +46,12 @@ html, body {
     @media screen and (max-device-width: 720px) {
       html nav, body nav {
         display: none;
-        width: 33.3%;
-        font-size: 30pt;
-        background-color: #000000DD; } }
+        width: 50%;
+        font-size: 28pt;
+        background-color: #000000DD; }
+        html nav li, body nav li {
+          margin-top: 16px;
+          margin-bottom: 16px; } }
     html nav img, body nav img {
       width: 128px;
       margin-top: 32px;
@@ -59,13 +62,16 @@ html, body {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-    html nav ul, body nav ul {
+    html nav > ul, body nav > ul {
       width: 60%;
       margin-top: 32px;
       margin-left: auto;
       margin-right: auto;
-      font-family: "Nova Round";
-      font-weight: normal; }
+      font-family: "Nova Round"; }
+  html ul#sub-menu, body ul#sub-menu {
+    border-top: 1px solid;
+    border-left: 1px solid;
+    padding-top: 8px; }
   html label#nav-switch, body label#nav-switch {
     display: none;
     z-index: 100; }
@@ -93,6 +99,7 @@ html, body {
     html figure img, body figure img {
       width: 33%; }
   html li, body li {
-    list-style-type: square; }
+    list-style-type: square;
+    list-style-position: inside; }
   html a, body a {
     color: white; }
