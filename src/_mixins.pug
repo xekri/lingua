@@ -1,4 +1,4 @@
-mixin mySection(title)
+mixin mySection(title, ref=title)
 	section(id=title)
-		a(href="#" + title): h1= title
+		a(href="#" + ref): h1= title
 		block
