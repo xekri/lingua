@@ -17,7 +17,7 @@ html, body {
       font-size: 10pt; } }
   html main, body main {
     margin: 0;
-    margin-left: 240px;
+    margin-left: 200px;
     padding: 0; }
     @media screen and (max-device-width: 720px) {
       html main, body main {
@@ -36,7 +36,7 @@ html, body {
       font-size: 12pt; }
   html nav, body nav {
     z-index: 50;
-    width: 240px;
+    width: 200px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -99,7 +99,6 @@ html, body {
     html figure img, body figure img {
       width: 33%; }
   html li, body li {
-    list-style-type: square;
-    list-style-position: inside; }
+    list-style-type: square; }
   html a, body a {
     color: white; }

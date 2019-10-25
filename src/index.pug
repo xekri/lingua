@@ -2,10 +2,17 @@ extend /_layout.pug
 
 block main
 	+mySection("sumi")
-		+mySection("names")
-			ul
-				li sumi
-				li μελαν (melan)
+		+mySection("aliases")
+			dl
+				dt main
+				dd sumi
+				dt for games
+				dd μελαν (= melan)
+				dt for Twitter (searchable)
+				dd melanophil (from μελανοφιλια)
+				dt human-understandable
+				dd ši-ŋweɴ (= シ-グ<small>ヱ</small>ン = 詞玄 = コト-ハル)
+				// グ𛅥ン
 
 		+mySection("ideologies"): ul
 			p (!) i am temporarily a moral nihilist and therefore ignore this section.
@@ -20,14 +27,14 @@ block main
 			li antimonogamism
 			li
 				del social liberalism
-				| &nbsp; egalitarianism (?)
+				| &nbsp;egalitarianism (?)
 
 		+mySection("sexuality")
 			ul
 				li cisgender
 				li androsexual
 				li androromantic
-				li polyamorous
+				li polyamory
 
 		+mySection("interests")
 			+mySection("languages")
@@ -49,7 +56,7 @@ block main
 
 				+mySection("programming")
 					dl
-						dt begin used
+						dt using
 						dd: ul
 							li Python
 							li Haskell
