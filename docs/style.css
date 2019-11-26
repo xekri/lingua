@@ -102,3 +102,11 @@ html, body {
     list-style-type: square; }
   html a, body a {
     color: white; }
+  html table, body table {
+    margin: 16px;
+    padding: 16px;
+    border: 1px solid;
+    border-collapse: collapse; }
+  html td, html th, body td, body th {
+    padding: 16px;
+    border: 1px solid; }
