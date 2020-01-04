@@ -55,7 +55,7 @@ html, body
       font-size: 28pt
       background-color: #000000DD
 
-      li
+      ul > li
         margin-top: 16px
         margin-bottom: 16px
 
@@ -116,10 +116,6 @@ html, body
     img
       width: 33%
 
-  li
-    list-style-type: square
-    //list-style-position: inside
-
   a
     color: white
     &:link
@@ -132,10 +128,22 @@ html, body
   table
       margin: 16px
       padding: 16px
-      border: 1px solid
+      border-top: 1px solid
+      border-bottom: 1px solid
       border-collapse: collapse
 
   td, th
-    padding: 16px
-    border: 1px solid
+    padding: 6px
+    //border-top: 1px solid
+    //border-bottom: 1px solid
 
+ul > li
+  list-style-type: square
+  //list-style-position: inside
+
+//ol > li
+  //counter-reset: item -1
+
+ol
+  display: table
+  text-align: left

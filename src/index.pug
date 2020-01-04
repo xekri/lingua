@@ -2,16 +2,31 @@ extend /_layout.pug
 
 block main
 	+mySection("sumi")
-		+mySection("aliases")
-			dl
-				dt sumi
-				dd main. from japanese (ink).
-				dt μελαν (melan)
-				dd for gameplay. from greek (black, ink).
-				dt 詞玄 (ši-ŋweɴ, koto-haru)
-				dd a self-given name.
-				dt ʐeŋja
-				dd rarely used.
+		+mySection("alias")
+			p
+				| 'melan sumi-gven'
+				|  ('μελαν スミ玄',
+				|  /melan sumi ŋwen/)
+				|  signifies the author.
+				br
+				| usually they call the author 'sumi'.
+				br
+				| '詞玄' (/kotoxaru/) and 'źeŋja' (/ʐeŋja/) are rarely used.
+
+		+mySection("pronoun")
+			center
+				table
+					tr
+						th nominative
+						td ve
+					tr
+						th accusative
+						td ver
+					tr
+						th genitive
+						td vis
+
+			p if you really need to refer to me by 'he', do so.
 
 		+mySection("ideologies"): ul
 			p (!) i am temporarily a moral nihilist and therefore ignore this section.

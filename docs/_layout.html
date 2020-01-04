@@ -27,25 +27,23 @@
       });
       
       window.addEventListener("load", () => {
-      	let topSec = document.getElementsByTagName("section")[0];
-      	let topTitle = topSec.getAttribute("id");
+      	const section = document.getElementsByTagName("section")[0];
+      	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
       
-      	let children = topSec.childNodes;
-      
-      	let ul = document.createElement("ul");
-      	ul.setAttribute("id", "sub-menu");
-      	for(let child of children) {
-      		if(child.tagName != "SECTION") {continue;}
-      
-      		let title = child.getAttribute("id")
-      		let a = document.createElement("a")
-      		a.setAttribute("href", "#" + title);
-      		a.append(document.createTextNode(title));
-      		let li = document.createElement("li")
-      		li.append(a);
-      		ul.append(li);
+      	if(subsections.length > 0) {
+      		let ul = document.createElement("ul");
+      		ul.setAttribute("id", "sub-menu");
+      		for(let subsection of subsections) {
+      			const title = subsection.getAttribute("id")
+      			let a = document.createElement("a")
+      			a.setAttribute("href", "#" + title);
+      			a.append(document.createTextNode(title));
+      			let li = document.createElement("li")
+      			li.append(a);
+      			ul.append(li);
+      		}
+      		document.getElementsByTagName("nav")[0].appendChild(ul);
       	}
-      	document.getElementsByTagName("nav")[0].appendChild(ul);
       });
       
       
@@ -57,11 +55,10 @@
     <nav>
       <center><a href="/"><img src="/images/sumi.png"></a></center>
       <ul>
-        <!--li#li-introductin: a(href="/introduction") introduction-->
         <li><a href="/suzuri">suzuri</a></li>
         <li><a href="/favorite">favorite</a></li>
         <li><a href="/thoughts">thoughts</a></li>
-        <li><a href="/documents">documents</a></li>
+        <li><a href="/works">works</a></li>
       </ul>
     </nav>
     <main>

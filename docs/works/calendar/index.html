@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-104159380-5');
+      
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/style.css" rel="stylesheet">
+    <script>
+      document.title = window.location.href
+      	.replace(/\/$/, "")
+      	.replace(/.+sumi\.space/, "sumi")
+      	.replace("/", " / ");
+      
+      window.addEventListener("load", () => {
+      	document.getElementById("nav-switch").onclick = () => {
+      		let e = document.getElementsByTagName("nav")[0];
+      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+      	}
+      });
+      
+      window.addEventListener("load", () => {
+      	const section = document.getElementsByTagName("section")[0];
+      	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
+      
+      	if(subsections.length > 0) {
+      		let ul = document.createElement("ul");
+      		ul.setAttribute("id", "sub-menu");
+      		for(let subsection of subsections) {
+      			const title = subsection.getAttribute("id")
+      			let a = document.createElement("a")
+      			a.setAttribute("href", "#" + title);
+      			a.append(document.createTextNode(title));
+      			let li = document.createElement("li")
+      			li.append(a);
+      			ul.append(li);
+      		}
+      		document.getElementsByTagName("nav")[0].appendChild(ul);
+      	}
+      });
+      
+      
+      
+    </script>
+  </head>
+  <body>
+    <label id="nav-switch">☰</label>
+    <nav>
+      <center><a href="/"><img src="/images/sumi.png"></a></center>
+      <ul>
+        <li><a href="/suzuri">suzuri</a></li>
+        <li><a href="/favorite">favorite</a></li>
+        <li><a href="/thoughts">thoughts</a></li>
+        <li><a href="/works">works</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <script src="script.js"></script>
+        <section id="calendar"><a href="#calendar">
+            <h1>calendar</h1></a>
+          <section id="overview"><a href="#overview">
+              <h1>overview</h1></a>
+            <p>sumi-calendar is a calendar almost every month in which has the same number of days.</p>
+            <center>
+              <table>
+                <style>td { min-width: 32px; }</style>
+                <tr>
+                  <th>0 <br/> mon</th>
+                  <th>1 <br/> tue</th>
+                  <th>2 <br/> wed</th>
+                  <th>3 <br/> thu</th>
+                  <th>4 <br/> fri</th>
+                  <th>5 <br/> sat</th>
+                  <th>6 <br/> sun</th>
+                  <th>-1<br/>leap/year</th>
+                </tr>
+                <tr>
+                  <td align="right">0</td>
+                  <td align="right">1</td>
+                  <td align="right">2</td>
+                  <td align="right">3</td>
+                  <td align="right">4</td>
+                  <td align="right">5</td>
+                  <td align="right">6</td>
+                </tr>
+                <tr>
+                  <td align="right">7</td>
+                  <td align="right">8</td>
+                  <td align="right">9</td>
+                  <td align="right">10</td>
+                  <td align="right">11</td>
+                  <td align="right">12</td>
+                  <td align="right">13</td>
+                </tr>
+                <tr>
+                  <td align="right">14</td>
+                  <td align="right">15</td>
+                  <td align="right">16</td>
+                  <td align="right">17</td>
+                  <td align="right">18</td>
+                  <td align="right">19</td>
+                  <td align="right">20</td>
+                </tr>
+                <tr>
+                  <td align="right">21</td>
+                  <td align="right">22</td>
+                  <td align="right">23</td>
+                  <td align="right">24</td>
+                  <td align="right">25</td>
+                  <td align="right">26</td>
+                  <td align="right">27</td>
+                  <td align="center">(28)</td>
+                </tr>
+              </table>
+            </center>
+            <p>it has 13 months.</p>
+            <center>
+              <ol start="0" align="left">
+                <li>january</li>
+                <li>february</li>
+                <li>march</li>
+                <li>april</li>
+                <li>may</li>
+                <li>june</li>
+                <li><em>sol</em></li>
+                <li>july</li>
+                <li>august</li>
+                <li>september</li>
+                <li>october</li>
+                <li>november</li>
+                <li>december</li>
+              </ol>
+            </center>
+            <p>
+              we call the day 28 in the month 12 (new year's eve) a 'year day',
+              and that in the month 6 in each leap year a 'leap day'.
+              no other month has the day 28.
+              now we have 28×13+1=365 days (+1 in leap years).
+              these ideas originate from<em> International Fixed Calendar</em>
+            </p>
+            <p>
+              also, the calendar adds 10000 to the Gregorian calendar year,
+              which is the same scheme as<em> Holocene calendar.</em>
+            </p>
+          </section>
+          <section id="converter"><a href="#converter">
+              <h1>converter</h1></a>
+            <center>
+              <div>
+                <p>check to specify the date, or it shows the current date.</p>
+                <input id="isSpecified" type="checkbox">
+                <input id="specifyDate" type="date">
+                <input id="specifyTime" type="time">
+              </div>
+              <div>
+                <table>
+                  <tr>
+                    <td></td>
+                    <th>dec</th>
+                    <th>hex</th>
+                  </tr>
+                  <tr>
+                    <th align="right">year</th>
+                    <td id="year10"></td>
+                    <td id="year16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">day of year</th>
+                    <td id="yearday10"></td>
+                    <td id="yearday16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">month</th>
+                    <td id="month10"></td>
+                    <td id="month16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">day of month</th>
+                    <td id="monthday10"></td>
+                    <td id="monthday16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">week</th>
+                    <td id="week10"></td>
+                    <td id="week16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">day of week</th>
+                    <td id="weekday10"></td>
+                    <td id="weekday16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">time of day</th>
+                    <td id="daytime10"></td>
+                    <td id="daytime16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">formal</th>
+                    <td id="formal10"></td>
+                    <td id="formal16"></td>
+                  </tr>
+                  <tr>
+                    <th align="right">informal</th>
+                    <td id="informal10"></td>
+                    <td id="informal16"></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td align="center"><a class="twitter-link" id="tweet10" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></td>
+                    <td align="center"><a class="twitter-link" id="tweet16" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></td>
+                  </tr>
+                </table>
+              </div>
+            </center>
+            <div>
+              <ul>
+                <li>the author prefers the hexadecimal notation to the decimal one.</li>
+                <li>we use slashes rather than hyphens as some year may take a negative value.</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

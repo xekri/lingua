@@ -49,7 +49,7 @@ html, body {
         width: 50%;
         font-size: 28pt;
         background-color: #000000DD; }
-        html nav li, body nav li {
+        html nav ul > li, body nav ul > li {
           margin-top: 16px;
           margin-bottom: 16px; } }
     html nav img, body nav img {
@@ -98,15 +98,20 @@ html, body {
     align-items: center; }
     html figure img, body figure img {
       width: 33%; }
-  html li, body li {
-    list-style-type: square; }
   html a, body a {
     color: white; }
   html table, body table {
     margin: 16px;
     padding: 16px;
-    border: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     border-collapse: collapse; }
   html td, html th, body td, body th {
-    padding: 16px;
-    border: 1px solid; }
+    padding: 6px; }
+
+ul > li {
+  list-style-type: square; }
+
+ol {
+  display: table;
+  text-align: left; }

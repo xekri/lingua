@@ -27,25 +27,23 @@
       });
       
       window.addEventListener("load", () => {
-      	let topSec = document.getElementsByTagName("section")[0];
-      	let topTitle = topSec.getAttribute("id");
+      	const section = document.getElementsByTagName("section")[0];
+      	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
       
-      	let children = topSec.childNodes;
-      
-      	let ul = document.createElement("ul");
-      	ul.setAttribute("id", "sub-menu");
-      	for(let child of children) {
-      		if(child.tagName != "SECTION") {continue;}
-      
-      		let title = child.getAttribute("id")
-      		let a = document.createElement("a")
-      		a.setAttribute("href", "#" + title);
-      		a.append(document.createTextNode(title));
-      		let li = document.createElement("li")
-      		li.append(a);
-      		ul.append(li);
+      	if(subsections.length > 0) {
+      		let ul = document.createElement("ul");
+      		ul.setAttribute("id", "sub-menu");
+      		for(let subsection of subsections) {
+      			const title = subsection.getAttribute("id")
+      			let a = document.createElement("a")
+      			a.setAttribute("href", "#" + title);
+      			a.append(document.createTextNode(title));
+      			let li = document.createElement("li")
+      			li.append(a);
+      			ul.append(li);
+      		}
+      		document.getElementsByTagName("nav")[0].appendChild(ul);
       	}
-      	document.getElementsByTagName("nav")[0].appendChild(ul);
       });
       
       
@@ -57,25 +55,23 @@
     <nav>
       <center><a href="/"><img src="/images/sumi.png"></a></center>
       <ul>
-        <!--li#li-introductin: a(href="/introduction") introduction-->
         <li><a href="/suzuri">suzuri</a></li>
         <li><a href="/favorite">favorite</a></li>
         <li><a href="/thoughts">thoughts</a></li>
-        <li><a href="/documents">documents</a></li>
+        <li><a href="/works">works</a></li>
       </ul>
     </nav>
     <main>
       <article>
         <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-        <section id="documents"><a href="#documents">
-            <h1>documents</h1></a>
-          <section id="(co-)intuitionistic logics"><a href="#(co-)intuitionistic logics">
-              <h1>(co-)intuitionistic logics</h1></a>
-            <p>keywords: substructural logic, ordered logic, linear logic, intuitionistic logic, duality, sequent calculus</p>
-            <details>
-              <object data="files/coint.pdf" type="application/pdf" width="100%" height="1080"></object>
-            </details>
-          </section>
+        <section id="works"><a href="#works">
+            <h1>works</h1></a>
+          <ul>
+            <li><a href="https://mlnphl.github.io/minimal-triangle/">letters</a></li>
+            <li><a href="https://note.com/melano/n/ned9e4f994056">romanization</a></li>
+            <!--li: a(href="duality/document.pdf") sequent calculi for intuitionistic substructural logics and their duals (PDF)-->
+            <li><a href="calendar">calendar</a></li>
+          </ul>
         </section>
         <section id="comment"><a href="#comment">
             <h1>comment</h1></a>

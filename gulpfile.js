@@ -5,14 +5,11 @@ var browserSync = require("browser-sync");
 var notify = require("gulp-notify");
 var pug = require("gulp-pug");
 
-gulp.task("default", ["sass", "browser-sync", "pug", "watch"]);
+gulp.task("default", ["sass", "browser-sync", "pug", "js", "watch"]);
 
 gulp.task("watch", () => {
     gulp.watch(["./src/**"], () => {
-        gulp.start(["sass"]);
-    });
-    gulp.watch(["./src/**"], () => {
-        gulp.start(["pug"]);
+        gulp.start(["sass", "pug", "js"]);
     });
 });
 
@@ -47,6 +44,15 @@ gulp.task("pug", () => {
         }))
         .pipe(pug(option))
         .pipe(gulp.dest("./docs"))
+});
+
+gulp.task("js", () => {
+    gulp.src("./src/**/*.js")
+        .pipe(plumber({
+            errorHandler: notify.onError("Error: <%= error.message %>")
+        }))
+        .pipe(gulp.dest("./docs"))
+        .pipe(browserSync.stream())
 });
 
 gulp.task("reload", () => {
