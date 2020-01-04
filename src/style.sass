@@ -18,13 +18,13 @@ html, body
 
   font-size: 12pt
   @media screen and (max-device-width:720px)
-    font-size: 10pt
+    font-size: 14pt
 
   main
     margin: 0
     margin-left: $navWidth
     @media screen and (max-device-width:720px)
-      margin-left: 56px
+      margin-left: 72px
     padding: 0
 
     article
@@ -38,7 +38,6 @@ html, body
     h1
       font-family: "Nova Round"
       font-weight: normal
-      font-size: 12pt
 
   nav
     z-index: 50
@@ -52,7 +51,7 @@ html, body
     @media screen and (max-device-width:720px)
       display: none
       width: 50%
-      font-size: 28pt
+      font-size: 32pt
       background-color: #000000DD
 
       ul > li
@@ -92,7 +91,7 @@ html, body
       position: fixed
       top: 0
       left: 0
-      font-size: 50pt
+      font-size: 64pt
 
   section
     margin: 0
@@ -147,3 +146,12 @@ ul > li
 ol
   display: table
   text-align: left
+
+td, th, li
+  @media screen and (max-device-width:720px)
+    font-size: 24pt
+
+.mobile
+  display: none
+  @media screen and (max-devive-width: 720px)
+    display: block

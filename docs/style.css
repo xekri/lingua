@@ -14,14 +14,14 @@ html, body {
   font-size: 12pt; }
   @media screen and (max-device-width: 720px) {
     html, body {
-      font-size: 10pt; } }
+      font-size: 14pt; } }
   html main, body main {
     margin: 0;
     margin-left: 200px;
     padding: 0; }
     @media screen and (max-device-width: 720px) {
       html main, body main {
-        margin-left: 56px; } }
+        margin-left: 72px; } }
     html main article, body main article {
       width: 720px;
       margin: 0 auto;
@@ -32,8 +32,7 @@ html, body {
           width: 100%; } }
     html main h1, body main h1 {
       font-family: "Nova Round";
-      font-weight: normal;
-      font-size: 12pt; }
+      font-weight: normal; }
   html nav, body nav {
     z-index: 50;
     width: 200px;
@@ -47,7 +46,7 @@ html, body {
       html nav, body nav {
         display: none;
         width: 50%;
-        font-size: 28pt;
+        font-size: 32pt;
         background-color: #000000DD; }
         html nav ul > li, body nav ul > li {
           margin-top: 16px;
@@ -83,7 +82,7 @@ html, body {
         position: fixed;
         top: 0;
         left: 0;
-        font-size: 50pt; } }
+        font-size: 64pt; } }
   html section, body section {
     margin: 0;
     margin-bottom: 20px;
@@ -115,3 +114,13 @@ ul > li {
 ol {
   display: table;
   text-align: left; }
+
+@media screen and (max-device-width: 720px) {
+  td, th, li {
+    font-size: 24pt; } }
+
+.mobile {
+  display: none; }
+  @media screen and (max-devive-width: 720px) {
+    .mobile {
+      display: block; } }
