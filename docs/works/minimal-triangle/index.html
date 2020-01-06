@@ -63,14 +63,67 @@
       <article>
         <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
         <p class="mobile">this website is designed for desktop.</p>
-        <section id="works"><a href="#works">
-            <h1>works</h1></a>
-          <ul>
-            <li><a href="minimal-triangle">letters</a></li>
-            <li><a href="calendar">calendar</a></li>
-            <li><a href="https://note.com/melano/n/ned9e4f994056">romanization</a></li>
-            <!--li: a(href="duality/document.pdf") sequent calculi for intuitionistic substructural logics and their duals (PDF)-->
-          </ul>
+        <section id="minimal-triangle"><a href="#minimal-triangle">
+            <h1>minimal-triangle</h1></a>
+          <link rel="stylesheet" href="style.css">
+          <script type="text/javascript" src="script.js"></script>
+          <center>
+            <textarea class="trigger" id="input">abcdefghijklm
+nopqrstuvwxyz
+.,:;-'`</textarea>
+            <table id="options">
+              <tr>
+                <td>character width</td>
+                <td>(posisive int)</td>
+                <td>
+                  <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>stroke width</td>
+                <td>(positive int)</td>
+                <td>
+                  <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>space between characters</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>space between lines</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>margin</td>
+                <td>(nonnegative float)</td>
+                <td>
+                  <input class="trigger" id="margin" type="number" min="0" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="color" type="color" value="#000000">
+                </td>
+              </tr>
+              <tr>
+                <td>background color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="bg-color" type="color" value="#ffffff">
+                </td>
+              </tr>
+            </table>
+            <canvas id="output"></canvas>
+          </center>
         </section>
         <section id="comment"><a href="#comment">
             <h1>comment</h1></a>
