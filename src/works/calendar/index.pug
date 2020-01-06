@@ -54,11 +54,13 @@ block main
       center
         div
           input#isSpecified(type="checkbox")
-          input#specifyDate(type="date")
-          input#specifyTime(type="time")
+          input#specified(type="datetime-local", value="1954-06-07T00:00")
 
         div
           table
+            tr
+              th(align="right") gregorian
+              td(align="center", colspan="2")#gregorian
             tr
               td
               th dec
