@@ -1,20 +1,10 @@
-body {
-  font-family: serif;
-  background-color: black;
-  color: white; }
-  body div {
-    margin: 1em;
-    text-align: center; }
-    body div ul {
-      display: inline-table; }
-    body div li {
-      text-align: left; }
-  body table {
-    margin: auto;
-    border: 1px solid;
-    width: 40em; }
-    body table td {
-      text-align: left;
-      padding: .5em; }
-  body a {
-    color: inherit; }
+#month li {
+  text-align: left; }
+
+#table-out table {
+  white-space: nowrap; }
+
+@media screen and (max-device-width: 720px) {
+  #table-out {
+    max-width: 100%;
+    overflow-x: scroll; } }

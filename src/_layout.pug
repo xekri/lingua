@@ -1,7 +1,5 @@
 include /_mixins.pug
 
-block vars
-
 doctype html
 html(lang="en-GB")
 	head
@@ -11,29 +9,35 @@ html(lang="en-GB")
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-
 			gtag('config', 'UA-104159380-5');
 
 		meta(charset="UTF-8")
-		title= title
 		link(href="/style.css", rel="stylesheet")
 
 		script.
-			document.title = window.location.href
-				.replace(/\/$/, "")
-				.replace(/.+sumi\.space/, "sumi")
-				.replace("/", " / ");
+			var global =
+				{ "name":    "sumi"
+				, "twitter": "sumigv"
+				};
 
 			window.addEventListener("load", () => {
-				document.getElementById("nav-switch").onclick = () => {
-					let e = document.getElementsByTagName("nav")[0];
-					e.style["display"] = e.style["display"] === "none" ? "block" : "none";
-				}
-			});
+				// mobile menu switch
+				const sw = document.getElementById("nav-switch");
+				const nav = document.getElementsByTagName("nav")[0];
+				sw.onclick = () => {
+					if(nav.style["display"] === "none") {
+						nav.style["display"] = "block";
+						sw.innerText = "▲";
+					} else {
+						nav.style["display"] = "none";
+						sw.innerText = "▼";
+					}
+				};
 
-			window.addEventListener("load", () => {
+				// submenu
 				const section = document.getElementsByTagName("section")[0];
 				const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
+				const submnu = document.getElementById("submenu");
 
 				if(subsections.length > 0) {
 					let ul = document.createElement("ul");
@@ -47,29 +51,54 @@ html(lang="en-GB")
 						li.append(a);
 						ul.append(li);
 					}
-					document.getElementsByTagName("nav")[0].appendChild(ul);
+					submenu.append(ul);
+				} else {
+					submenu.remove();
 				}
 			});
 
-	body
-		label#nav-switch ☰
-		nav
-			center
-				a(href="/"): img(src="/images/sumi.png")
+		script(src="/works/calendar/calendar.js")
+		script.
+			// date
+			setInterval(() => {
+				const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+				document.getElementById("datetime").innerText =
+					`SC//${year.toString(16)}/${month.toString(16)}/`
+					+ (monthday + daytime).toString(16).slice(0, 6);
+			}, 100);
 
-			ul
-				li: a(href="/suzuri") suzuri
-				li: a(href="/favorite") favorite
-				li: a(href="/thoughts") thoughts
-				li: a(href="/works") works
+		block head
+		title= title
+
+	body
+		div#nav-switch ▼
+		nav
+			div#nav-in
+				div#logo
+					a(href="/"): img(src="/images/sumi.png")
+				div#datetime
+				+myDiv("menu", showsTitle=false)#menu
+					ul
+						li: a(href="/author") author
+						li: a(href="/suzuri") suzuri
+						li: a(href="/favorite") favorite
+						li: a(href="/thoughts") thoughts
+						li: a(href="/works") works
+
+					+myDiv("submenu", showsTitle=false)#submenu
+
+				center
+					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			//<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		main
 			article
-				div(align="right")
-					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				p.mobile this website is designed for desktop.
+				p the author designed this website for desktop, not for mobile.
+				p this site uses Google Analytics.
 
-				block main
+				+mySection(title)
+					block main
 
 				+mySection("comment")
 					div(id="disqus_thread")

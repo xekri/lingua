@@ -181,9 +181,16 @@ document.addEventListener("DOMContentLoaded", event => {
     // window.location.search +=  queryString paramStr;
   })
 
-  document.getElementById("download").addEventListener("click", () => {
+  //document.getElementById("download").addEventListener("click", () => {
+  //});
 
-  });
+  document.getElementById("tweet").setAttribute("href",
+    "https://twitter.com/intent/tweet"
+    + "?text=hi"
+    + `&via${global.twitter}`
+    + "&hashtags=minimal_triangle"
+    + `&url=${document.location}`
+  );
 });
 
 const render = () => {

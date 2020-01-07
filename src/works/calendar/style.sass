@@ -1,25 +1,11 @@
-body
-  font-family: serif
-  background-color: black
-  color: white
+#month
+  li
+    text-align: left
 
-  div
-    margin: 1em
-    text-align: center
-    ul
-      display: inline-table
-    li
-      text-align: left
-
-
-
+#table-out
   table
-    margin: auto
-    border: 1px solid
-    width: 40em
-    td
-      text-align: left
-      padding: .5em
+    white-space: nowrap
 
-  a
-    color: inherit
+  @media screen and (max-device-width:720px)
+    max-width: 100%
+    overflow-x: scroll

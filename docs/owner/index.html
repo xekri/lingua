@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+      
+    </script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script>
+      var global =
+      	{ "name":    "sumi"
+      	, "twitter": "sumigv"
+      	};
+      
+      document.title = window.location.href
+      	.replace(/\/$/, "")
+      	.replace(/.+sumi\.space/, "sumi")
+      	.replace("/", " / ");
+      
+      window.addEventListener("load", () => {
+      	document.getElementById("nav-switch").onclick = () => {
+      		let e = document.getElementsByTagName("nav")[0];
+      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
+      	}
+      });
+      
+      window.addEventListener("load", () => {
+      	const section = document.getElementsByTagName("section")[0];
+      	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
+      
+      	if(subsections.length > 0) {
+      		let ul = document.createElement("ul");
+      		ul.setAttribute("id", "sub-menu");
+      		for(let subsection of subsections) {
+      			const title = subsection.getAttribute("id")
+      			let a = document.createElement("a")
+      			a.setAttribute("href", "#" + title);
+      			a.append(document.createTextNode(title));
+      			let li = document.createElement("li")
+      			li.append(a);
+      			ul.append(li);
+      		}
+      		document.getElementsByTagName("nav")[0].appendChild(ul);
+      	}
+      });
+      
+    </script>
+    <title>owner</title>
+  </head>
+  <body>
+    <label id="nav-switch">☰</label>
+    <nav>
+      <center><a href="/"><img src="/images/sumi.png"></a></center>
+      <ul>
+        <li><a href="/owner">owner</a></li>
+        <li><a href="/suzuri">suzuri</a></li>
+        <li><a href="/favorite">favorite</a></li>
+        <li><a href="/thoughts">thoughts</a></li>
+        <li><a href="/works">works</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <p>this site uses Google Analytics.</p>
+        <p class="mobile">this website is designed for desktop.</p>
+        <section id="owner"><a href="#owner">
+            <h1>owner</h1></a>
+          <section id="alias"><a href="#alias">
+              <h1>alias</h1></a>
+            <p>
+              'melan sumi-gven'
+               ('μελαν スミ玄',
+               /melan sumi ŋwen/)
+               signifies the owner.<br>usually they call the owner 'sumi'.<br>'詞玄' (/kotoxaru/) and 'źeŋja' (/ʐeŋja/) are rarely used.
+            </p>
+          </section>
+          <section id="pronoun"><a href="#pronoun">
+              <h1>pronoun</h1></a>
+            <center>
+              <table>
+                <tr>
+                  <th>nominative</th>
+                  <td>ve</td>
+                </tr>
+                <tr>
+                  <th>accusative</th>
+                  <td>ver</td>
+                </tr>
+                <tr>
+                  <th>genitive</th>
+                  <td>vis</td>
+                </tr>
+              </table>
+            </center>
+            <p>if you really need to refer to me by 'he', do so.</p>
+          </section>
+          <section id="ideology"><a href="#ideology">
+              <h1>ideology</h1></a>
+            <ul>
+              <p>(!) i am temporarily a moral nihilist and therefore ignore this section.</p>
+              <li>
+                <del>determinism</del>&nbsp;
+                <del>physicalism</del>&nbsp;(i deny both free will and determinism. what should i call it?)
+              </li>
+              <li>intersectional veganism</li>
+              <li>antinatalism</li>
+              <li>antimonogamism</li>
+              <li>
+                <del>social liberalism</del>&nbsp;egalitarianism (?)
+              </li>
+            </ul>
+          </section>
+          <section id="sexuality"><a href="#sexuality">
+              <h1>sexuality</h1></a>
+            <ul>
+              <li>cisgender</li>
+              <li>androsexual</li>
+              <li>androromantic</li>
+              <li>polyamory</li>
+            </ul>
+          </section>
+          <section id="interest"><a href="#interest">
+              <h1>interest</h1></a>
+            <section id="language"><a href="#language">
+                <h1>language</h1></a>
+              <section id="human"><a href="#human">
+                  <h1>human</h1></a>
+                <dl>
+                  <dt>0th</dt>
+                  <dd>japanese</dd>
+                  <dt>1st</dt>
+                  <dd>english (B2-C1)</dd>
+                  <dt>to learn</dt>
+                  <dd>
+                    <ul>
+                      <li>lojban</li>
+                      <li>lingua franca nova</li>
+                      <li>german (A1)</li>
+                      <li>french</li>
+                      <li>koine</li>
+                      <li>taiwanese mandarine</li>
+                      <li>korean</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section id="programming"><a href="#programming">
+                  <h1>programming</h1></a>
+                <dl>
+                  <dt>using</dt>
+                  <dd>
+                    <ul>
+                      <li>Python</li>
+                      <li>Haskell</li>
+                      <li>Scala</li>
+                      <li>Lean Prover</li>
+                    </ul>
+                  </dd>
+                  <dt>to learn</dt>
+                  <dd>
+                    <ul>
+                      <li>D</li>
+                      <li>Coq</li>
+                      <li>Isabelle</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section id="computer science"><a href="#computer science">
+                <h1>computer science</h1></a>
+              <ul>
+                <li>λ-calculus</li>
+                <li>substructural logics</li>
+                <li>proof theory</li>
+                <li>category theory</li>
+              </ul>
+            </section>
+          </section>
+          <section id="account"><a href="#account">
+              <h1>account</h1></a>
+            <ul>
+              <li><a href="https://twitter.com/intent/user?user_id=759648849786920960">Twitter</a></li>
+              <!-- li: a(href="https://melanizo.tumblr.com/") Tumblr (deprecated)-->
+              <li><a href="https://https://melanizo.blogspot.com/">Blogger</a></li>
+              <li><a href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8">Amazon
+                  <ul>
+                    <li><a href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV">wishlists</a></li>
+                  </ul></a></li>
+              <!--li: a(href="https://peing.net/ja/sumi") Peing (deprecated)-->
+              <li><a href="https://marshmallow-qa.com/sumi">Marshmallow</a></li>
+              <li><a href="https://www.pixiv.net/member.php?id=13912025">pixiv
+                  <ul>
+                    <li><a href="https://www.pixiv.net/fanbox/creator/13912025">FANBOX</a></li>
+                    <li><a href="https://melanizo.booth.pm/">BOOTH</a></li>
+                  </ul></a></li>
+              <li><a href="https://soundcloud.com/melanophil">SoundCloud</a></li>
+            </ul>
+          </section>
+          <section id="donation"><a href="#donation">
+              <h1>donation</h1></a>
+            <p>any amount of money will be great help. thank you!</p>
+            <figure><img id="image-kyash" src="/images/kyash.png"></figure>
+          </section>
+        </section>
+        <section id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

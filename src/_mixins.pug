@@ -1,4 +1,11 @@
-mixin mySection(title)
-	section(id=title)
-		a(href="#" + title): h1= title
+mixin myDiv(title, showsTitle=true)
+	div.my-div(id=title)
+		if showsTitle
+			span.my-div-title #{title}
+		block
+
+mixin mySection(title, showsTitle=true)
+	section.my-section(id=title)
+		if showsTitle
+			a(href="#" + title): h1= title
 		block

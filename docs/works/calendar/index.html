@@ -6,29 +6,35 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      
       gtag('config', 'UA-104159380-5');
       
     </script>
     <meta charset="UTF-8">
-    <title></title>
     <link href="/style.css" rel="stylesheet">
     <script>
-      document.title = window.location.href
-      	.replace(/\/$/, "")
-      	.replace(/.+sumi\.space/, "sumi")
-      	.replace("/", " / ");
+      var global =
+      	{ "name":    "sumi"
+      	, "twitter": "sumigv"
+      	};
       
       window.addEventListener("load", () => {
-      	document.getElementById("nav-switch").onclick = () => {
-      		let e = document.getElementsByTagName("nav")[0];
-      		e.style["display"] = e.style["display"] === "none" ? "block" : "none";
-      	}
-      });
+      	// mobile menu switch
+      	const sw = document.getElementById("nav-switch");
+      	const nav = document.getElementsByTagName("nav")[0];
+      	sw.onclick = () => {
+      		if(nav.style["display"] === "none") {
+      			nav.style["display"] = "block";
+      			sw.innerText = "▲";
+      		} else {
+      			nav.style["display"] = "none";
+      			sw.innerText = "▼";
+      		}
+      	};
       
-      window.addEventListener("load", () => {
+      	// submenu
       	const section = document.getElementsByTagName("section")[0];
       	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
+      	const submnu = document.getElementById("submenu");
       
       	if(subsections.length > 0) {
       		let ul = document.createElement("ul");
@@ -42,31 +48,57 @@
       			li.append(a);
       			ul.append(li);
       		}
-      		document.getElementsByTagName("nav")[0].appendChild(ul);
+      		submenu.append(ul);
+      	} else {
+      		submenu.remove();
       	}
       });
       
     </script>
+    <script src="/works/calendar/calendar.js"></script>
+    <script>
+      // date
+      setInterval(() => {
+      	const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+      	document.getElementById("datetime").innerText =
+      		`SC//${year.toString(16)}/${month.toString(16)}/`
+      		+ (monthday + daytime).toString(16).slice(0, 6);
+      }, 100);
+      
+    </script>
+    <script src="calendar.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>calendar</title>
   </head>
   <body>
-    <label id="nav-switch">☰</label>
+    <div id="nav-switch">▼</div>
     <nav>
-      <center><a href="/"><img src="/images/sumi.png"></a></center>
-      <ul>
-        <li><a href="/suzuri">suzuri</a></li>
-        <li><a href="/favorite">favorite</a></li>
-        <li><a href="/thoughts">thoughts</a></li>
-        <li><a href="/works">works</a></li>
-      </ul>
+      <div id="nav-in">
+        <div id="logo"><a href="/"><img src="/images/sumi.png"></a></div>
+        <div id="datetime"></div>
+        <div class="my-div" id="menu">
+          <ul>
+            <li><a href="/author">author</a></li>
+            <li><a href="/suzuri">suzuri</a></li>
+            <li><a href="/favorite">favorite</a></li>
+            <li><a href="/thoughts">thoughts</a></li>
+            <li><a href="/works">works</a></li>
+          </ul>
+          <div class="my-div" id="submenu">
+          </div>
+        </div>
+        <center><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+      </div>
+      <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
     </nav>
     <main>
       <article>
-        <div align="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-        <p class="mobile">this website is designed for desktop.</p>
-        <script src="script.js"></script>
-        <section id="calendar"><a href="#calendar">
+        <p>the author designed this website for desktop, not for mobile.</p>
+        <p>this site uses Google Analytics.</p>
+        <section class="my-section" id="calendar"><a href="#calendar">
             <h1>calendar</h1></a>
-          <section id="overview"><a href="#overview">
+          <section class="my-section" id="overview"><a href="#overview">
               <h1>overview</h1></a>
             <p>sumi-calendar is a calendar almost every month in which has the same number of days.</p>
             <center>
@@ -123,7 +155,7 @@
             </center>
             <p>it has 13 months.</p>
             <center>
-              <ol start="0" align="left">
+              <ol start="0" align="left" id="month">
                 <li>january</li>
                 <li>february</li>
                 <li>march</li>
@@ -151,7 +183,7 @@
               which is the same scheme as<em> Holocene calendar.</em>
             </p>
           </section>
-          <section id="converter"><a href="#converter">
+          <section class="my-section" id="converter"><a href="#converter">
               <h1>converter</h1></a>
             <p>check to specify the date, or it shows the current date.</p>
             <center>
@@ -159,7 +191,7 @@
                 <input id="isSpecified" type="checkbox">
                 <input id="specified" type="datetime-local" value="1954-06-07T00:00">
               </div>
-              <div>
+              <div id="table-out">
                 <table>
                   <tr>
                     <th align="right">gregorian</th>
@@ -231,7 +263,7 @@
             </div>
           </section>
         </section>
-        <section id="comment"><a href="#comment">
+        <section class="my-section" id="comment"><a href="#comment">
             <h1>comment</h1></a>
           <div id="disqus_thread"></div>
           <script>

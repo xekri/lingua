@@ -1,0 +1,110 @@
+extend /_layout.pug
+
+block head
+	- var title = "author"
+
+block main
+	+mySection("alias")
+		p
+			| 'melan sumi-gven'
+			|  ('μελαν スミ玄',
+			|  /melan sumi ŋwen/)
+			|  signifies the owner.
+			br
+			| usually they call the owner 'sumi'.
+			br
+			| '詞玄' (/kotoxaru/) and 'źeŋja' (/ʐeŋja/) are rarely used.
+
+	+mySection("pronoun")
+		center
+			table
+				tr
+					th nominative
+					td ve
+				tr
+					th accusative
+					td ver
+				tr
+					th genitive
+					td vis
+
+		p if you really need to refer to me by 'he', do so.
+
+	+mySection("ideology"): ul
+		p (!) i am temporarily a moral nihilist and therefore ignore this section.
+
+		li
+			del determinism
+			| &#32;
+			del physicalism
+			|  (i deny both free will and determinism. what should i call it?)
+		li intersectional veganism
+		li anti-natalism
+		li pro-mortalism
+		li anti-monogamism
+		li
+			del social liberalism
+			|  egalitarianism (?)
+
+	+mySection("sexuality")
+		ul
+			li cisgender
+			li androsexual
+			li androromantic
+			li polyamory
+
+	+mySection("interest")
+		+mySection("language")
+			+mySection("human")
+				dl
+					dt 0th
+					dd japanese
+					dt 1st
+					dd english (TOEIC L&R 810)
+					dt to learn
+					dd: ul
+						li lojban
+						li taiwanese mandarine
+						li lingua franca nova
+						li german
+						li koine
+
+			+mySection("programming")
+				dl
+					dt using
+					dd: ul
+						li Python
+						li Haskell
+						li Scala
+						li Lean Prover
+					dt to learn
+					dd: ul
+						li D
+						li Coq
+						li Isabelle
+
+		+mySection("computer science")
+			ul
+				li λ-calculus
+				li substructural logics
+				li proof theory
+				li category theory
+
+	+mySection("account")
+		ul
+			li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twitter
+			// li: a(href="https://melanizo.tumblr.com/") Tumblr (deprecated)
+			li: a(href="https://https://melanizo.blogspot.com/") Blogger
+			li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
+				ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wishlists
+			//li: a(href="https://peing.net/ja/sumi") Peing (deprecated)
+			li: a(href="https://marshmallow-qa.com/sumi") Marshmallow
+			li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
+				ul
+					li: a(href="https://www.pixiv.net/fanbox/creator/13912025") FANBOX
+					li: a(href="https://melanizo.booth.pm/") BOOTH
+			li: a(href="https://soundcloud.com/melanophil") SoundCloud
+
+	+mySection("donation")
+		p any amount of money will be great help. thank you!
+		figure: img#image-kyash(src="/images/kyash.png")

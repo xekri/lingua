@@ -1,10 +1,14 @@
-$space: 20px
-$navWidth: 200px
+$space: 32px
+$navWidth: 240px
+$mobileNavWidth: 33.3%
+$mobileSwitchHeight: 64px
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Nova+Round');
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
 
 html, body
   box-sizing: border-box
@@ -16,15 +20,15 @@ html, body
   font-family: "Roboto", "Noto Sans JP", sans
   font-weight: 100
 
-  font-size: 12pt
   @media screen and (max-device-width:720px)
-    font-size: 14pt
+    text-size-adjust: 240%;
 
   main
     margin: 0
     margin-left: $navWidth
     @media screen and (max-device-width:720px)
-      margin-left: 72px
+      margin-top: $mobileSwitchHeight
+      margin-left: 0
     padding: 0
 
     article
@@ -33,11 +37,7 @@ html, body
       padding: $space
       padding-bottom: 0
       @media screen and (max-device-width:720px)
-        width: 100%
-
-    h1
-      font-family: "Nova Round"
-      font-weight: normal
+        width: 80%
 
   nav
     z-index: 50
@@ -50,62 +50,101 @@ html, body
     background-color: black
     @media screen and (max-device-width:720px)
       display: none
-      width: 50%
-      font-size: 32pt
-      background-color: #000000DD
+      width: $mobileNavWidth
+      //font-size: 32pt
+      background-color: #000000CC
 
       ul > li
         margin-top: 16px
         margin-bottom: 16px
 
-    img
-      width: 128px
-      margin-top: 32px
-      animation: rot 1s
 
-      @keyframes rot
-        0%
-          transform: rotate(0deg)
-        100%
-          transform: rotate(360deg)
+    #nav-in
+      margin-left: $space
+      margin-right: $space
+      margin-top: $space
+      padding: 0
+      display: inline-block
+      max-width: 100%
+      @media screen and (max-device-width:720px)
+        //font-size: 28pt
 
-    & > ul
+      #logo
+        margin: 0
+        margin-bottom: $space
+        text-align: center
+        img
+          width: 128px
+          animation: rot 1s
+
+          @keyframes rot
+            0%
+              transform: rotate(0deg)
+            100%
+              transform: rotate(360deg)
+
+      #datetime
+        text-align: center
+        font-family: "Roboto Mono", mono
+        padding: 0
+        margin: 0
+        margin-bottom: $space
+        width: 100%
+        text-align: center
+        @media screen and (max-device-width:720px)
+          font-size: 8pt
+    ul
       width: 60%
-      margin-top: 32px
       margin-left: auto
       margin-right: auto
       font-family: "Nova Round"
 
-  ul#sub-menu
-    border-top: 1px solid
-    border-left: 1px solid
-    padding-top: 8px
-
-  label#nav-switch
-    display: none
+  #nav-switch
     z-index: 100
+    display: none
     @media screen and (max-device-width:720px)
       display: block
+      vertical-align: middle
+      //font-size: 24pt
+      background-color: #ffffff
+      color: #000000
       margin: 0
-      padding: 8px
+      box-sizing: border-box
+      padding-left: 16px
+      padding-top: 1.5px
       position: fixed
       top: 0
       left: 0
-      font-size: 64pt
+      right: 0
+      height: $mobileSwitchHeight
 
-  section
+  .my-section, .my-div
     margin: 0
-    margin-bottom: $space
     padding: 0
+    margin-bottom: $space
     padding-left: $space
-
     border: solid #fff
     border-width: 1px 0 0 1px
-
     background-color: transparent
+    font-size: 100%
+
+    h1
+      font-family: "Nova Round"
+      font-weight: normal
+      font-size: 125%
 
     &:last-child
       // margin-bottom: -$space
+
+  .my-div
+    margin-bottom: 32px
+    padding-left: 32px
+    ul
+      padding-left: 16px
+    .my-div-title
+      font-weight: bold
+
+    & > ul
 
   figure
     display: flex
@@ -125,31 +164,21 @@ html, body
     &:active
 
   table
-      margin: 16px
-      padding: 16px
-      border-top: 1px solid
-      border-bottom: 1px solid
-      border-collapse: collapse
+    margin: 16px
+    padding: 16px
+    border-top: 1px solid
+    border-bottom: 1px solid
+    border-collapse: collapse
 
   td, th
     padding: 6px
-    //border-top: 1px solid
-    //border-bottom: 1px solid
 
-ul > li
+ul
   list-style-type: square
-  //list-style-position: inside
 
-//ol > li
-  //counter-reset: item -1
-
-ol
+ul, ol
   display: table
   text-align: left
-
-td, th, li
-  @media screen and (max-device-width:720px)
-    font-size: 24pt
 
 .mobile
   display: none
