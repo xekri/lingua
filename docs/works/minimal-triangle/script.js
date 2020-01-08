@@ -10,15 +10,13 @@ const pos = {
 const charToPaths = {
   " ": [],
   ".": [
-    [
-      [4, 3],
-      [4, 4]
+    [ [4, 3]
+    , [4, 4]
     ]
   ],
   ",": [
-    [
-      [4, 3],
-      [3, 4]
+    [ [4, 3]
+    , [3, 4]
     ]
   ],
   "-": [
@@ -38,9 +36,8 @@ const charToPaths = {
   ],
   ";": [
     [pos.t, [4, 1]],
-    [
-      [4, 3],
-      [3, 4]
+    [ [4, 3]
+    , [3, 4]
     ]
   ],
   a: [
@@ -142,56 +139,67 @@ const charToPaths = {
 const unit = 4;
 
 document.addEventListener("DOMContentLoaded", event => {
-  let query = {};
+  let params = {};
   for (const pair of decodeURIComponent(window.location.search).substring(1).split("&")) {
     const [key, value] = pair.split("=");
-    query[key] = value;
+    params[key] = value;
+    console.log([key, value])
   }
 
-  for (const [f, id] of [
+  for (const [f, key] of [
       [x => x, "input"],
       [parseInt, "char-w"],
       [parseInt, "stroke-w"],
       [parseFloat, "space-x"],
       [parseFloat, "space-y"],
       [parseFloat, "margin"],
-      [x => x, "color"],
-      [x => x, "bg-color"]
+      [x => "#" + x, "color"],
+      [x => "#" + x, "bg-color"]
     ])
-    if (query[id]) document.getElementById(id).value = f(query[id]);
+    if (params[key])
+      document.getElementById(key).value = f(params[key]);
 
   render();
+  updateTweet();
 
-  for (const element of document.getElementsByClassName("trigger"))
-    element.addEventListener("input", render);
+  for (const e of document.getElementsByClassName("trigger"))
+    for (const f of [render, updateTweet])
+      e.addEventListener("input", f);
+});
 
-  document.getElementById("input").addEventListener("focusout", () => {
-    let params = {};
-    for(const id of [
-      "char-w",
-      "stroke-w",
-      "space-x",
-      "space-y",
-      "margin",
-      "color",
-      "bg-color",
-      "input"
-    ]) params[id] = document.getElementById(id).value;
-    // const paramsStr = $.param(params)
-    // window.location.search +=  queryString paramStr;
-  })
+const updateTweet = () => {
+  let params = {};
+  const keys =
+    [ "char-w"
+    , "stroke-w"
+    , "space-x"
+    , "space-y"
+    , "margin"
+    , "color"
+    , "bg-color"
+    , "input"
+    ];
+  for(const key of keys)
+    params[key] = document.getElementById(key).value;
+  params.color = params.color.substr(1);
+  params["bg-color"] = params["bg-color"].substr(1);
 
-  //document.getElementById("download").addEventListener("click", () => {
-  //});
+  console.log(params.input);
+  console.log(encodeURIComponent(params.input));
 
   document.getElementById("tweet").setAttribute("href",
     "https://twitter.com/intent/tweet"
-    + "?text=hi"
-    + `&via${global.twitter}`
+    + `?text=` + encodeURIComponent(params.input)
+    + `&via=${global.twitter}`
     + "&hashtags=minimal_triangle"
-    + `&url=${document.location}`
+    + "&url=" + encodeURIComponent(
+      document.location.protocol + "//" + document.location.host + document.location.pathname
+      + "?" + keys.slice(0, -1).map(key => `${key}=${params[key]}`).join("&")
+      + "&input=" + params.input.split("\n").map(encodeURIComponent).join("%0A")
+    )
   );
-});
+  console.log(document.getElementById("tweet").getAttribute("href"));
+};
 
 const render = () => {
   const canvas = document.getElementById("output");
