@@ -6,9 +6,10 @@ $mobileSwitchHeight: 64px
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
-@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300');
 @import url('https://fonts.googleapis.com/css?family=Nova+Round');
 @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+@import url("https://fontlibrary.org/face/symbola");
 
 html, body
   box-sizing: border-box
@@ -17,8 +18,8 @@ html, body
   padding: 0
   color: white
   background-color: black
-  font-family: "Roboto", "Noto Sans JP", sans
-  font-weight: 100
+  font-family: "Noto Sans", "Noto Sans JP", serif
+  font-weight: 300
 
   @media screen and (max-device-width:720px)
     text-size-adjust: 240%;
@@ -32,7 +33,7 @@ html, body
     padding: 0
 
     article
-      width: 720px
+      width: 960px
       margin: 0 auto
       padding: $space
       padding-bottom: 0
@@ -164,14 +165,14 @@ html, body
     &:active
 
   table
-    margin: 16px
+    margin: 32px
     padding: 16px
     border-top: 1px solid
     border-bottom: 1px solid
     border-collapse: collapse
 
   td, th
-    padding: 6px
+    padding: 8px
 
 ul
   list-style-type: square

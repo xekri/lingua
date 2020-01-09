@@ -1,0 +1,9 @@
+tbody {
+  display: inline-block;
+  margin: 8px; }
+  tbody#consonant td {
+    text-align: left; }
+  tbody#vowel td {
+    text-align: right; }
+  tbody#tone td {
+    text-align: center; }

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+      
+    </script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script>
+      var global =
+      	{ "name":    "sumi"
+      	, "twitter": "sumigv"
+      	};
+      
+      window.addEventListener("load", () => {
+      	// mobile menu switch
+      	const sw = document.getElementById("nav-switch");
+      	const nav = document.getElementsByTagName("nav")[0];
+      	sw.onclick = () => {
+      		if(nav.style["display"] === "none") {
+      			nav.style["display"] = "block";
+      			sw.innerText = "▲";
+      		} else {
+      			nav.style["display"] = "none";
+      			sw.innerText = "▼";
+      		}
+      	};
+      
+      	// submenu
+      	const section = document.getElementsByTagName("section")[0];
+      	const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
+      	const submnu = document.getElementById("submenu");
+      
+      	if(subsections.length > 0) {
+      		let ul = document.createElement("ul");
+      		ul.setAttribute("id", "sub-menu");
+      		for(let subsection of subsections) {
+      			const title = subsection.getAttribute("id")
+      			let a = document.createElement("a")
+      			a.setAttribute("href", "#" + title);
+      			a.append(document.createTextNode(title));
+      			let li = document.createElement("li")
+      			li.append(a);
+      			ul.append(li);
+      		}
+      		submenu.append(ul);
+      	} else {
+      		submenu.remove();
+      	}
+      });
+      
+    </script>
+    <script src="/works/calendar/calendar.js"></script>
+    <script>
+      // date
+      setInterval(() => {
+      	const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+      	document.getElementById("datetime").innerText =
+      		`SC//${year.toString(16)}/${month.toString(16)}/`
+      		+ (monthday + daytime).toString(16).slice(0, 6);
+      }, 100);
+      
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>romanization</title>
+  </head>
+  <body>
+    <div id="nav-switch">▼</div>
+    <nav>
+      <div id="nav-in">
+        <div id="logo"><a href="/"><img src="/images/sumi.png"></a></div>
+        <div id="datetime"></div>
+        <div class="my-div" id="menu">
+          <ul>
+            <li><a href="/author">author</a></li>
+            <li><a href="/suzuri">suzuri</a></li>
+            <li><a href="/favorite">favorite</a></li>
+            <li><a href="/thoughts">thoughts</a></li>
+            <li><a href="/works">works</a></li>
+          </ul>
+          <div class="my-div" id="submenu">
+          </div>
+        </div>
+        <center><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+      </div>
+      <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+    </nav>
+    <main>
+      <article>
+        <p>the author designed this website for desktop, not for mobile.</p>
+        <p>this site uses Google Analytics.</p>
+        <section class="my-section" id="romanization"><a href="#romanization">
+            <h1>romanization</h1></a>
+          <section class="my-section" id="cantonese"><a href="#cantonese">
+              <h1>cantonese</h1></a>
+            <center>
+              <!--
+              table
+                caption sound
+                tr
+                  td p
+                  td pʰ
+                  td m
+                  td f
+                tr
+                  td t
+                  td tʰ
+                  td n
+                  td l
+                tr
+                  td k
+                  td kʰ
+                  td ŋ
+                  td h
+                tr
+                  td kʷ
+                  td kʷʰ
+                  td w
+                tr
+                  td ts
+                  td tsʰ
+                  td s
+                  td j
+              
+              -->
+            </center>
+            <p>in some ASCII environment, we may replace ‹ŋ›, ‹ā›, ‹ø›, ‹ø̄› with ‹q›, ‹aa›, ‹w›, ‹ww›, respectively.</p>
+            <p>we need a combining character U+0304 to type ‹ø̄›.</p>
+            <center>
+              <table>
+                <caption>me</caption>
+                <tbody class="consonant">
+                  <tr>
+                    <td>b </td>
+                    <td>p </td>
+                    <td>m</td>
+                    <td>f</td>
+                  </tr>
+                  <tr>
+                    <td>d </td>
+                    <td>t </td>
+                    <td>n</td>
+                    <td>l</td>
+                  </tr>
+                  <tr>
+                    <td>g </td>
+                    <td>k </td>
+                    <td>ŋ</td>
+                    <td>h</td>
+                  </tr>
+                  <tr>
+                    <td>gv</td>
+                    <td>kv</td>
+                    <td> </td>
+                    <td>v</td>
+                  </tr>
+                  <tr>
+                    <td>z </td>
+                    <td>c </td>
+                    <td>s</td>
+                    <td>j</td>
+                  </tr>
+                </tbody>
+                <tbody class="vowel">
+                  <tr>
+                    <td>i</td>
+                    <td>  </td>
+                    <td>iu</td>
+                    <td>  </td>
+                    <td>im</td>
+                    <td>in</td>
+                    <td>iŋ</td>
+                    <td>ip</td>
+                    <td>it</td>
+                    <td>ik</td>
+                  </tr>
+                  <tr>
+                    <td>y</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>yn</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>yt</td>
+                    <td>  </td>
+                  </tr>
+                  <tr>
+                    <td>u</td>
+                    <td>ui</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>un</td>
+                    <td>uŋ</td>
+                    <td>  </td>
+                    <td>ut</td>
+                    <td>uk</td>
+                  </tr>
+                  <tr>
+                    <td>e</td>
+                    <td>ei</td>
+                    <td>eu</td>
+                    <td>  </td>
+                    <td>em</td>
+                    <td>en</td>
+                    <td>eŋ</td>
+                    <td>ep</td>
+                    <td>  </td>
+                    <td>ek</td>
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>øy</td>
+                    <td>  </td>
+                    <td>øn</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>øt</td>
+                    <td>  </td>
+                  </tr>
+                  <tr>
+                    <td>ø̄</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>ø̄ŋ</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>ø̄k</td>
+                  </tr>
+                  <tr>
+                    <td>o</td>
+                    <td>oi</td>
+                    <td>ou</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>on</td>
+                    <td>oŋ</td>
+                    <td>  </td>
+                    <td>ot</td>
+                    <td>ok</td>
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    <td>ai</td>
+                    <td>au</td>
+                    <td>  </td>
+                    <td>am</td>
+                    <td>an</td>
+                    <td>aŋ</td>
+                    <td>ap</td>
+                    <td>at</td>
+                    <td>ak</td>
+                  </tr>
+                  <tr>
+                    <td>ā</td>
+                    <td>āi</td>
+                    <td>āu</td>
+                    <td>  </td>
+                    <td>ām</td>
+                    <td>ān</td>
+                    <td>āŋ</td>
+                    <td>āp</td>
+                    <td>āt</td>
+                    <td>āk</td>
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> m</td>
+                    <td>  </td>
+                    <td> ŋ</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <caption>教院式</caption>
+                <tbody class="consonant">
+                  <tr>
+                    <td>b</td>
+                    <td>p</td>
+                    <td>m</td>
+                    <td>f</td>
+                  </tr>
+                  <tr>
+                    <td>d</td>
+                    <td>t</td>
+                    <td>n</td>
+                    <td>l</td>
+                  </tr>
+                  <tr>
+                    <td>g</td>
+                    <td>k</td>
+                    <td>ng</td>
+                    <td>h</td>
+                  </tr>
+                  <tr>
+                    <td>gw</td>
+                    <td>kw</td>
+                    <td>w</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>dz</td>
+                    <td>ts</td>
+                    <td>s</td>
+                    <td>j</td>
+                  </tr>
+                </tbody>
+                <tbody class="vowel">
+                  <tr>
+                    <td>i </td>
+                    <td>   </td>
+                    <td>iu </td>
+                    <td>   </td>
+                    <td>im </td>
+                    <td>in </td>
+                    <td>ing </td>
+                    <td>ip </td>
+                    <td>it </td>
+                    <td>ik </td>
+                  </tr>
+                  <tr>
+                    <td>y </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>yn </td>
+                    <td>    </td>
+                    <td>   </td>
+                    <td>yt </td>
+                    <td>   </td>
+                  </tr>
+                  <tr>
+                    <td>u </td>
+                    <td>ui </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>un </td>
+                    <td>ung </td>
+                    <td>   </td>
+                    <td>ut </td>
+                    <td>uk </td>
+                  </tr>
+                  <tr>
+                    <td>e </td>
+                    <td>ei </td>
+                    <td>eu </td>
+                    <td>   </td>
+                    <td>em </td>
+                    <td>en </td>
+                    <td>eng </td>
+                    <td>ep </td>
+                    <td>   </td>
+                    <td>ek </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>    </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                  </tr>
+                  <tr>
+                    <td>oe</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>oey</td>
+                    <td>   </td>
+                    <td>oen</td>
+                    <td>oeng</td>
+                    <td>   </td>
+                    <td>oet</td>
+                    <td>oek</td>
+                  </tr>
+                  <tr>
+                    <td>o </td>
+                    <td>oi </td>
+                    <td>ou </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>on </td>
+                    <td>ong </td>
+                    <td>   </td>
+                    <td>ot </td>
+                    <td>ok </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>ai </td>
+                    <td>au </td>
+                    <td>   </td>
+                    <td>am </td>
+                    <td>an </td>
+                    <td>ang </td>
+                    <td>ap </td>
+                    <td>at </td>
+                    <td>ak </td>
+                  </tr>
+                  <tr>
+                    <td>aa</td>
+                    <td>aai</td>
+                    <td>aau</td>
+                    <td>   </td>
+                    <td>aam</td>
+                    <td>aan</td>
+                    <td>aang</td>
+                    <td>aap</td>
+                    <td>aat</td>
+                    <td>aak</td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>  m</td>
+                    <td>   </td>
+                    <td>  ng</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <caption>粤拼</caption>
+                <tbody class="consonant">
+                  <tr>
+                    <td>b</td>
+                    <td>p</td>
+                    <td>m</td>
+                    <td>f</td>
+                  </tr>
+                  <tr>
+                    <td>d</td>
+                    <td>t</td>
+                    <td>n</td>
+                    <td>l</td>
+                  </tr>
+                  <tr>
+                    <td>g</td>
+                    <td>k</td>
+                    <td>ng</td>
+                    <td>h</td>
+                  </tr>
+                  <tr>
+                    <td>gw</td>
+                    <td>kw</td>
+                    <td>w</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>z</td>
+                    <td>c</td>
+                    <td>s</td>
+                    <td>j</td>
+                  </tr>
+                </tbody>
+                <tbody class="vowel">
+                  <tr>
+                    <td>i </td>
+                    <td>   </td>
+                    <td>iu </td>
+                    <td> </td>
+                    <td>im </td>
+                    <td>in </td>
+                    <td>ing </td>
+                    <td>ip </td>
+                    <td>it </td>
+                    <td>ik </td>
+                  </tr>
+                  <tr>
+                    <td>yu</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td> </td>
+                    <td>   </td>
+                    <td>yun</td>
+                    <td>    </td>
+                    <td>   </td>
+                    <td>yut</td>
+                    <td>   </td>
+                  </tr>
+                  <tr>
+                    <td>u </td>
+                    <td>ui </td>
+                    <td>   </td>
+                    <td> </td>
+                    <td>   </td>
+                    <td>un </td>
+                    <td>ung </td>
+                    <td>   </td>
+                    <td>ut </td>
+                    <td>uk </td>
+                  </tr>
+                  <tr>
+                    <td>e </td>
+                    <td>ei </td>
+                    <td>eu </td>
+                    <td> </td>
+                    <td>em </td>
+                    <td>en </td>
+                    <td>eng </td>
+                    <td>ep </td>
+                    <td>   </td>
+                    <td>ek </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>eoi</td>
+                    <td>   </td>
+                    <td> </td>
+                    <td>   </td>
+                    <td>eon</td>
+                    <td>    </td>
+                    <td>   </td>
+                    <td>eot</td>
+                    <td>   </td>
+                  </tr>
+                  <tr>
+                    <td>oe</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td> </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>oeng</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>oek</td>
+                  </tr>
+                  <tr>
+                    <td>o </td>
+                    <td>oi </td>
+                    <td>ou </td>
+                    <td> </td>
+                    <td>   </td>
+                    <td>on </td>
+                    <td>ong </td>
+                    <td>   </td>
+                    <td>ot </td>
+                    <td>ok </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>ai </td>
+                    <td>au </td>
+                    <td> </td>
+                    <td>am </td>
+                    <td>an </td>
+                    <td>ang </td>
+                    <td>ap </td>
+                    <td>at </td>
+                    <td>ak </td>
+                  </tr>
+                  <tr>
+                    <td>aa</td>
+                    <td>aai</td>
+                    <td>aau</td>
+                    <td> </td>
+                    <td>aam</td>
+                    <td>aan</td>
+                    <td>aang</td>
+                    <td>aap</td>
+                    <td>aat</td>
+                    <td>aak</td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td> </td>
+                    <td>  m</td>
+                    <td>   </td>
+                    <td>  ng</td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <tbody class="tone">
+                  <tr>
+                    <td>      </td>
+                    <td>絲</td>
+                    <td>史</td>
+                    <td>試</td>
+                    <td>時</td>
+                    <td>市</td>
+                    <td>士</td>
+                    <td>式</td>
+                    <td>錫</td>
+                    <td>食</td>
+                  </tr>
+                  <tr>
+                    <td>      </td>
+                    <td>55</td>
+                    <td>35</td>
+                    <td>33</td>
+                    <td>21</td>
+                    <td>23</td>
+                    <td>22</td>
+                    <td> 5</td>
+                    <td> 3</td>
+                    <td> 2</td>
+                  </tr>
+                  <tr>
+                    <td>me    </td>
+                    <td> ´</td>
+                    <td> ˆ</td>
+                    <td> ˙</td>
+                    <td>`ˇ</td>
+                    <td> ˇ</td>
+                    <td> `</td>
+                    <td> ´</td>
+                    <td> ˙</td>
+                    <td> `</td>
+                  </tr>
+                  <tr>
+                    <td>教院式</td>
+                    <td> 1</td>
+                    <td> 2</td>
+                    <td> 3</td>
+                    <td> 4</td>
+                    <td> 5</td>
+                    <td> 6</td>
+                    <td> 7</td>
+                    <td> 8</td>
+                    <td> 9</td>
+                  </tr>
+                  <tr>
+                    <td>粤拼  </td>
+                    <td> 1</td>
+                    <td> 2</td>
+                    <td> 3</td>
+                    <td> 4</td>
+                    <td> 5</td>
+                    <td> 6</td>
+                    <td> 1</td>
+                    <td> 3</td>
+                    <td> 6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </section>
+        </section>
+        <section class="my-section" id="comment"><a href="#comment">
+            <h1>comment</h1></a>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            	this.page.url = "http://sumi.space";
+            	this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

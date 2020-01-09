@@ -5,7 +5,7 @@ var browserSync = require("browser-sync");
 var notify = require("gulp-notify");
 var pug = require("gulp-pug");
 
-gulp.task("default", ["sass", "browser-sync", "pug", "js", "watch"]);
+gulp.task("default", ["browser-sync", "sass", "pug", "js", "watch"]);
 
 gulp.task("watch", () => {
     gulp.watch(["./src/**"], () => {

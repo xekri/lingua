@@ -1,0 +1,127 @@
+extend /_layout.pug
+
+mixin toTable(xss)
+  for xs in xss
+    tr
+      for x in xs.split("|")
+        td= x
+
+block head
+  - var title = "romanization"
+  link(rel="stylesheet", href="style.css")
+
+block main
+  +mySection("cantonese")
+      center
+        //
+          table
+            caption sound
+            tr
+              td p
+              td pʰ
+              td m
+              td f
+            tr
+              td t
+              td tʰ
+              td n
+              td l
+            tr
+              td k
+              td kʰ
+              td ŋ
+              td h
+            tr
+              td kʷ
+              td kʷʰ
+              td w
+            tr
+              td ts
+              td tsʰ
+              td s
+              td j
+
+      p in some ASCII environment, we may replace ‹ŋ›, ‹ā›, ‹ø›, ‹ø̄› with ‹q›, ‹aa›, ‹w›, ‹ww›, respectively.
+      p we need a combining character U+0304 to type ‹ø̄›.
+      center
+        table
+          caption me
+          tbody.consonant
+            +toTable([
+              "b |p |m|f",
+              "d |t |n|l",
+              "g |k |ŋ|h",
+              "gv|kv| |v",
+              "z |c |s|j"
+            ])
+          tbody.vowel
+            +toTable([
+              "i|  |iu|  |im|in|iŋ|ip|it|ik",
+              "y|  |  |  |  |yn|  |  |yt|  ",
+              "u|ui|  |  |  |un|uŋ|  |ut|uk",
+              "e|ei|eu|  |em|en|eŋ|ep|  |ek",
+              " |  |  |øy|  |øn|  |  |øt|  ",
+              "ø̄|  |  |  |  |  |ø̄ŋ|  |  |ø̄k",
+              "o|oi|ou|  |  |on|oŋ|  |ot|ok",
+              " |ai|au|  |am|an|aŋ|ap|at|ak",
+              "ā|āi|āu|  |ām|ān|āŋ|āp|āt|āk",
+              " |  |  |  | m|  | ŋ|  |  |  "
+            ])
+
+        table
+          caption 教院式
+          tbody.consonant
+            +toTable([
+              "b|p|m|f",
+              "d|t|n|l",
+              "g|k|ng|h",
+              "gw|kw|w|",
+              "dz|ts|s|j"
+            ])
+          tbody.vowel
+            +toTable([
+            "i |   |iu |   |im |in |ing |ip |it |ik ",
+            "y |   |   |   |   |yn |    |   |yt |   ",
+            "u |ui |   |   |   |un |ung |   |ut |uk ",
+            "e |ei |eu |   |em |en |eng |ep |   |ek ",
+            "  |   |   |   |   |   |    |   |   |   ",
+            "oe|   |   |oey|   |oen|oeng|   |oet|oek",
+            "o |oi |ou |   |   |on |ong |   |ot |ok ",
+            "  |ai |au |   |am |an |ang |ap |at |ak ",
+            "aa|aai|aau|   |aam|aan|aang|aap|aat|aak",
+            "  |   |   |   |  m|   |  ng|   |   |   "
+            ])
+
+        table
+          caption 粤拼
+          tbody.consonant
+            +toTable([
+              "b|p|m|f",
+              "d|t|n|l",
+              "g|k|ng|h",
+              "gw|kw|w|",
+              "z|c|s|j"
+            ])
+          tbody.vowel
+            +toTable([
+              "i |   |iu | |im |in |ing |ip |it |ik ",
+              "yu|   |   | |   |yun|    |   |yut|   ",
+              "u |ui |   | |   |un |ung |   |ut |uk ",
+              "e |ei |eu | |em |en |eng |ep |   |ek ",
+              "  |eoi|   | |   |eon|    |   |eot|   ",
+              "oe|   |   | |   |   |oeng|   |   |oek",
+              "o |oi |ou | |   |on |ong |   |ot |ok ",
+              "  |ai |au | |am |an |ang |ap |at |ak ",
+              "aa|aai|aau| |aam|aan|aang|aap|aat|aak",
+              "  |   |   | |  m|   |  ng|   |   |   "
+            ])
+
+        table
+          tbody.tone
+            +toTable([
+              "      |絲|史|試|時|市|士|式|錫|食",
+              "      |55|35|33|21|23|22| 5| 3| 2",
+              "me    | ´| ˆ| ˙|`ˇ| ˇ| `| ´| ˙| `",
+              "教院式| 1| 2| 3| 4| 5| 6| 7| 8| 9",
+              "粤拼  | 1| 2| 3| 4| 5| 6| 1| 3| 6"
+            ])

@@ -8,3 +8,6 @@
   #table-out {
     max-width: 100%;
     overflow-x: scroll; } }
+
+#formal10, #formal16 {
+  font-family: "Roboto Mono"; }
