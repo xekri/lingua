@@ -1,9 +1,22 @@
-tbody {
-  display: inline-block;
-  margin: 8px; }
-  tbody#consonant td {
+table tbody {
+  margin: 8px;
+  text-align: center; }
+  table tbody tr td {
+    position: relative; }
+  table tbody td.over-th:before {
+    content: "";
+    height: 1px;
+    overflow: hidden;
+    background: white;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 0; }
+  table tbody.consonant, table tbody.vowel {
+    display: inline-block; }
+  table tbody.consonant td {
     text-align: left; }
-  tbody#vowel td {
+  table tbody.vowel td {
     text-align: right; }
-  tbody#tone td {
-    text-align: center; }
+  table tbody.tone td {
+    text-align: right; }
