@@ -12,12 +12,12 @@
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
     <script>
-      var global =
-      	{ "name":    "sumi"
-      	, "twitter": "sumigv"
-      	};
-      
       window.addEventListener("load", () => {
+      	var global =
+      		{ name:    "sumi"
+      		, twitter: "sumigv"
+      		};
+      
       	// mobile menu switch
       	const sw = document.getElementById("nav-switch");
       	const nav = document.getElementsByTagName("nav")[0];
@@ -67,7 +67,8 @@
       
     </script>
     <link rel="stylesheet" href="style.css">
-    <title>romanization</title>
+    <script src="cantonese-convert.js"></script>
+    <title>orthography</title>
   </head>
   <body>
     <div id="nav-switch">▼</div>
@@ -94,11 +95,138 @@
       <article>
         <p>the author designed this website for desktop, not for mobile.</p>
         <p>this site uses Google Analytics.</p>
-        <section class="my-section" id="romanization"><a href="#romanization">
-            <h1>romanization</h1></a>
+        <section class="my-section" id="orthography"><a href="#orthography">
+            <h1>orthography</h1></a>
+          <section class="my-section" id="japanese"><a href="#japanese">
+              <h1>japanese</h1></a>
+            <p><em>the author have not finished this section yet.</em></p>
+            <center>
+              <table>
+                <caption>example</caption>
+                <tbody></tbody>
+              </table>
+              <table>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td class="over-th" colspan="5">vowel</td>
+                    <td class="over-th" colspan="15">consonant</td>
+                    <td>N</td>
+                    <td>Q</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <th>ア</th>
+                    <th>イ</th>
+                    <th>ウ</th>
+                    <th>𛀀</th>
+                    <th>オ</th>
+                    <th>ア</th>
+                    <th>カ</th>
+                    <th>ガ</th>
+                    <th>サ</th>
+                    <th>ザ</th>
+                    <th>タ</th>
+                    <th>ダ</th>
+                    <th>ナ</th>
+                    <th>ハ</th>
+                    <th>バ</th>
+                    <th>パ</th>
+                    <th>マ</th>
+                    <th>ヤ</th>
+                    <th>ラ</th>
+                    <th>ワ</th>
+                    <th>ン</th>
+                    <th>ッ</th>
+                  </tr>
+                  <tr>
+                    <th>sumi</th>
+                    <td>a</td>
+                    <td>i, ĩ</td>
+                    <td>u, ũ</td>
+                    <td>e</td>
+                    <td>o</td>
+                    <td>h</td>
+                    <td>c</td>
+                    <td>g</td>
+                    <td>s</td>
+                    <td>z</td>
+                    <td>t</td>
+                    <td>d</td>
+                    <td>n</td>
+                    <td>f</td>
+                    <td>b</td>
+                    <td>p</td>
+                    <td>m</td>
+                    <td>j</td>
+                    <td>r</td>
+                    <td>v</td>
+                    <td>ŋ, n, m</td>
+                    <td>x, c, t, f</td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </section>
           <section class="my-section" id="cantonese"><a href="#cantonese">
               <h1>cantonese</h1></a>
             <center>
+              <table>
+                <caption>example</caption>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <th>sumi</th>
+                    <th>cantonese<br/>pinyin</th>
+                    <th>jyutping</th>
+                  </tr>
+                  <tr>
+                    <td>春曉（孟浩然）</td>
+                    <td>cø̄n<sup>˥</sup> xiu<sup>˧˥</sup> (māŋ<sup>˩</sup> xou<sup>˩</sup> jin<sup>˧˩</sup>)
+                    </td>
+                    <td>tsoen<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
+                    </td>
+                    <td>ceon<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>春眠不覺曉，</td>
+                    <td>cø̄n<sup>˥</sup> min<sup>˧˩</sup> bat<sup>˥</sup> gok<sup>˧</sup> xiu<sup>˧˥</sup>,
+                    </td>
+                    <td>tsoen<sup>1</sup> min<sup>4</sup> bat<sup>7</sup> gok<sup>8</sup> hiu<sup>2</sup>,
+                    </td>
+                    <td>ceon<sup>1</sup> min<sup>4</sup> bat<sup>1</sup> gok<sup>3</sup> hiu<sup>2</sup>,
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>處處聞啼鳥。</td>
+                    <td>cy<sup>˧</sup> cy<sup>˧</sup> man<sup>˧˩</sup> tai<sup>˧˩</sup> niu<sup>˩˧</sup>.
+                    </td>
+                    <td>tsy<sup>3</sup> tsy<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
+                    </td>
+                    <td>cyu<sup>3</sup> cyu<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>夜來風雨聲，</td>
+                    <td>je<sup>˩</sup> loi<sup>˧˩</sup> fuŋ<sup>˥</sup> jy<sup>˩˧</sup> siŋ<sup>˥</sup>,
+                    </td>
+                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jy<sup>5</sup> sing<sup>1</sup>,
+                    </td>
+                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jyu<sup>5</sup> sing<sup>1</sup>,
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>花落知多少？</td>
+                    <td>fā<sup>˥</sup> lok<sup>˩</sup> zi<sup>˥</sup> do<sup>˥</sup> siu<sup>˧˥</sup>?
+                    </td>
+                    <td>faa<sup>1</sup> lok<sup>9</sup> dzi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
+                    </td>
+                    <td>faa<sup>1</sup> lok<sup>6</sup> zi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <!--
               table
                 caption sound
@@ -133,7 +261,7 @@
             <p>we need a combining character U+0304 to type ‹ø̄›.</p>
             <center>
               <table>
-                <caption>me</caption>
+                <caption>sumi</caption>
                 <tbody class="consonant">
                   <tr>
                     <td>b </td>
@@ -151,7 +279,7 @@
                     <td>g </td>
                     <td>k </td>
                     <td>ŋ</td>
-                    <td>h</td>
+                    <td>x</td>
                   </tr>
                   <tr>
                     <td>gv</td>
@@ -290,36 +418,36 @@
                 </tbody>
               </table>
               <table>
-                <caption>教院式</caption>
+                <caption>教育學院拼音方案 (cantonese pinyin)</caption>
                 <tbody class="consonant">
                   <tr>
-                    <td>b</td>
-                    <td>p</td>
-                    <td>m</td>
+                    <td>b </td>
+                    <td>p </td>
+                    <td>m </td>
                     <td>f</td>
                   </tr>
                   <tr>
-                    <td>d</td>
-                    <td>t</td>
-                    <td>n</td>
+                    <td>d </td>
+                    <td>t </td>
+                    <td>n </td>
                     <td>l</td>
                   </tr>
                   <tr>
-                    <td>g</td>
-                    <td>k</td>
+                    <td>g </td>
+                    <td>k </td>
                     <td>ng</td>
                     <td>h</td>
                   </tr>
                   <tr>
                     <td>gw</td>
                     <td>kw</td>
+                    <td>  </td>
                     <td>w</td>
-                    <td></td>
                   </tr>
                   <tr>
                     <td>dz</td>
                     <td>ts</td>
-                    <td>s</td>
+                    <td>s </td>
                     <td>j</td>
                   </tr>
                 </tbody>
@@ -447,36 +575,36 @@
                 </tbody>
               </table>
               <table>
-                <caption>粤拼</caption>
+                <caption>香港語言學學會粵語拼音方案 (jyutping)</caption>
                 <tbody class="consonant">
                   <tr>
-                    <td>b</td>
-                    <td>p</td>
-                    <td>m</td>
+                    <td>b </td>
+                    <td>p </td>
+                    <td>m </td>
                     <td>f</td>
                   </tr>
                   <tr>
-                    <td>d</td>
-                    <td>t</td>
-                    <td>n</td>
+                    <td>d </td>
+                    <td>t </td>
+                    <td>n </td>
                     <td>l</td>
                   </tr>
                   <tr>
-                    <td>g</td>
-                    <td>k</td>
+                    <td>g </td>
+                    <td>k </td>
                     <td>ng</td>
                     <td>h</td>
                   </tr>
                   <tr>
                     <td>gw</td>
                     <td>kw</td>
+                    <td>  </td>
                     <td>w</td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td>z</td>
-                    <td>c</td>
-                    <td>s</td>
+                    <td>z </td>
+                    <td>c </td>
+                    <td>s </td>
                     <td>j</td>
                   </tr>
                 </tbody>
@@ -604,21 +732,22 @@
                 </tbody>
               </table>
               <table>
+                <caption>tones</caption>
                 <tbody class="tone">
                   <tr>
-                    <td>      </td>
-                    <td>絲</td>
-                    <td>史</td>
-                    <td>試</td>
-                    <td>時</td>
-                    <td>市</td>
-                    <td>士</td>
-                    <td>式</td>
-                    <td>錫</td>
-                    <td>食</td>
+                    <td></td>
+                    <th>絲</th>
+                    <th>史</th>
+                    <th>試</th>
+                    <th>時</th>
+                    <th>市</th>
+                    <th>士</th>
+                    <th>式</th>
+                    <th>錫</th>
+                    <th>食</th>
                   </tr>
                   <tr>
-                    <td>      </td>
+                    <th></th>
                     <td>55</td>
                     <td>35</td>
                     <td>33</td>
@@ -630,19 +759,19 @@
                     <td> 2</td>
                   </tr>
                   <tr>
-                    <td>me    </td>
-                    <td> ´</td>
-                    <td> ˆ</td>
-                    <td> ˙</td>
-                    <td>`ˇ</td>
-                    <td> ˇ</td>
-                    <td> `</td>
-                    <td> ´</td>
-                    <td> ˙</td>
-                    <td> `</td>
+                    <th>sumi</th>
+                    <td> ˥</td>
+                    <td>˧˥</td>
+                    <td> ˧</td>
+                    <td>˧˩</td>
+                    <td>˩˧</td>
+                    <td> ˩</td>
+                    <td> ˥</td>
+                    <td> ˧</td>
+                    <td> ˩</td>
                   </tr>
                   <tr>
-                    <td>教院式</td>
+                    <th>cantonese pinyin</th>
                     <td> 1</td>
                     <td> 2</td>
                     <td> 3</td>
@@ -654,7 +783,7 @@
                     <td> 9</td>
                   </tr>
                   <tr>
-                    <td>粤拼  </td>
+                    <th>jyutping        </th>
                     <td> 1</td>
                     <td> 2</td>
                     <td> 3</td>
@@ -668,6 +797,24 @@
                 </tbody>
               </table>
             </center>
+            <section class="my-section" id="converter"><a href="#converter">
+                <h1>converter</h1></a>
+              <p><em>the author have not finished this section yet.</em></p>
+              <div class="converter">
+                <div class="from">
+                  <select>
+                    <option value="cantonese pinyin">cantonese pinyin</option>
+                  </select>
+                  <textarea></textarea>
+                </div>
+                <div class="to">
+                  <select>
+                    <option value="sumi">sumi</option>
+                  </select>
+                  <textarea readonly></textarea>
+                </div>
+              </div>
+            </section>
           </section>
         </section>
         <section class="my-section" id="comment"><a href="#comment">

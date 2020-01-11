@@ -1,10 +1,53 @@
-tbody
-  display: inline-block
-  margin: 8px
+#cantonese
+  table
+    tbody
+      margin: 8px
+      text-align: center
 
-  &#consonant td
-    text-align: left
-  &#vowel td
-    text-align: right
-  &#tone td
-    text-align: center
+      tr td
+        position: relative
+
+      td.over-th:before
+        content: ""
+        // display: block
+        height: 1px
+        overflow: hidden
+        background: white
+        position: absolute
+        left: 4px
+        right: 4px
+        bottom: 0
+
+      &.consonant, &.vowel
+        display: inline-block
+
+      &.consonant td
+        text-align: left
+      &.vowel td
+        text-align: right
+      &.tone td
+        text-align: right
+
+  div
+    &.converter
+      display: flex
+      text-align: center
+      margin: 0 auto
+      width: 75%
+
+      select
+        display: block
+
+      .from, .to
+        width: 50%
+        margin: 16px
+      .from
+        select, textarea
+          float: right
+      .to
+        select, textarea
+          float: left
+
+      textarea
+        width: 100%
+        height: 120px

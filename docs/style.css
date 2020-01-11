@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Nova+Round");
 @import url("https://fonts.googleapis.com/css?family=Nova+Mono");
-@import url("https://fontlibrary.org/face/symbola");
 html, body {
   box-sizing: border-box;
   height: 100%;
@@ -32,7 +31,7 @@ html, body {
       padding-bottom: 0; }
       @media screen and (max-device-width: 720px) {
         html main article, body main article {
-          width: 80%; } }
+          width: 100%; } }
   html nav, body nav {
     z-index: 50;
     width: 240px;
