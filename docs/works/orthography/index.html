@@ -170,6 +170,12 @@
           </section>
           <section class="my-section" id="cantonese"><a href="#cantonese">
               <h1>cantonese</h1></a>
+            <p>
+              i introduce yet another pinyin system for cantonese.
+              it is consistent and compact,
+               though it may seem complex at zeroth glance.
+              the system has an ASCII version in addition to an original Unicode one.
+            </p>
             <center>
               <table>
                 <caption>example</caption>
@@ -182,8 +188,7 @@
                   </tr>
                   <tr>
                     <td>春曉（孟浩然）</td>
-                    <td>cø̄n<sup>˥</sup> xiu<sup>˧˥</sup> (māŋ<sup>˩</sup> xou<sup>˩</sup> jin<sup>˧˩</sup>)
-                    </td>
+                    <td class="cantonese-example"></td>
                     <td>tsoen<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
                     </td>
                     <td>ceon<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
@@ -191,8 +196,7 @@
                   </tr>
                   <tr>
                     <td>春眠不覺曉，</td>
-                    <td>cø̄n<sup>˥</sup> min<sup>˧˩</sup> bat<sup>˥</sup> gok<sup>˧</sup> xiu<sup>˧˥</sup>,
-                    </td>
+                    <td class="cantonese-example"></td>
                     <td>tsoen<sup>1</sup> min<sup>4</sup> bat<sup>7</sup> gok<sup>8</sup> hiu<sup>2</sup>,
                     </td>
                     <td>ceon<sup>1</sup> min<sup>4</sup> bat<sup>1</sup> gok<sup>3</sup> hiu<sup>2</sup>,
@@ -200,8 +204,7 @@
                   </tr>
                   <tr>
                     <td>處處聞啼鳥。</td>
-                    <td>cy<sup>˧</sup> cy<sup>˧</sup> man<sup>˧˩</sup> tai<sup>˧˩</sup> niu<sup>˩˧</sup>.
-                    </td>
+                    <td class="cantonese-example"></td>
                     <td>tsy<sup>3</sup> tsy<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
                     </td>
                     <td>cyu<sup>3</sup> cyu<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
@@ -209,8 +212,7 @@
                   </tr>
                   <tr>
                     <td>夜來風雨聲，</td>
-                    <td>je<sup>˩</sup> loi<sup>˧˩</sup> fuŋ<sup>˥</sup> jy<sup>˩˧</sup> siŋ<sup>˥</sup>,
-                    </td>
+                    <td class="cantonese-example"></td>
                     <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jy<sup>5</sup> sing<sup>1</sup>,
                     </td>
                     <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jyu<sup>5</sup> sing<sup>1</sup>,
@@ -218,8 +220,7 @@
                   </tr>
                   <tr>
                     <td>花落知多少？</td>
-                    <td>fā<sup>˥</sup> lok<sup>˩</sup> zi<sup>˥</sup> do<sup>˥</sup> siu<sup>˧˥</sup>?
-                    </td>
+                    <td class="cantonese-example"></td>
                     <td>faa<sup>1</sup> lok<sup>9</sup> dzi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
                     </td>
                     <td>faa<sup>1</sup> lok<sup>6</sup> zi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
@@ -257,8 +258,28 @@
               
               -->
             </center>
-            <p>in some ASCII environment, we may replace ‹ŋ›, ‹ā›, ‹ø›, ‹ø̄› with ‹q›, ‹aa›, ‹w›, ‹ww›, respectively.</p>
-            <p>we need a combining character U+0304 to type ‹ø̄›.</p>
+            <p>in some ASCII environment, we may replace any non-ASCII character as follows
+              <center>
+                <table>
+                  <tr>
+                    <td>ŋ</td>
+                    <td>m̄</td>
+                    <td>ŋ̄</td>
+                    <td>ā</td>
+                    <td>ø</td>
+                    <td>ø̄</td>
+                  </tr>
+                  <tr>
+                    <td>q</td>
+                    <td>mm</td>
+                    <td>qq</td>
+                    <td>aa</td>
+                    <td>w</td>
+                    <td>ww</td>
+                  </tr>
+                </table>
+              </center>and may replace any tone diacritics with a number as in cantonese pinyin.
+            </p>
             <center>
               <table>
                 <caption>sumi</caption>
@@ -408,9 +429,9 @@
                     <td>  </td>
                     <td>  </td>
                     <td>  </td>
-                    <td> m</td>
+                    <td> m̄</td>
                     <td>  </td>
-                    <td> ŋ</td>
+                    <td> ŋ̄</td>
                     <td>  </td>
                     <td>  </td>
                     <td>  </td>
@@ -748,7 +769,7 @@
                   </tr>
                   <tr>
                     <th></th>
-                    <td>55</td>
+                    <td>53</td>
                     <td>35</td>
                     <td>33</td>
                     <td>21</td>
@@ -760,15 +781,15 @@
                   </tr>
                   <tr>
                     <th>sumi</th>
-                    <td> ˥</td>
-                    <td>˧˥</td>
-                    <td> ˧</td>
-                    <td>˧˩</td>
-                    <td>˩˧</td>
-                    <td> ˩</td>
-                    <td> ˥</td>
-                    <td> ˧</td>
-                    <td> ˩</td>
+                    <td>î</td>
+                    <td>ǐ</td>
+                    <td>i</td>
+                    <td>î̗</td>
+                    <td>ǐ̗</td>
+                    <td>i̗</td>
+                    <td>í</td>
+                    <td>i</td>
+                    <td>i̗</td>
                   </tr>
                   <tr>
                     <th>cantonese pinyin</th>
@@ -802,13 +823,13 @@
               <p><em>the author have not finished this section yet.</em></p>
               <div class="converter">
                 <div class="from">
-                  <select>
+                  <select class="trigger">
                     <option value="cantonese pinyin">cantonese pinyin</option>
                   </select>
-                  <textarea></textarea>
+                  <textarea class="trigger"></textarea>
                 </div>
                 <div class="to">
-                  <select>
+                  <select class="trigger">
                     <option value="sumi">sumi</option>
                   </select>
                   <textarea readonly></textarea>
