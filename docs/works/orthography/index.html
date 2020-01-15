@@ -97,77 +97,32 @@
         <p>this site uses Google Analytics.</p>
         <section class="my-section" id="orthography"><a href="#orthography">
             <h1>orthography</h1></a>
-          <section class="my-section" id="japanese"><a href="#japanese">
-              <h1>japanese</h1></a>
-            <p><em>the author have not finished this section yet.</em></p>
-            <center>
-              <table>
-                <caption>example</caption>
-                <tbody></tbody>
-              </table>
-              <table>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td class="over-th" colspan="5">vowel</td>
-                    <td class="over-th" colspan="15">consonant</td>
-                    <td>N</td>
-                    <td>Q</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <th>ア</th>
-                    <th>イ</th>
-                    <th>ウ</th>
-                    <th>𛀀</th>
-                    <th>オ</th>
-                    <th>ア</th>
-                    <th>カ</th>
-                    <th>ガ</th>
-                    <th>サ</th>
-                    <th>ザ</th>
-                    <th>タ</th>
-                    <th>ダ</th>
-                    <th>ナ</th>
-                    <th>ハ</th>
-                    <th>バ</th>
-                    <th>パ</th>
-                    <th>マ</th>
-                    <th>ヤ</th>
-                    <th>ラ</th>
-                    <th>ワ</th>
-                    <th>ン</th>
-                    <th>ッ</th>
-                  </tr>
-                  <tr>
-                    <th>sumi</th>
-                    <td>a</td>
-                    <td>i, ĩ</td>
-                    <td>u, ũ</td>
-                    <td>e</td>
-                    <td>o</td>
-                    <td>h</td>
-                    <td>c</td>
-                    <td>g</td>
-                    <td>s</td>
-                    <td>z</td>
-                    <td>t</td>
-                    <td>d</td>
-                    <td>n</td>
-                    <td>f</td>
-                    <td>b</td>
-                    <td>p</td>
-                    <td>m</td>
-                    <td>j</td>
-                    <td>r</td>
-                    <td>v</td>
-                    <td>ŋ, n, m</td>
-                    <td>x, c, t, f</td>
-                  </tr>
-                </tbody>
-              </table>
-            </center>
-          </section>
+          <!-- +mySection("japanese")
+          p: em the author have not finished this section yet.
+          center
+            table
+              caption example
+              tbody
+          
+            table
+              tbody
+                tr
+                  td
+                  td.over-th(colspan="5") vowel
+                  td.over-th(colspan="15") consonant
+                  td N
+                  td Q
+                tr
+                  td
+                  for x in Array.from("アイウ𛀀オアカガサザタダナハバパマヤラワンッ")
+                    th= x
+                tr
+                  th= global.name
+                  for x in "a|i, ĩ|u, ũ|e|o|h|c|g|s|z|t|d|n|f|b|p|m|j|r|v|ŋ, n, m|x, c, t, f".split("|")
+                    td= x
+          
+          
+          -->
           <section class="my-section" id="cantonese"><a href="#cantonese">
               <h1>cantonese</h1></a>
             <p>
@@ -182,7 +137,7 @@
                 <tbody>
                   <tr>
                     <td></td>
-                    <th>sumi</th>
+                    <th>me</th>
                     <th>cantonese<br/>pinyin</th>
                     <th>jyutping</th>
                   </tr>
@@ -258,187 +213,11 @@
               
               -->
             </center>
-            <p>in some ASCII environment, we may replace any non-ASCII character as follows
-              <center>
-                <table>
-                  <tr>
-                    <td>ŋ</td>
-                    <td>m̄</td>
-                    <td>ŋ̄</td>
-                    <td>ā</td>
-                    <td>ø</td>
-                    <td>ø̄</td>
-                  </tr>
-                  <tr>
-                    <td>q</td>
-                    <td>mm</td>
-                    <td>qq</td>
-                    <td>aa</td>
-                    <td>w</td>
-                    <td>ww</td>
-                  </tr>
-                </table>
-              </center>and may replace any tone diacritics with a number as in cantonese pinyin.
-            </p>
             <center>
-              <table>
-                <caption>sumi</caption>
-                <tbody class="consonant">
-                  <tr>
-                    <td>b </td>
-                    <td>p </td>
-                    <td>m</td>
-                    <td>f</td>
-                  </tr>
-                  <tr>
-                    <td>d </td>
-                    <td>t </td>
-                    <td>n</td>
-                    <td>l</td>
-                  </tr>
-                  <tr>
-                    <td>g </td>
-                    <td>k </td>
-                    <td>ŋ</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>gv</td>
-                    <td>kv</td>
-                    <td> </td>
-                    <td>v</td>
-                  </tr>
-                  <tr>
-                    <td>z </td>
-                    <td>c </td>
-                    <td>s</td>
-                    <td>j</td>
-                  </tr>
-                </tbody>
-                <tbody class="vowel">
-                  <tr>
-                    <td>i</td>
-                    <td>  </td>
-                    <td>iu</td>
-                    <td>  </td>
-                    <td>im</td>
-                    <td>in</td>
-                    <td>iŋ</td>
-                    <td>ip</td>
-                    <td>it</td>
-                    <td>ik</td>
-                  </tr>
-                  <tr>
-                    <td>y</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>yn</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>yt</td>
-                    <td>  </td>
-                  </tr>
-                  <tr>
-                    <td>u</td>
-                    <td>ui</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>un</td>
-                    <td>uŋ</td>
-                    <td>  </td>
-                    <td>ut</td>
-                    <td>uk</td>
-                  </tr>
-                  <tr>
-                    <td>e</td>
-                    <td>ei</td>
-                    <td>eu</td>
-                    <td>  </td>
-                    <td>em</td>
-                    <td>en</td>
-                    <td>eŋ</td>
-                    <td>ep</td>
-                    <td>  </td>
-                    <td>ek</td>
-                  </tr>
-                  <tr>
-                    <td> </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>øy</td>
-                    <td>  </td>
-                    <td>øn</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>øt</td>
-                    <td>  </td>
-                  </tr>
-                  <tr>
-                    <td>ø̄</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>ø̄ŋ</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>ø̄k</td>
-                  </tr>
-                  <tr>
-                    <td>o</td>
-                    <td>oi</td>
-                    <td>ou</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>on</td>
-                    <td>oŋ</td>
-                    <td>  </td>
-                    <td>ot</td>
-                    <td>ok</td>
-                  </tr>
-                  <tr>
-                    <td> </td>
-                    <td>ai</td>
-                    <td>au</td>
-                    <td>  </td>
-                    <td>am</td>
-                    <td>an</td>
-                    <td>aŋ</td>
-                    <td>ap</td>
-                    <td>at</td>
-                    <td>ak</td>
-                  </tr>
-                  <tr>
-                    <td>ā</td>
-                    <td>āi</td>
-                    <td>āu</td>
-                    <td>  </td>
-                    <td>ām</td>
-                    <td>ān</td>
-                    <td>āŋ</td>
-                    <td>āp</td>
-                    <td>āt</td>
-                    <td>āk</td>
-                  </tr>
-                  <tr>
-                    <td> </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td> m̄</td>
-                    <td>  </td>
-                    <td> ŋ̄</td>
-                    <td>  </td>
-                    <td>  </td>
-                    <td>  </td>
-                  </tr>
-                </tbody>
+              <table id="cantonese-me">
+                <caption>me</caption>
               </table>
-              <table>
+              <table id="cantonese-pinyin">
                 <caption>教育學院拼音方案 (cantonese pinyin)</caption>
                 <tbody class="consonant">
                   <tr>
@@ -477,7 +256,6 @@
                     <td>i </td>
                     <td>   </td>
                     <td>iu </td>
-                    <td>   </td>
                     <td>im </td>
                     <td>in </td>
                     <td>ing </td>
@@ -487,7 +265,6 @@
                   </tr>
                   <tr>
                     <td>y </td>
-                    <td>   </td>
                     <td>   </td>
                     <td>   </td>
                     <td>   </td>
@@ -502,7 +279,6 @@
                     <td>ui </td>
                     <td>   </td>
                     <td>   </td>
-                    <td>   </td>
                     <td>un </td>
                     <td>ung </td>
                     <td>   </td>
@@ -513,7 +289,6 @@
                     <td>e </td>
                     <td>ei </td>
                     <td>eu </td>
-                    <td>   </td>
                     <td>em </td>
                     <td>en </td>
                     <td>eng </td>
@@ -522,22 +297,9 @@
                     <td>ek </td>
                   </tr>
                   <tr>
-                    <td>  </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>    </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                  </tr>
-                  <tr>
                     <td>oe</td>
-                    <td>   </td>
-                    <td>   </td>
                     <td>oey</td>
+                    <td>   </td>
                     <td>   </td>
                     <td>oen</td>
                     <td>oeng</td>
@@ -550,7 +312,6 @@
                     <td>oi </td>
                     <td>ou </td>
                     <td>   </td>
-                    <td>   </td>
                     <td>on </td>
                     <td>ong </td>
                     <td>   </td>
@@ -558,22 +319,9 @@
                     <td>ok </td>
                   </tr>
                   <tr>
-                    <td>  </td>
-                    <td>ai </td>
-                    <td>au </td>
-                    <td>   </td>
-                    <td>am </td>
-                    <td>an </td>
-                    <td>ang </td>
-                    <td>ap </td>
-                    <td>at </td>
-                    <td>ak </td>
-                  </tr>
-                  <tr>
                     <td>aa</td>
                     <td>aai</td>
                     <td>aau</td>
-                    <td>   </td>
                     <td>aam</td>
                     <td>aan</td>
                     <td>aang</td>
@@ -583,7 +331,17 @@
                   </tr>
                   <tr>
                     <td>  </td>
-                    <td>   </td>
+                    <td>ai </td>
+                    <td>au </td>
+                    <td>am </td>
+                    <td>an </td>
+                    <td>ang </td>
+                    <td>ap </td>
+                    <td>at </td>
+                    <td>ak </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
                     <td>   </td>
                     <td>   </td>
                     <td>  m</td>
@@ -634,7 +392,6 @@
                     <td>i </td>
                     <td>   </td>
                     <td>iu </td>
-                    <td> </td>
                     <td>im </td>
                     <td>in </td>
                     <td>ing </td>
@@ -646,7 +403,6 @@
                     <td>yu</td>
                     <td>   </td>
                     <td>   </td>
-                    <td> </td>
                     <td>   </td>
                     <td>yun</td>
                     <td>    </td>
@@ -658,7 +414,6 @@
                     <td>u </td>
                     <td>ui </td>
                     <td>   </td>
-                    <td> </td>
                     <td>   </td>
                     <td>un </td>
                     <td>ung </td>
@@ -670,7 +425,6 @@
                     <td>e </td>
                     <td>ei </td>
                     <td>eu </td>
-                    <td> </td>
                     <td>em </td>
                     <td>en </td>
                     <td>eng </td>
@@ -679,34 +433,20 @@
                     <td>ek </td>
                   </tr>
                   <tr>
-                    <td>  </td>
+                    <td>oe</td>
                     <td>eoi</td>
                     <td>   </td>
-                    <td> </td>
                     <td>   </td>
                     <td>eon</td>
-                    <td>    </td>
-                    <td>   </td>
-                    <td>eot</td>
-                    <td>   </td>
-                  </tr>
-                  <tr>
-                    <td>oe</td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td> </td>
-                    <td>   </td>
-                    <td>   </td>
                     <td>oeng</td>
                     <td>   </td>
-                    <td>   </td>
+                    <td>eot</td>
                     <td>oek</td>
                   </tr>
                   <tr>
                     <td>o </td>
                     <td>oi </td>
                     <td>ou </td>
-                    <td> </td>
                     <td>   </td>
                     <td>on </td>
                     <td>ong </td>
@@ -715,22 +455,9 @@
                     <td>ok </td>
                   </tr>
                   <tr>
-                    <td>  </td>
-                    <td>ai </td>
-                    <td>au </td>
-                    <td> </td>
-                    <td>am </td>
-                    <td>an </td>
-                    <td>ang </td>
-                    <td>ap </td>
-                    <td>at </td>
-                    <td>ak </td>
-                  </tr>
-                  <tr>
                     <td>aa</td>
                     <td>aai</td>
                     <td>aau</td>
-                    <td> </td>
                     <td>aam</td>
                     <td>aan</td>
                     <td>aang</td>
@@ -740,9 +467,19 @@
                   </tr>
                   <tr>
                     <td>  </td>
+                    <td>ai </td>
+                    <td>au </td>
+                    <td>am </td>
+                    <td>an </td>
+                    <td>ang </td>
+                    <td>ap </td>
+                    <td>at </td>
+                    <td>ak </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
                     <td>   </td>
                     <td>   </td>
-                    <td> </td>
                     <td>  m</td>
                     <td>   </td>
                     <td>  ng</td>
@@ -754,7 +491,7 @@
               </table>
               <table>
                 <caption>tones</caption>
-                <tbody class="tone">
+                <tbody class="tone" id="cantonese-tone">
                   <tr>
                     <td></td>
                     <th>絲</th>
@@ -780,16 +517,19 @@
                     <td> 2</td>
                   </tr>
                   <tr>
-                    <th>sumi</th>
-                    <td>î</td>
-                    <td>ǐ</td>
-                    <td>i</td>
-                    <td>î̗</td>
-                    <td>ǐ̗</td>
-                    <td>i̗</td>
-                    <td>í</td>
-                    <td>i</td>
-                    <td>i̗</td>
+                    <th></th>
+                    <td>˥˧</td>
+                    <td>˧˥</td>
+                    <td> ˧</td>
+                    <td>˧˩</td>
+                    <td>˩˧</td>
+                    <td> ˩</td>
+                    <td> ˥</td>
+                    <td> ˧</td>
+                    <td> ˩</td>
+                  </tr>
+                  <tr>
+                    <th>me</th>
                   </tr>
                   <tr>
                     <th>cantonese pinyin</th>
@@ -818,6 +558,29 @@
                 </tbody>
               </table>
             </center>
+            <p>we may
+              <ul>
+                <li>replace some non-ASCII characters as the table below in some ASCII environment</li>
+                <li>replace any tone diacritic with a nummeral as in cantonese pinyin</li>
+                <li>omit any macron below except in ‹a̱›, which exists only for readability and does not affect ambiguity</li>
+              </ul>
+            </p>
+            <center>
+              <table>
+                <tr>
+                  <td>ŋ</td>
+                  <td>m̄</td>
+                  <td>ŋ̄</td>
+                  <td>ø</td>
+                </tr>
+                <tr>
+                  <td>q</td>
+                  <td>mm</td>
+                  <td>qq</td>
+                  <td>w</td>
+                </tr>
+              </table>
+            </center>
             <section class="my-section" id="converter"><a href="#converter">
                 <h1>converter</h1></a>
               <p><em>the author have not finished this section yet.</em></p>
@@ -838,8 +601,8 @@
             </section>
           </section>
         </section>
-        <section class="my-section" id="comment"><a href="#comment">
-            <h1>comment</h1></a>
+        <section class="my-section" id=""><a href="#">
+            <h1></h1></a>
           <div id="disqus_thread"></div>
           <script>
             var disqus_config = function () {

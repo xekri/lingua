@@ -25,7 +25,8 @@ block head
   script(src="cantonese-convert.js")
 
 block main
-  +mySection("japanese")
+
+  // +mySection("japanese")
     p: em the author have not finished this section yet.
     center
       table
@@ -62,7 +63,7 @@ block main
         tbody
           tr
             td
-            th= global.name
+            th me
             th cantonese<br/>pinyin
             th jyutping
           tr
@@ -127,50 +128,11 @@ block main
             td s
             td j
 
-    p
-      | in some ASCII environment, we may replace any non-ASCII character as follows
-      center: table
-        tr
-          td ŋ
-          td m#{"\u0304"}
-          td ŋ#{"\u0304"}
-          td a#{"\u0304"}
-          td ø
-          td ø#{"\u0304"}
-        tr
-          td q
-          td mm
-          td qq
-          td aa
-          td w
-          td ww
-      | and may replace any tone diacritics with a number as in cantonese pinyin.
     center
-      table
-        caption= global.name
-        tbody.consonant
-          +toTrs([
-            "b |p |m|f",
-            "d |t |n|l",
-            "g |k |ŋ|x",
-            "gv|kv| |v",
-            "z |c |s|j"
-          ])
-        tbody.vowel
-          +toTrs([
-            "i|  |iu|  |im|in|iŋ|ip|it|ik",
-            "y|  |  |  |  |yn|  |  |yt|  ",
-            "u|ui|  |  |  |un|uŋ|  |ut|uk",
-            "e|ei|eu|  |em|en|eŋ|ep|  |ek",
-            " |  |  |øy|  |øn|  |  |øt|  ",
-            "ø̄|  |  |  |  |  |ø̄ŋ|  |  |ø̄k",
-            "o|oi|ou|  |  |on|oŋ|  |ot|ok",
-            " |ai|au|  |am|an|aŋ|ap|at|ak",
-            "ā|āi|āu|  |ām|ān|āŋ|āp|āt|āk",
-            " |  |  |  | m\u0304|  | ŋ\u0304|  |  |  "
-          ])
+      table#cantonese-me
+        caption me
 
-      table
+      table#cantonese-pinyin
         caption 教育學院拼音方案 (cantonese pinyin)
         tbody.consonant
           +toTrs([
@@ -182,16 +144,15 @@ block main
           ])
         tbody.vowel
           +toTrs([
-          "i |   |iu |   |im |in |ing |ip |it |ik ",
-          "y |   |   |   |   |yn |    |   |yt |   ",
-          "u |ui |   |   |   |un |ung |   |ut |uk ",
-          "e |ei |eu |   |em |en |eng |ep |   |ek ",
-          "  |   |   |   |   |   |    |   |   |   ",
-          "oe|   |   |oey|   |oen|oeng|   |oet|oek",
-          "o |oi |ou |   |   |on |ong |   |ot |ok ",
-          "  |ai |au |   |am |an |ang |ap |at |ak ",
-          "aa|aai|aau|   |aam|aan|aang|aap|aat|aak",
-          "  |   |   |   |  m|   |  ng|   |   |   "
+          "i |   |iu |im |in |ing |ip |it |ik ",
+          "y |   |   |   |yn |    |   |yt |   ",
+          "u |ui |   |   |un |ung |   |ut |uk ",
+          "e |ei |eu |em |en |eng |ep |   |ek ",
+          "oe|oey|   |   |oen|oeng|   |oet|oek",
+          "o |oi |ou |   |on |ong |   |ot |ok ",
+          "aa|aai|aau|aam|aan|aang|aap|aat|aak",
+          "  |ai |au |am |an |ang |ap |at |ak ",
+          "  |   |   |  m|   |  ng|   |   |   "
           ])
 
       table
@@ -206,21 +167,20 @@ block main
           ])
         tbody.vowel
           +toTrs([
-            "i |   |iu | |im |in |ing |ip |it |ik ",
-            "yu|   |   | |   |yun|    |   |yut|   ",
-            "u |ui |   | |   |un |ung |   |ut |uk ",
-            "e |ei |eu | |em |en |eng |ep |   |ek ",
-            "  |eoi|   | |   |eon|    |   |eot|   ",
-            "oe|   |   | |   |   |oeng|   |   |oek",
-            "o |oi |ou | |   |on |ong |   |ot |ok ",
-            "  |ai |au | |am |an |ang |ap |at |ak ",
-            "aa|aai|aau| |aam|aan|aang|aap|aat|aak",
-            "  |   |   | |  m|   |  ng|   |   |   "
+            "i |   |iu |im |in |ing |ip |it |ik ",
+            "yu|   |   |   |yun|    |   |yut|   ",
+            "u |ui |   |   |un |ung |   |ut |uk ",
+            "e |ei |eu |em |en |eng |ep |   |ek ",
+            "oe|eoi|   |   |eon|oeng|   |eot|oek",
+            "o |oi |ou |   |on |ong |   |ot |ok ",
+            "aa|aai|aau|aam|aan|aang|aap|aat|aak",
+            "  |ai |au |am |an |ang |ap |at |ak ",
+            "  |   |   |  m|   |  ng|   |   |   "
           ])
 
       table
         caption tones
-        tbody.tone
+        tbody.tone#cantonese-tone
           tr
             td
             for x in "絲|史|試|時|市|士|式|錫|食".split("|")
@@ -228,25 +188,34 @@ block main
           -
             let xss = [
               ["",                 "53|35|33|21|23|22| 5| 3| 2"],
-              [global.name,
-                [ "\u0302"
-                , "\u030C"
-                , ""
-                , "\u0317\u0302" //"\u032D"
-                , "\u0317\u030C" //"\u032C"
-                , "\u0317" //"\u0331"
-                , "\u0301"
-                , ""
-                , "\u0317"//"\u0331"
-                ].map(s => `i${s}`).join("|")
-              ],
+              ["",                 "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"],
+              ["me",                                           ],
               ["cantonese pinyin", " 1| 2| 3| 4| 5| 6| 7| 8| 9"],
               ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
             ]
           for xs in xss
             tr
               th= xs[0]
-              +toTds(xs[1].split("|"))
+              if xs[1]
+                +toTds(xs[1].split("|"))
+
+    p
+      | we may
+      ul
+        li replace some non-ASCII characters as the table below in some ASCII environment
+        li replace any tone diacritic with a nummeral as in cantonese pinyin
+        li omit any macron below except in ‹a#{`\u0331`}›, which exists only for readability and does not affect ambiguity
+    center: table
+      tr
+        td ŋ
+        td m#{"\u0304"}
+        td ŋ#{"\u0304"}
+        td ø
+      tr
+        td q
+        td mm
+        td qq
+        td w
 
     +mySection("converter")
       p: em the author have not finished this section yet.
