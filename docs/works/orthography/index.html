@@ -129,21 +129,29 @@
               i introduce yet another pinyin system for cantonese.
               it is consistent and compact,
                though it may seem complex at zeroth glance.
-              the system has an ASCII version in addition to an original Unicode one.
+              the system has an ASCII version in addition to an original Unicode one, so that we can use it every where.
+            </p>
+            <p>the author may make incompatible changes in the system.</p>
+            <p>
+              the author designed the system just to suit vis preference or aethetics,
+               and force no one to use it.
+              if some one, however, would like it and try to use it, ve would be very glad.
             </p>
             <center>
-              <table>
+              <table class="transpose">
                 <caption>example</caption>
                 <tbody>
                   <tr>
                     <td></td>
                     <th>me</th>
+                    <th>me-ASCII</th>
                     <th>cantonese<br/>pinyin</th>
                     <th>jyutping</th>
                   </tr>
                   <tr>
                     <td>春曉（孟浩然）</td>
                     <td class="cantonese-example"></td>
+                    <td class="cantonese-example-ascii"></td>
                     <td>tsoen<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
                     </td>
                     <td>ceon<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
@@ -152,6 +160,7 @@
                   <tr>
                     <td>春眠不覺曉，</td>
                     <td class="cantonese-example"></td>
+                    <td class="cantonese-example-ascii"></td>
                     <td>tsoen<sup>1</sup> min<sup>4</sup> bat<sup>7</sup> gok<sup>8</sup> hiu<sup>2</sup>,
                     </td>
                     <td>ceon<sup>1</sup> min<sup>4</sup> bat<sup>1</sup> gok<sup>3</sup> hiu<sup>2</sup>,
@@ -160,6 +169,7 @@
                   <tr>
                     <td>處處聞啼鳥。</td>
                     <td class="cantonese-example"></td>
+                    <td class="cantonese-example-ascii"></td>
                     <td>tsy<sup>3</sup> tsy<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
                     </td>
                     <td>cyu<sup>3</sup> cyu<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
@@ -168,6 +178,7 @@
                   <tr>
                     <td>夜來風雨聲，</td>
                     <td class="cantonese-example"></td>
+                    <td class="cantonese-example-ascii"></td>
                     <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jy<sup>5</sup> sing<sup>1</sup>,
                     </td>
                     <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jyu<sup>5</sup> sing<sup>1</sup>,
@@ -176,6 +187,7 @@
                   <tr>
                     <td>花落知多少？</td>
                     <td class="cantonese-example"></td>
+                    <td class="cantonese-example-ascii"></td>
                     <td>faa<sup>1</sup> lok<sup>9</sup> dzi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
                     </td>
                     <td>faa<sup>1</sup> lok<sup>6</sup> zi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
@@ -215,6 +227,9 @@
             </center>
             <center>
               <table id="cantonese-me">
+                <caption>me</caption>
+              </table>
+              <table id="cantonese-me-ascii">
                 <caption>me</caption>
               </table>
               <table id="cantonese-pinyin">
@@ -506,15 +521,15 @@
                   </tr>
                   <tr>
                     <th></th>
-                    <td>53</td>
-                    <td>35</td>
-                    <td>33</td>
-                    <td>21</td>
-                    <td>23</td>
-                    <td>22</td>
-                    <td> 5</td>
-                    <td> 3</td>
-                    <td> 2</td>
+                    <td>陰平</td>
+                    <td>陰上</td>
+                    <td>陰去</td>
+                    <td>陽平</td>
+                    <td>陽上</td>
+                    <td>陽去</td>
+                    <td>上陰入</td>
+                    <td>下陰入</td>
+                    <td>陽入</td>
                   </tr>
                   <tr>
                     <th></th>
@@ -530,6 +545,9 @@
                   </tr>
                   <tr>
                     <th>me</th>
+                  </tr>
+                  <tr>
+                    <th>me-ascii</th>
                   </tr>
                   <tr>
                     <th>cantonese pinyin</th>
@@ -562,25 +580,48 @@
               <ul>
                 <li>replace some non-ASCII characters as the table below in some ASCII environment</li>
                 <li>replace any tone diacritic with a nummeral as in cantonese pinyin</li>
-                <li>omit any macron below except in ‹a̱›, which exists only for readability and does not affect ambiguity</li>
+                <li>omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›, which exists only for readability and does not affect ambiguity</li>
               </ul>
             </p>
             <center>
               <table>
                 <tr>
                   <td>ŋ</td>
-                  <td>m̄</td>
-                  <td>ŋ̄</td>
+                  <td class="cantonese-long">m</td>
+                  <td class="cantonese-long">ŋ</td>
+                  <td class="cantonese-short">a</td>
                   <td>ø</td>
                 </tr>
                 <tr>
                   <td>q</td>
                   <td>mm</td>
                   <td>qq</td>
+                  <td>a'</td>
                   <td>w</td>
                 </tr>
               </table>
             </center>
+            <section class="my-section" id="design choices"><a href="#design choices">
+                <h1>design choices</h1></a>
+              <p>
+                the author wanted to distinguish any phonological difference.
+                 the system distinguishes ‹oe, eo› like jyutping, not like ‹oe› cantonese pinyin.
+                 the system also distinguishes lengths of vowels ‹i, u, e, ø, o›, which is useful for beginners,
+                 while left optional because it does not affect ambiguity and is not necessary for natives.
+              </p>
+              <p>
+                the author tried to make the system look minimal.
+                 the system uses ‹y› like cantonese pinyin, not ‹yu› like jyutping,
+                 and uses ‹z, c› like jyutping, not ‹dz, ts› like cantonese pinyin.
+                 the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
+                 while allowing the ASCII alternative to make it easy to type.
+              </p>
+              <p>
+                the author does not like digraphs like ‹ng›, which breaks uniformity.
+                 as we have ‹q› unused, we can avoid them.
+              </p>
+              <p>though the standard diacritic for short vowels is breve ‹˘›, the system uses ring ‹˚› as breve is hard to distinguish from caron ‹ˇ›.</p>
+            </section>
             <section class="my-section" id="converter"><a href="#converter">
                 <h1>converter</h1></a>
               <p><em>the author have not finished this section yet.</em></p>
@@ -594,6 +635,7 @@
                 <div class="to">
                   <select class="trigger">
                     <option value="sumi">sumi</option>
+                    <option value="sumi-ascii">sumi-ASCII</option>
                   </select>
                   <textarea readonly></textarea>
                 </div>

@@ -56,19 +56,27 @@ block main
       | i introduce yet another pinyin system for cantonese.
       | it is consistent and compact,
       |  though it may seem complex at zeroth glance.
-      | the system has an ASCII version in addition to an original Unicode one.
+      | the system has an ASCII version in addition to an original Unicode one, so that we can use it every where.
+    p the author may make incompatible changes in the system.
+    p
+      | the author designed the system just to suit vis preference or aethetics,
+      |  and force no one to use it.
+      | if some one, however, would like it and try to use it, ve would be very glad.
+
     center
-      table
+      table.transpose
         caption example
         tbody
           tr
             td
             th me
+            th me-ASCII
             th cantonese<br/>pinyin
             th jyutping
           tr
             td 春曉（孟浩然）
             td.cantonese-example
+            td.cantonese-example-ascii
             td
               +sups("tsoen^1 hiu^2".split(" "), "^", " ", "")
               |  (
@@ -82,21 +90,25 @@ block main
           tr
             td 春眠不覺曉，
             td.cantonese-example
+            td.cantonese-example-ascii
             td: +sups("tsoen^1 min^4 bat^7 gok^8 hiu^2".split(" "), "^", " ", ",")
             td: +sups("ceon^1 min^4 bat^1 gok^3 hiu^2".split(" "), "^", " ", ",")
           tr
             td 處處聞啼鳥。
             td.cantonese-example
+            td.cantonese-example-ascii
             td: +sups("tsy^3 tsy^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
             td: +sups("cyu^3 cyu^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
           tr
             td 夜來風雨聲，
             td.cantonese-example
+            td.cantonese-example-ascii
             td: +sups("je^6 loi^4 fung^1 jy^5 sing^1".split(" "), "^", " ", ",")
             td: +sups("je^6 loi^4 fung^1 jyu^5 sing^1".split(" "), "^", " ", ",")
           tr
             td 花落知多少？
             td.cantonese-example
+            td.cantonese-example-ascii
             td: +sups("faa^1 lok^9 dzi^1 do^1 siu^2".split(" "), "^", " ", "?")
             td: +sups("faa^1 lok^6 zi^1 do^1 siu^2".split(" "), "^", " ", "?")
 
@@ -130,6 +142,9 @@ block main
 
     center
       table#cantonese-me
+        caption me
+
+      table#cantonese-me-ascii
         caption me
 
       table#cantonese-pinyin
@@ -187,9 +202,11 @@ block main
               th= x
           -
             let xss = [
-              ["",                 "53|35|33|21|23|22| 5| 3| 2"],
+              ["",                 "陰平|陰上|陰去|陽平|陽上|陽去|上陰入|下陰入|陽入"],
+              //["",                 "53|35|33|21|23|22| 5| 3| 2"],
               ["",                 "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"],
               ["me",                                           ],
+              ["me-ascii",                                     ],
               ["cantonese pinyin", " 1| 2| 3| 4| 5| 6| 7| 8| 9"],
               ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
             ]
@@ -204,19 +221,38 @@ block main
       ul
         li replace some non-ASCII characters as the table below in some ASCII environment
         li replace any tone diacritic with a nummeral as in cantonese pinyin
-        li omit any macron below except in ‹a#{`\u0331`}›, which exists only for readability and does not affect ambiguity
+        li omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›, which exists only for readability and does not affect ambiguity
     center: table
       tr
         td ŋ
-        td m#{"\u0304"}
-        td ŋ#{"\u0304"}
+        td.cantonese-long m
+        td.cantonese-long ŋ
+        td.cantonese-short a
         td ø
       tr
         td q
         td mm
         td qq
+        td a'
         td w
 
+
+    +mySection("design choices")
+      p
+        | the author wanted to distinguish any phonological difference.
+        |  the system distinguishes ‹oe, eo› like jyutping, not like ‹oe› cantonese pinyin.
+        |  the system also distinguishes lengths of vowels ‹i, u, e, ø, o›, which is useful for beginners,
+        |  while left optional because it does not affect ambiguity and is not necessary for natives.
+      p
+        | the author tried to make the system look minimal.
+        |  the system uses ‹y› like cantonese pinyin, not ‹yu› like jyutping,
+        |  and uses ‹z, c› like jyutping, not ‹dz, ts› like cantonese pinyin.
+        |  the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
+        |  while allowing the ASCII alternative to make it easy to type.
+      p
+        | the author does not like digraphs like ‹ng›, which breaks uniformity.
+        |  as we have ‹q› unused, we can avoid them.
+      p though the standard diacritic for short vowels is breve ‹˘›, the system uses ring ‹˚› as breve is hard to distinguish from caron ‹ˇ›.
     +mySection("converter")
       p: em the author have not finished this section yet.
 
@@ -228,4 +264,5 @@ block main
         div.to
           select.trigger
             option(value="sumi") sumi
+            option(value="sumi-ascii") sumi-ASCII
           textarea(readonly)

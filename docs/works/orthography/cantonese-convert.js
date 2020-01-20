@@ -1,7 +1,8 @@
 const dcs =
-  { short: ["", "\u0306", "\u032E", "\u032F", "\u0307", "\u0331"][5]
+  { short: ["", "\u0306", "\u032E", "\u032F", "\u0307", "\u0331", "\u0313", "\u030A"][7]
   , low:   ["\u0317", "\u0331", "\u0316"][2]
   , high:  ""
+  , long:  "\u0304"
   };
 const dic =
   { "ng": "ŋ"
@@ -24,16 +25,29 @@ const dic =
   , "h": "x"
 };
 const tones =
-[ "\u0302"
-, "\u030C"
-, dcs.high
-, [dcs.low + "\u0302", "\u032D"][1]
-, [dcs.low + "\u030C", "\u032C"][1]
-, dcs.low //
-, "\u0301"
-, dcs.high
-, dcs.low
-]
+  { "unicode":
+    [ "\u0302"
+    , "\u030C"
+    , dcs.high
+    , [dcs.low + "\u0302", "\u032D"][1]
+    , [dcs.low + "\u030C", "\u032C"][1]
+    , dcs.low //
+    , "\u0301"
+    , dcs.high
+    , dcs.low
+    ]
+  , "ascii":
+    [ "\\"
+    , "/"
+    , ""
+    , "\\\\"
+    , "//"
+    , "="
+    , "-"
+    , ""
+    , "="
+    ]
+  };
 
 const res =
   { c: "[bpmfdtnl(gv?)(kv?)ŋxvzcsj]"
@@ -43,78 +57,95 @@ const res =
   }
 
 let convert = {}
-convert["cantonese pinyin"] = {}
-convert["cantonese pinyin"]["sumi"] = input => {
+cantToSumi = (input, ascii=false) => {
   let output =
     Object.keys(dic).reduce(
       (acc, k) => acc.replace(new RegExp(k, "g"), dic[k])
       , input
     );
-  return output.replace(
+  output = output.replace(
     new RegExp(`((?<c>${res.c})?(?<v>${res.v})(?<f>${res.f})?|(?<n>${res.n}))(?<t>[1-9])?`, "g"),
     (...args) => {
       const {c, v, f, n, t} = args.slice(-1)[0];
       // return ["", v, f, n, t];
       return (
         v ?
-          `${c || ""}${v}${tones[parseInt(t) - 1] || ""}${f || ""}`
+          `${c || ""}${v}${ascii ? "" : tones["unicode"][parseInt(t) - 1] || ""}${f || ""}${ascii ? tones["ascii"][parseInt(t) - 1]: ""}`
         : n ?
-          `${n}\u0304${tones[parseInt(t) - 1] || ""}`
+          `${n}${dcs.long}${tones[ascii ? "ascii": "unicode"][parseInt(t) - 1] || ""}`
         :
           ""
       );
     }
   );
+  if(ascii)
+    output = output
+    .replace(new RegExp(dcs.short,"g"), "'")
+    .replace(new RegExp(`ŋ`, "g"), "q")
+    .replace(new RegExp(`([qm]${dcs.long})`, "g"), "$1$1")
+    .replace(new RegExp("ø", "g"), "w");
+
+  return output;
 };
 
 window.addEventListener("load", () => {
   const converter =
     document
     .getElementById("cantonese")
-    .getElementsByClassName("converter")[0];
+    .querySelector(".converter");
 
-  const inDiv = converter.getElementsByClassName("from")[0]
-  const outDiv = converter.getElementsByClassName("to")[0]
+  const inTa = converter.querySelector(".from textarea");
+  const outTa = converter.querySelector(".to textarea");
 
-  const inTa = inDiv.getElementsByTagName("textarea")[0];
-  const outTa = outDiv.getElementsByTagName("textarea")[0];
+  const inSel = converter.querySelector(".from select");
+  const outSel = converter.querySelector(".to select");
 
-  const inSel = inDiv.getElementsByTagName("select")[0];
-  const outSel = outDiv.getElementsByTagName("select")[0];
+  const outChk = converter.querySelector(".to input");
+  console.log(outChk);
 
   const f = () => {
-    const input = inTa.value;
-
-    const from = inSel.value;
-    const to = outSel.value;
-
-    const output = convert[from][to](input);
-    outTa.value = output;
+    outTa.value = cantToSumi(inTa.value, outSel.value === "sumi-ascii");
   }
   for(const e of document.getElementsByClassName("trigger"))
     e.addEventListener("input", f);
   f();
 
   for(const e of document.getElementsByClassName("cantonese-example"))
-    e.innerHTML = convert["cantonese pinyin"]["sumi"](e.nextElementSibling.textContent);
+    e.innerHTML = cantToSumi(e.nextElementSibling.nextElementSibling.textContent);
+  for(const e of document.getElementsByClassName("cantonese-example-ascii"))
+    e.innerHTML = cantToSumi(e.nextElementSibling.textContent, true);
 
-  for(const e of document.querySelectorAll("#cantonese-pinyin tbody")) {
+  document.querySelectorAll("#cantonese-pinyin tbody").forEach((e, i) => {
     const tbody = e.cloneNode(true);
     for(const tr of tbody.querySelectorAll("tr"))
       for(const td of tr.querySelectorAll("td"))
-        td.innerText = convert["cantonese pinyin"]["sumi"](td.innerText);
-    document.getElementById("cantonese-me").append(tbody);
-  }
+        td.innerText = cantToSumi(td.innerText).replace(dcs.long, i === 0 ? "" : dcs.long);
+      document.getElementById("cantonese-me").append(tbody);
+  });
 
   for(const tr of document.querySelectorAll("#cantonese-tone tr")) {
-    console.log("19950725");
     if(tr.querySelectorAll("th")[0].textContent === "me") {
       for(const i in [...Array(9).keys()]) {
         const td = document.createElement("td");
-        td.innerText = `i${tones[i]}`;
+        td.innerText = `i${tones["unicode"][i]}`;
         tr.appendChild(td);
       }
       break;
     }
   }
+  for(const tr of document.querySelectorAll("#cantonese-tone tr")) {
+    if(tr.querySelectorAll("th")[0].textContent === "me-ascii") {
+      for(const i in [...Array(9).keys()]) {
+        const td = document.createElement("td");
+        td.innerText = tones["ascii"][i];
+        tr.appendChild(td);
+      }
+      break;
+    }
+  }
+
+  for(const e of document.querySelectorAll(".cantonese-short"))
+    e.innerText += dcs.short;
+  for(const e of document.querySelectorAll(".cantonese-long"))
+    e.innerText += dcs.long;
 });

@@ -1,3 +1,12 @@
+/*
+  table.transpose
+  tr
+    display: block
+    float: left
+  th, td
+    display: block
+*/
+
 #cantonese
   table
     tbody
@@ -32,10 +41,11 @@
     &.converter
       display: flex
       text-align: center
+      vertical-align: bottom
       margin: 0 auto
       width: 100%
 
-      select
+      select, input, label
         display: block
 
       .from, .to

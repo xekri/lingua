@@ -24,9 +24,10 @@
 #cantonese div.converter {
   display: flex;
   text-align: center;
+  vertical-align: bottom;
   margin: 0 auto;
   width: 100%; }
-  #cantonese div.converter select {
+  #cantonese div.converter select, #cantonese div.converter input, #cantonese div.converter label {
     display: block; }
   #cantonese div.converter .from, #cantonese div.converter .to {
     width: 50%;
