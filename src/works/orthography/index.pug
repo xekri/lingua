@@ -2,13 +2,18 @@ extend /_layout.pug
 
 mixin toTds(xs)
   for x in xs
-    td= x
+    td
+      if x && x[0] === "!"
+        em= x.substring(1)
+      else
+        | #{x}
+
 
 mixin toTrs(xss, sep="|")
   for xs in xss
     tr
       +toTds(xs.split(sep))
-        td= x
+
 
 mixin sups(xs, sep, mid, end)
   for x, i in xs
@@ -22,9 +27,18 @@ mixin sups(xs, sep, mid, end)
 block head
   - var title = "orthography"
   link(rel="stylesheet", href="style.css")
+  script(src="script.js")
   script(src="cantonese-convert.js")
 
 block main
+  p
+    | the author
+    ul
+      li designed the systems below just to suit vis preference or aethetics
+      li claims no exclusive orthodoxy of them
+      li forces no one to use them
+      li may make incompatible changes in them.
+    | if some one however would like and try to use them, the author would be very glad.
 
   // +mySection("japanese")
     p: em the author have not finished this section yet.
@@ -57,34 +71,29 @@ block main
       | it is consistent and compact,
       |  though it may seem complex at zeroth glance.
       | the system has an ASCII version in addition to an original Unicode one, so that we can use it every where.
-    p the author may make incompatible changes in the system.
-    p
-      | the author designed the system just to suit vis preference or aethetics,
-      |  and force no one to use it.
-      | if some one, however, would like it and try to use it, ve would be very glad.
 
     center
-      table.transpose
+      table.example
         caption example
         tbody
           tr
             td
-            th me
-            th me-ASCII
+            th sumi
+            th sumi-ASCII
             th cantonese<br/>pinyin
             th jyutping
           tr
-            td 春曉（孟浩然）
+            td 春曉<br/>（孟浩然）
             td.cantonese-example
             td.cantonese-example-ascii
             td
               +sups("tsoen^1 hiu^2".split(" "), "^", " ", "")
-              |  (
+              | <br/>(
               +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
               | )
             td
               +sups("ceon^1 hiu^2".split(" "), "^", " ", "")
-              |  (
+              | <br/>(
               +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
               | )
           tr
@@ -117,7 +126,7 @@ block main
           caption sound
           tr
             td p
-            td pʰ
+            td
             td m
             td f
           tr
@@ -141,11 +150,34 @@ block main
             td j
 
     center
+      table
+        caption IPA
+        tbody.consonant
+          +toTrs([
+            "p  |pʰ |m |f",
+            "t  |tʰ |n |l",
+            "k  |kʰ |ŋ |h",
+            "kʷ |kʷʰ|  |w",
+            "t\u0361s|t\u0361sʰ|s|j"
+          ])
+        tbody.vowel
+          +toTrs([
+          "iː|   |iːu|iːm|iːn|!ɪŋ|iːp|iːt|!ɪk ",
+          "yː|   |   |   |yːn|   |   |yːt|    ",
+          "uː|uːi|   |   |uːn|!ʊŋ|   |uːt|!ʊk",
+          "ɛː|!ei|ɛːu|ɛːm|ɛːn|ɛːŋ|ɛːp|   |ɛːk ",
+          "œː|!ɵy|   |   |!ɵn|œːŋ|   |!ɵt|œːk",
+          "ɔː|ɔːy|!ou|   |ɔːn|ɔːŋ|   |ɔːt|ɔːk",
+          "aː|aːi|aːu|aːm|aːn|aːŋ|aːp|aːt|aːk",
+          "  | ɐi| ɐu| ɐm| ɐn| ɐŋ| ɐp| ɐt| ɐk",
+          "  |   |   |  m|   |  ŋ|   |   |   "
+          ])
+
       table#cantonese-me
-        caption me
+        caption sumi
 
       table#cantonese-me-ascii
-        caption me
+        caption sumi-ASCII
 
       table#cantonese-pinyin
         caption 教育學院拼音方案 (cantonese pinyin)
@@ -204,9 +236,9 @@ block main
             let xss = [
               ["",                 "陰平|陰上|陰去|陽平|陽上|陽去|上陰入|下陰入|陽入"],
               //["",                 "53|35|33|21|23|22| 5| 3| 2"],
-              ["",                 "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"],
-              ["me",                                           ],
-              ["me-ascii",                                     ],
+              ["IPA",              "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"],
+              ["sumi",                                         ],
+              ["sumi-ASCII",                                   ],
               ["cantonese pinyin", " 1| 2| 3| 4| 5| 6| 7| 8| 9"],
               ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
             ]
@@ -219,50 +251,58 @@ block main
     p
       | we may
       ul
-        li replace some non-ASCII characters as the table below in some ASCII environment
         li replace any tone diacritic with a nummeral as in cantonese pinyin
-        li omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›, which exists only for readability and does not affect ambiguity
-    center: table
-      tr
-        td ŋ
-        td.cantonese-long m
-        td.cantonese-long ŋ
-        td.cantonese-short a
-        td ø
-      tr
-        td q
-        td mm
-        td qq
-        td a'
-        td w
-
+        li omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›
 
     +mySection("design choices")
       p
         | the author wanted to distinguish any phonological difference.
-        |  the system distinguishes ‹oe, eo› like jyutping, not like ‹oe› cantonese pinyin.
-        |  the system also distinguishes lengths of vowels ‹i, u, e, ø, o›, which is useful for beginners,
-        |  while left optional because it does not affect ambiguity and is not necessary for natives.
+        |  the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
+        |  the system also distinguishes lengths of the other vowels, which is useful for beginners,
+        |  while left optional as they have no ambiguity and is not necessary for natives, except for [aː, ɐ].
       p
-        | the author tried to make the system look minimal.
-        |  the system uses ‹y› like cantonese pinyin, not ‹yu› like jyutping,
-        |  and uses ‹z, c› like jyutping, not ‹dz, ts› like cantonese pinyin.
+        | the author tried to make the system minimal.
+        |  the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
+        |  and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
         |  the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
-        |  while allowing the ASCII alternative to make it easy to type.
+        |  while providing the ASCII alternative easy to type.
       p
-        | the author does not like digraphs like ‹ng›, which breaks uniformity.
-        |  as we have ‹q› unused, we can avoid them.
-      p though the standard diacritic for short vowels is breve ‹˘›, the system uses ring ‹˚› as breve is hard to distinguish from caron ‹ˇ›.
+        | the system replaces jyutping ‹w› with ‹v›,
+        |  as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
+        |  the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
+        |  as we have ‹q, w› unused, we can avoid them.
     +mySection("converter")
-      p: em the author have not finished this section yet.
-
       div.converter
-        div.from
-          select.trigger
-            option(value="cantonese pinyin") cantonese pinyin
-          textarea.trigger
-        div.to
-          select.trigger
-            option(value="sumi") sumi
-            option(value="sumi-ascii") sumi-ASCII
-          textarea(readonly)
+        center
+          ul.option
+            li
+              input.trigger(type="checkbox", name="letter")
+              label use ‹q, w, '› instead of ‹ŋ, ø, &#x02BC;›
+            li
+              select.trigger(name="tone", size="1")
+                option(value="none") none
+                option(value="diacritic", selected) diacritic
+                option(value="number") number
+                option(value="ascii") ASCII
+                option(value="ipa") IPA
+              label tone
+            li
+              input.trigger(type="checkbox", name="length", checked)
+              label show optional vowel length
+
+        div.from-to
+          div.from
+            label cantonese pinyin
+            textarea.trigger
+              | 記住你會死亡。
+              | gei3dzy6 nei5 wui2 sei2mong4.
+          div.to
+            label sumi
+            div
+
+      center: a.tweet(
+        href=""
+        , onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
+        , rel="nofollow"
+        , class="twitter-link"
+        ) tweet

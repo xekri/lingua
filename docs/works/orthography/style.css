@@ -1,3 +1,8 @@
+#cantonese .example {
+  text-align: left; }
+  #cantonese .example th, #cantonese .example tr:nth-of-type(2) {
+    text-align: center; }
+
 #cantonese table tbody {
   margin: 8px;
   text-align: center; }
@@ -21,23 +26,32 @@
   #cantonese table tbody.tone td {
     text-align: right; }
 
-#cantonese div.converter {
-  display: flex;
-  text-align: center;
-  vertical-align: bottom;
-  margin: 0 auto;
-  width: 100%; }
-  #cantonese div.converter select, #cantonese div.converter input, #cantonese div.converter label {
-    display: block; }
-  #cantonese div.converter .from, #cantonese div.converter .to {
-    width: 50%;
-    margin: 16px; }
-  #cantonese div.converter .from select, #cantonese div.converter .from textarea {
-    float: right; }
-  #cantonese div.converter .to select, #cantonese div.converter .to textarea {
-    float: left; }
-  #cantonese div.converter textarea {
+#cantonese .converter {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+  #cantonese .converter .from-to {
     width: 100%;
-    height: 120px;
-    font-family: Noto Sans;
-    font-size: 125%; }
+    margin: 0;
+    pading: 0;
+    text-align: center;
+    display: flex; }
+    #cantonese .converter .from-to .from, #cantonese .converter .from-to .to {
+      margin: 0;
+      width: calc(50% - 16px);
+      display: inline-block; }
+      #cantonese .converter .from-to .from label, #cantonese .converter .from-to .to label {
+        display: block; }
+    #cantonese .converter .from-to .to {
+      margin-left: 32px; }
+    #cantonese .converter .from-to .from textarea, #cantonese .converter .from-to .to div {
+      height: 120px;
+      text-align: left;
+      margin: 0;
+      padding: 4px;
+      overflow-wrap: break-word;
+      font-family: Noto Sans;
+      font-size: 14pt;
+      width: 100%; }
+    #cantonese .converter .from-to .to div {
+      border: 1px solid; }

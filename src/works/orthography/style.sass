@@ -1,13 +1,10 @@
-/*
-  table.transpose
-  tr
-    display: block
-    float: left
-  th, td
-    display: block
-*/
-
 #cantonese
+  .example
+    text-align: left
+
+    th, tr:nth-of-type(2)
+      text-align: center
+
   table
     tbody
       margin: 8px
@@ -37,29 +34,37 @@
       &.tone td
         text-align: right
 
-  div
-    &.converter
-      display: flex
-      text-align: center
-      vertical-align: bottom
-      margin: 0 auto
-      width: 100%
+  .converter
+    width: 100%
+    margin: 0
+    padding: 0
 
-      select, input, label
-        display: block
+    .from-to
+      width: 100%
+      margin: 0
+      pading: 0
+      text-align: center
+      display: flex
 
       .from, .to
-        width: 50%
-        margin: 16px
-      .from
-        select, textarea
-          float: right
-      .to
-        select, textarea
-          float: left
+        margin: 0
+        width: calc(50% - 16px)
+        display: inline-block
+        label
+          display: block
 
-      textarea
-        width: 100%
+      .to
+        margin-left: 32px
+
+      .from textarea, .to div
         height: 120px
+        text-align: left
+        margin: 0
+        padding: 4px
+        overflow-wrap: break-word
         font-family: Noto Sans
-        font-size: 125%
+        font-size: 14pt
+        width: 100%
+
+      .to div
+        border: 1px solid
