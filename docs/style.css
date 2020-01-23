@@ -8,7 +8,6 @@
   box-sizing: border-box; }
 
 html, body {
-  box-sizing: border-box;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -16,24 +15,23 @@ html, body {
   background-color: black;
   font-family: "Noto Sans", "Noto Sans JP", sans;
   font-weight: 300; }
-  @media screen and (max-device-width: 720px) {
+  @media screen and (max-device-width: 1320px) {
     html, body {
       text-size-adjust: 240%; } }
   html main, body main {
     margin: 0;
     margin-left: 240px;
-    padding: 0;
-    font-size: 15pt; }
-    @media screen and (max-device-width: 720px) {
+    padding: 0; }
+    @media screen and (max-device-width: 1320px) {
       html main, body main {
         margin-top: 64px;
         margin-left: 0; } }
     html main article, body main article {
-      width: 80%;
+      width: 1080px;
       margin: 0 auto;
       padding: 32px;
       padding-bottom: 0; }
-      @media screen and (max-device-width: 720px) {
+      @media screen and (max-device-width: 1320px) {
         html main article, body main article {
           width: 100%; } }
   html nav, body nav {
@@ -45,14 +43,14 @@ html, body {
     position: fixed;
     border-right: 1px white solid;
     background-color: black; }
-    @media screen and (max-device-width: 720px) {
+    html nav ul, body nav ul {
+      margin-left: 0;
+      list-style-position: inside; }
+    @media screen and (max-device-width: 1320px) {
       html nav, body nav {
         display: none;
         width: 33.3%;
-        background-color: #000000CC; }
-        html nav ul > li, body nav ul > li {
-          margin-top: 16px;
-          margin-bottom: 16px; } }
+        background-color: #000000; } }
     html nav #nav-in, body nav #nav-in {
       margin-left: 32px;
       margin-right: 32px;
@@ -81,25 +79,23 @@ html, body {
         margin-bottom: 32px;
         width: 100%;
         text-align: center; }
-        @media screen and (max-device-width: 720px) {
+        @media screen and (max-device-width: 1320px) {
           html nav #nav-in #datetime, body nav #nav-in #datetime {
             font-size: 8pt; } }
     html nav ul, body nav ul {
-      width: 60%;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 0;
+      padding-left: 0;
       font-family: "Nova Round"; }
   html #nav-switch, body #nav-switch {
     z-index: 100;
     display: none; }
-    @media screen and (max-device-width: 720px) {
+    @media screen and (max-device-width: 1320px) {
       html #nav-switch, body #nav-switch {
         display: block;
         vertical-align: middle;
         background-color: #ffffff;
         color: #000000;
         margin: 0;
-        box-sizing: border-box;
         padding-left: 16px;
         padding-top: 1.5px;
         position: fixed;
@@ -116,17 +112,13 @@ html, body {
     border-width: 1px 0 0 1px;
     background-color: transparent;
     font-size: 100%; }
+    @media screen and (max-device-width: 1320px) {
+      html .my-section, html .my-div, body .my-section, body .my-div {
+        overflow-x: auto; } }
     html .my-section h1, html .my-div h1, body .my-section h1, body .my-div h1 {
       font-family: "Nova Round";
       font-weight: normal;
       font-size: 125%; }
-  html .my-div, body .my-div {
-    margin-bottom: 32px;
-    padding-left: 32px; }
-    html .my-div ul, body .my-div ul {
-      padding-left: 16px; }
-    html .my-div .my-div-title, body .my-div .my-div-title {
-      font-weight: bold; }
   html figure, body figure {
     display: flex;
     justify-content: space-around;
@@ -144,15 +136,15 @@ html, body {
   html td, html th, body td, body th {
     padding: 8px; }
 
-ul {
-  list-style-type: square; }
-
 ul, ol {
   display: table;
   text-align: left; }
 
+ul {
+  list-style-type: square; }
+
 .mobile {
   display: none; }
-  @media screen and (max-devive-width: 720px) {
+  @media screen and (max-devive-width: 1320px) {
     .mobile {
       display: block; } }

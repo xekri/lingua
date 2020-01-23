@@ -1,31 +1,23 @@
-const dcs =
-  { shortAbove: ["\u030A", "\u0307", "\u0306", "\u0313"][0]
-  , shortBelow: ["\u0325", "\u0323", "\u032F", "\u0326"][0]
-  , low:   ["\u0317", "\u0331", "\u0316"][2]
-  , high:  "\u0304"
-  , long:  "\u0304"
-  };
-
-const elemText = (tag, s) => `<${tag}>${s}</${tag}>`;
+const elemStr = (tag, s) => `<${tag}>${s}</${tag}>`;
 
 const tones =
   { diacritic:
     [ "\u0302"
     , "\u030C"
-    , ["", "\u0301"][0]
-    , "\u032D"
-    , "\u032C"
-    , "\u0316"
-    , ["\u0301", "\u030B"][0]
-    , ["", "\u0301"][0]
-    , "\u0316"
+    , ""//"\u0304"
+    , "\u0316\u0302"//"\u032D"
+    , "\u0316\u030C"//"\u032C"
+    , "\u0316"//"\u0316"
+    , "\u0301"
+    , ""//"\u0304"
+    , "\u0316"//"\u0316"
     ]
     , ascii:
-      String.raw`\,/,-,\\,//,=,,-,=`.split(",").map(s => elemText("sup", s))
+      String.raw`\,/,-,\\,//,=,,-,=`.split(",")//.map(s => elemStr("sup", s))
     , ipa:
-      "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ").map(s => elemText("sup", s))
+      "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ").map(s => elemStr("sup", s))
     , number:
-      "1 2 3 4 5 6 7 8 9".split(" ").map(s => elemText("sup", s))
+      "1 2 3 4 5 6 7 8 9".split(" ").map(s => elemStr("sup", s))
   };
 
 cantToSumi = (input, ascii=false, toneType="diacritic", showsLen=true) => {

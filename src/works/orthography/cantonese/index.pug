@@ -1,0 +1,227 @@
+extend /_layout.pug
+
+mixin toTds(xs)
+  for x in xs
+    td
+      if x && x[0] === "!"
+        em= x.substring(1)
+      else
+        | #{x}
+
+
+mixin toTrs(xss, sep="|")
+  for xs in xss
+    tr
+      +toTds(xs.split(sep))
+
+
+mixin sups(xs, sep, mid, end)
+  for x, i in xs
+    - let [a, b] = x.split(sep)
+    if i !== 0
+      | #{mid}
+    | #{a}
+    sup= b
+  | #{end}
+
+block head
+  - var title = "cantonese"
+  link(rel="stylesheet", href="style.css")
+  script(src="script.js")
+  script(src="convert.js")
+
+block main
+  center
+    table.example
+      caption example
+      tbody
+        tr: th original
+        tr: td 春曉（孟浩然）
+        tr: td 春眠不覺曉，
+        tr: td 處處聞啼鳥。
+        tr: td 夜來風雨聲，
+        tr: td 花落知多少？
+      tbody.sumi
+      tbody.sumi-ascii
+      tbody
+        tr: th cantonese pinyin
+        tr: td
+          +sups("tsoen^1 hiu^2".split(" "), "^", " ", "")
+          | (
+          +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
+          | )
+        tr: td: +sups("tsoen^1 min^4 bat^7 gok^8 hiu^2".split(" "), "^", " ", ",")
+        tr: td: +sups("tsy^3 tsy^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
+        tr: td: +sups("je^6 loi^4 fung^1 jy^5 sing^1".split(" "), "^", " ", ",")
+        tr: td: +sups("faa^1 lok^9 dzi^1 do^1 siu^2".split(" "), "^", " ", "?")
+      tbody
+        tr: th jyutping
+        tr: td
+          +sups("ceon^1 hiu^2".split(" "), "^", " ", "")
+          | (
+          +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
+          | )
+        tr: td: +sups("ceon^1 min^4 bat^1 gok^3 hiu^2".split(" "), "^", " ", ",")
+        tr: td: +sups("cyu^3 cyu^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
+        tr: td: +sups("je^6 loi^4 fung^1 jyu^5 sing^1".split(" "), "^", " ", ",")
+        tr: td: +sups("faa^1 lok^6 zi^1 do^1 siu^2".split(" "), "^", " ", "?")
+
+  center
+    table
+      caption IPA
+      tbody.consonant
+        +toTrs([
+          "p  |pʰ |m |f",
+          "t  |tʰ |n |l",
+          "k  |kʰ |ŋ |h",
+          "kʷ |kʷʰ|  |w",
+          "t\u0361s|t\u0361sʰ|s|j"
+        ])
+      tbody.vowel
+        +toTrs([
+        "iː|   |iːu|iːm|iːn|!ɪŋ|iːp|iːt|!ɪk ",
+        "yː|   |   |   |yːn|   |   |yːt|    ",
+        "uː|uːi|   |   |uːn|!ʊŋ|   |uːt|!ʊk",
+        "ɛː|!ei|ɛːu|ɛːm|ɛːn|ɛːŋ|ɛːp|   |ɛːk ",
+        "œː|!ɵy|   |   |!ɵn|œːŋ|   |!ɵt|œːk",
+        "ɔː|ɔːy|!ou|   |ɔːn|ɔːŋ|   |ɔːt|ɔːk",
+        "aː|aːi|aːu|aːm|aːn|aːŋ|aːp|aːt|aːk",
+        "  | ɐi| ɐu| ɐm| ɐn| ɐŋ| ɐp| ɐt| ɐk",
+        "  |   |   |  m|   |  ŋ|   |   |   "
+        ])
+
+    table#cantonese-me
+      caption sumi
+
+    table#cantonese-me-ascii
+      caption sumi-ASCII
+
+    table#cantonese-pinyin
+      caption 教育學院拼音方案 (cantonese pinyin)
+      tbody.consonant
+        +toTrs([
+          "b |p |m |f",
+          "d |t |n |l",
+          "g |k |ng|h",
+          "gw|kw|  |w",
+          "dz|ts|s |j"
+        ])
+      tbody.vowel
+        +toTrs([
+        "i |   |iu |im |in |ing |ip |it |ik ",
+        "y |   |   |   |yn |    |   |yt |   ",
+        "u |ui |   |   |un |ung |   |ut |uk ",
+        "e |ei |eu |em |en |eng |ep |   |ek ",
+        "oe|oey|   |   |oen|oeng|   |oet|oek",
+        "o |oi |ou |   |on |ong |   |ot |ok ",
+        "aa|aai|aau|aam|aan|aang|aap|aat|aak",
+        "  |ai |au |am |an |ang |ap |at |ak ",
+        "  |   |   |  m|   |  ng|   |   |   "
+        ])
+
+    table
+      caption 香港語言學學會粵語拼音方案 (jyutping)
+      tbody.consonant
+        +toTrs([
+          "b |p |m |f",
+          "d |t |n |l",
+          "g |k |ng|h",
+          "gw|kw|  |w",
+          "z |c |s |j"
+        ])
+      tbody.vowel
+        +toTrs([
+          "i |   |iu |im |in |ing |ip |it |ik ",
+          "yu|   |   |   |yun|    |   |yut|   ",
+          "u |ui |   |   |un |ung |   |ut |uk ",
+          "e |ei |eu |em |en |eng |ep |   |ek ",
+          "oe|eoi|   |   |eon|oeng|   |eot|oek",
+          "o |oi |ou |   |on |ong |   |ot |ok ",
+          "aa|aai|aau|aam|aan|aang|aap|aat|aak",
+          "  |ai |au |am |an |ang |ap |at |ak ",
+          "  |   |   |  m|   |  ng|   |   |   "
+        ])
+
+    table
+      caption tones
+      tbody.tone#cantonese-tone
+        for xs in ["陰平|陰上|陰去|陽平|陽上|陽去|上陰入|下陰入|陽入", "絲|史|試|時|市|士|式|錫|食"]
+          tr
+            td
+            for x in xs.split("|")
+              th= x
+        -
+          let xss =
+            [ //["",                 "53|35|33|21|23|22| 5| 3| 2"],
+              ["IPA-letter",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
+            , ["IPA-diacritic",    "i\u0302|i\u030C|i|i\u1DC6|i\u1DC5|i\u0300|i\u0301|i|i\u0300"]
+            , ["sumi",                                         ]
+            , ["sumi-ASCII",                                   ]
+            , ["cantonese pinyin", " 1| 2| 3| 4| 5| 6| 7| 8| 9"]
+            , ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
+            ]
+        for xs in xss
+          tr
+            th(align="right")= xs[0]
+            if xs[1]
+              +toTds(xs[1].split("|"))
+
+  p
+    | we may
+    ul
+      li replace any tone diacritic with a nummeral as in cantonese pinyin
+      li omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›
+
+  +mySection("design choices")
+    p
+      | the author wanted to distinguish any phonological difference.
+      |  the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
+      |  the system also distinguishes lengths of the other vowels, which is useful for beginners,
+      |  while left optional as they have no ambiguity and is not necessary for natives, except for [aː, ɐ].
+    p
+      | the author tried to make the system minimal.
+      |  the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
+      |  and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
+      |  the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
+      |  while providing the ASCII alternative easy to type.
+      |  long vowels, the majority, are default and short ones, the minority, are marked.
+    p
+      | the system replaces jyutping ‹w› with ‹v›,
+      |  as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
+      |  the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
+      |  as we have ‹q, w› unused, we can avoid them.
+  +mySection("converter")
+    div.converter
+      center
+        ul.option
+          li
+            input.trigger(type="checkbox", name="letter")
+            label ASCII letter
+          li
+            select.trigger(name="tone", size="1")
+              option(value="none") none
+              option(value="diacritic", selected) diacritic
+              option(value="number") number
+              option(value="ascii") ASCII
+              option(value="ipa") IPA
+            label tone
+          li
+            input.trigger(type="checkbox", name="length", checked)
+            label show optional vowel length
+
+      div.from-to
+        div.from
+          label cantonese pinyin
+          textarea.trigger
+            | 記住你會死亡。
+            | gei3dzy6 nei5 wui2 sei2mong4.
+        div.to
+          label sumi
+          div
+
+    center: a.tweet(
+      href=""
+      , onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
+      , rel="nofollow"
+      , class="twitter-link"
+      ) tweet

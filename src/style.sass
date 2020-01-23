@@ -1,5 +1,7 @@
 $space: 32px
+$mainWidth: 1080px
 $navWidth: 240px
+$thresh: $mainWidth + $navWidth
 $mobileNavWidth: 33.3%
 $mobileSwitchHeight: 64px
 
@@ -15,7 +17,6 @@ $mobileSwitchHeight: 64px
   box-sizing: border-box
 
 html, body
-  box-sizing: border-box
   height: 100%
   margin: 0
   padding: 0
@@ -24,24 +25,23 @@ html, body
   font-family: "Noto Sans", "Noto Sans JP", sans
   font-weight: 300
 
-  @media screen and (max-device-width:720px)
+  @media screen and (max-device-width:$thresh)
     text-size-adjust: 240%;
 
   main
     margin: 0
     margin-left: $navWidth
-    @media screen and (max-device-width:720px)
+    @media screen and (max-device-width:$thresh)
       margin-top: $mobileSwitchHeight
       margin-left: 0
     padding: 0
-    font-size: 15pt
 
     article
-      width: 80%
+      width: $mainWidth
       margin: 0 auto
       padding: $space
       padding-bottom: 0
-      @media screen and (max-device-width:720px)
+      @media screen and (max-device-width:$thresh)
         width: 100%
 
   nav
@@ -53,16 +53,15 @@ html, body
     position: fixed
     border-right: 1px white solid
     background-color: black
-    @media screen and (max-device-width:720px)
+
+    ul
+      margin-left: 0
+      list-style-position: inside
+
+    @media screen and (max-device-width:$thresh)
       display: none
       width: $mobileNavWidth
-      //font-size: 32pt
-      background-color: #000000CC
-
-      ul > li
-        margin-top: 16px
-        margin-bottom: 16px
-
+      background-color: #000000
 
     #nav-in
       margin-left: $space
@@ -71,7 +70,7 @@ html, body
       padding: 0
       display: inline-block
       max-width: 100%
-      @media screen and (max-device-width:720px)
+      @media screen and (max-device-width:$thresh)
         //font-size: 28pt
 
       #logo
@@ -96,25 +95,22 @@ html, body
         margin-bottom: $space
         width: 100%
         text-align: center
-        @media screen and (max-device-width:720px)
+        @media screen and (max-device-width:$thresh)
           font-size: 8pt
     ul
-      width: 60%
-      margin-left: auto
-      margin-right: auto
+      margin-left: 0
+      padding-left: 0
       font-family: "Nova Round"
 
   #nav-switch
     z-index: 100
     display: none
-    @media screen and (max-device-width:720px)
+    @media screen and (max-device-width:$thresh)
       display: block
       vertical-align: middle
-      //font-size: 24pt
       background-color: #ffffff
       color: #000000
       margin: 0
-      box-sizing: border-box
       padding-left: 16px
       padding-top: 1.5px
       position: fixed
@@ -132,6 +128,8 @@ html, body
     border-width: 1px 0 0 1px
     background-color: transparent
     font-size: 100%
+    @media screen and (max-device-width:$thresh)
+      overflow-x: auto
 
     h1
       font-family: "Nova Round"
@@ -140,16 +138,6 @@ html, body
 
     &:last-child
       // margin-bottom: -$space
-
-  .my-div
-    margin-bottom: 32px
-    padding-left: 32px
-    ul
-      padding-left: 16px
-    .my-div-title
-      font-weight: bold
-
-    & > ul
 
   figure
     display: flex
@@ -178,14 +166,14 @@ html, body
   td, th
     padding: 8px
 
-ul
-  list-style-type: square
-
 ul, ol
   display: table
   text-align: left
 
+ul
+  list-style-type: square
+
 .mobile
   display: none
-  @media screen and (max-devive-width: 720px)
+  @media screen and (max-devive-width: $thresh)
     display: block

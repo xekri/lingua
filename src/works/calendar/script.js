@@ -42,7 +42,7 @@ const update = () => {
       + document.getElementById(`informal${b}`).innerText + encodeURI("\n")
       + window.location.href
       + "&hashtags=sumi_calendar"
-      + `&via=${global.twitter}`
+      + `&via=sumigv`
     );
   }
 };

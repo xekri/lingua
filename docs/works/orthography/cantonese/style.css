@@ -1,0 +1,69 @@
+article table {
+  padding: 0;
+  text-align: center; }
+  article table tr, article table td, article table th {
+    position: relative; }
+  article table .over-th {
+    text-align: center; }
+    article table .over-th:before {
+      content: "";
+      height: 1px;
+      overflow: hidden;
+      background: white;
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 0; }
+  article table tbody {
+    display: inline-block;
+    margin: 32px;
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid; }
+    article table tbody:not(:first-of-type) {
+      margin-left: 0; }
+    article table tbody.consonant, article table tbody.vowel {
+      display: inline-block; }
+    article table tbody.consonant td {
+      text-align: left; }
+    article table tbody.vowel td {
+      text-align: right; }
+    article table tbody.tone td {
+      text-align: right; }
+
+article #cantonese .example td {
+  text-align: left; }
+
+article #cantonese .example th, article #cantonese .example tr:nth-of-type(2) {
+  text-align: center; }
+
+article #cantonese .converter {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+article #cantonese .from-to {
+  width: 100%;
+  margin: 0;
+  pading: 0;
+  text-align: center;
+  display: flex; }
+  article #cantonese .from-to .from, article #cantonese .from-to .to {
+    margin: 0;
+    width: calc(50% - 16px);
+    display: inline-block; }
+    article #cantonese .from-to .from label, article #cantonese .from-to .to label {
+      display: block; }
+  article #cantonese .from-to .to {
+    margin-left: 32px; }
+  article #cantonese .from-to .from textarea, article #cantonese .from-to .to div {
+    height: 120px;
+    text-align: left;
+    margin: 0;
+    padding: 4px;
+    overflow-wrap: break-word;
+    font-family: Noto Sans;
+    font-size: 14pt;
+    width: 100%; }
+  article #cantonese .from-to .to div {
+    border: 1px solid; }

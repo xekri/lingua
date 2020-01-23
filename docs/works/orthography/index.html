@@ -11,13 +11,9 @@
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
+    <script src="/works/calendar/calendar.js"></script>
     <script>
       window.addEventListener("load", () => {
-      	var global =
-      		{ name:    "sumi"
-      		, twitter: "sumigv"
-      		};
-      
       	// mobile menu switch
       	const sw = document.getElementById("nav-switch");
       	const nav = document.getElementsByTagName("nav")[0];
@@ -52,23 +48,18 @@
       	} else {
       		submenu.remove();
       	}
+      
+      	// date
+      	setInterval(() => {
+      		const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+      		document.getElementById("datetime").innerText =
+      			`SC//${year.toString(16)}/${month.toString(16)}/`
+      			+ (monthday + daytime).toString(16).slice(0, 7);
+      	}, 100);
       });
       
     </script>
-    <script src="/works/calendar/calendar.js"></script>
-    <script>
-      // date
-      setInterval(() => {
-      	const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
-      	document.getElementById("datetime").innerText =
-      		`SC//${year.toString(16)}/${month.toString(16)}/`
-      		+ (monthday + daytime).toString(16).slice(0, 6);
-      }, 100);
-      
-    </script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="cantonese-convert.js"></script>
     <title>orthography</title>
   </head>
   <body>
@@ -106,1021 +97,596 @@
               <li>may make incompatible changes in them.</li>
             </ul>if some one however would like and try to use them, the author would be very glad.
           </p>
-          <!-- +mySection("japanese")
-          p: em the author have not finished this section yet.
-          center
-            table
-              caption example
-              tbody
-          
-            table
-              tbody
-                tr
-                  td
-                  td.over-th(colspan="5") vowel
-                  td.over-th(colspan="15") consonant
-                  td N
-                  td Q
-                tr
-                  td
-                  for x in Array.from("アイウ𛀀オアカガサザタダナハバパマヤラワンッ")
-                    th= x
-                tr
-                  th= global.name
-                  for x in "a|i, ĩ|u, ũ|e|o|h|c|g|s|z|t|d|n|f|b|p|m|j|r|v|ŋ, n, m|x, c, t, f".split("|")
-                    td= x
-          
-          
-          -->
-          <section class="my-section" id="cantonese"><a href="#cantonese">
-              <h1>cantonese</h1></a>
-            <p>
-              i introduce yet another pinyin system for cantonese.
-              it is consistent and compact,
-               though it may seem complex at zeroth glance.
-              the system has an ASCII version in addition to an original Unicode one, so that we can use it every where.
-            </p>
+          <section class="my-section" id="japanese"><a href="#japanese">
+              <h1>japanese</h1></a>
+            <p><em>under construction</em></p>
             <center>
-              <table class="example">
-                <caption>example</caption>
-                <tbody>
+              <table>sumi
+                <tbody class="vowel">
                   <tr>
-                    <td></td>
-                    <th>sumi</th>
-                    <th>sumi-ASCII</th>
-                    <th>cantonese<br/>pinyin</th>
-                    <th>jyutping</th>
-                  </tr>
-                  <tr>
-                    <td>春曉<br/>（孟浩然）</td>
-                    <td class="cantonese-example"></td>
-                    <td class="cantonese-example-ascii"></td>
-                    <td>tsoen<sup>1</sup> hiu<sup>2</sup><br/>(maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
+                    <td>i
                     </td>
-                    <td>ceon<sup>1</sup> hiu<sup>2</sup><br/>(maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
+                    <td>e
+                    </td>
+                    <td>a
+                    </td>
+                    <td>o
+                    </td>
+                    <td>u
                     </td>
                   </tr>
+                </tbody>
+                <tbody class="consonant">
                   <tr>
-                    <td>春眠不覺曉，</td>
-                    <td class="cantonese-example"></td>
-                    <td class="cantonese-example-ascii"></td>
-                    <td>tsoen<sup>1</sup> min<sup>4</sup> bat<sup>7</sup> gok<sup>8</sup> hiu<sup>2</sup>,
+                    <td> 
                     </td>
-                    <td>ceon<sup>1</sup> min<sup>4</sup> bat<sup>1</sup> gok<sup>3</sup> hiu<sup>2</sup>,
+                    <td> 
                     </td>
-                  </tr>
-                  <tr>
-                    <td>處處聞啼鳥。</td>
-                    <td class="cantonese-example"></td>
-                    <td class="cantonese-example-ascii"></td>
-                    <td>tsy<sup>3</sup> tsy<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
+                    <td>k
                     </td>
-                    <td>cyu<sup>3</sup> cyu<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
+                    <td>g
+                    </td>
+                    <td> 
+                    </td>
+                    <td>j
                     </td>
                   </tr>
                   <tr>
-                    <td>夜來風雨聲，</td>
-                    <td class="cantonese-example"></td>
-                    <td class="cantonese-example-ascii"></td>
-                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jy<sup>5</sup> sing<sup>1</sup>,
+                    <td>s
                     </td>
-                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jyu<sup>5</sup> sing<sup>1</sup>,
+                    <td>z
+                    </td>
+                    <td>t
+                    </td>
+                    <td>d
+                    </td>
+                    <td>n
+                    </td>
+                    <td>r
                     </td>
                   </tr>
                   <tr>
-                    <td>花落知多少？</td>
-                    <td class="cantonese-example"></td>
-                    <td class="cantonese-example-ascii"></td>
-                    <td>faa<sup>1</sup> lok<sup>9</sup> dzi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
+                    <td> 
                     </td>
-                    <td>faa<sup>1</sup> lok<sup>6</sup> zi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
+                    <td> 
+                    </td>
+                    <td>f
+                    </td>
+                    <td>b
+                    </td>
+                    <td>m
+                    </td>
+                    <td>v
+                    </td>
+                    <td>p
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <!--
-              table
-                caption sound
-                tr
-                  td p
-                  td
-                  td m
-                  td f
-                tr
-                  td t
-                  td tʰ
-                  td n
-                  td l
-                tr
-                  td k
-                  td kʰ
-                  td ŋ
-                  td h
-                tr
-                  td kʷ
-                  td kʷʰ
-                  td w
-                tr
-                  td ts
-                  td tsʰ
-                  td s
-                  td j
-              
-              -->
             </center>
+            <ul>
+              <li>represent any 促音‹ッ› from an entering tone by ‹k, t, f› e.g. 合算 gafsan.</li>
+              <li>represent any 促音‹ッ› in other cases by double consonants e.g.</li>
+              <li>represent any 撥音‹ン› from a マ行 (m) phoneme by ‹m› e.g.</li>
+              <li>represent any 撥音‹ン› in other cases by ‹n› e.g.</li>
+              <li>combine a verb-root and an ending with a hyphen U+002D ‹-›.</li>
+              <li>combine a noun and a case-particle with a double hyphen U+2E40 ‹⹀› or an equal U+003D ‹=›.</li>
+            </ul>
+          </section>
+          <section class="my-section" id="cantonese"><a href="#cantonese">
+              <h1>cantonese</h1></a><a href="cantonese">cantonese</a>
+          </section>
+          <section class="my-section" id="mandarin"><a href="#mandarin">
+              <h1>mandarin</h1></a>
+            <p><em>under construction</em></p>
             <center>
               <table>
-                <caption>IPA</caption>
+                <caption>sumi</caption>
                 <tbody class="consonant">
                   <tr>
-                    <td>p  
+                    <td>b
                     </td>
-                    <td>pʰ 
+                    <td>p
                     </td>
-                    <td>m 
+                    <td>m
                     </td>
                     <td>f
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
-                    <td>t  
+                    <td>d
                     </td>
-                    <td>tʰ 
+                    <td>t
                     </td>
-                    <td>n 
+                    <td>n
+                    </td>
+                    <td> 
                     </td>
                     <td>l
                     </td>
                   </tr>
                   <tr>
-                    <td>k  
+                    <td>z
                     </td>
-                    <td>kʰ 
+                    <td>c
                     </td>
-                    <td>ŋ 
-                    </td>
-                    <td>h
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>kʷ 
-                    </td>
-                    <td>kʷʰ
-                    </td>
-                    <td>  
-                    </td>
-                    <td>w
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>t͡s
-                    </td>
-                    <td>t͡sʰ
+                    <td> 
                     </td>
                     <td>s
                     </td>
-                    <td>j
-                    </td>
-                  </tr>
-                </tbody>
-                <tbody class="vowel">
-                  <tr>
-                    <td>iː
-                    </td>
-                    <td>   
-                    </td>
-                    <td>iːu
-                    </td>
-                    <td>iːm
-                    </td>
-                    <td>iːn
-                    </td>
-                    <td><em>ɪŋ</em>
-                    </td>
-                    <td>iːp
-                    </td>
-                    <td>iːt
-                    </td>
-                    <td><em>ɪk </em>
+                    <td> 
                     </td>
                   </tr>
                   <tr>
-                    <td>yː
+                    <td>ż
                     </td>
-                    <td>   
+                    <td>ċ
                     </td>
-                    <td>   
+                    <td> 
                     </td>
-                    <td>   
+                    <td>ṡ
                     </td>
-                    <td>yːn
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td>yːt
-                    </td>
-                    <td>    
+                    <td>r
                     </td>
                   </tr>
                   <tr>
-                    <td>uː
+                    <td>ž
                     </td>
-                    <td>uːi
+                    <td>č
                     </td>
-                    <td>   
+                    <td> 
                     </td>
-                    <td>   
+                    <td>š
                     </td>
-                    <td>uːn
-                    </td>
-                    <td><em>ʊŋ</em>
-                    </td>
-                    <td>   
-                    </td>
-                    <td>uːt
-                    </td>
-                    <td><em>ʊk</em>
+                    <td> 
                     </td>
                   </tr>
                   <tr>
-                    <td>ɛː
+                    <td>g
                     </td>
-                    <td><em>ei</em>
+                    <td>k
                     </td>
-                    <td>ɛːu
-                    </td>
-                    <td>ɛːm
-                    </td>
-                    <td>ɛːn
-                    </td>
-                    <td>ɛːŋ
-                    </td>
-                    <td>ɛːp
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ɛːk 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>œː
-                    </td>
-                    <td><em>ɵy</em>
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td><em>ɵn</em>
-                    </td>
-                    <td>œːŋ
-                    </td>
-                    <td>   
-                    </td>
-                    <td><em>ɵt</em>
-                    </td>
-                    <td>œːk
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>ɔː
-                    </td>
-                    <td>ɔːy
-                    </td>
-                    <td><em>ou</em>
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ɔːn
-                    </td>
-                    <td>ɔːŋ
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ɔːt
-                    </td>
-                    <td>ɔːk
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>aː
-                    </td>
-                    <td>aːi
-                    </td>
-                    <td>aːu
-                    </td>
-                    <td>aːm
-                    </td>
-                    <td>aːn
-                    </td>
-                    <td>aːŋ
-                    </td>
-                    <td>aːp
-                    </td>
-                    <td>aːt
-                    </td>
-                    <td>aːk
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>  
-                    </td>
-                    <td> ɐi
-                    </td>
-                    <td> ɐu
-                    </td>
-                    <td> ɐm
-                    </td>
-                    <td> ɐn
-                    </td>
-                    <td> ɐŋ
-                    </td>
-                    <td> ɐp
-                    </td>
-                    <td> ɐt
-                    </td>
-                    <td> ɐk
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>  
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td>  m
-                    </td>
-                    <td>   
-                    </td>
-                    <td>  ŋ
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <table id="cantonese-me">
-                <caption>sumi</caption>
-              </table>
-              <table id="cantonese-me-ascii">
-                <caption>sumi-ASCII</caption>
-              </table>
-              <table id="cantonese-pinyin">
-                <caption>教育學院拼音方案 (cantonese pinyin)</caption>
-                <tbody class="consonant">
-                  <tr>
-                    <td>b 
-                    </td>
-                    <td>p 
-                    </td>
-                    <td>m 
-                    </td>
-                    <td>f
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>d 
-                    </td>
-                    <td>t 
-                    </td>
-                    <td>n 
-                    </td>
-                    <td>l
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>g 
-                    </td>
-                    <td>k 
-                    </td>
-                    <td>ng
+                    <td> 
                     </td>
                     <td>h
                     </td>
-                  </tr>
-                  <tr>
-                    <td>gw
-                    </td>
-                    <td>kw
-                    </td>
-                    <td>  
-                    </td>
-                    <td>w
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>dz
-                    </td>
-                    <td>ts
-                    </td>
-                    <td>s 
-                    </td>
-                    <td>j
+                    <td> 
                     </td>
                   </tr>
                 </tbody>
                 <tbody class="vowel">
                   <tr>
-                    <td>i 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th class="over-th" colspan="5">a</th>
+                    <th class="over-th" colspan="5">e</th>
+                  </tr>
+                  <tr>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right">i</th>
+                    <th align="right">u</th>
+                    <th align="right">n</th>
+                    <th align="right">ŋ</th>
+                    <th align="right"></th>
+                    <th align="right">i</th>
+                    <th align="right">u</th>
+                    <th align="right">n</th>
+                    <th align="right">ŋ</th>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
                     </td>
-                    <td>   
+                    <td>'
                     </td>
-                    <td>iu 
+                    <td> a
                     </td>
-                    <td>im 
+                    <td> ai
                     </td>
-                    <td>in 
+                    <td> au
                     </td>
-                    <td>ing 
+                    <td> an
                     </td>
-                    <td>ip 
+                    <td> aŋ
                     </td>
-                    <td>it 
+                    <td> e
                     </td>
-                    <td>ik 
+                    <td> ei
+                    </td>
+                    <td> eu
+                    </td>
+                    <td> en
+                    </td>
+                    <td> eŋ
                     </td>
                   </tr>
                   <tr>
-                    <td>y 
+                    <th>i</th>
+                    <td>
+                    </td>
+                    <td>i
+                    </td>
+                    <td>ia
+                    </td>
+                    <td>iai
+                    </td>
+                    <td>iau
+                    </td>
+                    <td>ian
+                    </td>
+                    <td>iaŋ
+                    </td>
+                    <td>ie
                     </td>
                     <td>   
                     </td>
-                    <td>   
+                    <td>ieu
                     </td>
-                    <td>   
+                    <td>ien
                     </td>
-                    <td>yn 
-                    </td>
-                    <td>    
-                    </td>
-                    <td>   
-                    </td>
-                    <td>yt 
-                    </td>
-                    <td>   
+                    <td>ieŋ
                     </td>
                   </tr>
                   <tr>
-                    <td>u 
+                    <th>u</th>
+                    <td>
                     </td>
-                    <td>ui 
+                    <td>u
                     </td>
-                    <td>   
+                    <td>ua
                     </td>
-                    <td>   
-                    </td>
-                    <td>un 
-                    </td>
-                    <td>ung 
+                    <td>uai
                     </td>
                     <td>   
                     </td>
-                    <td>ut 
+                    <td>uan
                     </td>
-                    <td>uk 
+                    <td>uaŋ
+                    </td>
+                    <td>ue
+                    </td>
+                    <td>uei
+                    </td>
+                    <td>   
+                    </td>
+                    <td>uen
+                    </td>
+                    <td>ueŋ
                     </td>
                   </tr>
                   <tr>
-                    <td>e 
+                    <th>y</th>
+                    <td>
                     </td>
-                    <td>ei 
+                    <td>y
                     </td>
-                    <td>eu 
-                    </td>
-                    <td>em 
-                    </td>
-                    <td>en 
-                    </td>
-                    <td>eng 
-                    </td>
-                    <td>ep 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ek 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>oe
-                    </td>
-                    <td>oey
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td>oen
-                    </td>
-                    <td>oeng
-                    </td>
-                    <td>   
-                    </td>
-                    <td>oet
-                    </td>
-                    <td>oek
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>o 
-                    </td>
-                    <td>oi 
-                    </td>
-                    <td>ou 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>on 
-                    </td>
-                    <td>ong 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ot 
-                    </td>
-                    <td>ok 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>aa
-                    </td>
-                    <td>aai
-                    </td>
-                    <td>aau
-                    </td>
-                    <td>aam
-                    </td>
-                    <td>aan
-                    </td>
-                    <td>aang
-                    </td>
-                    <td>aap
-                    </td>
-                    <td>aat
-                    </td>
-                    <td>aak
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>  
-                    </td>
-                    <td>ai 
-                    </td>
-                    <td>au 
-                    </td>
-                    <td>am 
-                    </td>
-                    <td>an 
-                    </td>
-                    <td>ang 
-                    </td>
-                    <td>ap 
-                    </td>
-                    <td>at 
-                    </td>
-                    <td>ak 
-                    </td>
-                  </tr>
-                  <tr>
                     <td>  
                     </td>
                     <td>   
                     </td>
                     <td>   
                     </td>
-                    <td>  m
+                    <td>yan
                     </td>
                     <td>   
                     </td>
-                    <td>  ng
+                    <td>ye
                     </td>
                     <td>   
                     </td>
                     <td>   
                     </td>
-                    <td>   
+                    <td>yen
+                    </td>
+                    <td>yeŋ
                     </td>
                   </tr>
                 </tbody>
               </table>
               <table>
-                <caption>香港語言學學會粵語拼音方案 (jyutping)</caption>
+                <caption>sumi-ASCII</caption>
                 <tbody class="consonant">
                   <tr>
-                    <td>b 
+                    <td>b
                     </td>
-                    <td>p 
+                    <td>p
                     </td>
-                    <td>m 
+                    <td>m
                     </td>
                     <td>f
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
-                    <td>d 
+                    <td>d
                     </td>
-                    <td>t 
+                    <td>t
                     </td>
-                    <td>n 
+                    <td>n
+                    </td>
+                    <td> 
                     </td>
                     <td>l
                     </td>
                   </tr>
                   <tr>
-                    <td>g 
+                    <td>z
                     </td>
-                    <td>k 
+                    <td>c
                     </td>
-                    <td>ng
+                    <td> 
+                    </td>
+                    <td>s
+                    </td>
+                    <td> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>zr
+                    </td>
+                    <td>cr
+                    </td>
+                    <td> 
+                    </td>
+                    <td>sr
+                    </td>
+                    <td>r
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>zh
+                    </td>
+                    <td>ch
+                    </td>
+                    <td> 
+                    </td>
+                    <td>sh
+                    </td>
+                    <td> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>g
+                    </td>
+                    <td>k
+                    </td>
+                    <td> 
                     </td>
                     <td>h
                     </td>
-                  </tr>
-                  <tr>
-                    <td>gw
-                    </td>
-                    <td>kw
-                    </td>
-                    <td>  
-                    </td>
-                    <td>w
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>z 
-                    </td>
-                    <td>c 
-                    </td>
-                    <td>s 
-                    </td>
-                    <td>j
+                    <td> 
                     </td>
                   </tr>
                 </tbody>
                 <tbody class="vowel">
                   <tr>
-                    <td>i 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th class="over-th" colspan="5">a</th>
+                    <th class="over-th" colspan="5">e</th>
+                  </tr>
+                  <tr>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right"></th>
+                    <th align="right">i</th>
+                    <th align="right">u</th>
+                    <th align="right">n</th>
+                    <th align="right">q</th>
+                    <th align="right"></th>
+                    <th align="right">i</th>
+                    <th align="right">u</th>
+                    <th align="right">n</th>
+                    <th align="right">q</th>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
                     </td>
-                    <td>   
+                    <td>'
                     </td>
-                    <td>iu 
+                    <td> a
                     </td>
-                    <td>im 
+                    <td> ai
                     </td>
-                    <td>in 
+                    <td> au
                     </td>
-                    <td>ing 
+                    <td> an
                     </td>
-                    <td>ip 
+                    <td> aq
                     </td>
-                    <td>it 
+                    <td> e
                     </td>
-                    <td>ik 
+                    <td> ei
+                    </td>
+                    <td> eu
+                    </td>
+                    <td> en
+                    </td>
+                    <td> eq
                     </td>
                   </tr>
                   <tr>
-                    <td>yu
+                    <th>i</th>
+                    <td>
+                    </td>
+                    <td>i
+                    </td>
+                    <td>ia
+                    </td>
+                    <td>iai
+                    </td>
+                    <td>iau
+                    </td>
+                    <td>ian
+                    </td>
+                    <td>iaq
+                    </td>
+                    <td>ie
                     </td>
                     <td>   
                     </td>
-                    <td>   
+                    <td>ieu
                     </td>
-                    <td>   
+                    <td>ien
                     </td>
-                    <td>yun
-                    </td>
-                    <td>    
-                    </td>
-                    <td>   
-                    </td>
-                    <td>yut
-                    </td>
-                    <td>   
+                    <td>ieq
                     </td>
                   </tr>
                   <tr>
-                    <td>u 
+                    <th>u</th>
+                    <td>
                     </td>
-                    <td>ui 
+                    <td>u
                     </td>
-                    <td>   
+                    <td>ua
                     </td>
-                    <td>   
-                    </td>
-                    <td>un 
-                    </td>
-                    <td>ung 
+                    <td>uai
                     </td>
                     <td>   
                     </td>
-                    <td>ut 
+                    <td>uan
                     </td>
-                    <td>uk 
+                    <td>uaq
+                    </td>
+                    <td>ue
+                    </td>
+                    <td>uei
+                    </td>
+                    <td>   
+                    </td>
+                    <td>uen
+                    </td>
+                    <td>ueq
                     </td>
                   </tr>
                   <tr>
-                    <td>e 
+                    <th>y</th>
+                    <td>
                     </td>
-                    <td>ei 
+                    <td>y
                     </td>
-                    <td>eu 
-                    </td>
-                    <td>em 
-                    </td>
-                    <td>en 
-                    </td>
-                    <td>eng 
-                    </td>
-                    <td>ep 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ek 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>oe
-                    </td>
-                    <td>eoi
-                    </td>
-                    <td>   
-                    </td>
-                    <td>   
-                    </td>
-                    <td>eon
-                    </td>
-                    <td>oeng
-                    </td>
-                    <td>   
-                    </td>
-                    <td>eot
-                    </td>
-                    <td>oek
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>o 
-                    </td>
-                    <td>oi 
-                    </td>
-                    <td>ou 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>on 
-                    </td>
-                    <td>ong 
-                    </td>
-                    <td>   
-                    </td>
-                    <td>ot 
-                    </td>
-                    <td>ok 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>aa
-                    </td>
-                    <td>aai
-                    </td>
-                    <td>aau
-                    </td>
-                    <td>aam
-                    </td>
-                    <td>aan
-                    </td>
-                    <td>aang
-                    </td>
-                    <td>aap
-                    </td>
-                    <td>aat
-                    </td>
-                    <td>aak
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>  
-                    </td>
-                    <td>ai 
-                    </td>
-                    <td>au 
-                    </td>
-                    <td>am 
-                    </td>
-                    <td>an 
-                    </td>
-                    <td>ang 
-                    </td>
-                    <td>ap 
-                    </td>
-                    <td>at 
-                    </td>
-                    <td>ak 
-                    </td>
-                  </tr>
-                  <tr>
                     <td>  
                     </td>
                     <td>   
                     </td>
                     <td>   
                     </td>
-                    <td>  m
+                    <td>yan
                     </td>
                     <td>   
                     </td>
-                    <td>  ng
+                    <td>ye
                     </td>
                     <td>   
                     </td>
                     <td>   
                     </td>
-                    <td>   
+                    <td>yen
+                    </td>
+                    <td>yeq
                     </td>
                   </tr>
                 </tbody>
               </table>
               <table>
                 <caption>tones</caption>
-                <tbody class="tone" id="cantonese-tone">
+                <tbody class="tone">
                   <tr>
-                    <td></td>
-                    <th>絲</th>
-                    <th>史</th>
-                    <th>試</th>
-                    <th>時</th>
-                    <th>市</th>
-                    <th>士</th>
-                    <th>式</th>
-                    <th>錫</th>
-                    <th>食</th>
-                  </tr>
-                  <tr>
-                    <th></th>
-                    <td>陰平
-                    </td>
-                    <td>陰上
-                    </td>
-                    <td>陰去
-                    </td>
-                    <td>陽平
-                    </td>
-                    <td>陽上
-                    </td>
-                    <td>陽去
-                    </td>
-                    <td>上陰入
-                    </td>
-                    <td>下陰入
-                    </td>
-                    <td>陽入
+                    <td>
+                      <th>陰平</th>
+                      <th>陰上</th>
+                      <th>上</th>
+                      <th>去</th>
+                      <th>輕</th>
                     </td>
                   </tr>
                   <tr>
-                    <th>IPA</th>
-                    <td>˥˧
+                    <td>
+                      <th>媽</th>
+                      <th>麻</th>
+                      <th>馬</th>
+                      <th>罵</th>
+                      <th>嗎</th>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th align="right">IPA-letter</th>
+                    <td>˥
                     </td>
                     <td>˧˥
                     </td>
-                    <td> ˧
+                    <td>˧˩˥
                     </td>
-                    <td>˧˩
+                    <td>˥˩
                     </td>
-                    <td>˩˧
-                    </td>
-                    <td> ˩
-                    </td>
-                    <td> ˥
-                    </td>
-                    <td> ˧
-                    </td>
-                    <td> ˩
+                    <td>
                     </td>
                   </tr>
                   <tr>
-                    <th>sumi</th>
-                  </tr>
-                  <tr>
-                    <th>sumi-ASCII</th>
-                  </tr>
-                  <tr>
-                    <th>cantonese pinyin</th>
-                    <td> 1
+                    <th align="right">IPA-diacritic</th>
+                    <td>á
                     </td>
-                    <td> 2
+                    <td>ǎ
                     </td>
-                    <td> 3
+                    <td>a᷉
                     </td>
-                    <td> 4
+                    <td>â
                     </td>
-                    <td> 5
-                    </td>
-                    <td> 6
-                    </td>
-                    <td> 7
-                    </td>
-                    <td> 8
-                    </td>
-                    <td> 9
+                    <td>a
                     </td>
                   </tr>
                   <tr>
-                    <th>jyutping        </th>
-                    <td> 1
+                    <th align="right">sumi-ASCII</th>
+                    <td>-
                     </td>
-                    <td> 2
+                    <td>/
                     </td>
-                    <td> 3
+                    <td>~
                     </td>
-                    <td> 4
+                    <td>\
                     </td>
-                    <td> 5
+                    <td>
                     </td>
-                    <td> 6
+                  </tr>
+                  <tr>
+                    <th align="right">pinyin-diacritic</th>
+                    <td>ā
                     </td>
-                    <td> 1
+                    <td>á
                     </td>
-                    <td> 3
+                    <td>ǎ
                     </td>
-                    <td> 6
+                    <td>à
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th align="right">pinyin-number</th>
+                    <td>1
+                    </td>
+                    <td>2
+                    </td>
+                    <td>3
+                    </td>
+                    <td>4
+                    </td>
+                    <td>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </center>
-            <p>we may
-              <ul>
-                <li>replace any tone diacritic with a nummeral as in cantonese pinyin</li>
-                <li>omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›</li>
-              </ul>
-            </p>
-            <section class="my-section" id="design choices"><a href="#design choices">
-                <h1>design choices</h1></a>
-              <p>
-                the author wanted to distinguish any phonological difference.
-                 the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
-                 the system also distinguishes lengths of the other vowels, which is useful for beginners,
-                 while left optional as they have no ambiguity and is not necessary for natives, except for [aː, ɐ].
-              </p>
-              <p>
-                the author tried to make the system minimal.
-                 the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
-                 and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
-                 the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
-                 while providing the ASCII alternative easy to type.
-              </p>
-              <p>
-                the system replaces jyutping ‹w› with ‹v›,
-                 as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
-                 the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
-                 as we have ‹q, w› unused, we can avoid them.
-              </p>
-            </section>
-            <section class="my-section" id="converter"><a href="#converter">
-                <h1>converter</h1></a>
-              <div class="converter">
-                <center>
-                  <ul class="option">
-                    <li>
-                      <input class="trigger" type="checkbox" name="letter">
-                      <label>use ‹q, w, '› instead of ‹ŋ, ø, &#x02BC;›</label>
-                    </li>
-                    <li>
-                      <select class="trigger" name="tone" size="1">
-                        <option value="none">none</option>
-                        <option value="diacritic" selected>diacritic</option>
-                        <option value="number">number</option>
-                        <option value="ascii">ASCII</option>
-                        <option value="ipa">IPA</option>
-                      </select>
-                      <label>tone</label>
-                    </li>
-                    <li>
-                      <input class="trigger" type="checkbox" name="length" checked>
-                      <label>show optional vowel length</label>
-                    </li>
-                  </ul>
-                </center>
-                <div class="from-to">
-                  <div class="from">
-                    <label>cantonese pinyin</label>
-                    <textarea class="trigger">記住你會死亡。
-gei3dzy6 nei5 wui2 sei2mong4.</textarea>
-                  </div>
-                  <div class="to">
-                    <label>sumi</label>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-              <center><a class="tweet twitter-link" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></center>
-            </section>
           </section>
         </section>
         <section class="my-section" id=""><a href="#">

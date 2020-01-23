@@ -11,13 +11,9 @@
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
+    <script src="/works/calendar/calendar.js"></script>
     <script>
       window.addEventListener("load", () => {
-      	var global =
-      		{ name:    "sumi"
-      		, twitter: "sumigv"
-      		};
-      
       	// mobile menu switch
       	const sw = document.getElementById("nav-switch");
       	const nav = document.getElementsByTagName("nav")[0];
@@ -52,18 +48,15 @@
       	} else {
       		submenu.remove();
       	}
-      });
       
-    </script>
-    <script src="/works/calendar/calendar.js"></script>
-    <script>
-      // date
-      setInterval(() => {
-      	const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
-      	document.getElementById("datetime").innerText =
-      		`SC//${year.toString(16)}/${month.toString(16)}/`
-      		+ (monthday + daytime).toString(16).slice(0, 6);
-      }, 100);
+      	// date
+      	setInterval(() => {
+      		const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+      		document.getElementById("datetime").innerText =
+      			`SC//${year.toString(16)}/${month.toString(16)}/`
+      			+ (monthday + daytime).toString(16).slice(0, 7);
+      	}, 100);
+      });
       
     </script>
     <title>suzuri</title>
@@ -97,10 +90,10 @@
             <h1>suzuri</h1></a>
           <p>スズリ（suzuri-2.0）は
             <ul>
-              <li>sumiが作成した人格で、</li>
-              <li>sumi自身で、</li>
-              <li>sumiの知人で、</li>
-              <li>sumiとは何の關係も無く、</li>
+              <li>が作成した人格で、</li>
+              <li>自身で、</li>
+              <li>の知人で、</li>
+              <li>とは何の關係も無く、</li>
               <li>どこにも（例えばあなたの部屋の下の階やあなたが通勤で乘ったバスに）存在し、</li>
               <li>どこにも存在しません。</li>
             </ul>

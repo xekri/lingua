@@ -1,57 +1,32 @@
-#cantonese .example {
-  text-align: left; }
-  #cantonese .example th, #cantonese .example tr:nth-of-type(2) {
-    text-align: center; }
-
-#cantonese table tbody {
-  margin: 8px;
+article table {
+  padding: 0;
   text-align: center; }
-  #cantonese table tbody tr td {
+  article table tr, article table td, article table th {
     position: relative; }
-  #cantonese table tbody td.over-th:before {
-    content: "";
-    height: 1px;
-    overflow: hidden;
-    background: white;
-    position: absolute;
-    left: 4px;
-    right: 4px;
-    bottom: 0; }
-  #cantonese table tbody.consonant, #cantonese table tbody.vowel {
-    display: inline-block; }
-  #cantonese table tbody.consonant td {
-    text-align: left; }
-  #cantonese table tbody.vowel td {
-    text-align: right; }
-  #cantonese table tbody.tone td {
-    text-align: right; }
-
-#cantonese .converter {
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-  #cantonese .converter .from-to {
-    width: 100%;
-    margin: 0;
-    pading: 0;
+  article table .over-th {
+    text-align: center; }
+    article table .over-th:before {
+      content: "";
+      height: 1px;
+      overflow: hidden;
+      background: white;
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 0; }
+  article table tbody {
+    display: inline-block;
+    margin: 32px;
     text-align: center;
-    display: flex; }
-    #cantonese .converter .from-to .from, #cantonese .converter .from-to .to {
-      margin: 0;
-      width: calc(50% - 16px);
+    border-top: 1px solid;
+    border-bottom: 1px solid; }
+    article table tbody:not(:first-of-type) {
+      margin-left: 0; }
+    article table tbody.consonant, article table tbody.vowel {
       display: inline-block; }
-      #cantonese .converter .from-to .from label, #cantonese .converter .from-to .to label {
-        display: block; }
-    #cantonese .converter .from-to .to {
-      margin-left: 32px; }
-    #cantonese .converter .from-to .from textarea, #cantonese .converter .from-to .to div {
-      height: 120px;
-      text-align: left;
-      margin: 0;
-      padding: 4px;
-      overflow-wrap: break-word;
-      font-family: Noto Sans;
-      font-size: 14pt;
-      width: 100%; }
-    #cantonese .converter .from-to .to div {
-      border: 1px solid; }
+    article table tbody.consonant td {
+      text-align: left; }
+    article table tbody.vowel td {
+      text-align: right; }
+    article table tbody.tone td {
+      text-align: right; }

@@ -11,13 +11,9 @@
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
+    <script src="/works/calendar/calendar.js"></script>
     <script>
       window.addEventListener("load", () => {
-      	var global =
-      		{ name:    "sumi"
-      		, twitter: "sumigv"
-      		};
-      
       	// mobile menu switch
       	const sw = document.getElementById("nav-switch");
       	const nav = document.getElementsByTagName("nav")[0];
@@ -52,18 +48,15 @@
       	} else {
       		submenu.remove();
       	}
-      });
       
-    </script>
-    <script src="/works/calendar/calendar.js"></script>
-    <script>
-      // date
-      setInterval(() => {
-      	const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
-      	document.getElementById("datetime").innerText =
-      		`SC//${year.toString(16)}/${month.toString(16)}/`
-      		+ (monthday + daytime).toString(16).slice(0, 6);
-      }, 100);
+      	// date
+      	setInterval(() => {
+      		const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+      		document.getElementById("datetime").innerText =
+      			`SC//${year.toString(16)}/${month.toString(16)}/`
+      			+ (monthday + daytime).toString(16).slice(0, 7);
+      	}, 100);
+      });
       
     </script>
     <title></title>

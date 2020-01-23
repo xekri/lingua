@@ -27,16 +27,12 @@ window.addEventListener("load", () => {
   f();
 
   for(const ascii of [false, true]) {
-    for(const e of document.getElementsByClassName(`cantonese-example${ascii ? "-ascii" : ""}`))
-      e.innerHTML =
-        cantToSumi(
-          ascii ?
-            e.nextElementSibling.textContent
-          :
-            e.nextElementSibling.nextElementSibling.textContent
-          , ascii, ascii ? "ascii" : "diacritic"
-        )
-        .replace("(", "<br/>(");
+    const e = document.querySelector(`#cantonese .example .sumi${ascii ? "-ascii" : ""}`);
+    let eCopied = e.nextElementSibling;
+    if(!ascii)
+      eCopied = eCopied.nextElementSibling;
+    e.innerHTML = cantToSumi(eCopied.innerHTML.replace(/<\/?su[pb]>/g, ""), ascii, ascii ? "ascii" : "diacritic");
+    e.querySelector("tr th").innerText = `sumi${ascii ? "-ASCII" : ""}`;
 
     document.querySelectorAll("#cantonese-pinyin tbody").forEach((e, i) => {
       const tbody = e.cloneNode(true);
@@ -48,9 +44,14 @@ window.addEventListener("load", () => {
 
     for(const tr of document.querySelectorAll("#cantonese-tone tr")) {
       if(tr.querySelectorAll("th")[0].textContent === `sumi${ascii ? "-ASCII" : ""}`) {
-        for(const i in [...Array(9).keys()]) {
+        for(const t of tones[ascii ? "ascii" : "diacritic"]) {
           const td = document.createElement("td");
-          td.innerHTML = `i${tones[ascii ? "ascii" : "diacritic"][i]}`;
+          if(ascii) {
+            td.innerHTML = `${t}`;
+            td.innerHTML = td.textContent;
+          }
+          else
+            td.innerHTML = `i${t}`;
           tr.appendChild(td);
         }
         break;
@@ -59,6 +60,6 @@ window.addEventListener("load", () => {
 
   }
 
-  for(const e of document.querySelectorAll(".cantonese-short"))
-    e.innerText += dcs.shortAbove;
+  //for(const e of document.querySelectorAll(".cantonese-short"))
+  //  e.innerText += dcs.shortAbove;
 });

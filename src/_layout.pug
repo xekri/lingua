@@ -14,19 +14,9 @@ html(lang="en-GB")
 		meta(charset="UTF-8")
 		link(href="/style.css", rel="stylesheet")
 
-		-
-			const global =
-				{ name:    "sumi"
-				, twitter: "sumigv"
-				};
-
+		script(src="/works/calendar/calendar.js")
 		script.
 			window.addEventListener("load", () => {
-				var global =
-					{ name:    "sumi"
-					, twitter: "sumigv"
-					};
-
 				// mobile menu switch
 				const sw = document.getElementById("nav-switch");
 				const nav = document.getElementsByTagName("nav")[0];
@@ -61,17 +51,15 @@ html(lang="en-GB")
 				} else {
 					submenu.remove();
 				}
-			});
 
-		script(src="/works/calendar/calendar.js")
-		script.
-			// date
-			setInterval(() => {
-				const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
-				document.getElementById("datetime").innerText =
-					`SC//${year.toString(16)}/${month.toString(16)}/`
-					+ (monthday + daytime).toString(16).slice(0, 6);
-			}, 100);
+				// date
+				setInterval(() => {
+					const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
+					document.getElementById("datetime").innerText =
+						`SC//${year.toString(16)}/${month.toString(16)}/`
+						+ (monthday + daytime).toString(16).slice(0, 7);
+				}, 100);
+			});
 
 		block head
 		title= title
