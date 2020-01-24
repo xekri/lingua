@@ -46,7 +46,7 @@ gulp.task("pug", () => {
 });
 
 gulp.task("other", () => {
-  gulp.src(["src/**/*.*", "!src/**/*.pug", "!src/**/*.sass"])
+  gulp.src(["src/**/*", "!src/**/*.pug", "!src/**/*.sass"])
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))

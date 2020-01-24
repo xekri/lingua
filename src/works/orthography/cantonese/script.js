@@ -11,11 +11,11 @@ window.addEventListener("load", () => {
   const tweet = document.querySelector(`#cantonese a.tweet`);
 
   const f = () => {
-    to.innerHTML = pinyinToSumi(honziToJytpiq(from.value), chkLet.checked, selTone.value, chkLen.checked).replace(/\n/g, "<br/>");
+    to.value = pinyinToSumi(honziToJytpiq(from.value), chkLet.checked, selTone.value, chkLen.checked).replace(/\n/g, "<br/>");
 
     tweet.setAttribute("href",
     "https://twitter.com/intent/tweet?text="
-      + encodeURI(from.value + "\n" + to.innerText)
+      + encodeURI(from.value + "\n" + to.value)
       + `&url=${window.location.href}#cantonese`
       + "&hashtags=sumi_cantonese_romanization"
       + `&via=sumigv`

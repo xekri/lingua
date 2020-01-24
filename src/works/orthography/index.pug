@@ -18,8 +18,7 @@ mixin toThTds(xyss)
   - for(const [x, ys] of xyss)
     tr
       th(align="right")= x
-      for y in ys.split("|")
-        td= y
+      +toTds(ys.split("|"))
 
 mixin sups(xs, sep, mid, end)
   for x, i in xs
@@ -60,10 +59,10 @@ block main
             ])
 
     ul
-      li represent any 促音‹ッ› from an entering tone by ‹k, t, f› e.g. 合算 gafsan.
-      li represent any 促音‹ッ› in other cases by double consonants e.g.
-      li represent any 撥音‹ン› from a マ行 (m) phoneme by ‹m› e.g.
-      li represent any 撥音‹ン› in other cases by ‹n› e.g.
+      li represent any 促音‹ッ› of an entering tone by ‹k, t, f› e.g. 合算 gafsan.
+      li represent any 促音‹ッ› in other cases by double consonants.
+      li represent any 撥音‹ン› of a マ行 (m) phoneme by ‹m›.
+      li represent any 撥音‹ン› in other cases by ‹n›.
       li combine a verb-root and an ending with a hyphen U+002D ‹-›.
       li combine a noun and a case-particle with a double hyphen U+2E40 ‹⹀› or an equal U+003D ‹=›.
 
@@ -123,7 +122,7 @@ block main
             th.over-th(colspan="5") a
             th.over-th(colspan="5") e
           tr
-            for x in ",,,,i,u,n,q,,i,u,n,q".split(",")
+            for x in ",,,,i,u,n,ŋ,,i,u,n,ŋ".split(",")
               th(align="right")= x
           +toThTds(
             [ ["",  "| | a| ai| au| an| aq| e| ei| eu| en| eq"]
@@ -152,7 +151,7 @@ block main
             th.over-th(colspan="5") a
             th.over-th(colspan="5") e
           tr
-            for x in ",,,,i,u,n,q,,i,u,n,q".split(",")
+            for x in ",,,,i,u,n,ŋ,,i,u,n,ŋ".split(",")
               th(align="right")= x
           +toThTds(
               [ ["",  "|ㄭ|  ㄚ|  ㄞ|  ㄠ|  ㄢ|  ㄤ|  ㄜ|  ㄟ|  ㄡ|  ㄣ|  ㄥ"]
