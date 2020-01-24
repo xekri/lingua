@@ -68,7 +68,4 @@ window.addEventListener("load", () => {
     }
 
   }
-
-  //for(const e of document.querySelectorAll(".cantonese-short"))
-  //  e.innerText += dcs.shortAbove;
 });

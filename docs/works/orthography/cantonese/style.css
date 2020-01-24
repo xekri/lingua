@@ -16,7 +16,7 @@ article table {
       bottom: 0; }
   article table tbody {
     display: inline-block;
-    margin: 32px;
+    margin: 24px;
     text-align: center;
     border-top: 1px solid;
     border-bottom: 1px solid; }

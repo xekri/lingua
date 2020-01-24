@@ -166,31 +166,7 @@ block main
             if xs[1]
               +toTds(xs[1].split("|"))
 
-  p
-    | we may
-    ul
-      li replace any tone diacritic with a nummeral as in cantonese pinyin
-      li omit any non-tone diacritic except that of ‹<span class="cantonese-short">a</span>›
-
-  +mySection("design choices")
-    p
-      | the author wanted to distinguish any phonological difference.
-      |  the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
-      |  the system also distinguishes lengths of the other vowels.
-      |  it is useful for beginners, who do not know how to pronounce.
-      |  it is however optional as length of any nucleus is clear from its coda, except for [aː, ɐ].
-    p
-      | the author tried to make the system minimal.
-      |  the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
-      |  and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
-      |  the system uses diacritics in order to avoid numerals and doubled letters, which look ugly to the author.
-      |  the author however provides the ASCII alternative easy to type.
-      |  long vowels, the majority, are default and short ones, the minority, marked.
-    p
-      | the system replaces jyutping ‹w› with ‹v›,
-      |  as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
-      |  the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
-      |  we can avoid them as we have ‹q, w› unused.
+  p we may replace any tone diacritic with a nummeral as in cantonese pinyin
 
   +mySection("converter")
     div.converter
@@ -233,3 +209,23 @@ block main
       |  licensed under&#x20;
       a(href="https://creativecommons.org/licenses/by/4.0/deed.en") CC BY 4.0
       | .
+
+  +mySection("design choices")
+    p
+      | the author wanted to distinguish any phonological difference.
+      |  the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
+      |  the system also distinguishes lengths of the other vowels.
+      |  it is useful for beginners, who do not know how to pronounce.
+      |  it is however optional as length of any nucleus is clear from its coda, except for [aː, ɐ].
+    p
+      | the author tried to make the system minimal.
+      |  the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
+      |  and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
+      |  the system uses diacritics in order to avoid numerals and doubled letters, which look ugly to the author.
+      |  the author however provides the ASCII alternative easy to type.
+      |  long vowels, the majority, are default and short ones, the minority, marked.
+    p
+      | the system replaces jyutping ‹w› with ‹v›,
+      |  as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
+      |  the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
+      |  we can avoid them as we have ‹q, w› unused.

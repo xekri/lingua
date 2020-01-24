@@ -41,7 +41,7 @@ const tones =
 const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false) =>
   input
   .replace(
-    /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/g,
+    /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/ug,
     (...args) => {
       let {c, v, f, n, t} = args.slice(-1)[0];
       t = t && toneType !== "none" ? tones[toneType][parseInt(t) - 1] : "";
@@ -90,7 +90,7 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
       else
         ret = ret.replace("'", "\u02BC");
 
-      if(! ruby && ["none", "diacritic"].includes(toneType))
+      if(! ruby)
         ret += " ";
 
       return ret;
