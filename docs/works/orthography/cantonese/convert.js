@@ -1,9 +1,10 @@
+var honzis;
 var honziToJytpiq;
 const req = new XMLHttpRequest();
 req.open("GET", "/submodules/jyutping-table/list.tsv");
 req.send();
 req.addEventListener("load", () => {
-  const honzis = {};
+  honzis = {};
   req.responseText
     .split("\n")
     .slice(1)
@@ -37,7 +38,7 @@ const tones =
       "1 2 3 4 5 6 7 8 9".split(" ")
   };
 
-const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true) =>
+const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false) =>
   input
   .replace(
     /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/g,
@@ -89,12 +90,17 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true) =
       else
         ret = ret.replace("'", "\u02BC");
 
-      if(["none", "diacritic"].includes(toneType))
+      if(! ruby && ["none", "diacritic"].includes(toneType))
         ret += " ";
 
       return ret;
     }
   )
-  .replace(/，/g, ",")
-  .replace(/。/g, ".");
-
+  .replace(/，/g, ruby ? "，" : ",")
+  .replace(/。/g, ruby ? "。" : ".")
+  .replace(/（/g, ruby ? "（" : " (")
+  .replace(/）/g, ruby ? "）" : ") ")
+  .replace(/「/g, ruby ? "「" : " '")
+  .replace(/」/g, ruby ? "」" : "' ")
+  .replace(/『/g, ruby ? "『" : " \"")
+  .replace(/』/g, ruby ? "』" : "\" ");

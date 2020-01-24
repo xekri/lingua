@@ -210,11 +210,14 @@ block main
           li
             input.trigger(type="checkbox", name="length")
             label show optional vowel length
+          li
+            input.trigger(type="checkbox", name="ruby")
+            label show as ruby
 
       div.from-to
         textarea(placeholder="cantonese pinyin / jyutping / 漢字").from.trigger
           | 記住你會死亡。
-        textarea.to(placeholder="sumi", readonly)
+        div.to(placeholder="sumi")
 
       div.center
         a.tweet(

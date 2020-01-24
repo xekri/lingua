@@ -36,7 +36,7 @@ const update = () => {
 
     const elemTweet = document.getElementById(`tweet${b}`);
     elemTweet.setAttribute("href",
-    "https://twitter.com/intent/tweet?text="
+    "https://twitter.com/share?text="
       + encodeURI(`${isSpecified ? greg : "the current date and time"} is\n`)
       + document.getElementById(`formal${b}`).innerText + encodeURI("\n")
       + document.getElementById(`informal${b}`).innerText + encodeURI("\n")
