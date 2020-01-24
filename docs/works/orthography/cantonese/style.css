@@ -41,29 +41,23 @@ article #cantonese .converter {
   width: 100%;
   margin: 0;
   padding: 0; }
-
-article #cantonese .from-to {
-  width: 100%;
-  margin: 0;
-  pading: 0;
-  text-align: center;
-  display: flex; }
-  article #cantonese .from-to .from, article #cantonese .from-to .to {
+  article #cantonese .converter .from-to {
+    width: 100%;
     margin: 0;
-    width: calc(50% - 16px);
-    display: inline-block; }
-    article #cantonese .from-to .from label, article #cantonese .from-to .to label {
-      display: block; }
-  article #cantonese .from-to .to {
-    margin-left: 32px; }
-  article #cantonese .from-to .from textarea, article #cantonese .from-to .to div {
-    height: 120px;
-    text-align: left;
-    margin: 0;
-    padding: 4px;
-    overflow-wrap: break-word;
-    font-family: Noto Sans;
-    font-size: 14pt;
-    width: 100%; }
-  article #cantonese .from-to .to div {
-    border: 1px solid; }
+    pading: 0;
+    display: flex; }
+    article #cantonese .converter .from-to .from, article #cantonese .converter .from-to .to {
+      margin: 0;
+      padding: 4px;
+      width: calc((100% - 32px) / 2);
+      height: 120px;
+      display: inline-block;
+      bottom: 0;
+      text-align: left;
+      overflow-wrap: break-word;
+      font-family: Noto Sans;
+      font-size: 14pt; }
+    article #cantonese .converter .from-to .to {
+      margin-left: 32px;
+      bottom: 0;
+      border: 1px solid; }

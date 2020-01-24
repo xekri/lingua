@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
-  const converter = document.querySelector("#cantonese div.converter");
+  const converter = document.querySelector("#cantonese .converter");
 
-  const inTa = converter.querySelector(".from textarea");
-  const outDiv = converter.querySelector(".to div");
+  const from = converter.querySelector(".from");
+  const to = converter.querySelector(".to");
 
   const chkLet = converter.querySelector("input[name='letter']");
   const selTone = converter.querySelector("select[name='tone']");
@@ -11,11 +11,11 @@ window.addEventListener("load", () => {
   const tweet = document.querySelector(`#cantonese a.tweet`);
 
   const f = () => {
-    outDiv.innerHTML = pinyinToSumi(honziToJytpiq(inTa.value), chkLet.checked, selTone.value, chkLen.checked).replace(/\n/g, "<br/>");
+    to.innerHTML = pinyinToSumi(honziToJytpiq(from.value), chkLet.checked, selTone.value, chkLen.checked).replace(/\n/g, "<br/>");
 
     tweet.setAttribute("href",
     "https://twitter.com/intent/tweet?text="
-      + encodeURI(outDiv.innerText)
+      + encodeURI(from.value + "\n" + to.innerText)
       + `&url=${window.location.href}#cantonese`
       + "&hashtags=sumi_cantonese_romanization"
       + `&via=sumigv`

@@ -18,13 +18,10 @@
       	const sw = document.getElementById("nav-switch");
       	const nav = document.getElementsByTagName("nav")[0];
       	sw.onclick = () => {
-      		if(nav.style["display"] === "none") {
+      		if(nav.style["display"] === "none")
       			nav.style["display"] = "block";
-      			sw.innerText = "▲";
-      		} else {
+      		else
       			nav.style["display"] = "none";
-      			sw.innerText = "▼";
-      		}
       	};
       
       	// submenu
@@ -62,26 +59,28 @@
     <title>favorite</title>
   </head>
   <body>
-    <div id="nav-switch">▼</div>
-    <nav>
-      <div id="nav-in">
-        <div id="logo"><a href="/"><img src="/images/sumi.png"></a></div>
-        <div id="datetime"></div>
-        <div class="my-div" id="menu">
-          <ul>
-            <li><a href="/author">author</a></li>
-            <li><a href="/suzuri">suzuri</a></li>
-            <li><a href="/favorite">favorite</a></li>
-            <li><a href="/thoughts">thoughts</a></li>
-            <li><a href="/works">works</a></li>
-          </ul>
-          <div class="my-div" id="submenu">
+    <div id="nav-switch"></div>
+    <div class="center">
+      <nav>
+        <div id="nav-in">
+          <div id="logo"><a href="/"><img src="/images/sumi.png"></a></div>
+          <div id="datetime"></div>
+          <div class="my-div" id="menu">
+            <ul>
+              <li><a href="/author">author</a></li>
+              <li><a href="/suzuri">suzuri</a></li>
+              <li><a href="/favorite">favorite</a></li>
+              <li><a href="/thoughts">thoughts</a></li>
+              <li><a href="/works">works</a></li>
+            </ul>
+            <div class="my-div" id="submenu">
+            </div>
           </div>
+          <center><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         </div>
-        <center><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
-      </div>
-      <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-    </nav>
+        <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+      </nav>
+    </div>
     <main>
       <article>
         <p>the author designed this website for desktop, not for mobile.</p>

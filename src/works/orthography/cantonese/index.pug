@@ -170,29 +170,31 @@ block main
     | we may
     ul
       li replace any tone diacritic with a nummeral as in cantonese pinyin
-      li omit any non-tone diacritic except of ‹<span class="cantonese-short">a</span>›
+      li omit any non-tone diacritic except that of ‹<span class="cantonese-short">a</span>›
 
   +mySection("design choices")
     p
       | the author wanted to distinguish any phonological difference.
       |  the system distinguishes [œː, ɵ] like jyutping ‹oe, eo›, not like cantonese pinyin ‹oe›.
-      |  the system also distinguishes lengths of the other vowels, which is useful for beginners,
-      |  while left optional as they have no ambiguity and is not necessary for natives, except for [aː, ɐ].
+      |  the system also distinguishes lengths of the other vowels.
+      |  it is useful for beginners, who do not know how to pronounce.
+      |  it is however optional as length of any nucleus is clear from its coda, except for [aː, ɐ].
     p
       | the author tried to make the system minimal.
       |  the system adopts cantonese pinyin ‹y›, not jyutping ‹yu›,
       |  and adopts jyutping ‹z, c›, not cantonese pinyin ‹dz, ts›.
-      |  the system uses many diacritics in order to avoid numerals and doubled letters, which are ugly in the autohr's opinion,
-      |  while providing the ASCII alternative easy to type.
-      |  long vowels, the majority, are default and short ones, the minority, are marked.
+      |  the system uses diacritics in order to avoid numerals and doubled letters, which look ugly to the author.
+      |  the author however provides the ASCII alternative easy to type.
+      |  long vowels, the majority, are default and short ones, the minority, marked.
     p
       | the system replaces jyutping ‹w› with ‹v›,
       |  as ‹v› is the primitive latin letter for [w] sound and cantonese does not need to distinguish [w, v].
       |  the author does not like digraphs like ‹ng, oe›, which breaks uniformity.
-      |  as we have ‹q, w› unused, we can avoid them.
+      |  we can avoid them as we have ‹q, w› unused.
+
   +mySection("converter")
     div.converter
-      center
+      div.center
         ul.option
           li
             input.trigger(type="checkbox", name="letter")
@@ -210,20 +212,17 @@ block main
             label show optional vowel length
 
       div.from-to
-        div.from
-          label cantonese pinyin / jyutping / 漢字
-          textarea.trigger
-            | 記住你會死亡。
-        div.to
-          label sumi
-          div
+        textarea(placeholder="cantonese pinyin / jyutping / 漢字").from.trigger
+          | 記住你會死亡。
+        textarea.to(placeholder="sumi", readonly)
 
-    center: a.tweet(
-      href=""
-      , onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
-      , rel="nofollow"
-      , class="twitter-link"
-      ) tweet
+      div.center
+        a.tweet(
+          href=""
+          , onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
+          , rel="nofollow"
+          , class="twitter-link"
+          ) tweet
 
     p: em
       | this program uses&#x20;

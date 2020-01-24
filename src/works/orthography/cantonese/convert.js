@@ -30,15 +30,16 @@ const tones =
     , "\u0316"//"\u0316"
     ]
     , ascii:
-      String.raw`\,/,-,\\,//,=,,-,=`.split(",")//.map(s => elemStr("sup", s))
+      String.raw`\,/,-,\\,//,=,,-,=`.split(",")
     , ipa:
-      "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ").map(s => elemStr("sup", s))
+      "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ")
     , number:
-      "1 2 3 4 5 6 7 8 9".split(" ").map(s => elemStr("sup", s))
+      "1 2 3 4 5 6 7 8 9".split(" ")
   };
 
 const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true) =>
-  input.replace(
+  input
+  .replace(
     /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/g,
     (...args) => {
       let {c, v, f, n, t} = args.slice(-1)[0];
@@ -88,7 +89,12 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true) =
       else
         ret = ret.replace("'", "\u02BC");
 
+      if(["none", "diacritic"].includes(toneType))
+        ret += " ";
+
       return ret;
     }
-  );
+  )
+  .replace(/，/g, ",")
+  .replace(/。/g, ".");
 

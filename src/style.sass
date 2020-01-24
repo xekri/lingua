@@ -3,7 +3,7 @@ $mainWidth: 1080px
 $navWidth: 240px
 $thresh: $mainWidth + $navWidth
 $mobileNavWidth: 33.3%
-$mobileSwitchHeight: 64px
+$mobileSwitchHeight: 56pt
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -16,6 +16,12 @@ $mobileSwitchHeight: 64px
 *
   box-sizing: border-box
 
+div.center
+  width: 100%
+  margin: 0
+  padding: 0
+  text-align: center
+
 html, body
   height: 100%
   margin: 0
@@ -25,23 +31,22 @@ html, body
   font-family: "Noto Sans", "Noto Sans JP", sans
   font-weight: 300
 
-  @media screen and (max-device-width:$thresh)
+  @media screen and (max-width:$thresh)
     text-size-adjust: 240%;
 
   main
     margin: 0
     margin-left: $navWidth
-    @media screen and (max-device-width:$thresh)
-      margin-top: $mobileSwitchHeight
+    @media screen and (max-width:$thresh)
       margin-left: 0
-    padding: 0
+      padding: 0
 
     article
       width: $mainWidth
       margin: 0 auto
       padding: $space
       padding-bottom: 0
-      @media screen and (max-device-width:$thresh)
+      @media screen and (max-width:$thresh)
         width: 100%
 
   nav
@@ -58,7 +63,7 @@ html, body
       margin-left: 0
       list-style-position: inside
 
-    @media screen and (max-device-width:$thresh)
+    @media screen and (max-width:$thresh)
       display: none
       width: $mobileNavWidth
       background-color: #000000
@@ -70,7 +75,7 @@ html, body
       padding: 0
       display: inline-block
       max-width: 100%
-      @media screen and (max-device-width:$thresh)
+      @media screen and (max-width:$thresh)
         //font-size: 28pt
 
       #logo
@@ -95,7 +100,7 @@ html, body
         margin-bottom: $space
         width: 100%
         text-align: center
-        @media screen and (max-device-width:$thresh)
+        @media screen and (max-width:$thresh)
           font-size: 8pt
     ul
       margin-left: 0
@@ -105,19 +110,13 @@ html, body
   #nav-switch
     z-index: 100
     display: none
-    @media screen and (max-device-width:$thresh)
+    position: fixed
+    top: 0
+    left: 0
+    @media screen and (max-width:$thresh)
       display: block
-      vertical-align: middle
-      background-color: #ffffff
-      color: #000000
-      margin: 0
-      padding-left: 16px
-      padding-top: 1.5px
-      position: fixed
-      top: 0
-      left: 0
-      right: 0
-      height: $mobileSwitchHeight
+      border-bottom: $mobileSwitchHeight solid transparent
+      border-left: $mobileSwitchHeight solid white
 
   .my-section, .my-div
     margin: 0
@@ -128,8 +127,9 @@ html, body
     border-width: 1px 0 0 1px
     background-color: transparent
     font-size: 100%
-    @media screen and (max-device-width:$thresh)
-      overflow-x: auto
+    .my-section
+      @media screen and (max-width:$thresh)
+        overflow-x: auto
 
     h1
       font-family: "Nova Round"

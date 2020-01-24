@@ -7,6 +7,12 @@
 * {
   box-sizing: border-box; }
 
+div.center {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -15,23 +21,22 @@ html, body {
   background-color: black;
   font-family: "Noto Sans", "Noto Sans JP", sans;
   font-weight: 300; }
-  @media screen and (max-device-width: 1320px) {
+  @media screen and (max-width: 1320px) {
     html, body {
       text-size-adjust: 240%; } }
   html main, body main {
     margin: 0;
-    margin-left: 240px;
-    padding: 0; }
-    @media screen and (max-device-width: 1320px) {
+    margin-left: 240px; }
+    @media screen and (max-width: 1320px) {
       html main, body main {
-        margin-top: 64px;
-        margin-left: 0; } }
+        margin-left: 0;
+        padding: 0; } }
     html main article, body main article {
       width: 1080px;
       margin: 0 auto;
       padding: 32px;
       padding-bottom: 0; }
-      @media screen and (max-device-width: 1320px) {
+      @media screen and (max-width: 1320px) {
         html main article, body main article {
           width: 100%; } }
   html nav, body nav {
@@ -46,7 +51,7 @@ html, body {
     html nav ul, body nav ul {
       margin-left: 0;
       list-style-position: inside; }
-    @media screen and (max-device-width: 1320px) {
+    @media screen and (max-width: 1320px) {
       html nav, body nav {
         display: none;
         width: 33.3%;
@@ -79,7 +84,7 @@ html, body {
         margin-bottom: 32px;
         width: 100%;
         text-align: center; }
-        @media screen and (max-device-width: 1320px) {
+        @media screen and (max-width: 1320px) {
           html nav #nav-in #datetime, body nav #nav-in #datetime {
             font-size: 8pt; } }
     html nav ul, body nav ul {
@@ -88,21 +93,15 @@ html, body {
       font-family: "Nova Round"; }
   html #nav-switch, body #nav-switch {
     z-index: 100;
-    display: none; }
-    @media screen and (max-device-width: 1320px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    @media screen and (max-width: 1320px) {
       html #nav-switch, body #nav-switch {
         display: block;
-        vertical-align: middle;
-        background-color: #ffffff;
-        color: #000000;
-        margin: 0;
-        padding-left: 16px;
-        padding-top: 1.5px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px; } }
+        border-bottom: 56pt solid transparent;
+        border-left: 56pt solid white; } }
   html .my-section, html .my-div, body .my-section, body .my-div {
     margin: 0;
     padding: 0;
@@ -112,8 +111,8 @@ html, body {
     border-width: 1px 0 0 1px;
     background-color: transparent;
     font-size: 100%; }
-    @media screen and (max-device-width: 1320px) {
-      html .my-section, html .my-div, body .my-section, body .my-div {
+    @media screen and (max-width: 1320px) {
+      html .my-section .my-section, html .my-div .my-section, body .my-section .my-section, body .my-div .my-section {
         overflow-x: auto; } }
     html .my-section h1, html .my-div h1, body .my-section h1, body .my-div h1 {
       font-family: "Nova Round";
