@@ -17,9 +17,12 @@ article table {
   article table tbody {
     display: inline-block;
     margin: 32px;
-    text-align: center;
     border-top: 1px solid;
-    border-bottom: 1px solid; }
+    border-bottom: 1px solid;
+    text-align: center; }
+    article table tbody:only-of-type {
+      margin: 0;
+      border: 0; }
     article table tbody:not(:first-of-type) {
       margin-left: 0; }
     article table tbody.consonant, article table tbody.vowel {

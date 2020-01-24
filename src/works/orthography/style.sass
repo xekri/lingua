@@ -22,12 +22,15 @@ article
     tbody
       display: inline-block
       margin: 32px
+      border-top: 1px solid
+      border-bottom: 1px solid
+      &:only-of-type
+        margin: 0
+        border: 0
       &:not(:first-of-type)
         margin-left: 0
       text-align: center
 
-      border-top: 1px solid
-      border-bottom: 1px solid
 
       &.consonant, &.vowel
         display: inline-block

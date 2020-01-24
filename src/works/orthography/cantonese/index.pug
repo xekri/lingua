@@ -27,8 +27,8 @@ mixin sups(xs, sep, mid, end)
 block head
   - var title = "cantonese"
   link(rel="stylesheet", href="style.css")
-  script(src="script.js")
   script(src="convert.js")
+  script(src="script.js")
 
 block main
   center
@@ -47,7 +47,7 @@ block main
         tr: th cantonese pinyin
         tr: td
           +sups("tsoen^1 hiu^2".split(" "), "^", " ", "")
-          | (
+          |  (
           +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
           | )
         tr: td: +sups("tsoen^1 min^4 bat^7 gok^8 hiu^2".split(" "), "^", " ", ",")
@@ -58,7 +58,7 @@ block main
         tr: th jyutping
         tr: td
           +sups("ceon^1 hiu^2".split(" "), "^", " ", "")
-          | (
+          |  (
           +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
           | )
         tr: td: +sups("ceon^1 min^4 bat^1 gok^3 hiu^2".split(" "), "^", " ", ",")
@@ -206,15 +206,14 @@ block main
               option(value="ipa") IPA
             label tone
           li
-            input.trigger(type="checkbox", name="length", checked)
+            input.trigger(type="checkbox", name="length")
             label show optional vowel length
 
       div.from-to
         div.from
-          label cantonese pinyin
+          label cantonese pinyin / jyutping / 漢字
           textarea.trigger
             | 記住你會死亡。
-            | gei3dzy6 nei5 wui2 sei2mong4.
         div.to
           label sumi
           div
@@ -225,3 +224,10 @@ block main
       , rel="nofollow"
       , class="twitter-link"
       ) tweet
+
+    p: em
+      | this program uses&#x20;
+      a(href="https://github.com/lshk-org/jyutping-table") 電腦用漢字粵語拼音表
+      |  licensed under&#x20;
+      a(href="https://creativecommons.org/licenses/by/4.0/deed.en") CC BY 4.0
+      | .

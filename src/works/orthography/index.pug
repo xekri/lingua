@@ -14,6 +14,12 @@ mixin toTrs(xss, sep="|")
     tr
       +toTds(xs.split(sep))
 
+mixin toThTds(xyss)
+  - for(const [x, ys] of xyss)
+    tr
+      th(align="right")= x
+      for y in ys.split("|")
+        td= y
 
 mixin sups(xs, sep, mid, end)
   for x, i in xs
@@ -90,18 +96,12 @@ block main
           tr
             for x in ",,,,i,u,n,ŋ,,i,u,n,ŋ".split(",")
               th(align="right")= x
-          tr
-            th
-            +toTds(",', a, ai, au, an, aŋ, e, ei, eu, en, eŋ".split(","))
-          tr
-            th i
-            +toTds(",i,ia,iai,iau,ian,iaŋ,ie,   ,ieu,ien,ieŋ".split(","))
-          tr
-            th u
-            +toTds(",u,ua,uai,   ,uan,uaŋ,ue,uei,   ,uen,ueŋ".split(","))
-          tr
-            th y
-            +toTds(",y,  ,   ,   ,yan,   ,ye,   ,   ,yen,yeŋ".split(","))
+          +toThTds(
+            [ ["",  "| | a| ai| au| an| aŋ| e| ei| eu| en| eŋ"]
+            , ["i", "|i|ia|iai|iau|ian|iaŋ|ië|   |ieu|ien|ieŋ"]
+            , ["u", "|u|ua|uai|   |uan|uaŋ|uė|uei|   |uen|ueŋ"]
+            , ["y", "|y|  |   |   |yan|   |yë|   |   |yen|yeŋ"]
+            ])
 
       table
         caption sumi-ASCII
@@ -125,18 +125,86 @@ block main
           tr
             for x in ",,,,i,u,n,q,,i,u,n,q".split(",")
               th(align="right")= x
+          +toThTds(
+            [ ["",  "| | a| ai| au| an| aq| e| ei| eu| en| eq"]
+            , ["i", "|i|ia|iai|iau|ian|iaq|ie|   |ieu|ien|ieq"]
+            , ["u", "|u|ua|uai|   |uan|uaq|ue|uei|   |uen|ueq"]
+            , ["y", "|y|  |   |   |yan|   |ye|   |   |yen|yeq"]
+            ])
+
+      table
+        caption 注音符號
+        tbody.consonant
+          +toTrs(
+            [ "ㄅ,ㄆ,ㄇ,ㄈ"
+            , "ㄉ,ㄊ,ㄋ,  ,ㄌ"
+            , "ㄗ,ㄘ,  ,ㄙ"
+            , "ㄓ,ㄔ,  ,ㄕ,ㄖ"
+            , "ㄐ,ㄑ,  ,ㄒ"
+            , "ㄍ,ㄎ,  ,ㄏ"
+            ]
+            , ",")
+        tbody.vowel
           tr
-            th
-            +toTds(",', a, ai, au, an, aq, e, ei, eu, en, eq".split(","))
+            td
+            td
+            td
+            th.over-th(colspan="5") a
+            th.over-th(colspan="5") e
           tr
-            th i
-            +toTds(",i,ia,iai,iau,ian,iaq,ie,   ,ieu,ien,ieq".split(","))
+            for x in ",,,,i,u,n,q,,i,u,n,q".split(",")
+              th(align="right")= x
+          +toThTds(
+              [ ["",  "|ㄭ|  ㄚ|  ㄞ|  ㄠ|  ㄢ|  ㄤ|  ㄜ|  ㄟ|  ㄡ|  ㄣ|  ㄥ"]
+              , ["i", "|ㄧ|ㄧㄚ|ㄧㄞ|ㄧㄠ|ㄧㄢ|ㄧㄤ|ㄧㄝ|    |ㄧㄡ|ㄧㄣ|ㄧㄥ"]
+              , ["u", "|ㄨ|ㄨㄚ|ㄨㄞ|    |ㄨㄢ|ㄨㄤ|ㄨㄛ|ㄨㄟ|    |ㄨㄣ|ㄨㄥ"]
+              , ["y", "|ㄩ|    |    |    |ㄩㄢ|    |ㄩㄝ|    |    |ㄩㄣ|ㄩㄥ"]
+              ])
+
+      table
+        caption 漢語拼音
+        tbody.consonant
+          +toTrs(
+            [ "b ,p ,m,f"
+            , "d ,t ,n,  ,l"
+            , "z ,c , ,s"
+            , "zh,ch, ,sh,r"
+            , "j ,q , ,x"
+            , "g ,k , ,h"
+            ]
+            , ",")
+        tbody.vowel
           tr
-            th u
-            +toTds(",u,ua,uai,   ,uan,uaq,ue,uei,   ,uen,ueq".split(","))
+            td
+            td
+            td
+            th.over-th(colspan="5") a
+            th.over-th(colspan="5") e
           tr
-            th y
-            +toTds(",y,  ,   ,   ,yan,   ,ye,   ,   ,yen,yeq".split(","))
+            for x in ",,,,i,u,n,ng,,i,u,n,ng".split(",")
+              th(align="right")= x
+          +toThTds(
+            [ ["",   "|  | a| ai| ao|  an| ang|  e| ei| ou|  en|  eng"]
+            , ["i",  "|yi|ya|yai|yao| yan|yang| ye|   |you|!yin|!ying"]
+            , ["u",  "|wu|wa|wai|   | wan|wang| wo|wei|   | wen| weng"]
+            , ["yu", "|yu|  |   |   |yuan|    |yue|   |   |!yun|!yong"]
+            ])
+        tbody.vowel
+          tr
+            td
+            td
+            td
+            th.over-th(colspan="5") a
+            th.over-th(colspan="5") e
+          tr
+            for x in ",,,,i,u,n,ng,,i,u,n,ng".split(",")
+              th(align="right")= x
+          +toThTds(
+            [ ["",  "|i| a| ai| ao| an| ang|e | ei| ou| en|  eng"]
+            , ["i", "|i|ia|   |iao|ian|iang|ie|   |!iu|!in|! ing"]
+            , ["u", "|u|ua|uai|   |uan|uang|uo|!ui|   |!un|! ong"]
+            , ["ü", "|ü|  |   |   |üan|    |üe|       |!ün|!iong"]
+            ])
 
       table
         caption tones
@@ -147,15 +215,10 @@ block main
                 for x in xs.split("|")
                     th= x
           -
-            let xss =
-              [ ["IPA-letter",       "˥|˧˥|˧˩˥|˥˩|"]
-              , ["IPA-diacritic",    "a\u0301|a\u030C|a\u1DC9|a\u0302|a"]
-              , ["sumi-ASCII",       "-|/|~|\\|"]
-              , ["pinyin-diacritic", "a\u0304|a\u0301|a\u030C|a\u0300|"]
-              , ["pinyin-number",    "1|2|3|4|"]
-              ]
-          for xs in xss
-            tr
-              th(align="right")= xs[0]
-              if xs[1]
-                +toTds(xs[1].split("|"))
+          +toThTds(
+            [ ["IPA-letter",       "˥|˧˥|˧˩˥|˥˩|"]
+            , ["IPA-diacritic",    "a\u0301|a\u030C|a\u1DC9|a\u0302|a"]
+            , ["sumi-ASCII",       "-|/|~|\\|"]
+            , ["pinyin-diacritic", "a\u0304|a\u0301|a\u030C|a\u0300|a"]
+            , ["pinyin-number",    "1|2|3|4|(0)"]
+            ])
