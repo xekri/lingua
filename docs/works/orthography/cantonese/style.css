@@ -55,8 +55,9 @@ article #cantonese .converter {
       bottom: 0;
       text-align: left;
       overflow-wrap: break-word;
-      font-family: Noto Sans;
       font-size: 14pt; }
+    article #cantonese .converter .from-to .from {
+      font-family: "Noto Sans"; }
     article #cantonese .converter .from-to .to {
       margin-left: 32px;
       bottom: 0;

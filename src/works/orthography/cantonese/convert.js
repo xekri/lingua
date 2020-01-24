@@ -96,11 +96,13 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
       return ret;
     }
   )
-  .replace(/，/g, ruby ? "，" : ",")
-  .replace(/。/g, ruby ? "。" : ".")
+  .replace(/，/g, ruby ? "，" : ", ")
+  .replace(/。/g, ruby ? "。" : ". ")
+  .replace(/？/g, ruby ? "？" : "? ")
+  .replace(/！/g, ruby ? "！" : "! ")
   .replace(/（/g, ruby ? "（" : " (")
   .replace(/）/g, ruby ? "）" : ") ")
-  .replace(/「/g, ruby ? "「" : " '")
-  .replace(/」/g, ruby ? "」" : "' ")
-  .replace(/『/g, ruby ? "『" : " \"")
-  .replace(/』/g, ruby ? "』" : "\" ");
+  .replace(/「/g, ruby ? "「" : !ascii ? "‘ " : " ' ")
+  .replace(/」/g, ruby ? "」" : !ascii ? "’ " : " ' ")
+  .replace(/『/g, ruby ? "『" : !ascii ? "“ " : " \" ")
+  .replace(/』/g, ruby ? "』" : !ascii ? "” " : " \" ");
