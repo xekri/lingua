@@ -1,60 +1,59 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var browserSync = require("browser-sync");
-var notify = require("gulp-notify");
-var pug = require("gulp-pug");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const browserSync = require("browser-sync");
+const notify = require("gulp-notify");
+const pug = require("gulp-pug");
 
-gulp.task("default", ["browser-sync", "sass", "pug", "js", "watch"]);
+gulp.task("default", ["browser-sync", "sass", "pug", "other", "watch"]);
 
 gulp.task("watch", () => {
-    gulp.watch(["./src/**"], () => {
-        gulp.start(["sass", "pug", "js"]);
-    });
+  gulp.watch(["src/**"], () => {
+    gulp.start(["sass", "pug", "other"]);
+  });
 });
 
 gulp.task("browser-sync", () => {
-    browserSync({
-        server: {
-            baseDir: "./docs"
-        }
-    });
-    gulp.watch("./src/**/*.js", ["reload"]);
-    gulp.watch("./docs/**/*.html", ["reload"]);
+  browserSync({
+    server: {
+      baseDir: "docs"
+    }
+  });
+  gulp.watch("src/**/*.*", ["reload"]);
 });
 
 gulp.task("sass", () => {
-    gulp.src("./src/**/*.sass")
-        .pipe(plumber({
-            errorHandler: notify.onError("Error: <%= error.message %>")
-        }))
-        .pipe(sass())
-        .pipe(gulp.dest("./docs"))
-        .pipe(browserSync.stream())
+  gulp.src("src/**/*.sass")
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(sass())
+    .pipe(gulp.dest("docs"))
+    .pipe(browserSync.stream())
 });
 
 gulp.task("pug", () => {
-    var option = {
-        pretty: true,
-        basedir: "src"
-    }
-    gulp.src("./src/**/*.pug")
-        .pipe(plumber({
-            errorHandler: notify.onError("Error: <%= error.message %>")
-        }))
-        .pipe(pug(option))
-        .pipe(gulp.dest("./docs"))
+  const option =
+    { pretty: true
+    , basedir: "src"
+    };
+  gulp.src("src/**/*.pug")
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(pug(option))
+    .pipe(gulp.dest("docs"))
 });
 
-gulp.task("js", () => {
-    gulp.src("./src/**/*.js")
-        .pipe(plumber({
-            errorHandler: notify.onError("Error: <%= error.message %>")
-        }))
-        .pipe(gulp.dest("./docs"))
-        .pipe(browserSync.stream())
+gulp.task("other", () => {
+  gulp.src(["src/**/*.*", "!src/**/*.pug", "!src/**/*.sass"])
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(gulp.dest("docs"))
+    .pipe(browserSync.stream())
 });
 
 gulp.task("reload", () => {
-    browserSync.reload();
+  browserSync.reload();
 });
