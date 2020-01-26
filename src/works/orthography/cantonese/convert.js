@@ -1,44 +1,43 @@
-var honzis;
-var honziToJytpiq;
-const req = new XMLHttpRequest();
-req.open("GET", "/submodules/jyutping-table/list.tsv");
-req.send();
-req.addEventListener("load", () => {
-  honzis = {};
-  req.responseText
-    .split("\n")
-    .slice(1)
-    .forEach(line => {
-      const [key, _, val] = line.split("\t");
-      if(! honzis[key])
-        honzis[key] = val;
-    });
-  honziToJytpiq = input => input.replace(/\p{sc=Han}/ug, match => honzis[match] || match);
-});
-
-const elemStr = (tag, s) => `<${tag}>${s}</${tag}>`;
+const combGraveToneAbove = "\u0340";
+const combAcuteToneAbove = "\u0341";
+const combMacronBelow = "\u0331";
+const combMacronAbove = "\u0304";
+const grave = "\u0301";
+const acute = "\u0304";
+const dot = "\u02D9";
 
 const tones =
   { diacritic:
-    [ "\u0302"
-    , "\u030C"
-    , ""//"\u0304"
-    , "\u0316\u0302"//"\u032D"
-    , "\u0316\u030C"//"\u032C"
-    , "\u0316"//"\u0316"
-    , "\u0301"
-    , ""//"\u0304"
-    , "\u0316"//"\u0316"
+    [ combGraveToneAbove
+    , combAcuteToneAbove
+    , ""
+    , combMacronBelow + combGraveToneAbove
+    , combMacronBelow + combAcuteToneAbove
+    , combMacronBelow
+    , combMacronAbove
+    , ""
+    , combMacronBelow
     ]
-    , ascii:
-      String.raw`\,/,-,\\,//,=,,-,=`.split(",")
-    , ipa:
-      "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ")
-    , number:
-      "1 2 3 4 5 6 7 8 9".split(" ")
+  , suffix:
+    [ grave
+    , acute
+    , ""
+    , "-" + combGraveToneAbove
+    , "-" + combAcuteToneAbove
+    , "-"
+    , dot
+    , ""
+    , "-"
+    ]
+  , ascii:
+    String.raw`\,/,-,\\,//,=,,-,=`.split(",")
+  , ipa:
+    "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ")
+  , number:
+    "1 2 3 4 5 6 7 8 9".split(" ")
   };
 
-const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false) =>
+const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=false, ruby=false) =>
   input
   .replace(
     /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/ug,
@@ -106,3 +105,23 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
   .replace(/」/g, ruby ? "」" : !ascii ? "’ " : " ' ")
   .replace(/『/g, ruby ? "『" : !ascii ? "“ " : " \" ")
   .replace(/』/g, ruby ? "』" : !ascii ? "” " : " \" ");
+
+var honziToJytpiq;
+var honzisToJytpiq;
+
+const req = new XMLHttpRequest();
+req.open("GET", "/submodules/jyutping-table/list.tsv");
+req.send();
+req.addEventListener("load", () => {
+  honziToJytpiq = {};
+  req.responseText
+    .split("\n")
+    .slice(1)
+    .forEach(line => {
+      const [key, _, val] = line.split("\t");
+      if(! honziToJytpiq[key])
+        honziToJytpiq[key] = val;
+    });
+  honzisToJytpiq = input => input.replace(/\p{sc=Han}/ug, match => honziToJytpiq[match] || match);
+});
+

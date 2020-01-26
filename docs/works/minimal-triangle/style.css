@@ -1,11 +1,1 @@
-#input {
-  font-family: monospace;
-  width: 50%;
-  height: 160px; }
-
-#options {
-  border: 0px; }
-
-#output {
-  border: 1px solid #ffffff;
-  max-width: 100%; }
+#input{font-family:monospace;width:50%;height:160px}#options{border:0}#output{border:1px solid #fff;max-width:100%}

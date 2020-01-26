@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+req.addEventListener("load", () => {
   const converter = document.querySelector("#cantonese .converter");
 
   const from = converter.querySelector(".from");
@@ -13,12 +13,13 @@ window.addEventListener("load", () => {
 
   const f = () => {
     let out = from.value;
-    if(chkRub.checked)
-      out = [...out]
-        .map(x => honzis[x] ? `<ruby>${x}<rt>${honzis[x]}</rt></ruby>` : x)
-        .join("");
-    else
-      out = honziToJytpiq(out);
+    out =
+      chkRub.checked ?  
+        [...out]
+          .map(x => honziToJytpiq[x] ? `<ruby>${x}<rt>${honziToJytpiq[x]}</rt></ruby>` : x)
+          .join("")
+      :
+        honzisToJytpiq(out);
 
     to.innerHTML = pinyinToSumi(out, chkLet.checked, selTone.value, chkLen.checked, chkRub.checked).replace(/\n/g, "<br/>");
 
@@ -66,6 +67,14 @@ window.addEventListener("load", () => {
         break;
       }
     }
-
   }
+  const e = document.querySelector("#千字文 div");
+  e.innerHTML =
+    [...e.innerHTML]
+      .map(x =>
+        honziToJytpiq[x] ?
+          `<ruby>${x}<rt>${pinyinToSumi(honziToJytpiq[x])}</rt></ruby>` 
+        : x
+      )
+      .join("");
 });
