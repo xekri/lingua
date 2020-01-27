@@ -1,0 +1,79 @@
+article
+  table
+    padding: 0
+    text-align: center
+
+    tr, td, th
+      position: relative
+
+    .over-th
+      text-align: center
+
+      &:before
+        content: ""
+        height: 1px
+        overflow: hidden
+        background: white
+        position: absolute
+        left: 4px
+        right: 4px
+        bottom: 0
+
+    tbody
+      &:not(:only-of-type)
+        display: inline-block
+        margin: 24px
+        &:not(:first-of-type)
+          margin-left: 0
+        text-align: center
+
+        border-top: 1px solid
+        border-bottom: 1px solid
+
+      &.consonant, &.vowel
+        display: inline-block
+
+      &.consonant td
+        text-align: left
+      &.vowel td
+        text-align: right
+      &.tone td
+        text-align: right
+
+  .example
+    td
+      text-align: left
+
+    th, tr:nth-of-type(2)
+      text-align: center
+
+  .converter
+    width: 100%
+    margin: 0
+    padding: 0
+
+    .from-to
+      width: 100%
+      margin: 0
+      pading: 0
+      display: flex
+
+      .from, .to
+        margin: 0
+        padding: 4px
+        width: calc((100% - 32px) / 2)
+        height: 120px
+        display: inline-block
+        bottom: 0
+        text-align: left
+        overflow-wrap: break-word
+        font-size: 14pt
+
+      .from
+        font-family: "Noto Sans"
+      .to
+        margin-left: 32px
+        bottom: 0
+        border: 1px solid
+        //font-family: Noto Serif
+        overflow-y: auto
