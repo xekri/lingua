@@ -183,7 +183,21 @@
                     </td>
                     <td>m 
                     </td>
-                    <td>f
+                    <td>f 
+                    </td>
+                    <td> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>t͡s
+                    </td>
+                    <td>t͡sʰ
+                    </td>
+                    <td>
+                    </td>
+                    <td>s
+                    </td>
+                    <td>j
                     </td>
                   </tr>
                   <tr>
@@ -193,17 +207,9 @@
                     </td>
                     <td>n 
                     </td>
+                    <td>  
+                    </td>
                     <td>l
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>k  
-                    </td>
-                    <td>kʰ 
-                    </td>
-                    <td>ŋ 
-                    </td>
-                    <td>h
                     </td>
                   </tr>
                   <tr>
@@ -213,17 +219,25 @@
                     </td>
                     <td>  
                     </td>
+                    <td>  
+                    </td>
                     <td>w
                     </td>
                   </tr>
                   <tr>
-                    <td>t͡s
+                    <td>k  
                     </td>
-                    <td>t͡sʰ
+                    <td>kʰ 
                     </td>
-                    <td>s
+                    <td>ŋ 
                     </td>
-                    <td>j
+                    <td>h 
+                    </td>
+                    <td> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ʔ
                     </td>
                   </tr>
                 </tbody>
@@ -425,6 +439,8 @@
                     </td>
                     <td>f
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
                     <td>d 
@@ -432,6 +448,8 @@
                     <td>t 
                     </td>
                     <td>n 
+                    </td>
+                    <td> 
                     </td>
                     <td>l
                     </td>
@@ -445,6 +463,8 @@
                     </td>
                     <td>h
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
                     <td>gw
@@ -452,6 +472,8 @@
                     <td>kw
                     </td>
                     <td>  
+                    </td>
+                    <td> 
                     </td>
                     <td>w
                     </td>
@@ -461,9 +483,15 @@
                     </td>
                     <td>ts
                     </td>
-                    <td>s 
+                    <td>  
+                    </td>
+                    <td>s
                     </td>
                     <td>j
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>∅
                     </td>
                   </tr>
                 </tbody>
@@ -662,6 +690,8 @@
                     </td>
                     <td>f
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
                     <td>d 
@@ -669,6 +699,8 @@
                     <td>t 
                     </td>
                     <td>n 
+                    </td>
+                    <td> 
                     </td>
                     <td>l
                     </td>
@@ -682,6 +714,8 @@
                     </td>
                     <td>h
                     </td>
+                    <td> 
+                    </td>
                   </tr>
                   <tr>
                     <td>gw
@@ -689,6 +723,8 @@
                     <td>kw
                     </td>
                     <td>  
+                    </td>
+                    <td> 
                     </td>
                     <td>w
                     </td>
@@ -700,7 +736,13 @@
                     </td>
                     <td>s 
                     </td>
+                    <td> 
+                    </td>
                     <td>j
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>∅
                     </td>
                   </tr>
                 </tbody>
@@ -1029,18 +1071,19 @@
               </table>
             </center>
             <ul>
-              <li>breves above ‹i, u, e, ø› are optional (only used for the sake of learners).</li>
-              <li>in ASCII environments,
+              <li>you may omit breves above ‹i, u, e, ø›.</li>
+              <li>bassically do not use zero-initial ‹x›</li>
+              <li>in ASCII environments
                 <ul>
                   <li>use ‹q, w› instead of ‹ŋ, ø›</li>
                   <li>use ASCII symbols for tone</li>
                 </ul>
               </li>
-              <li>in alphabet-only environments,
+              <li>in alphabet-only environments
                 <ul>
-                  <li>use ‹x› as zero-consonant</li>
+                  <li>use ‹x› as zero-initial</li>
                   <li>double nasal nuclei</li>
-                  <li>use uppercase letters and ‹x› for tone</li>
+                  <li>use uppercase letters and ‹x› (not zero-initial) for tone</li>
                   <li>double codas after short vowels.</li>
                 </ul>
               </li>
@@ -1071,8 +1114,8 @@
                     <label>tone</label>
                   </li>
                   <li>
-                    <input class="trigger" type="checkbox" name="length">
-                    <label>show optional vowel length</label>
+                    <input class="trigger" type="checkbox" name="omit-length">
+                    <label>omit optional vowel length</label>
                   </li>
                   <li>
                     <input class="trigger" type="checkbox" name="ruby">
@@ -1096,6 +1139,7 @@
                 <li>cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)</li>
                 <li>eulwjbaq (uses ‹q, w› for /ŋ, ø/)</li>
                 <li>latin (uses not ‹w› but ‹v› for /w/)</li>
+                <li>various languages (double consonants to indicate short vowels)</li>
               </ul>
             </p>
           </section>

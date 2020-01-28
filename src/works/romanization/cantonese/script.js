@@ -6,14 +6,14 @@ req.addEventListener("load", () => {
 
   const chkLet = converter.querySelector("input[name='letter']");
   const selTone = converter.querySelector("select[name='tone']");
-  const chkLen = converter.querySelector("input[name='length']");
+  const chkLen = converter.querySelector("input[name='omit-length']");
   const chkRub = converter.querySelector("input[name='ruby']");
   const chkAlp = converter.querySelector("input[name='alphabet']");
 
   const tweet = document.querySelector(`a.tweet`);
 
   const f = () => {
-    const args = [chkLet.checked, selTone.value, chkLen.checked, chkRub.checked, chkAlp.checked];
+    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, chkAlp.checked];
 
     if(chkRub.checked) {
       to.innerHTML =
@@ -55,7 +55,7 @@ req.addEventListener("load", () => {
     const tbody = e.cloneNode(true);
     for(const tr of tbody.querySelectorAll("tr"))
       for(const td of tr.querySelectorAll("td"))
-        td.innerHTML = pinyinToSumi(td.innerText, false, "diacritic", true).replace("w", "v");
+        td.innerHTML = pinyinToSumi(td.innerText, false, "diacritic").replace("w", "v").replace("∅", "x");
     document.getElementById(`cantonese-me`).append(tbody);
   });
 

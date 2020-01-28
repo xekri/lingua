@@ -27,7 +27,7 @@ const tones =
     "1 2 3 4 5 6 7 8 9".split(" ")
   };
 
-const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=false, ruby=false, alphabet=false) =>
+const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false, alphabet=false) =>
   input
   .replace(
     /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/ug,

@@ -70,13 +70,15 @@ block main
       table
         caption IPA
         tbody.consonant
-          +toTrs([
-            "p  |pʰ |m |f",
-            "t  |tʰ |n |l",
-            "k  |kʰ |ŋ |h",
-            "kʷ |kʷʰ|  |w",
-            "t\u0361s|t\u0361sʰ|s|j"
-          ])
+          +toTrs(
+            [ "p  |pʰ |m |f | "
+            , "t\u0361s|t\u0361sʰ||s|j"
+            , "t  |tʰ |n |  |l"
+            , "kʷ |kʷʰ|  |  |w"
+            , "k  |kʰ |ŋ |h | "
+            , "ʔ"
+            ]
+          )
         tbody.vowel
           +toTrs([
           "iː|   |iːu|iːm|iːn|!ɪŋ|iːp|iːt|!ɪk ",
@@ -96,13 +98,15 @@ block main
       table#cantonese-pinyin
         caption 教育學院拼音方案 (cantonese pinyin)
         tbody.consonant
-          +toTrs([
-            "b |p |m |f",
-            "d |t |n |l",
-            "g |k |ng|h",
-            "gw|kw|  |w",
-            "dz|ts|s |j"
-          ])
+          +toTrs(
+            [ "b |p |m |f| "
+            , "d |t |n | |l"
+            , "g |k |ng|h| "
+            , "gw|kw|  | |w"
+            , "dz|ts|  |s|j"
+            , "∅"
+            ]
+          )
         tbody.vowel
           +toTrs([
           "i |   |iu |im |in |ing |ip |it |ik ",
@@ -119,12 +123,13 @@ block main
       table
         caption 香港語言學學會粵語拼音方案 (jyutping)
         tbody.consonant
-          +toTrs([
-            "b |p |m |f",
-            "d |t |n |l",
-            "g |k |ng|h",
-            "gw|kw|  |w",
-            "z |c |s |j"
+          +toTrs(
+            [ "b |p |m |f| "
+            , "d |t |n | |l"
+            , "g |k |ng|h| "
+            , "gw|kw|  | |w"
+            , "z |c |s | |j"
+            , "∅"
           ])
         tbody.vowel
           +toTrs([
@@ -153,7 +158,7 @@ block main
               , ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
               , ["IPA-letter",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
               , ["IPA-diacritic",    "i\u0302|i\u030C|i|i\u1DC6|i\u1DC5|i\u0300|i\u0301|i|i\u0300"]
-              , ["sumi-diacritic",                                         ]
+              , ["sumi-diacritic",                               ]
               , ["sumi-ASCII",                                   ]
               , ["sumi-alphabet",    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝑐|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
               ]
@@ -164,18 +169,19 @@ block main
                 +toTds(xs[1].split("|"))
 
     ul
-      li breves above ‹i, u, e, ø› are optional (only used for the sake of learners).
+      li you may omit breves above ‹i, u, e, ø›.
+      li bassically do not use zero-initial ‹x›
       li
-        | in ASCII environments,
+        | in ASCII environments
         ul
           li use ‹q, w› instead of ‹ŋ, ø›
           li use ASCII symbols for tone
       li
-        | in alphabet-only environments,
+        | in alphabet-only environments
         ul
-          li use ‹x› as zero-consonant
+          li use ‹x› as zero-initial
           li double nasal nuclei
-          li use uppercase letters and ‹x› for tone
+          li use uppercase letters and ‹x› (not zero-initial) for tone
           li double codas after short vowels.
 
   +mySection("converter")
@@ -198,8 +204,8 @@ block main
               option(value="alphabet") alphabet
             label tone
           li
-            input.trigger(type="checkbox", name="length")
-            label show optional vowel length
+            input.trigger(type="checkbox", name="omit-length")
+            label omit optional vowel length
           li
             input.trigger(type="checkbox", name="ruby")
             label show as ruby
@@ -232,6 +238,7 @@ block main
         li cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)
         li eulwjbaq (uses ‹q, w› for /ŋ, ø/)
         li latin (uses not ‹w› but ‹v› for /w/)
+        li various languages (double consonants to indicate short vowels)
 
   +mySection("千字文")
     p: em the text below is automatically generated and therefore has some inaccurate rubies especially for characters which have multiple sounds.
