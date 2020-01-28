@@ -79,7 +79,7 @@ gulp.task("other", done => {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(gulp.dest(paths.dst))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
   done();
 });
 

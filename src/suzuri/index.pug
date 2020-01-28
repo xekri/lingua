@@ -5,11 +5,12 @@ mixin a_img(src, width)
 		img(src=src, width=width)
 
 block head
-	- var title = "suzuri"
+	- const title = "suzurı"
+	- const name = "suzurı"
 
 block main
 	p
-		| スズリ（suzuri-2.0）は
+		| スズリ（#{name}-2.0）は
 		ul
 			li #{author.name}が作成した人格で、
 			li #{author.name}自身で、
@@ -24,7 +25,7 @@ block main
 		ul
 			li 基本
 				ul
-					li 名前：██<ruby>硯<rt>suzuri</rt></ruby>
+					li 名前：██<ruby>硯<rt>#{name}</rt></ruby>
 					//li 生年月日：████-01-24
 					li 年齢：23
 					li 日本生まれ日本育ち
