@@ -62,9 +62,12 @@ block main
           tr: td: +sups("cyu^3 cyu^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
           tr: td: +sups("je^6 loi^4 fung^1 jyu^5 sing^1".split(" "), "^", " ", ",")
           tr: td: +sups("faa^1 lok^6 zi^1 do^1 siu^2".split(" "), "^", " ", "?")
-        tbody.sumi
-        tbody.sumi-ascii
-        tbody.sumi-alphabet
+        tbody.author
+          tr: th #{author.name}
+        tbody.author-ascii
+          tr: th #{author.name}-ASCII
+        tbody.author-alphabet
+          tr: th #{author.name}-alphabet
 
   +mySection("tables")
     center
@@ -94,7 +97,7 @@ block main
           ])
 
       table#cantonese-me
-        caption sumi
+        caption #{author.name}
 
       table#cantonese-pinyin
         caption 教育學院拼音方案 (cantonese pinyin)
@@ -159,9 +162,9 @@ block main
               , ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
               , ["IPA-letter",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
               , ["IPA-diacritic",    "i\u0302|i\u030C|i|i\u1DC6|i\u1DC5|i\u0300|i\u0301|i|i\u0300"]
-              , ["sumi-diacritic",                               ]
-              , ["sumi-ASCII",                                   ]
-              , ["sumi-alphabet",    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝑐|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
+              , [`${author.name}-diacritic`,                               ]
+              , [`${author.name}-ASCII`,                                   ]
+              , [`${author.name}-alphabet`,    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝑐|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
               ]
           for xs in xss
             tr
@@ -214,7 +217,7 @@ block main
       div.from-to
         textarea(placeholder="cantonese pinyin / jyutping / 漢字").from.trigger
           | 人生自古誰無死？
-        div.to(placeholder="sumi")
+        div.to
 
       div.center
         a.tweet(

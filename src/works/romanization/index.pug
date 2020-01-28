@@ -46,7 +46,8 @@ block main
     p: em under construction
 
     center
-      table sumi
+      table
+        caption= author.name
         tbody.vowel
           tr
             +toTds("i|e|a|o|u".split("|"))
@@ -73,7 +74,7 @@ block main
 
     center
       table
-        caption sumi
+        caption= author.name
         tbody.consonant
           +toTrs(
             [ "b,p,m,f, "
@@ -102,7 +103,7 @@ block main
             ])
 
       table
-        caption sumi-ASCII
+        caption #{author.name}-ASCII
         tbody.consonant
           +toTrs(
             [ "b,p,m,f, "
@@ -214,9 +215,9 @@ block main
                     th= x
           -
           +toThTds(
-            [ ["IPA-letter",       "˥|˧˥|˧˩˥|˥˩|"]
-            , ["IPA-diacritic",    "a\u0301|a\u030C|a\u1DC9|a\u0302|a"]
-            , ["sumi-ASCII",       "-|/|~|\\|"]
-            , ["pinyin-diacritic", "a\u0304|a\u0301|a\u030C|a\u0300|a"]
-            , ["pinyin-number",    "1|2|3|4|(0)"]
+            [ ["IPA-letter",           "˥|˧˥|˧˩˥|˥˩|"]
+            , ["IPA-diacritic",        "a\u0301|a\u030C|a\u1DC9|a\u0302|a"]
+            , [`${author.name}-ASCII`, "-|/|~|\\|"]
+            , ["pinyin-diacritic",     "a\u0304|a\u0301|a\u030C|a\u0300|a"]
+            , ["pinyin-number",        "1|2|3|4|(0)"]
             ])

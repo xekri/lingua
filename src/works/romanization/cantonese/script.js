@@ -38,17 +38,20 @@ req.addEventListener("load", () => {
     e.addEventListener("input", f);
   f();
 
+  const canto = document.querySelector(".example .cantonese-pinyin");
   for(const mode of ["unicode", "ascii", "alphabet"]) {
-    const e = document.querySelector(`.example .sumi${mode === "unicode" ? "" : "-" + mode}`);
-    let eCopied = document.querySelector(".example tbody.cantonese-pinyin");
-    e.innerHTML = pinyinToSumi(
-      eCopied.innerHTML.replace(/<\/?su[pb]>/g, "")
-      , mode !== "unicode"
-      , mode.replace("unicode", "diacritic")
-      , false
-      , false
-      , mode !== "unicode");
-    e.querySelector("tr th").innerText = `sumi${{unicode: "", ascii: "-ASCII", alphabet: "-alphabet"}[mode]}`;
+    const my = document.querySelector(`.example .author${mode === "unicode" ? "" : "-" + mode}`);
+    [...canto.cloneNode(true).querySelectorAll("tr")].slice(1).forEach(tr => {
+      tr.innerHTML =
+        pinyinToSumi(
+          tr.innerHTML.replace(/<\/?su[pb]>/g, "")
+          , mode !== "unicode"
+          , mode.replace("unicode", "diacritic")
+          , false
+          , false
+          , mode !== "unicode");
+      my.appendChild(tr)
+    });
   }
 
   document.querySelectorAll("#cantonese-pinyin tbody").forEach((e, i) => {
