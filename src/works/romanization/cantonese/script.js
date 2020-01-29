@@ -9,11 +9,12 @@ req.addEventListener("load", () => {
   const chkLen = converter.querySelector("input[name='omit-length']");
   const chkRub = converter.querySelector("input[name='ruby']");
   const chkAlp = converter.querySelector("input[name='alphabet']");
+  const chkDia = converter.querySelector("input[name='diaeresis']");
 
   const tweet = document.querySelector(`a.tweet`);
 
   const f = () => {
-    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, chkAlp.checked];
+    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, chkAlp.checked, chkDia.checked];
 
     if(chkRub.checked) {
       to.innerHTML =
@@ -39,17 +40,11 @@ req.addEventListener("load", () => {
   f();
 
   const canto = document.querySelector(".example .cantonese-pinyin");
-  for(const mode of ["unicode", "ascii", "alphabet"]) {
-    const my = document.querySelector(`.example .author${mode === "unicode" ? "" : "-" + mode}`);
+  for(const mode of ["diacritic", "ascii", "alphabet"]) {
+    const my = document.querySelector(`.example .author-${mode}`);
     [...canto.cloneNode(true).querySelectorAll("tr")].slice(1).forEach(tr => {
       tr.innerHTML =
-        pinyinToSumi(
-          tr.innerHTML.replace(/<\/?su[pb]>/g, "")
-          , mode !== "unicode"
-          , mode.replace("unicode", "diacritic")
-          , false
-          , false
-          , mode !== "unicode");
+        pinyinToSumi(tr.innerHTML, mode !== "diacritic", mode, true, false, mode !== "diacritic");
       my.appendChild(tr)
     });
   }
@@ -58,19 +53,16 @@ req.addEventListener("load", () => {
     const tbody = e.cloneNode(true);
     for(const tr of tbody.querySelectorAll("tr"))
       for(const td of tr.querySelectorAll("td"))
-        td.innerHTML = pinyinToSumi(td.innerText, false, "diacritic").replace("w", "v").replace("∅", "x");
+        td.innerHTML = pinyinToSumi(td.innerText, false, "diacritic").replace("w", "v").replace("∅", "(x)");
     document.getElementById(`cantonese-me`).append(tbody);
   });
 
-  for(const mode of ["diacritic", "ascii"])
+  for(const mode of ["diacritic", "ascii", "mixed"])
     for(const tr of document.querySelectorAll(".tone tr"))
-      if(tr.querySelector("th").textContent.toLowerCase() === `sumi-${mode}`) {
+      if(tr.querySelector("th").textContent.toLowerCase() === `sumı-${mode}`) {
         for(const t of tones[mode]) {
           const td = document.createElement("td");
-          if(mode === "ascii")
-            td.innerHTML = `${t}`;
-          else
-            td.innerHTML = `i${t}`;
+          td.innerHTML = t("", mode === "ascii" ? "" : "𝑣", mode === "mixed" ? "𝑐" : "");
           tr.appendChild(td);
         }
       }
@@ -83,7 +75,7 @@ req.addEventListener("load", () => {
     [...e.innerHTML]
       .map(x =>
         honziToJytpiq[x] ?
-          `<ruby>${x}<rt>${pinyinToSumi(honziToJytpiq[x])}</rt></ruby>`
+          `<ruby>${x}<rt>${pinyinToSumi(honziToJytpiq[x], false, "diacritic", true, true, false)}</rt></ruby>`
         : x
       )
       .join("");

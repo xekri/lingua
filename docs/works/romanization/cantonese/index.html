@@ -95,7 +95,7 @@
               <h1>example</h1></a>
             <center>
               <table class="example">
-                <tbody>
+                <tbody class="original">
                   <tr>
                     <th>original</th>
                   </tr>
@@ -120,24 +120,19 @@
                     <th>cantonese pinyin</th>
                   </tr>
                   <tr>
-                    <td>tsoen<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
-                    </td>
+                    <td>tsoen1 hiu2 (maang6 hou6 jin4)</td>
                   </tr>
                   <tr>
-                    <td>tsoen<sup>1</sup> min<sup>4</sup> bat<sup>7</sup> gok<sup>8</sup> hiu<sup>2</sup>,
-                    </td>
+                    <td>tsoen1 min4 bat7 gok8 hiu2</td>
                   </tr>
                   <tr>
-                    <td>tsy<sup>3</sup> tsy<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
-                    </td>
+                    <td>tsy3 tsy3 man4 tai4 niu5</td>
                   </tr>
                   <tr>
-                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jy<sup>5</sup> sing<sup>1</sup>,
-                    </td>
+                    <td>je6 loi4 fung1 jy5 sing1</td>
                   </tr>
                   <tr>
-                    <td>faa<sup>1</sup> lok<sup>9</sup> dzi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
-                    </td>
+                    <td>faa1 lok9 dzi1 do1 siu2</td>
                   </tr>
                 </tbody>
                 <tbody class="jyutping">
@@ -145,29 +140,24 @@
                     <th>jyutping</th>
                   </tr>
                   <tr>
-                    <td>ceon<sup>1</sup> hiu<sup>2</sup> (maang<sup>6</sup> hou<sup>6</sup> jin<sup>4</sup>)
-                    </td>
+                    <td>ceon1 hiu2 (maang6 hou6 jin4)</td>
                   </tr>
                   <tr>
-                    <td>ceon<sup>1</sup> min<sup>4</sup> bat<sup>1</sup> gok<sup>3</sup> hiu<sup>2</sup>,
-                    </td>
+                    <td>ceon1 min4 bat1 gok3 hiu2</td>
                   </tr>
                   <tr>
-                    <td>cyu<sup>3</sup> cyu<sup>3</sup> man<sup>4</sup> tai<sup>4</sup> niu<sup>5</sup>.
-                    </td>
+                    <td>cyu3 cyu3 man4 tai4 niu5</td>
                   </tr>
                   <tr>
-                    <td>je<sup>6</sup> loi<sup>4</sup> fung<sup>1</sup> jyu<sup>5</sup> sing<sup>1</sup>,
-                    </td>
+                    <td>je6 loi4 fung1 jyu5 sing1</td>
                   </tr>
                   <tr>
-                    <td>faa<sup>1</sup> lok<sup>6</sup> zi<sup>1</sup> do<sup>1</sup> siu<sup>2</sup>?
-                    </td>
+                    <td>faa1 lok6 zi1 do1 siu2</td>
                   </tr>
                 </tbody>
-                <tbody class="author">
+                <tbody class="author-diacritic">
                   <tr>
-                    <th>sumı</th>
+                    <th>sumı-diacritic</th>
                   </tr>
                 </tbody>
                 <tbody class="author-ascii">
@@ -1012,7 +1002,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th align="right">IPA-letter</th>
+                    <th align="right">pseudo-IPA</th>
                     <td>˥˧
                     </td>
                     <td>˧˥
@@ -1030,27 +1020,6 @@
                     <td> ˧
                     </td>
                     <td> ˩
-                    </td>
-                  </tr>
-                  <tr>
-                    <th align="right">IPA-diacritic</th>
-                    <td>î
-                    </td>
-                    <td>ǐ
-                    </td>
-                    <td>i
-                    </td>
-                    <td>i᷆
-                    </td>
-                    <td>i᷅
-                    </td>
-                    <td>ì
-                    </td>
-                    <td>í
-                    </td>
-                    <td>i
-                    </td>
-                    <td>ì
                     </td>
                   </tr>
                   <tr>
@@ -1073,34 +1042,37 @@
                     </td>
                     <td>𝑐𝑣𝑐x
                     </td>
-                    <td>𝐶𝑉𝑐
+                    <td>𝐶𝑉𝐶
                     </td>
                     <td>𝑐𝑣𝑐
                     </td>
                     <td>𝑐𝑣𝑐x
                     </td>
                   </tr>
+                  <tr>
+                    <th align="right">sumı-mixed</th>
+                  </tr>
                 </tbody>
               </table>
             </center>
             <ul>
-              <li>you may omit breves above ‹i, u, e, ø›.</li>
-              <li>bassically do not use zero-initial ‹x›</li>
-              <li>in ASCII environments
-                <ul>
-                  <li>use ‹q, w› instead of ‹ŋ, ø›</li>
-                  <li>use ASCII symbols for tone</li>
-                </ul>
-              </li>
-              <li>in alphabet-only environments
-                <ul>
-                  <li>use ‹x› as zero-initial</li>
-                  <li>double nasal nuclei</li>
-                  <li>use uppercase letters and ‹x› (not zero-initial) for tone</li>
-                  <li>double codas after short vowels.</li>
-                </ul>
-              </li>
+              <li>for any breve above ‹i, u, e, ø›, we may omit it.</li>
+              <li>for any ‹ŋ, ø›, we may replace it with ‹q, w›, respectively.</li>
+              <li>for any zero-initial, we may replace it with ‹x› if the initial is necessary.</li>
+              <li>for any nasal nucleus 𝑣 (with 𝑐=‹›), we may double it (as if 𝑐=𝑣) if the initial is necessary.</li>
+              <li>for any breve, we may omit it and double the coda (<i>alphabetical spelling</i>).</li>
+              <li>for any space between syllables, we may omit it and add a diaeresis to the initial.</li>
+              <li>the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)</li>
             </ul>
+            <p>influenced by
+              <ul>
+                <li>jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)</li>
+                <li>cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)</li>
+                <li>eulwjbaq (uses ‹q, w› for /ŋ, ø/)</li>
+                <li>latin (uses not ‹w› but ‹v› for /w/)</li>
+                <li>various languages (double consonants to indicate short vowels)</li>
+              </ul>
+            </p>
           </section>
           <section class="my-section" id="converter"><a href="#converter">
               <h1>converter</h1></a>
@@ -1108,23 +1080,24 @@
               <div class="center">
                 <ul class="option">
                   <li>
-                    <input class="trigger" type="checkbox" name="letter">
-                    <label>‹ŋ, ø›→‹q, w› (ASCII mode)</label>
-                  </li>
-                  <li>
-                    <input class="trigger" type="checkbox" name="alphabet">
-                    <label>‹<span class=cantonese>a</span>C›→‹aCC› (alphabet mode)</label>
-                  </li>
-                  <li>
                     <select class="trigger" name="tone" size="1">
                       <option value="none">none</option>
                       <option value="number">number</option>
-                      <option value="ipa">IPA</option>
-                      <option value="diacritic" selected>diacritic</option>
+                      <option value="ipa">pseudo-IPA</option>
+                      <option value="diacritic">diacritic</option>
                       <option value="ascii">ASCII</option>
                       <option value="alphabet">alphabet</option>
+                      <option value="mixed" selected>mixed</option>
                     </select>
                     <label>tone</label>
+                  </li>
+                  <li>
+                    <input class="trigger" type="checkbox" name="letter">
+                    <label>‹ŋ, ø›→‹q, w›</label>
+                  </li>
+                  <li>
+                    <input class="trigger" type="checkbox" name="alphabet" checked>
+                    <label>‹a&#x0306;›𝑐→‹a›𝑐𝑐</label>
                   </li>
                   <li>
                     <input class="trigger" type="checkbox" name="omit-length">
@@ -1133,6 +1106,10 @@
                   <li>
                     <input class="trigger" type="checkbox" name="ruby">
                     <label>show as ruby</label>
+                  </li>
+                  <li>
+                    <input class="trigger" type="checkbox" name="diaeresis">
+                    <label>‹ ›𝑐→𝑐&#x0308;</label>
                   </li>
                 </ul>
               </div>
@@ -1143,18 +1120,6 @@
               <div class="center"><a class="tweet twitter-link" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></div>
             </div>
             <p><em>this program uses&#x20;<a href="https://github.com/lshk-org/jyutping-table">電腦用漢字粵語拼音表</a> licensed under&#x20;<a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>.</em></p>
-          </section>
-          <section class="my-section" id="influeces"><a href="#influeces">
-              <h1>influeces</h1></a>
-            <p>influenced by
-              <ul>
-                <li>jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)</li>
-                <li>cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)</li>
-                <li>eulwjbaq (uses ‹q, w› for /ŋ, ø/)</li>
-                <li>latin (uses not ‹w› but ‹v› for /w/)</li>
-                <li>various languages (double consonants to indicate short vowels)</li>
-              </ul>
-            </p>
           </section>
           <section class="my-section" id="千字文"><a href="#千字文">
               <h1>千字文</h1></a>

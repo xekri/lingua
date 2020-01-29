@@ -3,12 +3,16 @@ const combAcuteToneAbove = "\u0341";
 const combMacronAbove = "\u0304";
 const combMacronBelow = "\u0331";
 const combBreve = "\u0306";
+const combDiaer = "\u0308";
 const grave = "\u0301";
 const acute = "\u0304";
 const dot = "\u02D9";
 
 const tones =
-  { diacritic:
+  { none:
+    [...Array(9)].map(i => (c, f, v) => c + f + v)
+
+  , diacritic:
     [ combGraveToneAbove
     , combAcuteToneAbove
     , ""
@@ -18,29 +22,55 @@ const tones =
     , combMacronAbove
     , ""
     , combMacronBelow
-    ]
+    ].map(t => (c, v, f) => c + v + t + f)
+
   , ascii:
-    String.raw`\,/,-,\\,//,=,,-,=`.split(",")
+    String.raw`\,/,,x\,x/,x,-,,x`.split(",")
+    .map(t => (c, v, f) => c + v + f + t)
+
   , ipa:
     "˥˧ ˧˥ ˧ ˧˩ ˩˧ ˩ ˥ ˧ ˩".split(" ")
+    .map(t => (c, v, f) => c + v + f + t)
+
   , number:
-    "1 2 3 4 5 6 7 8 9".split(" ")
+    [...Array(9).keys()]
+    .map(i => (c, v, f) => c + v + f + (i + 1))
+
+  , alphabet:
+    [...Array(9).keys()]
+    .map(i => (c, v, f) => {
+      if(["ŋ", "m"].includes(v)) c = v;
+      c = c || "x";
+      let vf = v + f;
+      if([0, 3, 6].includes(i)) c = c.toUpperCase();
+      if([1, 4, 6].includes(i)) vf = vf.toUpperCase();
+      if([3, 4, 5, 8].includes(i)) vf += "x";
+      return c + vf;
+    })
+  , mixed:
+    [ combGraveToneAbove
+    , combAcuteToneAbove
+    , ""
+    , combGraveToneAbove
+    , combAcuteToneAbove
+    , ""
+    , combMacronAbove
+    , ""
+    , ""
+    ].map((t, i) => (c, v, f) => c + v + t + f + ([3, 4, 5, 8].includes(i) ? "x" : ""))
   };
 
-const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false, alphabet=false) =>
+const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, ruby=false, alphabet=true, diaeresis=false) =>
   input
   .replace(
-    /((?<c>b|p|m|f|dz?|ts?|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ng|m))(?<t>[1-9])?/ug,
+    /((?<c>b|p|m|f|dz?|ts?|ŋ|ng?|l|gw?|kw?|h|w|z|c|s|j)?(?<v>i|yu?|u|oe?|eo?|aa?)(?<f>y|i|u|ng?|m|k|t|p)?|(?<n>ŋ|ng|m))(?<t>[1-9])?/ug,
     (...args) => {
       let {c, v, f, n, t} = args.slice(-1)[0];
-      const tIdx = parseInt(t) - 1;
-      t = t && !["none", "alphabet"].includes(toneType) ? tones[toneType][tIdx] : "";
-      let ret = "";
 
-      if(v && n || !v && !n) return args[0];
+      console.assert(n || v);
       if(n) {
         n = n.replace("ng", "ŋ");
-        c = toneType === "alphabet" ? n : "";
+        c = "";
         v = n;
         f = "";
       }
@@ -52,8 +82,6 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
             .replace("ts", "c")
             .replace("dz", "z")
             .replace("w", "v")
-          : toneType === "alphabet" ?
-            "x"
           :
             "";
         v = v
@@ -69,6 +97,11 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
               .replace("y", "i")
           :
             "";
+      }
+      if(diaeresis) {
+        if(c === "")
+          c = "x";
+        c += combDiaer;
       }
 
       let isShort = false;
@@ -86,35 +119,28 @@ const pinyinToSumi = (input, ascii=false, toneType="diacritic", showsLen=true, r
           v += combBreve;
       }
 
-      ret = c + v
-      if(toneType === "diacritic")
-        ret += t + f;
-      else
-        ret += f + t;
-
+      let ret = t ? tones[toneType][parseInt(t) - 1](c, v, f) : c + v + f;
       if(ascii) {
         ret = ret
           .replace(/ŋ/g, "q")
           .replace(/ø/g, "w");
       }
-
-      if(toneType === "alphabet") {
-        if([0, 3, 6].includes(tIdx))
-          ret = ret[0].toUpperCase() + ret.substring(1);
-        if([1, 4, 6].includes(tIdx))
-          ret = ret[0] + ret.substring(1).toUpperCase();
-        if([3, 4, 5, 8].includes(tIdx))
-          ret += "x";
-      }
-
-      if(!ruby)
+      if(!ruby && !diaeresis)
         ret += "{{{space}}}";
-
       return ret;
     }
   )
-  .replace(/\{\{\{space\}\}\}(?=[a-zA-Z])/g, " ")
-  .replace(/\{\{\{space\}\}\}/g, "");
+  .replace(/\{\{\{space\}\}\}(?=[a-zŋøA-ZŊØ])/g, " ")
+  .replace(/\{\{\{space\}\}\}/g, "")
+  .replace("（", "(")
+  .replace("）", ")")
+  .replace("「", "‹")
+  .replace("」", "›")
+  .replace("『", "«")
+  .replace("』", "»")
+  .replace("。", ".")
+  .replace("、", ",")
+  ;
 
 var honziToJytpiq;
 var honzisToJytpiq;

@@ -13,15 +13,6 @@ mixin toTrs(xss, sep="|")
     tr
       +toTds(xs.split(sep))
 
-mixin sups(xs, sep, mid, end)
-  for x, i in xs
-    - let [a, b] = x.split(sep)
-    if i !== 0
-      | #{mid}
-    | #{a}
-    sup= b
-  | #{end}
-
 block head
   - const title = "cantonese"
   link(rel="stylesheet", href="../style.css")
@@ -33,7 +24,7 @@ block main
   +mySection("example")
     center
       table.example
-        tbody
+        tbody.original
           tr: th original
           tr: td 春曉（孟浩然）
           tr: td 春眠不覺曉，
@@ -42,28 +33,20 @@ block main
           tr: td 花落知多少？
         tbody.cantonese-pinyin
           tr: th cantonese pinyin
-          tr: td
-            +sups("tsoen^1 hiu^2".split(" "), "^", " ", "")
-            |  (
-            +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
-            | )
-          tr: td: +sups("tsoen^1 min^4 bat^7 gok^8 hiu^2".split(" "), "^", " ", ",")
-          tr: td: +sups("tsy^3 tsy^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
-          tr: td: +sups("je^6 loi^4 fung^1 jy^5 sing^1".split(" "), "^", " ", ",")
-          tr: td: +sups("faa^1 lok^9 dzi^1 do^1 siu^2".split(" "), "^", " ", "?")
+          tr: td tsoen1 hiu2 (maang6 hou6 jin4)
+          tr: td tsoen1 min4 bat7 gok8 hiu2
+          tr: td tsy3 tsy3 man4 tai4 niu5
+          tr: td je6 loi4 fung1 jy5 sing1
+          tr: td faa1 lok9 dzi1 do1 siu2
         tbody.jyutping
           tr: th jyutping
-          tr: td
-            +sups("ceon^1 hiu^2".split(" "), "^", " ", "")
-            |  (
-            +sups("maang^6 hou^6 jin^4".split(" "), "^", " ", "")
-            | )
-          tr: td: +sups("ceon^1 min^4 bat^1 gok^3 hiu^2".split(" "), "^", " ", ",")
-          tr: td: +sups("cyu^3 cyu^3 man^4 tai^4 niu^5".split(" "), "^", " ", ".")
-          tr: td: +sups("je^6 loi^4 fung^1 jyu^5 sing^1".split(" "), "^", " ", ",")
-          tr: td: +sups("faa^1 lok^6 zi^1 do^1 siu^2".split(" "), "^", " ", "?")
-        tbody.author
-          tr: th #{author.name}
+          tr: td ceon1 hiu2 (maang6 hou6 jin4)
+          tr: td ceon1 min4 bat1 gok3 hiu2
+          tr: td cyu3 cyu3 man4 tai4 niu5
+          tr: td je6 loi4 fung1 jyu5 sing1
+          tr: td faa1 lok6 zi1 do1 siu2
+        tbody.author-diacritic
+          tr: th #{author.name}-diacritic
         tbody.author-ascii
           tr: th #{author.name}-ASCII
         tbody.author-alphabet
@@ -160,11 +143,12 @@ block main
             let xss =
               [ ["cantonese pinyin", " 1| 2| 3| 4| 5| 6| 7| 8| 9"]
               , ["jyutping        ", " 1| 2| 3| 4| 5| 6| 1| 3| 6"]
-              , ["IPA-letter",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
-              , ["IPA-diacritic",    "i\u0302|i\u030C|i|i\u1DC6|i\u1DC5|i\u0300|i\u0301|i|i\u0300"]
+              , ["pseudo-IPA",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
+              //, ["IPA-diacritic",    "𝑣\u0302|𝑣\u030C|𝑣|𝑣\u1DC6|𝑣\u1DC5|𝑣\u0300|𝑣\u0301|𝑣|𝑣\u0300"]
               , [`${author.name}-diacritic`,                               ]
               , [`${author.name}-ASCII`,                                   ]
-              , [`${author.name}-alphabet`,    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝑐|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
+              , [`${author.name}-alphabet`,    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝐶|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
+              , [`${author.name}-mixed`,    ]
               ]
           for xs in xss
             tr
@@ -173,46 +157,51 @@ block main
                 +toTds(xs[1].split("|"))
 
     ul
-      li you may omit breves above ‹i, u, e, ø›.
-      li bassically do not use zero-initial ‹x›
-      li
-        | in ASCII environments
-        ul
-          li use ‹q, w› instead of ‹ŋ, ø›
-          li use ASCII symbols for tone
-      li
-        | in alphabet-only environments
-        ul
-          li use ‹x› as zero-initial
-          li double nasal nuclei
-          li use uppercase letters and ‹x› (not zero-initial) for tone
-          li double codas after short vowels.
+      li for any breve above ‹i, u, e, ø›, we may omit it.
+      li for any ‹ŋ, ø›, we may replace it with ‹q, w›, respectively.
+      li for any zero-initial, we may replace it with ‹x› if the initial is necessary.
+      li for any nasal nucleus 𝑣 (with 𝑐=‹›), we may double it (as if 𝑐=𝑣) if the initial is necessary.
+      li for any breve, we may omit it and double the coda (<i>alphabetical spelling</i>).
+      li for any space between syllables, we may omit it and add a diaeresis to the initial.
+      li the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)
+    p
+      | influenced by
+      ul
+        li jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)
+        li cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)
+        li eulwjbaq (uses ‹q, w› for /ŋ, ø/)
+        li latin (uses not ‹w› but ‹v› for /w/)
+        li various languages (double consonants to indicate short vowels)
 
   +mySection("converter")
     div.converter
       div.center
         ul.option
           li
-            input.trigger(type="checkbox", name="letter")
-            label ‹ŋ, ø›→‹q, w› (ASCII mode)
-          li
-            input.trigger(type="checkbox", name="alphabet")
-            label ‹<span class=cantonese>a</span>C›→‹aCC› (alphabet mode)
-          li
             select.trigger(name="tone", size="1")
               option(value="none") none
               option(value="number") number
-              option(value="ipa") IPA
-              option(value="diacritic", selected) diacritic
+              option(value="ipa") pseudo-IPA
+              option(value="diacritic") diacritic
               option(value="ascii") ASCII
               option(value="alphabet") alphabet
+              option(value="mixed", selected) mixed
             label tone
+          li
+            input.trigger(type="checkbox", name="letter")
+            label ‹ŋ, ø›→‹q, w›
+          li
+            input.trigger(type="checkbox", name="alphabet", checked)
+            label ‹a&#x0306;›𝑐→‹a›𝑐𝑐
           li
             input.trigger(type="checkbox", name="omit-length")
             label omit optional vowel length
           li
             input.trigger(type="checkbox", name="ruby")
             label show as ruby
+          li
+            input.trigger(type="checkbox", name="diaeresis")
+            label ‹ ›𝑐→𝑐&#x0308;
 
       div.from-to
         textarea(placeholder="cantonese pinyin / jyutping / 漢字").from.trigger
@@ -233,16 +222,6 @@ block main
       |  licensed under&#x20;
       a(href="https://creativecommons.org/licenses/by/4.0/deed.en") CC BY 4.0
       | .
-
-  +mySection("influeces")
-    p
-      | influenced by
-      ul
-        li jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)
-        li cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)
-        li eulwjbaq (uses ‹q, w› for /ŋ, ø/)
-        li latin (uses not ‹w› but ‹v› for /w/)
-        li various languages (double consonants to indicate short vowels)
 
   +mySection("千字文")
     p: em the text below is automatically generated and therefore has some inaccurate rubies especially for characters which have multiple sounds.
