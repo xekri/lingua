@@ -160,7 +160,7 @@
                     <th>sumı-diacritic</th>
                   </tr>
                 </tbody>
-                <tbody class="author-ascii">
+                <tbody class="author-ascii" style="display: none">
                   <tr>
                     <th>sumı-ASCII</th>
                   </tr>
@@ -1026,9 +1026,6 @@
                     <th align="right">sumı-diacritic</th>
                   </tr>
                   <tr>
-                    <th align="right">sumı-ASCII</th>
-                  </tr>
-                  <tr>
                     <th align="right">sumı-alphabet</th>
                     <td>𝐶𝑣𝑐
                     </td>
@@ -1042,31 +1039,32 @@
                     </td>
                     <td>𝑐𝑣𝑐x
                     </td>
-                    <td>𝐶𝑉𝐶
+                    <td>𝐶𝑣𝑐
                     </td>
                     <td>𝑐𝑣𝑐
                     </td>
                     <td>𝑐𝑣𝑐x
                     </td>
                   </tr>
-                  <tr>
-                    <th align="right">sumı-mixed</th>
-                  </tr>
                 </tbody>
               </table>
             </center>
             <ul>
-              <li>for any breve above ‹i, u, e, ø›, we may omit it.</li>
+              <li>for any ‹i, u, e, ø›, we may ignore its length, respectively.</li>
+              <li>for any 𝑣𝑐𝑐, we may replace it with 𝑣&#x0306;𝑐 (in a narrow environment like a ruby texts).</li>
               <li>for any ‹ŋ, ø›, we may replace it with ‹q, w›, respectively.</li>
-              <li>for any zero-initial, we may replace it with ‹x› if the initial is necessary.</li>
-              <li>for any nasal nucleus 𝑣 (with 𝑐=‹›), we may double it (as if 𝑐=𝑣) if the initial is necessary.</li>
-              <li>for any breve, we may omit it and double the coda (<i>alphabetical spelling</i>).</li>
-              <li>for any space between syllables, we may omit it and add a diaeresis to the initial.</li>
-              <li>the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)</li>
+              <li>if the initial is necessary,
+                <ul>
+                  <li>for any 𝑐=‹› preceding a nasal 𝑣, we may let 𝑐←𝑣.</li>
+                  <li>for any other 𝑐=‹›, we may let 𝑐←‹x›.</li>
+                </ul>
+              </li>
+              <!--li for any space between syllables, we may omit it and add a diaeresis to the initial.-->
+              <!--li the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)-->
             </ul>
             <p>influenced by
               <ul>
-                <li>jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)</li>
+                <li>jyutpin (distinguishes /œː, ɵ/ and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)</li>
                 <li>cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)</li>
                 <li>eulwjbaq (uses ‹q, w› for /ŋ, ø/)</li>
                 <li>latin (uses not ‹w› but ‹v› for /w/)</li>
@@ -1076,6 +1074,7 @@
           </section>
           <section class="my-section" id="converter"><a href="#converter">
               <h1>converter</h1></a>
+            <p><em>error: select elements do not work.</em></p>
             <div class="converter">
               <div class="center">
                 <ul class="option">
@@ -1084,10 +1083,10 @@
                       <option value="none">none</option>
                       <option value="number">number</option>
                       <option value="ipa">pseudo-IPA</option>
-                      <option value="diacritic">diacritic</option>
+                      <option value="diacritic" selected>diacritic</option>
                       <option value="ascii">ASCII</option>
                       <option value="alphabet">alphabet</option>
-                      <option value="mixed" selected>mixed</option>
+                      <!--option(value="mixed", selected) mixed-->
                     </select>
                     <label>tone</label>
                   </li>
@@ -1096,8 +1095,8 @@
                     <label>‹ŋ, ø›→‹q, w›</label>
                   </li>
                   <li>
-                    <input class="trigger" type="checkbox" name="alphabet" checked>
-                    <label>‹a&#x0306;›𝑐→‹a›𝑐𝑐</label>
+                    <input class="trigger" type="checkbox" name="alphabet">
+                    <label>‹a›𝑐𝑐→‹a&#x0306;›𝑐</label>
                   </li>
                   <li>
                     <input class="trigger" type="checkbox" name="omit-length">
@@ -1107,14 +1106,16 @@
                     <input class="trigger" type="checkbox" name="ruby">
                     <label>show as ruby</label>
                   </li>
-                  <li>
-                    <input class="trigger" type="checkbox" name="diaeresis">
-                    <label>‹ ›𝑐→𝑐&#x0308;</label>
-                  </li>
+                  <!-- li
+                  input.trigger(type="checkbox", name="diaeresis")
+                  label ‹ ›𝑐→𝑐&#x0308;
+                  
+                  -->
                 </ul>
               </div>
               <div class="from-to">
                 <textarea class="from trigger" placeholder="cantonese pinyin / jyutping / 漢字">人生自古誰無死？</textarea>
+                <div class="to-select"></div>
                 <div class="to"></div>
               </div>
               <div class="center"><a class="tweet twitter-link" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></div>

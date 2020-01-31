@@ -47,7 +47,7 @@ block main
           tr: td faa1 lok6 zi1 do1 siu2
         tbody.author-diacritic
           tr: th #{author.name}-diacritic
-        tbody.author-ascii
+        tbody(style="display: none").author-ascii
           tr: th #{author.name}-ASCII
         tbody.author-alphabet
           tr: th #{author.name}-alphabet
@@ -146,9 +146,9 @@ block main
               , ["pseudo-IPA",       "˥˧|˧˥| ˧|˧˩|˩˧| ˩| ˥| ˧| ˩"]
               //, ["IPA-diacritic",    "𝑣\u0302|𝑣\u030C|𝑣|𝑣\u1DC6|𝑣\u1DC5|𝑣\u0300|𝑣\u0301|𝑣|𝑣\u0300"]
               , [`${author.name}-diacritic`,                               ]
-              , [`${author.name}-ASCII`,                                   ]
-              , [`${author.name}-alphabet`,    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑉𝐶|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
-              , [`${author.name}-mixed`,    ]
+              //, [`${author.name}-ASCII`,                                   ]
+              , [`${author.name}-alphabet`,    "𝐶𝑣𝑐|𝑐𝑉𝐶|𝑐𝑣𝑐|𝐶𝑣𝑐x|𝑐𝑉𝐶x|𝑐𝑣𝑐x|𝐶𝑣𝑐|𝑐𝑣𝑐|𝑐𝑣𝑐x"]
+              //, [`${author.name}-mixed`,    ]
               ]
           for xs in xss
             tr
@@ -157,23 +157,26 @@ block main
                 +toTds(xs[1].split("|"))
 
     ul
-      li for any breve above ‹i, u, e, ø›, we may omit it.
+      li for any ‹i, u, e, ø›, we may ignore its length, respectively.
+      li for any 𝑣𝑐𝑐, we may replace it with 𝑣&#x0306;𝑐 (in a narrow environment like a ruby texts).
       li for any ‹ŋ, ø›, we may replace it with ‹q, w›, respectively.
-      li for any zero-initial, we may replace it with ‹x› if the initial is necessary.
-      li for any nasal nucleus 𝑣 (with 𝑐=‹›), we may double it (as if 𝑐=𝑣) if the initial is necessary.
-      li for any breve, we may omit it and double the coda (<i>alphabetical spelling</i>).
-      li for any space between syllables, we may omit it and add a diaeresis to the initial.
-      li the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)
+      li if the initial is necessary,
+        ul
+          li for any 𝑐=‹› preceding a nasal 𝑣, we may let 𝑐←𝑣.
+          li for any other 𝑐=‹›, we may let 𝑐←‹x›.
+      //li for any space between syllables, we may omit it and add a diaeresis to the initial.
+      //li the author thinks that the alphabetical spelling combined with the mixed tone-notation is the easiest for learners to memorize (especially whose native language has no diacritcal mark)
     p
       | influenced by
       ul
-        li jyutpin (distinguishes [œː, ɵ] and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)
+        li jyutpin (distinguishes /œː, ɵ/ and uses not ‹dz, ts› but just ‹z, c› for /dz, ts/)
         li cantonese pinyin (uses not ‹yu› but just ‹y› for /y/)
         li eulwjbaq (uses ‹q, w› for /ŋ, ø/)
         li latin (uses not ‹w› but ‹v› for /w/)
         li various languages (double consonants to indicate short vowels)
 
   +mySection("converter")
+    p: em error: select elements do not work.
     div.converter
       div.center
         ul.option
@@ -182,30 +185,32 @@ block main
               option(value="none") none
               option(value="number") number
               option(value="ipa") pseudo-IPA
-              option(value="diacritic") diacritic
+              option(value="diacritic", selected) diacritic
               option(value="ascii") ASCII
               option(value="alphabet") alphabet
-              option(value="mixed", selected) mixed
+              //option(value="mixed", selected) mixed
             label tone
           li
             input.trigger(type="checkbox", name="letter")
             label ‹ŋ, ø›→‹q, w›
           li
-            input.trigger(type="checkbox", name="alphabet", checked)
-            label ‹a&#x0306;›𝑐→‹a›𝑐𝑐
+            input.trigger(type="checkbox", name="alphabet")
+            label ‹a›𝑐𝑐→‹a&#x0306;›𝑐
           li
             input.trigger(type="checkbox", name="omit-length")
             label omit optional vowel length
           li
             input.trigger(type="checkbox", name="ruby")
             label show as ruby
-          li
+          // li
             input.trigger(type="checkbox", name="diaeresis")
             label ‹ ›𝑐→𝑐&#x0308;
 
       div.from-to
-        textarea(placeholder="cantonese pinyin / jyutping / 漢字").from.trigger
+        textarea.from.trigger(placeholder="cantonese pinyin / jyutping / 漢字")
           | 人生自古誰無死？
+
+        div.to-select
         div.to
 
       div.center

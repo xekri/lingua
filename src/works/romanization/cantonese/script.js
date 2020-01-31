@@ -2,6 +2,7 @@ req.addEventListener("load", () => {
   const converter = document.querySelector(".converter");
 
   const from = converter.querySelector(".from");
+  const toSelect = converter.querySelector(".to-select");
   const to = converter.querySelector(".to");
 
   const chkLet = converter.querySelector("input[name='letter']");
@@ -9,22 +10,45 @@ req.addEventListener("load", () => {
   const chkLen = converter.querySelector("input[name='omit-length']");
   const chkRub = converter.querySelector("input[name='ruby']");
   const chkAlp = converter.querySelector("input[name='alphabet']");
-  const chkDia = converter.querySelector("input[name='diaeresis']");
+  //const chkDia = converter.querySelector("input[name='diaeresis']");
 
   const tweet = document.querySelector(`a.tweet`);
 
-  const f = () => {
-    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, chkAlp.checked, chkDia.checked];
+  const honziToMyPinyinElement = (honzi, args, ruby) => {
+    const jytpiqs = honziToJytpiqs[honzi];
+    return jytpiqs ?
+      `${ruby ? `<ruby>${honzi}<rt class='my-pinyin'>` : "<span class='my-pinyin'>"}${
+        jytpiqs.length == 1 ?
+          pinyinToMine(jytpiqs[0], ...args)
+        :
+          `<select>${
+            jytpiqs.map((jytpiq, i) =>
+              (x => `<option value='${x}'}>${x}</option>`)(pinyinToMine(jytpiq, ...args))
+            )
+            .join("")
+          }</select>`
+      }${ruby ? "</rt></ruby>" : "</span>"}`
+    :
+      honzi
+    ;
+  }
 
-    if(chkRub.checked) {
-      to.innerHTML =
-       [...from.value]
-         .map(x => honziToJytpiq[x] ? `<ruby>${x}<rt>${pinyinToSumi(honziToJytpiq[x], ...args)}</rt></ruby>` : x)
-         .join("")
-         .replace(/\n/g, "<br/>");
+  const selectsParentToSpansParent = e => {
+    for(const select of e.querySelectorAll(".my-pinyin select")) {
+      console.log(select.selectedIndex);
+      select.parentNode.replaceChild(
+        document.createTextNode(select.value)
+        , select
+        );
     }
-    else
-      to.innerHTML = pinyinToSumi(honzisToJytpiq(from.value), ...args).replace(/\n/g, "<br/>");
+  };
+
+  const onSelect = event => {
+    to.innerHTML = toSelect.innerHTML;
+    selectsParentToSpansParent(to);
+    for(const e of [toSelect, to])
+      for(const span of e.querySelectorAll("span.my-pinyin + span.my-pinyin"))
+        span.insertAdjacentText("beforebegin", " ");
 
     tweet.setAttribute("href",
       "https://twitter.com/share?text="
@@ -33,18 +57,55 @@ req.addEventListener("load", () => {
       + "&hashtags=sumi_cantonese_romanization"
       + `&via=sumigv`
     );
-  }
 
-  for(const e of document.getElementsByClassName("trigger"))
-    e.addEventListener("input", f);
-  f();
+    console.log("on select");
+  };
+
+  const onInput = event => {
+    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, !chkAlp.checked, false];
+    console.log(selTone.selectedIndex);
+
+    const value =
+      [ [/\n/g, "<br/>"]
+      , ["（", " ("]
+      , ["）", ")"]
+      , ["「", " ‹"]
+      , ["」", "› "]
+      , ["『", " «"]
+      , ["』", "» "]
+      , ["。", ". "]
+      , ["、", ", "]
+      , ["？", "? "]
+      , ["！", "! "]
+      ]
+      .reduce((acc, [x, y]) => acc.replace(x, y), pinyinToMine(from.value, ...args))
+      ;
+
+    toSelect.innerHTML =
+      chkRub.checked ?
+        [...value]
+        .map(honzi => honziToMyPinyinElement(honzi, args, true))
+        .join("")
+      :
+        value.replace(/\p{sc=Han}/ug, honzi => honziToMyPinyinElement(honzi, args, false))
+      ;
+
+    onSelect();
+    console.log("on input");
+  };
+
+  onInput();
+  for(const e of converter.querySelectorAll(".trigger"))
+    e.addEventListener("input", onInput);
+  for(const e of converter.querySelectorAll(".my-pinyin select"))
+    e.addEventListener("input", onSelect);
 
   const canto = document.querySelector(".example .cantonese-pinyin");
   for(const mode of ["diacritic", "ascii", "alphabet"]) {
     const my = document.querySelector(`.example .author-${mode}`);
     [...canto.cloneNode(true).querySelectorAll("tr")].slice(1).forEach(tr => {
       tr.innerHTML =
-        pinyinToSumi(tr.innerHTML, mode !== "diacritic", mode, true, false, mode !== "diacritic");
+        pinyinToMine(tr.innerHTML, mode !== "diacritic", mode, true, false, true);
       my.appendChild(tr)
     });
   }
@@ -53,7 +114,7 @@ req.addEventListener("load", () => {
     const tbody = e.cloneNode(true);
     for(const tr of tbody.querySelectorAll("tr"))
       for(const td of tr.querySelectorAll("td"))
-        td.innerHTML = pinyinToSumi(td.innerText, false, "diacritic").replace("w", "v").replace("∅", "(x)");
+        td.innerHTML = pinyinToMine(td.innerText, false, "diacritic").replace("w", "v").replace("∅", "(x)");
     document.getElementById(`cantonese-me`).append(tbody);
   });
 
@@ -68,15 +129,13 @@ req.addEventListener("load", () => {
       }
 
   for(const e of document.querySelectorAll(".cantonese"))
-    e.innerHTML = pinyinToSumi(e.innerHTML).replace(" ", "");
+    e.innerHTML = pinyinToMine(e.innerHTML).replace(" ", "");
 
   const e = document.querySelector("#千字文 div");
   e.innerHTML =
     [...e.innerHTML]
-      .map(x =>
-        honziToJytpiq[x] ?
-          `<ruby>${x}<rt>${pinyinToSumi(honziToJytpiq[x], false, "diacritic", true, true, false)}</rt></ruby>`
-        : x
-      )
-      .join("");
+    .map(honzi => honziToMyPinyinElement(honzi, [], true))
+    .join("")
+    ;
+  selectsParentToSpansParent(e);
 });

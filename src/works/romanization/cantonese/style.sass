@@ -15,24 +15,42 @@ article
       width: 100%
       margin: 0
       pading: 0
-      display: flex
 
-      .from, .to
+
+      .from, .to-select, .to
         margin: 0
         padding: 4px
         width: calc((100% - 32px) / 2)
-        height: 120px
         display: inline-block
         bottom: 0
         text-align: left
         overflow-wrap: break-word
-        font-size: 14pt
+        font-family: "Noto Sans"
 
       .from
-        font-family: "Noto Sans"
-      .to
+        height: 240px
+        float: left
+      .to-select, .to
+        height: 120px
         margin-left: 32px
         bottom: 0
         border: 1px solid
-        //font-family: Noto Serif
         overflow-y: auto
+        float: right
+      .to
+        border-top: 0
+
+  .my-pinyin
+    select
+      border: 1px solid white
+
+      ruby &
+        font-size: 50%
+
+      &, & option
+        appearance: none
+        -webkit-appearance: none
+        font-family: "Noto Sans"
+        background-color: black
+        color: white
+        padding: 1pt
