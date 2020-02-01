@@ -27,9 +27,9 @@ const tones =
     , comb.d
     , comb.du
     , comb.dd
-    , comb.u//comb.uu
+    , comb.uu
     , comb.f
-    , comb.d//comb.dd
+    , comb.dd
     ].map(t => (c, v, f) => c + v + t + f)
 
   , ascii:
