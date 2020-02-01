@@ -45,7 +45,9 @@ req.addEventListener("load", () => {
       const appended = child.cloneNode(true);
       if(child.hasChildNodes()) {
         const select = child.querySelector("select");
-        appended.querySelector("select").replaceWith(select.value);
+        const selectAppended = appended.querySelector("select");
+        if(selectAppended)
+          selectAppended.replaceWith(select.value);
       }
       to.appendChild(appended);
     }
