@@ -35,40 +35,45 @@ req.addEventListener("load", () => {
 
   const selectsParentToSpansParent = e => {
     for(const select of e.querySelectorAll(".my-pinyin select")) {
-      console.log(select.selectedIndex);
-      select.parentNode.replaceChild(
-        document.createTextNode(select.value)
-        , select
-        );
+      select.replaceWith(document.createTextNode(select.value));
     }
   };
 
-  const onSelect = event => {
-    to.innerHTML = toSelect.innerHTML;
-    selectsParentToSpansParent(to);
+  const onSelect = () => {
+    to.innerHTML = "";
+    for(const child of toSelect.childNodes) {
+      const appended = child.cloneNode(true);
+      if(child.hasChildNodes()) {
+        const select = child.querySelector("select");
+        const selectAppended = appended.querySelector("select");
+        if(selectAppended)
+          selectAppended.replaceWith(select.value);
+      }
+      to.appendChild(appended);
+    }
     for(const e of [toSelect, to])
       for(const span of e.querySelectorAll("span.my-pinyin + span.my-pinyin"))
         span.insertAdjacentText("beforebegin", " ");
 
+    setTweet();
+  };
+
+  const setTweet = () =>
     tweet.setAttribute("href",
       "https://twitter.com/share?text="
       + encodeURI(from.value + "\n" + to.innerText)
       + `&url=${window.location.href}#cantonese`
       + "&hashtags=sumi_cantonese_romanization"
       + `&via=sumigv`
-    );
+      );
 
-    console.log("on select");
-  };
-
-  const onInput = event => {
-    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, !chkAlp.checked, false];
-    console.log(selTone.selectedIndex);
+  const onInput = () => {
+    const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, !chkAlp.checked];
 
     const value =
       [ [/\n/g, "<br/>"]
       , ["（", " ("]
-      , ["）", ")"]
+      , ["）", ") "]
       , ["「", " ‹"]
       , ["」", "› "]
       , ["『", " «"]
@@ -91,14 +96,13 @@ req.addEventListener("load", () => {
       ;
 
     onSelect();
-    console.log("on input");
+    for(const e of converter.querySelectorAll(".my-pinyin select"))
+      e.addEventListener("input", onSelect);
   };
 
   onInput();
   for(const e of converter.querySelectorAll(".trigger"))
     e.addEventListener("input", onInput);
-  for(const e of converter.querySelectorAll(".my-pinyin select"))
-    e.addEventListener("input", onSelect);
 
   const canto = document.querySelector(".example .cantonese-pinyin");
   for(const mode of ["diacritic", "ascii", "alphabet"]) {
