@@ -48,7 +48,6 @@ req.addEventListener("load", () => {
         appended.querySelector("select").replaceWith(select.value);
       }
       to.appendChild(appended);
-      console.log(appended);
     }
     for(const e of [toSelect, to])
       for(const span of e.querySelectorAll("span.my-pinyin + span.my-pinyin"))
@@ -66,10 +65,8 @@ req.addEventListener("load", () => {
       + `&via=sumigv`
       );
 
-
   const onInput = () => {
     const args = [chkLet.checked, selTone.value, !chkLen.checked, chkRub.checked, !chkAlp.checked];
-    console.log(selTone.selectedIndex);
 
     const value =
       [ [/\n/g, "<br/>"]
@@ -97,14 +94,13 @@ req.addEventListener("load", () => {
       ;
 
     onSelect();
-    console.log("on input");
+    for(const e of converter.querySelectorAll(".my-pinyin select"))
+      e.addEventListener("input", onSelect);
   };
 
   onInput();
   for(const e of converter.querySelectorAll(".trigger"))
     e.addEventListener("input", onInput);
-  for(const e of converter.querySelectorAll(".my-pinyin select"))
-    e.addEventListener("input", onSelect);
 
   const canto = document.querySelector(".example .cantonese-pinyin");
   for(const mode of ["diacritic", "ascii", "alphabet"]) {
