@@ -11,6 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="/works/calendar/calendar.js"></script>
     <script>
       window.addEventListener("load", () => {
@@ -69,7 +70,7 @@
           <div class="my-div" id="menu">
             <ul>
               <li><a href="/author">author</a></li>
-              <li><a href="/suzuri">suzurı</a></li>
+              <li><a href="/suzuri">сузури</a></li>
               <li><a href="/favorite">favorite</a></li>
               <li><a href="/thoughts">thoughts</a></li>
               <li><a href="/works">works</a></li>
@@ -90,24 +91,25 @@
             <h1></h1></a>
           <p>this page has been moved. jumping to the new page in 3 seconds.</p>
         </section>
-        <section class="my-section" id=""><a href="#">
-            <h1></h1></a>
-          <div id="disqus_thread"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = "http://sumi.space";
-              this.page.identifier = "sumi";
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://sumi-2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </section>
       </article>
+      <!--
+      +mySection("")
+        div(id="disqus_thread")
+        script.
+          var disqus_config = function () {
+            this.page.url = "http://sumi.space";
+            this.page.identifier = "sumi";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://sumi-2.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        noscript
+          | Please enable JavaScript to view the
+          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+      -->
     </main>
   </body>
 </html>

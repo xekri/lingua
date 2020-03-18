@@ -21,6 +21,7 @@ html(lang="en-GB")
 
     meta(charset="UTF-8")
     link(href="/style.css", rel="stylesheet")
+    link(href="style.css", rel="stylesheet")
 
     script(src="/works/calendar/calendar.js")
     script.
@@ -80,7 +81,7 @@ html(lang="en-GB")
           +myDiv("menu", showsTitle=false)#menu
             ul
               li: a(href="/author") author
-              li: a(href="/suzuri") suzurı
+              li: a(href="/suzuri") сузури
               li: a(href="/favorite") favorite
               li: a(href="/thoughts") thoughts
               li: a(href="/works") works
@@ -106,6 +107,7 @@ html(lang="en-GB")
         +mySection(title)
           block main
 
+      //
         +mySection("")
           div(id="disqus_thread")
           script.

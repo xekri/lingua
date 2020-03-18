@@ -1,0 +1,14 @@
+.tile section
+  img, .nsfw
+    display: inline-block
+    vertical-align: top
+    &:not(:first-child)
+      margin-left: 16px
+
+.nsfw
+  & *:first-child
+    opacity: calc(1 / 16)
+
+  &:hover
+    & *:first-child
+      opacity: 1
