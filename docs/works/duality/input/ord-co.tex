@@ -1,0 +1,128 @@
+\begin{prooftree}
+  \infer[left label=Id]0{α⇒α}
+\end{prooftree}
+\iffalse
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{Χ⇒φ,Φ'}
+  \hypo{φ⇒Φ}
+  \infer[left label=Trans]2{Χ⇒Φ',Φ}
+\end{prooftree}
+\fi
+\\[\bigskipamount]
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',χ,mφ,Φ}
+  \infer[left label=ER$_0$]1{Χ⇒Φ',mφ,χ,Φ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Χ⇒Φ',mχ,φ,Φ}
+  \infer[left label=ER$_1$]1{Χ⇒Φ',φ,mχ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ}
+  \infer[left label=WR]1{Χ⇒\nint φ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒\nint φ,\nint φ,Φ}
+  \infer[left label=CR]1{Χ⇒\nint φ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{φ⇒\nint Φ}
+  \infer1[$\nint$L]{\nint φ⇒\nint Φ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',φ,Φ}
+  \infer[left label=$\nint$R]1{Χ⇒Φ',\nint φ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{φ⇒MΦ}
+  \infer1[$\nlin$L]{\nlin φ⇒MΦ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',φ,Φ}
+  \infer[left label=$\nlin$R]1{Χ⇒Φ',\nlin φ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{χ⇒φ,Φ}
+  \infer1[$\nrimp$L]{φ\nrimp χ⇒Φ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{φ⇒Φ}
+  \hypo{Χ⇒Ψ',χ,Ψ}
+  \infer[left label=$\nrimp$R]2{Χ⇒Ψ',Φ,φ\nrimp χ,Ψ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{φ⇒Φ}
+  \hypo{Χ⇒Ψ',χ,Ψ}
+  \infer2[$\nlimp$L]{Χ⇒Ψ',χ\nlimp φ,Φ,Ψ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{χ⇒Φ,φ}
+  \infer[left label=$\nlimp$R]1{χ\nlimp φ⇒Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \infer0[$\ndisu$L]{\ndisu⇒}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',Φ}
+  \infer[left label=$\ndisu$R]1{Χ⇒Φ',\ndisu,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{χ⇒Φ}
+  \hypo{φ⇒Φ}
+  \infer2[$\ndis$L]{χ\ndis φ⇒Φ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',χ,φ,Φ}
+  \infer[left label=$\ndis$R]1{Χ⇒Φ',χ\ndis φ,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \infer0[$\pdisu$L]{\pdisu⇒Φ}
+\end{prooftree}
+\hfill\mbox{}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{Χ⇒Φ',φ_i,Φ}
+  \infer1[$\pdis$L$_i$]{Χ⇒Φ',φ_1\pdis φ_0,Φ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{χ⇒Φ}
+  \hypo{φ⇒Φ}
+  \infer[left label=$\pdis$R]2{χ\pdis φ⇒Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\hfill
+\begin{prooftree}
+  \infer[left label=$\nconu$R]0{φ⇒Φ',\nconu,Φ}
+\end{prooftree}
+\\[\bigskipamount]
+\begin{prooftree}
+  \hypo{φ_i⇒Φ}
+  \infer1[$\ncon$L$_i$]{φ_1\ncon φ_0⇒Φ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Χ⇒Φ',χ,Φ}
+  \hypo{Χ⇒Φ',φ,Φ}
+  \infer[left label=$\ncon$R]2{Χ⇒Φ',χ\ncon φ,Φ}
+\end{prooftree}

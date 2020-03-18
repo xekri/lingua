@@ -1,0 +1,140 @@
+\documentclass[a4paper, leqno]{article}
+
+\makeatletter
+\def\@arabic#1{\the\numexpr(#1)-1\relax}
+\def\@roman#1{\romannumeral\numexpr(#1)-1\relax}
+\def\@Roman#1{\expandafter\@slowromancap\romannumeral\numexpr(#1)-1\relax @}
+\makeatother
+
+\usepackage
+  [ backend=biber
+  , style=ieee
+  , natbib=true
+  ]
+  {biblatex}
+
+\DeclareFieldFormat{labelnumber}{\the\numexpr#1-1\relax}
+
+\usepackage[margin=10mm]{geometry}
+\usepackage{amsmath}
+\usepackage[amsmath, standard, framed, hyperref, thmmarks, thref]{ntheorem}
+\usepackage{mathtools}
+  \DeclarePairedDelimiter{\parens}{\lparen}{\rparen}
+  \DeclarePairedDelimiter{\bracks}{\lbrack}{\rbrack}
+\usepackage{unicode-math}
+  \unimathsetup{math-style=ISO, bold-style=ISO}
+\usepackage{lualatex-math}
+
+\setmainfont[Ligatures=TeX]{XITS}
+\setmathfont{Asana Math}
+
+\usepackage{titling}
+  \setlength{\droptitle}{-36pt}
+\usepackage{datetime2}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cmll}
+\usepackage{graphicx}
+
+\usepackage{ebproof}
+  \ebproofset{center=false}
+
+\usepackage{mdframed}
+\mdfsetup
+  { linecolor=black
+  , linewidth=1px
+  , userdefinedwidth=.5\linewidth
+  , startinnercode=\centering
+  }
+
+\newcommand*\qOrd{\symsfup{o}}
+\newcommand*\qLin{\symsfup{l}}
+\newcommand*\qAff{\symsfup{a}}
+\newcommand*\qRel{\symsfup{r}}
+\newcommand*\qInt{\symsfup{i}}
+
+\newcommand*\pcon{\times}
+\newcommand*\pconu{1}
+\newcommand*\ncon{\mathbin{\&}}
+\newcommand*\nconu{\top}
+\newcommand*\pdis{+}
+\newcommand*\pdisu{\bot}
+\newcommand*\ndis{\mathbin{⅋}}
+\newcommand*\ndisu{0}
+
+\newcommand*\plimp{\mathbin{↙}}
+\newcommand*\primp{\mathbin{↘}}
+\newcommand*\nrimp{\mathbin{↖}}
+\newcommand*\nlimp{\mathbin{↗}}
+
+\newcommand*\pint{\mathord{!}}
+\newcommand*\nint{\mathord{?}}
+\newcommand*\plin{\mathord{¡}}
+\newcommand*\nlin{\mathord{¿}}
+
+\DeclarePairedDelimiter{\lrbrace}{\lbrace}{\rbrace}
+
+\title{(co-)intuitionistic logics}
+\author{sumi}
+\date{\DTMnow}
+\begin{document}
+  %\maketitle
+
+  let
+  \begin{itemize}
+    \item $φ,χ$ range over formulae
+    \item $Φ,Χ,Ψ$ range over lists of formulae
+    \item $\#Χ < 2$
+    \item $m∈\lrbrace{\plin,\pint,\nlin,\nint}$
+  \end{itemize}
+
+  \noindent
+  \begin{minipage}{.49\linewidth}
+    \begin{mdframed}[frametitle=intuitionistic ordered logic]
+      \input{input/ord.tex}
+    \end{mdframed}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.49\linewidth}
+    \begin{mdframed}[frametitle=co-intuitionistic ordered logic]
+      \input{input/ord-co.tex}
+    \end{mdframed}
+  \end{minipage}
+
+  \iffalse
+  \noindent
+  \begin{minipage}{.45\linewidth}
+    \begin{definition}[intuitionistic linear logic]\leavevmode
+      \begin{center}
+        \input{input/lin.tex}
+      \end{center}
+    \end{definition}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \begin{definition}[co-intuitionistic linear logic]\leavevmode
+      \begin{center}
+        \input{input/lin-co.tex}
+      \end{center}
+    \end{definition}
+  \end{minipage}
+
+  \noindent
+  \begin{minipage}{.45\linewidth}
+    \begin{definition}[intuitionistic logic]\leavevmode
+      \begin{center}
+        \input{input/int.tex}
+      \end{center}
+    \end{definition}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\linewidth}
+    \begin{definition}[co-intuitionistic logic]\leavevmode
+      \begin{center}
+        \input{input/int-co.tex}
+      \end{center}
+    \end{definition}
+  \end{minipage}
+  \fi
+
+  \printbibliography[title=参考文献]
+\end{document}

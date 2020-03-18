@@ -1,0 +1,114 @@
+\begin{prooftree}
+  \infer0[Refl]{A⇒A}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ⇒A}
+  \hypo{Γ',A⇒B}
+  \infer2[Trans]{Γ,Γ'⇒B}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,A,B,Γ'⇒Δ}
+  \infer1[EL]{Γ,B,A,Γ'⇒Δ}
+\end{prooftree}
+\hfill\mbox{}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ⇒Δ}
+  \infer1[WL]{Γ,!A⇒Δ}
+\end{prooftree}
+\hfill\mbox{}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,!A,!A⇒Δ}
+  \infer1[CL]{Γ,!A⇒Δ}
+\end{prooftree}
+\hfill\mbox{}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,A⇒Δ}
+  \infer1[$!L$]{Γ,!A⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{!Γ⇒A}
+  \infer1[$!$R]{!Γ⇒!A}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ⇒A}
+  \hypo{Γ',B⇒Δ}
+  \infer2[$→$L]{Γ,Γ',A→B⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Γ,A⇒B}
+  \infer1[$→$R]{Γ⇒A→B}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ⇒Δ}
+  \infer1[$𝟏$L]{Γ,𝟏⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \infer0[$𝟏$R]{⇒𝟏}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,A,B⇒Δ}
+  \infer1[$⊗$L]{Γ,A⊗B⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Γ⇒A}
+  \hypo{Γ'⇒B}
+  \infer2[$⊗$R]{Γ,Γ'⇒A⊗B}
+\end{prooftree}
+
+\bigskip
+\hfill
+\begin{prooftree}
+  \infer0[$⊤$R]{Γ⇒⊤}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,A_i⇒Δ}
+  \infer1[$\&$L$_i$]{Γ,A_0\ampBin A_1⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Γ⇒A}
+  \hypo{Γ⇒B}
+  \infer2[$\&$R]{Γ⇒A\ampBin B}
+\end{prooftree}
+
+\bigskip
+\begin{prooftree}
+  \infer0[$𝟎$L]{Γ,𝟎⇒Δ}
+\end{prooftree}
+\hfill\mbox{}
+
+\bigskip
+\begin{prooftree}
+  \hypo{Γ,A⇒Δ}
+  \hypo{Γ,B⇒Δ}
+  \infer2[$⊕$L]{Γ,A⊕B⇒Δ}
+\end{prooftree}
+\hfill
+\begin{prooftree}
+  \hypo{Γ⇒A_i}
+  \infer1[$⊕$R$_i$]{Γ⇒A_0⊕A_1}
+\end{prooftree}
+
+\mbox{}
