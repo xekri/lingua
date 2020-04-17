@@ -1,0 +1,74 @@
+extend /_layout.pug
+
+mixin a_img(src, width)
+	a(href=src)
+		img(src=src, width=width)
+
+mixin nsfw
+	div.nsfw
+		block
+
+block head
+	- const name = "митуру"
+	- const nameLa = "mıturu"
+	- const nameJa = "ミツル"
+	- const title = name
+
+	link(href="../style.css", rel="stylesheet")
+
+block main
+	p
+		| #{name}|#{nameJa}|#{nameLa}は
+		ul
+			li #{author.name}が作成した人格で、
+			li
+				a(href="../suzuri") сузури
+				| の友人です。
+
+	+mySection("facts")
+		p: em これらは豫告無く變更され得ます。
+
+		ul
+				li 名前：██<ruby>盈<rt>#{name}</rt></ruby>
+				li 年齢：21（メタ視點からは何歳としてでも觀測され得る）
+				li 國籍：日本
+				li 言語：日本語・英語・ロシア語
+				li 數學科の學部生
+				li 身長：1.85m
+				li 體質量：85kg
+				li 疾病：無し
+				li 精神が弱い
+					ul: li 左手首にリストカット痕有り
+				li ピアス孔：左耳のrob（スズリに空けてもらった）
+				li 髪色：明るめの茶髪（染髪）
+				li 前髪は長く、兩目が隱れる
+				li 筋肉質（ムキムキ）
+				li 體毛：濃いめ
+				li 陰莖：24cm・カリ高・上反り
+				li 酒は少量で正體を無くし、ALDH2はMM型
+				li 愛讀書：『存在と無』
+				li 菜食主義者
+				li 社會自由主義者
+				li スズリ君の影響でやや反出生主義者
+				li cisgender・男性愛者（公開）・男性
+				li monoamorist
+				li 受
+				li 乳首が弱い
+				li 大體2囘/週自慰する
+				li 童貞・初めての性體驗は受で21歳の時（攻：сузури）
+
+	+mySection("arts")
+		ul
+			li
+				| fan artはどんな物も（性的・猟奇的なものでも）常に大いに歡迎・感謝されます。擔し次を除きます。
+				ul
+					li 秘匿を意圖して伏せ字やpasswordなどを使って公開する事（可檢索性の阻碍）。
+					li 乳房を伴ふ女體化（cunt boyや男二形は含まない）。
+					li 公然羞恥（尊嚴を貶めることを目的とする物）や、不潔感を想起させる描寫（體臭など）。
+			li 開發段階の爲、造形は定まらず資料は有りません。
+
+		//p 以下、性的な物はmouse-overで表示されます。
+
+		div.tile
+			+mySection("2020-04-14")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">スズリ君の後輩君ことミツル君、この感じで行きます <a href="https://t.co/IzSj30XZYI">pic.twitter.com/IzSj30XZYI</a></p>&mdash; 𝔭𝔥𝔞𝔩𝔩𝔲𝔰, 𝔠𝔞𝔫𝔫𝔞𝔟𝔦𝔰, 𝔱𝔥𝔞𝔫𝔞𝔱𝔬𝔰 (@smgvn) <a href="https://twitter.com/smgvn/status/1250046521636085761?ref_src=twsrc%5Etfw">April 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,0 +1,126 @@
+extend /_layout.pug
+
+mixin table(xss)
+	table
+		for xs in xss
+			tr
+				for x in xs
+					td= x
+
+block head
+	- const title = "esperanto"
+
+block main
+	-
+		let xss =
+			[ ["a /a/", "="]
+			, ["b /b/", "="]
+			, ["c /ts/", "c /t[sʃ]/[ie] /k/"]
+			, ["ĉ /tʃ/", ">c"]
+			, ["d /d/", "="]
+			, ["e /e/", "="]
+			, ["f /f/", "="]
+			, ["g /g/", "g /dz|dʒ/[ie]"]
+			, ["ĝ /dʒ/", ">g"]
+			, ["h /h/", "="]
+			, ["ĥ /x/", "x /x/"]
+			, ["i /i/", "ı /i/"]
+			, ["j /j/", "ȷ /j/"]
+			//, ["ĵ /ʒ/", "ż /ʒ/"]
+			, ["ĵ /ʒ/", ">ȷ >g"]
+			, ["k /k/", ">c"]
+			, ["l /l/", "="]
+			, ["m /m/", "="]
+			, ["n /n/", "="]
+			, ["", "ŋ /ŋ/"]
+			, ["o /o/", "="]
+			, ["p /p/", "="]
+			, ["r /r/", "="]
+			, ["s /s/", "="]
+			, ["ŝ /ʃ/", "ṡ /ʃ/"]
+			, ["t /t/", "="]
+			, ["u /u/", "="]
+			, ["ŭ /w/", "v /w/"]
+			//, ["v /v/", "w /v/"]
+			, ["v /v/", ">v"]
+			, ["z /z/", "="]
+			]
+	+table(xss)
+
+	+table(
+		[ [ "Mi trovis botelon kaj deprenis la fermilon."
+			, "mı trovıs botelo caȷ deprenıs fermılo."
+			, "i found a bottle and took off the lid."
+			]
+		, [ "La gepardo estas la plej rapida el la bestoj."
+			, "gepardo estas pleȷ rapıda el besto."
+			, "The cheetah is the fastest of the animals."
+			]
+		, [ "La abeloj havas felon, sed ili ne taŭgas por karesi."
+			, "abelo havas felo, sed ılı ne tavgas por caresı."
+			, "Bees have fur, but they're no good for petting."
+			]
+		, [ "la blua"
+			, "blua"
+			, "the blue one"
+			]
+		, [ "la angla"
+			, "angla"
+			, "the english language"
+			]
+		, [ "La mia bluas, la via ruĝas."
+			, "mıa bluas, vıa rugas."
+			, "mine is blue, yours is red."
+			]
+		, [ "ili tranĉis la manon."
+			, "ılı trancıs mano."
+			, ""
+			]
+
+		, [ "La knabino feliĉan knabon kisis."
+			, "cnabo felıcan cnabo cısıs."
+			, "the girl kissed a happy boy."
+			]
+		, [ "la knabino feliĉa knabon kisis."
+			, "cnabo felıca cnabo cısıs."
+			, "the happy girl kissed a boy."
+			]
+		, [ "ruĝaj domo kaj aŭto"
+			, "rugaȷ (domo kaȷ avto)"
+			, "a red house and a (red) car"
+			]
+		, [ "ruĝa domo kaj aŭto"
+			, "ruga domo kaȷ avto"
+			, "a red house and a car"
+			]
+		, [ "mi farbis la pordon ruĝan."
+			, "mı farbıs pordo ruga."
+			, "i painted the red door."
+			]
+		, [ "mi farbis la pordon ruĝa."
+			, "mı farbıs pordo, ruga."
+			, "i painted the door red."
+			]
+		, [ "[mi, ni, vi, li, ŝi, ĝi, ili, oni, si]"
+			, "[mı, mı, vı, gı, gı, gı, gı, ıo, sı]"
+			, "[i, we, you, he, she, it, they, one, oneself]"
+			]
+		, [ "li lavis sin."
+			, "gı lavıs sı."
+			, "he washed himself."
+			]
+		, [ "li manĝis sian panon."
+			, "gı mangis sıa pano."
+			, "he ate himself's bread."
+			]
+		, [ "La infano estas ploranta, ĉar ĝi volas manĝi."
+			, "ınfano estas ploranta, car gı volas mangı."
+			, "the child is crying, because it wants to eat."
+			]
+		, [ "Iu ĵus diris, ke tiu malsatas."
+			, "ıo ȷus dırıs, ke gı malsatas."
+			, "someone just said that that one is hungry."
+			]
+		])
+
+

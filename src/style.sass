@@ -43,6 +43,7 @@ html, body
       margin: 0 auto
       padding: $space
       padding-bottom: 0
+      padding-top: 0
       @media screen and (max-width:$thresh)
         width: 100%
 
@@ -115,8 +116,10 @@ html, body
     left: 0
     @media screen and (max-width:$thresh)
       display: block
-      border-bottom: $mobileSwitchHeight solid transparent
-      border-left: $mobileSwitchHeight solid white
+      width: 96px
+      height: 96px
+      background-color: white
+      opacity: 25%
 
   .my-section, .my-div
     margin: 0

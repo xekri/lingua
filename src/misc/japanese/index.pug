@@ -1,0 +1,55 @@
+extend /_layout.pug
+
+block head
+	- const title = ""
+
+mixin ruby(main, over)
+	<ruby>#{main}<rt>#{over}</rt></ruby>#{after}
+
+block main
+	table
+		tr
+			td: +ruby("爲", "s")
+			td ur-u
+			td する
+			td do
+		tr
+			td: +ruby("來", "c")
+			td ur-u
+			td くる
+			td come
+		tr
+			td: +ruby("行", "juc")
+			td -u
+			td ゆく
+			td go
+		tr
+			td: +ruby("了", "simaf")
+			td -u
+			td しまふ
+			td complete
+		tr
+			td: +ruby("言", "if")
+			td -u
+			td いふ
+			td say
+		tr
+			td: +ruby("聞", "cic")
+			td -u
+			td きく
+			td hear
+		tr
+			td: +ruby("始", "xazim")
+			td e-ru
+			td はじめる
+			td begin
+		tr
+			td: +ruby("終", "vof")
+			td e-ru
+			td をへる
+			td end
+		tr
+			td: +ruby("考", "cangafer")
+			td -u
+			td かんがへる
+			td think

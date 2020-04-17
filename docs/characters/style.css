@@ -1,0 +1,1 @@
+.tile section .nsfw,.tile section img{display:inline-block;vertical-align:top}.tile section .nsfw:not(:first-child),.tile section img:not(:first-child){margin-left:16px}.nsfw:first-child{opacity:calc(1 / 16)}.nsfw:first-child:hover{opacity:1}.my-section{min-width:400px}
