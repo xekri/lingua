@@ -9,21 +9,24 @@ mixin nsfw
 		block
 
 block head
-	- const name = "сузури"
-	- const nameLa = "suzurı"
-	- const nameJa = "スズリ"
-	- const title = name
+	-
+		const name =
+		{ la: "suzurı"
+		, ja: "スズリ"
+		, zh: "硯"
+		}
+		const title = name.la
 
 	link(href="../style.css", rel="stylesheet")
 
 block main
 	p
-		| #{name}|#{nameJa}|#{nameLa}は
+		| #{name.la}|#{name.ja}|#{name.zh}は
 		ul
-			li #{author.name}が作成した人格で、
-			li #{author.name}自身で、
-			li #{author.name}の知人で、
-			li #{author.name}とは何の關係も無く、
+			li #{author.name.la}が作成した人格で、
+			li #{author.name.la}自身で、
+			li #{author.name.la}の知人で、
+			li #{author.name.la}とは何の關係も無く、
 			li どこにも（例えばあなたの部屋の下の階やあなたが通勤で乘ったバスに）存在し、
 			li どこにも存在せず、
 			li 觀測者の數だけ分岐します。
@@ -34,7 +37,7 @@ block main
 		ul
 			li 基本
 				ul
-					li 名前：██<ruby>硯<rt>#{name}</rt></ruby>
+					li 名前：██<ruby>硯#{name.zh}<rt>#{name.la}</rt></ruby>
 					//li 生年月日：████-01-24
 					li 年齢：23（メタ視點からは何歳としてでも觀測され得る）
 					li 國籍：日本
@@ -52,7 +55,7 @@ block main
 					li 前髪は稍 長く、右目が隱れる
 					li 細身だが筋肉質、肩幅は廣め
 					li 體毛：薄く、陰毛（黑）は毎週 短めに整えて居る（相手の趣味に依って無毛にもする）
-					li 陰莖：18cm・カリ高・やや下反り・起っても半剥け
+					li 陰莖：21cm・カリ高・やや下反り・起っても半剥け
 			li 精神
 				ul
 					li 感情の起伏が穩やかで、表情にも剰り顕れない
@@ -93,7 +96,7 @@ block main
 				li: a(href="https://www.pixiv.net/novel/show.php?id=11419092") 0
 
 	+mySection("talks")
-		a(href="https://twitter.com/search?q=(from%3Amelanizo%20OR%20from%3Amelanophil%20OR%20from%3Asumigv)%20(suzuri%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20%E7%A1%AF)&src=typed_query") tweets by sumi
+		a(href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq)%20(suzuri%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20%E7%A1%AF)%20since%3A2014-01-01%20until%3A2030-01-01") tweets
 		p 非公式なものなので別解釋は常に許容されます。
 
 	+mySection("arts")
@@ -118,7 +121,7 @@ block main
 						ul
 							li 増減自由（孔が開いていない・孔は有るが着いて居ない狀態の期間を切り取った物と都合良く解釋されます、要は適當で構ひません）
 					li 髪：右目隱れ（目が見えても無問題）・ash gray
-					li 陰莖：下反り・勃起時含め半剥け・18cm（但し數値は目安であり、視覺上は大きいほど良い）
+					li 陰莖：下反り・勃起時含め半剥け・21cm（但し數値は目安であり、視覺上は大きいほど良い）
 					li 引き締まって筋肉質な肉體
 			li: em 掲載畫像の著作者であって掲載停止を要求される方は御連絡下さい。
 			li 任意のfan artは參照される資料として用ゐられ得、準一次創作的な役割を帶びます
@@ -130,19 +133,18 @@ block main
 
 		div.tile
 			+mySection("2018-08-01")
-				img(src="/suzuri/images/2018-08-01.png", width="320")
+				img(src="images/2018-08-01.png", width="320")
 
 			+mySection("2018-12-04")
 				// p @nasu_zoi
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				img(src="/suzuri/images/2018-12-04.jpg", width="400")
+				img(src="images/2018-12-04.jpg", width="400")
 
 			+mySection("2019-04-23")
-				img(src="/suzuri/images/2019-04-23.png", width="320")
+				img(src="images/2019-04-23.png", width="320")
 
 			+mySection("2019-07-18")
-				p @sikotamazou
-					//（10000JPY）
+				p @sikotamazou（有償）
 				a(href="https://skeb.jp/works/9854") Skeb
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/tRtU7KUMdD">https://t.co/tRtU7KUMdD</a><a href="https://twitter.com/sikotamazou?ref_src=twsrc%5Etfw">@sikotamazou</a> 先生に依頼していたスズリ君が納品されました　最高に可愛い　文句無し　依頼して良かった</p>&mdash; 𝗦𝗨𝗠𝗜 (@melanophil) <a href="https://twitter.com/melanophil/status/1151805582556352513?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -153,7 +155,7 @@ block main
 			+mySection("2019-07-26 1")
 				p 作者非公開
 				// @AI67448472
-				img(src="/suzuri/images/2019-07-26.jpg", width="400")
+				img(src="images/2019-07-26.jpg", width="400")
 
 			+mySection("2019-08-04")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/melanophil?ref_src=twsrc%5Etfw">@melanophil</a> めちゃくちゃ遅くなりまして申し訳ないのですがお誕生日おめでとうございます…！ happy birtday... <a href="https://t.co/0XZUjutoOi">pic.twitter.com/0XZUjutoOi</a></p>&mdash; 甘い酒 (@sweetZAKE) <a href="https://twitter.com/sweetZAKE/status/1157737672439320576?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -172,20 +174,19 @@ block main
 			+mySection("2019-10-11")
 				p @shi46_u
 				+nsfw
-					img(src="/suzuri/images/2019-10-11.jpg", width="400")
+					img(src="images/2019-10-11.jpg", width="400")
 
 			+mySection("2019-10-27")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/WSN80Ga6jB">pic.twitter.com/WSN80Ga6jB</a></p>&mdash; sumi (@melanophil) <a href="https://twitter.com/melanophil/status/1188098375045935104?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+mySection("2019-11-25")
 				p @inuqw
-				img(src="/suzuri/images/2019-11-25.jpg", width="400")
+				img(src="images/2019-11-25.jpg", width="400")
 
 			+mySection("2020-04-08")
-				p @nikuda2929
-					//（10000JPY）
-				//+nsfw: img(src="/suzuri/images/2020-04-08.jpg", width="400")
-				//img(src="/suzuri/images/2020-04-08'.jpg", width="400")
+				p @nikuda2929（有償）
+				//+nsfw: img(src="images/2020-04-08.jpg", width="400")
+				//img(src="images/2020-04-08'.jpg", width="400")
 				+nsfw
 					<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/NSFW?src=hash&amp;ref_src=twsrc%5Etfw">#NSFW</a><br>from <a href="https://twitter.com/nikuda2929?ref_src=twsrc%5Etfw">@nikuda2929</a> 先生<br>大麻でラリってハメられるスズリ君<br>suzuri-kun being stoned and fucked <a href="https://t.co/bqQ7B7jAJE">pic.twitter.com/bqQ7B7jAJE</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1247826591792517123?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -193,10 +194,19 @@ block main
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">■■大學大學院■■研究科■■研究室　■■硯 <a href="https://t.co/b2EvhqHBlr">pic.twitter.com/b2EvhqHBlr</a></p>&mdash; 男根・大蔴・安樂死 (@smgvn) <a href="https://twitter.com/smgvn/status/1249025477844426753?ref_src=twsrc%5Etfw">April 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+mySection("2020-04-13")
-				p @18TANNSFW
-					//（8000+2000JPY）
+				p 有償
 				+nsfw
 					<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">skeb納品しました。ファーストリクエスト!ありがとうございました! R18NSFW <a href="https://t.co/CHKZMCC57p">https://t.co/CHKZMCC57p</a> <a href="https://t.co/ubMINM53hw">pic.twitter.com/ubMINM53hw</a></p>&mdash; T🔞 (@18TANNSFW) <a href="https://twitter.com/18TANNSFW/status/1249605824080539648?ref_src=twsrc%5Etfw">April 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			+mySection("2020-04-24")
+				P 有償
+				+nsfw
+					<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">リクエストありがとうございました～！Skeb(<a href="https://t.co/b5k3RNydjW">https://t.co/b5k3RNydjW</a> )にて、納品完了です！ <br>※NSFW+18 <a href="https://t.co/GJ892FBly9">pic.twitter.com/GJ892FBly9</a></p>&mdash; 九磨🔞 (@9ma_param) <a href="https://twitter.com/9ma_param/status/1253513328783065088?ref_src=twsrc%5Etfw">April 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			+mySection("2020-04-25")
+				P @shi46_u
+				+nsfw
+					img(src="images/2020-04-25.jpg", width="400")
 
 	+mySection("links")
 		ul
