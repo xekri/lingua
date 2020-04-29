@@ -7,7 +7,7 @@ block head
   link(rel="stylesheet", href="style.css")
 
 block main
-  +mySection("overview")
+  +section("overview")
     p #{author.name}-calendar is a calendar almost every month in which has the same number of days.
     center
       table
@@ -53,7 +53,7 @@ block main
       | which is the same scheme as
       em  Holocene calendar.
 
-  +mySection("converter")
+  +section("converter")
     p check to specify the date, or it shows the current date.
     center
       div

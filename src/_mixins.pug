@@ -4,7 +4,7 @@ mixin myDiv(title, showsTitle=true)
 			span.my-div-title #{title}
 		block
 
-mixin mySection(title, showsTitle=true)
+mixin section(title, showsTitle=true)
 	section.my-section(id=title)
 		if showsTitle
 			a(href="#" + title): h1= title

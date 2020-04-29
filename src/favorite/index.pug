@@ -4,7 +4,7 @@ block head
   - var title = "favorite"
 
 block main
-  +mySection("music (by musicians)"): details: ul
+  +section("music (by musicians)"): details: ul
     li 385
     li ACIDMAN
     li Amazarashi
@@ -12,6 +12,7 @@ block main
     li BOOM BOOM SATELLITES
     li Diggy-MO'
     li fox capture plan
+    li GEZAN
     li H ZETTRIO
     li Hello Sleepwalkers
     li ichika
@@ -52,12 +53,12 @@ block main
     li ねごと
     li 凛として時雨
 
-  +mySection("animes"): ul
+  +section("animes"): ul
     li 銀河機攻隊 マジェスティックプリンス
     li さらざんまい
     li プリティーリズム レインボーライブ
 
-  +mySection("games"): ul
+  +section("games"): ul
     li <ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト
     li アイドリッシュセブン
     li ダンガンロンパV3
@@ -65,7 +66,7 @@ block main
     li 女神異聞録デビルサバイバー
     li メギド72
 
-  +mySection("novels"): details: ul
+  +section("novels"): details: ul
     li 1984（George Orwell）
     li Darren Shan（Darren Shan）
     li know（野崎まど）
@@ -81,11 +82,11 @@ block main
     li 一つの大陸の物語シリーズ（時雨沢恵一）
     // li 凜一シリーズ（長野まゆみ）
 
-  +mySection("mangas")
-    +mySection("boys' loves (by authors)")
+  +section("mangas")
+    +section("boys' loves (by authors)")
       a(href="https://www.chil-chil.net/myPage/tgt_user_id/117165") ちるちる
 
-    +mySection("non-boys' loves"): details: ul
+    +section("non-boys' loves"): details: ul
       li GUNSLINGER GIRL
       li Landreaall
       // li 青のフラッグ
@@ -109,6 +110,6 @@ block main
       li めしにしましょう
       li ロッキンユー!!!
 
-  +mySection("movies")
+  +section("movies")
     li The Matrix
     li John Wick

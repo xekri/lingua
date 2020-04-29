@@ -1,16 +1,15 @@
 extend /_layout.pug
 
 block head
-	- var title = "author"
+	- const title = "author"
 
 block main
-	+mySection("alias")
+	+section("alias")
 		p
-			| ‹мелан суми-гвен|melan sumı-gven|μελαν スミ玄›
-			| , or usually ‹суми› for short
-			| , signifies the author.
+			| #{author.name.la} | #{author.name.zh}
+			|  signifies the author.
 
-	+mySection("pronoun")
+	+section("pronoun")
 		center
 			table
 				tr
@@ -25,7 +24,7 @@ block main
 
 		p if you really need to refer to me by ‹he›, do so.
 
-	+mySection("ideology"): ul
+	+section("ideology"): ul
 		p (!) i am temporarily a moral nihilist and therefore ignore this section.
 
 		li
@@ -41,59 +40,44 @@ block main
 			del social liberalism
 			|  egalitarianism (?)
 
-	+mySection("sexuality")
+	+section("sexuality")
 		ul
 			li cisgender
 			li androsexual
 			li androromantic
 			li polyamory
 
-	+mySection("interest")
-		+mySection("language")
-			+mySection("human")
-				dl
-					dt 0th
-					dd japanese
-					dt 1st
-					dd english (TOEIC L&R 810)
-					dt to learn
-					dd: ul
-						li cantonese
-						li taiwanese mandarine
-						li lojban
-						li lingua franca nova
-						li koine
-						li german
+	+section("interest")
+		+section("language")
+			+section("human")
+				ul
+					li japanese (native)
+					li english (TOEIC L&R 810)
+					li lojban
+					li cantonese (beginner)
 
-			+mySection("programming")
-				dl
-					dt using
-					dd: ul
-						li Python
-						li Haskell
-						li Scala
-						li Lean Prover
-					dt to learn
-					dd: ul
-						li D
-						li Coq
-						li Isabelle
+			+section("programming")
+				ul
+					li Python (i do not like but i mainly use)
+					li Haskell
+					li Scala
+					li Lean Prover (interested in)
 
-		+mySection("computer science")
+		+section("computer science")
 			ul
 				li λ-calculus
 				li substructural logics
 				li proof theory
 				li category theory
 
-	+mySection("account")
+	+section("account")
 		ul
 			li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twitter
-			// li: a(href="https://melanizo.tumblr.com/") Tumblr (deprecated)
-			li: a(href="https://https://melanizo.blogspot.com/") Blogger
+			// li: a(href="https://melanizo.tumblr.com/") Tumblr
+			// li: a(href="https://https://melanizo.blogspot.com/") Blogger
 			li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
 				ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wishlists
-			//li: a(href="https://peing.net/ja/sumi") Peing (deprecated)
+			// li: a(href="https://peing.net/ja/sumi") Peing
 			li: a(href="https://marshmallow-qa.com/sumi") Marshmallow
 			li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
 				ul
@@ -101,6 +85,6 @@ block main
 					li: a(href="https://melanizo.booth.pm/") BOOTH
 			li: a(href="https://soundcloud.com/melanophil") SoundCloud
 
-	+mySection("donation")
+	+section("donation")
 		p any amount of money will be great help. thank you!
 		figure: img#image-kyash(src="/images/kyash.png")
