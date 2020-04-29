@@ -50,8 +50,7 @@
         setInterval(() => {
           const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
           document.getElementById("datetime").innerText =
-            `${year.toString()}/${month.toString()}/`
-            + (monthday + daytime).toString().slice(0, 7);
+            `${year.toString()}/${yearday.toString()}${daytime.toString().slice(1, 7)}`
         }, 100);
       });
       
