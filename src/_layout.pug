@@ -1,6 +1,7 @@
 include /_mixins.pug
 
 -
+  const root = "https://sumi.space"
   const author =
     { name:
       { la: "sumı"
@@ -13,13 +14,7 @@ include /_mixins.pug
 doctype html
 html(lang="en-GB")
   head
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
-    script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-104159380-5');
+    include _google-analytics.pug
 
     meta(charset="UTF-8")
     link(href="/style.css", rel="stylesheet")
@@ -70,7 +65,14 @@ html(lang="en-GB")
       });
 
     block head
-    title= title
+    - const titleFull = title === author.name.la ? title : `${author.name.la} / ${title}`
+    title= titleFull
+
+    meta(name="twitter:site", content="@" + author.twitter)
+    meta(name="twitter:title", content=titleFull)
+    // meta(name="twitter:description", content=`${author.name.la}'s information.`)
+    meta(name="twitter:image", content=`${root}/characters/suzuri/images/2019-10-25-small.png`)
+    meta(name="twitter:card", content="summary")
 
   body
     div#nav-switch
