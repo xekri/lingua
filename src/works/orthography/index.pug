@@ -1,7 +1,9 @@
 extend /_layout.pug
 
 block head
-  meta(http-equiv="refresh", content="3;URL='../romanization'")
+  - const title = "orthography"
 
 block main
-  p this page has been moved. jumping to the new page in 3 seconds.
+  ul
+    li: a(href="https://sumimq.github.io/chinese/") chinese (external)
+    li: a(href="polish") polish

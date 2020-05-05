@@ -1,0 +1,64 @@
+extend /_layout.pug
+
+block head
+	- const title = "interslavic"
+
+block main
+	+section("grapheme")
+		center
+			div
+				textarea#source
+					| Vsi ljudi rodęt sę svobodni i råvni v dostojnosti i pravah.
+					| Oni sųt obdarjeni råzumom i svěst́jų i imajųt postųpati jedin k drugomu v duhu bratstva.
+				textarea#sink
+
+			// table.transpose.add-new
+				tr
+					th phoneme
+					th old
+					th new
+				+trs(
+					[ "i; i"
+					, "a; a"
+					, "u; u"
+					, "ɨ; y"
+					, "ɛ; e"
+					, "ɔ; o"
+					, "ɛ̃; ę"
+					, "ɔ̃; ą"
+					, "u; ó"
+
+					, "j ; j"
+
+					, "p ; p"
+					, "b ; b"
+					, "f ; f"
+					, "v ; w"
+					, "m ; m"
+
+					, "t ; t"
+					, "t͡ɕ; ć"
+					, "d ; d"
+					, "d͡ʑ; dź"
+					, "d͡ʐ; dż"
+					, "s ; s"
+					, "ɕ ; ś"
+					, "z ; z"
+					, "ʑ ; ź"
+					, "n ; n"
+					, "ɲ ; ń"
+					, "r ; r"
+					, "ʐ ; rz"
+					, "w ; ł"
+					, "l ; l"
+
+					, "k ; k"
+					, "t͡s; c"
+					, "t͡ʂ; cz"
+					, "ɡ ; g"
+					, "d͡z; dz"
+					, "ʐ ; ż"
+					, "x ; ch"
+					, "x ; h"
+					, "ʂ ; sz"
+					].map(tds => tds.split(";")))

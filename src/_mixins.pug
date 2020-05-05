@@ -9,3 +9,9 @@ mixin section(title, showsTitle=true)
 		if showsTitle
 			a(href="#" + title): h1= title
 		block
+
+mixin trs(xss)
+	for xs in xss
+		tr
+			for x in xs
+				td= x

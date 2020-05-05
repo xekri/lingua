@@ -19,10 +19,11 @@ html(lang="en-GB")
     meta(charset="UTF-8")
     link(href="/style.css", rel="stylesheet")
     link(href="style.css", rel="stylesheet")
+    script(src="script.js")
 
     script(src="/works/calendar/calendar.js")
     script.
-      window.addEventListener("load", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         // mobile menu switch
         const sw = document.getElementById("nav-switch");
         const nav = document.getElementsByTagName("nav")[0];
