@@ -12,24 +12,35 @@ block main
 				input(type="checkbox", name="uppercase")
 				label uppercase
 
-			textarea#source
-				| # powszechną deklarację praw człowieka
-				| ## artykuł 1
-				| wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
-				| są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.
-				|
-				| ## artykuł 2
-				| każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
-				| nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.
+			textarea#source.
+				py pi pii pia
+				sy si sii sia sji sja
+				ry ri rii ria
+				rzy
+				ły
+				ly li lii lia
+				ky ki kii kia
+				cy ci cii cia cji cja
+				ty ti tii tia
+				ny ni nii nia
+
+				# powszechną deklarację praw człowieka
+				## artykuł 1
+				wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
+				są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.
+				## artykuł 2
+				każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
+				nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.
 			textarea#sink-lat
-			textarea#sink-cyl
+			textarea#sink-cyr
+			div: a#tweet tweet
 
 		table.transpose.add-new
 			tr
 				th val.
 				th trad.
 				th lat.
-				th cyl.
+				th cyr.
 			+trs(
 				[ "ɨ; y"
 				, "ɛ; e"
@@ -74,199 +85,176 @@ block main
 				, "x ; ch"
 				, "x ; h"
 				, "ʂ ; sz"
+
+				, "ʲɛ; ie"
+				, "ʲa; ia"
+				, "ʲɔ; io"
+				, "ʲu; iu"
+				, "ʲɛ̃; ię"
+				, "ʲɔ̃; ią"
 				].map(tds => tds.split(";")))
 
 
 	+section("conjugation")
 		div.tables
-			table.nu
-				tr
-					+ths("woman(f.) sg. pl.".split(" "))
-				tr
-					th nom.
-					td kobieta
-					td(rowspan="3") kobiety
-				tr
-					th acc.
-					td kobietę
-				tr
-					th voc.
-					td kobieto
-				tr
-					th gen.
-					td kobiety
-					td kobiet
-				tr
-					th dat.
-					td(rowspan="2") kobiecie
-					td kobietom
-				tr
-					th loc.
-					td kobietach
-				tr
-					th ins.
-					td kobietą
-					td kobietami
+			mixin table(word, xss)
+				table.nu
+					tr
+						th= word
+						th sg.
+						th pl.
+					for xs, i in xss
+						tr
+							th= "nom gen dat acc ins loc voc".split(" ")[i]
+							for x in xs
+								td= x
 
-			table.nu
-				tr
-					+ths("boy(m.p.) sg. pl.".split(" "))
-				tr
-					th nom.
-					td chłopak
-					td chłopaki
-				tr
-					th acc., gen.
-					td chłopaka
-					td chłopaków
-				tr
-					th dat.
-					td chłopakowi
-					td chłopakom
-				tr
-					th ins.
-					td chłopakiem
-					td chłopakami
-				tr
-					th loc.
-					td(rowspan="2") chłopaku
-					td chłopakch
-				tr
-					th voc.
-					td chłopaki
+			+table("store (m.ia.)",
+				[ ["sklep"   , "sklepy"  ]
+				, ["sklepu"  , "sklepów" ]
+				, ["sklepowi", "sklepom" ]
+				, ["{=nom}"  , "{=nom}"  ]
+				, ["sklepem" , "sklepami"]
+				, ["sklepie" , "sklepach"]
+				, ["{=loc}"  , "{=nom}"  ]
+				])
 
-			table.nu
-				tr
-					+ths("cat(m.a.) sg. pl.".split(" "))
-				tr
-					th nom.
-					td kot
-					td(rowspan="2") koty
-				tr
-					th acc.
-					td(rowspan="2") kota
-				tr
-					th gen.
-					td kotów
-				tr
-					th dat.
-					td kotu
-					td kotom
-				tr
-					th ins.
-					td kotem
-					td kotami
-				tr
-					th loc.
-					td(rowspan="2") kocie
-					td kotach
-				tr
-					th voc.
-					td koty
+			+table("hotel (m.ia.)",
+				[ ["hotel"   , "hotele"  ]
+				, ["hotelu"  , "hoteli"  ]
+				, ["hotelowi", "hotelom" ]
+				, ["{=nom}"  , "{=nom}"  ]
+				, ["hotelem" , "hotelami"]
+				, ["hotelu"  , "hotelach"]
+				, ["{=loc}"  , "{=nom}"  ]
+				])
 
-			table.nu
-				tr
-					+ths("computer(m.i.) sg. pl.".split(" "))
-				tr
-					th nom., acc.
-					td komputer
-					td komputery
-				tr
-					th gen.
-					td komputera
-					td komputerów
-				tr
-					th dat.
-					td komputerowi
-					td komputerom
-				tr
-					th ins.
-					td komputerem
-					td komputerami
-				tr
-					th loc.
-					td(rowspan="2") komputerze
-					td komputerach
-				tr
-					th voc.
-					td komputery
+			+table("check (m.ia.)",
+				[ ["stół"   , "stoły"  ]
+				, ["stółu"  , "stołów" ]
+				, ["stółowi", "stółom" ]
+				, ["{=nom}" , "{=nom}" ]
+				, ["stołem" , "stółami"]
+				, ["stole"  , "stółach"]
+				, ["{=loc}" , "{=nom}" ]
+				])
 
-			table.nu
-				tr
-					+ths("beer(n.) sg. pl.".split(" "))
-				tr
-					th nom., acc., voc.
-					td piwo
-					td piwa
-				tr
-					th gen.
-					td piwa
-					td piw
-				tr
-					th dat.
-					td piw
-					td piwom
-				tr
-					th ins.
-					td piwem
-					td piwami
+			+table("pigeon (m.a.)",
+				[ ["gołąb"    , "gołąbie"  ]
+				, ["gołąbia"  , "gołąbi"   ]
+				, ["gołąbiowi", "gołąbiom" ]
+				, ["gołąbia"  , "{=nom}"   ]
+				, ["gołąbiem" , "gołąbiami"]
+				, ["gołąbiu"  , "gołąbiach"]
+				, ["{=loc}"   , "{=nom}"   ]
+				])
 
-			table.nu
-				tr
-					+ths("go sg. pl.".split(" "))
-				tr
-					th 1
-					td idę, pójdę
-					td idziemy, pójdziemy
-				tr
-					th 2
-					td idziesz, pójdziesz
-					td idziecie, pójdziecie
-				tr
-					th 3
-					td idzie, pójdzie
-					td idą, pójdą
+			+table("dog (m.a.)",
+				[ ["pies"  , "psy"   ]
+				, ["psa"   , "psów"  ]
+				, ["psu"   , "psom"  ]
+				, ["{=nom}", "{=nom}"]
+				, ["psem"  , "psami" ]
+				, ["psie"  , "psach" ]
+				, ["{=loc}", "{=nom}"]
+				])
 
-			table.nu
-				tr
-					th(rowspan="2") black
-					th(colspan="4") sg.
-					th(colspan="2") pl.
-				tr
-					th f.
-					th m.p., m.a.
-					th m.i.
-					th n.
-					th other
-					th m.p.
-				tr
-					th nom., voc.
-					td czarna
-					td(colspan="2") czarny
-					td(rowspan="2", colspan="2") czarne
-					td czarni
-				tr
-					th acc.
-					td(rowspan="2") czarną
-					td czarnego
-					td czarny
-					td czarnyx
-				tr
-					th ins.
-					td(colspan="3", rowspan="2") czarnym
-					td(colspan="2") czarnymi
-				tr
-					th loc.
-					td(rowspan="3") czarnej
-					td(colspan="2", rowspan="2") czarnych
-				tr
-					th gen.
-					td(colspan="3") czarnego
-				tr
-					th dat.
-					td(colspan="3") czarnemu
-					td(colspan="2") czarnym
+			+table("cat (m.a.)",
+				[ ["kot"   , "koty"  ]
+				, ["kota"  , "kotów" ]
+				, ["kotu"  , "kotom" ]
+				, ["kota"  , "{=nom}"]
+				, ["kotem" , "kotami"]
+				, ["kocie" , "kotach"]
+				, ["{=loc}", "{=nom}"]
+				])
 
+			+table("student (m.p.)",
+				[ ["student"    , "studenci"  ]
+				, ["studenta"   , "studentów"  ]
+				, ["studentowi" , "studentom" ]
+				, ["{=gen}"     , "{=gen}"    ]
+				, ["studentiem" , "studentami"]
+				, ["studencie"  , "studentach"]
+				, ["{=loc}"     , "{=nom}"    ]
+				])
 
+			+table("doctor (m.p.)",
+				[ ["lekarz"   , "lekarze"  ]
+				, ["lekarza"  , "lekarzy"  ]
+				, ["lekarzowi", "lekarzom" ]
+				, ["{=gen}"   , "{=gen}"   ]
+				, ["lekarziem", "lekarzami"]
+				, ["lekarzu"  , "lekarzach"]
+				, ["{=loc}"   , "{=nom}"   ]
+				])
 
+			// +table("man (m.p.)",
+				[ ["człowiek"    , "ludzie"  ]
+				, ["człowieka"   , "ludzi"   ]
+				, ["człowiekowi" , "ludziom" ]
+				, ["{=gen}"      , "{=gen}"  ]
+				, ["człowiekiem" , "ludźmi"  ]
+				, ["człowieku"   , "ludziach"]
+				, ["{=loc}"      , "{=nom}"  ]
+				])
 
+			+table("woman (f.)",
+				[ ["kobieta" , "kobiety"   ]
+				, ["kobiety" , "kobiet"   ]
+				, ["kobiecie", "kobietom" ]
+				, ["kobietę" , "={nom}"   ]
+				, ["kobietą" , "kobietami"]
+				, ["kobiecie", "kobietach"]
+				, ["kobieto" , "={nom}"   ]
+				])
+
+			+table("street (f.)",
+				[ ["ulica" , "ulice"  ]
+				, ["ulicy" , "ulic"   ]
+				, ["ulicy" , "ulicom" ]
+				, ["ulicę" , "={nom}" ]
+				, ["ulicą" , "ulicami"]
+				, ["{=dat}", "ulicach"]
+				, ["ulico" , "={nom}" ]
+				])
+
+			+table("leg (f.)",
+				[ ["noga"  , "nogi"  ]
+				, ["nogi"  , "nóg"   ]
+				, ["nodze" , "nogom" ]
+				, ["nogę"  , "={nom}"]
+				, ["nogą"  , "nogami"]
+				, ["{=dat}", "nogach"]
+				, ["nogo"  , "={nom}"]
+				])
+
+			+table("river (f)",
+				[ ["rzeka" , "rzeki"  ]
+				, ["rzeki" , "rzek"   ]
+				, ["rzece" , "rzekom" ]
+				, ["rzekę" , "{=nom}" ]
+				, ["rzeką" , "rzekami"]
+				, ["{=dat}", "rzekach"]
+				, ["rzeko" , "{=nom}" ]
+				])
+
+			+table("town (n)",
+				[ ["miasto" , "miasta"  ]
+				, ["miasta" , "miast"   ]
+				, ["miastu" , "miastom" ]
+				, ["{=nom}" , "{=nom}"  ]
+				, ["miastem", "miastami"]
+				, ["miaście", "miastach"]
+				, ["{=nom}" , "{=nom}"  ]
+				])
+
+			+table("town (n)",
+				[ ["zdanie" , "zdania"  ]
+				, ["zdania" , "zdań"    ]
+				, ["zdaniu" , "zdaniom" ]
+				, ["{=nom}" , "{=nom}"  ]
+				, ["zdaniem", "zdaniami"]
+				, ["zdaniu" , "zdaniach"]
+				, ["{=nom}" , "{=nom}"  ]
+				])
