@@ -4,11 +4,11 @@ $navWidth: 240px
 $thresh: $mainWidth + $navWidth
 $mobileNavWidth: 33.3%
 $mobileSwitchHeight: 56pt
+$color: #E0E0E0
+$bgcolor: #202020
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
 *
   box-sizing: border-box
@@ -23,9 +23,9 @@ html, body
   height: 100%
   margin: 0
   padding: 0
-  color: white
-  background-color: black
-  font-family: "Noto Sans", "Noto Sans JP", sans
+  color: $color
+  background-color: $bgcolor
+  font-family: "Helvetica Neue", "Arial", "UniHentaiKana", sans-serif
   font-weight: 300
 
   @media screen and (max-width:$thresh)
@@ -54,8 +54,8 @@ html, body
     margin: 0
     padding: 0
     position: fixed
-    border-right: 1px white solid
-    background-color: black
+    border-right: 1px $color solid
+    background-color: $bgcolor
     top: 0
 
     ul
@@ -68,7 +68,7 @@ html, body
     @media screen and (max-width:$thresh)
       display: none
       width: $mobileNavWidth
-      background-color: #000000
+      background-color: black
 
     #nav-in
       margin-left: $space
@@ -119,15 +119,16 @@ html, body
       display: block
       width: 96px
       height: 96px
-      background-color: white
+      background-color: $color
       opacity: 25%
 
   .my-section, .my-div
     margin: 0
     padding: 0
     margin-bottom: $space
+    margin-top: $space
     padding-left: $space
-    border: solid #fff
+    border: solid $color
     border-width: 1px 0 0 1px
     background-color: transparent
     font-size: 100%
@@ -155,7 +156,7 @@ html, body
       width: 33%
 
   a
-    color: white
+    color: $color
     &:link
       // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
     &:visited
@@ -187,3 +188,11 @@ img
   display: none
   @media screen and (max-devive-width: $thresh)
     display: block
+
+textarea
+  font: inherit
+  background-color: inherit
+  color: inherit
+
+input[type="checkbox"]
+  vertical-align: middle

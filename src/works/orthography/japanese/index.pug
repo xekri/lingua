@@ -1,55 +1,72 @@
 extend /_layout.pug
 
 block head
-	- const title = ""
+	- const title = "japanese"
 
 mixin ruby(main, over)
 	<ruby>#{main}<rt>#{over}</rt></ruby>#{after}
 
+mixin tds(xs)
+	for x in xs
+		td= x
+
 block main
-	table
-		tr
-			td: +ruby("爲", "s")
-			td ur-u
-			td する
-			td do
-		tr
-			td: +ruby("來", "c")
-			td ur-u
-			td くる
-			td come
-		tr
-			td: +ruby("行", "juc")
-			td -u
-			td ゆく
-			td go
-		tr
-			td: +ruby("了", "simaf")
-			td -u
-			td しまふ
-			td complete
-		tr
-			td: +ruby("言", "if")
-			td -u
-			td いふ
-			td say
-		tr
-			td: +ruby("聞", "cic")
-			td -u
-			td きく
-			td hear
-		tr
-			td: +ruby("始", "xazim")
-			td e-ru
-			td はじめる
-			td begin
-		tr
-			td: +ruby("終", "vof")
-			td e-ru
-			td をへる
-			td end
-		tr
-			td: +ruby("考", "cangafer")
-			td -u
-			td かんがへる
-			td think
+	p under construction
+
+	// http://www.inagaki.nuie.nagoya-u.ac.jp/research/derivation_grammar.html
+
+	+section("syllable")
+		table
+			+trs(
+				[ "い  i|え  e|あ  a|お  o|う  u|𛀆 ji|𛀁 je|や    ja|よ   jo|ゆ    ju|ゐ vi|ゑ ve|わ va|を vo|vu|ん q n m|っ k t f"
+				, "き ci|け ce|か ca|こ co|く cu|     |     |きゃ cja|きょ cjo|きゅ cju"
+				, "ぎ gi|げ ge|が ga|ご go|ぐ gu|     |     |ぎゃ gja|ぎょ gjo|ぎゅ gju"
+				, "    |      |     |     |     |    |    |        |       |       |く𛅐 cvi|く𛅥 cve|くゎ cva"
+				, "    |      |     |     |     |    |    |        |       |       |ぐ𛅐 gve|ぐ𛅥 gve|ぐゎ gva"
+				, "ち ti|て te|た ta|と to|つ tu|    |     |ちゃ tja|ちょ tjo|ちゅ tju"
+				, "ぢ di|で de|だ da|ど do|づ du|    |     |ぢゃ dja|ぢょ djo|ぢゅ dju"
+				, "し si|せ se|さ sa|そ so|す su|    |     |しゃ sja|しょ sjo|しゅ sju"
+				, "じ zi|ぜ ze|ざ za|ぞ zo|ず zu|    |     |じゃ zja|じょ zjo|じゅ zju"
+				, "に ni|ね ne|な na|の no|ぬ nu|    |     |にゃ nja|にょ njo|にゅ nju"
+				, "ひ fi|へ fe|は fa|ほ fo|ふ fu|    |     |ひゃ fja|ひょ fjo|ひゅ fju"
+				, "び bi|べ be|ば ba|ぼ bo|ぶ bu|    |     |びゃ bja|びょ bjo|びゅ bju"
+				, "み mi|め me|ま ma|も mo|む mu|    |     |みゃ mja|みょ mjo|みゅ mju|||||||"
+				].map(tds => tds.split("|")))
+
+	// +section("vocabulary")
+		table#conj
+			tr
+				th 幹
+				th 義
+				th かな
+				th 未然
+				th 連用
+				th 終止
+				th 連體
+				th 已然
+				th 命令
+			tr
+				td: +ruby("爲", "s")
+				td do
+				td する
+				+tds("si a'na|si i'mas|su r'u|su r'u|su r'eba|se jo".split("|"))
+			tr
+				td: +ruby("來", "c")
+				td come
+				td くる
+				+tds("ko a'na|ki i'mas|ku r'u|ku r'u|ku r'eba|ko i".split("|"))
+			tr
+				td: +ruby("言", "if")
+				td say
+				td いふ
+				+tds("if a'na|if i'mas|if r'u|if r'u|if r'eba|if e".split("|"))
+			tr
+				td: +ruby("聞", "cic")
+				td hear
+				td きく
+				+tds("cic a'na|cic i'mas|cic r'u|cic r'u|cic r'eba|cic e".split("|"))
+			tr
+				td: +ruby("見", "mi")
+				td see
+				td みる
+				+tds("mi a'na|mi i'mas|mi r'u|mi r'u|mi re'ba|mi jo".split("|"))

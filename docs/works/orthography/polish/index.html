@@ -92,178 +92,440 @@
         <p>this site uses Google Analytics.</p>
         <section class="my-section" id="polish"><a href="#polish">
             <h1>polish</h1></a>
-          <section class="my-section" id="grapheme"><a href="#grapheme">
-              <h1>grapheme</h1></a>
-            <center>
+          <!-- https://en.wikibooks.org/wiki/Polish/Hard_and_soft_consonants-->
+          <center>
+            <div>
               <div>
-                <textarea id="source">Wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
-Są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.</textarea>
-                <textarea id="sink"></textarea>
+                <input type="checkbox" name="uppercase">
+                <label>uppercase</label>
               </div>
-              <table class="transpose add-new">
+              <textarea id="source"># powszechną deklarację praw człowieka
+## artykuł 1
+wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
+są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.
+
+## artykuł 2
+każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
+nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.</textarea>
+              <textarea id="sink-lat"></textarea>
+              <textarea id="sink-cyl"></textarea>
+            </div>
+            <table class="transpose add-new">
+              <tr>
+                <th>val.</th>
+                <th>trad.</th>
+                <th>lat.</th>
+                <th>cyl.</th>
+              </tr>
+              <tr>
+                <td>ɨ</td>
+                <td> y</td>
+              </tr>
+              <tr>
+                <td>ɛ</td>
+                <td> e</td>
+              </tr>
+              <tr>
+                <td>a</td>
+                <td> a</td>
+              </tr>
+              <tr>
+                <td>ɔ</td>
+                <td> o</td>
+              </tr>
+              <tr>
+                <td>u</td>
+                <td> u</td>
+              </tr>
+              <tr>
+                <td>i</td>
+                <td> i</td>
+              </tr>
+              <tr>
+                <td>ɛ̃</td>
+                <td> ę</td>
+              </tr>
+              <tr>
+                <td>ɔ̃</td>
+                <td> ą</td>
+              </tr>
+              <tr>
+                <td>u</td>
+                <td> ó</td>
+              </tr>
+              <tr>
+                <td>j </td>
+                <td> j</td>
+              </tr>
+              <tr>
+                <td>p </td>
+                <td> p</td>
+              </tr>
+              <tr>
+                <td>b </td>
+                <td> b</td>
+              </tr>
+              <tr>
+                <td>f </td>
+                <td> f</td>
+              </tr>
+              <tr>
+                <td>v </td>
+                <td> w</td>
+              </tr>
+              <tr>
+                <td>m </td>
+                <td> m</td>
+              </tr>
+              <tr>
+                <td>t </td>
+                <td> t</td>
+              </tr>
+              <tr>
+                <td>t͡ɕ</td>
+                <td> ć</td>
+              </tr>
+              <tr>
+                <td>d </td>
+                <td> d</td>
+              </tr>
+              <tr>
+                <td>d͡ʑ</td>
+                <td> dź</td>
+              </tr>
+              <tr>
+                <td>d͡ʐ</td>
+                <td> dż</td>
+              </tr>
+              <tr>
+                <td>s </td>
+                <td> s</td>
+              </tr>
+              <tr>
+                <td>ɕ </td>
+                <td> ś</td>
+              </tr>
+              <tr>
+                <td>z </td>
+                <td> z</td>
+              </tr>
+              <tr>
+                <td>ʑ </td>
+                <td> ź</td>
+              </tr>
+              <tr>
+                <td>n </td>
+                <td> n</td>
+              </tr>
+              <tr>
+                <td>ɲ </td>
+                <td> ń</td>
+              </tr>
+              <tr>
+                <td>r </td>
+                <td> r</td>
+              </tr>
+              <tr>
+                <td>ʐ </td>
+                <td> rz</td>
+              </tr>
+              <tr>
+                <td>w </td>
+                <td> ł</td>
+              </tr>
+              <tr>
+                <td>l </td>
+                <td> l</td>
+              </tr>
+              <tr>
+                <td>k </td>
+                <td> k</td>
+              </tr>
+              <tr>
+                <td>t͡s</td>
+                <td> c</td>
+              </tr>
+              <tr>
+                <td>t͡ʂ</td>
+                <td> cz</td>
+              </tr>
+              <tr>
+                <td>ɡ </td>
+                <td> g</td>
+              </tr>
+              <tr>
+                <td>d͡z</td>
+                <td> dz</td>
+              </tr>
+              <tr>
+                <td>ʐ </td>
+                <td> ż</td>
+              </tr>
+              <tr>
+                <td>x </td>
+                <td> ch</td>
+              </tr>
+              <tr>
+                <td>x </td>
+                <td> h</td>
+              </tr>
+              <tr>
+                <td>ʂ </td>
+                <td> sz</td>
+              </tr>
+            </table>
+          </center>
+          <section class="my-section" id="conjugation"><a href="#conjugation">
+              <h1>conjugation</h1></a>
+            <div class="tables">
+              <table class="nu">
                 <tr>
-                  <th>phoneme</th>
-                  <th>old</th>
-                  <th>new</th>
+                  <th>woman(f.)</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
                 </tr>
                 <tr>
-                  <td>i</td>
-                  <td> i</td>
+                  <th>nom.</th>
+                  <td>kobieta</td>
+                  <td rowspan="3">kobiety</td>
                 </tr>
                 <tr>
-                  <td>a</td>
-                  <td> a</td>
+                  <th>acc.</th>
+                  <td>kobietę</td>
                 </tr>
                 <tr>
-                  <td>u</td>
-                  <td> u</td>
+                  <th>voc.</th>
+                  <td>kobieto</td>
                 </tr>
                 <tr>
-                  <td>ɨ</td>
-                  <td> y</td>
+                  <th>gen.</th>
+                  <td>kobiety</td>
+                  <td>kobiet</td>
                 </tr>
                 <tr>
-                  <td>ɛ</td>
-                  <td> e</td>
+                  <th>dat.</th>
+                  <td rowspan="2">kobiecie</td>
+                  <td>kobietom</td>
                 </tr>
                 <tr>
-                  <td>ɔ</td>
-                  <td> o</td>
+                  <th>loc.</th>
+                  <td>kobietach</td>
                 </tr>
                 <tr>
-                  <td>ɛ̃</td>
-                  <td> ę</td>
-                </tr>
-                <tr>
-                  <td>ɔ̃</td>
-                  <td> ą</td>
-                </tr>
-                <tr>
-                  <td>u</td>
-                  <td> ó</td>
-                </tr>
-                <tr>
-                  <td>j </td>
-                  <td> j</td>
-                </tr>
-                <tr>
-                  <td>p </td>
-                  <td> p</td>
-                </tr>
-                <tr>
-                  <td>b </td>
-                  <td> b</td>
-                </tr>
-                <tr>
-                  <td>f </td>
-                  <td> f</td>
-                </tr>
-                <tr>
-                  <td>v </td>
-                  <td> w</td>
-                </tr>
-                <tr>
-                  <td>m </td>
-                  <td> m</td>
-                </tr>
-                <tr>
-                  <td>t </td>
-                  <td> t</td>
-                </tr>
-                <tr>
-                  <td>t͡ɕ</td>
-                  <td> ć</td>
-                </tr>
-                <tr>
-                  <td>d </td>
-                  <td> d</td>
-                </tr>
-                <tr>
-                  <td>d͡ʑ</td>
-                  <td> dź</td>
-                </tr>
-                <tr>
-                  <td>d͡ʐ</td>
-                  <td> dż</td>
-                </tr>
-                <tr>
-                  <td>s </td>
-                  <td> s</td>
-                </tr>
-                <tr>
-                  <td>ɕ </td>
-                  <td> ś</td>
-                </tr>
-                <tr>
-                  <td>z </td>
-                  <td> z</td>
-                </tr>
-                <tr>
-                  <td>ʑ </td>
-                  <td> ź</td>
-                </tr>
-                <tr>
-                  <td>n </td>
-                  <td> n</td>
-                </tr>
-                <tr>
-                  <td>ɲ </td>
-                  <td> ń</td>
-                </tr>
-                <tr>
-                  <td>r </td>
-                  <td> r</td>
-                </tr>
-                <tr>
-                  <td>ʐ </td>
-                  <td> rz</td>
-                </tr>
-                <tr>
-                  <td>w </td>
-                  <td> ł</td>
-                </tr>
-                <tr>
-                  <td>l </td>
-                  <td> l</td>
-                </tr>
-                <tr>
-                  <td>k </td>
-                  <td> k</td>
-                </tr>
-                <tr>
-                  <td>t͡s</td>
-                  <td> c</td>
-                </tr>
-                <tr>
-                  <td>t͡ʂ</td>
-                  <td> cz</td>
-                </tr>
-                <tr>
-                  <td>ɡ </td>
-                  <td> g</td>
-                </tr>
-                <tr>
-                  <td>d͡z</td>
-                  <td> dz</td>
-                </tr>
-                <tr>
-                  <td>ʐ </td>
-                  <td> ż</td>
-                </tr>
-                <tr>
-                  <td>x </td>
-                  <td> ch</td>
-                </tr>
-                <tr>
-                  <td>x </td>
-                  <td> h</td>
-                </tr>
-                <tr>
-                  <td>ʂ </td>
-                  <td> sz</td>
+                  <th>ins.</th>
+                  <td>kobietą</td>
+                  <td>kobietami</td>
                 </tr>
               </table>
-            </center>
+              <table class="nu">
+                <tr>
+                  <th>boy(m.p.)</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
+                </tr>
+                <tr>
+                  <th>nom.</th>
+                  <td>chłopak</td>
+                  <td>chłopaki</td>
+                </tr>
+                <tr>
+                  <th>acc., gen.</th>
+                  <td>chłopaka</td>
+                  <td>chłopaków</td>
+                </tr>
+                <tr>
+                  <th>dat.</th>
+                  <td>chłopakowi</td>
+                  <td>chłopakom</td>
+                </tr>
+                <tr>
+                  <th>ins.</th>
+                  <td>chłopakiem</td>
+                  <td>chłopakami</td>
+                </tr>
+                <tr>
+                  <th>loc.</th>
+                  <td rowspan="2">chłopaku</td>
+                  <td>chłopakch</td>
+                </tr>
+                <tr>
+                  <th>voc.</th>
+                  <td>chłopaki</td>
+                </tr>
+              </table>
+              <table class="nu">
+                <tr>
+                  <th>cat(m.a.)</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
+                </tr>
+                <tr>
+                  <th>nom.</th>
+                  <td>kot</td>
+                  <td rowspan="2">koty</td>
+                </tr>
+                <tr>
+                  <th>acc.</th>
+                  <td rowspan="2">kota</td>
+                </tr>
+                <tr>
+                  <th>gen.</th>
+                  <td>kotów</td>
+                </tr>
+                <tr>
+                  <th>dat.</th>
+                  <td>kotu</td>
+                  <td>kotom</td>
+                </tr>
+                <tr>
+                  <th>ins.</th>
+                  <td>kotem</td>
+                  <td>kotami</td>
+                </tr>
+                <tr>
+                  <th>loc.</th>
+                  <td rowspan="2">kocie</td>
+                  <td>kotach</td>
+                </tr>
+                <tr>
+                  <th>voc.</th>
+                  <td>koty</td>
+                </tr>
+              </table>
+              <table class="nu">
+                <tr>
+                  <th>computer(m.i.)</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
+                </tr>
+                <tr>
+                  <th>nom., acc.</th>
+                  <td>komputer</td>
+                  <td>komputery</td>
+                </tr>
+                <tr>
+                  <th>gen.</th>
+                  <td>komputera</td>
+                  <td>komputerów</td>
+                </tr>
+                <tr>
+                  <th>dat.</th>
+                  <td>komputerowi</td>
+                  <td>komputerom</td>
+                </tr>
+                <tr>
+                  <th>ins.</th>
+                  <td>komputerem</td>
+                  <td>komputerami</td>
+                </tr>
+                <tr>
+                  <th>loc.</th>
+                  <td rowspan="2">komputerze</td>
+                  <td>komputerach</td>
+                </tr>
+                <tr>
+                  <th>voc.</th>
+                  <td>komputery</td>
+                </tr>
+              </table>
+              <table class="nu">
+                <tr>
+                  <th>beer(n.)</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
+                </tr>
+                <tr>
+                  <th>nom., acc., voc.</th>
+                  <td>piwo</td>
+                  <td>piwa</td>
+                </tr>
+                <tr>
+                  <th>gen.</th>
+                  <td>piwa</td>
+                  <td>piw</td>
+                </tr>
+                <tr>
+                  <th>dat.</th>
+                  <td>piw</td>
+                  <td>piwom</td>
+                </tr>
+                <tr>
+                  <th>ins.</th>
+                  <td>piwem</td>
+                  <td>piwami</td>
+                </tr>
+              </table>
+              <table class="nu">
+                <tr>
+                  <th>go</th>
+                  <th>sg.</th>
+                  <th>pl.</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>idę, pójdę</td>
+                  <td>idziemy, pójdziemy</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>idziesz, pójdziesz</td>
+                  <td>idziecie, pójdziecie</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>idzie, pójdzie</td>
+                  <td>idą, pójdą</td>
+                </tr>
+              </table>
+              <table class="nu">
+                <tr>
+                  <th rowspan="2">black</th>
+                  <th colspan="4">sg.</th>
+                  <th colspan="2">pl.</th>
+                </tr>
+                <tr>
+                  <th>f.</th>
+                  <th>m.p., m.a.</th>
+                  <th>m.i.</th>
+                  <th>n.</th>
+                  <th>other</th>
+                  <th>m.p.</th>
+                </tr>
+                <tr>
+                  <th>nom., voc.</th>
+                  <td>czarna</td>
+                  <td colspan="2">czarny</td>
+                  <td rowspan="2" colspan="2">czarne</td>
+                  <td>czarni</td>
+                </tr>
+                <tr>
+                  <th>acc.</th>
+                  <td rowspan="2">czarną</td>
+                  <td>czarnego</td>
+                  <td>czarny</td>
+                  <td>czarnyx</td>
+                </tr>
+                <tr>
+                  <th>ins.</th>
+                  <td colspan="3" rowspan="2">czarnym</td>
+                  <td colspan="2">czarnymi</td>
+                </tr>
+                <tr>
+                  <th>loc.</th>
+                  <td rowspan="3">czarnej</td>
+                  <td colspan="2" rowspan="2">czarnych</td>
+                </tr>
+                <tr>
+                  <th>gen.</th>
+                  <td colspan="3">czarnego</td>
+                </tr>
+                <tr>
+                  <th>dat.</th>
+                  <td colspan="3">czarnemu</td>
+                  <td colspan="2">czarnym</td>
+                </tr>
+              </table>
+            </div>
           </section>
         </section>
       </article>

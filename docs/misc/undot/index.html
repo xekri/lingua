@@ -7,13 +7,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-104159380-5');
-      
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
     <script src="/works/calendar/calendar.js"></script>
     <script>
-      window.addEventListener("load", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         // mobile menu switch
         const sw = document.getElementById("nav-switch");
         const nav = document.getElementsByTagName("nav")[0];
@@ -50,13 +51,17 @@
         setInterval(() => {
           const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
           document.getElementById("datetime").innerText =
-            `SC//${year.toString(16)}/${month.toString(16)}/`
-            + (monthday + daytime).toString(16).slice(0, 7);
+            `${year.toString()}/${yearday.toString()}${daytime.toString().slice(1, 7)}`
         }, 100);
       });
       
     </script>
-    <title></title>
+    <title>sumı / undot</title>
+    <meta name="twitter:site" content="@sumimq">
+    <meta name="twitter:title" content="sumı / undot">
+    <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
+    <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
+    <meta name="twitter:card" content="summary">
   </head>
   <body>
     <div id="nav-switch"></div>
@@ -68,7 +73,7 @@
           <div class="my-div" id="menu">
             <ul>
               <li><a href="/author">author</a></li>
-              <li><a href="/suzuri">suzuri</a></li>
+              <li><a href="/characters">characters</a></li>
               <li><a href="/favorite">favorite</a></li>
               <li><a href="/thoughts">thoughts</a></li>
               <li><a href="/works">works</a></li>
@@ -76,7 +81,7 @@
             <div class="my-div" id="submenu">
             </div>
           </div>
-          <center><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-via="melanophil">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+          <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumimq">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         </div>
         <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
       </nav>
@@ -85,27 +90,30 @@
       <article>
         <p>the author designed this website for desktop, not for mobile.</p>
         <p>this site uses Google Analytics.</p>
-        <section class="my-section"><a href="#undefined">
-            <h1></h1></a>
-        </section>
-        <section class="my-section" id=""><a href="#">
-            <h1></h1></a>
-          <div id="disqus_thread"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = "http://sumi.space";
-              this.page.identifier = "sumi";
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://sumi-2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <section class="my-section" id="undot"><a href="#undot">
+            <h1>undot</h1></a>
+          <textarea id="in">remove dots from 'i' and 'j'.</textarea>
+          <textarea id="out"></textarea>
         </section>
       </article>
+      <!--
+      +section("")
+        div(id="disqus_thread")
+        script.
+          var disqus_config = function () {
+            this.page.url = "http://sumi.space";
+            this.page.identifier = "sumi";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://sumi-2.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        noscript
+          | Please enable JavaScript to view the
+          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+      -->
     </main>
   </body>
 </html>
