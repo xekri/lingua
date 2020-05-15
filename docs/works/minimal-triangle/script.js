@@ -190,7 +190,7 @@ const updateTweet = () => {
   document.getElementById("tweet").setAttribute("href",
     "https://twitter.com/intent/tweet"
     + `?text=` + encodeURIComponent(params.input)
-    + `&via=${global.twitter}`
+    + `&via=sumimq`
     + "&hashtags=minimal_triangle"
     + "&url=" + encodeURIComponent(
       document.location.protocol + "//" + document.location.host + document.location.pathname
