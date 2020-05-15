@@ -1,52 +1,56 @@
 const nuOrtho = (s, cyr) => {
   let r = s
   .toLowerCase()
-
-  //.replace(/dz/g, "ʒ")
-  .replace(/ch/g, "x")
-
   .replace(/ą/g, "o\u0303")
   .replace(/ę/g, "e\u0303")
   .replace(/ó/g, "o\u0304")
-
+  .replace(/ch/g, "x")
   .replace(/l/g,  "l\u0301")
   .replace(/ł/g,  "l")
+  .replace(/dż/g, "d\u030C")
   .replace(/rz/g, "r\u0301")
+  .replace(/cz/g, "c\u030C")
+  .replace(/ż/g,  "g\u030C")
+  .replace(/sz/g, "x\u030C")
+  .normalize("NFD")
+  .replace(/dz/g, "ʒ")
 
-  .replace(/dż/g, "d\u0307")
+  .replace(/c\u0301|ci(?=[yaueo])/g, "t\u0301")
+  .replace(/ʒ\u0301|ʒi(?=[yaueo])/g, "d\u0301")
+  .replace(/(?<=[sznpbfwm])i(?=[yaueo])/g, "\u0301")
+  .replace(/ci/g, "t\u0301i")
+  .replace(/ʒi/g, "d\u0301i")
+  .replace(/(?<=[sznpbfwm])i/g, "\u0301i")
+  .replace(/(?<=[sznpbfwm]\u0301)ii/g, "yy")
+  .replace(/(?<=[sznpbfwm]\u0301)i/g, "y")
 
-  .replace(/cz/g, "c\u0307")
-  .replace(/ż/g,  "g\u0307")
-  .replace(/sz/g, "x\u0307")
-
-  .replace(/ć|ci(?=[yaueo])/g,  "t\u0301")
-  .replace(/dź|dzi(?=[yaueo])/g, "d\u0301")
-  .replace(/ś|si(?=[yaueo])/g,  "s\u0301")
-  .replace(/ź|zi(?=[yaueo])/g,  "z\u0301")
-  .replace(/ń|ni(?=[yaueo])/g,  "n\u0301")
-
-  .replace(/ci/g,  "t\u0301y")
-  .replace(/dzi/g,  "d\u0301y")
-
-  .replace(/(?<=[bpmfwn])i(?=[yaueo])/g, "\u0301")
-  .replace(/(?<=[bpmfwn])ii/g, "\u0301yj")
-  .replace(/(?<=[bpmfwn])i/g, "\u0301y")
-
-  .replace(/(?<=[sz])ii/g,  "\u0301yj")
-  .replace(/(?<=[sz])i/g,  "\u0301y")
-
-  .replace(/c(?!\u0307)/g, "c\u0301")
+  .replace(/c(?!\u030C)/g, "c\u0301")
   .replace(/k/g, "c")
-  .replace(/dz/g, "g\u0301")
+  .replace(/ʒ/g, "g\u0301")
 
-  .replace(/(?<=([^\u0301]|[cg\u0301]))ji/g,  "i")
+  .replace(/i(?=[yaueo])/g, "j")
+  .replace(/ji/g, "jy")
+  .replace(/ii/g, "jyy")
+  .replace(/i/g, "jy")
+  .replace(/(?<![cg])\u0301j/g, "\u0301")
 
+  .replace(/(?<![a-z\u0301-\u030C])jy/g, "y")
+  /*
+  .replace(/(?<=[szn]|[cg]\u0301)ji/g, "i")
+
+
+  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)ii/g, "\u0301i")
+  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)i(?=[yaueo])/g, "\u0301")
+  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)i/g, "\u0301y")
+
+  .replace(/(?<=[kgxhsztdnpbfwmrl]|[cgrl]\u0301)ji/g,  "i")
   .replace(/i(?=[yaueo])/g,  "j")
-  .replace(/ii/g,  "jyj")
-  .replace(/i/g,  "jy")
+  .replace(/(?<=[a-z\u0301-\u030C])i/g,  "jy")
+  .replace(/jyjy/g,  "jyj")
+  */
 
+  //.replace(/\u0301/g, "'")
   .replace(/y/g, "i")
-  .replace(/(?<![a-z\u0301-\u0307])j(?=i)/g, "")
   ;
 
   if(cyr)
@@ -62,10 +66,10 @@ const nuOrtho = (s, cyr) => {
     .replace(/i/g, "и")
     .replace(/j/g, "й")
 
-    .replace(/d\u0307/g, "џ")
-    .replace(/g\u0307/g, "ж")
-    .replace(/c\u0307/g, "ч")
-    .replace(/x\u0307/g, "ш")
+    .replace(/d\u030C/g, "џ")
+    .replace(/g\u030C/g, "ж")
+    .replace(/c\u030C/g, "ч")
+    .replace(/x\u030C/g, "ш")
 
     .replace(/t/g, "т")
     .replace(/d/g, "д")
@@ -129,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for(const td of document.querySelectorAll(".nu td"))
     if(/.*?\{.*\}.*?/.test(td.innerHTML))
-      td.innerHTML = td.innerHTML.replace(/^\{|\}$/g, "")
+      td.innerHTML = td.innerHTML.replace(/^\{(.+)\}$/g, (match, p1) => `<span class="as-is">${p1}</span>`)
     else
       td.innerHTML = nuOrtho(td.innerHTML, false)
 
