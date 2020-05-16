@@ -17,40 +17,23 @@ const nuOrtho = (s, cyr) => {
 
   .replace(/c\u0301|ci(?=[yaueo])/g, "t\u0301")
   .replace(/ʒ\u0301|ʒi(?=[yaueo])/g, "d\u0301")
-  .replace(/(?<=[sznpbfwm])i(?=[yaueo])/g, "\u0301")
+  .replace(/cii/g, "t\u0301ii")
+  .replace(/ʒii/g, "t\u0301ii")
   .replace(/ci/g, "t\u0301i")
   .replace(/ʒi/g, "d\u0301i")
-  .replace(/(?<=[sznpbfwm])i/g, "\u0301i")
-  .replace(/(?<=[sznpbfwm]\u0301)ii/g, "yy")
-  .replace(/(?<=[sznpbfwm]\u0301)i/g, "y")
+
+  .replace(/(?<=[pbfwmszn])i(?=[yaueo])/g, "\u0301")
+  .replace(/(?<=[pbfwmszn])ii/g, "\u0301ii")
+  .replace(/(?<=[pbfwmszn])i/g, "\u0301i")
 
   .replace(/c(?!\u030C)/g, "c\u0301")
   .replace(/k/g, "c")
   .replace(/ʒ/g, "g\u0301")
 
   .replace(/i(?=[yaueo])/g, "j")
-  .replace(/ji/g, "jy")
-  .replace(/ii/g, "jyy")
-  .replace(/i/g, "jy")
-  .replace(/(?<![cg])\u0301j/g, "\u0301")
+  .replace(/ji/g, "i")
 
-  .replace(/(?<![a-z\u0301-\u030C])jy/g, "y")
-  /*
-  .replace(/(?<=[szn]|[cg]\u0301)ji/g, "i")
-
-
-  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)ii/g, "\u0301i")
-  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)i(?=[yaueo])/g, "\u0301")
-  .replace(/(?<=[pbfwmxsznrl]|[cg]\u0301?)i/g, "\u0301y")
-
-  .replace(/(?<=[kgxhsztdnpbfwmrl]|[cgrl]\u0301)ji/g,  "i")
-  .replace(/i(?=[yaueo])/g,  "j")
-  .replace(/(?<=[a-z\u0301-\u030C])i/g,  "jy")
-  .replace(/jyjy/g,  "jyj")
-  */
-
-  //.replace(/\u0301/g, "'")
-  .replace(/y/g, "i")
+  .replace(/(?<=[pbfwmsznlr]|[lrcg]\u0301)ji/g, "i")
   ;
 
   if(cyr)
@@ -126,7 +109,6 @@ const update = () => {
       + "\n" + document.getElementById("sink-cyr").value
     )
   }`)
-
 }
 
 document.addEventListener("DOMContentLoaded", () => {
