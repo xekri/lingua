@@ -13,6 +13,7 @@ block head
 		const name =
 		{ la: "mıtur"
 		, ja: "ミツル"
+		, ru: "митур"
 		, zh: "盈"
 		}
 		const title = name.la
@@ -21,18 +22,18 @@ block head
 
 block main
 	p
-		| #{name.la}|#{name.ja}|#{name.zh}は
+		| #{name.ru}は
 		ul
-			li #{author.name.la}が作成した人格で、
+			li #{author.name.ru}が作成した人格で、
 			li
-				a(href="../suzuri") suzurı
+				a(href="../suzuri") сузури
 				| の友人です。
 
 	+section("facts")
 		p: em これらは豫告無く變更され得ます。
 
 		ul
-				li 名前：██<ruby>#{name.zh}<rt>#{name.la}</rt></ruby>
+				li 名前：██<ruby>#{name.zh}<rt>#{name.ru}</rt></ruby>
 				li 年齢：21（メタ視點からは何歳としてでも觀測され得る）
 				li 國籍：日本
 				li 言語：日本語・英語・ロシア語

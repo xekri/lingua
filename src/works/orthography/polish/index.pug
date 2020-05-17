@@ -31,12 +31,12 @@ block main
 				th lat.
 				th cyr.
 			+trs(
-				[ "ɨ; y"
+				[ "i; i"
+				, "ɨ; y"
 				, "ɛ; e"
 				, "a; a"
 				, "ɔ; o"
 				, "u; u"
-				, "i; i"
 				, "ɛ̃; ę"
 				, "ɔ̃; ą"
 				, "u; ó"
@@ -83,8 +83,7 @@ block main
 				, "ʲɔ̃; ią"
 				].map(tds => tds.split(";")))
 
-
-	+section("inflection").tables
+	+section("inflection")
 		+section("noun")
 			mixin table(word, xss)
 				table.nu
@@ -99,220 +98,222 @@ block main
 							for x in xs
 								td= x
 			+section("masculin inanimate")
-				+table("store",
-					[ ["sklep"   , "sklepy"  ]
-					, ["sklepu"  , "sklepów" ]
-					, ["sklepowi", "sklepom" ]
-					, ["{=N}"  , "{=N}"  ]
-					, ["sklepem" , "sklepami"]
-					, ["sklepie" , "sklepach"]
-					, ["{=L}"  , "{=N}"  ]
-					])
-				+table("hotel",
-					[ ["hotel"   , "hotele"  ]
-					, ["hotelu"  , "hoteli"  ]
-					, ["hotelowi", "hotelom" ]
-					, ["{=N}"  , "{=N}"  ]
-					, ["hotelem" , "hotelami"]
-					, ["hotelu"  , "hotelach"]
-					, ["{=L}"  , "{=N}"  ]
-					])
-				+table("check",
-					[ ["stół"   , "stoły"  ]
-					, ["stółu"  , "stołów" ]
-					, ["stółowi", "stółom" ]
-					, ["{=N}" , "{=N}" ]
-					, ["stołem" , "stółami"]
-					, ["stole"  , "stółach"]
-					, ["{=L}" , "{=N}" ]
-					])
-			+section("masculin animate")
-				+table("pigeon",
-					[ ["gołąb"    , "gołąbie"  ]
-					, ["gołąbia"  , "gołąbi"   ]
-					, ["gołąbiowi", "gołąbiom" ]
-					, ["gołąbia"  , "{=N}"   ]
-					, ["gołąbiem" , "gołąbiami"]
-					, ["gołąbiu"  , "gołąbiach"]
-					, ["{=L}"   , "{=N}"   ]
-					])
-				+table("dog",
-					[ ["pies"  , "psy"   ]
-					, ["psa"   , "psów"  ]
-					, ["psu"   , "psom"  ]
-					, ["{=N}", "{=N}"]
-					, ["psem"  , "psami" ]
-					, ["psie"  , "psach" ]
-					, ["{=L}", "{=N}"]
-					])
+				div.tables
+					+table("store",
+						[ ["sklep"   , "sklepy"  ]
+						, ["sklepu"  , "sklepów" ]
+						, ["sklepowi", "sklepom" ]
+						, ["{=N}"  , "{=N}"  ]
+						, ["sklepem" , "sklepami"]
+						, ["sklepie" , "sklepach"]
+						, ["{=L}"  , "{=N}"  ]
+						])
+					+table("hotel",
+						[ ["hotel"   , "hotele"  ]
+						, ["hotelu"  , "hoteli"  ]
+						, ["hotelowi", "hotelom" ]
+						, ["{=N}"  , "{=N}"  ]
+						, ["hotelem" , "hotelami"]
+						, ["hotelu"  , "hotelach"]
+						, ["{=L}"  , "{=N}"  ]
+						])
+					+table("check",
+						[ ["stół"   , "stoły"  ]
+						, ["stółu"  , "stołów" ]
+						, ["stółowi", "stółom" ]
+						, ["{=N}" , "{=N}" ]
+						, ["stołem" , "stółami"]
+						, ["stole"  , "stółach"]
+						, ["{=L}" , "{=N}" ]
+						])
+				+section("masculin animate").tables
+					+table("pigeon",
+						[ ["gołąb"    , "gołąbie"  ]
+						, ["gołąbia"  , "gołąbi"   ]
+						, ["gołąbiowi", "gołąbiom" ]
+						, ["gołąbia"  , "{=N}"   ]
+						, ["gołąbiem" , "gołąbiami"]
+						, ["gołąbiu"  , "gołąbiach"]
+						, ["{=L}"   , "{=N}"   ]
+						])
+					+table("dog",
+						[ ["pies"  , "psy"   ]
+						, ["psa"   , "psów"  ]
+						, ["psu"   , "psom"  ]
+						, ["{=N}", "{=N}"]
+						, ["psem"  , "psami" ]
+						, ["psie"  , "psach" ]
+						, ["{=L}", "{=N}"]
+						])
 
-				+table("cat",
-					[ ["kot"   , "koty"  ]
-					, ["kota"  , "kotów" ]
-					, ["kotu"  , "kotom" ]
-					, ["kota"  , "{=N}"]
-					, ["kotem" , "kotami"]
-					, ["kocie" , "kotach"]
-					, ["{=L}", "{=N}"]
-					])
-				+table("day",
-					[ ["dzień" , "dni"   ]
-					, ["dnia"  , "dni"   ]
-					, ["dniowi", "dniom" ]
-					, ["dzień" , "{=N}"  ]
-					, ["dniem" , "dniami"]
-					, ["dniu"  , "dniach"]
-					, ["{=L}"  , "{=N}"  ]
-					])
-				+table("day",
-					[ ["tydzień"  , "tygodnie"  ]
-					, ["tygodnia" , "tygodni"   ]
-					, ["tygodniu" , "tygodniom" ]
-					, ["tydzień"  , "{=N}"      ]
-					, ["tygodniem", "tygodniami"]
-					, ["tygodniu" , "tygodniach"]
-					, ["{=L}"     , "{=N}"      ]
-					])
-			+section("masculin personal")
-				+table("student",
-					[ ["student"    , "studenci"  ]
-					, ["studenta"   , "studentów" ]
-					, ["studentowi" , "studentom" ]
-					, ["{=G}"       , "{=G}"      ]
-					, ["studentiem" , "studentami"]
-					, ["studencie"  , "studentach"]
-					, ["{=L}"       , "{=N}"      ]
-					])
-				+table("doctor",
-					[ ["lekarz"   , "lekarze"  ]
-					, ["lekarza"  , "lekarzy"  ]
-					, ["lekarzowi", "lekarzom" ]
-					, ["{=G}"     , "{=G}"     ]
-					, ["lekarzem" , "lekarzami"]
-					, ["lekarzu"  , "lekarzach"]
-					, ["{=L}"     , "{=N}"     ]
-					])
-				+table("brother",
-					[ ["brat"  , "bracia" ]
-					, ["brata" , "braci"  ]
-					, ["bratu" , "braciom"]
-					, ["{=G}"  , "{=G}"   ]
-					, ["bratem", "braćmi" ]
-					, ["bracie", "bratach"]
-					, ["{=L}"  , "{=N}"   ]
-					])
-				+table("man",
-					[ ["człowiek"    , "ludzie"  ]
-					, ["człowieka"   , "ludzi"   ]
-					, ["człowiekowi" , "ludziom" ]
-					, ["{=G}"      , "{=G}"  ]
-					, ["człowiekiem" , "ludźmi"  ]
-					, ["człowieku"   , "ludziach"]
-					, ["{=L}"      , "{=N}"  ]
-					])
-			+section("feminine")
-				+table("woman",
-					[ ["kobieta" , "kobiety"   ]
-					, ["kobiety" , "kobiet"   ]
-					, ["kobiecie", "kobietom" ]
-					, ["kobietę" , "{=N}"   ]
-					, ["kobietą" , "kobietami"]
-					, ["{=D}"    , "kobietach"]
-					, ["kobieto" , "{=N}"   ]
-					])
+					+table("cat",
+						[ ["kot"   , "koty"  ]
+						, ["kota"  , "kotów" ]
+						, ["kotu"  , "kotom" ]
+						, ["kota"  , "{=N}"]
+						, ["kotem" , "kotami"]
+						, ["kocie" , "kotach"]
+						, ["{=L}", "{=N}"]
+						])
+					+table("day",
+						[ ["dzień" , "dni"   ]
+						, ["dnia"  , "dni"   ]
+						, ["dniowi", "dniom" ]
+						, ["dzień" , "{=N}"  ]
+						, ["dniem" , "dniami"]
+						, ["dniu"  , "dniach"]
+						, ["{=L}"  , "{=N}"  ]
+						])
+					+table("day",
+						[ ["tydzień"  , "tygodnie"  ]
+						, ["tygodnia" , "tygodni"   ]
+						, ["tygodniu" , "tygodniom" ]
+						, ["tydzień"  , "{=N}"      ]
+						, ["tygodniem", "tygodniami"]
+						, ["tygodniu" , "tygodniach"]
+						, ["{=L}"     , "{=N}"      ]
+						])
+				+section("masculin personal").tables
+					+table("student",
+						[ ["student"    , "studenci"  ]
+						, ["studenta"   , "studentów" ]
+						, ["studentowi" , "studentom" ]
+						, ["{=G}"       , "{=G}"      ]
+						, ["studentiem" , "studentami"]
+						, ["studencie"  , "studentach"]
+						, ["{=L}"       , "{=N}"      ]
+						])
+					+table("doctor",
+						[ ["lekarz"   , "lekarze"  ]
+						, ["lekarza"  , "lekarzy"  ]
+						, ["lekarzowi", "lekarzom" ]
+						, ["{=G}"     , "{=G}"     ]
+						, ["lekarzem" , "lekarzami"]
+						, ["lekarzu"  , "lekarzach"]
+						, ["{=L}"     , "{=N}"     ]
+						])
+					+table("brother",
+						[ ["brat"  , "bracia" ]
+						, ["brata" , "braci"  ]
+						, ["bratu" , "braciom"]
+						, ["{=G}"  , "{=G}"   ]
+						, ["bratem", "braćmi" ]
+						, ["bracie", "bratach"]
+						, ["{=L}"  , "{=N}"   ]
+						])
+					+table("man",
+						[ ["człowiek"    , "ludzie"  ]
+						, ["człowieka"   , "ludzi"   ]
+						, ["człowiekowi" , "ludziom" ]
+						, ["{=G}"      , "{=G}"  ]
+						, ["człowiekiem" , "ludźmi"  ]
+						, ["człowieku"   , "ludziach"]
+						, ["{=L}"      , "{=N}"  ]
+						])
+				+section("feminine").tables
+					+table("woman",
+						[ ["kobieta" , "kobiety"   ]
+						, ["kobiety" , "kobiet"   ]
+						, ["kobiecie", "kobietom" ]
+						, ["kobietę" , "{=N}"   ]
+						, ["kobietą" , "kobietami"]
+						, ["{=D}"    , "kobietach"]
+						, ["kobieto" , "{=N}"   ]
+						])
 
-				+table("street",
-					[ ["ulica" , "ulice"  ]
-					, ["ulicy" , "ulic"   ]
-					, ["ulicy" , "ulicom" ]
-					, ["ulicę" , "{=N}"   ]
-					, ["ulicą" , "ulicami"]
-					, ["{=D}"  , "ulicach"]
-					, ["ulico" , "{=N}"   ]
-					])
-				+table("leg",
-					[ ["noga"  , "nogi"  ]
-					, ["nogi"  , "nóg"   ]
-					, ["nodze" , "nogom" ]
-					, ["nogę"  , "{=N}"  ]
-					, ["nogą"  , "nogami"]
-					, ["{=D}"  , "nogach"]
-					, ["nogo"  , "{=N}"  ]
-					])
-				+table("arm",
-					[ ["ręka" , "ręce"  ]
-					, ["ręki" , "rąk"   ]
-					, ["ręce" , "rękom" ]
-					, ["ręke" , "{=N}"  ]
-					, ["ręką" , "rękami"]
-					, ["{=D}" , "rękach"]
-					, ["ręko" , "{=N}"  ]
-					])
-				+table("river",
-					[ ["rzeka" , "rzeki"  ]
-					, ["rzeki" , "rzek"   ]
-					, ["rzece" , "rzekom" ]
-					, ["rzekę" , "{=N}"   ]
-					, ["rzeką" , "rzekami"]
-					, ["{=D}"  , "rzekach"]
-					, ["rzeko" , "{=N}"   ]
-					])
-				+table("night",
-					[ ["noc" , "noce"  ]
-					, ["nocy", "nocy"  ]
-					, ["nocy", "nocom" ]
-					, ["noc" , "{=N}"  ]
-					, ["nocą", "nocami"]
-					, ["{=D}", "nocach"]
-					, ["nocy", "{=N}"  ]
-					])
-				//+table("religion",
-					[ ["religia" , "religie"  ]
-					, ["religii" , "religii"  ]
-					, ["religii" , "religiom" ]
-					, ["religię" , "{=N}"   ]
-					, ["religią" , "religiami"]
-					, ["{=D}"    , "religiach"]
-					, ["religio" , "{=N}"   ]
-					])
+					+table("street",
+						[ ["ulica" , "ulice"  ]
+						, ["ulicy" , "ulic"   ]
+						, ["ulicy" , "ulicom" ]
+						, ["ulicę" , "{=N}"   ]
+						, ["ulicą" , "ulicami"]
+						, ["{=D}"  , "ulicach"]
+						, ["ulico" , "{=N}"   ]
+						])
+					+table("leg",
+						[ ["noga"  , "nogi"  ]
+						, ["nogi"  , "nóg"   ]
+						, ["nodze" , "nogom" ]
+						, ["nogę"  , "{=N}"  ]
+						, ["nogą"  , "nogami"]
+						, ["{=D}"  , "nogach"]
+						, ["nogo"  , "{=N}"  ]
+						])
+					+table("arm",
+						[ ["ręka" , "ręce"  ]
+						, ["ręki" , "rąk"   ]
+						, ["ręce" , "rękom" ]
+						, ["ręke" , "{=N}"  ]
+						, ["ręką" , "rękami"]
+						, ["{=D}" , "rękach"]
+						, ["ręko" , "{=N}"  ]
+						])
+					+table("river",
+						[ ["rzeka" , "rzeki"  ]
+						, ["rzeki" , "rzek"   ]
+						, ["rzece" , "rzekom" ]
+						, ["rzekę" , "{=N}"   ]
+						, ["rzeką" , "rzekami"]
+						, ["{=D}"  , "rzekach"]
+						, ["rzeko" , "{=N}"   ]
+						])
+					+table("night",
+						[ ["noc" , "noce"  ]
+						, ["nocy", "nocy"  ]
+						, ["nocy", "nocom" ]
+						, ["noc" , "{=N}"  ]
+						, ["nocą", "nocami"]
+						, ["{=D}", "nocach"]
+						, ["nocy", "{=N}"  ]
+						])
+					//+table("religion",
+						[ ["religia" , "religie"  ]
+						, ["religii" , "religii"  ]
+						, ["religii" , "religiom" ]
+						, ["religię" , "{=N}"   ]
+						, ["religią" , "religiami"]
+						, ["{=D}"    , "religiach"]
+						, ["religio" , "{=N}"   ]
+						])
 			+section("neuter")
-				+table("town",
-					[ ["miasto" , "miasta"  ]
-					, ["miasta" , "miast"   ]
-					, ["miastu" , "miastom" ]
-					, ["{=N}" , "{=N}"  ]
-					, ["miastem", "miastami"]
-					, ["miaście", "miastach"]
-					, ["{=N}" , "{=N}"  ]
-					])
-				+table("opinion",
-					[ ["zdanie" , "zdania"  ]
-					, ["zdania" , "zdań"    ]
-					, ["zdaniu" , "zdaniom" ]
-					, ["{=N}" , "{=N}"  ]
-					, ["zdaniem", "zdaniami"]
-					, ["zdaniu" , "zdaniach"]
-					, ["{=N}" , "{=N}"  ]
-					])
-				+table("animal",
-					[ ["zwierzę"   , "zwierzęta"  ]
-					, ["zwierzęcia", "zwierząt"   ]
-					, ["zwierzęciu", "zwierzętom" ]
-					, ["{=N}"      , "{=N}"       ]
-					, ["zwierzęiem", "zwierzętami"]
-					, ["zwierzęciu", "zwierzętach"]
-					, ["{=N}"      , "{=N}"       ]
-					])
-				+table("given name",
-					[ ["imię"    , "imiona"  ]
-					, ["imienia" , "imion"   ]
-					, ["imieniu" , "imionom" ]
-					, ["{=N}"    , "{=N}"    ]
-					, ["imieniem", "imionami"]
-					, ["imieniu" , "imionach"]
-					, ["{=N}"    , "{=N}"    ]
-					])
-			+section("pronoun")
+				div.tables
+					+table("town",
+						[ ["miasto" , "miasta"  ]
+						, ["miasta" , "miast"   ]
+						, ["miastu" , "miastom" ]
+						, ["{=N}" , "{=N}"  ]
+						, ["miastem", "miastami"]
+						, ["miaście", "miastach"]
+						, ["{=N}" , "{=N}"  ]
+						])
+					+table("opinion",
+						[ ["zdanie" , "zdania"  ]
+						, ["zdania" , "zdań"    ]
+						, ["zdaniu" , "zdaniom" ]
+						, ["{=N}" , "{=N}"  ]
+						, ["zdaniem", "zdaniami"]
+						, ["zdaniu" , "zdaniach"]
+						, ["{=N}" , "{=N}"  ]
+						])
+					+table("animal",
+						[ ["zwierzę"   , "zwierzęta"  ]
+						, ["zwierzęcia", "zwierząt"   ]
+						, ["zwierzęciu", "zwierzętom" ]
+						, ["{=N}"      , "{=N}"       ]
+						, ["zwierzęiem", "zwierzętami"]
+						, ["zwierzęciu", "zwierzętach"]
+						, ["{=N}"      , "{=N}"       ]
+						])
+					+table("given name",
+						[ ["imię"    , "imiona"  ]
+						, ["imienia" , "imion"   ]
+						, ["imieniu" , "imionom" ]
+						, ["{=N}"    , "{=N}"    ]
+						, ["imieniem", "imionami"]
+						, ["imieniu" , "imionach"]
+						, ["{=N}"    , "{=N}"    ]
+						])
+			+section("pronoun").tables
 				mixin table(ys, xss)
 					table.nu
 						tr

@@ -42,11 +42,12 @@ const nuOrtho = (s, cyr) => {
     .replace(/o\u0303/g, "ѫ")
 
     .replace(/\u0301/g, "ь")
+    .replace(/i/g, "и")
+    .replace(/y/g, "ъи")
     .replace(/e/g, "є")
     .replace(/a/g, "а")
     .replace(/o/g, "о")
     .replace(/u/g, "у")
-    .replace(/i/g, "и")
     .replace(/j/g, "й")
 
     .replace(/d\u030C/g, "џ")
@@ -87,7 +88,8 @@ const nuOrtho = (s, cyr) => {
 
   if(! cyr)
     r = r
-    .replace(/i/g, "ı")
+    .replace(/i/g, "ı\u0301")
+    .replace(/y/g, "ı")
     .replace(/j/g, "ȷ")
     ;
 
