@@ -2,27 +2,57 @@ const nuOrtho = s =>
   s
   .toLowerCase()
 
-  .replace(/ę/g, "ẽ")
-  .replace(/ų/g, "õ")
+  .replace(/dž/g, "ǯ")
+  //.replace(/č/g, "")
+  //.replace(/š/g, "x\u030C")
+  //.replace(/ž/g, "")
 
   .replace(/ť/g, "t́")
   .replace(/ď/g, "d́")
+  //.replace(/ś/g, "s")
+  //.replace(/ź/g, "z")
+  .replace(/ň/g, "ń")
+  .replace(/ř/g, "ŕ")
+  .replace(/ľ/g, "ĺ")
 
   .replace(/ć/g, "ť")
   .replace(/đ/g, "ď")
 
-  .replace(/č/g, "ǩ")
-  .replace(/dž/g, "ǯ")
-  .replace(/ž/g, "ǧ")
+  .replace(/ç/g, "ǩ")
+  .replace(/ʒ/g, "ǧ")
 
-  .replace(/ç/g, "ḱ") //k̂
-  .replace(/ʒ/g, "ǵ") //ĝ
+  .replace(/ṱ/g, "tl")
+  .replace(/ḓ/g, "dl")
+
+  .replace(/ṙ/g, "r\u0304")
+  .replace(/ŕ/g, "r\u0304\u0301")
+  .replace(/ŀ/g, "l\u0304")
+  .replace(/ĺ/g, "l\u0304\u0301")
+
+  .replace(/ę/g, "ẽ")
+  .replace(/ų/g, "õ")
+
+  .replace(/è/g, "ĭ")
+  .replace(/ò/g, "ŭ")
+
+  .replace(/ı/g, "ĭj")
+
+  .replace(/ý/g, "-y")
+  .replace(/í/g, "-i")
+  .replace(/á/g, "-a")
+  .replace(/é/g, "-e")
+  .replace(/ì/g, "=i")
 
   .replace(/c/g, "c")
   .replace(/dz/g, "ʒ")
 
+  .replace(/v/g, "w")
+  .replace(/ù/g, "v")
+
   .replace(/h/g, "x")
-  //.replace(/i/g, "ı")
+  .replace(/dz/g, "ʒ")
+
+  .replace(/i/g, "ı")
   .replace(/j/g, "ȷ")
   ;
 

@@ -6,61 +6,13 @@ block head
 block main
 	p under construction
 
-	+section("grapheme")
-		center
-			div
-				textarea#source
-					| Vsi ljudi rodęt sę svobodni i råvni v dostojnosti i pravah.
-					| Oni sųt obdarjeni råzumom i svěst́jų i imajųt postųpati jedin k drugomu v duhu bratstva.
-				textarea#sink
+	p default input is quoted from <a href="http://steen.free.fr/interslavic/nms.html">here</a>.
 
-			// table.transpose.add-new
-				tr
-					th phoneme
-					th old
-					th new
-				+trs(
-					[ "i; i"
-					, "a; a"
-					, "u; u"
-					, "ɨ; y"
-					, "ɛ; e"
-					, "ɔ; o"
-					, "ɛ̃; ę"
-					, "ɔ̃; ą"
-					, "u; ó"
+	center
+		div
+			textarea#source.
+				Međuslovjanskí język može bytì veliká pomoć dĺa pųtujųćih i takože jest doskonalœ orųdje dĺa tyh, ktori hoćųt brzo naučitì sę jednœgo ili vęće slovjanskih językov. Učenje sę takœgo języka ne jest tęžkœ i usilje ne zajmaĵe mnogo časa. Kògda člověk dobro znaĵe takí język, on aùtomatično imaĵe možnost́ izražanja sę v vśakœm slovjanskœm kraji i može råzumětì bliz vse, čto ĺudi k ňemu govoręt ili pišųt.
+				«Naučný Međuslovjanskí» jest ortografičný sistem, ktorý možno koristatì k pisanju råznyh językoprojektov, vkĺučajųć Slovjanskí i Novoslověnskí. Tœj pravopis råzni sę od drugih jedino tym, že imaĵe pŀnų i dost́ råzšiŕenų abecedų i vslěd tœgo podavaĵe čitateĺu vęće informacije o izgovorě i etimologiji slov. Očevidno zvųči komentaŕ: po čto sųt nam té divné znaki, ktoryh ne imaĵemò v svojih vlastnyh piśmah i črėz ktoré tekst izględaĵe skaredno i jedino odstrašaĵe potenciaĺnyh čitateĺev. Da, ne odvŕgaĵų, že imaĵete pravdų. Ale ne zabųd́te, že cěĺ tœj ortografije ne jest ni lěpost́ ni vygoda, ale prėd vsem kompletnost́. Nikto ne očekivaĵe, že by kto-nebųd́ načęl pisatì takim sposobòm.
+				Pomimo pozorov, Naučný Međuslovjanskí ne jest nikakœ arhaičnœ prodŀženje mŕtvœgo praslovjanskœgo języka i takože ne imaĵe ničto obćego s cŕkòvnoslovjanskim. Protivno, on byl stvoŕený na osnově vsěh živųćih ješče slovjanskih językov. Vśako, cělkòm ne treba, že by někto iměl naučný stųpèň ili molil sę k ʒvězdam, že by dobro råzuměl teksty napisané tym pravopisòm.
 
-					, "j ; j"
-
-					, "p ; p"
-					, "b ; b"
-					, "f ; f"
-					, "v ; w"
-					, "m ; m"
-
-					, "t ; t"
-					, "t͡ɕ; ć"
-					, "d ; d"
-					, "d͡ʑ; dź"
-					, "d͡ʐ; dż"
-					, "s ; s"
-					, "ɕ ; ś"
-					, "z ; z"
-					, "ʑ ; ź"
-					, "n ; n"
-					, "ɲ ; ń"
-					, "r ; r"
-					, "ʐ ; rz"
-					, "w ; ł"
-					, "l ; l"
-
-					, "k ; k"
-					, "t͡s; c"
-					, "t͡ʂ; cz"
-					, "ɡ ; g"
-					, "d͡z; dz"
-					, "ʐ ; ż"
-					, "x ; ch"
-					, "x ; h"
-					, "ʂ ; sz"
-					].map(tds => tds.split(";")))
+			textarea#sink
