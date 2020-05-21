@@ -5,40 +5,35 @@ block head
 
 block main
 	+section("alias")
-		p
-			| #{author.name.la} | #{author.name.zh}
-			|  signifies the author.
+		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) signifies the author.
 
 	+section("pronoun")
 		center
-			table
+			table.transpose
 				tr
-					th nominative
+					th acc.
 					td ve
 				tr
-					th accusative
+					th nom.
 					td ver
 				tr
-					th genitive
+					th gen.
 					td vis
 
-		p if you really need to refer to me by ‹he›, do so.
-
 	+section("ideology"): ul
-		p (!) i am temporarily a moral nihilist and therefore ignore this section.
-
 		li
 			del determinism
 			| &#32;
 			del physicalism
-			|  (i deny both free will and determinism. what should i call it?)
+			| &#32;(i deny both free will and determinism)
 		li intersectional veganism
+			ul: li i still eat animal food therefore i am currently moral nihilist
 		li anti-natalism
 		li pro-mortalism
 		li anti-monogamism
 		li
 			del social liberalism
-			|  egalitarianism (?)
+			| &#32;egalitarianism (?)
 
 	+section("sexuality")
 		ul
@@ -53,8 +48,9 @@ block main
 				ul
 					li japanese (native)
 					li english (TOEIC L&R 810)
-					li lojban
+					li lojban (beginner)
 					li cantonese (beginner)
+					li russian (beginner)
 
 			+section("programming")
 				ul
@@ -87,4 +83,5 @@ block main
 
 	+section("donation")
 		p any amount of money will be great help. thank you!
-		figure: img#image-kyash(src="/images/kyash.png")
+		figure
+			img#image-kyash(src="/images/kyash.png", width="320px")

@@ -1,11 +1,49 @@
 extend /_layout.pug
 
+mixin aLi(s)
+  li: a(href=s)= s
+
 block head
   - const title = "orthography"
 
 block main
   ul
     li: a(href="https://sumimq.github.io/chinese/") chinese
-    li: a(href="polish") polish
-    li: a(href="japanese") japanese
-    li: a(href="interslavic") interslavic
+    +aLi("japanese")
+    +aLi("polish")
+    +aLi("interslavic")
+    +aLi("russian")
+
+  +section("default spelling")
+    div.tables
+      table
+        +trs(
+          [ ["c g", "", "t d", "", "p b"]
+          , ["x h", "ſ ʒ", "s z", "þ ð", "f w"]
+          , ["", "ʧ ʤ", "ʦ ʣ", "", ""]
+          , ["ŋ", "ɲ", "n", "", "m"]
+          , ["", "ȷ", "r", "", "v"]
+          , ["", "", "l", "", ""]
+          ])
+          // ҁ
+      table
+        +trs(
+          [ ["ı y", "", " u"]
+          , ["e œ", "ə", " o"]
+          , ["æ", "a", "ꜵ"]
+          ])
+      table
+        +trs(
+          [ ["к г", "", "т д", "", "п б"]
+          , ["х ҕ", "ш ж", "с з", "ҫ ҙ", "ф в"]
+          , ["", "ч џ", "ц ѕ", "", ""]
+          , ["ӈ", "ԩ", "н", "", "м"]
+          , ["", "ь", "р", "", "ъ"]
+          , ["", "", "л", "", ""]
+          ])
+      table
+        +trs(
+          [ ["и ѵ", "", " у"]
+          , ["є ѥ", "ә", " о"]
+          , ["", "а", ""]
+          ])

@@ -55,11 +55,12 @@ const yeardayTo = (isLeap, yearday) => {
   ];
 }
 
-const dateToSc = date => {
+const msecPerDay = 1000 * 60 * 60 * 24;
+
+export default date => {
   let year = date.getFullYear();
   const date0 = new Date(year, 0, 1);
   const msec = (date - date0) + ((date0.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000);
-  const msecPerDay = 1000 * 60 * 60 * 24;
   const yeartime = msec / msecPerDay
   const yearday = Math.floor(yeartime);
   let daytime = yeartime % 1;

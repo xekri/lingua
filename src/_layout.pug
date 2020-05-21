@@ -19,7 +19,6 @@ html(lang="en-GB")
     include _google-analytics.pug
     meta(charset="UTF-8")
     link(href="/style.css", rel="stylesheet")
-    script(src="/works/calendar/calendar.js")
     script(src="/script.js")
 
     // local files
@@ -27,7 +26,13 @@ html(lang="en-GB")
     script(src="script.js")
 
     block head
-    - const titleFull = title === author.name.la ? title : `${author.name.la} / ${title}`
+    -
+      const titleFull =
+      (
+        title === author.name.ru
+          ? title
+          : `${author.name.ru} / ${title}`
+      ).toUpperCase()
     title= titleFull
 
     meta(name="twitter:site", content="@" + author.twitter)
@@ -44,7 +49,7 @@ html(lang="en-GB")
           div#logo
             a(href="/"): img(src="/images/sumi.png")
           div#datetime
-          +myDiv("menu", showsTitle=false)#menu
+          +myDiv("menu")
             ul
               li: a(href="/") /
               li: a(href="/author") author
@@ -53,7 +58,7 @@ html(lang="en-GB")
               li: a(href="/thoughts") thoughts
               li: a(href="/works") works
 
-            +myDiv("submenu", showsTitle=false)#submenu
+            +myDiv("submenu")
 
           center
             a(
@@ -63,8 +68,6 @@ html(lang="en-GB")
               , data-via=author.twitter
             ) Tweet
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-        //<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     main
       article

@@ -1,21 +1,36 @@
-mixin myDiv(title, showsTitle=true)
+mixin myDiv(title)
 	div.my-div(id=title)
-		if showsTitle
-			span.my-div-title #{title}
 		block
 
-mixin section(title, showsTitle=true)
-	section.my-section(id=title)
-		if showsTitle
+mixin section(title)
+	section(id=title)
+		if title
 			a(href="#" + title): h1= title
 		block
 
-mixin trs(xss)
-	for xs in xss
-		tr
-			for x in xs
-				td= x
+mixin tds(xs)
+	for x in xs
+		td= x
 
 mixin ths(xs)
 	for x in xs
 		th= x
+
+mixin trs(xss)
+	for xs in xss
+		tr
+			+tds(xs)
+
+mixin thsTrs(xs, yss)
+	for ys, i in yss
+		tr
+			th= xs[i]
+			for y in ys
+				td= y
+
+mixin thTrs(xss)
+	for xs in xss
+		tr
+			th= xs[0]
+			for x in xs.slice(1)
+				td= x

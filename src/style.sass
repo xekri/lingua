@@ -14,162 +14,213 @@ $bgcolor: #202020
 *
   box-sizing: border-box
 
+.mobile
+  display: none
+  @media screen and (max-devive-width: $thresh)
+    display: block
+
 .center
   width: 100%
   margin: 0
   padding: 0
   text-align: center
 
-html, body
+.tables table
+  display: inline-block
+  vertical-align: top
+  margin-left: 0
+  margin-bottom: 0
+  margin-right: $space
+
+
+h1, #menu
+  text-transform: uppercase
+
+body
   margin: 0
   padding: 0
   color: $color
   background-color: $bgcolor
   font-family: "Arial", "UniHentaiKana", sans-serif
-  font-weight: 300
 
   @media screen and (max-width:$thresh)
     text-size-adjust: 240%;
 
-  main
-    margin: 0
-    margin-left: $navWidth
-    @media screen and (max-width:$thresh)
-      margin-left: 0
-      padding: 0
+main
+  margin: 0
+  padding: 0
+  margin-left: $navWidth
+  @media screen and (max-width:$thresh)
+    margin-left: 0
 
-    article
-      //width: $mainWidth
-      margin: 0 auto
-      padding: $space
-      padding-bottom: 0
-      padding-top: 0
-      @media screen and (max-width:$thresh)
-        width: 100%
-
-  nav
-    z-index: 50
-    width: $navWidth
-    height: 100%
+  article
     margin: 0
     padding: 0
-    position: fixed
-    border-right: 1px $color solid
-    top: 0
-
-    ul
-      margin-left: 0
-      list-style-position: inside
-
-    #menu ul
-      list-style-type: none
-
+    padding-left: $space * 2
+    padding-right: $space * 2
     @media screen and (max-width:$thresh)
-      display: none
-      width: $mobileNavWidth
-      background-color: $bgcolor
+      width: 100%
 
-    #nav-in
-      margin-left: $space
-      margin-right: $space
-      margin-top: $space
-      padding: 0
-      display: inline-block
-      max-width: 100%
-      @media screen and (max-width:$thresh)
-        //font-size: 28pt
+nav
+  z-index: 50
+  width: $navWidth
+  height: 100%
+  margin: 0
+  position: fixed
+  border-right: 1px $color solid
+  top: 0
 
-      #logo
-        margin: 0
-        margin-bottom: $space
-        text-align: center
-        img
-          width: 128px
-          animation: rot 1s
+  ul
+    margin-left: 0
+    list-style-position: inside
 
-          @keyframes rot
-            0%
-              transform: rotate(0deg)
-            100%
-              transform: rotate(360deg)
-
-      #datetime
-        text-align: center
-        font-family: "Roboto Mono", mono
-        padding: 0
-        margin: 0
-        margin-bottom: $space
-        width: 100%
-        text-align: center
-        @media screen and (max-width:$thresh)
-          font-size: 8pt
-    ul
-      margin-left: 0
-      padding-left: 0
-      font-family: "Roboto"
-
-  #nav-switch
-    z-index: 100
-    display: none
-    position: fixed
-    top: 0
-    left: 0
-    @media screen and (max-width:$thresh)
-      display: block
-      width: 96px
-      height: 96px
-      background-color: $color
-      opacity: 25%
-
-  .my-section, .my-div
+  #menu ul
+    list-style-type: none
     margin: 0
-    padding: 0
-    margin-bottom: $space
     margin-top: $space
-    padding-left: $space
-    border: solid $color
-    border-width: 1px 0 0 1px
-    font-size: 100%
-    .my-section
-      @media screen and (max-width:$thresh)
-        overflow-x: auto
 
-  .tile .my-section
-    display: inline-block
-    width: fit-content
+    @media screen and (max-width:$thresh)
+      li:not(:first-of-type)
+        margin-top: $space
+
+  @media screen and (max-width:$thresh)
+    padding-bottom: $space
+    display: none
+    width: $mobileNavWidth
+    background-color: $bgcolor
+    overflow-y: scroll
+
+  #nav-in
+    margin-left: $space
     margin-right: $space
-    vertical-align: top
+    margin-top: $space
+    padding: 0
+    display: inline-block
+    max-width: 100%
+    @media screen and (max-width:$thresh)
+      //font-size: 28pt
 
-  figure
-    display: flex
-    justify-content: space-around
-    align-items: center
+    #logo
+      margin: 0
+      margin-bottom: $space
+      text-align: center
+      img
+        width: 128px
+        animation: rot 1s
 
-    img
-      width: 33%
+        @keyframes rot
+          0%
+            transform: rotate(0deg)
+          100%
+            transform: rotate(360deg)
 
-  a
-    color: $color
-    &:link
-      // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
-    &:visited
-      // text-shadow: none
-    &:hover
-    &:active
+    #datetime
+      text-align: center
+      font-family: "Roboto Mono", mono
+      padding: 0
+      margin: 0
+      margin-bottom: $space
+      width: 100%
+      text-align: center
+      @media screen and (max-width:$thresh)
+        font-size: 8pt
+  ul
+    margin-left: 0
+    padding-left: 0
+    font-family: "Roboto"
 
-  table
-    margin: 32px
-    padding: 16px
-    border-top: 1px solid
-    border-bottom: 1px solid
-    border-collapse: collapse
+#nav-switch
+  z-index: 100
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  @media screen and (max-width:$thresh)
+    display: block
+    width: 96px
+    height: 96px
+    background-color: $color
+    opacity: 25%
 
-  td, th
+main section
+  margin-bottom: $space
+  section
+    margin-bottom: 0
+
+
+section, .my-div
+  margin: 0
+  padding: 0
+  padding-left: $space
+  border: solid $color
+  border-width: 1px 0 0 1px
+  font-size: 100%
+
+  section, .my-div
+    margin-top: $space
+    @media screen and (max-width:$thresh)
+      overflow-x: auto
+
+  h1
+    margin: 0
+    margin-top: $space
+    font-weight: normal
+    font-size: inherit
+
+.my-div
+  margin-bottom: $space
+  .my-div
+    margin-bottom: 0
+
+
+.tile section
+  display: inline-block
+  width: fit-content
+  margin-right: $space
+  vertical-align: top
+
+figure
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+a
+  color: $color
+  &:link
+    // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
+  &:visited
+    // text-shadow: none
+  &:hover
+  &:active
+
+table
+  border-collapse: collapse
+  margin: $space / 2
+
+  th, td
     padding: 8px
 
-h1
-  font-weight: normal
-  font-size: inherit
+  tbody
+    border-top: 1px solid $color
+    border-bottom: 1px solid $color
+
+  &:not(.transpose)
+    td + td, td + th, th + td, th + th
+      border-left: 1px solid rgba(255, 255, 255, .25)
+    tr + tr
+      border-top: 1px solid rgba(255, 255, 255, .25)
+
+  &.transpose
+    tr
+      display: block
+      float: left
+    th, td
+      display: block
+
+    td + td, td + th, th + td, th + th
+      border-top: 1px solid rgba(255, 255, 255, .25)
+    tr + tr
+      border-left: 1px solid rgba(255, 255, 255, .25)
 
 ul, ol
   display: table
@@ -178,14 +229,6 @@ ul, ol
 ul
   list-style-type: square
 
-img
-  margin: 0
-
-.mobile
-  display: none
-  @media screen and (max-devive-width: $thresh)
-    display: block
-
 textarea
   font: inherit
   background-color: inherit
@@ -193,7 +236,6 @@ textarea
 
 input[type="checkbox"]
   vertical-align: middle
-
 
 a.top
   margin: 0

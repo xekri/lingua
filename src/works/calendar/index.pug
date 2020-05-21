@@ -2,13 +2,14 @@ extend /_layout.pug
 
 block head
   - var title = "calendar"
-  //script(src="calendar.js")
   script(src="script.js")
   link(rel="stylesheet", href="style.css")
 
 block main
+  em currently not working.
+
   +section("overview")
-    p #{author.name}-calendar is a calendar almost every month in which has the same number of days.
+    p #{author.name.la}-calendar is a calendar almost every month in which has the same number of days.
     center
       table
         style.
@@ -54,68 +55,16 @@ block main
       em  Holocene calendar.
 
   +section("converter")
-    p check to specify the date, or it shows the current date.
     center
       div
-        input#isSpecified(type="checkbox")
         input#specified(type="datetime-local", value="1954-06-07T00:00")
-
-      div#table-out
-        table
-          tr
-            th(align="right") gregorian
-            td(align="center", colspan="2")#gregorian
-          tr
-            td
-            th dec
-            th hex
-          tr
-            th(align="right") year
-            td#year10
-            td#year16
-          tr
-            th(align="right") day of year
-            td#yearday10
-            td#yearday16
-          tr
-            th(align="right") month
-            td#month10
-            td#month16
-          tr
-            th(align="right") day of month
-            td#monthday10
-            td#monthday16
-          tr
-            th(align="right") week
-            td#week10
-            td#week16
-          tr
-            th(align="right") day of week
-            td#weekday10
-            td#weekday16
-          tr
-            th(align="right") time of day
-            td#daytime10
-            td#daytime16
-          tr
-            th(align="right") informal
-            td#informal10
-            td#informal16
-          tr
-            th(align="right") formal
-            td#formal10
-            td#formal16
-          tr
-            th
-            each b in [10, 16]
-              td(align="center")
-                a(
-                  id=`tweet${b}`
-                  , href=""
-                  , onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
-                  , rel="nofollow"
-                  , class="twitter-link"
-                  ) tweet
+        div#formal
+        a(
+          id=`tweet`
+          , href=""
+          , rel="nofollow"
+          , class="twitter-link"
+          ) tweet
     div
       ul
         li the author prefers the hexadecimal notation to the decimal one.

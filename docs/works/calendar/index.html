@@ -10,17 +10,15 @@
     </script>
     <meta charset="UTF-8">
     <link href="/style.css" rel="stylesheet">
-    <script src="/works/calendar/calendar.js"></script>
     <script src="/script.js"></script>
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <!--script(src="calendar.js")-->
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>sumı / calendar</title>
+    <title>СУМИ / CALENDAR</title>
     <meta name="twitter:site" content="@sumimq">
-    <meta name="twitter:title" content="sumı / calendar">
+    <meta name="twitter:title" content="СУМИ / CALENDAR">
     <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
@@ -46,18 +44,17 @@
           </div>
           <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumimq">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         </div>
-        <!--<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/sumigv">Tweets by sumigv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
       </nav>
     </div>
     <main>
       <article>
         <p>the author designed this website for desktop, not for mobile.</p>
         <p>this site uses Google Analytics.</p>
-        <section class="my-section" id="calendar"><a href="#calendar">
-            <h1>calendar</h1></a>
-          <section class="my-section" id="overview"><a href="#overview">
+        <section id="calendar"><a href="#calendar">
+            <h1>calendar</h1></a><em>currently not working.</em>
+          <section id="overview"><a href="#overview">
               <h1>overview</h1></a>
-            <p>[object Object]-calendar is a calendar almost every month in which has the same number of days.</p>
+            <p>sumı-calendar is a calendar almost every month in which has the same number of days.</p>
             <center>
               <table>
                 <style>td { min-width: 32px; }</style>
@@ -140,76 +137,12 @@
               which is the same scheme as<em> Holocene calendar.</em>
             </p>
           </section>
-          <section class="my-section" id="converter"><a href="#converter">
+          <section id="converter"><a href="#converter">
               <h1>converter</h1></a>
-            <p>check to specify the date, or it shows the current date.</p>
             <center>
               <div>
-                <input id="isSpecified" type="checkbox">
                 <input id="specified" type="datetime-local" value="1954-06-07T00:00">
-              </div>
-              <div id="table-out">
-                <table>
-                  <tr>
-                    <th align="right">gregorian</th>
-                    <td align="center" colspan="2" id="gregorian"></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <th>dec</th>
-                    <th>hex</th>
-                  </tr>
-                  <tr>
-                    <th align="right">year</th>
-                    <td id="year10"></td>
-                    <td id="year16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">day of year</th>
-                    <td id="yearday10"></td>
-                    <td id="yearday16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">month</th>
-                    <td id="month10"></td>
-                    <td id="month16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">day of month</th>
-                    <td id="monthday10"></td>
-                    <td id="monthday16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">week</th>
-                    <td id="week10"></td>
-                    <td id="week16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">day of week</th>
-                    <td id="weekday10"></td>
-                    <td id="weekday16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">time of day</th>
-                    <td id="daytime10"></td>
-                    <td id="daytime16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">informal</th>
-                    <td id="informal10"></td>
-                    <td id="informal16"></td>
-                  </tr>
-                  <tr>
-                    <th align="right">formal</th>
-                    <td id="formal10"></td>
-                    <td id="formal16"></td>
-                  </tr>
-                  <tr>
-                    <th></th>
-                    <td align="center"><a class="twitter-link" id="tweet10" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></td>
-                    <td align="center"><a class="twitter-link" id="tweet16" href="" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">tweet</a></td>
-                  </tr>
-                </table>
+                <div id="formal"></div><a class="twitter-link" id="tweet" href="" rel="nofollow">tweet</a>
               </div>
             </center>
             <div>

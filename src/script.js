@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // mobile menu switch
   const sw = document.getElementById("nav-switch");
   const nav = document.getElementsByTagName("nav")[0];
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submenu.remove();
 
   // date
+  const dateToSc = (await import("/works/calendar/calendar.js")).default;
   setInterval(() => {
     const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
     document.getElementById("datetime").innerText =
