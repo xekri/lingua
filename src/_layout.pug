@@ -32,7 +32,7 @@ html(lang="en-GB")
         title === author.name.ru
           ? title
           : `${author.name.ru} / ${title}`
-      ).toUpperCase()
+      ).toUpperCase().replace(/ȷ/g, "J")
     title= titleFull
 
     meta(name="twitter:site", content="@" + author.twitter)
@@ -53,10 +53,10 @@ html(lang="en-GB")
             ul
               li: a(href="/") /
               li: a(href="/author") author
-              li: a(href="/characters") characters
+              li: a(href="/characters") character
               li: a(href="/favorite") favorite
-              li: a(href="/thoughts") thoughts
-              li: a(href="/works") works
+              // li: a(href="/thought") thought
+              li: a(href="/work") work
 
             +myDiv("submenu")
 
@@ -71,10 +71,11 @@ html(lang="en-GB")
 
     main
       article
-        p the author designed this website for desktop, not for mobile.
-        p this site uses Google Analytics.
+        p þis site use Google Analytics.
 
         +section(title)
+          if language
+            div.language language=#{language}
           block main
 
       //

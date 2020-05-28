@@ -1,0 +1,270 @@
+extend /_layout.pug
+
+mixin replaced(s)
+	span.replaced= s
+
+block head
+	- const title = "ınterslavic analytıc";
+	- const language = "englısh analytıc"
+
+block main
+	ul#check
+		li
+			input(type="checkbox", name="uppercase")
+			label uppercase
+		li
+			input(type="checkbox", name="cyrillic")
+			label cyrıllıc
+
+	ul
+		li þıs be analytıc dıalect of <a href="http://steen.free.fr/interslavic/">ınterslavıc</a>.
+		li ıt not have
+			ul
+				li ınflectıon
+				li number
+				li gender
+		li hwat ınfluence ıt be
+			ul
+				li loȷban
+				li lıngua franca nova
+
+	+section("orthography")
+		p orthography of ıt be <a href="http://steen.free.fr/interslavic/orthography.html#etymological_alphabet">etymologıcal alphabet</a> hwıch ı dıd modıfy.
+
+		center
+			textarea#src.
+				k c h š č ž ć đ v å ę ų ė ȯ y
+				međuslovjansky analitičny
+			textarea(readonly)#sink
+
+			div
+				a#tweet tweet
+
+
+	+section("grammar")
+		table
+			tr
+				th sentence
+				td
+					ul
+						li S:nounal verb A:nounal D:nounal
+						li
+							| verb,
+							| &#x20;S:nounal,&#x20;
+							+replaced("go")
+							| &#x20;A:nounal,&#x20;
+							+replaced("mu")
+							| &#x20;D:nounal
+							| -- free order
+			tr
+				th nounal
+				td
+					| cardınal:numeral noun ordınal:numeral adȷectıve* relatıve-clause (
+					+replaced("od")
+					| &#x20;nounal)*
+
+		p we can ındıcate case wıþ eıþer word order or preposıtıon.
+
+		+section("pronoun")
+			.tables
+				table.transpose.has-td-replaced
+					caption personal
+					+thTrs(
+						[ ["ı", "ja"]
+						, ["þou", "ty"]
+						, ["ıt, ve", "on"]
+						, ["self", "sę"]
+						])
+
+				table.transpose.has-td-replaced
+					caption demonstratıve
+						tr
+							th þıs, þat
+							td toj
+
+				table.transpose.has-td-replaced
+					caption ınterrogatıve, relatıve
+					+thTrs(
+						[ ["hweþer", "či"]
+						, ["hwıch", "koj"]
+						, ["hwat, hwo", "kto"]
+						, ["how", "kak"]
+						])
+
+				table.transpose.has-td-replaced
+					caption ındefınıte
+					+thTrs(
+						[ ["every", "vse"]
+						, ["some", "ně"]
+						, ["no", "ni"]
+						])
+
+		+section("verb")
+			table.has-td-replaced
+				caption aspect, tense, mood
+				tr
+					th past
+					th present
+					th future
+					th cond.
+					th ımper.
+					th perf.
+					th noun
+				tr
+					td bě(še)
+					td
+					td bųde
+					td by
+					td bųd́
+					td byl
+					td že
+
+			table
+				caption example
+				tr: td noun condıtıonal past perfect
+				tr: td.replaced že ja by bě byl děla
+
+			// table
+				caption participle
+				tr
+					th past active
+					th present active
+					th future active
+					th past passive
+					th present passive
+					th future passive
+
+
+				tr
+					td
+						span.replaced koj byl děla
+						br
+						| having done
+					td
+						span.replaced koj děla
+						br
+						| doing
+					td
+						span.replaced koj bude děla
+						br
+						| going to do
+					td
+						span.replaced go koj byl děla
+						br
+						| having been done
+					td
+						span.replaced go koj děla
+						br
+						| done
+					td
+						span.replaced go koj bude děla
+						br
+						| going to be done
+				tr
+					td
+						span.replaced koj byl děla
+						br
+						| having done
+					td
+						span.replaced koj děla
+						br
+						| doing
+					td
+						span.replaced koj bude děla
+						br
+						| going to do
+					td
+						span.replaced go koj byl děla
+						br
+						| having been done
+					td
+						span.replaced go koj děla
+						br
+						| done
+					td
+						span.replaced go koj bude děla
+						br
+						| going to be done
+
+		+section("adȷectıve")
+			table.has-td-replaced
+				+thTrs(
+					[ ["least", "najmenje"]
+					, ["less … þan", "menje … čem"]
+					, ["more … þan", "vyše … čem"]
+					, ["most", "najvyše"]
+					])
+
+		+section("numeral")
+			table.transpose.has-td-replaced
+				+thTrs(
+					[ ["0", "nula"]
+					, ["1", "jedin"]
+					, ["2", "dva"]
+					, ["3", "tri"]
+					, ["4", "četyri"]
+					, ["5", "pęt́"]
+					, ["6", "šest́"]
+					, ["7", "sedm"]
+					, ["8", "osm"]
+					, ["9", "devęt́"]
+					, ["10", "desęt́"]
+					, ["100", "sto"]
+					, ["1000", "tysęć"]
+					])
+
+			table.has-td-replaced
+				+thTrs(
+					[ ["zero (no) þıng", "nula prědmet"]
+					, ["one þıng", " jedın prědmet"]
+					, ["at least one (some) þıng", "(někoj) prědmet"]
+					, ["more þan one þıng", "poněkoj prědmet"]
+					])
+
+			p
+				| 1023 =&#x20;
+				+replaced("jedin nula dva tri")
+				| &#x20;=&#x20;
+				+replaced("jedin tysęć dva desęt́ tri")
+
+		+section("example")
+			mixin table(xss)
+				table
+					caption rıse (canno ȷouco)
+					for xs in xss
+						tbody
+							tr: td= xs[0]
+							tr: td !{xs[1].replace(/\{/g, "<span class='entity'>").replace(/\}/g, "</span>")}
+							tr: td.replaced= xs[2]
+
+			+table(
+				[ [ "(I'm a soldıer,) значит я"
+					, "{зна́чить, to mean, 3 sg present} ı"
+					, "(on) znači že ja"
+					]
+				, [ "И ответчик и судья"
+					, "boþ {defendant, N sg} and {ȷudge, N sg}"
+					, "i odpovědnik i sųd́ja"
+					]
+				, [ "Я стою на двух концах огня"
+					, "ı {стоять, to stand, 1 sg present} on {два, two, P} {конец, end, P pl} {ого́нь, fıre, G sg}"
+					, "ja stoja na dva konec od ogȯnj"
+					]
+				, [ "Огибая виражи, обгоняя смерть и жизнь"
+					, "{огиба́ть, to round, present adv} {вира́ж, bend, A pl}, {обгонять, to overtake, present adv} {смерть, deaþ, A sg} and {жизнь, life, A sg}"
+					, "s že obježđa viraž, s že prěstiga smŕt́ i žit́je"
+					]
+				, [ "Я бегу сразиться с тенью лжи"
+					, "ı {бежа́ть, to run, 1 sg present} {to fıght, ınf} wıþ {тень, shade, I sg} {ложь, lıe, G sg}"
+					, "ja běg dlja že poraža s těnj od lȯž"
+					]
+				, [ "Сколько б нитей не плёл обман"
+					, "so-much {condıtıonal} {нить, þread, G pl} not {плести́, to weave, m sg past} {fraud, N sg}"
+					, "go vsekak mnogo nit́ by ples obman"
+					]
+				, [ "Покажет лик света истина"
+					, "{показа́ть, show, 3 sg future perf} {face, A sg} {свет, lıght G sg} {truþ, N}"
+					, "bųde byl pokaza go lice od svět istina"
+					]
+				])
+

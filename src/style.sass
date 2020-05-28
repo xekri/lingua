@@ -1,7 +1,6 @@
 $space: 32px
-$mainWidth: 1280px
 $navWidth: 240px
-$thresh: $mainWidth + $navWidth
+$thresh: 1080px
 $mobileNavWidth: 33.3%
 $mobileSwitchHeight: 56pt
 $color: #D0D0D0
@@ -44,7 +43,7 @@ body
   font-family: "Arial", "UniHentaiKana", sans-serif
 
   @media screen and (max-width:$thresh)
-    text-size-adjust: 240%;
+    font-size: 200%
 
 main
   margin: 0
@@ -54,12 +53,19 @@ main
     margin-left: 0
 
   article
+    div.language
+      float: right
+      font-family: "Roboto Mono"
+      font-size: 75%
+
     margin: 0
     padding: 0
     padding-left: $space * 2
     padding-right: $space * 2
     @media screen and (max-width:$thresh)
       width: 100%
+      padding-left: $space
+      padding-right: $space
 
 nav
   z-index: 50
@@ -86,7 +92,7 @@ nav
   @media screen and (max-width:$thresh)
     padding-bottom: $space
     display: none
-    width: $mobileNavWidth
+    width: 66.6%
     background-color: $bgcolor
     overflow-y: scroll
 
@@ -123,7 +129,6 @@ nav
       width: 100%
       text-align: center
       @media screen and (max-width:$thresh)
-        font-size: 8pt
   ul
     margin-left: 0
     padding-left: 0
@@ -187,6 +192,7 @@ figure
 a
   color: $color
   &:link
+    border-width: 1px
     // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
   &:visited
     // text-shadow: none
@@ -228,6 +234,7 @@ ul, ol
 
 ul
   list-style-type: square
+  list-style-position: inside
 
 textarea
   font: inherit
@@ -236,6 +243,3 @@ textarea
 
 input[type="checkbox"]
   vertical-align: middle
-
-a.top
-  margin: 0

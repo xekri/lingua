@@ -1,11 +1,12 @@
 extend /_layout.pug
 
 block head
-	- const title = "author"
+	- const title = "auþor"
+	- const language = "english analytic"
 
 block main
 	+section("alias")
-		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) signifies the author.
+		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) signify þe auþor.
 
 	+section("pronoun")
 		center
@@ -25,9 +26,9 @@ block main
 			del determinism
 			| &#32;
 			del physicalism
-			| &#32;(i deny both free will and determinism)
+			| &#32;(i deny boþ free will and determinism)
 		li intersectional veganism
-			ul: li i still eat animal food therefore i am currently moral nihilist
+			ul: li i still eat animal food þerefore i am currently moral nihilist
 		li anti-natalism
 		li pro-mortalism
 		li anti-monogamism
@@ -54,17 +55,17 @@ block main
 
 			+section("programming")
 				ul
-					li Python (i do not like but i mainly use)
+					li Python (i not like but i mainly use)
 					li Haskell
 					li Scala
-					li Lean Prover (interested in)
+					li Lean Prover (hwat interests)
 
 		+section("computer science")
 			ul
 				li λ-calculus
 				li substructural logics
-				li proof theory
-				li category theory
+				li proof þeory
+				li category þeory
 
 	+section("account")
 		ul
@@ -82,6 +83,6 @@ block main
 			li: a(href="https://soundcloud.com/melanophil") SoundCloud
 
 	+section("donation")
-		p any amount of money will be great help. thank you!
+		p any amount of money will be great help. þank you!
 		figure
 			img#image-kyash(src="/images/kyash.png", width="320px")

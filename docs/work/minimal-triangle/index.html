@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+    </script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/script.js"></script>
+    <!-- local files-->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>СУМИ / MINIMAL-TRIANGLE</title>
+    <meta name="twitter:site" content="@sumimq">
+    <meta name="twitter:title" content="СУМИ / MINIMAL-TRIANGLE">
+    <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
+    <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
+    <meta name="twitter:card" content="summary">
+  </head>
+  <body>
+    <div id="nav-switch"></div>
+    <div class="center">
+      <nav>
+        <div id="nav-in">
+          <div id="logo"><a href="/"><img src="/images/sumi.png"></a></div>
+          <div id="datetime"></div>
+          <div class="my-div" id="menu">
+            <ul>
+              <li><a href="/">/</a></li>
+              <li><a href="/author">author</a></li>
+              <li><a href="/characters">character</a></li>
+              <li><a href="/favorite">favorite</a></li>
+              <!-- li: a(href="/thought") thought-->
+              <li><a href="/work">work</a></li>
+            </ul>
+            <div class="my-div" id="submenu">
+            </div>
+          </div>
+          <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumimq">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        </div>
+      </nav>
+    </div>
+    <main>
+      <article>
+        <p>þis site use Google Analytics.</p>
+        <section id="minimal-triangle"><a href="#minimal-triangle">
+            <h1>minimal-triangle</h1></a>
+          <center>
+            <textarea class="trigger" id="input">abcdefghijklm
+nopqrstuvwxyz
+.,:;-'`</textarea>
+            <table id="options">
+              <tr>
+                <td>character width</td>
+                <td>(posisive int)</td>
+                <td>
+                  <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>stroke width</td>
+                <td>(positive int)</td>
+                <td>
+                  <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>space between characters</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>space between lines</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>margin</td>
+                <td>(nonnegative float)</td>
+                <td>
+                  <input class="trigger" id="margin" type="number" min="0" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="color" type="color" value="#ffffff">
+                </td>
+              </tr>
+              <tr>
+                <td>background color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="bg-color" type="color" value="#000000">
+                </td>
+              </tr>
+            </table>
+            <canvas id="output"></canvas>
+            <div><a id="tweet">tweet</a></div>
+          </center>
+        </section>
+      </article>
+      <!--
+      +section("")
+        div(id="disqus_thread")
+        script.
+          var disqus_config = function () {
+            this.page.url = "http://sumi.space";
+            this.page.identifier = "sumi";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://sumi-2.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        noscript
+          | Please enable JavaScript to view the
+          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+      -->
+    </main>
+  </body>
+</html>
