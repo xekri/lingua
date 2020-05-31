@@ -14,9 +14,19 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <title>СУМИ / INTERSLAVIC ANALYTIC</title>
+    <title>СУМИ / MEĐUSLOVJANSKY ANALITIČNY</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const replace = (await import("/work/language/interslavic/replace.js")).default
+        const titleH = document.querySelector("h1")
+        const title = replace(titleH.innerHTML, true, true)
+        titleH.innerHTML = title
+        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+      })
+      
+    </script>
     <meta name="twitter:site" content="@sumimq">
-    <meta name="twitter:title" content="СУМИ / INTERSLAVIC ANALYTIC">
+    <meta name="twitter:title" content="СУМИ / MEĐUSLOVJANSKY ANALITIČNY">
     <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
@@ -47,9 +57,12 @@
     <main>
       <article>
         <p>þis site use Google Analytics.</p>
-        <section id="ınterslavic analytıc"><a href="#ınterslavic analytıc">
-            <h1>ınterslavic analytıc</h1></a>
-          <div class="language">language=englısh analytıc</div>
+        <section id="međuslovjansky analitičny">
+          <div class="tags">
+            <div class="tag">language='englısh analytıc'</div>
+            <div class="tag">version=1</div>
+          </div><a href="#međuslovjansky analitičny">
+            <h1>međuslovjansky analitičny</h1></a>
           <ul id="check">
             <li>
               <input type="checkbox" name="uppercase">
@@ -76,17 +89,25 @@
               </ul>
             </li>
           </ul>
-          <section id="orthography"><a href="#orthography">
+          <section id="orthography">
+            <div class="tags">
+            </div><a href="#orthography">
               <h1>orthography</h1></a>
             <p>orthography of ıt be <a href="http://steen.free.fr/interslavic/orthography.html#etymological_alphabet">etymologıcal alphabet</a> hwıch ı dıd modıfy.</p>
             <center>
-              <textarea id="src">k c h š č ž ć đ v å ę ų ė ȯ y
+              <textarea id="src">i y u e ė ę o ȯ ų a å
+k č c g ž h š
+t ć d đ s z n
+p b f v m
+
 međuslovjansky analitičny</textarea>
               <textarea readonly id="sink"></textarea>
               <div><a id="tweet">tweet</a></div>
             </center>
           </section>
-          <section id="grammar"><a href="#grammar">
+          <section id="grammar">
+            <div class="tags">
+            </div><a href="#grammar">
               <h1>grammar</h1></a>
             <table>
               <tr>
@@ -109,7 +130,9 @@ međuslovjansky analitičny</textarea>
               </tr>
             </table>
             <p>we can ındıcate case wıþ eıþer word order or preposıtıon.</p>
-            <section id="pronoun"><a href="#pronoun">
+            <section id="pronoun">
+              <div class="tags">
+              </div><a href="#pronoun">
                 <h1>pronoun</h1></a>
               <div class="tables">
                 <table class="transpose has-td-replaced">
@@ -175,7 +198,9 @@ međuslovjansky analitičny</textarea>
                 </table>
               </div>
             </section>
-            <section id="verb"><a href="#verb">
+            <section id="verb">
+              <div class="tags">
+              </div><a href="#verb">
                 <h1>verb</h1></a>
               <table class="has-td-replaced">
                 <caption>aspect, tense, mood</caption>
@@ -271,7 +296,9 @@ međuslovjansky analitičny</textarea>
               
               -->
             </section>
-            <section id="adȷectıve"><a href="#adȷectıve">
+            <section id="adȷectıve">
+              <div class="tags">
+              </div><a href="#adȷectıve">
                 <h1>adȷectıve</h1></a>
               <table class="has-td-replaced">
                 <tr>
@@ -292,7 +319,9 @@ međuslovjansky analitičny</textarea>
                 </tr>
               </table>
             </section>
-            <section id="numeral"><a href="#numeral">
+            <section id="numeral">
+              <div class="tags">
+              </div><a href="#numeral">
                 <h1>numeral</h1></a>
               <table class="transpose has-td-replaced">
                 <tr>
@@ -369,7 +398,9 @@ međuslovjansky analitičny</textarea>
               <p>1023 =&#x20;<span class="replaced">jedin nula dva tri</span>&#x20;=&#x20;<span class="replaced">jedin tysęć dva desęt́ tri</span>
               </p>
             </section>
-            <section id="example"><a href="#example">
+            <section id="example">
+              <div class="tags">
+              </div><a href="#example">
                 <h1>example</h1></a>
               <table>
                 <caption>rıse (canno ȷouco)</caption>

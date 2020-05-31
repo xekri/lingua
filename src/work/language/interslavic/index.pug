@@ -4,8 +4,11 @@ mixin replaced(s)
 	span.replaced= s
 
 block head
-	- const title = "ınterslavic analytıc";
-	- const language = "englısh analytıc"
+	-
+		const title = "međuslovjansky analitičny"
+		const titleIsva = true
+		const language = "englısh analytıc"
+		const tags = [`language='${language}'`, "version=1"]
 
 block main
 	ul#check
@@ -33,7 +36,11 @@ block main
 
 		center
 			textarea#src.
-				k c h š č ž ć đ v å ę ų ė ȯ y
+				i y u e ė ę o ȯ ų a å
+				k č c g ž h š
+				t ć d đ s z n
+				p b f v m
+
 				međuslovjansky analitičny
 			textarea(readonly)#sink
 

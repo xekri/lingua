@@ -1,69 +1,62 @@
 extend /_layout.pug
 
 block head
-	- const title = "auþor"
-	- const language = "english analytic"
+	-
+		const title = "vlastnik"
+		const titleIsva = true
+		const tags = ["language='englısh analytıc'"]
+
 
 block main
 	+section("alias")
-		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) signify þe auþor.
+		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) sıgnıfy þe auþor.
 
 	+section("pronoun")
-		center
-			table.transpose
-				tr
-					th acc.
-					td ve
-				tr
-					th nom.
-					td ver
-				tr
-					th gen.
-					td vis
+		a(href="https://en.wiktionary.org/wiki/ve#English") ve
 
 	+section("ideology"): ul
 		li
-			del determinism
+			del determınısm
 			| &#32;
-			del physicalism
-			| &#32;(i deny boþ free will and determinism)
-		li intersectional veganism
-			ul: li i still eat animal food þerefore i am currently moral nihilist
-		li anti-natalism
-		li pro-mortalism
-		li anti-monogamism
+			del physıcalısm
+			| &#32;(ı deny boþ free wıll and determınısm)
+		li intersectıonal veganısm
+			ul: li ı stıll eat anımal food þerefore ı am currently moral nıhılıst
+		li antı-natalısm
+		li pro-mortalısm
+		li antı-monogamısm
 		li
-			del social liberalism
-			| &#32;egalitarianism (?)
+			del socıal lvberalısm
+			| &#32;egalıtarıanısm (?)
 
 	+section("sexuality")
 		ul
-			li cisgender
+			li cısgender
 			li androsexual
-			li androromantic
+			li androromantıc
 			li polyamory
 
 	+section("interest")
 		+section("language")
 			+section("human")
 				ul
-					li japanese (native)
-					li english (TOEIC L&R 810)
-					li lojban (beginner)
-					li cantonese (beginner)
-					li russian (beginner)
+					li japanese (natıve)
+					li englısh (TOEIC L&R 810)
+					li lojban (begınner)
+					li cantonese (begınner)
+					li russıan (begınner)
 
 			+section("programming")
 				ul
-					li Python (i not like but i mainly use)
+					li Python (ı not lıke but ı maınly use)
 					li Haskell
 					li Scala
-					li Lean Prover (hwat interests)
+					li Lean Prover (hwat ınterests)
 
 		+section("computer science")
 			ul
 				li λ-calculus
-				li substructural logics
+				li substructural logıcs
 				li proof þeory
 				li category þeory
 
@@ -83,6 +76,6 @@ block main
 			li: a(href="https://soundcloud.com/melanophil") SoundCloud
 
 	+section("donation")
-		p any amount of money will be great help. þank you!
+		p any amount of money wıll be great help. þank you!
 		figure
 			img#image-kyash(src="/images/kyash.png", width="320px")

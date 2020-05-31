@@ -14,9 +14,19 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <title>СУМИ / FAVORITE</title>
+    <title>СУМИ / OMILJENY</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const replace = (await import("/work/language/interslavic/replace.js")).default
+        const titleH = document.querySelector("h1")
+        const title = replace(titleH.innerHTML, true, true)
+        titleH.innerHTML = title
+        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+      })
+      
+    </script>
     <meta name="twitter:site" content="@sumimq">
-    <meta name="twitter:title" content="СУМИ / FAVORITE">
+    <meta name="twitter:title" content="СУМИ / OMILJENY">
     <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
@@ -47,9 +57,13 @@
     <main>
       <article>
         <p>þis site use Google Analytics.</p>
-        <section id="favorite"><a href="#favorite">
-            <h1>favorite</h1></a>
-          <section id="music (by musicians)"><a href="#music (by musicians)">
+        <section id="omiljeny">
+          <div class="tags">
+          </div><a href="#omiljeny">
+            <h1>omiljeny</h1></a>
+          <section id="music (by musicians)">
+            <div class="tags">
+            </div><a href="#music (by musicians)">
               <h1>music (by musicians)</h1></a>
             <details>
               <ul>
@@ -103,8 +117,10 @@
               </ul>
             </details>
           </section>
-          <section id="videos"><a href="#videos">
-              <h1>videos</h1></a>
+          <section id="video">
+            <div class="tags">
+            </div><a href="#video">
+              <h1>video</h1></a>
             <ul>
               <li>IDO: INVADED</li>
               <li>John Wick</li>
@@ -115,8 +131,10 @@
               <li>プリティーリズム レインボーライブ</li>
             </ul>
           </section>
-          <section id="games"><a href="#games">
-              <h1>games</h1></a>
+          <section id="game">
+            <div class="tags">
+            </div><a href="#game">
+              <h1>game</h1></a>
             <ul>
               <li><ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト</li>
               <li>アイドリッシュセブン</li>
@@ -126,8 +144,10 @@
               <li>メギド72</li>
             </ul>
           </section>
-          <section id="novels"><a href="#novels">
-              <h1>novels</h1></a>
+          <section id="novel">
+            <div class="tags">
+            </div><a href="#novel">
+              <h1>novel</h1></a>
             <details>
               <ul>
                 <li>1984（George Orwell）</li>
@@ -147,13 +167,19 @@
               </ul>
             </details>
           </section>
-          <section id="mangas"><a href="#mangas">
-              <h1>mangas</h1></a>
-            <section id="boys' loves (by authors)"><a href="#boys' loves (by authors)">
-                <h1>boys' loves (by authors)</h1></a><a href="https://www.chil-chil.net/myPage/tgt_user_id/117165">ちるちる</a>
+          <section id="manga">
+            <div class="tags">
+            </div><a href="#manga">
+              <h1>manga</h1></a>
+            <section id="male homosexual (by authors)">
+              <div class="tags">
+              </div><a href="#male homosexual (by authors)">
+                <h1>male homosexual (by authors)</h1></a><a href="https://www.chil-chil.net/myPage/tgt_user_id/117165">ちるちる</a>
             </section>
-            <section id="non-boys' loves"><a href="#non-boys' loves">
-                <h1>non-boys' loves</h1></a>
+            <section id="other">
+              <div class="tags">
+              </div><a href="#other">
+                <h1>other</h1></a>
               <details>
                 <ul>
                   <li>GUNSLINGER GIRL</li>

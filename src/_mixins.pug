@@ -2,8 +2,11 @@ mixin myDiv(title)
 	div.my-div(id=title)
 		block
 
-mixin section(title)
+mixin section(title, tags=[])
 	section(id=title)
+		div.tags
+			for tag in tags
+				div.tag= tag
 		if title
 			a(href="#" + title): h1= title
 		block

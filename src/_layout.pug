@@ -26,6 +26,7 @@ html(lang="en-GB")
     script(src="script.js")
 
     block head
+
     -
       const titleFull =
       (
@@ -34,6 +35,16 @@ html(lang="en-GB")
           : `${author.name.ru} / ${title}`
       ).toUpperCase().replace(/ȷ/g, "J")
     title= titleFull
+
+    if titleIsva
+      script.
+        document.addEventListener("DOMContentLoaded", async () => {
+          const replace = (await import("/work/language/interslavic/replace.js")).default
+          const titleH = document.querySelector("h1")
+          const title = replace(titleH.innerHTML, true, true)
+          titleH.innerHTML = title
+          document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+        })
 
     meta(name="twitter:site", content="@" + author.twitter)
     meta(name="twitter:title", content=titleFull)
@@ -73,10 +84,12 @@ html(lang="en-GB")
       article
         p þis site use Google Analytics.
 
-        +section(title)
-          if language
-            div.language language=#{language}
-          block main
+        if tags
+          +section(title, tags)
+            block main
+        else
+          +section(title)
+            block main
 
       //
         +section("")

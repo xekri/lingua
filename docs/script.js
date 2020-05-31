@@ -15,11 +15,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");
   const submenu = document.getElementById("submenu");
 
+  section.removeAttribute("id");
+
   if(subsections.length > 0) {
     const ul = document.createElement("ul");
 
     const a = document.createElement("a");
-    a.setAttribute("href", "#" + section.getAttribute("id"));
+    a.setAttribute("href", "#");
     a.append(document.createTextNode("/"));
     const li = document.createElement("li");
     li.append(a);
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     for(const subsection of subsections) {
       const title = subsection.getAttribute("id");
       const a = document.createElement("a");
-      a.setAttribute("href", "#" + title);
+      a.setAttribute("href", "#" + encodeURIComponent(title));
       a.append(document.createTextNode(title));
       const li = document.createElement("li");
       li.append(a);

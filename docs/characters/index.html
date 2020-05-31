@@ -14,9 +14,19 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <title>СУМИ / CHARACTERS</title>
+    <title>СУМИ / PERSONAŽ</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const replace = (await import("/work/language/interslavic/replace.js")).default
+        const titleH = document.querySelector("h1")
+        const title = replace(titleH.innerHTML, true, true)
+        titleH.innerHTML = title
+        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+      })
+      
+    </script>
     <meta name="twitter:site" content="@sumimq">
-    <meta name="twitter:title" content="СУМИ / CHARACTERS">
+    <meta name="twitter:title" content="СУМИ / PERSONAŽ">
     <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
@@ -47,8 +57,10 @@
     <main>
       <article>
         <p>þis site use Google Analytics.</p>
-        <section id="characters"><a href="#characters">
-            <h1>characters</h1></a>
+        <section id="personaž">
+          <div class="tags">
+          </div><a href="#personaž">
+            <h1>personaž</h1></a>
           <ul>
             <li><a href="suzuri">suzurı</a></li>
             <li><a href="mitur">mıtur</a></li>

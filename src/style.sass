@@ -152,7 +152,6 @@ main section
   section
     margin-bottom: 0
 
-
 section, .my-div
   margin: 0
   padding: 0
@@ -168,9 +167,12 @@ section, .my-div
 
   h1
     margin: 0
-    margin-top: $space
+    margin-bottom: $space
     font-weight: normal
     font-size: inherit
+
+section
+  padding-top: $space
 
 .my-div
   margin-bottom: $space
@@ -243,3 +245,21 @@ textarea
 
 input[type="checkbox"]
   vertical-align: middle
+
+div.tags
+  margin: 0
+  margin-bottom: $space
+  padding: 0
+  float: right
+  div.tag
+    clear: both
+    display: inline-block
+    margin: 0
+    margin-left: 8px
+    &:first-child
+      margin-left: 0
+    padding: 2px
+    font-family: "Roboto Mono"
+    font-size: 80%
+    border: 1px solid
+    border-radius: 4px
