@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const onInput = () => {
     document.getElementById("sink").value = replace(src.value, chkUp.checked, chkCy.checked)
 
-    tweet.setAttribute("href", encodeURI(`https://twiter.com/intent/tweet?text=${
+    tweet.setAttribute("href", encodeURI(`https://twitter.com/share?text=${
       src.value
       + "\n---\n" + replace(src.value, false, false)
       + "\n---\n" + replace(src.value, false, true)
