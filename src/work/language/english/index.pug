@@ -1,6 +1,83 @@
 extend /_layout.pug
 
 block head
-	- const title = "english simplified";
+	- const title = "englısh simplified (pseudo-english)";
+	- const tags = ["language=english", "draft"]
 
 block main
+	+section("orthography")
+		table
+			tr
+				th standard
+				th simplified
+				th
+			tr
+				td i, j
+				td ı, ȷ
+				td remove dots.
+			tr
+				td th
+				td þ
+				td if not from greek θ
+			tr
+				td wh
+				td hw
+				td in interrogatives
+
+	+section("grammar")
+		table
+			tr
+				th standard
+				th simplified
+				th
+			tr
+				td <i>noun</i>s
+				td (many | more than one) <i>noun</i>
+				td no plural form. just add quantifiers
+			tr
+				td <i>noun</i>, an <i>noun</i>, the <i>noun</i>
+				td <i>noun</i>, <i>noun</i>, <i>noun</i>
+				td no article
+			tr
+				td <i>adj</i> <i>noun</i>
+				td <i>noun</i> <i>adj</i>
+				td
+			tr
+			tr
+				td: ul
+					li go
+					li goes
+					li went
+					li have gone
+					li be going
+					li will have gone
+				td: ul
+					li go
+					li go
+					li did go
+					li done go
+					li doing go
+					li will done go
+				td no declension (optional)
+			tr
+				td do <i>noun</i> <i>verb</i> ?
+				td (whether) <i>verb</i> <i>noun</i> ?
+				td
+			tr
+				td <i>noun</i> do not <i>verb</i>
+				td <i>noun</i> not <i>verb</i>
+				td
+			tr
+				td you, he, she, it
+				td þou, ve, ve, ve
+				td no gender
+			tr
+				td: ul
+					li i, me, my, mine
+					li you, you, your, yous
+					li he, him, his, his
+				td: ul
+					li (se) i, (þone) i, of i, of i
+					li (se) þou, (þone) þou, of þou, of þou
+					li (se) ve, (þone) ve, of ve, of ve
+				td no declension.

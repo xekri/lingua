@@ -20,6 +20,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   if(subsections.length > 0) {
     const ul = document.createElement("ul");
 
+    const aParent = document.createElement("a");
+    aParent.setAttribute("href", "../");
+    aParent.append(document.createTextNode("../"));
+    const liParent = document.createElement("li");
+    liParent.append(aParent);
+    ul.append(liParent);
+
     const a = document.createElement("a");
     a.setAttribute("href", "#");
     a.append(document.createTextNode("/"));
