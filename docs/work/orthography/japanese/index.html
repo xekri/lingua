@@ -14,9 +14,19 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <title>СУМИ / JAPANESE</title>
+    <title>СУМИ / JAPONSKY</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const replace = (await import("/work/language/interslavic/replace.js")).default
+        const titleH = document.querySelector("h1")
+        const title = replace(titleH.innerHTML, true, true)
+        titleH.innerHTML = title
+        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+      })
+      
+    </script>
     <meta name="twitter:site" content="@sumimq">
-    <meta name="twitter:title" content="СУМИ / JAPANESE">
+    <meta name="twitter:title" content="СУМИ / JAPONSKY">
     <!-- meta(name="twitter:description", content=`${author.name.la}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
@@ -47,233 +57,84 @@
     <main>
       <article>
         <p>þis site use Google Analytics.</p>
-        <section id="japanese">
+        <section id="japonsky">
           <div class="tags">
-          </div><a href="#japanese">
-            <h1>japanese</h1></a>
+          </div><a href="#japonsky">
+            <h1>japonsky</h1></a>
           <p>under construction</p>
           <!-- http://www.inagaki.nuie.nagoya-u.ac.jp/research/derivation_grammar.html-->
-          <section id="syllable">
-            <div class="tags">
-            </div><a href="#syllable">
-              <h1>syllable</h1></a>
-            <table>
-              <tr>
-                <td>い  i</td>
-                <td>え  e</td>
-                <td>あ  a</td>
-                <td>お  o</td>
-                <td>う  u</td>
-                <td>𛀆 ji</td>
-                <td>𛀁 je</td>
-                <td>や    ja</td>
-                <td>よ   jo</td>
-                <td>ゆ    ju</td>
-                <td>ゐ vi</td>
-                <td>ゑ ve</td>
-                <td>わ va</td>
-                <td>を vo</td>
-                <td>vu</td>
-                <td>ん q n m</td>
-                <td>っ k t f</td>
-              </tr>
-              <tr>
-                <td>き ci</td>
-                <td>け ce</td>
-                <td>か ca</td>
-                <td>こ co</td>
-                <td>く cu</td>
-                <td>     </td>
-                <td>     </td>
-                <td>きゃ cja</td>
-                <td>きょ cjo</td>
-                <td>きゅ cju</td>
-              </tr>
-              <tr>
-                <td>ぎ gi</td>
-                <td>げ ge</td>
-                <td>が ga</td>
-                <td>ご go</td>
-                <td>ぐ gu</td>
-                <td>     </td>
-                <td>     </td>
-                <td>ぎゃ gja</td>
-                <td>ぎょ gjo</td>
-                <td>ぎゅ gju</td>
-              </tr>
-              <tr>
-                <td>    </td>
-                <td>      </td>
-                <td>     </td>
-                <td>     </td>
-                <td>     </td>
-                <td>    </td>
-                <td>    </td>
-                <td>        </td>
-                <td>       </td>
-                <td>       </td>
-                <td>く𛅐 cvi</td>
-                <td>く𛅥 cve</td>
-                <td>くゎ cva</td>
-              </tr>
-              <tr>
-                <td>    </td>
-                <td>      </td>
-                <td>     </td>
-                <td>     </td>
-                <td>     </td>
-                <td>    </td>
-                <td>    </td>
-                <td>        </td>
-                <td>       </td>
-                <td>       </td>
-                <td>ぐ𛅐 gve</td>
-                <td>ぐ𛅥 gve</td>
-                <td>ぐゎ gva</td>
-              </tr>
-              <tr>
-                <td>ち ti</td>
-                <td>て te</td>
-                <td>た ta</td>
-                <td>と to</td>
-                <td>つ tu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>ちゃ tja</td>
-                <td>ちょ tjo</td>
-                <td>ちゅ tju</td>
-              </tr>
-              <tr>
-                <td>ぢ di</td>
-                <td>で de</td>
-                <td>だ da</td>
-                <td>ど do</td>
-                <td>づ du</td>
-                <td>    </td>
-                <td>     </td>
-                <td>ぢゃ dja</td>
-                <td>ぢょ djo</td>
-                <td>ぢゅ dju</td>
-              </tr>
-              <tr>
-                <td>し si</td>
-                <td>せ se</td>
-                <td>さ sa</td>
-                <td>そ so</td>
-                <td>す su</td>
-                <td>    </td>
-                <td>     </td>
-                <td>しゃ sja</td>
-                <td>しょ sjo</td>
-                <td>しゅ sju</td>
-              </tr>
-              <tr>
-                <td>じ zi</td>
-                <td>ぜ ze</td>
-                <td>ざ za</td>
-                <td>ぞ zo</td>
-                <td>ず zu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>じゃ zja</td>
-                <td>じょ zjo</td>
-                <td>じゅ zju</td>
-              </tr>
-              <tr>
-                <td>に ni</td>
-                <td>ね ne</td>
-                <td>な na</td>
-                <td>の no</td>
-                <td>ぬ nu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>にゃ nja</td>
-                <td>にょ njo</td>
-                <td>にゅ nju</td>
-              </tr>
-              <tr>
-                <td>ひ fi</td>
-                <td>へ fe</td>
-                <td>は fa</td>
-                <td>ほ fo</td>
-                <td>ふ fu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>ひゃ fja</td>
-                <td>ひょ fjo</td>
-                <td>ひゅ fju</td>
-              </tr>
-              <tr>
-                <td>び bi</td>
-                <td>べ be</td>
-                <td>ば ba</td>
-                <td>ぼ bo</td>
-                <td>ぶ bu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>びゃ bja</td>
-                <td>びょ bjo</td>
-                <td>びゅ bju</td>
-              </tr>
-              <tr>
-                <td>み mi</td>
-                <td>め me</td>
-                <td>ま ma</td>
-                <td>も mo</td>
-                <td>む mu</td>
-                <td>    </td>
-                <td>     </td>
-                <td>みゃ mja</td>
-                <td>みょ mjo</td>
-                <td>みゅ mju</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-          </section>
-          <!-- +section("vocabulary")
-          table#conj
-          	tr
-          		th 幹
-          		th 義
-          		th かな
-          		th 未然
-          		th 連用
-          		th 終止
-          		th 連體
-          		th 已然
-          		th 命令
-          	tr
-          		td: +ruby("爲", "s")
-          		td do
-          		td する
-          		+tds("si a'na|si i'mas|su r'u|su r'u|su r'eba|se jo".split("|"))
-          	tr
-          		td: +ruby("來", "c")
-          		td come
-          		td くる
-          		+tds("ko a'na|ki i'mas|ku r'u|ku r'u|ku r'eba|ko i".split("|"))
-          	tr
-          		td: +ruby("言", "if")
-          		td say
-          		td いふ
-          		+tds("if a'na|if i'mas|if r'u|if r'u|if r'eba|if e".split("|"))
-          	tr
-          		td: +ruby("聞", "cic")
-          		td hear
-          		td きく
-          		+tds("cic a'na|cic i'mas|cic r'u|cic r'u|cic r'eba|cic e".split("|"))
-          	tr
-          		td: +ruby("見", "mi")
-          		td see
-          		td みる
-          		+tds("mi a'na|mi i'mas|mi r'u|mi r'u|mi re'ba|mi jo".split("|"))
-          -->
+          <p>空白の入れ方は未定。</p>
+          <table>
+            <caption>吾輩は猫である [夏目, 1905]</caption>
+            <tr>
+              <td>吾輩は猫である。</td>
+              <td>vagaFai fa neco dearu.</td>
+            </tr>
+            <tr>
+              <td>名前はまだ無い。</td>
+              <td>namae fa mada nai.</td>
+            </tr>
+            <tr>
+              <td>どこで生まれたか頓と見當がつかぬ。</td>
+              <td>doco de umareta ca Ton to CenToŋ ga tucanu.</td>
+            </tr>
+            <tr>
+              <td>何ても暗薄いじめじめした所でニャー〳〵泣いて居た事丈は記憶して居る。</td>
+              <td>nante mo curausui *zimezime*sita tocoro de *njaanjaa* na`citevita coto dace fa CiOc siteviru.</td>
+            </tr>
+            <tr>
+              <td>吾輩はこゝで始めて人間といふものを見た。</td>
+              <td>vagaFai fa cocode fazimete NinGen to ifu mono vo mita.</td>
+            </tr>
+            <tr>
+              <td>然もあとで聞くとそれは書生といふ人間で一番獰惡な種族であつたさうだ。</td>
+              <td>sicamo ato de cicu to sore fa SjoSeŋ to ifu NinGen de ItBan NaŋAc na SjuZoc deartasau da.</td>
+            </tr>
+            <tr>
+              <td>此書生といふのは時々我々を捕へて煮て食ふといふ話である。</td>
+              <td>cono SjoSeŋ to ifu no fa tocidoci varevare vo tucamafete nite cufu to ifu fanasi dearu.</td>
+            </tr>
+            <tr>
+              <td>然し其當時は何といふ考もなかつたから別段恐しいとも思はなかつた。</td>
+              <td>sicasi sono TaŋZi fa nan to ifu cangafe mo nacatta cara BetDan osorosii tomo omofanacarta.</td>
+            </tr>
+            <tr>
+              <td>但彼の掌に載せられてスーと持ち上げられた時何だかフハフハした感じが有つた許りである。</td>
+              <td>tada care no tenofira ni noserarete *suu*to motiagerareta toci nandaca *fufafufa*sita Can-zi ga arta bacari dearu.</td>
+            </tr>
+            <tr>
+              <td>掌の上で少し落ち付いて書生の顏を見たが所謂人間といふものゝ見始であらう。</td>
+              <td>tenofira no ue de sucosi otitu`cite SjoSeŋ no cafo vo mita ga ifajuru NinGen to ifu mono no mifazime deara`mu.</td>
+            </tr>
+            <tr>
+              <td>此の時妙なものだと思つた感じが今でも殘つて居る。</td>
+              <td>cono toci Mjau na mono da to omofta Can-zi ga ima de mo nocorteviru</td>
+            </tr>
+            <tr>
+              <td>第一毛を以て裝飾されべき筈の顏がつる〳〵して丸で藥罐だ。</td>
+              <td>DaiIt ce vo motte SoŋSjoc sarebeci fazu no cafo ga *turuturu*site maru de JacCan da.</td>
+            </tr>
+            <tr>
+              <td>其後猫にも大分逢つたがこんな片輪には一度も出會はした事がない。</td>
+              <td>sonoGo neco ni mo DaiBun afta ga conna catava ni fa ItDo mo decufasita coto ga nai.</td>
+            </tr>
+            <tr>
+              <td>加之顏の眞中が餘りに突起して居る。</td>
+              <td>nominarazu cafo no manaca ga amarini TotCi siteviru.</td>
+            </tr>
+            <tr>
+              <td>そうして其穴の中から時々ぷう〳〵と烟を吹く。</td>
+              <td>sau site sono ana no naca cara tocidoci *puupuu*to cemuri vo facu.</td>
+            </tr>
+            <tr>
+              <td>どうも咽せぽくて實に弱つた。</td>
+              <td>dou mo muse-focute Zit-ni jofarta.</td>
+            </tr>
+            <tr>
+              <td>是が人間の飮む烟草といふものである事は漸く此頃知つた。</td>
+              <td>core ga NinGen no nomu tabaco to ifu mono dearu coto fa jaujacu cono goro sirta.</td>
+            </tr>
+          </table>
         </section>
       </article>
       <!--

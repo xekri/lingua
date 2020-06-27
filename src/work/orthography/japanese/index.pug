@@ -1,7 +1,8 @@
 extend /_layout.pug
 
 block head
-	- const title = "japanese"
+	- const title = "japonsky"
+	- const titleIsva = true
 
 mixin ruby(main, over)
 	<ruby>#{main}<rt>#{over}</rt></ruby>#{after}
@@ -12,61 +13,50 @@ mixin tds(xs)
 
 block main
 	p under construction
-
 	// http://www.inagaki.nuie.nagoya-u.ac.jp/research/derivation_grammar.html
 
-	+section("syllable")
-		table
-			+trs(
-				[ "い  i|え  e|あ  a|お  o|う  u|𛀆 ji|𛀁 je|や    ja|よ   jo|ゆ    ju|ゐ vi|ゑ ve|わ va|を vo|vu|ん q n m|っ k t f"
-				, "き ci|け ce|か ca|こ co|く cu|     |     |きゃ cja|きょ cjo|きゅ cju"
-				, "ぎ gi|げ ge|が ga|ご go|ぐ gu|     |     |ぎゃ gja|ぎょ gjo|ぎゅ gju"
-				, "    |      |     |     |     |    |    |        |       |       |く𛅐 cvi|く𛅥 cve|くゎ cva"
-				, "    |      |     |     |     |    |    |        |       |       |ぐ𛅐 gve|ぐ𛅥 gve|ぐゎ gva"
-				, "ち ti|て te|た ta|と to|つ tu|    |     |ちゃ tja|ちょ tjo|ちゅ tju"
-				, "ぢ di|で de|だ da|ど do|づ du|    |     |ぢゃ dja|ぢょ djo|ぢゅ dju"
-				, "し si|せ se|さ sa|そ so|す su|    |     |しゃ sja|しょ sjo|しゅ sju"
-				, "じ zi|ぜ ze|ざ za|ぞ zo|ず zu|    |     |じゃ zja|じょ zjo|じゅ zju"
-				, "に ni|ね ne|な na|の no|ぬ nu|    |     |にゃ nja|にょ njo|にゅ nju"
-				, "ひ fi|へ fe|は fa|ほ fo|ふ fu|    |     |ひゃ fja|ひょ fjo|ひゅ fju"
-				, "び bi|べ be|ば ba|ぼ bo|ぶ bu|    |     |びゃ bja|びょ bjo|びゅ bju"
-				, "み mi|め me|ま ma|も mo|む mu|    |     |みゃ mja|みょ mjo|みゅ mju|||||||"
-				].map(tds => tds.split("|")))
+	p 空白の入れ方は未定。
 
-	// +section("vocabulary")
-		table#conj
+	table
+		caption 吾輩は猫である [夏目, 1905]
+		-
+			const xys =
+				[ [ "吾輩は猫である。"
+					, "vagaFai fa neco dearu." ]
+				, [ "名前はまだ無い。"
+					, "namae fa mada nai." ]
+				, [ "どこで生まれたか頓と見當がつかぬ。"
+					, "doco de umareta ca Ton to CenToŋ ga tucanu." ]
+				, [ "何ても暗薄いじめじめした所でニャー〳〵泣いて居た事丈は記憶して居る。"
+					, "nante mo curausui *zimezime*sita tocoro de *njaanjaa* na`citevita coto dace fa CiOc siteviru." ]
+				, [ "吾輩はこゝで始めて人間といふものを見た。"
+					, "vagaFai fa cocode fazimete NinGen to ifu mono vo mita." ]
+				, [ "然もあとで聞くとそれは書生といふ人間で一番獰惡な種族であつたさうだ。"
+					, "sicamo ato de cicu to sore fa SjoSeŋ to ifu NinGen de ItBan NaŋAc na SjuZoc deartasau da." ]
+				, [ "此書生といふのは時々我々を捕へて煮て食ふといふ話である。"
+					, "cono SjoSeŋ to ifu no fa tocidoci varevare vo tucamafete nite cufu to ifu fanasi dearu." ]
+				, [ "然し其當時は何といふ考もなかつたから別段恐しいとも思はなかつた。"
+					, "sicasi sono TaŋZi fa nan to ifu cangafe mo nacatta cara BetDan osorosii tomo omofanacarta." ]
+				, [ "但彼の掌に載せられてスーと持ち上げられた時何だかフハフハした感じが有つた許りである。"
+					, "tada care no tenofira ni noserarete *suu*to motiagerareta toci nandaca *fufafufa*sita Can-zi ga arta bacari dearu." ]
+				, [ "掌の上で少し落ち付いて書生の顏を見たが所謂人間といふものゝ見始であらう。"
+					, "tenofira no ue de sucosi otitu`cite SjoSeŋ no cafo vo mita ga ifajuru NinGen to ifu mono no mifazime deara`mu." ]
+				, [ "此の時妙なものだと思つた感じが今でも殘つて居る。"
+					, "cono toci Mjau na mono da to omofta Can-zi ga ima de mo nocorteviru" ]
+				, [ "第一毛を以て裝飾されべき筈の顏がつる〳〵して丸で藥罐だ。"
+					, "DaiIt ce vo motte SoŋSjoc sarebeci fazu no cafo ga *turuturu*site maru de JacCan da." ]
+				,	[ "其後猫にも大分逢つたがこんな片輪には一度も出會はした事がない。"
+					, "sonoGo neco ni mo DaiBun afta ga conna catava ni fa ItDo mo decufasita coto ga nai." ]
+				, [ "加之顏の眞中が餘りに突起して居る。"
+					, "nominarazu cafo no manaca ga amarini TotCi siteviru." ]
+				, [ "そうして其穴の中から時々ぷう〳〵と烟を吹く。"
+					, "sau site sono ana no naca cara tocidoci *puupuu*to cemuri vo facu." ]
+				, [ "どうも咽せぽくて實に弱つた。"
+					, "dou mo muse-focute Zit-ni jofarta." ]
+				, [ "是が人間の飮む烟草といふものである事は漸く此頃知つた。"
+					, "core ga NinGen no nomu tabaco to ifu mono dearu coto fa jaujacu cono goro sirta." ]
+				]
+		for xy in xys
 			tr
-				th 幹
-				th 義
-				th かな
-				th 未然
-				th 連用
-				th 終止
-				th 連體
-				th 已然
-				th 命令
-			tr
-				td: +ruby("爲", "s")
-				td do
-				td する
-				+tds("si a'na|si i'mas|su r'u|su r'u|su r'eba|se jo".split("|"))
-			tr
-				td: +ruby("來", "c")
-				td come
-				td くる
-				+tds("ko a'na|ki i'mas|ku r'u|ku r'u|ku r'eba|ko i".split("|"))
-			tr
-				td: +ruby("言", "if")
-				td say
-				td いふ
-				+tds("if a'na|if i'mas|if r'u|if r'u|if r'eba|if e".split("|"))
-			tr
-				td: +ruby("聞", "cic")
-				td hear
-				td きく
-				+tds("cic a'na|cic i'mas|cic r'u|cic r'u|cic r'eba|cic e".split("|"))
-			tr
-				td: +ruby("見", "mi")
-				td see
-				td みる
-				+tds("mi a'na|mi i'mas|mi r'u|mi r'u|mi re'ba|mi jo".split("|"))
+				td= xy[0]
+				td= xy[1]
