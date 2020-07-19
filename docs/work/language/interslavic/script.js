@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const replace = (await import("./replace.js")).default
 
-
   const chkUp = document.querySelector("input[name='uppercase']");
   const chkCy = document.querySelector("input[name='cyrillic']");
   const src =  document.getElementById("src")

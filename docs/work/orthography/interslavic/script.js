@@ -2,40 +2,47 @@ const nuOrtho = s =>
   s
   .toLowerCase()
 
-  .replace(/dž/g, "ǯ")
-  //.replace(/č/g, "")
-  //.replace(/š/g, "x\u030C")
-  //.replace(/ž/g, "")
+  .replace(/v/g, "w")
+  .replace(/h/g, "x")
+  .replace(/i/g, "jy")
+  .replace(/y/g, "i")
 
-  .replace(/ť/g, "t́")
-  .replace(/ď/g, "d́")
-  //.replace(/ś/g, "s")
-  //.replace(/ź/g, "z")
-  .replace(/ň/g, "ń")
-  .replace(/ř/g, "ŕ")
-  .replace(/ľ/g, "ĺ")
+  .replace(/č/g, "c\u0307")
+  .replace(/š/g, "x\u0307")
+  .replace(/ž/g, "g\u0307")
 
-  .replace(/ć/g, "ť")
-  .replace(/đ/g, "ď")
+  .replace(/ť/g, "tj")
+  .replace(/ď/g, "dj")
+  .replace(/ś/g, "sj")
+  .replace(/ź/g, "zj")
+  .replace(/ň/g, "nj")
+  .replace(/ř/g, "rj")
+  .replace(/ľ/g, "lj")
 
-  .replace(/ç/g, "ǩ")
-  .replace(/ʒ/g, "ǧ")
+  .replace(/ć/g, "t\u0301")
+  .replace(/đ/g, "d\u0301")
 
-  .replace(/ṱ/g, "tl")
-  .replace(/ḓ/g, "dl")
+  .replace(/ç/g, "c\u0301")
+  .replace(/ʒ/g, "g\u0301")
+
+  //.replace(/ṱ/g, "t\u0306")
+  //.replace(/ḓ/g, "d\u0306")
 
   .replace(/ṙ/g, "r\u0304")
-  .replace(/ŕ/g, "r\u0304\u0301")
+  .replace(/ŕ/g, "r\u0304j")
   .replace(/ŀ/g, "l\u0304")
-  .replace(/ĺ/g, "l\u0304\u0301")
+  .replace(/ĺ/g, "l\u0304j")
 
-  .replace(/ę/g, "ẽ")
-  .replace(/ų/g, "õ")
+  .replace(/ę/g, "e\u0303")
+  .replace(/ų/g, "o\u0303")
 
-  .replace(/è/g, "ĭ")
-  .replace(/ò/g, "ŭ")
+  .replace(/è/g, "i\u0306")
+  .replace(/ò/g, "u\u0306")
 
-  .replace(/ı/g, "ĭj")
+  .replace(/ı/g, "i\u0306’")
+
+  .replace(/å/g, "ꜵ")
+  .replace(/ě/g, "æ")
 
   .replace(/ý/g, "-y")
   .replace(/í/g, "-i")
@@ -43,14 +50,10 @@ const nuOrtho = s =>
   .replace(/é/g, "-e")
   .replace(/ì/g, "=i")
 
-  .replace(/c/g, "c")
-  .replace(/dz/g, "ʒ")
+  .replace(/c(?![\u0301-\u0308])/g, "c\u0308")
+  .replace(/k/g, "c")
 
-  .replace(/v/g, "w")
-  .replace(/ù/g, "v")
-
-  .replace(/h/g, "x")
-  .replace(/dz/g, "ʒ")
+  //.replace(/e/g, "jo")
 
   .replace(/i/g, "ı")
   .replace(/j/g, "ȷ")

@@ -1,113 +1,115 @@
-const nuOrtho = (s, cyr) => {
+const nuOrtho = s => {
   let r = s
   .toLowerCase()
-  .replace(/ą/g, "o\u0303")
-  .replace(/ę/g, "e\u0303")
-  .replace(/ó/g, "o\u0304")
-  .replace(/ch/g, "x")
-  .replace(/l/g,  "l\u0301")
-  .replace(/ł/g,  "l")
-  .replace(/dż/g, "d\u030C")
-  .replace(/rz/g, "r\u0301")
-  .replace(/cz/g, "c\u030C")
-  .replace(/ż/g,  "g\u030C")
-  .replace(/sz/g, "x\u030C")
-  .normalize("NFD")
+
+  // rom to rom (simple)
+  .replace(/ę/g, "ẽ")
+  .replace(/ą/g, "õ")
+  .replace(/ó/g, "о̄")
+
+  .replace(/cz/g, "č")
+  .replace(/ż/g,  "ž")
+  .replace(/sz/g, "š")
+  .replace(/rz/g, "ř")
+  .replace(/l/g, "ľ")
+  .replace(/ł/g, "l")
+
   .replace(/dz/g, "ʒ")
+  .replace(/dž/g, "ǯ")
 
-  .replace(/c\u0301|ci(?=[yaueo])/g, "t\u0301")
-  .replace(/ʒ\u0301|ʒi(?=[yaueo])/g, "d\u0301")
-  .replace(/cii/g, "t\u0301ii")
-  .replace(/ʒii/g, "t\u0301ii")
-  .replace(/ci/g, "t\u0301i")
-  .replace(/ʒi/g, "d\u0301i")
+  .replace(/ch|h/g, "x")
 
-  .replace(/(?<=[pbfwmszn])i(?=[yaueo])/g, "\u0301")
-  .replace(/(?<=[pbfwmszn])ii/g, "\u0301ii")
-  .replace(/(?<=[pbfwmszn])i/g, "\u0301i")
+  // rom to rom (complex)
+  .replace(/(?<![a-zẽõо̄čžšʒǯ])i/g, "y")
+  .replace(/ć|c(i(?=[yeaouẽõо̄])|(?=i))/g, "ть")
+  .replace(/dź|ʒ(i(?=[yeaouẽõо̄])|(?=i))/g, "дь")
+  .replace(/ś|s(i(?=[yeaouẽõо̄])|(?=i))/g, "сь")
+  .replace(/ź|z(i(?=[yeaouẽõо̄])|(?=i))/g, "зь")
+  .replace(/ń|n(i(?=[yeaouẽõо̄])|(?=i))/g, "нь")
 
-  .replace(/c(?!\u030C)/g, "c\u0301")
-  .replace(/k/g, "c")
-  .replace(/ʒ/g, "g\u0301")
+  .replace(/ľ/g,  "ль")
+  .replace(/ř/g, "рь")
 
-  .replace(/i(?=[yaueo])/g, "j")
-  .replace(/ji/g, "i")
+  .replace(/(?<=[pbfwmkgx])i(?=[yaueoẽõо̄])/g, "ь")
 
-  .replace(/(?<=[pbfwmsznlr]|[lrcg]\u0301)ji/g, "i")
+  .replace(/i(?=[yaueoẽõо̄])/g, "j")
+  .replace(/(?<![ьij])i/g, "ji")
+
+  .replace(/y/g, "i")
+
+  // rom to cyr (simple)
+  .replace(/(?<=[szcʒr])j/g, "й")
+  .replace(/j(?![ieaouẽõо̄])/g, "й")
+  .replace(/j/g, "ь")
+
+  .replace(/i/g, "и")
+  .replace(/e/g, "є")
+  .replace(/a/g, "а")
+  .replace(/o/g, "о")
+  .replace(/u/g, "у")
+
+  .replace(/ẽ/g, "ѧ")
+  .replace(/õ/g, "ѫ")
+  .replace(/о̄/g, "о̄")
+
+  .replace(/ьи/g, "і")
+  .replace(/ьа/g, "я")
+  .replace(/ьу/g, "ю")
+  .replace(/ьє/g, "ѥ")
+  .replace(/ьо/g, "е")
+  .replace(/ьѧ/g, "ѩ")
+  .replace(/ьѫ/g, "ѭ")
+  .replace(/ьо̄/g, "е̄")
+
+  .replace(/t/g, "т")
+  .replace(/d/g, "д")
+  .replace(/s/g, "с")
+  .replace(/z/g, "з")
+  .replace(/n/g, "н")
+  .replace(/l/g, "л")
+  .replace(/r/g, "р")
+
+  .replace(/c/g, "ц")
+  .replace(/ʒ/g, "ѕ")
+
+  .replace(/ǯ/g, "џ")//җ
+  .replace(/č/g, "ч")
+  .replace(/ž/g, "ж")
+  .replace(/š/g, "ш")
+
+  .replace(/p/g, "п")
+  .replace(/b/g, "б")
+  .replace(/f/g, "ф")
+  .replace(/w/g, "в")
+  .replace(/m/g, "м")
+
+  .replace(/k/g, "к")
+  .replace(/g/g, "г")
   ;
 
-  if(cyr)
-    r = r
-    .replace(/e\u0303/g, "ѧ")
-    .replace(/o\u0303/g, "ѫ")
+  r = r.normalize("NFC")
 
-    .replace(/\u0301/g, "ь")
-    .replace(/i/g, "и")
-    .replace(/y/g, "ъи")
-    .replace(/e/g, "є")
-    .replace(/a/g, "а")
-    .replace(/o/g, "о")
-    .replace(/u/g, "у")
-    .replace(/j/g, "й")
-
-    .replace(/d\u030C/g, "џ")
-    .replace(/g\u030C/g, "ж")
-    .replace(/c\u030C/g, "ч")
-    .replace(/x\u030C/g, "ш")
-
-    .replace(/t/g, "т")
-    .replace(/d/g, "д")
-    .replace(/s/g, "с")
-    .replace(/z/g, "з")
-    .replace(/n/g, "н")
-    .replace(/l/g, "л")
-    .replace(/r/g, "р")
-
-    .replace(/p/g, "п")
-    .replace(/b/g, "б")
-    .replace(/f/g, "ф")
-    .replace(/w/g, "в")
-    .replace(/m/g, "м")
-
-    .replace(/c/g, "к")
-    .replace(/g/g, "г")
-    .replace(/x/g, "х")
-    .replace(/h/g, "х")
-
-    .replace(/(ь|(?<=(\s|^))й)и/g, "ꙇ")
-    .replace(/(ь|(?<=(\s|^))й)а/g, "ꙗ")
-    .replace(/(ь|(?<=(\s|^))й)у/g, "ю")
-    .replace(/(ь|(?<=(\s|^))й)є/g, "ѣ")
-    .replace(/(ь|(?<=(\s|^))й)о/g, "ѥ")
-    .replace(/(ь|(?<=(\s|^))й)ѧ/g, "ѩ")
-    .replace(/(ь|(?<=(\s|^))й)ѫ/g, "ѭ")
-    ;
-
-  if(document.querySelector("input[name='uppercase']").checked)
-    r = r.toUpperCase();
-
-  if(! cyr)
-    r = r
-    .replace(/i/g, "ı\u0301")
-    .replace(/y/g, "ı")
-    .replace(/j/g, "ȷ")
-    ;
-
-  return r.normalize("NFC");
+  if(document.getElementById("uppercase").checked)
+    r = r.toUpperCase()
+  return r;
 }
 
 const update = () => {
+  console.log("!")
+
+  /*
   document.getElementById("sink-lat").value =
     nuOrtho(document.getElementById("source").value, false);
+  */
 
   document.getElementById("sink-cyr").value =
-    nuOrtho(document.getElementById("source").value, true);
+    nuOrtho(document.getElementById("source").value);
 
   document.getElementById("tweet")
   .setAttribute("href", `https://twitter.com/intent/tweet?text=${
     encodeURIComponent(
       document.getElementById("source").value
-      + "\n" + document.getElementById("sink-lat").value
+      //+ "\n" + document.getElementById("sink-lat").value
       + "\n" + document.getElementById("sink-cyr").value
     )
   }`)
@@ -119,13 +121,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if(/.*?\{.*\}.*?/.test(td.innerHTML))
       td.innerHTML = td.innerHTML.replace(/^\{(.+)\}$/g, (match, p1) => `<span class="as-is">${p1}</span>`)
     else
-      td.innerHTML = nuOrtho(td.innerHTML, false)
+      td.innerHTML = nuOrtho(td.innerHTML) + `<br/><span class='original'>${td.innerHTML}</span>`
 
-  document.getElementById("source")
-  .addEventListener("input", update);
-
-  document.getElementsByTagName("input")[0]
-  .addEventListener("input", update);
+  for(const e of document.getElementsByClassName("trigger"))
+    e.addEventListener("input", update);
 
   update();
 
@@ -133,11 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
   .forEach(tr => {
     const td = tr.lastElementChild;
     if(td.tagName == "TD") {
-      for(const cyr of [false, true]) {
-        const tdNu = td.cloneNode(true);
-        tdNu.innerHTML = nuOrtho(td.innerHTML, cyr);
-        tr.appendChild(tdNu);
-      }
+      const tdNu = td.cloneNode(true);
+      tdNu.innerHTML = nuOrtho(td.innerHTML);
+      tr.appendChild(tdNu);
     }
-  })
+  });
 });

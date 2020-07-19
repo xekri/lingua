@@ -8,11 +8,11 @@ block main
 
 	center
 		div
-			div
-				input(type="checkbox", name="uppercase")
-				label uppercase
+			input.trigger#uppercase(type="checkbox", name="uppercase")
+			label uppercase
 
-			textarea#source.
+		div
+			textarea.trigger#source.
 				# powszechną deklarację praw człowieka
 				## artykuł 1
 				wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
@@ -20,16 +20,15 @@ block main
 				## artykuł 2
 				każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
 				nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.
-			textarea#sink-lat
+			//textarea#sink-lat
 			textarea#sink-cyr
 			div: a#tweet tweet
 
-		table.transpose.add-new
+		//table.transpose.add-new
 			tr
 				th val.
 				th trad.
-				th lat.
-				th cyr.
+				th new
 			+trs(
 				[ "i; i"
 				, "ɨ; y"
@@ -97,36 +96,35 @@ block main
 							th= "N G D A I L V".split(" ")[i]
 							for x in xs
 								td= x
-			+section("masculin inanimate")
-				div.tables
-					+table("store",
-						[ ["sklep"   , "sklepy"  ]
-						, ["sklepu"  , "sklepów" ]
-						, ["sklepowi", "sklepom" ]
-						, ["{=N}"  , "{=N}"  ]
-						, ["sklepem" , "sklepami"]
-						, ["sklepie" , "sklepach"]
-						, ["{=L}"  , "{=N}"  ]
-						])
-					+table("hotel",
-						[ ["hotel"   , "hotele"  ]
-						, ["hotelu"  , "hoteli"  ]
-						, ["hotelowi", "hotelom" ]
-						, ["{=N}"  , "{=N}"  ]
-						, ["hotelem" , "hotelami"]
-						, ["hotelu"  , "hotelach"]
-						, ["{=L}"  , "{=N}"  ]
-						])
-					+table("check",
-						[ ["stół"   , "stoły"  ]
-						, ["stółu"  , "stołów" ]
-						, ["stółowi", "stółom" ]
-						, ["{=N}" , "{=N}" ]
-						, ["stołem" , "stółami"]
-						, ["stole"  , "stółach"]
-						, ["{=L}" , "{=N}" ]
-						])
-				+section("masculin animate").tables
+			+section("masculine inanimate").tables
+				+table("store",
+					[ ["sklep"   , "sklepy"  ]
+					, ["sklepu"  , "sklepów" ]
+					, ["sklepowi", "sklepom" ]
+					, ["{=N}"  , "{=N}"  ]
+					, ["sklepem" , "sklepami"]
+					, ["sklepie" , "sklepach"]
+					, ["{=L}"  , "{=N}"  ]
+					])
+				+table("hotel",
+					[ ["hotel"   , "hotele"  ]
+					, ["hotelu"  , "hoteli"  ]
+					, ["hotelowi", "hotelom" ]
+					, ["{=N}"  , "{=N}"  ]
+					, ["hotelem" , "hotelami"]
+					, ["hotelu"  , "hotelach"]
+					, ["{=L}"  , "{=N}"  ]
+					])
+				+table("check",
+					[ ["stół"   , "stoły"  ]
+					, ["stółu"  , "stołów" ]
+					, ["stółowi", "stółom" ]
+					, ["{=N}" , "{=N}" ]
+					, ["stołem" , "stółami"]
+					, ["stole"  , "stółach"]
+					, ["{=L}" , "{=N}" ]
+					])
+				+section("masculine animate").tables
 					+table("pigeon",
 						[ ["gołąb"    , "gołąbie"  ]
 						, ["gołąbia"  , "gołąbi"   ]
@@ -173,7 +171,7 @@ block main
 						, ["tygodniu" , "tygodniach"]
 						, ["{=L}"     , "{=N}"      ]
 						])
-				+section("masculin personal").tables
+				+section("masculine personal").tables
 					+table("student",
 						[ ["student"    , "studenci"  ]
 						, ["studenta"   , "studentów" ]
@@ -275,44 +273,43 @@ block main
 						, ["{=D}"    , "religiach"]
 						, ["religio" , "{=N}"   ]
 						])
-			+section("neuter")
-				div.tables
-					+table("town",
-						[ ["miasto" , "miasta"  ]
-						, ["miasta" , "miast"   ]
-						, ["miastu" , "miastom" ]
-						, ["{=N}" , "{=N}"  ]
-						, ["miastem", "miastami"]
-						, ["miaście", "miastach"]
-						, ["{=N}" , "{=N}"  ]
-						])
-					+table("opinion",
-						[ ["zdanie" , "zdania"  ]
-						, ["zdania" , "zdań"    ]
-						, ["zdaniu" , "zdaniom" ]
-						, ["{=N}" , "{=N}"  ]
-						, ["zdaniem", "zdaniami"]
-						, ["zdaniu" , "zdaniach"]
-						, ["{=N}" , "{=N}"  ]
-						])
-					+table("animal",
-						[ ["zwierzę"   , "zwierzęta"  ]
-						, ["zwierzęcia", "zwierząt"   ]
-						, ["zwierzęciu", "zwierzętom" ]
-						, ["{=N}"      , "{=N}"       ]
-						, ["zwierzęiem", "zwierzętami"]
-						, ["zwierzęciu", "zwierzętach"]
-						, ["{=N}"      , "{=N}"       ]
-						])
-					+table("given name",
-						[ ["imię"    , "imiona"  ]
-						, ["imienia" , "imion"   ]
-						, ["imieniu" , "imionom" ]
-						, ["{=N}"    , "{=N}"    ]
-						, ["imieniem", "imionami"]
-						, ["imieniu" , "imionach"]
-						, ["{=N}"    , "{=N}"    ]
-						])
+			+section("neuter").tables
+				+table("town",
+					[ ["miasto" , "miasta"  ]
+					, ["miasta" , "miast"   ]
+					, ["miastu" , "miastom" ]
+					, ["{=N}" , "{=N}"  ]
+					, ["miastem", "miastami"]
+					, ["miaście", "miastach"]
+					, ["{=N}" , "{=N}"  ]
+					])
+				+table("opinion",
+					[ ["zdanie" , "zdania"  ]
+					, ["zdania" , "zdań"    ]
+					, ["zdaniu" , "zdaniom" ]
+					, ["{=N}" , "{=N}"  ]
+					, ["zdaniem", "zdaniami"]
+					, ["zdaniu" , "zdaniach"]
+					, ["{=N}" , "{=N}"  ]
+					])
+				+table("animal",
+					[ ["zwierzę"   , "zwierzęta"  ]
+					, ["zwierzęcia", "zwierząt"   ]
+					, ["zwierzęciu", "zwierzętom" ]
+					, ["{=N}"      , "{=N}"       ]
+					, ["zwierzęiem", "zwierzętami"]
+					, ["zwierzęciu", "zwierzętach"]
+					, ["{=N}"      , "{=N}"       ]
+					])
+				+table("given name",
+					[ ["imię"    , "imiona"  ]
+					, ["imienia" , "imion"   ]
+					, ["imieniu" , "imionom" ]
+					, ["{=N}"    , "{=N}"    ]
+					, ["imieniem", "imionami"]
+					, ["imieniu" , "imionach"]
+					, ["{=N}"    , "{=N}"    ]
+					])
 			+section("pronoun").tables
 				mixin table(ys, xss)
 					table.nu
@@ -340,8 +337,7 @@ block main
 			tr
 				th meaning
 				th trad.
-				th lat.
-				th cyr.
+				th new
 			+trs(
 				[ "north północ"
 				, "east  wschód"

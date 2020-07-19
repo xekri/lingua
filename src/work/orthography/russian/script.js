@@ -1,30 +1,39 @@
-const nuOrtho = (s, up) => {
+const nuOrthoCyr = s => {
   let r = s.toLowerCase();
 
   r =
-  [ [/ы/g, "i"]
+  [ [/(?<![а-я])и/g, "ы"]
+
+  , [/и/g, "і"]
+  , [/ы/g, "и"]
+  ].reduce((acc, [x, y]) => acc.replace(x, y), r);
+
+  if(document.getElementById("uppercase").checked)
+    r = r.toUpperCase()
+  return r
+}
+
+const nuOrtho = s => {
+  let r = s.toLowerCase();
+
+  r =
+  [ [/(?<![а-я])и/g, "ы"]
+
+  , [/ы/g, "i"]
   , [/э/g, "e"]
   , [/а/g, "a"]
   , [/о/g, "o"]
   , [/у/g, "u"]
   , [/и/g, "ji"]
-  , [/е/g, "je"]
+  , [/е/g, "jo"]
   , [/я/g, "ja"]
-  , [/ё/g, "jo\u0301"]
+  , [/ё/g, "jȯ"]
   , [/ю/g, "ju"]
 
-  , [/ь/g, "j\u0306"]
-  , [/ъ/g, "'"]
+  , [/ь/g, "j"]
+  , [/ъ/g, "v"]
 
-  , [/й/g, "j"]
-
-  , [/щ/g, "шч"]
-  //, [/жд/g, "d\u030C"]
-  , [/ч/g, "k\u0302"]
-  , [/ж/g, "g\u030C"]
-  , [/ш/g, "x\u030C"]
-
-  , [/ц/g,  "c"]
+  , [/й/g, "ĭ"]
 
   , [/п/g, "p"]
   , [/б/g, "b"]
@@ -40,45 +49,46 @@ const nuOrtho = (s, up) => {
   , [/л/g, "l"]
   , [/р/g, "r"]
 
-  , [/к/g, "k"]
+  , [/к/g, "c"]
   , [/г/g, "g"]
   , [/х/g, "x"]
 
-  , [/(?<=ji)j(?=[ie])/g, ""]
-  , [/(?<=[kgx\u0302\u030C])j(?=[ie])/g, ""]
-  , [/(?<!['a-z\u0301\u0306\u030C\u0302])ji/g, "i"]
-  , [/(?<![ieaou])j\u0306(?![ieaou])/g, "j"]
+  , [/щ/g, "шч"]
+  , [/ч/g, "c\u0307"]
+  , [/ж/g, "g\u0307"]
+  , [/ш/g, "x\u0307"]
+  , [/ц/g, "c\u0308"]
+
+  , [/i/g, "ı"]
+  , [/j/g, "ȷ"]
   ].reduce((acc, [x, y]) => acc.replace(x, y), r);
   ;
 
-  if(up)
-    r = r.toUpperCase();
-  else
-    r = r
-    .replace(/i/g, "ı")
-    .replace(/j/g, "ȷ")
-    ;
+  if(document.getElementById("uppercase").checked)
+    r = r.toUpperCase().replace(/ȷ/g, "J")
 
   return r.normalize("NFC");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const sink = document.getElementById("sink");
+  const sinkCyr = document.getElementById("sink-cyr");
 
   const update = () => {
-    sink.value =
-      nuOrtho(document.getElementById("source").value, checkUc.checked);
+    const s = document.getElementById("source").value
+
+    sink.value = nuOrtho(s);
+    sinkCyr.value = nuOrthoCyr(s)
 
     document.getElementById("tweet")
     .setAttribute("href", `https://twitter.com/intent/tweet?text=${
       encodeURIComponent(
-        document.getElementById("source").value
-        + "\n" + sink.value
+        s
+        + "\n\n" + sink.value
+        + "\n\n" + sinkCyr.value
       )
     }`)
   }
-
-  const checkUc = document.querySelector("input[name='uppercase']");
 
   for(const td of document.querySelectorAll(".nu-table td"))
     td.innerHTML =
@@ -86,15 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/\!\{(.+)\}|.+/, (match, pattern, offset, string) =>
         pattern
           ? `<span class="abbr">${pattern}</span>`
-          : `${nuOrtho(string, checkUc.checked)} <span class="cyr">${string}</span>`
+          : `${nuOrtho(string)} <span class="cyr">${string}</span>`
         )
 
-
-  document.getElementById("source")
-  .addEventListener("input", update);
-
-  checkUc
-  .addEventListener("input", update);
+  for(const e of document.getElementsByClassName("trigger"))
+    e.addEventListener("input", update);
 
   update();
 
