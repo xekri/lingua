@@ -8,6 +8,8 @@ block head
   - const titleIsva = true
 
 block main
+  p -- under construction
+
   ul
     li: a(href="https://sumimq.github.io/chinese/") chinese
     +aLi("japanese")
@@ -16,7 +18,7 @@ block main
     +aLi("russian")
 
   +section("default spelling")
-    div.tables
+    .tables
       table
         +trs(
           [ ["c g", "", "t d", "", "p b"]
@@ -29,9 +31,9 @@ block main
           // ҁ
       table
         +trs(
-          [ ["ı y", "", " u"]
-          , ["e œ", "ə", " o"]
-          , ["æ", "a", "ꜵ"]
+          [ ["ı", "y", "", " u"]
+          , ["e", "œ", "ə", " o"]
+          , ["æ", "", "a", "ꜵ"]
           ])
       table
         +trs(
@@ -39,12 +41,12 @@ block main
           , ["х ғ", "ш ж", "с з", "ҫ ҙ", "ф в"]
           , ["", "ч џ", "ц ѕ", "", ""]
           , ["ӈ", "ԩ", "н", "", "м"]
-          , ["", "ь", "р", "", "ъ"]
+          , ["", "ь й", "р", "", "ъ ў"]
           , ["", "", "л", "", ""]
           ])
       table
         +trs(
-          [ ["и ѵ", "", " у"]
-          , ["є ѥ", "ә", " о"]
-          , ["", "а", ""]
+          [ ["ꙇ", "ѵ", "и", "у ю"]
+          , ["є ѥ", "ө", "э", "о е"]
+          , ["я", "", "а ꙗ", ""]
           ])

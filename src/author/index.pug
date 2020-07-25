@@ -6,10 +6,15 @@ block head
 		const titleIsva = true
 		const tags = ["language='englısh analytıc'"]
 
-
 block main
 	+section("alias")
-		p (#{author.name.ru} | #{author.name.la} | #{author.name.zh}) sıgnıfy auþor.
+		center
+			table
+				for key in ["han", "ja", "emc", "cmn", "yue"]
+					tr
+						th= key
+						td= author.name[key][0]
+						td= author.name[key][1]
 
 	+section("pronoun")
 		a(href="https://en.wiktionary.org/wiki/ve#English") ve

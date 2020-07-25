@@ -6,12 +6,14 @@ include /_mixins.pug
   const root = "https://sumi.space"
   const author =
     { name:
-      { la: "sumı"
-      , ru: "суми"
-      , ja: "スミ"
-      , zh: "墨"
+      { id: "суми"
+      , han: ["墨", "幽"]
+      , ja: ["суми", "ьуу"]
+      , emc: ["moŋ̍", "qȳ"]
+      , cmn: ["mô", "ıeú"]
+      , yue: ["məŋ̍", "qȷəù"]
       }
-    , twitter: "sumimq"
+    , twitter: "smiqy"
     }
 
 html(lang="en-GB")
@@ -30,9 +32,9 @@ html(lang="en-GB")
     -
       const titleFull =
       (
-        title === author.name.ru
+        title === author.name.id
           ? title
-          : `${author.name.ru} / ${title}`
+          : `${author.name.id} / ${title}`
       ).toUpperCase().replace(/ȷ/g, "J")
     title= titleFull
 
@@ -48,7 +50,7 @@ html(lang="en-GB")
 
     meta(name="twitter:site", content="@" + author.twitter)
     meta(name="twitter:title", content=titleFull)
-    // meta(name="twitter:description", content=`${author.name.la}'s information.`)
+    // meta(name="twitter:description", content=`${author.name.id}'s information.`)
     meta(name="twitter:image", content=`${root}/characters/suzuri/images/2019-10-25-small.png`)
     meta(name="twitter:card", content="summary")
 
