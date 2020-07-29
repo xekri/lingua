@@ -36,10 +36,12 @@ block main
 
 		center
 			textarea#src.
-				i y u e ė ę o ȯ ų a å
-				k č c g ž h š
-				t ć d đ s z n
-				p b f v m
+				a á å b c ç ć č d ḓ ď đ
+				e é è ė ě ę f g h
+				i í ì ıj j ĵ k l ľ ŀ ĺ
+				m n ň o ò œ p
+				r ř ṙ ŕ s ś š t ṱ ť u ų ù
+				v y ý z ʒ ź ž
 
 				međuslovjansky analitičny
 
@@ -82,24 +84,17 @@ block main
 	+section("grammar")
 		table
 			tr
-				th sentence
+				th N
 				td
-					ul
-						li S:nounal verb A:nounal D:nounal
-						li
-							| verb,
-							| &#x20;S:nounal,&#x20;
-							+replaced("go")
-							| &#x20;A:nounal,&#x20;
-							+replaced("mu")
-							| &#x20;D:nounal
-							| -- free order
 			tr
-				th nounal
-				td
-					| cardınal:numeral noun ordınal:numeral adȷectıve* relatıve-clause (
-					+replaced("od")
-					| &#x20;nounal)*
+				th A
+				td: +replaced("go")
+			tr
+				th G
+				td: +replaced("od")
+			tr
+				th D
+				td: +replaced("k")
 
 		p we can ındıcate case wıþ eıþer word order or preposıtıon.
 
@@ -146,83 +141,14 @@ block main
 					th future
 					th cond.
 					th ımper.
-					th perf.
 					th noun
 				tr
-					td bě(še)
+					td byl
 					td
 					td bųde
 					td by
 					td bųd́
-					td byl
 					td že
-
-			table
-				caption example
-				tr: td noun condıtıonal past perfect
-				tr: td.replaced že ja by bě byl děla
-
-			// table
-				caption participle
-				tr
-					th past active
-					th present active
-					th future active
-					th past passive
-					th present passive
-					th future passive
-
-
-				tr
-					td
-						span.replaced koj byl děla
-						br
-						| having done
-					td
-						span.replaced koj děla
-						br
-						| doing
-					td
-						span.replaced koj bude děla
-						br
-						| going to do
-					td
-						span.replaced go koj byl děla
-						br
-						| having been done
-					td
-						span.replaced go koj děla
-						br
-						| done
-					td
-						span.replaced go koj bude děla
-						br
-						| going to be done
-				tr
-					td
-						span.replaced koj byl děla
-						br
-						| having done
-					td
-						span.replaced koj děla
-						br
-						| doing
-					td
-						span.replaced koj bude děla
-						br
-						| going to do
-					td
-						span.replaced go koj byl děla
-						br
-						| having been done
-					td
-						span.replaced go koj děla
-						br
-						| done
-					td
-						span.replaced go koj bude děla
-						br
-						| going to be done
 
 		+section("adȷectıve")
 			table.has-td-replaced
