@@ -2,10 +2,8 @@ const nuOrtho = s => {
   let r = s
   .toLowerCase()
 
-  // rom to rom (simple)
   .replace(/ę/g, "ѧ")
   .replace(/ą/g, "ѫ")
-  //.replace(/ó/g, "о̄")
   .replace(/ó/g, "u")
 
   .replace(/cz/g, "ч")
@@ -20,6 +18,8 @@ const nuOrtho = s => {
   .replace(/w/g, "в")
   .replace(/m/g, "м")
 
+  //.replace(/(?<=[чшж])y/g, "i")
+
   .replace(/l/g, "ль")
   .replace(/ł(?=i)/g, "лъ")
   .replace(/льi/g, "лi")
@@ -30,11 +30,10 @@ const nuOrtho = s => {
   .replace(/rьi/g, "ri")
   .replace(/r/g, "р")
 
-  .replace(/t(?=i)/g, "tъ")
-  .replace(/d(?=i)/g, "dъ")
-  .replace(/ć|c(i(?=[yeaouѧѫо̄]))/g, "tь")
+  .replace(/(?<=[td])(?=i)/g, "ъ")
+  .replace(/ć|c(i(?=[yeaouѧѫ]))/g, "tь")
   .replace(/c(?=i)/g, "t")
-  .replace(/dź|dz(i(?=[yeaouѧѫо̄]))/g, "dь")
+  .replace(/dź|dz(i(?=[yeaouѧѫ]))/g, "dь")
   .replace(/dz(?=i)/g, "d")
 
   .replace(/(?<=c)ji/g, "i")
@@ -42,9 +41,9 @@ const nuOrtho = s => {
   .replace(/(?<=[sz])ji/g, "ъi")
   .replace(/(?<=[sz])j/g, "ъj")
 
-  .replace(/ś|s(i(?=[yeaouѧѫо̄]))/g, "sь")
-  .replace(/ź|z(i(?=[yeaouѧѫо̄]))/g, "zь")
-  .replace(/ń|n(i(?=[yeaouѧѫо̄]))/g, "nь")
+  .replace(/ś|s(i(?=[yeaouѧѫ]))/g, "sь")
+  .replace(/ź|z(i(?=[yeaouѧѫ]))/g, "zь")
+  .replace(/ń|n(i(?=[yeaouѧѫ]))/g, "nь")
 
   .replace(/t/g, "т")
   .replace(/d/g, "д")
@@ -53,13 +52,15 @@ const nuOrtho = s => {
   .replace(/n/g, "н")
   .replace(/c/g, "ц")
 
-  .replace(/(?<=[пбфвмкгх])i(?=[yaueoѧѫо̄])/g, "ь")
+  .replace(/(?<=[пбфвмкгх])i(?=[yaueoѧѫ])/g, "ь")
   //.replace(/i(?=[yaueoѧѫо̄])/g, "j")
 
   // rom to cyr (simple)
   .replace(/(?<=[тдрл])j/g, "ъь")
-  .replace(/j(?![ieaouѧѫо̄])/g, "й")
+  .replace(/j(?![ieaouѧѫ])/g, "й")
   .replace(/j/g, "ь")
+
+  //.replace(/(?<=[сз])ьр/g, "рь")
 
   .replace(/i/g, "и")
   .replace(/y/g, "ы")//ꙑ ъи
@@ -74,7 +75,6 @@ const nuOrtho = s => {
   .replace(/ьо/g, "ë")
   .replace(/ьѧ/g, "ѩ")
   .replace(/ьѫ/g, "ѭ")
-  //.replace(/ьо̄/g, "е̄")
   ;
 
   r = r.normalize("NFC")
