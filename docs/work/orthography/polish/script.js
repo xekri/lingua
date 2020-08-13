@@ -61,23 +61,76 @@ const nuOrtho = s => {
   .replace(/j/g, "ь")
 
   //.replace(/(?<=[сз])ьр/g, "рь")
+  //.replace(/ь(?=.ь)/g, "")
 
-  .replace(/i/g, "и")
-  .replace(/y/g, "ы")//ꙑ ъи
-  .replace(/e/g, "э")
+  .replace(/i/g, "ꙇ")//иі
+  .replace(/y/g, "ꙑ")//ы ъи
+  .replace(/e/g, "є")
   .replace(/a/g, "а")
   .replace(/o/g, "о")
   .replace(/u/g, "у")
 
-  .replace(/ьа/g, "я")
-  .replace(/ьу/g, "ю")
-  .replace(/ьэ/g, "е")
-  .replace(/ьо/g, "ë")
+  .replace(/ьа/g, "ꙗ")
+  .replace(/ьу/g, "ѵ")//ю
+  .replace(/ьє/g, "ѥ")//е
+  .replace(/ьо/g, "ю")//ë
   .replace(/ьѧ/g, "ѩ")
   .replace(/ьѫ/g, "ѭ")
+
+.normalize("NFC")
   ;
 
-  r = r.normalize("NFC")
+  if(! document.getElementById("cyrillic").checked) {
+    r = r
+    .replace(/ч/g, "č")
+    .replace(/ж/g, "ž")
+    .replace(/ш/g, "š")
+
+    .replace(/ц/g, "ĉ")
+
+    .replace(/к/g, "c")
+    .replace(/г/g, "g")
+    .replace(/х/g, "x")
+
+    .replace(/п/g, "p")
+    .replace(/б/g, "b")
+    .replace(/ф/g, "f")
+    .replace(/в/g, "w")
+    .replace(/м/g, "m")
+
+    .replace(/т/g, "t")
+    .replace(/д/g, "d")
+    .replace(/с/g, "s")
+    .replace(/з/g, "z")
+    .replace(/н/g, "n")
+    .replace(/л/g, "l")
+    .replace(/р/g, "r")
+
+    .replace(/[ꙑы]/g, "i")
+    .replace(/є/g, "e")
+    .replace(/а/g, "a")
+    .replace(/о/g, "o")
+    .replace(/у/g, "u")
+    .replace(/ѧ/g, "ę")//ẽ
+    .replace(/ѫ/g, "ǫ")//õ
+
+    .replace(/[ꙇиі]/g, "ǐ")//ji
+    .replace(/ꙗ/g, "ja")
+    .replace(/ѵ/g, "ju")
+    .replace(/ѥ/g, "ě")//je
+    .replace(/ю/g, "jo")
+    .replace(/ѩ/g, "ę\u030C")//ję
+    .replace(/ѭ/g, "jǫ")
+
+    //.replace(/(?<![čžšĉcgxpbfwmtdsznlr])j([iyueoaęǫ])/g, "$1\u030C")
+
+    .replace(/[ьй]/g, "j")
+    .replace(/ъ/g, "'")
+    //.replace(/(?<=[čžš])'(?=[ie])/g, "")
+
+    .normalize("NFC")
+    ;
+  }
 
   if(document.getElementById("uppercase").checked)
     r = r.toUpperCase()
@@ -106,7 +159,6 @@ const update = () => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
   for(const td of document.querySelectorAll(".nu td"))
     if(/.*?\{.*\}.*?/.test(td.innerHTML))
       td.innerHTML = td.innerHTML.replace(/^\{(.+)\}$/g, (match, p1) => `<span class="as-is">${p1}</span>`)
