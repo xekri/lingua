@@ -41,7 +41,7 @@ body
   padding: 0
   color: $color
   background-color: $bgcolor
-  font-family: "DejaVu Sans", "Arial", "UniHentaiKana", sans-serif
+  font-family: "Noto Sans", "DejaVu Sans", "Arial", "UniHentaiKana", sans-serif
 
   @media screen and (max-width:$thresh)
     font-size: 200%
@@ -50,6 +50,7 @@ main
   margin: 0
   padding: 0
   margin-left: $navWidth
+  padding-left: $space
   @media screen and (max-width:$thresh)
     margin-left: 0
 
@@ -59,10 +60,10 @@ main
       font-family: "Roboto Mono"
       font-size: 75%
 
-    margin: 0
-    padding: 0
-    padding-left: $space * 2
-    padding-right: $space * 2
+      margin: 0
+      padding: 0
+      padding-left: $space * 2
+      padding-right: $space * 2
     @media screen and (max-width:$thresh)
       width: 100%
       padding-left: $space
@@ -259,8 +260,8 @@ div.tags
     margin-left: 8px
     &:first-child
       margin-left: 0
-    padding: 2px
-    font-family: "Roboto Mono"
-    font-size: 80%
-    border: 1px solid
-    border-radius: 4px
+      padding: 2px
+      font-family: "Roboto Mono"
+      font-size: 80%
+      border: 1px solid
+      border-radius: 4px

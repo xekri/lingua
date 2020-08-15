@@ -1,8 +1,10 @@
 extend /_layout.pug
 
 block head
-	- const title = "japonsky"
-	- const titleIsva = true
+	-
+		const title = "japonsky"
+		const titleIsva = true
+		const tags = ["draft"]
 
 mixin ruby(main, over)
 	<ruby>#{main}<rt>#{over}</rt></ruby>#{after}
@@ -12,7 +14,6 @@ mixin tds(xs)
 		td= x
 
 block main
-	p under construction
 	// http://www.inagaki.nuie.nagoya-u.ac.jp/research/derivation_grammar.html
 
 	p 空白の入れ方は未定。

@@ -6,15 +6,13 @@ mixin aLi(s)
 block head
   - const title = "ortografija"
   - const titleIsva = true
+  - const tags = ["draft"]
 
 block main
-  p -- under construction
-
   ul
     li: a(href="https://sumimq.github.io/chinese/") chinese
     +aLi("japanese")
     +aLi("polish")
-    +aLi("interslavic")
     +aLi("russian")
 
   +section("default spelling")
@@ -34,7 +32,7 @@ block main
           , ["e", "œ", "ə", " o"]
           , ["æ", "", "a", "ꜵ"]
           ])
-  
+
       table
         +trs(
           [ ["ҁ", "к г", "", "т д", "", "п б"]
