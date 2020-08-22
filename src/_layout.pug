@@ -38,10 +38,20 @@ html(lang="en-GB")
       ).toUpperCase().replace(/ȷ/g, "J")
     title= titleFull
 
-    if titleIsva
+    if titleLanguage == "isv"
       script.
         document.addEventListener("DOMContentLoaded", async () => {
           const replace = (await import("/work/language/interslavic/replace.js")).default
+          const titleH = document.querySelector("h1")
+          const title = replace(titleH.innerHTML, true, true)
+          titleH.innerHTML = title
+          document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+        })
+
+    if titlePl
+      script.
+        document.addEventListener("DOMContentLoaded", async () => {
+          const replace = (await import("/work/orthography/polish/replace.js")).default
           const titleH = document.querySelector("h1")
           const title = replace(titleH.innerHTML, true, true)
           titleH.innerHTML = title

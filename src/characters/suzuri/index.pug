@@ -1,8 +1,5 @@
 extend /_layout.pug
-
-mixin a_img(src, width)
-	a(href=src)
-		img(src=src, width=width)
+include ../_common.pug
 
 block head
 	-
@@ -16,6 +13,7 @@ block head
 			, yue: ["ŋın̄", "hyǹ"]
 			};
 		const title = name.id;
+		const tags = [`version=1`]
 
 	link(href="../style.css", rel="stylesheet")
 
@@ -155,6 +153,9 @@ block main
 			li 任意のfan artは#{name.id}に影響し, 2次創作でありながら1次創作となります
 
 		div.tile
+			+section("2020-08-22")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">- 硯君の表情 考<br>- 後輩君 <a href="https://t.co/ngIBx6kHit">pic.twitter.com/ngIBx6kHit</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1296894217789136896?ref_src=twsrc%5Etfw">August 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 			+section("2020-08-04")
 				a(href="https://twitter.com/intent/user?user_id=948471113448792064") 絹豆腐 君
 				img(src="images/2020-08-04.png")

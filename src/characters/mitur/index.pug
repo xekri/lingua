@@ -1,28 +1,19 @@
 extend /_layout.pug
 
-mixin a_img(src, width)
-	a(href=src)
-		img(src=src, width=width)
-
-mixin nsfw
-	div.nsfw
-		block
-
 block head
 	-
 		const name =
-		{ la: "mıtur"
-		, ja: "ミツル"
-		, ru: "митур"
-		, zh: "盈"
-		}
-		const title = name.ru
+			{ id: "митуру"
+			, han: ["盈", "冬"]
+			, ja: ["ei", "fuju"]
+			};
+		const title = name.id;
 		const tags = ["draft"]
 
 	link(href="../style.css", rel="stylesheet")
 
 block main
-	p #{name.ru}は#{author.name.id}が作成した人格です。
+	p #{name.id}は#{author.name.id}が作成した人格です。
 	p
 		a(href="../suzuri") сузури
 		| の後輩で友人です。
@@ -31,20 +22,29 @@ block main
 		p: em これらは豫告無く變更され得ます。
 
 		ul
-				li 名前：██<ruby>#{name.zh}<rt>#{name.ru}</rt></ruby>
+				li 識別子: #{name.id}
+				li
+					| 名前:
+					table
+						for key in ["han", "ja"]
+							tr
+								th= key
+								td= name[key][0]
+								td= name[key][1]
 				li 年齢：21（メタ視點からは何歳としてでも觀測され得る）
 				li 國籍：日本
-				li 言語：日本語, 英語, interslavic
+				li 言語：日本語, 英語, polish
+				//interslavic
 				li 數學科の學部生
 				li 身長：1.85m
 				li 體質量：80kg
-				li 左手首にリストカット痕有り
+				//li 左手首にリストカット痕有り
 				li ピアス孔：右耳のrob（スズリに空けてもらった）
 				li 髪色：黒
 				li 細身
 				li 體毛：濃いめ
 				li 陰莖：220mm・カリ高・上反り
-				li 酒は少量で正體を無くし、ALDH2はMM型
+				li ALDH2はMM型
 				li 愛讀書：『存在と無』
 				li 菜食主義者
 				li 社會自由主義者
@@ -52,9 +52,9 @@ block main
 				li cisgender・兩性愛者（公開）・男性
 				li monoamorist
 				li 受
-				li 乳首が弱い
+				li 胸が弱い
 				li 大體2囘/週自慰する
-				li 童貞・初めての性體驗は<a href="../suzuri">сузури</a>相手の受で21歳の時
+				//li 童貞・初めての性體驗は<a href="../suzuri">сузури</a>相手の受で21歳の時
 
 	+section("talk")
 		a(href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq)%20(%E3%83%9F%E3%83%84%E3%83%AB%20OR%20%E7%9B%88%20OR%20(%E5%BE%8C%E8%BC%A9%E5%90%9B%20%E5%81%87))%20since%3A2014-01-01%20until%3A2030-01-01") tweets
@@ -74,7 +74,7 @@ block main
 			+section("2020-04-14")
 				p 廢案
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">スズリ君の後輩君ことミツル君、この感じで行きます <a href="https://t.co/IzSj30XZYI">pic.twitter.com/IzSj30XZYI</a></p>&mdash; 𝔭𝔥𝔞𝔩𝔩𝔲𝔰, 𝔠𝔞𝔫𝔫𝔞𝔟𝔦𝔰, 𝔱𝔥𝔞𝔫𝔞𝔱𝔬𝔰 (@smgvn) <a href="https://twitter.com/smgvn/status/1250046521636085761?ref_src=twsrc%5Etfw">April 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			+section("2020-05-31")
+			//+section("2020-05-31")
 				p 試案。髭は無い方が標準。
 				//<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">完 <a href="https://t.co/sZA5QWL5K9">pic.twitter.com/sZA5QWL5K9</a></p>&mdash; СУМИ (@SumiMq) <a href="https://twitter.com/SumiMq/status/1266767231813214208?ref_src=twsrc%5Etfw">May 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				img(src="image/2020-05-25.png", width="400")

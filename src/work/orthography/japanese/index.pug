@@ -3,11 +3,11 @@ extend /_layout.pug
 block head
 	-
 		const title = "japonsky"
-		const titleIsva = true
+		const titleLanguage = "isv"
 		const tags = ["draft"]
 
-mixin ruby(main, over)
-	<ruby>#{main}<rt>#{over}</rt></ruby>#{after}
+mixin ruby(base, over)
+	<ruby>#{base}<rt>#{over}</rt></ruby>
 
 mixin tds(xs)
 	for x in xs
