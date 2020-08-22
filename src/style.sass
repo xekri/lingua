@@ -7,9 +7,6 @@ $color: #D0D0D0
 $colorTr: #D0D0D088
 $bgcolor: #000 //#202020
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
 *
   box-sizing: border-box
 
@@ -41,7 +38,7 @@ body
   padding: 0
   color: $color
   background-color: $bgcolor
-  font-family: "Noto Sans", "DejaVu Sans", "Arial", "UniHentaiKana", sans-serif
+  font-family: "Noto Sans Mono", "DejaVu Sans", "Arial", "UniHentaiKana", sans-serif
 
   @media screen and (max-width:$thresh)
     font-size: 200%
@@ -56,15 +53,8 @@ main
     margin-left: 0
 
   article
-    div.language
-      float: right
-      font-family: "Roboto Mono"
-      font-size: 75%
-
-      margin: 0
-      padding: 0
-      padding-left: $space * 2
-      padding-right: $space * 2
+    margin: 0
+    padding: 0
     @media screen and (max-width:$thresh)
       width: 100%
       padding-left: $space
@@ -262,7 +252,6 @@ div.tags
     &:first-child
       margin-left: 0
       padding: 2px
-      font-family: "Roboto Mono"
       font-size: 80%
       border: 1px solid
       border-radius: 4px

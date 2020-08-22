@@ -10,13 +10,15 @@ const pos = {
 const charToPaths = {
   " ": [],
   ".": [
-    [ [4, 3]
-    , [4, 4]
+    [
+      [4, 3],
+      [4, 4]
     ]
   ],
   ",": [
-    [ [4, 3]
-    , [3, 4]
+    [
+      [4, 3],
+      [3, 4]
     ]
   ],
   "-": [
@@ -36,8 +38,9 @@ const charToPaths = {
   ],
   ";": [
     [pos.t, [4, 1]],
-    [ [4, 3]
-    , [3, 4]
+    [
+      [4, 3],
+      [3, 4]
     ]
   ],
   a: [
@@ -169,17 +172,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
 const updateTweet = () => {
   let params = {};
-  const keys =
-    [ "char-w"
-    , "stroke-w"
-    , "space-x"
-    , "space-y"
-    , "margin"
-    , "color"
-    , "bg-color"
-    , "input"
-    ];
-  for(const key of keys)
+  const keys = ["char-w", "stroke-w", "space-x", "space-y", "margin", "color", "bg-color", "input"];
+  for (const key of keys)
     params[key] = document.getElementById(key).value;
   params.color = params.color.substr(1);
   params["bg-color"] = params["bg-color"].substr(1);
@@ -188,14 +182,14 @@ const updateTweet = () => {
   console.log(encodeURIComponent(params.input));
 
   document.getElementById("tweet").setAttribute("href",
-    "https://twitter.com/intent/tweet"
-    + `?text=` + encodeURIComponent(params.input)
-    + `&via=sumimq`
-    + "&hashtags=minimal_triangle"
-    + "&url=" + encodeURIComponent(
-      document.location.protocol + "//" + document.location.host + document.location.pathname
-      + "?" + keys.slice(0, -1).map(key => `${key}=${params[key]}`).join("&")
-      + "&input=" + params.input.split("\n").map(encodeURIComponent).join("%0A")
+    "https://twitter.com/intent/tweet" +
+    `?text=` + encodeURIComponent(params.input) +
+    `&via=sumimq` +
+    "&hashtags=minimal_triangle" +
+    "&url=" + encodeURIComponent(
+      document.location.protocol + "//" + document.location.host + document.location.pathname +
+      "?" + keys.slice(0, -1).map(key => `${key}=${params[key]}`).join("&") +
+      "&input=" + params.input.split("\n").map(encodeURIComponent).join("%0A")
     )
   );
   console.log(document.getElementById("tweet").getAttribute("href"));
@@ -213,7 +207,7 @@ const render = () => {
   const margin = parseFloat(document.getElementById("margin").value);
   const lenX = Math.max(...lines.map(line => line.length));
   const lenY = lines.length;
-  canvas.width  = (margin * 2 + lenX + (lenX - 1) * spaceX) * charW;
+  canvas.width = (margin * 2 + lenX + (lenX - 1) * spaceX) * charW;
   canvas.height = (margin * 2 + lenY + (lenY - 1) * spaceY) * charW;
 
   ctx.fillStyle = document.getElementById("bg-color").value;
