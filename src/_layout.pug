@@ -8,10 +8,10 @@ include /_mixins.pug
     { name:
       { id: "суми"
       , han: ["墨", "幽"]
-      , ja: ["sumı", "ȷuu"]
+      , ja: ["sumi", "juu"]
       , emc: ["moŋ̍", "qȳ"]
-      , cmn: ["mô", "ıeú"]
-      , yue: ["məŋ̍", "qȷəù"]
+      , cmn: ["mô", "ieú"]
+      , yue: ["məŋ̍", "qjəù"]
       }
     , twitter: "smiqy"
     }
@@ -56,6 +56,12 @@ html(lang="en-GB")
           const title = replace(titleH.innerHTML, true, true)
           titleH.innerHTML = title
           document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+        })
+
+    //if ! dot
+      script.
+        document.addEventListener("DOMContentLoaded", async () => {
+          document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
         })
 
     meta(name="twitter:site", content="@" + author.twitter)

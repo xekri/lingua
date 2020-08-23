@@ -15,7 +15,19 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link href="../style.css" rel="stylesheet">
+    <script>
+      if(window.location.href.match(/#arts$/))
+      	window.location.replace(window.location.href.replace(/s$/, ""))
+      
+    </script>
     <title>СУМИ / СУЗУРИ</title>
+    <!--if ! dot
+    script.
+      document.addEventListener("DOMContentLoaded", async () => {
+        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+      })
+    
+    -->
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / СУЗУРИ">
     <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
@@ -64,7 +76,6 @@
           	li 觀測者の望む如く觀測されます.
           
           -->
-          <p><a href="../mitur">митур</a>の先輩で友人です.</p>
           <section id="history">
             <div class="tags">
             </div><a href="#history">
@@ -78,13 +89,13 @@
                 </tr>
                 <tr>
                   <td>2018/8/1</td>
-                  <td>被觀測數=0</td>
-                  <td>被觀測數=1</td>
+                  <td>#observations=0</td>
+                  <td>#observations=1</td>
                 </tr>
                 <tr>
                   <td>2020/7/25</td>
-                  <td>名=‹硯›</td>
-                  <td>姓=‹硯›, 名=‹玄›</td>
+                  <td>name=‹硯›</td>
+                  <td>name.0=‹硯›, name.1=‹玄›</td>
                 </tr>
                 <tr>
                   <td>2020/7/30</td>
@@ -94,11 +105,12 @@
               </table>
             </center>
           </section>
-          <section id="facts">
+          <section id="fact">
             <div class="tags">
-            </div><a href="#facts">
-              <h1>facts</h1></a>
+            </div><a href="#fact">
+              <h1>fact</h1></a>
             <p><em>これらは豫告無く變更されます.</em></p>
+            <p>以下は最も多く觀測される時空での情報であり, 全ては可變です.</p>
             <ul>
               <li>基本
                 <ul>
@@ -112,8 +124,8 @@
                       </tr>
                       <tr>
                         <th>ja</th>
-                        <td>сузури</td>
-                        <td>гъєн</td>
+                        <td>suzurı</td>
+                        <td>hven</td>
                       </tr>
                       <tr>
                         <th>emc</th>
@@ -135,9 +147,9 @@
                   <!--li 生年月日: ████-01-24-->
                   <li>年齢: 23</li>
                   <li>國籍: 日本</li>
-                  <li>言語: ja, en, ru, yue, cmn, jbo, isv</li>
+                  <li>言語: ja, en, ru, pl, yue, cmn, jbo, isv</li>
                   <li>情報科學專攻の大學院生</li>
-                  <li>所在: 東日本のどこかの1DKアパート</li>
+                  <li>住所: 關東のどこかの1DKアパート</li>
                 </ul>
               </li>
               <li>肉體
@@ -147,15 +159,15 @@
                   <li>視力が低く, 外では接觸鏡, 家では眼鏡</li>
                   <li>身體穿孔
                     <ul>
-                      <li>左耳: rob, industrial, tragus</li>
+                      <li>左耳: rob,&#x20;<a href="https://en.wikipedia.org/wiki/Industrial_piercing">industrial</a>, tragus</li>
                       <li><a href="https://en.wikipedia.org/wiki/Tongue_piercing">center toungue</a></li>
                       <li><a href="https://en.wikipedia.org/wiki/Prince_Albert_(genital_piercing)">prince albert</a>&#x20;(2G CBR)</li>
                     </ul>
                   </li>
                   <li>毛色: ash gray</li>
+                  <li>體毛: 薄め, 陰毛は短めに整へる</li>
                   <li>前髪は長く, 右目が隱れる</li>
                   <li>細身だが筋肉質</li>
-                  <li>體毛: 薄く, 陰毛 (黑) は短めに整える</li>
                   <li>性器: 245mm, カリ高, やや下反り, 起っても半剥け</li>
                 </ul>
               </li>
@@ -163,7 +175,7 @@
                 <ul>
                   <li>感情の起伏が穩やかで, 表情にも剰り顕れない</li>
                   <!--li 中性的な服装を好むが, 似合はない自身の體格を氣にして居る-->
-                  <li>黒色を好む</li>
+                  <li>服や持ち物は黑色を好む</li>
                   <!--li bass guitarを彈くul: li <i>Synapse XS-15FPA PB</i>を使ふ
                   -->
                   <li>日本のalternative rockを聽くのを好む</li>
@@ -189,9 +201,7 @@
                     </ul>
                   </li>
                   <li>polyamorist</li>
-                  <li>不分だが, 能ふ限り受になるのを好む
-                    <!--ul: li 受のときは甘えたになる-->
-                  </li>
+                  <li>不分だが受をより好み, 受の時は甘えたがる</li>
                   <!-- li 小中高生の頃 金錢目的で性行爲をすることが有った-->
                   <li>首を絞められるのを好む</li>
                   <!--li 役1.5囘/日自慰する-->
@@ -214,29 +224,32 @@
             <div class="tags">
             </div><a href="#talk">
               <h1>talk</h1></a><a href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq)%20(suzuri%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20%E7%A1%AF)%20since%3A2014-01-01%20until%3A2030-01-01">tweets</a>
-            <p>非公式なものなので別解釋は常に許容されます.</p><a href="https://twitter.com/search?q=%23SuzuriHuen">#SuzuriHuen</a>
+            <p>非公式なものなので別解釋は常に許容されます.</p>
+            <!--a(href="https://twitter.com/search?q=%23SuzuriHuen") #SuzuriHuen-->
           </section>
-          <section id="arts">
+          <section id="art">
             <div class="tags">
-            </div><a href="#arts">
-              <h1>arts</h1></a>
+            </div><a href="#art">
+              <h1>art</h1></a>
             <ul>
-              <li>fan artはどんな物も ({性, 猟奇}的な物でも) 常に大いに{歡迎, 感謝}されます.
+              <li>fan artはどんな物も ({性, 猟奇}的な物でも) 常に大いに{歡迎, 感謝}されます. 擔し次を{要請, 推奬}します.
                 <ul>
-                  <li>擔し, 周く公開される必要が有ります (伏せ字や密碼は禁止されます).</li>
+                  <li>要請: 檢索性を阻碍する伏せ字や暗號の不使用</li>
+                  <li>推奬: 特定の屬性の人間 (例へば18歳未滿) に閲覽を禁止する差別の不實行</li>
+                  <li>推奬: 違憲である刑法175條に基づく性器の自主検閲の不實行</li>
                 </ul>
               </li>
-              <li>作者が繪を描けない爲に判り易い規範的な資料は有りません.</li>
-              <li>次の仕樣を滿たすどの描像もсузуриとして認識されます. 明示されない部分ではいかなる解釋も許容されます.
+              <li>作者が繪を描けない爲に判り易い規範的な資料は有りません</li>
+              <li>任意のfan artはсузуриに影響し, 2次創作でありながら1次創作となります</li>
+              <li>次の仕樣を滿たすどの描像もсузуриとして認識されます. 上で述べられた物に反する物を含めいかなる解釋も許容されます.
                 <ul>
                   <li>ジト目</li>
                   <li>髪: 右目隱れ (右目が見えても無問題), ash gray</li>
-                  <li>性器: 下反り, 勃起時含め半剥け, 245mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎されます)</li>
-                  <li>筋肉質な肉體</li>
+                  <li>性器: 下反り, 勃起時半剥け, 245mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎されます)</li>
+                  <li>健康的, 筋肉質な肉體</li>
                 </ul>
               </li>
               <li><em>掲載畫像の著作者であって掲載停止を要求される方は御連絡下さい</em></li>
-              <li>任意のfan artはсузуриに影響し, 2次創作でありながら1次創作となります</li>
             </ul>
             <div class="tile">
               <section id="2020-08-22">
