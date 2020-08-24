@@ -1,3 +1,0 @@
-[submodule "src/submodules/jyutping-table"]
-	path = src/submodules/jyutping-table
-	url = https://github.com/lshk-org/jyutping-table.git
