@@ -2,18 +2,18 @@ extend /_layout.pug
 
 block head
 	-
+		const id = "митуру"
 		const name =
-			{ id: "митуру"
-			, han: ["盈", "冬"]
-			, ja: ["mituru", "toŋ"]
+			{ han: ["盈", "冬"]
+			, ja: ["mıturu", "toŋ|fuȷu"]
 			};
-		const title = name.id;
+		const title = id;
 		const tags = ["draft"]
 
 	link(href="../style.css", rel="stylesheet")
 
 block main
-	p #{name.id}は#{author.name.id}が作成した人格です
+	p #{id}は#{author.name.id}が作成した人格です
 	p
 		a(href="../suzuri") сузури
 		| の後輩で友人です
@@ -22,7 +22,7 @@ block main
 		p: em これらは豫告無く變更され得ます
 
 		ul
-				li 識別子: #{name.id}
+				li 識別子: #{id}
 				li
 					| 名前:
 					table
@@ -33,7 +33,7 @@ block main
 								td= name[key][1]
 				li 年齢: сузури - 2
 				li 國籍: 日本
-				li 言語: ja, en, zh, ru, pl
+				li 言語: ȷa, en, zh, ru, pl
 				li 數學科の學部生
 				li 身長: 1.85m
 				li 體質量: 80kg
@@ -46,8 +46,8 @@ block main
 				li 菜食主義者
 				li 社會自由主義者
 				li 反出生主義者 (сузуриの影響)
-				li cisgender, 兩性愛者 (公開), 男性
-				li monoamorist
+				li cısgender, 兩性愛者 (公開), 男性
+				li monoamorıst
 				li 受
 				li 胸が弱い
 				li 大體2囘/週自慰する

@@ -12,74 +12,74 @@ block main
 			table
 				for key in ["han", "ja", "emc", "cmn", "yue"]
 					tr
-						th= key
+						th= key.replace("ja", "ȷa")
 						td= author.name[key][0]
 						td= author.name[key][1]
 
 	+section("pronoun")
 		a(href="https://en.wiktionary.org/wiki/ve#English") ve
 
-	+section("ideology"): ul
+	+section("ıdeology"): ul
 		li
-			del determinism
+			del determınısm
 			| &#32;
-			del physicalism
-			| &#32;(i deny boþ free will and determinism)
-		li intersectional veganism
-			ul: li i still eat animal food þerefore i be currently moral nihilist
-		li anti-natalism
-		li pro-mortalism
-		li anti-monogamism
+			del physıcalısm
+			| &#32;(ı deny boþ free wıll and determınısm)
+		li ıntersectıonal veganısm
+			ul: li ı stıll eat anımal food þerefore ı be currently moral nıhılıst
+		li antı-natalısm
+		li pro-mortalısm
+		li antı-monogamısm
 		li
-			del social liberalism
-			| &#32;egalitarianism (?)
+			del socıal lıberalısm
+			| &#32;egalıtarıanısm (?)
 
-	+section("sexuality")
+	+section("sexualıty")
 		ul
-			li cis-gender
+			li cıs-gender
 			li andro-sexual
-			li andro-romantic
+			li andro-romantıc
 			li poly-amory
 
-	+section("interest")
+	+section("ınterest")
 		+section("language")
 			+section("human")
 				ul
-					li japanese (native)
-					li english (TOEIC L&R 810)
-					li lojban (beginner)
-					li cantonese (beginner)
-					li russian (beginner)
+					li ȷapanese (natıve)
+					li englısh (TOEIC L&R 810)
+					li loȷban (begınner)
+					li cantonese (begınner)
+					li russıan (begınner)
 
-			+section("programming")
+			+section("programmıng")
 				ul
 					li Haskell
 					li Scala
 					li Lean Prover
 
-		+section("computer science")
+		+section("computer scıence")
 			ul
 				li λ-calculus
-				li substructural logic
+				li substructural logıc
 				li proof þeory
 				li category þeory
 
 	+section("account")
 		ul
-			li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twitter
+			li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twıtter
 			// li: a(href="https://melanizo.tumblr.com/") Tumblr
 			// li: a(href="https://https://melanizo.blogspot.com/") Blogger
 			li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
-				ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wishlists
+				ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wıshlısts
 			// li: a(href="https://peing.net/ja/sumi") Peing
 			li: a(href="https://marshmallow-qa.com/sumi") Marshmallow
-			li: a(href="https://www.pixiv.net/member.php?id=13912025") pixiv
+			li: a(href="https://www.pixiv.net/member.php?id=13912025") pıxıv
 				ul
 					li: a(href="https://www.pixiv.net/fanbox/creator/13912025") FANBOX
 					li: a(href="https://melanizo.booth.pm/") BOOTH
 			li: a(href="https://soundcloud.com/melanophil") SoundCloud
 
-	+section("donation")
-		p any amount of money will greatly help. þank þou!
+	+section("donatıon")
+		p any amount of money wıll greatly help. þank þou!
 		figure
 			img#image-kyash(src="/images/kyash.png", width="320px")
