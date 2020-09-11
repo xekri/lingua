@@ -4,10 +4,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const nav = document.getElementsByTagName("nav")[0];
   sw.onclick = () => {
     nav.style["display"] =
-      nav.style["display"] === "none"
-        ? "block"
-        : "none"
-        ;
+      nav.style["display"] === "none" ?
+      "block" :
+      "none";
   };
 
   // submenu
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   section.removeAttribute("id");
 
-  if(subsections.length > 0) {
+  if (subsections.length > 0) {
     const ul = document.createElement("ul");
 
     const aParent = document.createElement("a");
@@ -35,18 +34,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     ul.append(li);
 
     ul.setAttribute("id", "submenu");
-    for(const subsection of subsections) {
+    for (const subsection of subsections) {
       const title = subsection.getAttribute("id");
       const a = document.createElement("a");
       a.setAttribute("href", "#" + encodeURIComponent(title));
+      a.setAttribute("class", "undot");
       a.append(document.createTextNode(title));
       const li = document.createElement("li");
       li.append(a);
       ul.append(li);
     }
     submenu.append(ul);
-  }
-  else
+  } else
     submenu.remove();
 
   // date

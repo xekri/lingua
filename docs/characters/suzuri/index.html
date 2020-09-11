@@ -14,23 +14,22 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link href="../style.css" rel="stylesheet">
     <script>
-      if(window.location.href.match(/#arts$/))
-      	window.location.replace(window.location.href.replace(/s$/, ""))
+      window.location.replace(window.location.href.replace("characters", "character"))
       
     </script>
-    <title>СУМИ / СУЗУРИ</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <title>СУМИ / UNDEFINED</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="СУМИ / СУЗУРИ">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <meta name="twitter:title" content="СУМИ / UNDEFINED">
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -43,12 +42,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -60,390 +59,9 @@
     <main>
       <article>
         <p>þıs websıte use Google Analytıcs.</p>
-        <section id="сузури">
+        <section>
           <div class="tags">
-            <div class="tag">versıon=1</div>
-          </div><a href="#сузури">
-            <h1>сузури</h1></a>
-          <!-- https://web.archive.org/web/20200624102126/https://sumi.space/characters/suzuri/-->
-          <center><img src="images/logo.png" width="160px"></center>
-          <section id="history">
-            <div class="tags">
-            </div><a href="#history">
-              <h1>history</h1></a>
-            <center>
-              <table>
-                <tr>
-                  <th>date</th>
-                  <th>before</th>
-                  <th>after</th>
-                </tr>
-                <tr>
-                  <td>2018/8/1</td>
-                  <td>#observatıons=0</td>
-                  <td>#observatıons=1</td>
-                </tr>
-                <tr>
-                  <td>2020/7/25</td>
-                  <td>name="硯"</td>
-                  <td>name=["硯", "玄"]</td>
-                </tr>
-                <tr>
-                  <td>2020/7/30</td>
-                  <td></td>
-                  <td>設定縮小</td>
-                </tr>
-              </table>
-            </center>
-          </section>
-          <section id="fact">
-            <div class="tags">
-            </div><a href="#fact">
-              <h1>fact</h1></a>
-            <p><em>これらは豫告無く變更されます.</em></p>
-            <p>以下は最も多く觀測される時空での情報であり, 全ては可變です.</p>
-            <ul>
-              <li>基本
-                <ul>
-                  <li>識別子: сузури</li>
-                  <li>名前:
-                    <table>
-                      <tr>
-                        <th>han</th>
-                        <td>硯</td>
-                        <td>玄</td>
-                      </tr>
-                      <tr>
-                        <th>ȷa</th>
-                        <td>suzurı</td>
-                        <td>hven|faru</td>
-                      </tr>
-                      <tr>
-                        <th>emc</th>
-                        <td>ŋeǹ</td>
-                        <td>huen̄</td>
-                      </tr>
-                      <tr>
-                        <th>cmn</th>
-                        <td>ŋıan̂</td>
-                        <td>xyaň</td>
-                      </tr>
-                      <tr>
-                        <th>yue</th>
-                        <td>ŋın̄</td>
-                        <td>hyǹ</td>
-                      </tr>
-                    </table>
-                  </li>
-                  <!--li 生年月日: ████-01-24-->
-                  <li>固有色:&#x20;<span style="background-color: black; border: 1px solid;">black</span>,&#x20;<span style="background-color: #dc143c; color: black;">crımson</span></li>
-                  <li>年齢: 23</li>
-                  <li>國籍: 日本</li>
-                  <li>言語: ȷa, en, ru, pl, yue, cmn, ȷbo, ısv</li>
-                  <li>情報科學專攻の大學院生</li>
-                  <li>住所: 關東のどこかの1DKアパート</li>
-                </ul>
-              </li>
-              <li>肉體
-                <ul>
-                  <li>身長: 1.75m</li>
-                  <li>體質量: 72kg</li>
-                  <li>視力が低く, 外では接觸鏡, 家では眼鏡</li>
-                  <li>身體穿孔
-                    <ul>
-                      <li>左耳: rob,&#x20;<a href="https://en.wikipedia.org/wiki/Industrial_piercing">ındustrıal</a>, tragus</li>
-                      <li><a href="https://en.wikipedia.org/wiki/Tongue_piercing">center toungue</a></li>
-                      <li><a href="https://en.wikipedia.org/wiki/Prince_Albert_(genital_piercing)">prınce albert</a>&#x20;(2G CBR)</li>
-                      <li><blockquote class="twitter-tweet" data-theme="dark" width="320"><p dir="ltr">案 <a href="https://t.co/eIolPAAQs7">pic.twitter.com/eIolPAAQs7</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1239962725746454528?ref_src=twsrc%5Etfw">March 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-                    </ul>
-                  </li>
-                  <li>毛色: ash gray</li>
-                  <li>體毛: 薄め, 陰毛は短めに整へる</li>
-                  <li>前髪は長く, 右目が隱れる</li>
-                  <li>細身だが筋肉質</li>
-                  <li>性器: 245mm, カリ高, やや下反り, 起っても半剥け</li>
-                </ul>
-              </li>
-              <li>精神
-                <ul>
-                  <li>感情の起伏が穩やかで, 表情にも剰り顕れない</li>
-                  <!--li 中性的な服装を好むが, 似合はない自身の體格を氣にして居る-->
-                  <li>服や持ち物は黑色を好む</li>
-                  <!--li bass guitarを彈くul: li <i>Synapse XS-15FPA PB</i>を使ふ
-                  -->
-                  <li>日本のalternative rockを聽くのを好む</li>
-                  <!--li <i>Marlboro</i>を携帯するが, 稀にしか喫煙しない-->
-                  <!--li 飲酒を好み, ALDH2はNN型
-                  ul
-                  	li サッポロ黒ラベルを好む
-                  	li 飲むと普段よりは能く笑ふ樣になる
-                  	li 醉った振りをして人の體に接觸するのを好む
-                  -->
-                  <li>數學的platonıst</li>
-                  <li>快樂主義者 (epıcureanıstとhedonıstの半ば)</li>
-                  <li>社會自由主義者</li>
-                  <!--li 戀人と友人を概念として區別しない-->
-                  <li>愛讀書: 生誕の災厄</li>
-                </ul>
-              </li>
-              <li>性
-                <ul>
-                  <li>cısgender, 男性愛者, 男性
-                    <ul>
-                      <li>男性愛者であるのを特に隱さないが, 自分から明かすことも無い</li>
-                    </ul>
-                  </li>
-                  <li>polyamorıst</li>
-                  <li>不分だが受をより好み, 受の時は甘えたがる</li>
-                  <!-- li 小中高生の頃 金錢目的で性行爲をすることが有った-->
-                  <li>首を絞められるのを好む</li>
-                  <!--li 役1.5囘/日自慰する-->
-                  <!--li 初めての性體驗は受で19歳, 攻で21歳のとき-->
-                </ul>
-              </li>
-              <!--li 他
-              ul: li: a(href="https://docs.google.com/spreadsheets/d/16_TWkQz9ELbn-ajqgrpjOKRCpcTIQ9biZxHvuQ2N1VY/edit#gid=0") 100の質問
-              
-              -->
-            </ul>
-            <!--+section("story")
-            ul
-            	li: a(href="https://www.pixiv.net/novel/show.php?id=11419092") 0
-            
-            -->
-          </section>
-          <section id="talk">
-            <div class="tags">
-            </div><a href="#talk">
-              <h1>talk</h1></a><a href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq%20OR%20from%3Asmiqy)%20(suzuri%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20%E7%A1%AF)%20since%3A2014-01-01%20until%3A2030-01-01">tweets</a>
-            <p>非公式なものなので別解釋を常に許容します.</p>
-            <!--a(href="https://twitter.com/search?q=%23SuzuriHuen") #SuzuriHuen-->
-          </section>
-          <section id="relation">
-            <div class="tags">
-            </div><a href="#relation">
-              <h1>relation</h1></a>
-            <p>сузуриъを "甲", 相手を "乙" とします.</p>
-            <section id="auþor">
-              <div class="tags">
-              </div><a href="#auþor">
-                <h1>auþor</h1></a><a href="/author">乙</a>
-              <ul>
-                <li>自己です. 他者です.</li>
-              </ul>
-            </section>
-            <section id="митуру">
-              <div class="tags">
-              </div><a href="#митуру">
-                <h1>митуру</h1></a><a href="../mituru">乙</a>
-              <ul>
-                <li>呼稱: ふゆ ⇄ はる君</li>
-                <li>大學の後輩です. 學部は違ひます.</li>
-                <li>乙が大學圖書館で甲をよく見掛け, 氣になって聲を掛けて知り合ひました.</li>
-                <li>
-                  甲の最もよく遊ぶ相手です (映畫が多い).
-                  自宅に籠もりがちな甲を乙が連れ回す形になり, 甲はそれを樂しく感じてゐます.
-                  甲は常に表情が薄めですが, 乙の前では笑ふ事が多い樣です.
-                </li>
-                <li>
-                  乙に戀人が居ない間, しばしば乙は甲のに來て添ひ寢をします.
-                  その5割では性行爲をします.
-                  更にその7割で甲は攻をし, 殘りは逆です.
-                  甲は甘えたがりですが, 乙に對しては甘やかす側になりがちです.
-                </li>
-                <li>甲の思想に惹かれる乙は考へを引き出さうとしますが, 甲は輕率な<啓蒙>を善しとしないので饒舌を避けます.</li>
-                <li>2人はこっそり話す時にcmnを使ひます (共通の第二外國語).</li>
-              </ul>
-            </section>
-          </section>
-          <section id="art">
-            <div class="tags">
-            </div><a href="#art">
-              <h1>art</h1></a>
-            <ul>
-              <li>fan artはどんな物も ({性, 猟奇}的な物でも) 常に大いに{歡迎, 感謝}します. 擔し次を{要請, 推奬}します.
-                <ul>
-                  <li>要請: 檢索性を阻碍する伏せ字や暗號の不使用</li>
-                  <li>推奬: 特定の屬性の人間 (例へば18歳未滿) に閲覽を禁止する差別の不實行</li>
-                  <li>推奬: 違憲である刑法175條に基づく性器の自主検閲の不實行</li>
-                </ul>
-              </li>
-              <li>作者が繪を描けない爲に判り易い規範的な資料は有りません</li>
-              <li>任意のfan artはсузуриに影響し, 2次創作でありながら1次創作となります</li>
-              <li>次の仕樣を滿たすどの描像もсузуриとして認識します. 上で述べられた物に反する物を含めいかなる解釋も許容します.
-                <ul>
-                  <li>ジト目</li>
-                  <li>髪: 右目隱れ (右目が見えても無問題), ash gray</li>
-                  <li>性器: 下反り, 勃起時半剥け, 245mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します)</li>
-                  <li>健康的, 筋肉質な肉體</li>
-                </ul>
-              </li>
-              <li><em>掲載畫像の著作者であって掲載停止を要求される方は御連絡下さい</em></li>
-            </ul>
-            <div class="tile">
-              <section id="2020-9-9">
-                <div class="tags">
-                </div><a href="#2020-9-9">
-                  <h1>2020-9-9</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">身長差 (列べただけ) <a href="https://t.co/5rReHHdnqA">pic.twitter.com/5rReHHdnqA</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1303539039505506305?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-9-5">
-                <div class="tags">
-                </div><a href="#2020-9-5">
-                  <h1>2020-9-5</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">/* test */ <a href="https://t.co/cdvn2vvAQ3">pic.twitter.com/cdvn2vvAQ3</a></p>&mdash; 硯玄 (сузури) (@SzrHyn) <a href="https://twitter.com/SzrHyn/status/1301920417381191681?ref_src=twsrc%5Etfw">September 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-8-22">
-                <div class="tags">
-                </div><a href="#2020-8-22">
-                  <h1>2020-8-22</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">- 硯君の表情 考<br>- 後輩君 <a href="https://t.co/ngIBx6kHit">pic.twitter.com/ngIBx6kHit</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1296894217789136896?ref_src=twsrc%5Etfw">August 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-8-4">
-                <div class="tags">
-                </div><a href="#2020-8-4">
-                  <h1>2020-8-4</h1></a><a href="https://twitter.com/intent/user?user_id=948471113448792064">絹豆腐 君</a><img src="images/2020-08-04.png">
-                <!--img(src="images/2020-08-04-1.png", width="50%")-->
-                <!--img(src="images/2020-08-04-2.png", width="50%")-->
-              </section>
-              <section id="2020-7-31">
-                <div class="tags">
-                </div><a href="#2020-7-31">
-                  <h1>2020-7-31</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">🔞NFSW🔞<br>skeb納品しました！穴まで描きたかった〜〜〜〜ッ！<br>リクエストありがとうございました🌞<a href="https://t.co/cqMdrGNWyZ">https://t.co/cqMdrGNWyZ</a> <a href="https://t.co/kYUK5iYora">pic.twitter.com/kYUK5iYora</a></p>&mdash; たま魂👼 (@mkotan) <a href="https://twitter.com/mkotan/status/1289200726829195264?ref_src=twsrc%5Etfw">July 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-7-25">
-                <div class="tags">
-                </div><a href="#2020-7-25">
-                  <h1>2020-7-25</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/sumimq?ref_src=twsrc%5Etfw">@sumimq</a> スミくんはぴば♥ <a href="https://t.co/LnbuWVojri">pic.twitter.com/LnbuWVojri</a></p>&mdash; 斎川 (@ti17_) <a href="https://twitter.com/ti17_/status/1286677524563365888?ref_src=twsrc%5Etfw">July 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-7-22">
-                <div class="tags">
-                </div><a href="#2020-7-22">
-                  <h1>2020-7-22</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">習作 (四肢拘束のつもりだった) <a href="https://t.co/v0mXfg2F6i">pic.twitter.com/v0mXfg2F6i</a></p>&mdash; 初夏の夜風の涼しさ (@sumimq) <a href="https://twitter.com/sumimq/status/1285594214181593088?ref_src=twsrc%5Etfw">July 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-7-14">
-                <div class="tags">
-                </div><a href="#2020-7-14">
-                  <h1>2020-7-14</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">硯君 塗った. NSFW. <a href="https://t.co/4c4MhzrkkA">pic.twitter.com/4c4MhzrkkA</a></p>&mdash; 初夏の夜風の涼しさ (@sumimq) <a href="https://twitter.com/sumimq/status/1282856915723157504?ref_src=twsrc%5Etfw">July 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-7-11">
-                <div class="tags">
-                </div><a href="#2020-7-11">
-                  <h1>2020-7-11</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">Commission<a href="https://t.co/GCP58cuKd5">https://t.co/GCP58cuKd5</a> <a href="https://t.co/5sHvE7QLqa">pic.twitter.com/5sHvE7QLqa</a></p>&mdash; ミネむら (@minefarmkun) <a href="https://twitter.com/minefarmkun/status/1281632927529332736?ref_src=twsrc%5Etfw">July 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="https://www.pixiv.net/artworks/83188420">pixiv</a>
-              </section>
-              <section id="2020-6-9">
-                <div class="tags">
-                </div><a href="#2020-6-9">
-                  <h1>2020-6-9</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">硯君 <a href="https://t.co/0DySjnl0jo">pic.twitter.com/0DySjnl0jo</a></p>&mdash; суми (@sumimq) <a href="https://twitter.com/sumimq/status/1270015188935172097?ref_src=twsrc%5Etfw">June 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-4-25">
-                <div class="tags">
-                </div><a href="#2020-4-25">
-                  <h1>2020-4-25</h1></a>
-                <P>@shi46_u</P><a href="https://twitter.com/intent/user?user_id=800300702937399296">司ろう。君</a><img src="images/2020-04-25.jpg">
-              </section>
-              <section id="2020-4-24">
-                <div class="tags">
-                </div><a href="#2020-4-24">
-                  <h1>2020-4-24</h1></a>
-                <P>有償</P><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">リクエストありがとうございました～！Skeb(<a href="https://t.co/b5k3RNydjW">https://t.co/b5k3RNydjW</a> )にて、納品完了です！ <br>※NSFW+18 <a href="https://t.co/GJ892FBly9">pic.twitter.com/GJ892FBly9</a></p>&mdash; 九磨🔞 (@9ma_param) <a href="https://twitter.com/9ma_param/status/1253513328783065088?ref_src=twsrc%5Etfw">April 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2020-4-13">
-                <div class="tags">
-                </div><a href="#2020-4-13">
-                  <h1>2020-4-13</h1></a>
-                <p>有償</p><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">skeb納品しました。ファーストリクエスト!ありがとうございました! R18NSFW <a href="https://t.co/CHKZMCC57p">https://t.co/CHKZMCC57p</a> <a href="https://t.co/ubMINM53hw">pic.twitter.com/ubMINM53hw</a></p>&mdash; T🔞 (@18TANNSFW) <a href="https://twitter.com/18TANNSFW/status/1249605824080539648?ref_src=twsrc%5Etfw">April 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="https://www.pixiv.net/artworks/80769760">pixiv</a>
-              </section>
-              <!--+section("2020-4-12")
-              <blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">■■大學大學院■■研究科■■研究室　■■硯 <a href="https://t.co/b2EvhqHBlr">pic.twitter.com/b2EvhqHBlr</a></p>&mdash; 男根・大蔴・安樂死 (@smgvn) <a href="https://twitter.com/smgvn/status/1249025477844426753?ref_src=twsrc%5Etfw">April 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              
-              -->
-              <section id="2020-4-8">
-                <div class="tags">
-                </div><a href="#2020-4-8">
-                  <h1>2020-4-8</h1></a>
-                <p>@nikuda2929 (有償)</p>
-                <!--+nsfw: img(src="images/2020-04-08.jpg")-->
-                <!--img(src="images/2020-04-08'.jpg")--><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/NSFW?src=hash&amp;ref_src=twsrc%5Etfw">#NSFW</a><br>from <a href="https://twitter.com/nikuda2929?ref_src=twsrc%5Etfw">@nikuda2929</a> 先生<br>大麻でラリってハメられるスズリ君<br>suzuri-kun being stoned and fucked <a href="https://t.co/bqQ7B7jAJE">pic.twitter.com/bqQ7B7jAJE</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1247826591792517123?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-11-25">
-                <div class="tags">
-                </div><a href="#2019-11-25">
-                  <h1>2019-11-25</h1></a>
-                <!--p @inuqw-->
-                <p>作者非公開</p><img src="images/2019-11-25.jpg">
-              </section>
-              <section id="2019-10-27">
-                <div class="tags">
-                </div><a href="#2019-10-27">
-                  <h1>2019-10-27</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/WSN80Ga6jB">pic.twitter.com/WSN80Ga6jB</a></p>&mdash; sumi (@melanophil) <a href="https://twitter.com/melanophil/status/1188098375045935104?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-10-11">
-                <div class="tags">
-                </div><a href="#2019-10-11">
-                  <h1>2019-10-11</h1></a>
-                <p>@shi46_u</p><img src="images/2019-10-11.jpg">
-              </section>
-              <section id="2019-10-5">
-                <div class="tags">
-                </div><a href="#2019-10-5">
-                  <h1>2019-10-5</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/melanophil?ref_src=twsrc%5Etfw">@melanophil</a> さんが生活物資支援してくれたからお礼に彼のオリキャラ(硯くん)のfanart描いた(これがパパ活)<br><br>みんなも絹くん(180/73/21/大学生)にサポしてくれよな～ <a href="https://t.co/hA3AXsvwSy">pic.twitter.com/hA3AXsvwSy</a></p>&mdash; 絹豆腐 (@momentoufuR18) <a href="https://twitter.com/momentoufuR18/status/1180149743692812288?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-9-27">
-                <div class="tags">
-                </div><a href="#2019-9-27">
-                  <h1>2019-9-27</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">うーんいない <a href="https://t.co/8lFhYofgu6">pic.twitter.com/8lFhYofgu6</a></p>&mdash; 司ろう。 (@shi46_u) <a href="https://twitter.com/shi46_u/status/1177286451647508480?ref_src=twsrc%5Etfw">September 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-8-31">
-                <div class="tags">
-                </div><a href="#2019-8-31">
-                  <h1>2019-8-31</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">線画やる前に飽きちゃった…… (終)  <a href="https://t.co/M6klCWOTCN">pic.twitter.com/M6klCWOTCN</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1167690971410309120?ref_src=twsrc%5Etfw">August 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-8-4">
-                <div class="tags">
-                </div><a href="#2019-8-4">
-                  <h1>2019-8-4</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/melanophil?ref_src=twsrc%5Etfw">@melanophil</a> めちゃくちゃ遅くなりまして申し訳ないのですがお誕生日おめでとうございます…！ happy birtday... <a href="https://t.co/0XZUjutoOi">pic.twitter.com/0XZUjutoOi</a></p>&mdash; 甘い酒 (@sweetZAKE) <a href="https://twitter.com/sweetZAKE/status/1157737672439320576?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-7-26">
-                <div class="tags">
-                </div><a href="#2019-7-26">
-                  <h1>2019-7-26</h1></a>
-                <p>作者非公開 // @AI67448472</p><img src="images/2019-07-26.jpg">
-              </section>
-              <!-- +section("2019-07-26 0")
-              <blockquote class="twitter-tweet" data-conversation="none" data-theme="dark"><p dir="ltr">遅くなりましたが誕生日おめでとう御座います!スズリくん描かせて頂きました… <a href="https://t.co/3JS1r6kXg2">pic.twitter.com/3JS1r6kXg2</a></p>&mdash; まぁく (@MK2ma_c) <a href="https://twitter.com/MK2ma_c/status/1154736325766942720?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              
-              -->
-              <section id="2019-7-18">
-                <div class="tags">
-                </div><a href="#2019-7-18">
-                  <h1>2019-7-18</h1></a>
-                <p>@sikotamazou (有償)</p>
-                <!--a(href="https://skeb.jp/works/9854") Skeb--><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/tRtU7KUMdD">https://t.co/tRtU7KUMdD</a><a href="https://twitter.com/sikotamazou?ref_src=twsrc%5Etfw">@sikotamazou</a> 先生に依頼していたスズリ君が納品されました　最高に可愛い　文句無し　依頼して良かった</p>&mdash; 𝗦𝗨𝗠𝗜 (@melanophil) <a href="https://twitter.com/melanophil/status/1151805582556352513?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </section>
-              <section id="2019-4-23">
-                <div class="tags">
-                </div><a href="#2019-4-23">
-                  <h1>2019-4-23</h1></a><img src="images/2019-04-23.png">
-              </section>
-              <section id="2018-12-4">
-                <div class="tags">
-                </div><a href="#2018-12-4">
-                  <h1>2018-12-4</h1></a><blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><img src="images/2018-12-04.jpg">
-              </section>
-              <section id="2018-8-1">
-                <div class="tags">
-                </div><a href="#2018-8-1">
-                  <h1>2018-8-1</h1></a><img src="images/2018-08-01.png">
-              </section>
-            </div>
-          </section>
-          <section id="link">
-            <div class="tags">
-            </div><a href="#link">
-              <h1>link</h1></a>
-            <ul>
-              <li><a href="https://twitter.com/intent/user?user_id=4440410718">Twıtter</a></li>
-            </ul>
-          </section>
+          </div>
         </section>
       </article>
       <!--

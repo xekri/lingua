@@ -15,16 +15,17 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>СУМИ / ESPERANTO</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / ESPERANTO">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -37,12 +38,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -57,217 +58,334 @@
         <section id="esperanto">
           <div class="tags">
           </div><a href="#esperanto">
-            <h1>esperanto</h1></a>
-          <table>
+            <h1 class="undot">esperanto</h1></a>
+          <ul>
+            <li>no gender</li>
+            <li>no number</li>
+            <li>no /k/ - /tʃ/ discrimination</li>
+          </ul>
+          <table class="transpose">
             <tr>
-              <td>a /a/</td>
-              <td>=</td>
+              <td>a</td>
+              <td></td>
             </tr>
             <tr>
-              <td>b /b/</td>
-              <td>=</td>
+              <td>b</td>
+              <td></td>
             </tr>
             <tr>
-              <td>c /ts/</td>
-              <td>c /t[sʃ]/[ie] /k/</td>
+              <td>c</td>
+              <td>c /tʃ/(ı|e) /k/</td>
             </tr>
             <tr>
-              <td>ĉ /tʃ/</td>
+              <td>ĉ</td>
               <td>&gt;c</td>
             </tr>
             <tr>
-              <td>d /d/</td>
-              <td>=</td>
+              <td>d</td>
+              <td></td>
             </tr>
             <tr>
-              <td>e /e/</td>
-              <td>=</td>
+              <td>e</td>
+              <td></td>
             </tr>
             <tr>
-              <td>f /f/</td>
-              <td>=</td>
+              <td>f</td>
+              <td></td>
             </tr>
             <tr>
-              <td>g /g/</td>
-              <td>g /dz|dʒ/[ie]</td>
+              <td>g</td>
+              <td>g /dʒ/(ı|e)</td>
             </tr>
             <tr>
-              <td>ĝ /dʒ/</td>
+              <td>ĝ</td>
               <td>&gt;g</td>
             </tr>
             <tr>
-              <td>h /h/</td>
-              <td>=</td>
+              <td>h</td>
+              <td>&gt; x</td>
             </tr>
             <tr>
-              <td>ĥ /x/</td>
-              <td>x /x/</td>
+              <td>ĥ</td>
+              <td>x /ʃ/(ı|e) /x/</td>
             </tr>
             <tr>
-              <td>i /i/</td>
+              <td>i</td>
               <td>ı /i/</td>
             </tr>
             <tr>
-              <td>j /j/</td>
+              <td>j</td>
               <td>ȷ /j/</td>
             </tr>
             <tr>
-              <td>ĵ /ʒ/</td>
+              <td>ĵ</td>
               <td>&gt;ȷ &gt;g</td>
             </tr>
             <tr>
-              <td>k /k/</td>
+              <td>k</td>
               <td>&gt;c</td>
             </tr>
             <tr>
-              <td>l /l/</td>
-              <td>=</td>
-            </tr>
-            <tr>
-              <td>m /m/</td>
-              <td>=</td>
-            </tr>
-            <tr>
-              <td>n /n/</td>
-              <td>=</td>
-            </tr>
-            <tr>
+              <td>l</td>
               <td></td>
-              <td>ŋ /ŋ/</td>
             </tr>
             <tr>
-              <td>o /o/</td>
-              <td>=</td>
+              <td>m</td>
+              <td></td>
             </tr>
             <tr>
-              <td>p /p/</td>
-              <td>=</td>
+              <td>n</td>
+              <td></td>
             </tr>
             <tr>
-              <td>r /r/</td>
-              <td>=</td>
+              <td>o</td>
+              <td></td>
             </tr>
             <tr>
-              <td>s /s/</td>
-              <td>=</td>
+              <td>p</td>
+              <td></td>
             </tr>
             <tr>
-              <td>ŝ /ʃ/</td>
-              <td>ṡ /ʃ/</td>
+              <td>r</td>
+              <td></td>
             </tr>
             <tr>
-              <td>t /t/</td>
-              <td>=</td>
+              <td>s</td>
+              <td></td>
             </tr>
             <tr>
-              <td>u /u/</td>
-              <td>=</td>
+              <td>ŝ</td>
+              <td>&gt;x</td>
             </tr>
             <tr>
-              <td>ŭ /w/</td>
+              <td>t</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>u</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ŭ</td>
               <td>v /w/</td>
             </tr>
             <tr>
-              <td>v /v/</td>
+              <td>v</td>
               <td>&gt;v</td>
             </tr>
             <tr>
-              <td>z /z/</td>
-              <td>=</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td>Mi trovis botelon kaj deprenis la fermilon.</td>
-              <td>mı trovıs botelo caȷ deprenıs fermılo.</td>
-              <td>i found a bottle and took off the lid.</td>
-            </tr>
-            <tr>
-              <td>La gepardo estas la plej rapida el la bestoj.</td>
-              <td>gepardo estas pleȷ rapıda el besto.</td>
-              <td>The cheetah is the fastest of the animals.</td>
-            </tr>
-            <tr>
-              <td>La abeloj havas felon, sed ili ne taŭgas por karesi.</td>
-              <td>abelo havas felo, sed ılı ne tavgas por caresı.</td>
-              <td>Bees have fur, but they're no good for petting.</td>
-            </tr>
-            <tr>
-              <td>la blua</td>
-              <td>blua</td>
-              <td>the blue one</td>
-            </tr>
-            <tr>
-              <td>la angla</td>
-              <td>angla</td>
-              <td>the english language</td>
-            </tr>
-            <tr>
-              <td>La mia bluas, la via ruĝas.</td>
-              <td>mıa bluas, vıa rugas.</td>
-              <td>mine is blue, yours is red.</td>
-            </tr>
-            <tr>
-              <td>ili tranĉis la manon.</td>
-              <td>ılı trancıs mano.</td>
+              <td>z</td>
               <td></td>
             </tr>
-            <tr>
-              <td>La knabino feliĉan knabon kisis.</td>
-              <td>cnabo felıcan cnabo cısıs.</td>
-              <td>the girl kissed a happy boy.</td>
-            </tr>
-            <tr>
-              <td>la knabino feliĉa knabon kisis.</td>
-              <td>cnabo felıca cnabo cısıs.</td>
-              <td>the happy girl kissed a boy.</td>
-            </tr>
-            <tr>
-              <td>ruĝaj domo kaj aŭto</td>
-              <td>rugaȷ (domo kaȷ avto)</td>
-              <td>a red house and a (red) car</td>
-            </tr>
-            <tr>
-              <td>ruĝa domo kaj aŭto</td>
-              <td>ruga domo kaȷ avto</td>
-              <td>a red house and a car</td>
-            </tr>
-            <tr>
-              <td>mi farbis la pordon ruĝan.</td>
-              <td>mı farbıs pordo ruga.</td>
-              <td>i painted the red door.</td>
-            </tr>
-            <tr>
-              <td>mi farbis la pordon ruĝa.</td>
-              <td>mı farbıs pordo, ruga.</td>
-              <td>i painted the door red.</td>
-            </tr>
-            <tr>
-              <td>[mi, ni, vi, li, ŝi, ĝi, ili, oni, si]</td>
-              <td>[mı, mı, vı, gı, gı, gı, gı, ıo, sı]</td>
-              <td>[i, we, you, he, she, it, they, one, oneself]</td>
-            </tr>
-            <tr>
-              <td>li lavis sin.</td>
-              <td>gı lavıs sı.</td>
-              <td>he washed himself.</td>
-            </tr>
-            <tr>
-              <td>li manĝis sian panon.</td>
-              <td>gı mangis sıa pano.</td>
-              <td>he ate himself's bread.</td>
-            </tr>
-            <tr>
-              <td>La infano estas ploranta, ĉar ĝi volas manĝi.</td>
-              <td>ınfano estas ploranta, car gı volas mangı.</td>
-              <td>the child is crying, because it wants to eat.</td>
-            </tr>
-            <tr>
-              <td>Iu ĵus diris, ke tiu malsatas.</td>
-              <td>ıo ȷus dırıs, ke gı malsatas.</td>
-              <td>someone just said that that one is hungry.</td>
-            </tr>
           </table>
+          <section id="grammar">
+            <div class="tags">
+            </div><a href="#grammar">
+              <h1 class="undot">grammar</h1></a>
+            <table>
+              <tr>
+                <td>noun</td>
+                <td>-o</td>
+              </tr>
+              <tr>
+                <td>noun plural</td>
+                <td>(not exist)</td>
+              </tr>
+              <tr>
+                <td>adjective</td>
+                <td>-a</td>
+              </tr>
+              <tr>
+                <td>adverb</td>
+                <td>-e</td>
+              </tr>
+              <tr>
+                <td>verb</td>
+                <td>-ı</td>
+              </tr>
+              <tr>
+                <td>verb past</td>
+                <td>-ıs</td>
+              </tr>
+              <tr>
+                <td>present</td>
+                <td>-as</td>
+              </tr>
+              <tr>
+                <td>future</td>
+                <td>-os</td>
+              </tr>
+              <tr>
+                <td>imperative</td>
+                <td>-us</td>
+              </tr>
+              <tr>
+                <td>conditional</td>
+                <td>-u</td>
+              </tr>
+              <tr>
+                <td>perfective</td>
+                <td>-ınt</td>
+              </tr>
+              <tr>
+                <td>perfective passive</td>
+                <td>-ıt</td>
+              </tr>
+              <tr>
+                <td>progressive</td>
+                <td>-ant</td>
+              </tr>
+              <tr>
+                <td>progressive passive</td>
+                <td>-at</td>
+              </tr>
+              <tr>
+                <td>prospective</td>
+                <td>-ont</td>
+              </tr>
+              <tr>
+                <td>prospective passsive</td>
+                <td>-ot</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>i</td>
+                <td>mı</td>
+              </tr>
+              <tr>
+                <td>you</td>
+                <td>vı</td>
+              </tr>
+              <tr>
+                <td>he, she, it</td>
+                <td>rı</td>
+              </tr>
+              <tr>
+                <td>self</td>
+                <td>sı</td>
+              </tr>
+              <tr>
+                <td>one</td>
+                <td>on</td>
+              </tr>
+            </table>
+            <table class="transpose">
+              <tr>
+                <td>0</td>
+                <td>nul</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>unu</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>du</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>trı</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>cvar</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>cvın</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>ses</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>sep</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>oc</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>nav</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>dec</td>
+              </tr>
+              <tr>
+                <td>100</td>
+                <td>cent</td>
+              </tr>
+              <tr>
+                <td>1000</td>
+                <td>mıl</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td></td>
+                <td>interrogative</td>
+                <td>demonstrative</td>
+                <td>indefinite</td>
+                <td>universal</td>
+                <td>negative</td>
+              </tr>
+              <tr>
+                <td>truth</td>
+                <td>cviu</td>
+                <td>tiu</td>
+                <td>iu</td>
+                <td>ciu</td>
+                <td>niu</td>
+              </tr>
+              <tr>
+                <td>noun</td>
+                <td>cvio</td>
+                <td>tio</td>
+                <td>io</td>
+                <td>cio</td>
+                <td>nio</td>
+              </tr>
+              <tr>
+                <td>adjective</td>
+                <td>cvia</td>
+                <td>tia</td>
+                <td>ia</td>
+                <td>cia</td>
+                <td>nia</td>
+              </tr>
+              <tr>
+                <td>adverb</td>
+                <td>cvie</td>
+                <td>tie</td>
+                <td>ie</td>
+                <td>cie</td>
+                <td>nie</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>sentence to noun</td>
+                <td>ce -</td>
+              </tr>
+              <tr>
+                <td>adjective to noun</td>
+                <td>la -</td>
+              </tr>
+              <tr>
+                <td>imcomplete sentence to adjective</td>
+                <td>ciu -</td>
+              </tr>
+              <tr>
+                <td>declarative to interrogative</td>
+                <td>ciu</td>
+              </tr>
+            </table>
+            <p>"mi xavas libro." ~ "mi xavas libro-n." ~ "libro-n xavas mi."</p>
+          </section>
         </section>
       </article>
       <!--

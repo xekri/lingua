@@ -15,16 +15,17 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>СУМИ / THOUGHTS</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / THOUGHTS">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -37,12 +38,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -57,11 +58,11 @@
         <section id="thoughts">
           <div class="tags">
           </div><a href="#thoughts">
-            <h1>thoughts</h1></a>
+            <h1 class="undot">thoughts</h1></a>
           <section id="性">
             <div class="tags">
             </div><a href="#性">
-              <h1>性</h1></a>
+              <h1 class="undot">性</h1></a>
             <p>
               （2019-08-14）
               性は少なくとも食と同等に公然たるべきだ。
@@ -72,7 +73,7 @@
           <section id="婚姻">
             <div class="tags">
             </div><a href="#婚姻">
-              <h1>婚姻</h1></a>
+              <h1 class="undot">婚姻</h1></a>
             <p>
               （2019-08-14）
               一對一・男對女に限定された婚姻制度は破壞されるべきだ。
@@ -82,7 +83,7 @@
           <section id="大麻">
             <div class="tags">
             </div><a href="#大麻">
-              <h1>大麻</h1></a>
+              <h1 class="undot">大麻</h1></a>
             <p>
               （2019-08-14）
               大麻は（少なくとも酒や煙草と同等に）合法であるべきだ。。
@@ -91,7 +92,7 @@
           <section id="生殖">
             <div class="tags">
             </div><a href="#生殖">
-              <h1>生殖</h1></a>
+              <h1 class="undot">生殖</h1></a>
             <p>
               （2019-08-14）
               （權利を持つ種の個體の總稱としての）人を殖やすべきでない。
@@ -100,7 +101,7 @@
           <section id="猥褻">
             <div class="tags">
             </div><a href="#猥褻">
-              <h1>猥褻</h1></a>
+              <h1 class="undot">猥褻</h1></a>
             <p>
               （2019-08-14）
               刑法175條は違憲且つ惡法だ。
@@ -109,7 +110,7 @@
           <section id="安樂死">
             <div class="tags">
             </div><a href="#安樂死">
-              <h1>安樂死</h1></a>
+              <h1 class="undot">安樂死</h1></a>
             <p>
               （2019-08-14）
               安樂死の權利を認めるべきだ。
@@ -118,7 +119,7 @@
           <section id="自由意思">
             <div class="tags">
             </div><a href="#自由意思">
-              <h1>自由意思</h1></a>
+              <h1 class="undot">自由意思</h1></a>
             <p>
               （2019-08-14）
               人に自由意志は無く、責任能力も無い。
@@ -128,7 +129,7 @@
           <section id="序數">
             <div class="tags">
             </div><a href="#序數">
-              <h1>序數</h1></a>
+              <h1 class="undot">序數</h1></a>
             <p>
               （2019-09-05）
               最初は1でなく0であるべきである。

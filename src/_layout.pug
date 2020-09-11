@@ -7,8 +7,7 @@ include /_mixins.pug
   const author =
     { id: "суми"
     , name:
-      {
-      , han: ["墨", "幽"]
+      { han: ["墨", "幽"]
       , ȷa: ["sumı", "ȷuu"]
       , emc: ["moŋ̍", "qȳ"]
       , cmn: ["mô", "ıú"]
@@ -44,7 +43,7 @@ html(lang="en-GB")
         document.addEventListener("DOMContentLoaded", async () => {
           const replace = (await import("/work/language/interslavic/replace.js")).default
           const titleH = document.querySelector("h1")
-          const title = replace(titleH.innerHTML, true, true)
+          const title = replace(titleH.innerHTML, false, false)
           titleH.innerHTML = title
           document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
         })
@@ -54,16 +53,17 @@ html(lang="en-GB")
         document.addEventListener("DOMContentLoaded", async () => {
           const replace = (await import("/work/orthography/polish/replace.js")).default
           const titleH = document.querySelector("h1")
-          const title = replace(titleH.innerHTML, true, true)
+          const title = replace(titleH.innerHTML, false, false)
           titleH.innerHTML = title
           document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
         })
 
-    //if ! dot
-      script.
-        document.addEventListener("DOMContentLoaded", async () => {
-          document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
-        })
+    script.
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
+      })
 
     meta(name="twitter:site", content="@" + author.twitter)
     meta(name="twitter:title", content=titleFull)
@@ -79,16 +79,16 @@ html(lang="en-GB")
           div#logo
             a(href="/"): img(src="/images/sumi.png")
           div#datetime
-          +myDiv("menu")
+          +div("menu")
             ul
-              li: a(href="/") /
-              li: a(href="/author") auþor
-              li: a(href="/characters") character
-              li: a(href="/favorite") favorite
+              li: a.undot(href="/") /
+              li: a.undot(href="/author") auþor
+              li: a.undot(href="/characters") character
+              li: a.undot(href="/favorite") favorite
               // li: a(href="/thought") thought
-              li: a(href="/work") work
+              li: a.undot(href="/work") work
 
-            +myDiv("submenu")
+            +div("submenu")
 
           center
             a(

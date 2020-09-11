@@ -15,16 +15,17 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>СУМИ / POLISH</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / POLISH">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -37,12 +38,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -57,7 +58,7 @@
         <section id="polish">
           <div class="tags">
           </div><a href="#polish">
-            <h1>polish</h1></a>
+            <h1 class="undot">polish</h1></a>
           <!-- https://en.wikibooks.org/wiki/Polish/Hard_and_soft_consonants-->
           <center><span>
               <input class="trigger" id="uppercase" type="checkbox" name="uppercase">
@@ -138,15 +139,15 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
           <section id="inflection">
             <div class="tags">
             </div><a href="#inflection">
-              <h1>inflection</h1></a>
+              <h1 class="undot">inflection</h1></a>
             <section id="noun">
               <div class="tags">
               </div><a href="#noun">
-                <h1>noun</h1></a>
+                <h1 class="undot">noun</h1></a>
               <section id="masculine inanimate">
                 <div class="tags">
                 </div><a href="#masculine inanimate">
-                  <h1>masculine inanimate</h1></a>
+                  <h1 class="undot">masculine inanimate</h1></a>
                 <table class="nu">
                   <caption>store</caption>
                   <tr>
@@ -280,7 +281,7 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
               <section id="masculine animate">
                 <div class="tags">
                 </div><a href="#masculine animate">
-                  <h1>masculine animate</h1></a>
+                  <h1 class="undot">masculine animate</h1></a>
                 <table class="nu">
                   <caption>pigeon</caption>
                   <tr>
@@ -500,7 +501,7 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
               <section id="masculine personal">
                 <div class="tags">
                 </div><a href="#masculine personal">
-                  <h1>masculine personal</h1></a>
+                  <h1 class="undot">masculine personal</h1></a>
                 <table class="nu">
                   <caption>student</caption>
                   <tr>
@@ -677,7 +678,7 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
               <section id="feminine">
                 <div class="tags">
                 </div><a href="#feminine">
-                  <h1>feminine</h1></a>
+                  <h1 class="undot">feminine</h1></a>
                 <table class="nu">
                   <caption>woman</caption>
                   <tr>
@@ -941,7 +942,7 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
             <section id="neuter">
               <div class="tags">
               </div><a href="#neuter">
-                <h1>neuter</h1></a>
+                <h1 class="undot">neuter</h1></a>
               <table class="nu">
                 <caption>town</caption>
                 <tr>
@@ -1118,7 +1119,7 @@ nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji polityczn
             <section id="pronoun">
               <div class="tags">
               </div><a href="#pronoun">
-                <h1>pronoun</h1></a>
+                <h1 class="undot">pronoun</h1></a>
               <table class="nu">
                 <tr>
                   <th></th>

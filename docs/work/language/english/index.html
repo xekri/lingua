@@ -15,16 +15,17 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>СУМИ / ENGLISH SIMPLIFIED (PSEUDO-ENGLISH)</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / ENGLISH SIMPLIFIED (PSEUDO-ENGLISH)">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -37,12 +38,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -59,11 +60,11 @@
             <div class="tag">language=english</div>
             <div class="tag">draft</div>
           </div><a href="#englısh simplified (pseudo-english)">
-            <h1>englısh simplified (pseudo-english)</h1></a>
+            <h1 class="undot">englısh simplified (pseudo-english)</h1></a>
           <section id="orthography">
             <div class="tags">
             </div><a href="#orthography">
-              <h1>orthography</h1></a>
+              <h1 class="undot">orthography</h1></a>
             <table>
               <tr>
                 <th>standard</th>
@@ -90,7 +91,7 @@
           <section id="grammar">
             <div class="tags">
             </div><a href="#grammar">
-              <h1>grammar</h1></a>
+              <h1 class="undot">grammar</h1></a>
             <table>
               <tr>
                 <th>standard</th>

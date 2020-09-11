@@ -1,5 +1,5 @@
-mixin myDiv(title)
-	div.my-div(id=title)
+mixin div(title)
+	.my-div(id=title)
 		block
 
 mixin section(title, tags=[])
@@ -8,7 +8,7 @@ mixin section(title, tags=[])
 			for tag in tags
 				div.tag= tag
 		if title
-			a(href="#" + title): h1= title
+			a(href="#" + title): h1.undot= title
 		block
 
 mixin tds(xs)

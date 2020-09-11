@@ -1,7 +1,7 @@
 extend /_layout.pug
 
-mixin table(xss)
-	table
+mixin table(xss, transpose=false)
+	table(class=transpose ? "transpose" : "")
 		for xs in xss
 			tr
 				for x in xs
@@ -17,48 +17,47 @@ block main
 		li no /k/ - /tʃ/ discrimination
 
 	+table(
-		[ ["a /a/", "="]
-		, ["b /b/", "="]
-		, ["c /ts/", "c /tʃ/(ı|e) /k/"]
-		, ["ĉ /tʃ/", ">c"]
-		, ["d /d/", "="]
-		, ["e /e/", "="]
-		, ["f /f/", "="]
-		, ["g /g/", "g /dʒ/(ı|e)"]
-		, ["ĝ /dʒ/", ">g"]
-		, ["h /h/", "> x"]
-		, ["ĥ /x/", "x /ʃ/(ı|e) /x/"]
-		, ["i /i/", "ı /i/"]
-		, ["j /j/", "ȷ /j/"]
-		, ["ĵ /ʒ/", ">ȷ >g"]
-		, ["k /k/", ">c"]
-		, ["l /l/", "="]
-		, ["m /m/", "="]
-		, ["n /n/", "="]
-		, ["",      "ŋ /ŋ/"]
-		, ["o /o/", "="]
-		, ["p /p/", "="]
-		, ["r /r/", "="]
-		, ["s /s/", "="]
-		, ["ŝ /ʃ/", ">x"]
-		, ["t /t/", "="]
-		, ["u /u/", "="]
-		, ["ŭ /w/", "v /w/"]
-		, ["v /v/", ">v"]
-		, ["z /z/", "="]
-	])
+		[ ["a", ""]
+		, ["b", ""]
+		, ["c", "c /tʃ/(ı|e) /k/"]
+		, ["ĉ", ">c"]
+		, ["d", ""]
+		, ["e", ""]
+		, ["f", ""]
+		, ["g", "g /dʒ/(ı|e)"]
+		, ["ĝ", ">g"]
+		, ["h", "> x"]
+		, ["ĥ", "x /ʃ/(ı|e) /x/"]
+		, ["i", "ı /i/"]
+		, ["j", "ȷ /j/"]
+		, ["ĵ", ">ȷ >g"]
+		, ["k", ">c"]
+		, ["l", ""]
+		, ["m", ""]
+		, ["n", ""]
+		, ["o", ""]
+		, ["p", ""]
+		, ["r", ""]
+		, ["s", ""]
+		, ["ŝ", ">x"]
+		, ["t", ""]
+		, ["u", ""]
+		, ["ŭ", "v /w/"]
+		, ["v", ">v"]
+		, ["z", ""]
+	], true)
 
 	+section("grammar")
 		+table([
-			["noun", "-o"]
-			["noun plural", "(not exist)"]
-			["adjective", "-a"]
-			["adverb", "-e"]
+			["noun", "-o"],
+			["noun plural", "(not exist)"],
+			["adjective", "-a"],
+			["adverb", "-e"],
 			["verb",  "-ı"],
 			["verb past", "-ıs"],
-			["present",     "-as"],
-			["future",      "-os"],
-			["imperative",  "-us"],
+			["present", "-as"],
+			["future", "-os"],
+			["imperative", "-us"],
 			["conditional", "-u"],
 			["perfective", "-ınt"],
 			["perfective passive", "-ıt"],
@@ -90,10 +89,10 @@ block main
 			[10, "dec"],
 			[100, "cent"],
 			[1000, "mıl"],
-		])
+		], true)
 
 		+table([
-			["", "interrogative", "demonstrative", "indefinite", "universal", "negative"]
+			["", "interrogative", "demonstrative", "indefinite", "universal", "negative"],
 			["truth", "cviu", "tiu", "iu", "ciu", "niu"],
 			["noun", "cvio", "tio", "io", "cio", "nio"],
 			["adjective", "cvia", "tia", "ia", "cia", "nia"],

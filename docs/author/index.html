@@ -19,22 +19,23 @@
       document.addEventListener("DOMContentLoaded", async () => {
         const replace = (await import("/work/language/interslavic/replace.js")).default
         const titleH = document.querySelector("h1")
-        const title = replace(titleH.innerHTML, true, true)
+        const title = replace(titleH.innerHTML, false, false)
         titleH.innerHTML = title
         document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
       })
       
     </script>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / VLASTNIK">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -47,12 +48,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -68,25 +69,20 @@
           <div class="tags">
             <div class="tag">language='english analytic'</div>
           </div><a href="#vlastnik">
-            <h1>vlastnik</h1></a>
+            <h1 class="undot">vlastnik</h1></a>
           <section id="alias">
             <div class="tags">
             </div><a href="#alias">
-              <h1>alias</h1></a>
+              <h1 class="undot">alias</h1></a>
             <center>
               <table>
-                <tr>
-                  <th>id</th>
-                  <td>с</td>
-                  <td>у</td>
-                </tr>
                 <tr>
                   <th>han</th>
                   <td>墨</td>
                   <td>幽</td>
                 </tr>
                 <tr>
-                  <th>ja</th>
+                  <th>ȷa</th>
                   <td>sumı</td>
                   <td>ȷuu</td>
                 </tr>
@@ -111,12 +107,12 @@
           <section id="pronoun">
             <div class="tags">
             </div><a href="#pronoun">
-              <h1>pronoun</h1></a><a href="https://en.wiktionary.org/wiki/ve#English">ve</a>
+              <h1 class="undot">pronoun</h1></a><a href="https://en.wiktionary.org/wiki/ve#English">ve</a>
           </section>
           <section id="ıdeology">
             <div class="tags">
             </div><a href="#ıdeology">
-              <h1>ıdeology</h1></a>
+              <h1 class="undot">ıdeology</h1></a>
             <ul>
               <li>
                 <del>determınısm</del>&#32;
@@ -138,7 +134,7 @@
           <section id="sexualıty">
             <div class="tags">
             </div><a href="#sexualıty">
-              <h1>sexualıty</h1></a>
+              <h1 class="undot">sexualıty</h1></a>
             <ul>
               <li>cıs-gender</li>
               <li>andro-sexual</li>
@@ -149,27 +145,28 @@
           <section id="ınterest">
             <div class="tags">
             </div><a href="#ınterest">
-              <h1>ınterest</h1></a>
+              <h1 class="undot">ınterest</h1></a>
             <section id="language">
               <div class="tags">
               </div><a href="#language">
-                <h1>language</h1></a>
+                <h1 class="undot">language</h1></a>
               <section id="human">
                 <div class="tags">
                 </div><a href="#human">
-                  <h1>human</h1></a>
+                  <h1 class="undot">human</h1></a>
                 <ul>
                   <li>ȷapanese (natıve)</li>
                   <li>englısh (TOEIC L&R 810)</li>
                   <li>loȷban (begınner)</li>
                   <li>cantonese (begınner)</li>
                   <li>russıan (begınner)</li>
+                  <li>polısh (begınner)</li>
                 </ul>
               </section>
               <section id="programmıng">
                 <div class="tags">
                 </div><a href="#programmıng">
-                  <h1>programmıng</h1></a>
+                  <h1 class="undot">programmıng</h1></a>
                 <ul>
                   <li>Haskell</li>
                   <li>Scala</li>
@@ -180,7 +177,7 @@
             <section id="computer scıence">
               <div class="tags">
               </div><a href="#computer scıence">
-                <h1>computer scıence</h1></a>
+                <h1 class="undot">computer scıence</h1></a>
               <ul>
                 <li>λ-calculus</li>
                 <li>substructural logıc</li>
@@ -192,7 +189,7 @@
           <section id="account">
             <div class="tags">
             </div><a href="#account">
-              <h1>account</h1></a>
+              <h1 class="undot">account</h1></a>
             <ul>
               <li><a href="https://twitter.com/intent/user?user_id=759648849786920960">Twıtter</a></li>
               <!-- li: a(href="https://melanizo.tumblr.com/") Tumblr-->
@@ -214,9 +211,9 @@
           <section id="donatıon">
             <div class="tags">
             </div><a href="#donatıon">
-              <h1>donatıon</h1></a>
+              <h1 class="undot">donatıon</h1></a>
             <p>any amount of money wıll greatly help. þank þou!</p>
-            <figure><img id="image-kyash" src="/images/kyash.png" width="320px"></figure>
+            <figure><img id="image-kyash" src="/images/kyash.png" width="160px"></figure>
           </section>
         </section>
       </article>

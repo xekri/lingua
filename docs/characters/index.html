@@ -14,27 +14,22 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <title>СУМИ / PERSONAŽ</title>
     <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const replace = (await import("/work/language/interslavic/replace.js")).default
-        const titleH = document.querySelector("h1")
-        const title = replace(titleH.innerHTML, true, true)
-        titleH.innerHTML = title
-        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
+      window.location.replace(window.location.href.replace("characters", "character"))
+      
+    </script>
+    <title>СУМИ / UNDEFINED</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
       
     </script>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
-      })
-    
-    -->
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="СУМИ / PERSONAŽ">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <meta name="twitter:title" content="СУМИ / UNDEFINED">
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -47,12 +42,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -64,14 +59,9 @@
     <main>
       <article>
         <p>þıs websıte use Google Analytıcs.</p>
-        <section id="personaž">
+        <section>
           <div class="tags">
-          </div><a href="#personaž">
-            <h1>personaž</h1></a>
-          <ul>
-            <li><a href="suzuri">suzurı</a></li>
-            <li><a href="mituru">mıturu</a></li>
-          </ul>
+          </div>
         </section>
       </article>
       <!--

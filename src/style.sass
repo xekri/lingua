@@ -31,14 +31,15 @@ $bgcolor: #000 //#202020
 
 
 h1, #menu
-  text-transform: uppercase
+  //text-transform: uppercase
 
 body
   margin: 0
   padding: 0
   color: $color
   background-color: $bgcolor
-  font-family: "Noto Sans Mono", "DejaVu Sans", "Arial", "UniHentaiKana", sans-serif
+  font-family: "Noto Sans CJK HK", "Noto Sans", "Helvetica Neue", "UniHentaiKana", sans-serif
+  font-weight: 300
 
   @media screen and (max-width:$thresh)
     font-size: 200%
@@ -89,6 +90,10 @@ nav
     background-color: $bgcolor
     overflow-y: scroll
 
+  ul
+    margin-left: 0
+    padding-left: 0
+
   #nav-in
     margin-left: $space
     margin-right: $space
@@ -115,17 +120,13 @@ nav
 
     #datetime
       text-align: center
-      font-family: "Roboto Mono", mono
+      font-family: "Noto Sans Mono", mono
       padding: 0
       margin: 0
       margin-bottom: $space
       width: 100%
       text-align: center
       @media screen and (max-width:$thresh)
-  ul
-    margin-left: 0
-    padding-left: 0
-    font-family: "Roboto"
 
 #nav-switch
   z-index: 100
@@ -162,7 +163,7 @@ section, .my-div
   h1
     margin: 0
     margin-bottom: $space
-    font-weight: normal
+    font-weight: inherit
     font-size: inherit
 
 section

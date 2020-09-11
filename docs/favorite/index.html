@@ -19,22 +19,23 @@
       document.addEventListener("DOMContentLoaded", async () => {
         const replace = (await import("/work/language/interslavic/replace.js")).default
         const titleH = document.querySelector("h1")
-        const title = replace(titleH.innerHTML, true, true)
+        const title = replace(titleH.innerHTML, false, false)
         titleH.innerHTML = title
         document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
       })
       
     </script>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / OMILJENY">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -47,12 +48,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -67,11 +68,11 @@
         <section id="omiljeny">
           <div class="tags">
           </div><a href="#omiljeny">
-            <h1>omiljeny</h1></a>
+            <h1 class="undot">omiljeny</h1></a>
           <section id="music (by musicians)">
             <div class="tags">
             </div><a href="#music (by musicians)">
-              <h1>music (by musicians)</h1></a>
+              <h1 class="undot">music (by musicians)</h1></a>
             <ul>
               <li>385</li>
               <li>ACIDMAN</li>
@@ -126,7 +127,7 @@
           <section id="video">
             <div class="tags">
             </div><a href="#video">
-              <h1>video</h1></a>
+              <h1 class="undot">video</h1></a>
             <ul></ul>
           </section>
           <li>Arrival (2016)
@@ -145,7 +146,7 @@
           <section id="game">
             <div class="tags">
             </div><a href="#game">
-              <h1>game</h1></a>
+              <h1 class="undot">game</h1></a>
             <ul>
               <li><ruby>蒼き雷霆<rt>アームドブルー</rt></ruby>ガンヴォルト</li>
               <li>アイドリッシュセブン</li>
@@ -158,7 +159,7 @@
           <section id="novel">
             <div class="tags">
             </div><a href="#novel">
-              <h1>novel</h1></a>
+              <h1 class="undot">novel</h1></a>
             <ul>
               <li>1984（George Orwell）</li>
               <li>Darren Shan（Darren Shan）</li>
@@ -179,16 +180,16 @@
           <section id="manga">
             <div class="tags">
             </div><a href="#manga">
-              <h1>manga</h1></a>
+              <h1 class="undot">manga</h1></a>
             <section id="male-male romance (by authors)">
               <div class="tags">
               </div><a href="#male-male romance (by authors)">
-                <h1>male-male romance (by authors)</h1></a><a href="https://www.chil-chil.net/myPage/tgt_user_id/117165">ちるちる</a>
+                <h1 class="undot">male-male romance (by authors)</h1></a><a href="https://www.chil-chil.net/myPage/tgt_user_id/117165">ちるちる</a>
             </section>
             <section id="other">
               <div class="tags">
               </div><a href="#other">
-                <h1>other</h1></a>
+                <h1 class="undot">other</h1></a>
               <ul>
                 <li>GUNSLINGER GIRL</li>
                 <li>HELLSING</li>

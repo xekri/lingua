@@ -17,16 +17,17 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>СУМИ / CALENDAR</title>
-    <!--if ! dot
-    script.
-      document.addEventListener("DOMContentLoaded", async () => {
-        document.body.innerHTML = document.body.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
       })
-    
-    -->
+      
+    </script>
     <meta name="twitter:site" content="@smiqy">
     <meta name="twitter:title" content="СУМИ / CALENDAR">
-    <!-- meta(name="twitter:description", content=`${author.name.id}'s information.`)-->
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/characters/suzuri/images/2019-10-25-small.png">
     <meta name="twitter:card" content="summary">
   </head>
@@ -39,12 +40,12 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a href="/">/</a></li>
-              <li><a href="/author">auþor</a></li>
-              <li><a href="/characters">character</a></li>
-              <li><a href="/favorite">favorite</a></li>
+              <li><a class="undot" href="/">/</a></li>
+              <li><a class="undot" href="/author">auþor</a></li>
+              <li><a class="undot" href="/characters">character</a></li>
+              <li><a class="undot" href="/favorite">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a href="/work">work</a></li>
+              <li><a class="undot" href="/work">work</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -59,11 +60,11 @@
         <section id="calendar">
           <div class="tags">
           </div><a href="#calendar">
-            <h1>calendar</h1></a><em>currently not working.</em>
+            <h1 class="undot">calendar</h1></a><em>currently not working.</em>
           <section id="overview">
             <div class="tags">
             </div><a href="#overview">
-              <h1>overview</h1></a>
+              <h1 class="undot">overview</h1></a>
             <p>суми-calendar is a calendar almost every month in which has the same number of days.</p>
             <center>
               <table>
@@ -150,7 +151,7 @@
           <section id="converter">
             <div class="tags">
             </div><a href="#converter">
-              <h1>converter</h1></a>
+              <h1 class="undot">converter</h1></a>
             <center>
               <div>
                 <input id="specified" type="datetime-local" value="1954-06-07T00:00">
