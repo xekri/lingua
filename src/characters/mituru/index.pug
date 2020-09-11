@@ -5,7 +5,10 @@ block head
 		const id = "митуру"
 		const name =
 			{ han: ["盈", "冬"]
-			, ja: ["mıturu", "toŋ|fuȷu"]
+			, ȷa: ["mıturu", "toŋ|fuȷu"]
+			, cmn: ["ıŋ̌", "duŋ́"]
+			, yue: ["ıŋ̀", "tuŋ̀"]
+
 			};
 		const title = id;
 		const tags = ["draft"]
@@ -13,24 +16,29 @@ block head
 	link(href="../style.css", rel="stylesheet")
 
 block main
-	p #{id}は#{author.name.id}が作成した人格です
+	p #{id}は#{author.id}が作成した人格です
 	p
 		a(href="../suzuri") сузури
 		| の後輩で友人です
 
 	+section("fact")
-		p: em これらは豫告無く變更され得ます
+		p: em これらを豫告無く變更し得ます
 
 		ul
 				li 識別子: #{id}
 				li
 					| 名前:
 					table
-						for key in ["han", "ja"]
+						for key in Object.keys(name)
 							tr
 								th= key
 								td= name[key][0]
 								td= name[key][1]
+				li
+					| 固有色:&#x20;
+					span(style="background-color: black; border: 1px solid;") black
+					| ,&#x20;
+					span(style="background-color: #0f0; color: black;") lıme
 				li 年齢: сузури - 2
 				li 國籍: 日本
 				li 言語: ȷa, en, zh, ru, pl
@@ -55,23 +63,24 @@ block main
 
 	+section("talk")
 		a(href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq%20OR%20from%3Asmiqy)%20(%E3%83%9F%E3%83%84%E3%83%AB%20OR%20%E7%9B%88%20OR%20(%E5%BE%8C%E8%BC%A9%E5%90%9B%20%E5%81%87))%20since%3A2014-01-01%20until%3A2030-01-01") tweets
-		p 非公式なものなので別解釋は常に許容されます
+		p 非公式なものなので別解釋を常に許容します
 
 	+section("art")
-		p 開發段階の爲に造形は確定しません
+		p 開發段階の爲に造形は確定しません. 基本的に最新を優先します.
 
 		.tile
-			+section("2020-08-23")
+			+section("2020-9-9")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">身長差 (列べただけ) <a href="https://t.co/5rReHHdnqA">pic.twitter.com/5rReHHdnqA</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1303539039505506305?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				p 服が思ひ浮かばず困ります
+
+			+section("2020-8-23")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">後輩君の表情 考 <a href="https://t.co/I2JEPNS3nt">pic.twitter.com/I2JEPNS3nt</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1297245606977523712?ref_src=twsrc%5Etfw">August 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-			+section("2020-08-22")
+			+section("2020-8-22")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">- 硯君の表情 考<br>- 後輩君 <a href="https://t.co/ngIBx6kHit">pic.twitter.com/ngIBx6kHit</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1296894217789136896?ref_src=twsrc%5Etfw">August 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			//+section("2020-05-31")
-				p 試案。髭は無い方が標準。
-				//<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">完 <a href="https://t.co/sZA5QWL5K9">pic.twitter.com/sZA5QWL5K9</a></p>&mdash; СУМИ (@SumiMq) <a href="https://twitter.com/SumiMq/status/1266767231813214208?ref_src=twsrc%5Etfw">May 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				img(src="image/2020-05-25.png", width="400")
-				img(src="image/2020-05-25'.png", width="400")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">完 <a href="https://t.co/sZA5QWL5K9">pic.twitter.com/sZA5QWL5K9</a></p>&mdash; СУМИ (@SumiMq) <a href="https://twitter.com/SumiMq/status/1266767231813214208?ref_src=twsrc%5Etfw">May 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("2020-04-14")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">スズリ君の後輩君ことミツル君、この感じで行きます <a href="https://t.co/IzSj30XZYI">pic.twitter.com/IzSj30XZYI</a></p>&mdash; 𝔭𝔥𝔞𝔩𝔩𝔲𝔰, 𝔠𝔞𝔫𝔫𝔞𝔟𝔦𝔰, 𝔱𝔥𝔞𝔫𝔞𝔱𝔬𝔰 (@smgvn) <a href="https://twitter.com/smgvn/status/1250046521636085761?ref_src=twsrc%5Etfw">April 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

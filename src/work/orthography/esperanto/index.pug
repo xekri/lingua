@@ -11,116 +11,100 @@ block head
 	- const title = "esperanto"
 
 block main
-	-
-		let xss =
-			[ ["a /a/", "="]
-			, ["b /b/", "="]
-			, ["c /ts/", "c /t[sʃ]/[ie] /k/"]
-			, ["ĉ /tʃ/", ">c"]
-			, ["d /d/", "="]
-			, ["e /e/", "="]
-			, ["f /f/", "="]
-			, ["g /g/", "g /dz|dʒ/[ie]"]
-			, ["ĝ /dʒ/", ">g"]
-			, ["h /h/", "="]
-			, ["ĥ /x/", "x /x/"]
-			, ["i /i/", "ı /i/"]
-			, ["j /j/", "ȷ /j/"]
-			//, ["ĵ /ʒ/", "ż /ʒ/"]
-			, ["ĵ /ʒ/", ">ȷ >g"]
-			, ["k /k/", ">c"]
-			, ["l /l/", "="]
-			, ["m /m/", "="]
-			, ["n /n/", "="]
-			, ["", "ŋ /ŋ/"]
-			, ["o /o/", "="]
-			, ["p /p/", "="]
-			, ["r /r/", "="]
-			, ["s /s/", "="]
-			, ["ŝ /ʃ/", "ṡ /ʃ/"]
-			, ["t /t/", "="]
-			, ["u /u/", "="]
-			, ["ŭ /w/", "v /w/"]
-			//, ["v /v/", "w /v/"]
-			, ["v /v/", ">v"]
-			, ["z /z/", "="]
-			]
-	+table(xss)
+	ul
+		li no gender
+		li no number
+		li no /k/ - /tʃ/ discrimination
 
 	+table(
-		[ [ "Mi trovis botelon kaj deprenis la fermilon."
-			, "mı trovıs botelo caȷ deprenıs fermılo."
-			, "i found a bottle and took off the lid."
-			]
-		, [ "La gepardo estas la plej rapida el la bestoj."
-			, "gepardo estas pleȷ rapıda el besto."
-			, "The cheetah is the fastest of the animals."
-			]
-		, [ "La abeloj havas felon, sed ili ne taŭgas por karesi."
-			, "abelo havas felo, sed ılı ne tavgas por caresı."
-			, "Bees have fur, but they're no good for petting."
-			]
-		, [ "la blua"
-			, "blua"
-			, "the blue one"
-			]
-		, [ "la angla"
-			, "angla"
-			, "the english language"
-			]
-		, [ "La mia bluas, la via ruĝas."
-			, "mıa bluas, vıa rugas."
-			, "mine is blue, yours is red."
-			]
-		, [ "ili tranĉis la manon."
-			, "ılı trancıs mano."
-			, ""
-			]
+		[ ["a /a/", "="]
+		, ["b /b/", "="]
+		, ["c /ts/", "c /tʃ/(ı|e) /k/"]
+		, ["ĉ /tʃ/", ">c"]
+		, ["d /d/", "="]
+		, ["e /e/", "="]
+		, ["f /f/", "="]
+		, ["g /g/", "g /dʒ/(ı|e)"]
+		, ["ĝ /dʒ/", ">g"]
+		, ["h /h/", "> x"]
+		, ["ĥ /x/", "x /ʃ/(ı|e) /x/"]
+		, ["i /i/", "ı /i/"]
+		, ["j /j/", "ȷ /j/"]
+		, ["ĵ /ʒ/", ">ȷ >g"]
+		, ["k /k/", ">c"]
+		, ["l /l/", "="]
+		, ["m /m/", "="]
+		, ["n /n/", "="]
+		, ["",      "ŋ /ŋ/"]
+		, ["o /o/", "="]
+		, ["p /p/", "="]
+		, ["r /r/", "="]
+		, ["s /s/", "="]
+		, ["ŝ /ʃ/", ">x"]
+		, ["t /t/", "="]
+		, ["u /u/", "="]
+		, ["ŭ /w/", "v /w/"]
+		, ["v /v/", ">v"]
+		, ["z /z/", "="]
+	])
 
-		, [ "La knabino feliĉan knabon kisis."
-			, "cnabo felıcan cnabo cısıs."
-			, "the girl kissed a happy boy."
-			]
-		, [ "la knabino feliĉa knabon kisis."
-			, "cnabo felıca cnabo cısıs."
-			, "the happy girl kissed a boy."
-			]
-		, [ "ruĝaj domo kaj aŭto"
-			, "rugaȷ (domo kaȷ avto)"
-			, "a red house and a (red) car"
-			]
-		, [ "ruĝa domo kaj aŭto"
-			, "ruga domo kaȷ avto"
-			, "a red house and a car"
-			]
-		, [ "mi farbis la pordon ruĝan."
-			, "mı farbıs pordo ruga."
-			, "i painted the red door."
-			]
-		, [ "mi farbis la pordon ruĝa."
-			, "mı farbıs pordo, ruga."
-			, "i painted the door red."
-			]
-		, [ "[mi, ni, vi, li, ŝi, ĝi, ili, oni, si]"
-			, "[mı, mı, vı, gı, gı, gı, gı, ıo, sı]"
-			, "[i, we, you, he, she, it, they, one, oneself]"
-			]
-		, [ "li lavis sin."
-			, "gı lavıs sı."
-			, "he washed himself."
-			]
-		, [ "li manĝis sian panon."
-			, "gı mangis sıa pano."
-			, "he ate himself's bread."
-			]
-		, [ "La infano estas ploranta, ĉar ĝi volas manĝi."
-			, "ınfano estas ploranta, car gı volas mangı."
-			, "the child is crying, because it wants to eat."
-			]
-		, [ "Iu ĵus diris, ke tiu malsatas."
-			, "ıo ȷus dırıs, ke gı malsatas."
-			, "someone just said that that one is hungry."
-			]
+	+section("grammar")
+		+table([
+			["noun", "-o"]
+			["noun plural", "(not exist)"]
+			["adjective", "-a"]
+			["adverb", "-e"]
+			["verb",  "-ı"],
+			["verb past", "-ıs"],
+			["present",     "-as"],
+			["future",      "-os"],
+			["imperative",  "-us"],
+			["conditional", "-u"],
+			["perfective", "-ınt"],
+			["perfective passive", "-ıt"],
+			["progressive", "-ant"],
+			["progressive passive", "-at"],
+			["prospective", "-ont"],
+			["prospective passsive", "-ot"],
 		])
 
+		+table([
+			["i", "mı"],
+			["you", "vı"],
+			["he, she, it", "rı"],
+			["self", "sı"],
+			["one", "on"],
+		])
 
+		+table([
+			[0, "nul"],
+			[1, "unu"],
+			[2, "du"],
+			[3, "trı"],
+			[4, "cvar"],
+			[5, "cvın"],
+			[6, "ses"],
+			[7, "sep"],
+			[8, "oc"],
+			[9, "nav"],
+			[10, "dec"],
+			[100, "cent"],
+			[1000, "mıl"],
+		])
+
+		+table([
+			["", "interrogative", "demonstrative", "indefinite", "universal", "negative"]
+			["truth", "cviu", "tiu", "iu", "ciu", "niu"],
+			["noun", "cvio", "tio", "io", "cio", "nio"],
+			["adjective", "cvia", "tia", "ia", "cia", "nia"],
+			["adverb", "cvie", "tie", "ie", "cie", "nie"],
+		])
+
+		+table([
+			["sentence to noun", "ce -"],
+			["adjective to noun", "la -"],
+			["imcomplete sentence to adjective", "ciu -"],
+			["declarative to interrogative", "ciu"],
+		])
+
+		p "mi xavas libro." ~ "mi xavas libro-n." ~ "libro-n xavas mi."

@@ -10,9 +10,9 @@ block main
 	+section("alias")
 		center
 			table
-				for key in ["han", "ja", "emc", "cmn", "yue"]
+				for key in Object.keys(author.name)
 					tr
-						th= key.replace("ja", "ȷa")
+						th= key
 						td= author.name[key][0]
 						td= author.name[key][1]
 
@@ -50,6 +50,7 @@ block main
 					li loȷban (begınner)
 					li cantonese (begınner)
 					li russıan (begınner)
+					li polısh (begınner)
 
 			+section("programmıng")
 				ul
@@ -82,4 +83,4 @@ block main
 	+section("donatıon")
 		p any amount of money wıll greatly help. þank þou!
 		figure
-			img#image-kyash(src="/images/kyash.png", width="320px")
+			img#image-kyash(src="/images/kyash.png", width="160px")
