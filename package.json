@@ -1,0 +1,27 @@
+{
+  "name": "romanize-san",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-pug": "cd docs && pug index.pug -wo .",
+    "watch-sass": "cd docs && node-sass style.sass -wo .",
+    "dev": "npm run watch-pug & npm run watch-sass & live-server --wait=1000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smiqy/romanize-san.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smiqy/romanize-san/issues"
+  },
+  "homepage": "https://github.com/smiqy/romanize-san#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
