@@ -16,7 +16,13 @@ block main
 						td= author.name[key][0]
 						td= author.name[key][1]
 
-	+section("pronoun")
+	+section("base")
+		a(class="twitter-timeline", href=`https://twitter.com/${author.twitter}?ref_src=twsrc%5Etfw`, data-theme="dark", width="350px", height="500px") Tweets by #{author.twitter}
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		<iframe src="https://discordapp.com/widget?id=479992597381775360&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+	+section("english pronoun")
 		a(href="https://en.wiktionary.org/wiki/ve#English") ve
 
 	+section("ıdeology"): ul
