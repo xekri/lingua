@@ -1,0 +1,59 @@
+
+@font-face
+  font-family: 'Noto Sans'
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans')
+
+@font-face
+  font-family: 'Noto Sans TC'
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100')
+  unicode-range: U+2E80-2FD5, U+3190-319F, U+3400-4DBF, U+4E00-9FCC, U+F900-FAAD
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  //border: 1px green solid
+
+main
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  box-shadow: 0 0 2mm black
+  width: 51mm
+  height: 99mm
+  padding: 2mm
+
+  font-family: "Noto Sans", "Noto Sans TC", sans-serif
+  font-stretch: extra-condensed
+  font-weight: 300
+
+  #picture, #text
+    width: 100%
+
+  #picture
+    overflow-y: hidden
+    img
+      height: 100%
+
+  #text
+    position: absolute
+    bottom: 2mm
+    right: 2mm
+    width: 21.5mm
+
+    #name, #twitter
+      width: 100%
+
+    #name
+      font-size: 150%
+      text-align: center
+      vertical-align: bottom
+      white-space-collapse: discard
+
+    #twitter
+      height: 21.5mm
+      padding: 0
+      padding-left: 2mm
+      padding-right: 2mm
