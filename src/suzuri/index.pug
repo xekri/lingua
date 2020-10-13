@@ -1,5 +1,5 @@
 extend /_layout.pug
 
 block head
-	meta(http-equiv="refresh", content="0;URL=/characters/suzuri")
-
+	script.
+		window.location.replace(window.location.href.replace("/suzuri", "character/suzuri"))

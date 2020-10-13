@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
   <head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
     <script>
@@ -14,7 +14,7 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="icon" href="images/icon.ico">
+    <link rel="icon" href="/images/icon.ico">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>суми / calendar</title>
@@ -57,14 +57,10 @@
     </div>
     <main>
       <article>
-        <p>þıs websıte use Google Analytıcs.</p>
-        <section id="calendar">
-          <div class="tags">
-          </div><a href="#calendar">
+        <p>þıs websıte use <it>google analytıcs</it>.</p>
+        <section id="calendar"><a href="#calendar">
             <h1 class="undot">calendar</h1></a><em>currently not working.</em>
-          <section id="overview">
-            <div class="tags">
-            </div><a href="#overview">
+          <section id="overview"><a href="#overview">
               <h1 class="undot">overview</h1></a>
             <p>суми-calendar is a calendar almost every month in which has the same number of days.</p>
             <center>
@@ -149,9 +145,7 @@
               which is the same scheme as<em> Holocene calendar.</em>
             </p>
           </section>
-          <section id="converter">
-            <div class="tags">
-            </div><a href="#converter">
+          <section id="converter"><a href="#converter">
               <h1 class="undot">converter</h1></a>
             <center>
               <div>
@@ -167,25 +161,23 @@
             </div>
           </section>
         </section>
+        <section id="">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "sumi.space";
+              this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
       </article>
-      <!--
-      +section("")
-        div(id="disqus_thread")
-        script.
-          var disqus_config = function () {
-            this.page.url = "http://sumi.space";
-            this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        noscript
-          | Please enable JavaScript to view the
-          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
-      -->
     </main>
   </body>
 </html>

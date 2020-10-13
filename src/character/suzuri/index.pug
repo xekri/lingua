@@ -7,7 +7,7 @@ block head
 		const name =
 			{ han: ["硯", "玄"]
 			, ȷa: ["suzurı", "paru"]
-			, cmn: ["ŋıan̂", "xyaň"]
+			, cmn: ["ŋıaǹ", "xyań"]
 			, yue: ["ŋın̄", "hyǹ"]
 			};
 		const title = id;
@@ -15,8 +15,8 @@ block head
 
 		const birthday =
 			Math.ceil(
-				new Date(2017, 11, 1).getTime()
-				- new Date(2017, 1, 1).getTime()
+				new Date("2017-11-01").getTime()
+				- new Date("2017-01-01").getTime()
 			) / (1000 * 3600 * 24)
 
 	link(href="../style.css", rel="stylesheet")

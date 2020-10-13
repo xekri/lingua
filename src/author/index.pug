@@ -12,9 +12,9 @@ block main
 			table
 				for key in Object.keys(author.name)
 					tr
-						th= key
-						td= author.name[key][0]
-						td= author.name[key][1]
+						th.undot= key
+						td.undot= author.name[key][0]
+						td.undot= author.name[key][1]
 
 	+section("base")
 		a(class="twitter-timeline", href=`https://twitter.com/${author.twitter}?ref_src=twsrc%5Etfw`, data-theme="dark", width="350px", height="500px") Tweets by #{author.twitter}
@@ -61,7 +61,6 @@ block main
 			+section("programmıng")
 				ul
 					li Haskell
-					li Scala
 					li Lean Prover
 
 		+section("computer scıence")
@@ -87,6 +86,6 @@ block main
 			li: a(href="https://soundcloud.com/melanophil") SoundCloud
 
 	+section("donatıon")
-		p any amount of money wıll greatly help. þank þou!
+		p help me! þank þou!
 		figure
 			img#image-kyash(src="/images/kyash.png", width="160px")

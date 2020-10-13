@@ -2,11 +2,12 @@ mixin div(title)
 	.my-div(id=title)
 		block
 
-mixin section(title, tags=[])
+mixin section(title, tags)
 	section(id=title)
-		div.tags
-			for tag in tags
-				div.tag= tag
+		if tags
+			div.tags
+				for tag in tags
+					div.tag= tag
 		if title
 			a(href="#" + title): h1.undot= title
 		block

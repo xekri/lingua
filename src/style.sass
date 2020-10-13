@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+@font-face
+  font-family: 'Noto Sans'
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
+
+@font-face
+  font-family: 'Noto Sans TC'
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC')
+  unicode-range: U+2E80-2FD5, U+3190-319F, U+3400-4DBF, U+4E00-9FCC, U+F900-FAAD
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap')
 
 $space: 32px
 $navWidth: 240px
@@ -32,7 +41,6 @@ $bgcolor: #000 //#202020
   margin-bottom: 0
   margin-right: $space
 
-
 h1, #menu
   //text-transform: uppercase
 
@@ -41,8 +49,9 @@ body
   padding: 0
   color: $color
   background-color: $bgcolor
-  font-family: "Noto Sans TC", "Noto Sans", sans-serif
+  font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
+  font-weight: 200
 
   @media screen and (max-width:$thresh)
     font-size: 200%
@@ -123,7 +132,7 @@ nav
 
     #datetime
       text-align: center
-      font-family: "Noto Sans Mono", mono
+      font-family: "Source Code Pro", monospace
       padding: 0
       margin: 0
       margin-bottom: $space
@@ -176,7 +185,6 @@ section
   margin-bottom: $space
   .my-div
     margin-bottom: 0
-
 
 .tile section
   display: inline-block

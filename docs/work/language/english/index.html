@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
   <head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
     <script>
@@ -14,7 +14,7 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="icon" href="images/icon.ico">
+    <link rel="icon" href="/images/icon.ico">
     <title>суми / englısh simplified (pseudo-english)</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -55,16 +55,14 @@
     </div>
     <main>
       <article>
-        <p>þıs websıte use Google Analytıcs.</p>
+        <p>þıs websıte use <it>google analytıcs</it>.</p>
         <section id="englısh simplified (pseudo-english)">
           <div class="tags">
             <div class="tag">language=english</div>
             <div class="tag">draft</div>
           </div><a href="#englısh simplified (pseudo-english)">
             <h1 class="undot">englısh simplified (pseudo-english)</h1></a>
-          <section id="orthography">
-            <div class="tags">
-            </div><a href="#orthography">
+          <section id="orthography"><a href="#orthography">
               <h1 class="undot">orthography</h1></a>
             <table>
               <tr>
@@ -89,9 +87,7 @@
               </tr>
             </table>
           </section>
-          <section id="grammar">
-            <div class="tags">
-            </div><a href="#grammar">
+          <section id="grammar"><a href="#grammar">
               <h1 class="undot">grammar</h1></a>
             <table>
               <tr>
@@ -173,25 +169,23 @@
             </table>
           </section>
         </section>
+        <section id="">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "sumi.space";
+              this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
       </article>
-      <!--
-      +section("")
-        div(id="disqus_thread")
-        script.
-          var disqus_config = function () {
-            this.page.url = "http://sumi.space";
-            this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        noscript
-          | Please enable JavaScript to view the
-          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
-      -->
     </main>
   </body>
 </html>

@@ -8,19 +8,19 @@ include /_mixins.pug
     { id: "суми"
     , name:
       { han: ["墨", "幽"]
-      , ȷa: ["sumı", "ȷuu"]
-      , emc: ["moŋ̍", "qȳ"]
-      , cmn: ["mô", "ıú"]
+      , ja: ["ſumi", "juu"]
       , yue: ["məŋ̍", "qȷəù"]
+      , cmn: ["muè", "ıū"]
       }
     , twitter: "smiqy"
     , github: "smiqy"
     }
 
-html(lang="en-GB")
+html
   head
     include _google-analytics.pug
     meta(charset="UTF-8")
+
     link(href="/style.css", rel="stylesheet")
     script(src="/script.js")
 
@@ -28,7 +28,7 @@ html(lang="en-GB")
     link(href="style.css", rel="stylesheet")
     script(src="script.js")
 
-    link(rel="icon", href="images/icon.ico")
+    link(rel="icon", href="/images/icon.ico")
 
     block head
 
@@ -49,7 +49,7 @@ html(lang="en-GB")
           document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
         })
 
-    if titlePl
+    if titleLanguage == "pl"
       script.
         document.addEventListener("DOMContentLoaded", async () => {
           const replace = (await import("/work/orthography/polish/replace.js")).default
@@ -78,7 +78,8 @@ html(lang="en-GB")
       nav
         div#nav-in
           div#logo
-            a(href="/"): img(src="/images/sumi.png")
+            a(href="/")
+              img(src="/images/sumi.png")
           div#datetime
           +div("menu")
             ul
@@ -102,29 +103,10 @@ html(lang="en-GB")
 
     main
       article
-        p þıs websıte use Google Analytıcs.
+        p þıs websıte use <it>google analytıcs</it>.
 
-        if tags
-          +section(title, tags)
-            block main
-        else
-          +section(title)
-            block main
+        +section(title, tags)
+          block main
 
-      //
         +section("")
-          div(id="disqus_thread")
-          script.
-            var disqus_config = function () {
-              this.page.url = "http://sumi.space";
-              this.page.identifier = "sumi";
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://sumi-2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          noscript
-            | Please enable JavaScript to view the
-            a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
+          include _discus.pug

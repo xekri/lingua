@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
   <head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
     <script>
@@ -14,7 +14,7 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="icon" href="images/icon.ico">
+    <link rel="icon" href="/images/icon.ico">
     <title>суми / stvorjeńje</title>
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
@@ -65,38 +65,35 @@
     </div>
     <main>
       <article>
-        <p>þıs websıte use Google Analytıcs.</p>
-        <section id="stvorjeńje">
-          <div class="tags">
-          </div><a href="#stvorjeńje">
+        <p>þıs websıte use <it>google analytıcs</it>.</p>
+        <section id="stvorjeńje"><a href="#stvorjeńje">
             <h1 class="undot">stvorjeńje</h1></a>
           <ul>
             <li><a href="language">language</a></li>
             <li><a href="minimal-triangle">font</a></li>
+            <li><a class="undot" href="font/three-series">þree series</a></li>
             <!--li: a(href="calendar") calendar-->
             <!--li: a(href="https://note.com/melano/n/ned9e4f994056") romanization-->
             <!--li: a(href="duality/document.pdf") sequent calculi for intuitionistic substructural logics and their duals (PDF)-->
           </ul>
         </section>
+        <section id="">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "sumi.space";
+              this.page.identifier = "sumi";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sumi-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
       </article>
-      <!--
-      +section("")
-        div(id="disqus_thread")
-        script.
-          var disqus_config = function () {
-            this.page.url = "http://sumi.space";
-            this.page.identifier = "sumi";
-          };
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://sumi-2.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-        noscript
-          | Please enable JavaScript to view the
-          a(href="https://disqus.com/?ref_noscript") comments powered by Disqus.
-      -->
     </main>
   </body>
 </html>
