@@ -5,9 +5,9 @@ mixin div(title)
 mixin section(title, tags)
 	section(id=title)
 		if tags
-			div.tags
+			.tags
 				for tag in tags
-					div.tag= tag
+					.tag= tag
 		if title
 			a(href="#" + title): h1.undot= title
 		block

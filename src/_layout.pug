@@ -9,12 +9,21 @@ include /_mixins.pug
     , name:
       { han: ["墨", "幽"]
       , ja: ["ſumi", "juu"]
-      , yue: ["məŋ̍", "qȷəù"]
+      , yue: ["mŋ̍", "qȷv̀"]
       , cmn: ["muè", "ıū"]
       }
     , twitter: "smiqy"
     , github: "smiqy"
     }
+  const now = (() => {
+    const date = new Date();
+    const y = date.getFullYear() + 10000
+    const d = (
+      new Date(y, date.getMonth(), date.getDate()).getTime()
+      - new Date(y, 0, 1).getTime()
+    ) / (1000 * 60 * 60 * 24)
+    return `${y}/${d}`
+  })()
 
 html
   head
@@ -38,26 +47,6 @@ html
           ? title
           : `${author.id} / ${title}`
     title= titleFull
-
-    if titleLanguage == "isv"
-      script.
-        document.addEventListener("DOMContentLoaded", async () => {
-          const replace = (await import("/work/language/interslavic/replace.js")).default
-          const titleH = document.querySelector("h1")
-          const title = replace(titleH.innerHTML, false, false)
-          titleH.innerHTML = title
-          document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
-        })
-
-    if titleLanguage == "pl"
-      script.
-        document.addEventListener("DOMContentLoaded", async () => {
-          const replace = (await import("/work/orthography/polish/replace.js")).default
-          const titleH = document.querySelector("h1")
-          const title = replace(titleH.innerHTML, false, false)
-          titleH.innerHTML = title
-          document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
-        })
 
     script.
       document.addEventListener("DOMContentLoaded", () => {
@@ -105,6 +94,7 @@ html
       article
         p þıs websıte use <it>google analytıcs</it>.
 
+        //+section(title, [`when-updated=${now}`].concat(tags ? tags : []))
         +section(title, tags)
           block main
 

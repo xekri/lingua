@@ -15,17 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/icon.ico">
-    <title>суми / personaž</title>
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const replace = (await import("/work/language/interslavic/replace.js")).default
-        const titleH = document.querySelector("h1")
-        const title = replace(titleH.innerHTML, false, false)
-        titleH.innerHTML = title
-        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
-      })
-      
-    </script>
+    <title>суми / характєр</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -35,7 +25,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="суми / personaž">
+    <meta name="twitter:title" content="суми / характєр">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2020-08-31.png">
     <meta name="twitter:card" content="summary">
@@ -66,8 +56,9 @@
     <main>
       <article>
         <p>þıs websıte use <it>google analytıcs</it>.</p>
-        <section id="personaž"><a href="#personaž">
-            <h1 class="undot">personaž</h1></a>
+        <!--+section(title, [`when-updated=${now}`].concat(tags ? tags : []))-->
+        <section id="характєр"><a href="#характєр">
+            <h1 class="undot">характєр</h1></a>
           <ul>
             <li><a href="suzuri">suzurı</a></li>
             <li><a href="mituru">mıturu</a></li>

@@ -2,17 +2,10 @@ html
   head
     link(rel="stylesheet", href="style.css")
   body
-    main
-      #picture
+    .card
+      .picture
         img(src="image/avatar.png")
-      #text
-        #name
-          ruby
-            | 墨
-            rt ſumı
-          ruby
-            | 幽
-            rt qȷəù
-
-        svg#twitter
-          include image/twitter.svg
+      .text
+        .name
+          <ruby>墨<rt>sumı</rt></ruby>
+        img(src="image/twitter.png").twitter

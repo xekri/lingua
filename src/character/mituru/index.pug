@@ -1,15 +1,15 @@
 extend /_layout.pug
+include ../_common.pug
 
 block head
 	-
 		const id = "митуру"
-		const name =
-			{ han: ["盈", "冬"]
-			, ȷa: ["mıturu", "toŋ|fuȷu"]
-			, cmn: ["ıŋ̌", "duŋ́"]
-			, yue: ["ıŋ̀", "tuŋ̀"]
-
-			};
+		const name = {
+			han: ["盈", "冬"],
+			ja: ["mıturu", "toŋ|fuju"],
+			cmn: ["iŋ̌", "duŋ́"],
+			yue: ["iŋ̀", "tuŋ̀"],
+		};
 		const title = id;
 		const tags = ["draft"]
 
@@ -17,9 +17,7 @@ block head
 
 block main
 	p #{id}は#{author.id}が作成した人格です
-	p
-		a(href="../suzuri") сузури
-		| の後輩で友人です
+	p <a href="../suzuri">сузури</a>の後輩で友人です
 
 	+section("fact")
 		p: em これらを豫告無く變更し得ます
@@ -31,9 +29,9 @@ block main
 					table
 						for key in Object.keys(name)
 							tr
-								th= key
-								td= name[key][0]
-								td= name[key][1]
+								th.undoth= key
+								td.undot= name[key][0]
+								td.undot= name[key][1]
 				li
 					| 固有色:&#x20;
 					span(style="background-color: black; border: 1px solid;") black
@@ -66,21 +64,31 @@ block main
 
 	+section("art")
 		ul
-			li 開發段階の爲に造形は確定しません. 基本的に最新を優先します.
-			li 次の仕樣を滿たすどの描像も#{id}として認識します. <a href="#fact">fact</a>に反する物を含めいかなる解釋も許容します.
+			li 自發的に描く方へ
+				+for_volunteer
+			li 依頼で描く方へ
 				ul
-					li 太め吊り眉. 垂れ目.
-					li 髪: 兩目隱れだが左目は見𛀁隱れする. 黑. 輕い癖毛.
-					li 性器: 上反り, 勃起時半剥け, 220mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します). <a href="../suzuri">сузури</a>には劣る.
-					li 健康的, 筋肉質で體格が良い. <a href="../suzuri">сузури</a>より大きい.
-			//li: em 掲載畫像の著作者であって掲載停止を要求される方は御連絡下さい
+					li 作者が繪を描くを得ない爲に判り易い規範的な資料は有りません.
+					li 開發段階の爲に造形は確定しません. 基本的に最新を優先します.
+					li 既存資料は, それに從ふと言ふよりはそれを通じて好みの男を描く事を望みます.
+					li #{id}として意圖されたどの描像も#{id}となります. <a href="#fact">fact</a>に反する物を含めいかなる解釋も許容します.
+					li 主要な要素を提示します:
+						ul
+							li 太め吊り眉. 垂れ目.
+							li 髪: 兩目隱れだが左目は見𛀁隱れする. 黑. 輕い癖毛.
+							li 性器: 上反り, 勃起時半剥け, 220mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します). <a href="../suzuri">сузури</a>には劣る.
+							li 健康的, 筋肉質で體格が良い. <a href="../suzuri">сузури</a>より大きい.
 
 		.tile
+			+section("2020-10-15")
+				p <a href="https://twitter.com/intent/user?user_id=948471113448792064">絹豆腐</a>君
+				img(src="image/2020-10-15.png")
+
 			+section("2020-10-9")
 				ul
 					li 髪は輕い癖毛 (假)
 					li 服が思ひ浮かばず困った
-					li 右目は通常見𛀁ません
+					li 左目は大抵見𛀁ない
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> 盈君 <a href="https://t.co/BbstJTFwK5">https://t.co/BbstJTFwK5</a> <a href="https://t.co/K5B93wGDQq">pic.twitter.com/K5B93wGDQq</a></p>&mdash; suzurı ıs my orıgınal character. (@smiqy) <a href="https://twitter.com/smiqy/status/1314648291636703232?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			//+section("2020-9-9")

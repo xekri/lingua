@@ -1,4 +1,3 @@
-
 @font-face
   font-family: 'Noto Sans'
   src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
@@ -252,23 +251,30 @@ textarea
 input[type="checkbox"]
   vertical-align: middle
 
-div.tags
+.tags
   margin: 0
   margin-bottom: $space
   padding: 0
   float: right
-  div.tag
+  .tag
     clear: both
     display: inline-block
     margin: 0
     margin-left: 8px
+    padding: 4px
+    font-size: 80%
+    border: 1px solid
+    border-radius: 4px
     &:first-child
       margin-left: 0
-      padding: 2px
-      font-size: 80%
-      border: 1px solid
-      border-radius: 4px
 
 p
   margin-top: 8px
   margin-bottom: 0
+
+th
+  font-weight: normal
+
+details, summary
+  &:focus
+    outline: none

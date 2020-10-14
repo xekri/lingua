@@ -1,4 +1,3 @@
-
 @font-face
   font-family: 'Noto Sans'
   src: url('https://fonts.googleapis.com/css2?family=Noto+Sans')
@@ -12,48 +11,55 @@
   box-sizing: border-box
   margin: 0
   padding: 0
-  //border: 1px green solid
+  //border: 1px red solid
 
-main
-  position: fixed
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-
-  box-shadow: 0 0 2mm black
-  width: 51mm
-  height: 99mm
-  padding: 2mm
+.card
+  width: 1254px
+  height: 758px
+  padding: 28px
+  margin: 28px
 
   font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
   font-weight: 300
 
-  #picture, #text
-    width: 100%
+  box-shadow: 0 0 28px black
 
-  #picture
+  $pictureWPerc: 58%
+
+  .picture, .text
+    height: 100%
+    float: left
+
+  .picture
+    width: $pictureWPerc
     overflow-y: hidden
     img
-      height: 100%
+      float: right
+      width: 150%
 
-  #text
-    position: absolute
-    bottom: 2mm
-    right: 2mm
-    width: 21.5mm
+  .text
+    width: 100% - $pictureWPerc
+    //background-color: darkgray
+    //color: white
 
-    #name, #twitter
+    .name, .twitter
+      clear: both
+      display: block
       width: 100%
+      margin-top: 28px
 
-    #name
-      font-size: 150%
+    .name
       text-align: center
-      vertical-align: bottom
-      white-space-collapse: discard
+      font-size: 1400%
 
-    #twitter
-      height: 21.5mm
-      padding: 0
-      padding-left: 2mm
-      padding-right: 2mm
+    .twitter
+      width: 200px
+      height: 200px
+      display: block
+      margin-left: auto
+      margin-right: auto
+
+      image-rendering: pixelated
+      image-rendering: crisp-edge
+      //filter: invert(100%)

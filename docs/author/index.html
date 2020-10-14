@@ -15,17 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/icon.ico">
-    <title>суми / vlastnik</title>
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const replace = (await import("/work/language/interslavic/replace.js")).default
-        const titleH = document.querySelector("h1")
-        const title = replace(titleH.innerHTML, false, false)
-        titleH.innerHTML = title
-        document.title = document.title.replace(/(?<=.+ \/ ).+/, title)
-      })
-      
-    </script>
+    <title>суми / аўтор</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -35,7 +25,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="суми / vlastnik">
+    <meta name="twitter:title" content="суми / аўтор">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2020-08-31.png">
     <meta name="twitter:card" content="summary">
@@ -66,11 +56,12 @@
     <main>
       <article>
         <p>þıs websıte use <it>google analytıcs</it>.</p>
-        <section id="vlastnik">
+        <!--+section(title, [`when-updated=${now}`].concat(tags ? tags : []))-->
+        <section id="аўтор">
           <div class="tags">
             <div class="tag">language='english analytic'</div>
-          </div><a href="#vlastnik">
-            <h1 class="undot">vlastnik</h1></a>
+          </div><a href="#аўтор">
+            <h1 class="undot">аўтор</h1></a>
           <section id="alias"><a href="#alias">
               <h1 class="undot">alias</h1></a>
             <center>
@@ -87,8 +78,8 @@
                 </tr>
                 <tr>
                   <th class="undot">yue</th>
-                  <td class="undot">məŋ̍</td>
-                  <td class="undot">qȷəù</td>
+                  <td class="undot">mŋ̍</td>
+                  <td class="undot">qȷv̀</td>
                 </tr>
                 <tr>
                   <th class="undot">cmn</th>
