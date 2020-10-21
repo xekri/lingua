@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   sw.onclick = () => {
     nav.style["display"] =
       nav.style["display"] === "none" ?
-      "block" :
-      "none";
+        "block" :
+        "none";
   };
 
   // submenu

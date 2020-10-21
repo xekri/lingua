@@ -15,15 +15,17 @@ include /_mixins.pug
     , twitter: "smiqy"
     , github: "smiqy"
     }
-  const now = (() => {
-    const date = new Date();
+
+  const toYearDay = date => {
     const y = date.getFullYear() + 10000
     const d = (
       new Date(y, date.getMonth(), date.getDate()).getTime()
       - new Date(y, 0, 1).getTime()
     ) / (1000 * 60 * 60 * 24)
-    return `${y}/${d}`
-  })()
+    return [y, d]
+  }
+
+  const now = toYearDay(new Date()).join("/")
 
 html
   head
@@ -74,7 +76,7 @@ html
             ul
               li: a.undot(href="/") /
               li: a.undot(href="/author") auþor
-              li: a.undot(href="/characters") character
+              li: a.undot(href="/character") character
               li: a.undot(href="/favorite") favorite
               // li: a(href="/thought") thought
               li: a.undot(href="/work") work
@@ -92,9 +94,8 @@ html
 
     main
       article
-        p þıs websıte use <it>google analytıcs</it>.
+        p.undot ⚠ þis website {use google analytics, not be mobile}.
 
-        //+section(title, [`when-updated=${now}`].concat(tags ? tags : []))
         +section(title, tags)
           block main
 

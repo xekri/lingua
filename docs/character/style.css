@@ -1,1 +1,1 @@
-img{margin:0}.tile section img{vertical-align:top;margin:0;display:block;width:320px}
+.tile,img{padding:0}img{margin:0}.tile{width:100%}.tile section{box-sizing:border-box;width:320px}.tile section img{vertical-align:top;width:calc(100% - 16px);margin:0;display:block}
