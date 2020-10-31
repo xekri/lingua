@@ -15,7 +15,9 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/icon.ico">
-    <title>суми</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>суми / minimal-triangle</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -25,7 +27,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="суми">
+    <meta name="twitter:title" content="суми / minimal-triangle">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2020-08-31.png">
     <meta name="twitter:card" content="summary">
@@ -56,12 +58,66 @@
     <main>
       <article>
         <p class="undot">⚠ þis website {use google analytics, not be mobile}.</p>
-        <section id="суми">
-          <div class="tags">
-            <div class="tag">language='english analytic'</div>
-          </div><a href="#суми">
-            <h1 class="undot">суми</h1></a>
-          <p class="undot">website introduce auþor суми and work of ve.</p>
+        <section id="minimal-triangle"><a href="#minimal-triangle">
+            <h1 class="undot">minimal-triangle</h1></a>
+          <center>
+            <textarea class="trigger" id="input">abcdefghijklm
+nopqrstuvwxyz
+.,:;-'`</textarea>
+            <table id="options">
+              <tr>
+                <td>character width</td>
+                <td>(posisive int)</td>
+                <td>
+                  <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>stroke width</td>
+                <td>(positive int)</td>
+                <td>
+                  <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
+                </td>
+              </tr>
+              <tr>
+                <td>space between characters</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>space between lines</td>
+                <td>(float)</td>
+                <td>
+                  <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>margin</td>
+                <td>(nonnegative float)</td>
+                <td>
+                  <input class="trigger" id="margin" type="number" min="0" value="0.5" step="any"> [character]
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="color" type="color" value="#ffffff">
+                </td>
+              </tr>
+              <tr>
+                <td>background color</td>
+                <td></td>
+                <td>
+                  <input class="trigger" id="bg-color" type="color" value="#000000">
+                </td>
+              </tr>
+            </table>
+            <canvas id="output"></canvas>
+            <div><a id="tweet">tweet</a></div>
+          </center>
         </section>
         <!--+section("")include _discus.pug
         -->

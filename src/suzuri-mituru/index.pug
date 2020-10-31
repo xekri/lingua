@@ -7,7 +7,7 @@ mixin color(name, back)
 block head
 	-
 		const title = "suzuri and mituru"
-		const tags = ["language={english, japanese}", "draft"]
+		const tags = ["language=english", "draft"]
 
 		const suzuri = {}
 		const mituru = {}
@@ -17,7 +17,7 @@ block head
 				new Date(s).getTime() - new Date(`${s.split("-")[0]}-01-01`).getTime()
 			) / (1000 * 3600 * 24)
 
-		suzuri.age = 23
+		suzuri.age = 22
 		suzuri.birthYear = 2017 - suzuri.age + 10000
 		suzuri.birthDay = toDay("2017-11-01")
 
@@ -25,10 +25,8 @@ block head
 		mituru.birthYear = suzuri.birthYear - mituru.age + suzuri.age
 		mituru.birthDay = toDay("2020-04-14")
 
-	link(href="../style.css", rel="stylesheet")
-
 block main
-	p in this article, contents marked with "⚠" is not finalized yet.
+	p in the present page, contents marked with "⚠" is not finalized yet.
 
 	center
 		table
@@ -49,7 +47,7 @@ block main
 			tr
 				th picture
 				td(style="text-align: center;")
-					img(src="../suzuri/images/2018-12-04.jpg", width="320px")
+					img(src="/character/suzuri/images/2018-12-04.jpg", width="320px")
 				td(style="text-align: center;")
 					div(style="width: 320px;")
 						<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> 盈君 <a href="https://t.co/BbstJTFwK5">https://t.co/BbstJTFwK5</a> <a href="https://t.co/K5B93wGDQq">pic.twitter.com/K5B93wGDQq</a></p>&mdash; suzurı ıs my orıgınal character. (@smiqy) <a href="https://twitter.com/smiqy/status/1314648291636703232?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -62,8 +60,7 @@ block main
 				td
 					ul
 						li white <span style="color: white;">■</span>
-						li aqua <span style="color: aqua;">■</span>
-					p ⚠
+						li aqua <span style="color: aqua;">■</span> ⚠
 			tr
 				th age/year
 				td= suzuri.age
@@ -78,8 +75,8 @@ block main
 				td 1.85
 			tr
 				th weight/kg
-				td 72
-				td 85
+				td 72 ⚠
+				td 85 ⚠
 			tr
 				th ALDH2
 				td NN
@@ -123,8 +120,8 @@ block main
 					li interslavic
 			tr
 				th favorite book
-				td de l'inconvénient d'être né (in japanese)
-				td l'être et le néant (in japanese)
+				td de l'inconvénient d'être né (in japanese) ⚠
+				td l'être et le néant (in japanese) ⚠
 			tr
 				th mentality
 				td: ul
@@ -221,7 +218,7 @@ block main
 		.tile
 			+section("2020-10-15")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">共感を得られなかったグロかわ狼フード <a href="https://t.co/MxQJZq1Ls4">pic.twitter.com/MxQJZq1Ls4</a></p>&mdash; 絹豆腐📛 (@momentoufuR18) <a href="https://twitter.com/momentoufuR18/status/1318916428586627073?ref_src=twsrc%5Etfw">October 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				img(src="../mituru/image/2020-10-15.png")
+				img(src="/character/mituru/image/2020-10-15.png")
 
 			+section("2020-10-15")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">有り難う……神…………<a href="https://twitter.com/momentoufuR18?ref_src=twsrc%5Etfw">@momentoufuR18</a> <a href="https://t.co/ewEG9IIfod">pic.twitter.com/ewEG9IIfod</a></p>&mdash; ſumı (@smiqy) <a href="https://twitter.com/smiqy/status/1316746721121058817?ref_src=twsrc%5Etfw">October 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -263,9 +260,9 @@ block main
 
 			+section("2020-8-4")
 				p <a href="https://twitter.com/intent/user?user_id=948471113448792064">絹豆腐</a>君
-				img(src="../suzuri/images/2020-08-04.png")
-				//img(src="../suzuri/images/2020-08-04-1.png", width="50%")
-				//img(src="../suzuri/images/2020-08-04-2.png", width="50%")
+				img(src="/character/suzuri/images/2020-08-04.png")
+				//img(src="/character/suzuri/images/2020-08-04-1.png", width="50%")
+				//img(src="/character/suzuri/images/2020-08-04-2.png", width="50%")
 
 			+section("2020-7-31")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">🔞NFSW🔞<br>skeb納品しました！穴まで描きたかった〜〜〜〜ッ！<br>リクエストありがとうございました🌞<a href="https://t.co/cqMdrGNWyZ">https://t.co/cqMdrGNWyZ</a> <a href="https://t.co/kYUK5iYora">pic.twitter.com/kYUK5iYora</a></p>&mdash; たま魂👼 (@mkotan) <a href="https://twitter.com/mkotan/status/1289200726829195264?ref_src=twsrc%5Etfw">July 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -292,7 +289,7 @@ block main
 			+section("2020-4-25")
 				P @shi46_u
 				a(href="https://twitter.com/intent/user?user_id=800300702937399296") 司ろう。君
-				img(src="../suzuri/images/2020-04-25.jpg")
+				img(src="/character/suzuri/images/2020-04-25.jpg")
 
 			+section("2020-4-24")
 				P 有償
@@ -313,21 +310,21 @@ block main
 
 			+section("2020-4-8")
 				p @nikuda2929 (有償)
-				//+nsfw: img(src="../suzuri/images/2020-04-08.jpg")
-				//img(src="../suzuri/images/2020-04-08'.jpg")
+				//+nsfw: img(src="/character/suzuri/images/2020-04-08.jpg")
+				//img(src="/character/suzuri/images/2020-04-08'.jpg")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/NSFW?src=hash&amp;ref_src=twsrc%5Etfw">#NSFW</a><br>from <a href="https://twitter.com/nikuda2929?ref_src=twsrc%5Etfw">@nikuda2929</a> 先生<br>大麻でラリってハメられるスズリ君<br>suzuri-kun being stoned and fucked <a href="https://t.co/bqQ7B7jAJE">pic.twitter.com/bqQ7B7jAJE</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1247826591792517123?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("2019-11-25")
 				//p @inuqw
 				p 作者非公開
-				img(src="../suzuri/images/2019-11-25.jpg")
+				img(src="/character/suzuri/images/2019-11-25.jpg")
 
 			//+section("2019-10-27")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/WSN80Ga6jB">pic.twitter.com/WSN80Ga6jB</a></p>&mdash; sumi (@melanophil) <a href="https://twitter.com/melanophil/status/1188098375045935104?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("2019-10-11")
 				p @shi46_u
-				img(src="../suzuri/images/2019-10-11.jpg")
+				img(src="/character/suzuri/images/2019-10-11.jpg")
 
 			+section("2019-10-5")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/melanophil?ref_src=twsrc%5Etfw">@melanophil</a> さんが生活物資支援してくれたからお礼に彼のオリキャラ(硯くん)のfanart描いた(これがパパ活)<br><br>みんなも絹くん(180/73/21/大学生)にサポしてくれよな～ <a href="https://t.co/hA3AXsvwSy">pic.twitter.com/hA3AXsvwSy</a></p>&mdash; 絹豆腐 (@momentoufuR18) <a href="https://twitter.com/momentoufuR18/status/1180149743692812288?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -343,7 +340,7 @@ block main
 
 			+section("2019-7-26")
 				p @AI67448472
-				img(src="../suzuri/images/2019-07-26.jpg")
+				img(src="/character/suzuri/images/2019-07-26.jpg")
 
 			// +section("2019-07-26 0")
 				<blockquote class="twitter-tweet" data-conversation="none" data-theme="dark"><p dir="ltr">遅くなりましたが誕生日おめでとう御座います!スズリくん描かせて頂きました… <a href="https://t.co/3JS1r6kXg2">pic.twitter.com/3JS1r6kXg2</a></p>&mdash; まぁく (@MK2ma_c) <a href="https://twitter.com/MK2ma_c/status/1154736325766942720?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote>
@@ -353,11 +350,11 @@ block main
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/tRtU7KUMdD">https://t.co/tRtU7KUMdD</a><a href="https://twitter.com/sikotamazou?ref_src=twsrc%5Etfw">@sikotamazou</a> 先生に依頼していたスズリ君が納品されました　最高に可愛い　文句無し　依頼して良かった</p>&mdash; ſumı (@smiqy) <a href="https://twitter.com/smiqy/status/1151805582556352513?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("2019-4-23")
-				img(src="../suzuri/images/2019-04-23.png")
+				img(src="/character/suzuri/images/2019-04-23.png")
 
 			+section("2018-12-4")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				img(src="../suzuri/images/2018-12-04.jpg")
+				img(src="/character/suzuri/images/2018-12-04.jpg")
 
 			//+section("2018-8-1")
-				img(src="../suzuri/images/2018-08-01.png")
+				img(src="/character/suzuri/images/2018-08-01.png")

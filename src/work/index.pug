@@ -1,13 +1,14 @@
 extend /_layout.pug
 
 block head
-  - const title = "дѣло" // interslavic
+  - const title = "work"
 
 block main
   ul
-    li: a(href="language") language
-    li: a(href="minimal-triangle") font
-    li: a(href="font/three-series").undot þree series
+    li: a(href="/language") language
+    li letter
+      ul
+        li: a(href="font/minimal-triangle").undot minimal triangle
+        li: a(href="font/three-series").undot þree series
     //li: a(href="calendar") calendar
-    //li: a(href="https://note.com/melano/n/ned9e4f994056") romanization
     //li: a(href="duality/document.pdf") sequent calculi for intuitionistic substructural logics and their duals (PDF)

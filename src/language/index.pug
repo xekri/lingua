@@ -4,13 +4,13 @@ mixin aLi(s)
 	li: a(href=s).undot= s
 
 block head
-	- const title = "йѧзик" //interslavic
+	- const title = "language"
 
 block main
 	p language and orthography.
 
 	ul
-		li: a(href=`https://${author.github}.github.io/romanize-yue/`).undot cantonese
+		li: a(href=`https://github.com/${author.github}/romanize-zho`).undot chinese
 		li: a(href=`https://${author.github}.github.io/interslavic-minimal/`).undot interslavic minimal
 		li: a(href=`https://${author.github}.github.io/romanize-san/`).undot sanskrit
 		+aLi("japanese")

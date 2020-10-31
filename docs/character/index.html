@@ -15,7 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/icon.ico">
-    <title>суми / характєр</title>
+    <title>суми / character</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -25,7 +25,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="суми / характєр">
+    <meta name="twitter:title" content="суми / character">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2020-08-31.png">
     <meta name="twitter:card" content="summary">
@@ -56,8 +56,8 @@
     <main>
       <article>
         <p class="undot">⚠ þis website {use google analytics, not be mobile}.</p>
-        <section id="характєр"><a href="#характєр">
-            <h1 class="undot">характєр</h1></a>
+        <section id="character"><a href="#character">
+            <h1 class="undot">character</h1></a>
           <ul>
             <li><a class="undot" href="suzuri-mituru">suzuri and mituru
                 <ul>
@@ -68,22 +68,8 @@
                 </ul></a></li>
           </ul>
         </section>
-        <section id="">
-          <div id="disqus_thread"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = "sumi.space";
-              this.page.identifier = "sumi";
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://sumi-2.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </section>
+        <!--+section("")include _discus.pug
+        -->
       </article>
     </main>
   </body>

@@ -2,89 +2,96 @@ extend /_layout.pug
 
 block head
 	-
-		const title = "аўтор" // interslavic
-		const tags = ["language='english analytic'"]
+		const title = "auþor"
+		const tags = ["language='japanese'"]
 
 block main
-	+section("alias")
-		center
-			table
-				for key in Object.keys(author.name)
-					tr
-						th.undot= key
-						td.undot= author.name[key][0]
-						td.undot= author.name[key][1]
+	p このsiteの作成者です.
 
-	+section("base")
-		a(class="twitter-timeline", href=`https://twitter.com/${author.twitter}?ref_src=twsrc%5Etfw`, data-theme="dark", width="350px", height="500px") Tweets by #{author.twitter}
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-		<iframe src="https://discordapp.com/widget?id=479992597381775360&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-	+section("english pronoun")
-		a(href="https://en.wiktionary.org/wiki/ve#English") ve
-
-	+section("ıdeology"): ul
-		li
-			del determınısm
-			| &#32;
-			del physıcalısm
-			| &#32;(ı deny boþ free wıll and determınısm)
-		li ıntersectıonal veganısm
-			ul: li ı stıll eat anımal food þerefore ı be currently moral nıhılıst
-		li antı-natalısm
-		li pro-mortalısm
-		li antı-monogamısm
-		li
-			del socıal lıberalısm
-			| &#32;egalıtarıanısm (?)
-
-	+section("sexualıty")
-		ul
-			li cıs-gender
-			li andro-sexual
-			li andro-romantıc
-			li poly-amory
-
-	+section("ınterest")
-		+section("language")
-			+section("human")
-				ul
-					li ȷapanese (natıve)
-					li englısh (TOEIC L&R 810)
-					li loȷban (begınner)
-					li cantonese (begınner)
-					li russıan (begınner)
-					li polısh (begınner)
-
-			+section("programmıng")
-				ul
-					li Haskell
-					li Lean Prover
-
-		+section("computer scıence")
+	+section("")
+		p
+			| 名前は "墨" で, 檢索性を良くしたい時は "墨幽" とも名乘ります.<br>
+			| 讀みは
 			ul
-				li λ-calculus
-				li substructural logıc
-				li proof þeory
-				li category þeory
+				li 日本語なら "sumi kura", 又は漢語音で "mok iu"
+				li 粵語なら "mək qȷə̀v"
+			| です.
+
+	+section("")
+		p
+			| <a href="/suzuri-mituru">硯と盈</a>と言ふ空想の人物を作ってゐます.
+			| <br>硯は私の理想と現實を均衡させて作った人物で, 私の最推しであり, 私自身の投影でもあります.
+			| <br>盈はそれよりも立場が輕く, 單に好みで作りました.
+
+	+section("")
+		p
+			| 言語 (特に人工言語含む) が好きで,
+			ul
+				li 日本語 (NitFonŊo)
+				li 官話 (guānhuà)
+				li 粵語 (ytŋý)
+				li lojban
+				li interslavic (мєҗусловйанскйи йѧзик)
+			| に興味が有ります.
+			| <br>言語のromanization systemを作るのが大好きです (<a href="/lang">作った物</a>).
+
+		p
+			| 計算機言語も好きで, Haskellに興味が有ります.
+			| <br>書けるのはJavaScriptやPythonです.
+			| <br>以前は圏論, 數理論理学, 定理證明にも興味が有りました.
+			| <br>職業はsoftwear engineerです.
+
+	+section("")
+		p
+			| meta倫理學, 哲學, その他思索を重要視します.
+			| <br>現在の主な思想は,
+			ul
+				li 人間に自由意思は無いが, 歸結主義から責任と刑罰を正當化できる.
+				li 世界の苦しみの總量は少ない方が善い.
+					ul
+						li 人を生んではならない.
+						li 人はなるべく早く死ぬのが (本人にとって) 善い.
+						li 以上は人間に限らず, 苦痛を感ずる生物全てに適用される.
+						li 人間は全ての生命を消失させる義務を持ち, これの遂行の爲には例外的に人を生む事が許容されるかも知れない.
+						li 現行の技術で觀測できない別の生態系については保留する.
+			| です.
+
+	+section("")
+		p
+			| 肉體が雄であり, 腦がそれに違和を感じません (male cisgender).
+			| <br>男根と (phallophilia), 私と同程度の言語能力を持つ實在人間に對して性慾を持ちます.
+			| <br>性慾とその解消の對象を共時的に1人に限る慾求を持ちません (polyamory).
+
+	+section("")
+		p
+			| 性慾を尊び, 食慾や睡眠欲と同樣に公然と話せる社會を望みます.
+			| <br>性慾が惡しき物とされ, 多くの不自由が有る日本社會を憎みます.
+			| <br>具體的な (そしてやや細かい) 憎惡對象を列擧します:
+			ul
+				li 性器の檢閲 (mosaic, 白塗り, 黒線). これを強制する刑法175條. これを濫用する警察權力. これに恭順する出版社, 同人誌卽賣會主催, 印刷會社.
+				li 檢閲を "修正" と呼ぶ人間.
+				li 明確な根據無く青少年の權利を奪ひ, 成人がpornoを占有する爲の18禁制度. これに肖り性的な物を "アダルト" と呼ぶ人間.
+				li 性的な物を "不健全" と呼ぶ人間.
+				li 強制の無い性的な事物全てを "性的嫌がらせ" と呼ぶ人間.
+				li キリスト教.
 
 	+section("account")
+		-
+			const xss = [
+				["twitter", "https://twitter.com/intent/user?user_id=759648849786920960",],
+				["discord", "https://discord.com/invite/J3b8pqg",],
+				["nuita", "https://nuita.net/users/tuFEwqlaelfFak7x",],
+				["magwatta", "https://www.magwatta.com/users/profile",],
+				["booklog", "https://booklog.jp/users/smq/profile",],
+				["skeb", "https://skeb.jp/@sm",],
+				["marshmallow", "https://marshmallow-qa.com/sumi",],
+				["amazon", "https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8",],
+				["github", "https://github.com/sumiq",],
+				["pixiv", "https://www.pixiv.net/users/13912025",],
+				["kyash", "https://kyash.me/payments/yvcDEDw98IllqEeLpsRhn6DquKhm",],
+				["instagram", "https://www.instagram.com/sumi.iu/",],
+				["youtube", "https://www.youtube.com/channel/UC5TRwGjAuKZkfCGslswfqXA",],
+			]
 		ul
-			li: a(href="https://twitter.com/intent/user?user_id=759648849786920960") Twıtter
-			// li: a(href="https://melanizo.tumblr.com/") Tumblr
-			// li: a(href="https://https://melanizo.blogspot.com/") Blogger
-			li: a(href="https://www.amazon.co.jp/gp/profile/amzn1.account.AFZC3TDGALBO2HEX54WQK7PQ2DXA?ie=UTF8") Amazon
-				ul: li: a(href="https://www.amazon.co.jp/registry/wishlist/13Q3VHTZE52OV") wıshlısts
-			// li: a(href="https://peing.net/ja/sumi") Peing
-			li: a(href="https://marshmallow-qa.com/sumi") Marshmallow
-			li: a(href="https://www.pixiv.net/member.php?id=13912025") pıxıv
-				ul
-					li: a(href="https://www.pixiv.net/fanbox/creator/13912025") FANBOX
-					li: a(href="https://melanizo.booth.pm/") BOOTH
-			li: a(href="https://soundcloud.com/melanophil") SoundCloud
-
-	+section("donatıon")
-		p help me! þank þou!
-		figure
-			img#image-kyash(src="/images/kyash.png", width="160px")
+			for xs in xss
+				li: a(href=xs[1])= xs[0]

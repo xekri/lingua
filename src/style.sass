@@ -12,7 +12,6 @@
 $space: 32px
 $navWidth: 240px
 $thresh: 1080px
-$mobileNavWidth: 33.3%
 $mobileSwitchHeight: 56pt
 $color: #D0D0D0
 $colorTr: #D0D0D088
@@ -48,12 +47,14 @@ body
   padding: 0
   color: $color
   background-color: $bgcolor
+
   font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
   font-weight: 200
 
-  @media screen and (max-width:$thresh)
-    font-size: 200%
+  @media screen and (max-device-width:$thresh)
+    font-family: sans-serif
+    font-weight: normal
 
 main
   margin: 0
@@ -61,7 +62,7 @@ main
   margin-left: $navWidth
   margin-right: $space
   padding-left: $space
-  @media screen and (max-width:$thresh)
+  @media screen and (max-device-width:$thresh)
     margin-left: 0
     margin-right: 0
     padding-left: 0
@@ -69,13 +70,14 @@ main
   article
     margin: 0
     padding: 0
-    @media screen and (max-width:$thresh)
+    @media screen and (max-device-width:$thresh)
       width: 100%
-      padding-left: $space
-      padding-right: $space
+      padding-left: 0
+      padding-right: 0
 
 nav
   z-index: 50
+  max-width: 33.3%
   width: $navWidth
   height: 100%
   margin: 0
@@ -92,14 +94,13 @@ nav
     margin: 0
     margin-top: $space
 
-    @media screen and (max-width:$thresh)
+    @media screen and (max-device-width:$thresh)
       li:not(:first-of-type)
         margin-top: $space
 
-  @media screen and (max-width:$thresh)
+  @media screen and (max-device-width:$thresh)
     padding-bottom: $space
     display: none
-    width: 66.6%
     background-color: $bgcolor
     overflow-y: scroll
 
@@ -113,9 +114,6 @@ nav
     margin-top: $space
     padding: 0
     display: inline-block
-    max-width: 100%
-    @media screen and (max-width:$thresh)
-      //font-size: 28pt
 
     #logo
       margin: 0
@@ -139,7 +137,7 @@ nav
       margin-bottom: $space
       width: 100%
       text-align: center
-      @media screen and (max-width:$thresh)
+      @media screen and (max-device-width:$thresh)
 
 #nav-switch
   z-index: 100
@@ -147,7 +145,7 @@ nav
   position: fixed
   top: 0
   left: 0
-  @media screen and (max-width:$thresh)
+  @media screen and (max-device-width:$thresh)
     display: block
     width: 96px
     height: 96px
@@ -165,12 +163,12 @@ section, .my-div
   padding-left: $space
   border: solid $color
   border-width: 1px 0 0 1px
-  font-size: 100%
+  font-size: inherit
   //box-shadow: 0 0 12px 4px #fff4
 
   section, .my-div
     margin-top: $space
-    @media screen and (max-width:$thresh)
+    @media screen and (max-device-width:$thresh)
       overflow-x: auto
 
   h1
@@ -212,6 +210,9 @@ table
   border-collapse: collapse
   margin: $space / 2
 
+  th
+    font-weight: normal
+
   th, td
     padding: 8px
 
@@ -238,7 +239,6 @@ table
       border-left: 1px solid rgba(255, 255, 255, .25)
 
 ul, ol
-  display: table
   text-align: left
 
 ul
@@ -273,9 +273,6 @@ input[type="checkbox"]
 p
   margin-top: 8px
   margin-bottom: 0
-
-th
-  font-weight: normal
 
 details, summary
   &:focus

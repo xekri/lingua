@@ -8,12 +8,11 @@ include /_mixins.pug
     { id: "суми"
     , name:
       { han: ["墨", "幽"]
-      , ja: ["ſumi", "juu"]
-      , yue: ["mŋ̍", "qȷv̀"]
-      , cmn: ["muè", "ıū"]
+      , ja: ["sumi|mok", "kura|iu"]
+      , yue: ["mək", "qȷə̀v"]
       }
     , twitter: "smiqy"
-    , github: "smiqy"
+    , github: "sumiq"
     }
 
   const toYearDay = date => {
@@ -99,5 +98,5 @@ html
         +section(title, tags)
           block main
 
-        +section("")
+        //+section("")
           include _discus.pug
