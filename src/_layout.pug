@@ -5,7 +5,7 @@ include /_mixins.pug
 -
   const root = "https://sumi.space"
   const author =
-    { id: "суми"
+    { id: "ſumı"
     , name:
       { han: ["墨", "幽"]
       , ja: ["sumi|mok", "kura|iu"]
@@ -44,8 +44,8 @@ html
 
     -
       const titleFull =
-        title === author.id
-          ? title
+        isRoot
+          ? author.id
           : `${author.id} / ${title}`
     title= titleFull
 
@@ -63,14 +63,14 @@ html
     meta(name="twitter:card", content="summary")
 
   body
-    div#nav-switch
-    div.center
+    #nav-switch
+    .center
       nav
-        div#nav-in
-          div#logo
+        #nav-in
+          //div#logo
             a(href="/")
               img(src="/images/sumi.png")
-          div#datetime
+          #datetime
           +div("menu")
             ul
               li: a.undot(href="/") /

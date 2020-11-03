@@ -32,18 +32,10 @@ block main
 		table
 			tr
 				th
-				th suzuri
-				th mituru
-			tr
-				th name
-				td 硯玄 (ŋın hỳn, suzuri faru,)
-				td 盈冬 (ı̀ŋ tùŋ, mituru fuju,)
-			tr
-				th logotype
-				td(style="text-align: center;")
+				th
 					img.logo(src="image/logo-suzuri.png")
-					p ⚠
-				td(style="text-align: center;"): img.logo(src="image/logo-mituru.png")
+				th
+					img.logo(src="image/logo-mituru.png")
 			tr
 				th picture
 				td(style="text-align: center;")
@@ -53,22 +45,13 @@ block main
 						<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> 盈君 <a href="https://t.co/BbstJTFwK5">https://t.co/BbstJTFwK5</a> <a href="https://t.co/K5B93wGDQq">pic.twitter.com/K5B93wGDQq</a></p>&mdash; suzurı ıs my orıgınal character. (@smiqy) <a href="https://twitter.com/smiqy/status/1314648291636703232?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					p ⚠
 			tr
-				th theme color
-				td: ul
-					li black □
-					li crimson <span style="color: crimson;">■</span>
-				td
-					ul
-						li white <span style="color: white;">■</span>
-						li aqua <span style="color: aqua;">■</span> ⚠
+				th name
+				td 硯玄 (ŋın hỳn, suzuri faru,)
+				td 盈冬 (ı̀ŋ tùŋ, mituru fuju,)
 			tr
-				th age/year
-				td= suzuri.age
-				td= mituru.age
-			tr
-				th birthdate
-				td= `HE${suzuri.birthYear}/${suzuri.birthDay}`
-				td= `HE${mituru.birthYear}/${mituru.birthDay}`
+				th age
+				td #{suzuri.age} (born on HE#{suzuri.birthYear}/#{suzuri.birthDay})
+				td #{mituru.age} (born on HE#{mituru.birthYear}/#{mituru.birthDay})
 			tr
 				th height/m
 				td 1.75
@@ -119,6 +102,15 @@ block main
 					li russian
 					li interslavic
 			tr
+				th theme color
+				td: ul
+					li black □
+					li crimson <span style="color: crimson;">■</span>
+				td
+					ul
+						li white <span style="color: white;">■</span>
+						li aqua <span style="color: aqua;">■</span> ⚠
+			tr
 				th favorite book
 				td de l'inconvénient d'être né (in japanese) ⚠
 				td l'être et le néant (in japanese) ⚠
@@ -148,25 +140,25 @@ block main
 					li anti-natalism
 					li pescetarianism
 			tr
-				th how to call the other
+				th call the other ...
 				td fuju
 				td faru-kun
 			tr
 				th miscellaneous
 				td: ul
+					li versatile but prefers bottom
+					li masturbates 7 times per week on average
+					li acts sweet during sexual intercourses
+					li rarely smokes
 					li plays the bass guitar
 					li likes japanese alternative rocks
-					li rarely smokes
 					li likes to make phisical contacts, pretending to be drunk
-					li versatile but prefers bottom
-					li acts sweet during sexual intercourses
 					li likes to be strangled
-					li masturbates 7 times per week on average
 				td: ul
-					li gets lonely easily
 					li versatile but prefers bottom
-					li has sensitive nipples
 					li masturbates 2 times per week on average
+					li gets lonely easily
+					li has sensitive nipples
 
 	+section("interaction")
 		ul
@@ -191,10 +183,6 @@ block main
 						li 檢索性を阻碍する伏せ字や暗號の使用
 						li 特定の屬性の人間 (例へば女性, 非日本國籍者, 18歳未滿) に閲覽を禁止する等の差別行爲
 						li 刑法175條に基づく性器の自主檢閲
-			li 依頼で描かれる方へ
-				ul
-					li 作者が繪を描くを得ない故に判り易い規範的な資料は有りません
-					li 開發段階の爲に造形は確定しません. 基本的に最新を優先します.
 			li 彼等として意圖されたどの描像も彼等です. 設定に反する物を含めいかなる解釋も許容します. 既存資料は參考程度に, 好みの男を描いて下さい.
 			li 主要な要素
 				ul
