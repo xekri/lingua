@@ -11,55 +11,60 @@
   box-sizing: border-box
   margin: 0
   padding: 0
-  //border: 1px red solid
+  //border: 1px solid #eee
+
+body
+  display: flex
+  justify-content: center
+  align-items: center
 
 .card
-  width: 1254px
-  height: 758px
-  padding: 28px
-  margin: 28px
+  width: 400px
+  height: 225px
+  padding: 8px
 
   font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
-  font-weight: 300
+  font-weight: 200
 
-  box-shadow: 0 0 28px black
-
-  $pictureWPerc: 58%
+  box-shadow: 0 0 16px gray
 
   .picture, .text
     height: 100%
     float: left
 
   .picture
-    width: $pictureWPerc
-    overflow-y: hidden
+    width: 60%
+    overflow: hidden
+    border-right: 1px solid black
     img
       float: right
       width: 150%
 
   .text
-    width: 100% - $pictureWPerc
-    //background-color: darkgray
-    //color: white
+    width: 40%
 
     .name, .twitter
       clear: both
       display: block
       width: 100%
-      margin-top: 28px
+      height: 50%
+      text-align: center
+
+      display: flex
+      justify-content: center
+      align-items: center
 
     .name
-      text-align: center
-      font-size: 1400%
+      font-size: 350%
+      .read
+        font-size: calc(100% / 2)
 
     .twitter
-      width: 200px
-      height: 200px
-      display: block
-      margin-left: auto
-      margin-right: auto
+      border-top: 1px solid black
+      img
+        height: 66.6%
 
-      image-rendering: pixelated
-      image-rendering: crisp-edge
-      //filter: invert(100%)
+        image-rendering: pixelated
+        image-rendering: crisp-edge
+        //filter: invert(100%)
