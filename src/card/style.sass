@@ -19,9 +19,11 @@ body
   align-items: center
 
 .card
-  width: 400px
-  height: 225px
-  padding: 8px
+  width: 91mm
+  height: 55mm
+  padding: 3mm
+  margin: 8px
+  display: inline-block
 
   font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
@@ -34,15 +36,16 @@ body
     float: left
 
   .picture
-    width: 60%
+    width: 55%
     overflow: hidden
     border-right: 1px solid black
     img
       float: right
       width: 150%
+      margin-right: 1mm
 
   .text
-    width: 40%
+    width: 45%
 
     .name, .twitter
       clear: both
@@ -56,9 +59,9 @@ body
       align-items: center
 
     .name
-      font-size: 350%
+      font-size: 250%
       .read
-        font-size: calc(100% / 2)
+        font-size: calc(100% / 4 * 3)
 
     .twitter
       border-top: 1px solid black

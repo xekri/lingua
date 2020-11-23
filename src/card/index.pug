@@ -2,13 +2,14 @@ html
   head
     link(rel="stylesheet", href="style.css")
   body
-    .card
-      .picture
-        img(src="image/avatar.png")
-      .text
-        .name
-          div
-            | 墨
-            span.read &#x20;ſumı
-        .twitter
-          img(src="image/twitter.png")
+    - for (const i of Array(1).keys())
+      .card
+        .picture
+          img(src="image/avatar.png")
+        .text
+          .name
+            div
+              | 墨
+              span.read &#x20;ſumı
+          .twitter
+            img(src="image/twitter.png")
