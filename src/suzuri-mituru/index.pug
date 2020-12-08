@@ -18,7 +18,7 @@ block head
 			) / (1000 * 3600 * 24)
 
 		suzuri.age = 22
-		suzuri.birthYear = 2017 - suzuri.age + 10000
+		suzuri.birthYear = 2017 - suzuri.age
 		suzuri.birthDay = toDay("2017-11-01")
 
 		mituru.age = suzuri.age - 2
@@ -26,7 +26,7 @@ block head
 		mituru.birthDay = toDay("2020-04-14")
 
 block main
-	p in the present page, contents marked with "⚠" is not finalized yet.
+	p in the present page, contents marked with "⚠" are not finalized yet.
 
 	center
 		table
@@ -46,12 +46,12 @@ block main
 					p ⚠
 			tr
 				th name
-				td 硯玄 (ŋın hỳn, suzuri faru,)
-				td 盈冬 (ı̀ŋ tùŋ, mituru fuju,)
+				td 硯玄 (ŋın hỳn; suzuri faru;)
+				td 盈冬 (ı̀ŋ tùŋ; mituru fuju;)
 			tr
 				th age
-				td #{suzuri.age} (born on HE#{suzuri.birthYear}/#{suzuri.birthDay})
-				td #{mituru.age} (born on HE#{mituru.birthYear}/#{mituru.birthDay})
+				td #{suzuri.age} (born on y#{suzuri.birthYear}d#{suzuri.birthDay})
+				td #{mituru.age} (born on y#{mituru.birthYear}d#{mituru.birthDay})
 			tr
 				th height/m
 				td 1.75
@@ -70,7 +70,7 @@ block main
 				td black □
 			tr
 				th location
-				td(colspan=2) republic taiwan-japan / island akitu / prefecture musasi
+				td(colspan=2) federal republic of east asia / state akitu / prefecture musasi
 			tr
 				th occupation
 				td master's student (computer science)
@@ -79,14 +79,14 @@ block main
 				th sexuality
 				td: ul
 					li cis-gender
-					li androphilia
-					li poly-amory
 					li male
+					li andro-philia
+					li poly-amory
 				td: ul
 					li cis-gender
-					li androphilia
-					li mono-amory
 					li male
+					li andro-philia
+					li mono-amory
 			tr
 				th language
 				td: ul
@@ -109,16 +109,16 @@ block main
 				td
 					ul
 						li white <span style="color: white;">■</span>
-						li aqua <span style="color: aqua;">■</span> ⚠
+						li spring green <span style="color: springgreen;">■</span>
 			tr
 				th favorite book
-				td de l'inconvénient d'être né (in japanese) ⚠
+				td de l'inconvénient d'être né (in japanese)
 				td l'être et le néant (in japanese) ⚠
 			tr
 				th mentality
 				td: ul
 					li logical
-					li rational
+					li radical
 					li even-tempered
 					li reticent
 					li independent
@@ -133,18 +133,16 @@ block main
 				td: ul
 					li social liberalism
 					li pro-mortalism
-					li veganism
 					li hedonism
 				td: ul
 					li social liberalism
 					li anti-natalism
-					li pescetarianism
 			tr
-				th call the other ...
+				th how to address the other
 				td fuju
 				td faru-kun
 			tr
-				th miscellaneous
+				th(rowspan=2) miscellaneous
 				td: ul
 					li versatile but prefers bottom
 					li masturbates 7 times per week on average
@@ -159,29 +157,30 @@ block main
 					li masturbates 2 times per week on average
 					li gets lonely easily
 					li has sensitive nipples
+				tr
+					td(colspan=2): a(href="https://twitter.com/search?q=from%3Asmiqy%20(%E7%A1%AF%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20suzuri%20OR%20%E7%9B%88%20OR%20%E3%83%9F%E3%83%84%E3%83%AB%20OR%20mituru)&f=live") unofficial talks by the author
+
+	+section("the world where they live")
+		ul
+			li federal republic of east asia (FREA) in their world covers japan except hokkaidou, south korea, taiwan, and hong-kong in ours
+			li though the official language of FREA is mandarin, their native one is japanese, which is mainly used in state akitu.
+			li in FREA, marijuana and LSD are legalized
+			li in their world, cellular agriculture is progressive. in FREA, though animal based foods are prohibited, dietary culture is not substantially different from ours.
 
 	+section("interaction")
 		ul
 			li suzuri and mituru are students at the same university.
-			li suzuri's ideology attracts mituru, and mituru likes to hear suzuri talks, though suzuri conciously keeps reticent.
+			li suzuri's thoughts attract mituru, and mituru likes to hear suzuri talks, though suzuri conciously stays reticent.
 			li
 				| mituru often takes suzuri out, who almost always stays at home alone. mostly they watch movies.
 				| suzuri, who rarely laughs, laughs more often than usual when he is with mituru.
 			li
-				| while mituru has no partner, he often comes to suzuri's house and shares the bed.
+				| when mituru has no partner, he often comes to suzuri's house and shares the bed.
 				| once every 2 times, they have a sexual intercourse.
 				| once every 4 times, suzuri bottoms, and the rest he tops.
 
 	+section("彼等を描く方へ")
 		ul
-			li 自發的に描かれる方へ
-				ul
-					li 任意のfan artは彼等に影響し, 二次創作でありながら一次創作となります
-					li fan art (依頼外の作品) はどんな物も ({性, 獵奇}的な物も) 常に大いに{歡迎, 感謝}します. 擔し次の行爲を避ける樣に強く推奬します.
-					ul
-						li 檢索性を阻碍する伏せ字や暗號の使用
-						li 特定の屬性の人間 (例へば女性, 非日本國籍者, 18歳未滿) に閲覽を禁止する等の差別行爲
-						li 刑法175條に基づく性器の自主檢閲
 			li 彼等として意圖されたどの描像も彼等です. 設定に反する物を含めいかなる解釋も許容します. 既存資料は參考程度に, 好みの男を描いて下さい.
 			li 主要な要素
 				ul
@@ -200,9 +199,23 @@ block main
 							li 體毛はやや深め
 							li 性器: 上反り, 勃起時半剥け, 220mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します)
 							li 健康的, 筋肉質で大柄
+			li 自發的に描かれる方へ
+				ul
+					li 任意のfan artは彼等に影響し, 二次創作でありながら一次創作となり得ます
+					li fan artはどんな物も ({性, 獵奇}的な物も) 常に大いに{歡迎, 感謝}されます. 但し次の行爲を避ける樣に強く推奬します.
+					ul
+						li 檢索性を阻碍する伏せ字や暗號の使用
+						li 特定の屬性の人間 (例へば女性, 非日本國籍者, 18歳未滿) に閲覽を禁止する等の差別行爲
+						li 刑法175條の恣意的な運用に屈從した性器の自主檢閲
 
 	+section("art")
 		.tile
+			+section("2020-344")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">skeb納品しましたーーー！！！！！リクエストありがとうございます！！！！！目隠れ髭は最高だな………今週の標語は「そのちんちん透けるよ」です<a href="https://t.co/qvVdZyiJ5e">https://t.co/qvVdZyiJ5e</a> <a href="https://twitter.com/hashtag/Skeb?src=hash&amp;ref_src=twsrc%5Etfw">#Skeb</a> <a href="https://twitter.com/hashtag/Commission?src=hash&amp;ref_src=twsrc%5Etfw">#Commission</a> <a href="https://twitter.com/skeb_jp?ref_src=twsrc%5Etfw">@skeb_jp</a>より <a href="https://t.co/kE4mOPkESK">pic.twitter.com/kE4mOPkESK</a></p>&mdash; たま魂👼 (@mkotan) <a href="https://twitter.com/mkotan/status/1337004643235160064?ref_src=twsrc%5Etfw">December 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			+section("2020-342")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/AlqvTPF6of">https://t.co/AlqvTPF6of</a><br>2人の絡み納品頂きました!! 盈君の初依頼がめちゃエロい作品になって嬉しい……</p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1336308244126416896?ref_src=twsrc%5Etfw">December 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 			+section("2020-334")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/x8dgscxzwJ">https://t.co/x8dgscxzwJ</a> <br>fistingされる硯君を先生に納品頂きました!! 想像以上にエロくて最高です!!! <a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/Skeb?src=hash&amp;ref_src=twsrc%5Etfw">#Skeb</a> <a href="https://t.co/zzrzSUCGi7">https://t.co/zzrzSUCGi7</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1333102518277079041?ref_src=twsrc%5Etfw">November 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -228,7 +241,6 @@ block main
 
 			+section("2020-263")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">動作test. 首に違和感有るけどまあ可いか (疲れた). <a href="https://t.co/LXSU6zzXIl">pic.twitter.com/LXSU6zzXIl</a></p>&mdash; 男根, 大麻, 安樂死 (@smiqy) <a href="https://twitter.com/smiqy/status/1307708387115675650?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 			//+section("2020-252")
 				ul
@@ -349,5 +361,6 @@ block main
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				img(src="/character/suzuri/images/2018-12-04.jpg")
 
-			//+section("2018-8-1")
-				img(src="/character/suzuri/images/2018-08-01.png")
+			+section("2018-8-1")
+				p 非公開
+				//img(src="/character/suzuri/images/2018-08-01.png")

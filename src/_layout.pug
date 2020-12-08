@@ -16,7 +16,7 @@ include /_mixins.pug
     }
 
   const toYearDay = date => {
-    const y = date.getFullYear() + 10000
+    const y = date.getFullYear()
     const d = (
       new Date(y, date.getMonth(), date.getDate()).getTime()
       - new Date(y, 0, 1).getTime()
@@ -59,7 +59,7 @@ html
     meta(name="twitter:site", content="@" + author.twitter)
     meta(name="twitter:title", content=titleFull)
     // meta(name="twitter:description", content=`${author.id}'s information.`)
-    meta(name="twitter:image", content=`${root}/character/suzuri/images/2020-08-31.png`)
+    meta(name="twitter:image", content=`${root}/character/suzuri/images/2019-04-23.png`)
     meta(name="twitter:card", content="summary")
 
   body

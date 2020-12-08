@@ -1,48 +1,48 @@
 const monthNames =
-  [ "january"
-  , "february"
-  , "march"
-  , "april"
-  , "may"
-  , "june"
-  , "sol"
-  , "july"
-  , "august"
-  , "september"
-  , "october"
-  , "november"
-  , "december"
+  ["january"
+    , "february"
+    , "march"
+    , "april"
+    , "may"
+    , "june"
+    , "sol"
+    , "july"
+    , "august"
+    , "september"
+    , "october"
+    , "november"
+    , "december"
   ]
 
 const weekdayNames =
-  [ "mon"
-  , "tues"
-  , "wednes"
-  , "thurs"
-  , "fri"
-  , "satur"
-  , "sun"
+  ["mon"
+    , "tues"
+    , "wednes"
+    , "thurs"
+    , "fri"
+    , "satur"
+    , "sun"
   ]
 
 const yeardayTo = (isLeap, yearday) => {
   let month = 0;
   let monthday = yearday;
   let dayName = null;
-  while(month < 13) {
-    if(isLeap && [month, monthday] === [5, 28]) {
+  while (month < 13) {
+    if (isLeap && [month, monthday] === [5, 28]) {
       dayName = "leap";
       break;
     }
-    else if([month, monthday] === [12, 28]) {
+    else if ([month, monthday] === [12, 28]) {
       dayName = "year";
       break;
     }
-    else if(monthday < 28) {
+    else if (monthday < 28) {
       break;
     }
     else {
       monthday -= (isLeap && month === 5) ? 29 : 28;
-      month ++;
+      month++;
     }
   }
   let weekday = dayName ? -1 : monthday % 7;
@@ -64,9 +64,8 @@ export default date => {
   const yeartime = msec / msecPerDay
   const yearday = Math.floor(yeartime);
   let daytime = yeartime % 1;
-  const isLeap =  ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+  const isLeap = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 
   const [month, monthday, week, weekday, dayName] = yeardayTo(isLeap, yearday);
-  year += 10000;
   return [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime];
 };

@@ -1,1 +1,1 @@
-.tile section img,td{vertical-align:top}img{margin:0;padding:0}img.logo{width:72px;background-color:#fff;border-radius:50%;padding:1px}.tile{width:100%;padding:0}.tile section{box-sizing:border-box;width:320px}.tile section img{width:calc(100% - 16px);margin:0;display:block}
+.tile section img,td{vertical-align:top}img{margin:0;padding:0}img.logo{width:72px;background-color:#fff;border-radius:50%;padding:1px}td[colspan]{text-align:center}.tile{width:100%;padding:0}.tile section{box-sizing:border-box;width:320px}.tile section img{width:calc(100% - 16px);margin:0;display:block}

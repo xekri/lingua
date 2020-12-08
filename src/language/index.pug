@@ -1,8 +1,5 @@
 extend /_layout.pug
 
-mixin aLi(s)
-	li: a(href=s).undot= s
-
 block head
 	- const title = "language"
 
@@ -13,7 +10,9 @@ block main
 		li: a(href=`https://github.com/${author.github}/romanize-zho`).undot chinese
 		li: a(href=`https://${author.github}.github.io/interslavic-minimal/`).undot interslavic minimal
 		li: a(href=`https://${author.github}.github.io/romanize-san/`).undot sanskrit
-		+aLi("polish")
+		li: a(href="pl") polish
+		li: a(href="https://cdpn.io/sumigv/debug/poEyLrY/vPrKKgwXJeor") greek
+		li: a(href="https://cdpn.io/sumigv/debug/WNGveym/dGMXWjJDORGk") russian
 
 	+section("standard spelling")
 		.tables
