@@ -1,13 +1,6 @@
 @font-face
-  font-family: 'Noto Sans'
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
-
-@font-face
   font-family: 'Noto Sans TC'
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC')
   unicode-range: U+2E80-2FD5, U+3190-319F, U+3400-4DBF, U+4E00-9FCC, U+F900-FAAD
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap')
 
 $space: 32px
 $navWidth: 240px
@@ -50,11 +43,11 @@ body
 
   font-family: "Noto Sans", "Noto Sans TC", sans-serif
   font-stretch: extra-condensed
-  font-weight: 200
+  font-weight: 100
 
+  font-size: 12px
   @media screen and (max-device-width:$thresh)
-    font-family: sans-serif
-    font-weight: normal
+    font-size: 24px
 
 main
   margin: 0
@@ -90,7 +83,6 @@ nav
     list-style-position: inside
 
   #menu ul
-    list-style-type: none
     margin: 0
     margin-top: $space
 
@@ -150,7 +142,6 @@ section, .my-div
   border: solid $color
   border-width: 1px 0 0 1px
   font-size: inherit
-  //box-shadow: 0 0 12px 4px #fff4
 
   section, .my-div
     margin-top: $space
@@ -269,3 +260,6 @@ p
 details, summary
   &:focus
     outline: none
+
+td
+  font-size: inherit
