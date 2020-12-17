@@ -1,0 +1,388 @@
+extend /_layout.pug
+
+block head
+  -　const title = "香港粵語の音韻論と私的ラテン字化"
+  - tags = ["date=12020/351", "draft"]
+
+block main
+  +section("音韻論")
+    p
+      | 粵語の音節は次の構造を取ります。
+      .indent
+        | (C0) V (C1) T または N T
+      | 括弧は無かり得る要素に附きます。
+      | それぞれ次を意味します。
+      .indent
+        table
+          tr
+            td C0
+            td 頭子音
+          tr
+            td V
+            td 母音
+          tr
+            td C1
+            td 末子音
+          tr
+            td N
+            td 成節子音
+          tr
+            td T
+            td 聲調
+
+    p
+      | 頭子音は次のどれかです。
+      .indent
+        table
+          tr
+            th
+            th 無氣
+            th 有氣
+            th 摩擦
+            th 共鳴
+          tr
+            th 喉
+            td /k/ [k]
+            td /kx/ [kʰ]
+            td /x/ [h]
+            td /ŋ/ [ŋ]
+          tr
+            th 喉唇
+            td /kv/ [kʷ]
+            td /kvx/ [kʷʰ]
+            td
+            td
+          tr
+            th 舌頭
+            td /t/ [t]
+            td /tx/ [tʰ]
+            td
+            td /n/ [n]
+          tr
+            th 歯頭
+            td /c/ [ts]
+            td /cx/ [tsʰ]
+            td /s/ [s]
+            td /l/ [l]
+          tr
+            th 正歯
+            td /cj/ [tɕ]
+            td /cjx/ [tɕʰ]
+            td /sj/ [ɕ]
+            td /j/ [j]
+          tr
+            th 唇
+            td /p/ [p]
+            td /px/ [pʰ]
+            td /f/ [f]
+            td /v/ [w]
+      | 若い話者は歯頭音と正歯音を區別しません。
+
+    p
+      | 成節子音は次のどれかです。
+      .indent
+        table
+          tr
+            td /ŋ/ [ŋ]
+            td /m/ [m]
+
+    p
+      | 末子音は次のどれかです。
+      .indent
+        table
+          tr
+            td /j/ [i]
+            td /v/ [u]
+            td /ŋ/ [ŋ, k̚]
+            td /n/ [n, t̚]
+            td /m/ [m, p̚]
+      | 鼻音の末子音は聲調が入聲（後述）で内破音になります。
+
+    p
+      | 母音は次のどれかです。
+      .indent
+        table
+          tr
+            th
+            th 前舌
+            th 前舌円唇
+            th 中舌
+            th 後舌
+          tr
+            th 狹
+            td /i/ [iː, ɪ]
+            td /y/ [yː]
+            td
+            td /u/ [uː, ʊ]
+          tr
+            th 中
+            td /e/ [ɛː, e]
+            td /ø/ [œː, ɵ]
+            td /ə/ [ɐ]
+            td /o/ [ɔː, o]
+          tr
+            th 廣
+            td
+            td
+            td /a/ [aː]
+            td
+      | 末子音が母音の長短を決めます。
+      .indent
+        table
+          tr
+            th
+            th
+            th j
+            th v
+            th ŋ
+            th n
+            th m
+          tr
+            th i
+            td(rowspan=6) 長
+            td
+            td 長
+            td 短
+            td 長
+            td 長
+          tr
+            th e
+            td 短
+            td 長
+            td 長
+            td 長
+            td 長
+          tr
+            th y
+            td
+            td
+            td
+            td 長
+            td
+          tr
+            th ø
+            td 短
+            td 長
+            td 長
+            td 短
+            td
+          tr
+            th u
+            td 長
+            td
+            td 短
+            td 長
+            td
+          tr
+            th o
+            td 長
+            td 短
+            td 長
+            td 長
+            td
+          tr
+            th ə
+            td
+            td(colspan=5) 短
+          tr
+            th a
+            td(colspan=6) 長
+
+    p
+      | 聲調は次のどれかです。
+      .indent
+        table
+          tr
+            th
+            th 平
+            th 上
+            th 去
+            th 入
+          tr
+            th 陰
+            td [˥˧]
+            td [˧˥]
+            td [˧]
+            td [˧, ˥]
+          tr
+            th 陽
+            td [˨˩]
+            td [˩˧]
+            td [˨]
+            td [˨]
+      | 陰入は母音が短いと高くなります。
+
+  +section("ラテン字化")
+    p
+      | 頭子音は聲調に依りそれぞれ次の字列で書きます。
+      .indent
+        table
+          tr
+            th
+            th
+            th
+            th 喉
+            th 喉唇
+            th 舌頭
+            th 歯頭
+            th 正歯
+            th 唇
+          tr
+            th 無氣
+            th(rowspan=2) 陰
+            td q
+            td k
+            td kv
+            td t
+            td c
+            td cj
+            td p
+          tr
+            th 有氣
+            td
+            td kx
+            td kxv
+            td tx
+            td cx
+            td cxj
+            td px
+          tr
+            th 無氣
+            th 陽{平, 上}
+            td
+            td gh
+            td ghv
+            td dh
+            td ʒh
+            td ʒhj
+            td bh
+          tr
+            th 有氣
+            th 陽{去, 入}
+            td
+            td gx
+            td gxv
+            td dx
+            td ʒx
+            td ʒxj
+            td bx
+          tr
+            th {無, 有}氣
+            th 陽（殘り）
+            td
+            td g
+            td gv
+            td d
+            td ʒ
+            td ʒj
+            td b
+          tr
+            th(rowspan=2) 摩擦
+            th 陰
+            td
+            td x
+            td
+            td
+            td s
+            td sj
+            td f
+          tr
+            th 陽
+            td
+            td h
+            td
+            td
+            td z
+            td zj
+            td w
+          tr
+            th(rowspan=2) 共鳴
+            th 陰
+            td
+            td qŋ
+            td
+            td qn
+            td ql
+            td qj
+            td qv
+          tr
+            th 陽
+            td
+            td ŋ
+            td
+            td n
+            td l
+            td j
+            td v
+
+    p 母音と成節子音は音素表記をそのまま用ゐます。
+
+    p
+      | 末子音と聲調は次の字列で書きます。
+      .indent
+        table
+          tr
+            th
+            th 平
+            th 上
+            th 去
+            th 入
+          tr
+            th
+            td ◌̀
+            td ◌́
+            td
+            td
+      | 但し入聲では末子音の(ŋ, n, m)を(k, t, p)にそれぞれ書き換へます。
+
+    p
+      | 頭子音を, 近古音に基づき次で一部書き換へます。
+      .indent
+        table
+          tr
+            td
+            td ŋ
+          tr
+            td q
+            td qŋ
+          tr
+            td f
+            td xv
+          tr
+            td qj
+            td xj, qŋj, qnj, qmj
+          tr
+            td j
+            td hj, ŋj, nj, mj
+          tr
+            td v
+            td hv
+      | TODO: 説明
+
+    p
+      | 例
+      .indent
+        table
+          tr
+            td 粵文拉丁化
+            td yt mə̀n qlàȷ tı̀ŋ xva
+          tr
+            td 香港獨立
+            td xø̀ŋ kóŋ duk ləp
+          tr
+            td
+              | 春眠不覺曉
+              br
+              | 處處聞啼鳥
+              br
+              | 夜來風雨聲
+              br
+              | 花落知多少
+            td
+              | cxȷø̀n mı̀n pət kok xı́v
+              br
+              | ʒȷý ʒȷý mə̀n də̀ȷ nı́v
+              br
+              | ȷe lòȷ fùŋ ý sȷı̀ŋ
+              br
+              | xvà lok cȷı̀ tò sȷı́v
