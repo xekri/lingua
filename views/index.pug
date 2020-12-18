@@ -1,0 +1,55 @@
+html
+  head
+    script.
+      document.addEventListener("DOMContentLoaded", () => {
+        const [ta] = document.getElementsByTagName("textarea");
+        const [div] = document.getElementsByTagName("div");
+
+        ta.addEventListener("blur", () => {
+          window.location.href = `/?a=${encodeURIComponent(ta.value)}`;
+        })
+      });
+
+    style.
+      body {
+        display: flex;
+      }
+      textarea, div {
+        width: 50%;
+        height: 100%;
+        border: 1px solid;
+        padding: 1em;
+      }
+      textarea {
+        resize: none;
+        outline: none;
+      }
+      div {
+        display: inline-block;
+        box-sizing: border-box;
+        white-space: pre;
+        border-left: none;
+      }
+      .single {
+        border-bottom: 1px solid;
+      }
+
+  body
+    if a
+      textarea= a
+    else
+      textarea.
+        世界人權宣言　第一條
+        人人生而自由，在尊嚴和權利上一律平等。他們賦有理性和良心，並應以兄弟
+        關係的精神相對待。
+    div
+      for x in b
+        if Array.isArray(x)
+          if x.length == 1
+            span.single= x[0]
+          else
+            select
+              for y in x
+                option= y
+        else
+          |#{x}
