@@ -1,0 +1,30 @@
+head
+  script.
+    setInterval(() => {
+      const now = new Date()
+      const year = now.getFullYear()
+      const start = new Date(year, 0, 1)
+      const diff = now - start
+      const msPerDay =  1000 * 60 * 60 * 24
+      const day = diff / msPerDay
+      const precision = 5
+      document.querySelector("body").innerText =
+        `1${year}/${Math.round(day * 10 ** precision) / 10 ** precision }`
+
+    }, 100);
+
+  style.
+    html {
+      background-color: transparent;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      color: white;
+      font-family: monospace;
+      font-size: 144pt;
+      font-weight: lighter;
+      margin: 0 auto;
+    }
+body
