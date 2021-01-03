@@ -1,0 +1,198 @@
+extend /_layout.pug
+
+mixin conj(caption0, x, xs, y, ys)
+	-
+		y = y.replace(/i/g, "ı").replace(/ï/g, "i")
+		ys = ys.map(y_ => y_.replace(/i/g, "ı").replace(/ï/g, "i"))
+
+	table
+		caption= caption0
+		tbody
+			tr
+				th
+				th(colspan=2) current
+				th(colspan=2) proposed
+			tr
+				th 0
+				td(colspan=2)= x
+				td(colspan=2)= y
+			tr
+				th
+				th sg
+				th pl
+				th sg
+				th pl
+			for i in [0, 1, 2]
+				tr
+					th= i + 1
+					for zs, orth in [xs, ys]
+						for col in [i, i + 3]
+							td(style=[0, 5].includes(col) ? "background-color: #fff2" : "")= zs[col]
+
+mixin decl(caption, xs, ys)
+	- ys = ys.map(y_ => y_.replace(/i/g, "ı").replace(/ï/g, "i"))
+
+	table
+		caption= caption
+		tr
+			th
+			th(colspan=2) current
+			th(colspan=2) proposed
+		tr
+			th
+			th sg
+			th pl
+			th sg
+			th pl
+		for kase, i in "N A G D I L V".split(" ")
+			tr
+				th= kase
+				for zs, orth in [xs, ys]
+					for col in [i, i + 7]
+						td= zs[col]
+
+block head
+	- const title = "polish inflection with proposed orthography"
+	- const tags = ["draft"]
+
+block main
+	+section("orthography")
+		ul
+			li ch h → x
+			li ó → о̄
+			li ą → ǫ
+			li e (movable) → ĕ
+			li rz → rj
+			li l, ł → lj, l
+			li ń, ś, ź → nj, sj, zj
+			li ć → tj
+			li ci, ci(V) → tji, tj
+			li dzi, dzi(V) → dji, dj
+			li i(V) → j
+			li je → ė
+			li cz → ḳ, ṫ
+			li sz → ẋ, ṡ
+			li ż → ġ, ż
+			li y → ı
+			li ji → i
+
+	+section("conjugation")
+		+section("present")
+			+section("class 0")
+				+conj("want",
+					"chcieć", "chc-ę chce-sz chce chce-my chce-cie chc-ą".split(" "),
+					"xcėć", "xc-ę xce-ẋ xce xce-mi xce-tė xc-ą".split(" ")
+				)
+				+conj("can",
+					"móć", "mog-ę może-sz może może-my może-cie mog-ą".split(" "),
+					"mо̄tj", "mog-ę moġe-ẋ moġe moġe-mi moġe-tė mog-ǫ".split(" ")
+				)
+				+conj("take",
+					"brać", "bior-ę bierze-sz bierze bierze-my bierze-cie bior-ą".split(" "),
+					"bratj", "bjor-ę bėrė-ẋ bėrė bėrė-mi bėrė-tė bjor-ǫ".split(" ")
+				)
+				+conj("go on foot",
+					"iść", "id-ę idzie-sz idzie idzie-my idzie-cie id-ą".split(" "),
+					"istj", "id-ę idė-ẋ idė idė-mi idė-tė id-ǫ".split(" ")
+				)
+				+conj("carry",
+					"nieść", "nios-ę niesie-sz niesie niesie-my niesie-cie nios-ą".split(" "),
+					"nėstj", "njos-ę nėsė-ẋ nėsė nėsė-mi nėsė-tė njos-ǫ".split(" ")
+				)
+
+			+section("class 1")
+				+conj("like",
+					"lubić", "lubi-ę lubi-sz lubi lubi-my lubi-cie lubi-ą".split(" "),
+					"ljubïtj", "ljubï-ę ljubï-ẋ ljubï ljubï-mi ljubï-tė ljubï-ǫ".split(" ")
+				)
+				+conj("carry",
+					"nosić", "nosz-ę nosi-sz nosi nosi-my nosi-cie nosz-ą".split(" "),
+					"nosïtj", "noṡ-ę nosï-ẋ nosï nosï-mi nosï-tė noṡ-ǫ".split(" ")
+				)
+				+conj("fly",
+					"lecieć", "lec-ę leci-sz leci leci-my leci-cie lec-ą".split(" "),
+					"lėtėtj", "lėc-ę lėcï-ẋ lėcï lėcï-mi lėcï-tė lėc-ǫ".split(" ")
+				)
+				+conj("teach",
+					"uczyć", "ucz-ę uczy-sz uczy uczy-my uczy-cie ucz-ą".split(" "),
+					"uḳitj", "uḳ-ę uḳi-ẋ uḳi uḳi-mi uḳi-tė uḳ-ǫ".split(" ")
+				)
+				+conj("hear",
+					"słyszeć", "słysz-ę słyszy-sz słyszy słyszy-my słyszy-cie słysz-ą".split(" "),
+					"sliẋetj", "sliẋ-ę sliẋi-ẋ sliẋi sliẋi-my sliẋi-tė sliẋ-ǫ".split(" ")
+				)
+
+			+section("class 2")
+				+conj("wait",
+					"czekać", "czeka-m czeka-sz czeka czeka-my czeka-cie czeka-ją".split(" "),
+					"ḳekatj", "ḳeka-m ḳeka-ẋ ḳeka ḳeka-mi ḳeka-tė ḳeka-jǫ".split(" ")
+				)
+				+conj("have",
+					"mieć", "ma-m ma-sz ma ma-my ma-cie ma-ją".split(" "),
+					"mėtj", "ma-m ma-ẋ ma ma-mi ma-tė ma-jǫ".split(" ")
+				)
+
+			+section("class 3")
+				+conj("know how",
+					"umieć", "umie-m umie-sz umie umie-my umie-cie umie-ją".split(" "),
+					"umėtj", "umė-m umė-ẋ umė umė-mi umė-tė umė-jǫ".split(" ")
+				)
+
+			+conj("be (present)",
+				"być", "jeste-m jeste-ś jest jesteś-my jesteś-cie s-ą".split(" "),
+				"bitj", "ėste-m ėste-sj ėst ėstesj-mi ėstesj-tė s-ǫ".split(" ")
+			)
+
+			+conj("be (future)",
+				"", "będ-ę będzie-sz będzie będzie-my będzie-cie będ-ą".split(" "),
+				"", "będ-ę będė-ẋ będė będė-mi będė-tė będ-ǫ".split(" ")
+			)
+
+	+section("declension")
+		+decl("store, masculine inanimate hard",
+			"sklep =N sklep-u sklep-owi sklep-em sklep-ie =L sklep-y =N sklep-ów sklep-om sklep-ami sklep-ach sklep-y".split(" "),
+			"sklep =N sklep-u sklep-owï sklep-em sklep-ė =L sklep-i =N sklep-о̄w sklep-om sklep-amï sklep-ax sklep-i".split(" ")
+		)
+		+decl("store, masculine inanimate soft",
+			"hotel =N hotel-u hotel-owi hotel-em hotel-u =L hotel-e =N hotel-i hotel-om hotel-ami hotel-ach hotel-e".split(" "),
+			"xotelj =N xotelj-u xotelj-owï xotelj-em xotelj-u =L xotelj-e =N xotelj-i xotelj-om xotelj-ami xotelj-ax xotelj-e".split(" ")
+		)
+
+		+decl("student, masculine personal hard",
+			"student =G student-a student-owi student-em studenc-ie =L studenc-i =G student-ów student-om student-ami student-ach studenc-i".split(" "),
+			"student =G student-a student-owï student-em student-ė =L student-ï =G student-о̄w student-om student-ami student-ach student-ï".split(" ")
+		)
+		+decl("doctor, masculine personal soft",
+			"lekarz =G lekarz-a lekarz-owi lekarz-em lekarz-u =L lekarz-e =G lekarz-y lekarz-om lekarz-ami lekarz-ach lekarz-e".split(" "),
+			"lėkarj =G lėkarj-a lėkarj-owi lėkarj-em lėkarj-u =L lėkarj-e =G lėkarj-i lėkarj-om lėkarj-ami lėkarj-ax lėkarj-e".split(" ")
+		)
+
+		+decl("day, masculine inanimate",
+			"dzień =N dni-a dni-owi dni-em dni-u =L dni-e =N dni dni-om dni-ami dni-ach dni-e".split(" "),
+			"djĕnj =N dnj-a dni-owï dnj-em dnj-u =L dnj-e =N dnj-i dnj-om dnj-ami dnj-ach dnj-e".split(" ")
+		)
+
+		+decl("woman, feminine hard",
+			"kobiet-a kobiet-ę kobiet-y kobiec-ie kobiet-ą kobiec-ie kobiet-o kobiet-y =N kobiet kobiet-om kobiet-ami kobiet-ach kobiet-y".split(" "),
+			"kobėt-a kobėt-ę kobėt-i kobėt-ė kobėt-ǫ kobiet-ė kobėt-o kobėt-i =N kobėt kobėt-om kobėt-amï kobėt-ax kobėt-i".split(" ")
+		)
+
+		+decl("street, feminine soft",
+			"ulic-a ulic-ę ulic-y ulic-y ulic-ą ulic-i ulic-o ulic-e =N ulic ulic-om ulic-ami ulic-ach ulic-e".split(" "),
+			"ulïc-a ulïc-ę ulijc-i ulïc-i ulïc-ǫ ulïc-ï ulïc-o ulïc-e =N ulïc ulïc-om ulïc-amï ulïc-ax ulïc-e".split(" ")
+		)
+
+		+decl("town, neuter hard",
+			"miast-o =N miast-a miast-u miast-em mieśc-ie =N miast-a =N miast miast-om miast-ami miast-ach =N".split(" "),
+			"mjast-o =N mjast-a mjast-u mjast-em mjesjt-je =N mjast-a =N mjast mjast-om mjast-amï mjast-ax =N".split(" ")
+		)
+
+		+decl("zdanie, neuter soft",
+			"zdani-e =N zdani-a zdani-u zdani-em zdani-u =N zdani-a =N zdań zdani-om zdani-ami zdani-ach =N".split(" "),
+			"zdanj-e =N zdanj-a zdanj-u zdanj-em zdanj-u =N zdanj-a =N zdanj zdanj-om zdanj-ami zdanj-ach =N".split(" ")
+		)
+
+	+section("reference")
+		ul
+			li: a(href="http://www.skwierzyna.net/polishgrammar.pdf") Polish Grammar in a Nutshell
+
