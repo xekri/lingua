@@ -1,18 +1,21 @@
 head
   script.
-    setInterval(() => {
-      const now = new Date()
-      const year = now.getFullYear()
-      const start = new Date(year, 0, 1)
-      const diff = now - start
-      const msPerDay =  1000 * 60 * 60 * 24
-      const day = diff / msPerDay
-      const precision = 5
-      document.querySelector("body").innerText =
-        `1${year}/${Math.round(day * 10 ** precision) / 10 ** precision }`
+    document.addEventListener("DOMContentLoaded", () => {
+      setInterval(() => {
+        const now = new Date()
+        const year = now.getFullYear()
+        const start = new Date(year, 0, 1)
+        const diff = now - start
+        const msPerDay =  1000 * 60 * 60 * 24
+        const day = diff / msPerDay
+        const precision = 5
 
-    }, 100);
+        document.querySelector("body").innerText =`1${year}/${Math.round(day * 10 ** precision) / 10 ** precision}`
+      }, 100);
+    })
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
   style.
     html {
       background-color: transparent;
@@ -21,10 +24,11 @@ head
       margin: 0;
       padding: 0;
       background-color: transparent;
-      color: white;
-      font-family: monospace;
+      //color: white;
+      font-family: "Inconsolata", monospace;
       font-size: 144pt;
-      font-weight: lighter;
+      font-weight: 200;
       margin: 0 auto;
     }
+
 body
