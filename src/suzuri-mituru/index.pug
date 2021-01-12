@@ -10,7 +10,7 @@ mixin img(src, width)
 block head
 	-
 		const title = "suzuri and mituru"
-		const tags = ["language=english", "draft"]
+		const tags = ["language=english|japanese"]
 
 		const suzuri = {}
 		const mituru = {}
@@ -42,7 +42,9 @@ block main
 			tr
 				th picture
 				td(style="text-align: center;")
-					+img("/character/suzuri/images/2018-12-04.jpg", "320px")
+					//+img("/character/suzuri/images/2018-12-04.jpg", "320px")
+					div(style="width: 320px;")
+						<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/57X83srnGH">https://t.co/57X83srnGH</a><br>素鉄（<a href="https://t.co/u94AW2qNF8">https://t.co/u94AW2qNF8</a>）先生に納品頂いた硯君、めっちゃ好い</p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1344210173661835265?ref_src=twsrc%5Etfw">December 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				td(style="text-align: center;")
 					div(style="width: 320px;")
 						<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> 盈君 <a href="https://t.co/BbstJTFwK5">https://t.co/BbstJTFwK5</a> <a href="https://t.co/K5B93wGDQq">pic.twitter.com/K5B93wGDQq</a></p>&mdash; suzurı ıs my orıgınal character. (@smiqy) <a href="https://twitter.com/smiqy/status/1314648291636703232?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -51,7 +53,7 @@ block main
 				th name
 				td 硯玄
 					ul
-						li mandarin: ŋiàn hyán
+						li mandarin: ŋiàn xyán
 						li japanese: suzuri faru
 				td 盈冬
 					ul
@@ -79,7 +81,7 @@ block main
 				td black □
 			tr
 				th location
-				td(colspan=2) federal republic of east asia / state east akitu / prefecture musasi
+				td(colspan=2) japan / prefecture musasi
 			tr
 				th occupation
 				td master's student (computer science)
@@ -171,11 +173,14 @@ block main
 
 	+section("the world where they live")
 		ul
-			li federal republic of east asia (FREA) in their world covers japan except hokkaidou, south korea, taiwan, and hong-kong in ours
-			li though the official language of FREA is mandarin, their native one is japanese, which is mainly used in state akitu.
-			li in FREA, marijuana and LSD are legalized
-			li in their world, cellular agriculture is progressive. in FREA, though animal based foods are prohibited, dietary culture is not substantially different from ours.
-			li in FREA, one has no family name.
+			li hokkaidou is independent of japan.
+			li hongkong is independent of china.
+			li north and south korea reunited into korea.
+			li japan, taiwan, korea, and other east and southeast asian nations except china forms EAU (east asian union, 東亞聯合), which is rather pro-american.
+			li in nations of EAU, marijuana and LSD are legalized.
+			li in japan, people have no family name.
+			li mandarin spoken in china and taiwan is similar to old national pronunciation in our world.
+			li cellular agriculture is advanced., though animal based foods are prohibited in some nations, dietary culture is not substantially different from ours.
 
 	+section("interaction")
 		ul
@@ -200,7 +205,6 @@ block main
 							li 髪: 右目隱れ, 明るい灰色
 							li 體毛は平均的な量だが自分で薄く調へる
 							li 性器: 下反り, 勃起時半剥け, 210mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します)
-								ul: li 性器ピアス裝着時は (物理的に難しいので) 半剥けでなくとも構ひません
 							li 健康的, 引き締まった筋肉質, 色白
 					li mituru
 						ul
@@ -215,7 +219,7 @@ block main
 			ul
 				li 檢索性を阻碍する伏せ字や暗號の使用
 				li 特定の屬性の人間 (例へば女性, 非日本國籍者, 18歳未滿) に閲覽を禁止する等の差別行爲
-				li 刑法175條の恣意的な運用に遵ふ性器の自己檢閲
+				li 性器の自己檢閲
 
 	+section("art")
 		.tile
