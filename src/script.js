@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ul.append(liParent);
 
     const a = document.createElement("a");
-    a.setAttribute("href", "#");
+    a.setAttribute("href", "");
     a.append(document.createTextNode("/"));
     const li = document.createElement("li");
     li.append(a);
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const title = subsection.getAttribute("id");
       const a = document.createElement("a");
       a.setAttribute("href", "#" + encodeURIComponent(title));
-      a.setAttribute("class", "undot");
       a.append(document.createTextNode(title));
       const li = document.createElement("li");
       li.append(a);
@@ -49,10 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     submenu.remove();
 
   // date
-  const dateToSc = (await import("/works/calendar/calendar.js")).default;
   setInterval(() => {
-    const [year, isLeap, yearday, month, monthday, week, weekday, dayName, daytime] = dateToSc(new Date());
-    document.getElementById("datetime").innerText =
-      `${year.toString()}/${yearday.toString()}${daytime.toString().slice(1, 7)}`
+    document.getElementById("datetime").innerText = dateString(...now());
   }, 100);
 });

@@ -1,22 +1,18 @@
 head
+  script(src="date.js")
   script.
     document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const base = params.get("b") || 10;
+      const precision = params.get("p") || (base == 16 ? 4 : 5);
       setInterval(() => {
-        const now = new Date()
-        const year = now.getFullYear()
-        const start = new Date(year, 0, 1)
-        const diff = now - start
-        const msPerDay =  1000 * 60 * 60 * 24
-        const day = diff / msPerDay
-        const precision = 5
-
-        document.querySelector("body").innerText =`1${year}/${Math.round(day * 10 ** precision) / 10 ** precision}`
+        document.querySelector("body").innerText = dateString(...now(), base, precision)
       }, 100);
     })
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
   style.
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap');
+
     html {
       background-color: transparent;
     }
@@ -24,10 +20,8 @@ head
       margin: 0;
       padding: 0;
       background-color: transparent;
-      color: white;
-      font-family: "Inconsolata", monospace;
+      font-family: "Source Sans Pro";
       font-size: 144pt;
-      font-weight: 200;
       margin: 0 auto;
     }
 

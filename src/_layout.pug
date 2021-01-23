@@ -5,7 +5,7 @@ include /_mixins.pug
 -
   const root = "https://sumi.space"
   const author =
-    { id: "ſumı"
+    { id: "sumi"
     , name:
       { han: ["墨", "幽"]
       , ja: ["sumi|mok", "kura|iu"]
@@ -14,17 +14,6 @@ include /_mixins.pug
     , twitter: "smiqy"
     , github: "xekri"
     }
-
-  const toYearDay = date => {
-    const y = date.getFullYear()
-    const d = (
-      new Date(y, date.getMonth(), date.getDate()).getTime()
-      - new Date(y, 0, 1).getTime()
-    ) / (1000 * 60 * 60 * 24)
-    return [y, d]
-  }
-
-  const now = toYearDay(new Date()).join("/")
 
 html
   head
@@ -36,6 +25,7 @@ html
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
     link(href="/style.css", rel="stylesheet")
+    script(src="/misc/date/date.js")
     script(src="/script.js")
 
     // local files
@@ -77,13 +67,13 @@ html
           #datetime
           +div("menu")
             ul
-              li: a.undot(href="/") /
-              li: a.undot(href="/author") auþor
-              li: a.undot(href="/character") character
-              li: a.undot(href="/fav") favorite
+              li: a(href="/") /
+              li: a(href="/author") auþor
+              li: a(href="/character") character
+              li: a(href="/fav") favorite
               // li: a(href="/thought") thought
-              li: a.undot(href="/work") work
-              li: a.undot(href="/misc") misc
+              li: a(href="/work") work
+              li: a(href="/misc") misc
 
             +div("submenu")
 
@@ -98,7 +88,7 @@ html
 
     main
       article
-        p.undot ⚠ þis website {use google analytics, not be mobile}.
+        p ⚠ þis website {use google analytics, not be mobile}.
 
         +section(title, tags)
           block main

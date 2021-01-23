@@ -9,7 +9,7 @@ mixin section(title, tags)
 				for tag in tags
 					.tag= tag
 		if title
-			a(href="#" + title): h1.undot= title
+			a(href="#" + title): h1= title
 		block
 
 mixin tds(xs)

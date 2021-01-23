@@ -1,6 +1,9 @@
 extend /_layout.pug
 
+block head
+	- const title = "miscellaneous"
+
 block main
 	ul
 		li: a(href="alphabet") unicode alphabet converter
-		li: a(href="date") 配信畫面内表示用時計
+		li: a(href="date?b=16&p=4") 配信畫面內表示用時計

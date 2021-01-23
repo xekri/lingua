@@ -1,13 +1,3 @@
-@font-face
-  font-family: 'Noto Sans TC'
-  unicode-range: U+2E80-2FD5, U+3190-319F, U+3400-4DBF, U+4E00-9FCC, U+F900-FAAD
-
-@font-face
-  font-family: "tri"
-  src: url(/work/font/tri.woff2) format('woff2')
-  font-style: normal
-  font-weight: normal
-
 $space: 32px
 $navWidth: 240px
 $thresh: 1080px
@@ -15,6 +5,14 @@ $mobileSwitchHeight: 56pt
 $color: #D0D0D0
 $colorTr: #D0D0D088
 $bgcolor: #000 //#202020
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
+
+@font-face
+  font-family: "tri"
+  src: url(/work/font/tri.woff2) format('woff2')
+  font-style: normal
+  font-weight: normal
 
 *
   box-sizing: border-box
@@ -47,11 +45,9 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Noto Sans", "Noto Sans TC", sans-serif
-  font-stretch: extra-condensed
+  font-family: "Source Sans Pro", "Noto Sans TC", sans-serif
   font-weight: 100
 
-  font-size: 12px
   @media screen and (max-device-width:$thresh)
     font-size: 24px
 
@@ -115,7 +111,7 @@ nav
 
     #datetime
       text-align: center
-      font-family: "Noto Sans Mono", monospace
+      font-family: "Source Code Pro", monospace
       padding: 0
       margin: 0
       margin-bottom: $space

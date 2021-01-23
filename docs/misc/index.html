@@ -15,12 +15,13 @@
       
     </style>
     <link href="/style.css" rel="stylesheet">
+    <script src="/misc/date/date.js"></script>
     <script src="/script.js"></script>
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/icon.ico">
-    <title>ſumı / undefined</title>
+    <title>sumi / miscellaneous</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -30,7 +31,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="ſumı / undefined">
+    <meta name="twitter:title" content="sumi / miscellaneous">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
     <meta name="twitter:card" content="summary">
@@ -45,13 +46,13 @@
           <div id="datetime"></div>
           <div class="my-div" id="menu">
             <ul>
-              <li><a class="undot" href="/">/</a></li>
-              <li><a class="undot" href="/author">auþor</a></li>
-              <li><a class="undot" href="/character">character</a></li>
-              <li><a class="undot" href="/fav">favorite</a></li>
+              <li><a href="/">/</a></li>
+              <li><a href="/author">auþor</a></li>
+              <li><a href="/character">character</a></li>
+              <li><a href="/fav">favorite</a></li>
               <!-- li: a(href="/thought") thought-->
-              <li><a class="undot" href="/work">work</a></li>
-              <li><a class="undot" href="/misc">misc</a></li>
+              <li><a href="/work">work</a></li>
+              <li><a href="/misc">misc</a></li>
             </ul>
             <div class="my-div" id="submenu">
             </div>
@@ -62,11 +63,12 @@
     </div>
     <main>
       <article>
-        <p class="undot">⚠ þis website {use google analytics, not be mobile}.</p>
-        <section>
+        <p>⚠ þis website {use google analytics, not be mobile}.</p>
+        <section id="miscellaneous"><a href="#miscellaneous">
+            <h1>miscellaneous</h1></a>
           <ul>
             <li><a href="alphabet">unicode alphabet converter</a></li>
-            <li><a href="date">配信畫面内表示用時計</a></li>
+            <li><a href="date?b=16&amp;p=4">配信畫面內表示用時計</a></li>
           </ul>
         </section>
         <!--+section("")include _discus.pug
