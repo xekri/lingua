@@ -9,7 +9,10 @@ mixin section(title, tags)
 				for tag in tags
 					.tag= tag
 		if title
-			a(href="#" + title): h1= title
+			h1
+				a(href="#" + title) #
+				| &#20;
+				| #{title}
 		block
 
 mixin tds(xs)
