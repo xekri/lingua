@@ -17,45 +17,45 @@ const convert = (s, mode) =>
     [/ए|\u0947/g, "e"],
     [/ओ|\u094B/g, "o"],
 
-    [/ऐ|\u0948/g, ["aı", "E", "ai"]],
+    [/ऐ|\u0948/g, ["ai", "E", "ai"]],
     [/औ|\u094C/g, ["au", "O", "au"]],
 
     [/(?<=[कचटतपखछठथफगजडदबघझढधभङञणनमशषसहयरलव])(?![\u094DiīIeēEaāAoōOuūUr̄Rl̄L])/g, "a"],
 
-    [/क/g, "c"],
-    [/च/g, ["c\u0307", "C", "cz"]],
-    [/ट/g, ["t\u0307", "T", "tz"]],
+    [/क/g, "k"],
+    [/च/g, ["ḳ", "K", "kz"]],
+    [/ट/g, ["ṫ", "T", "tz"]],
     [/त/g, "t"],
     [/प/g, "p"],
 
-    [/ख/g, ["c\u0315", "ch", "ch"]],
-    [/छ/g, ["c\u0307\u0315", "Ch", "czh"]],
-    [/ठ/g, ["t\u0307\u0315", "Th", "tzh"]],
-    [/थ/g, ["t\u0315", "th", "th"]],
-    [/फ/g, ["p\u0315", "ph", "ph"]],
+    [/ख/g, ["kh", "kh", "kh"]],
+    [/छ/g, ["ḳh", "Kh", "kzh"]],
+    [/ठ/g, ["ṫh", "Th", "tzh"]],
+    [/थ/g, ["th", "th", "th"]],
+    [/फ/g, ["ph", "ph", "ph"]],
 
-    [/ग/g, "g"],
-    [/ज/g, ["g\u0307", "G", "gz"]],
-    [/ड/g, ["d\u0307", "D", "dz"]],
+    [/ग/g, "c"],
+    [/ज/g, ["ċ", "C", "cz"]],
+    [/ड/g, ["ḍ", "D", "dz"]],
     [/द/g, "d"],
     [/ब/g, "b"],
 
-    [/घ/g, ["g\u0315", "gh", "gh"]],
-    [/झ/g, ["g\u0307\u0315", "Gh", "gzh"]],
-    [/ढ/g, ["d\u0307\u0315", "Dh", "dzh"]],
-    [/ध/g, ["d\u0315", "dh", "dh"]],
-    [/भ/g, ["b\u0315", "bh", "bh"]],
+    [/घ/g, ["ch", "ch", "ch"]],
+    [/झ/g, ["ċh", "Ch", "czh"]],
+    [/ढ/g, ["ḍh", "Dh", "dzh"]],
+    [/ध/g, ["dh", "dh", "dh"]],
+    [/भ/g, ["bh", "bh", "bh"]],
 
-    [/ङ/g, verbose ? ["ŋ", "k", "k"] : "n"],
-    [/ञ/g, verbose ? ["ŋ\u0307", "K", "kz"] : "n"],
-    [/ण/g, ["n\u0307", "N", "nz"]],
+    [/ङ/g, verbose ? ["g", "g", "g"] : "n"],
+    [/ञ/g, verbose ? ["ġ", "G", "gz"] : "n"],
+    [/ण/g, ["ṅ", "N", "nz"]],
     [/न/g, "n"],
     [/म/g, "m"],
     [/\u0902/g, "q"], // anusvaara ं
 
     [/\u0903/g, "x"], // visarga ः
-    [/श/g, ["x\u0307", "X", "xz"]],
-    [/ष/g, ["s\u0307", "S", "sz"]],
+    [/श/g, ["ẋ", "X", "xz"]],
+    [/ष/g, ["ṡ", "S", "sz"]],
     [/स/g, "s"],
 
     [/ह/g, "h"],
@@ -79,13 +79,14 @@ const convert = (s, mode) =>
 
     [/\u094D/g, ""],
 
-    [/y/g, mode === 0 ? "r\u0306" : "y"],
-    [/w/g, mode === 0 ? "l\u0306" : "w"],
-    [/(?<=[iīIeēEaāAoōOuūUr̄Rl̄L][rl])\u0306(?=[iīIeēEaāAoōOuūUr̄Rl̄L])/g, ""],
-    [/(?<![a-zA-Zīēāōūr̄l̄\u0306\u0307\u0315][rl])\u0306(?=[iīIeēEaāAoōOuūUr̄Rl̄L])/g, ""],
+    [/y/g, mode === 0 ? "ṙ" : "y"],
+    [/w/g, mode === 0 ? "ḷ" : "w"],
+    [/(?<=[iīIeēEaāAoōOuūUṙRḷL])ṙ(?=[iīIeēEaāAoōOuūUṙRḷL])/g, "r"],
+    [/(?<=[iīIeēEaāAoōOuūUṙRḷL])ḷ(?=[iīIeēEaāAoōOuūUṙRḷL])/g, "l"],
+    [/(?<![a-zA-Zīēāōūṙḷḳċġẋṫḍṅṡ])ṙ(?=[iīIeēEaāAoōOuūUr̄Rl̄L])/g, "r"],
+    [/(?<![a-zA-Zīēāōūṙḷḳċġẋṫḍṅṡ])ḷ(?=[iīIeēEaāAoōOuūUr̄Rl̄L])/g, "l"],
 
-    [/i/g, mode === 0 ? "ı" : "i"],
-    [/j/g, mode === 0 ? "ȷ" : "j"],
+    [/(.)z\1z/g, "$1$1z"],
 
     [/\u0930/g, "\u0307"], // nuktaa ़
     [/।/g, ","],
@@ -93,8 +94,8 @@ const convert = (s, mode) =>
     [/॰/g, "'"],
 
   ]
-  .map(([x, y]) =>
-    [x, (Array.isArray(y) ? y : [y, y, y])[mode]]
-  )
-  .reduce((acc, [x, y]) => acc.replace(x, y), s.normalize("NFD"))
-  .normalize("NFC")
+    .map(([x, y]) =>
+      [x, (Array.isArray(y) ? y : [y, y, y])[mode]]
+    )
+    .reduce((acc, [x, y]) => acc.replace(x, y), s.normalize("NFD"))
+    .normalize("NFC")
