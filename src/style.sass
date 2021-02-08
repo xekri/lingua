@@ -8,6 +8,17 @@ $bgcolor: #000
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
 
 @font-face
+  src: local('YuGothic')
+  font-family: 'YuGothic'
+  font-weight: lighter
+  unicode-range: U+1B001, U+30A8
+
+@font-face
+  font-family: "Ametsuchi Gothic"
+  src: url(/amego.ttf) format('truetype')
+  unicode-range: U+1B001, U+30A8
+
+@font-face
   font-family: "tri"
   src: url(/work/font/tri.woff2) format('woff2')
   font-style: normal
@@ -44,7 +55,7 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Source Sans Pro", "Noto Sans TC", sans-serif
+  font-family: "Source Sans Pro", "Noto Sans TC", "Meiryo", "Ametsuchi Gothic", sans-serif
   font-weight: 100
 
   @media screen and (max-device-width:$thresh)
@@ -177,7 +188,7 @@ figure
 a
   color: $color
   &:link
-    border-width: 1px
+    border-width: 1.5px
     // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
   &:visited
     // text-shadow: none
@@ -264,3 +275,8 @@ details, summary
 
 td
   font-size: inherit
+
+ruby
+  font-size: inherit
+  ruby-align: center
+  margin-left: -3px

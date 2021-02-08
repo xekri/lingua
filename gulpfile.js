@@ -9,13 +9,14 @@ const browserSync = require("browser-sync");
 const del = require("del");
 
 const paths =
-  { src: "src"
+{
+  src: "src"
   , dst: "docs"
-  };
+};
 
 gulp.task("browser-sync", done => {
   browserSync({
-    server: {baseDir: paths.dst}
+    server: { baseDir: paths.dst }
   });
   gulp.watch(`${paths.src}/**/*.*`, gulp.task("reload"));
   done();
@@ -38,8 +39,9 @@ gulp.task("pug", done => {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(pug(
-      { pretty: true
-      , basedir: paths.src
+      {
+        pretty: true
+        , basedir: paths.src
       }
     ))
     .pipe(gulp.dest(paths.dst))
@@ -48,14 +50,14 @@ gulp.task("pug", done => {
 
 gulp.task('pug', done => {
   gulp.src(
-    [ `${paths.src}/**/*.pug`
-    , `!${paths.src}/**/_*.pug`
+    [`${paths.src}/**/*.pug`
+      , `!${paths.src}/**/_*.pug`
     ]
   )
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
-    .pipe(pug({pretty: true, basedir: paths.src}))
+    .pipe(pug({ pretty: true, basedir: paths.src }))
     .pipe(gulp.dest(paths.dst));
   done();
 });
@@ -69,12 +71,12 @@ gulp.task('js', done => {
 
 gulp.task("other", done => {
   gulp.src(
-      [ `${paths.src}/**/*`
+    [`${paths.src}/**/*`
       , `!${paths.src}/**/*.pug`
       , `!${paths.src}/**/*.sass`
       , `!${paths.src}/**/*.js`
-      ]
-    )
+    ]
+  )
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
@@ -92,7 +94,7 @@ gulp.task('watch', done => {
 });
 
 gulp.task('reload', done => {
-  browserSync({server: {baseDir: paths.dst}});
+  browserSync({ server: { baseDir: paths.dst } });
   done();
 });
 
@@ -102,5 +104,5 @@ gulp.task('clean', done => {
 });
 
 gulp.task('default',
-  gulp.parallel('pug', 'sass', 'js', 'other', 'watch', 'reload', done => {done();})
+  gulp.parallel('pug', 'sass', 'js', 'other', 'watch', 'reload', done => { done(); })
 );

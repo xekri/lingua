@@ -1,0 +1,22 @@
+extend /_layout.pug
+
+block head
+	- const title = "proto slavic"
+
+block main
+	table
+		+trs([
+			["long" , "i", "y", "u", "ě", "a"],
+			["nasal", "" , "" , "" , "ę", "ę"],
+			["short", "ĭ", "" , "ŭ", "e", "o"],
+		])
+
+
+	table
+		+trs([
+			["p", "b", "" , "v", "m",],
+			["t", "d", "s", "z", "n", "r", "l"],
+			["k", "g", "h"],
+			["kq", "gq", "xq", "hq"],
+			["kc", "gc", "xc"],
+		])

@@ -2,6 +2,11 @@ mixin div(title)
 	.my-div(id=title)
 		block
 
+mixin ruby(main, above)
+	ruby
+		| #{main}
+		rt= above
+
 mixin section(title, tags)
 	section(id=title)
 		if tags
@@ -11,7 +16,7 @@ mixin section(title, tags)
 		if title
 			h1
 				a(href="#" + title) #
-				| &#20;
+				| #{" "}
 				| #{title}
 		block
 
