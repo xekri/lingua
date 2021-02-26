@@ -1,0 +1,56 @@
+extend /_layout.pug
+
+
+block head
+	- const title = "simplified japanese language"
+
+block main
+	h1= title
+
+	+section("phoneme and grapheme")
+		table
+			+trs([
+				["x", "k", "s", "t", "n", "p", "m", "j", "l", "v"],
+				["" , "c", "z", "d", "" , "b", "" , "", "", ""]
+			])
+
+		table
+			+trs([
+				["a", "i", "u", "e", "o"],
+			])
+
+	+section("grammar")
+		+section("noun")
+			table
+				+thTrs([
+					["topic", "pa"],
+					["subject", "ca"],
+					["direct object", "vo"],
+					["indirect object", "ni"],
+					["posessor", "no"],
+					["verb", "-tal"],
+				])
+
+		+section("verb")
+			table
+				+thTrs([
+					["negative", "-nas"],
+					["imperative", "-ale"],
+					["attributive", "-alu"],
+				])
+
+		+section("vocabulary")
+			table
+				tr
+					+ths(["en", "ja", "simp. ja"])
+				+trs([
+					["eat", "食ふ くふ", "kup"],
+					["go", "往く ゆく", "juk"],
+					["come", "來る くる", "kul"],
+					["read", "讀む よむ", "jom"],
+					["write", "書く かく", "kak"],
+				])
+
+			+section("chinese character")
+
+
