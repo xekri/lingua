@@ -1,83 +1,115 @@
 extend /_layout.pug
 
 block head
-	- const title = "englısh simplified (pseudo-english)";
+	- const title = "simplified english";
 	- const tags = ["language=english", "draft"]
 
 block main
 	+section("orthography")
-		table
-			tr
-				th standard
-				th simplified
-				th
-			tr
-				td i, j
-				td ı, ȷ
-				td remove dots.
-			tr
-				td th
-				td þ
-				td if not from greek θ
-			tr
-				td wh
-				td hw
-				td in interrogatives
+		li optionally use "þ" instead of "th"
+		li do not capitalize the first person singular pronoun "i"
 
 	+section("grammar")
 		table
 			tr
+				th
 				th standard
 				th simplified
-				th
 			tr
-				td <i>noun</i>s
-				td (many | more than one) <i>noun</i>
-				td no plural form. just add quantifiers
+				th no article
+				td a(n), the
+				td ∅, ∅
 			tr
-				td <i>noun</i>, an <i>noun</i>, the <i>noun</i>
-				td <i>noun</i>, <i>noun</i>, <i>noun</i>
-				td no article
-			tr
-				td <i>adj</i> <i>noun</i>
-				td <i>noun</i> <i>adj</i>
-				td
-			tr
-			tr
+				th no gender
 				td: ul
-					li go
-					li goes
-					li went
-					li have gone
-					li be going
-					li will have gone
+					li he
+					li she
+					li it
+					li "they" (singular)
+					li "they" (plural)
 				td: ul
-					li go
-					li go
-					li did go
-					li done go
-					li doing go
-					li will done go
-				td no declension (optional)
+					li he
+					li he
+					li it
+					li he
+					li þey
 			tr
-				td do <i>noun</i> <i>verb</i> ?
-				td (whether) <i>verb</i> <i>noun</i> ?
-				td
-			tr
-				td <i>noun</i> do not <i>verb</i>
-				td <i>noun</i> not <i>verb</i>
-				td
-			tr
-				td you, he, she, it
-				td þou, he, he, he
-				td no gender
-			tr
+				th no verb agreement
 				td: ul
-					li i, me, my, mine
-					li you, you, your, yours
-					li he, him, his, his
+					li i am
+					li we are
+					li you are
+					li he is
+					li they were
+					li he has
 				td: ul
-					li (se) i, (þone) i, of i, thing of i
-					li (se) þou, (þone) þou, of þou, thing of þou
-					li (se) he, (þone) he, of he, thing of he
-				td no declension.
+					li i be
+					li we be
+					li you be
+					li he be
+					li they was
+					li he have
+			tr
+				th no inflection
+				td: ul
+					li i like him
+					li he likes me
+					li it is my book
+					li it is mine
+				td: ul
+					li i like he
+					li he like i
+					li it be book of me
+					li it be of me
+			tr
+				th second person singular
+				td: ul
+					li "you" (singular)
+					li "you" (plural)
+				td: ul
+					li þou
+					li you
+			tr
+				th question without "do"
+				td do you know him?
+				td know you he? | wheþer you know he?
+			tr
+				th negation without "do"
+				td i do not know him
+				td i not know he | i know he not
+			tr
+				th multiple auxiliary verbs
+				td: ul
+					li will be able to
+					li may have to
+				td: ul
+					li will can
+					li may must
+			tr
+				th part of speech of "who"
+				td someone who
+				td who
+			tr
+				th meaning of "must not"
+				td is not possible to
+				td is not necessary to
+			tr
+				th usage of "shall"
+				td: ul
+					li shall
+					li should
+				td: ul
+					li will | must
+					li shall
+			tr
+				th regular ordinal numeral (optional)
+				td zeroth, first, second, ...
+				td zeroþ, oneþ, twoþ, ...
+			tr
+				th no conjugation (optional)
+				td: ul
+					li sang
+					li sung
+				td: ul
+					li did sing
+					li done sing

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const ul = document.createElement("ul");
 
     const aParent = document.createElement("a");
-    aParent.setAttribute("href", "../");
+    aParent.setAttribute("href", "..");
     aParent.append(document.createTextNode("../"));
     const liParent = document.createElement("li");
     liParent.append(aParent);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const a = document.createElement("a");
     a.setAttribute("href", "");
-    a.append(document.createTextNode("/"));
+    a.append(document.createTextNode("./"));
     const li = document.createElement("li");
     li.append(a);
     ul.append(li);
