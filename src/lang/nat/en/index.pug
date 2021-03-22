@@ -1,13 +1,14 @@
 extend /_layout.pug
 
 block head
-	- const title = "english-12020";
+	- const title = "english-12021";
 	- const tags = ["language=english", "draft"]
 
 block main
 	+section("orthography")
 		li optionally use "þ" instead of "th"
 		li do not capitalize the first person singular pronoun "i"
+		li do not capitalize any sentence
 
 	+section("grammar")
 		table
@@ -25,8 +26,8 @@ block main
 					li he
 					li she
 					li it
-					li "they" (singular)
-					li "they" (plural)
+					li they (sg.)
+					li they (pl.)
 				td: ul
 					li he
 					li he
@@ -34,18 +35,26 @@ block main
 					li he
 					li þey
 			tr
+				th second person pronouns
+				td: ul
+					li you (sg.)
+					li you (pl.)
+				td: ul
+					li þou
+					li ye
+			tr
 				th no verb agreement
 				td: ul
 					li i am
 					li we are
-					li you are
+					li you (sg.) are
 					li he is
 					li they were
 					li he has
 				td: ul
 					li i be
 					li we be
-					li you be
+					li þou be
 					li he be
 					li they was
 					li he have
@@ -59,16 +68,8 @@ block main
 				td: ul
 					li i like he
 					li he like i
-					li it be book of me
-					li it be of me
-			tr
-				th second person singular
-				td: ul
-					li "you" (singular)
-					li "you" (plural)
-				td: ul
-					li þou
-					li you
+					li it be book of i
+					li it be of i
 			tr
 				th question without "do"
 				td do you know him?
@@ -91,8 +92,8 @@ block main
 				td who
 			tr
 				th meaning of "must not"
-				td is not possible to
-				td is not necessary to
+				td not possible
+				td not necessary
 			tr
 				th usage of "shall"
 				td: ul
