@@ -188,9 +188,10 @@ figure
 
 a
   color: $color
+  text-decoration-color: #FFF4
+  text-decoration-thickness: 4px
   &:link
-    border-width: 1.5px
-    // text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
+    //text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
   &:visited
     // text-shadow: none
   &:hover
@@ -281,3 +282,9 @@ ruby
   font-size: inherit
   ruby-align: center
   margin-left: -3px
+
+#logo svg
+  stroke: white
+  stroke-dasharray: 700px
+  stroke-dashoffset: 700px
+  animation: draw 2s linear infinite

@@ -59,13 +59,13 @@ html
         #nav-in
           div#logo
             a(href="/")
-              //img(src="/images/sumi.png")
+              img(src="/images/sumi.svg", width="50%")
           #datetime
           +div("menu")
             ul
               li: a(href="/") /
               li: a(href="/author") auþor
-              li: a(href="/character") character
+              li: a(href="/suzuri-mituru") suzuri & mituru
               li: a(href="/fav") favorite
               // li: a(href="/thought") thought
               li: a(href="/work") work
@@ -84,7 +84,7 @@ html
 
     main
       article
-        p ⚠ þis website {uses google analytics, is not mobile}.
+        p ⚠ þis website {use google analytics, is not mobile-friendly}.
 
         +section(title, tags)
           block main
