@@ -118,7 +118,7 @@ const charToPaths = {
   ],
   // u: [[pos.bl, pos.cl, pos.bc, pos.br, pos.t]],
   u: [
-    [pos.cl, pos.bl, pos.br, pos.t]
+    [pos.bl, pos.cl, pos.bc, pos.br, pos.t]
   ],
   v: [
     [pos.bl, pos.cl, pos.br, pos.t]
@@ -150,15 +150,15 @@ document.addEventListener("DOMContentLoaded", event => {
   }
 
   for (const [f, key] of [
-      [x => x, "input"],
-      [parseInt, "char-w"],
-      [parseInt, "stroke-w"],
-      [parseFloat, "space-x"],
-      [parseFloat, "space-y"],
-      [parseFloat, "margin"],
-      [x => "#" + x, "color"],
-      [x => "#" + x, "bg-color"]
-    ])
+    [x => x, "input"],
+    [parseInt, "char-w"],
+    [parseInt, "stroke-w"],
+    [parseFloat, "space-x"],
+    [parseFloat, "space-y"],
+    [parseFloat, "margin"],
+    [x => "#" + x, "color"],
+    [x => "#" + x, "bg-color"]
+  ])
     if (params[key])
       document.getElementById(key).value = f(params[key]);
 

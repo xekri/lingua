@@ -12,47 +12,20 @@ mixin ruby(a, b)
 
 html
   head
-    style.
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+    link(href="style.css", rel="stylesheet")
 
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-        width: 100vw;
-        height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-family: "Noto Serif JP", serif;
-      }
-      main {
-        color: lightgray;
-        writing-mode: vertical-lr;
-        //text-orientation: upright;
-        background-color: #fff2;
-        width: 1280px;
-        height: 640px;
-        padding: 2em;
-        overflow-x: scroll;
-        font-size: 14pt;
-        ruby-align: start;
-      }
-      p {
-        text-indent: 1em;
-      }
   body
     main
       h1 本文
       +section("登場人物")
         dl
-          dt: +ruby("墨", "sumi")
-          dd 葦原大學大學院學生。情報工學專攻。快樂主義者。
+          dt: +ruby("硯", "suzuli")
+          dd 葦原大學大學院學生．情報工學專攻．快樂主義者．
           dt
           dt: +ruby("盈", "mitul")
-          dd 葦原大學學生。數學專攻。寂しがり。
+          dd 葦原大學學生．數學專攻．寂しがり．
 
       +section("一二〇三一／一一九")
-        p
+        p 研究棟を出ると，柔和な風が髮を靡かせた．散った櫻が#[+ruby("校園","campus")]の舗裝路を彩る．明日は外套無しで來て可いかも知れない．
+        p 大學院に進學して特に數週，代はり映&#x1B001;の無い
+
