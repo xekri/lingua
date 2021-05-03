@@ -1,0 +1,15 @@
+extend /_layout.pug
+
+block head
+  - const title = "On-jomi"
+  - const tags = ["draft"]
+
+block main
+  table
+    tr
+      th 字
+      th latin
+      th 假名
+    +trs([
+      ["あ", "あ"],
+    ])

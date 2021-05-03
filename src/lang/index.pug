@@ -2,20 +2,24 @@ extend /_layout.pug
 
 block head
 	- const title = "language"
+	- const tag = ["draft"]
 
 block main
 	p language and orthography.
 
 	ul
-		li: a(href="nat/en") english-12020
+		li: a(href="en") english-12021
+		li: a(href="ja") japanese
+		li: a(href="interslacvic") interslavic-12021
 		li: a(href=`https://github.com/${author.github}/chinese`) chinese
-		li: a(href=`https://cdpn.io/sumigv/debug/MWjGWmo/yPMJjRGwyOZM`) interslavic
+		li: a(href=`https://github.com/${author.github}/yue`) yue
+		//li: a(href=`https://cdpn.io/sumigv/debug/MWjGWmo/yPMJjRGwyOZM`) interslavic
 		li: a(href=`https://${author.github}.github.io/interslavic-minimal/`) interslavic minimal
 		li: a(href=`https://${author.github}.github.io/romanize-san/`) sanskrit
 		li
 			a(href="https://cdpn.io/sumigv/debug/wvzJojO/dGMXWjJQwBgk") polish
 			ul
-				li: a(href="nat/pl/infl") inflection
-		li: a(href="https://cdpn.io/sumigv/debug/poEyLrY/vPrKKgwXJeor") greek
-		li: a(href="https://cdpn.io/sumigv/debug/WNGveym/dGMXWjJDORGk") russian
-		li: a(href="nat/vn") vietnamese
+				li: a(href="pl/infl") inflection
+		//li: a(href="https://cdpn.io/sumigv/debug/poEyLrY/vPrKKgwXJeor") greek
+		//li: a(href="https://cdpn.io/sumigv/debug/WNGveym/dGMXWjJDORGk") russian
+		//li: a(href="vn") vietnamese

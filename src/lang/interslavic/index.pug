@@ -1,0 +1,374 @@
+extend /_layout.pug
+
+block head
+	- const title = "interslavic"
+	- const tags = ["language=english-12021"]
+
+block main
+	p þis be personal dialect of <a href="http://steen.free.fr/interslavic/index.html">interslavic</a>.
+
+	+section("alphabet")
+		table
+			tr
+				th.v: span cyrillic
+				th.v: span roman
+				th.v: span IPA
+				th comment
+			+trs([
+				["А", "A", "a", "hard"],
+				["Ѣ", "Æ", "æ", "soft"],
+				["Ꙑ", "Y", "ɨ", "hard"],
+				["У", "U", "u", "hard"],
+				["И", "I", "i", "soft"],
+				["О", "O", "o", "hard"],
+				["Є", "E", "e", "soft"],
+				["Ѫ", "Ǫ", "õ", "hard, nasal vowel"],
+				["Ѧ", "Ę", "ẽ", "soft, nasal vowel"],
+				["Ъ", "Ŭ", "ʊ", "hard, short vowel"],
+				["Ь", "Ĭ", "ɪ", "soft, short vowel"],
+
+				["Ў", "V", "ʋ", "hard"],
+				["Й", "J", "j", "soft"],
+
+				["П", "P", "p", ""],
+				["Б", "B", "b", ""],
+				["Ф", "F", "f", ""],
+				["В", "W", "v", ""],
+				["М", "M", "m", ""],
+
+				["Т", "T", "t", ""],
+				["Д", "D", "d", ""],
+				["С", "S", "s", ""],
+				["З", "Z", "z", ""],
+				["Н", "N", "n", ""],
+				["Л", "L", "l", ""],
+				["Р", "R", "r", ""],
+
+				["Щ", "Ť", "tʲ", ""],
+				["Ꙉ", "Ď", "dʲ", ""],
+
+				["К", "K", "k", ""],
+				["Г", "G", "g", ""],
+				["Х", "X", "x", ""],
+
+				["Ч", "Č", "tʂ", ""],
+				["Ж", "Ž", "ʐ", ""],
+				["Ш", "Š", "ʂ", ""],
+
+				["Ц", "C", "ts", ""],
+				["Ѕ", "Ʒ", "dz", ""],
+			])
+
+	+section("numeral")
+		table
+			+trs([
+				"0 1 2 3 4 5 6 7 8 9 1000".split(" "),
+				"нула єдин два три чєтꙑри пѧтй шєстй сєдм осм дєвѧтй тꙑсѧщ".split(" ")
+			])
+
+		ul
+			li 10: єдин нула, 123: єдин два три, 2000: два нула нула нула | два тꙑсѧщ
+			li cardinal: number + noun
+			li ordinal: noun + number
+
+	+section("pronoun")
+		table
+			tr
+				th
+				th(colspan=3) sg.
+				th(colspan=3) pl.
+				th(rowspan=2) who
+				th(rowspan=2) what
+				th(rowspan=2) preposition
+			tr
+				th
+				for i in [0, 1]
+					th 1
+					th 2
+					th 3
+			tr
+				th N
+				td йа
+				td тꙑ
+				td он
+				td мꙑ
+				td вꙑ
+				td они
+				td кто
+				td(rowspan=2) что
+				td он
+			tr
+				th A
+				td мѧ
+				td тѧ
+				td(rowspan=2) єго
+				td(rowspan=3) нас
+				td(rowspan=3) вас
+				td(rowspan=3) их
+				td(rowspan=2) кого
+				td єго
+			tr
+				th G
+				td мєнє
+				td тєбє
+				td чєго
+				td од
+			tr
+				th L
+				td мнѣ
+				td тобѣ
+				td єм
+				td ком
+				td чєм
+				td в
+			tr
+				th D
+				td ми
+				td ти
+				td єму
+				td нам
+				td вам
+				td им
+				td кому
+				td чєму
+				td k
+			tr
+				th I
+				td мнойѫ
+				td тобойѫ
+				td им
+				td нами
+				td вами
+				td ими
+				td кꙑм
+				td чим
+				td с
+
+		//table
+			tr
+				th
+				th which
+				th that
+				th every
+				th some
+				th no
+			tr
+				th which
+				td кой
+				td той
+				td всйакꙑ
+				td нѣкой
+				td никой
+			tr
+				th who
+				td кто
+				td
+				td всєкто
+				td нѣкто
+				td никто
+			tr
+				th what
+				td что
+				td то
+				td всєчто
+				td нѣчто
+				td ничто
+			tr
+				th how
+				td како
+				td тако
+				td всакако
+				td нѣкако
+				td никако
+			tr
+				th when
+				td къгда
+				td тъгда
+				td всєгда
+				td нѣгда
+				td никъгда
+			tr
+				th where
+				td кдє
+				td там
+				td всєкдє
+				td нѣкдє
+				td никдє
+
+	+section("noun and adjective")
+		table
+			tr
+				th
+				th(colspan=2) man, soft m.anim.
+				th(colspan=2) town, hard m.
+				th(colspan=2) sea, soft n.
+				th(colspan=2) star, hard f.
+				th(colspan=2) song, soft f.
+			tr
+				th N
+				td мѫж-
+				td мѫж-и
+
+				td(rowspan=2) град-
+				td(rowspan=2) грӑд-ꙑ
+
+				td(rowspan=2) морй-є
+				td(rowspan=2) морй-а
+
+				td звѣзд-а
+				td(rowspan=2) звѣзд-ꙑ
+
+				td пѣснйа
+				td(rowspan=2) пѣснйє
+			tr
+				th A
+				td(rowspan=2) мѫж-а
+				td(rowspan=2) мѫж-єв
+				td звѣзд-ѫ
+				td пѣснй-ѫ
+			tr
+				th G
+				td град-а
+				td град-ов
+
+				td морй-а
+				td мор-єй
+
+				td звѣзд-ꙑ
+				td звѣзд-
+
+				td пѣснй-є
+				td пѣсн-єј
+			tr
+				th L
+				td(rowspan=2) мѫж-у
+				td мѫж-ах
+
+				td(rowspan=2) град-у
+				td град-ах
+
+				td(rowspan=2) морй-у
+				td морй-ах
+
+				td(rowspan=2) звѣзд-ѣ
+				td звѣзд-ах
+
+				td(rowspan=2) пѣснй-и
+				td пѣснй-ах
+			tr
+				th D
+				td мѫж-ам
+
+				td град-ам
+
+				td морй-ам
+
+				td звѣзд-ам
+
+				td пѣснй-ам
+			tr
+				th I
+				td мѫж-єм
+				td мѫж-ами
+
+				td град-ом
+				td град-ами
+
+				td морй-єм
+				td морй-ами
+
+				td звѣзд-ойѫ
+				td звѣзд-ами
+
+				td пѣснй-єйѫ
+				td пѣснй-ами
+			tr
+				th V
+				td мѫж-у
+				td мѫж-и
+
+				td град-є
+				td град-ꙑ
+
+				td морй-є
+				td морй-а
+
+				td звѣзд-о
+				td звѣзд-ꙑ
+
+				td пѣснй-о
+				td пѣснй-є
+
+			ul
+				li we may use [declined "он" + nominative noun] instead of declined noun.
+				li we may use nominative noun after preposition
+
+	+section("verb")
+		table
+			caption бꙑти (be)
+			tr
+				td
+				th
+				th present
+				th past
+				th future
+				th conditional
+				th imperative
+			tr
+				th(rowspan=3) sg.
+				th 1
+				td єсм
+				td бѣх
+				td бѫдѫ
+				td бꙑх
+				td
+			tr
+				th 2
+				td єси
+				td бѣшє
+				td бѫдєш
+				td бꙑс
+				td бѫдй
+			tr
+				th 3
+				td єст
+				td бѣшє
+				td бѫдє
+				td бꙑ
+				td
+			tr
+				th(rowspan=3) pl.
+				th 1
+				td єсмо
+				td бѣхмо
+				td бѫдємо
+				td бꙑхмо
+				td бѫдймо
+			tr
+				th 2
+				td єстє
+				td бѣстє
+				td бѫдєтє
+				td бꙑстє
+				td бѫдйтє
+			tr
+				th 3
+				td сѫт
+				td бѣхѫ
+				td бѫдѫт
+				td бꙑ
+				td
+
+			p we may use [conjugated "бꙑти" + infinitive verb] instead of conjugated verb.
+
+	+section("UDHR")
+		+section("classical")
+			p из дєкларациє унивєрсалйнꙑ прав чловѣка, члєнок єдин
+			p
+				| вси лйуди родѧт сѧ свободни и равни в достойности и правах.
+				| они сѫт обдарйєни разумом и свѣстйѫ и имайѫт постѫпати єдин к другому в духу братства.
+		+section("simple")
+			p из дєкларацийа унивєрсалйна од права од чловѣк, члєнок єдин
+			p
+				| вси лйуди сѫт родити сѧ свободнꙑ и равнꙑ в достойностй и права.
+				| они сѫт обдарйєнꙑ с разум и свѣстй, и сѫт имѣти постѫпати єдин к другꙑ в дух од братство.
