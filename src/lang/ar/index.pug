@@ -1,0 +1,271 @@
+extend /_layout.pug
+
+block head
+  - const title = "arabic"
+  - const tags = ["draft"]
+
+mixin forms2(isolated)
+  for x in [`\u0640${isolated}`, isolated]
+    td(colspan=2).ar= x
+
+mixin forms4(isolated)
+  for x in [`\u0640${isolated}`, `\u0640${isolated}\u0640`, `${isolated}\u0640`, isolated]
+    td.ar= x
+
+block main
+  span.ar اَلْعَرَبِيَّةُ
+  |  al-qarabijjat
+
+  center
+    table
+      tr.v
+        th: span name
+        th: span transliteration
+        th: span IPA
+        th: span final
+        th: span medial
+        th: span initial
+        th: span isolated
+        th: span roman
+        th: span hebrew
+        th: span phoenician
+      tr
+        td 'alif
+        td ∅
+        td ∅
+        +forms2("ا")
+        td A
+        td א
+        td 𐤀
+      tr
+        td bā'
+        td b
+        td b
+        +forms4("ب")
+        td B
+        td ב
+        td 𐤁
+      tr
+        td cīm
+        td c
+        td d͡ʒ
+        +forms4("ج")
+        td C
+        td ג
+        td 𐤂
+      tr
+        td dāl
+        td d
+        td d
+        +forms2("د")
+        td D
+        td ד
+        td 𐤃
+      tr
+        td hā'
+        td h
+        td h
+        +forms4("ه")
+        td E
+        td ה
+        td 𐤄
+      tr
+        td vāv
+        td v
+        td w
+        +forms2("و")
+        td V, F
+        td ו
+        td 𐤅
+      tr
+        td zājn
+        td z
+        td z
+        +forms2("ز")
+        td Z
+        td ז
+        td 𐤆
+      tr
+        td ḥā'
+        td ḥ
+        td ħ
+        +forms4("ح")
+        td H
+        td ח
+        td 𐤇
+      tr
+        td ṭā'
+        td ṭ
+        td tˤ
+        +forms4("ط")
+        td
+        td ט
+        td 𐤈
+      tr
+        td jā'
+        td j
+        td j
+        +forms4("ي")
+        td I
+        td י
+        td 𐤉
+      tr
+        td kāf
+        td k
+        td k
+        +forms4("ك")
+        td K
+        td כ
+        td 𐤊
+      tr
+        td lām
+        td l
+        td l
+        +forms4("ل")
+        td L
+        td ל
+        td 𐤋
+      tr
+        td mīm
+        td m
+        td m
+        +forms4("م")
+        td M
+        td מ
+        td 𐤌
+      tr
+        td nūn
+        td n
+        td n
+        +forms4("ن")
+        td N
+        td נ
+        td 𐤍
+      tr
+        td sīn
+        td s
+        td s
+        +forms4("س")
+        td
+        td ס
+        td 𐤎
+      tr
+        td qajn
+        td q
+        td ʕ
+        +forms4("ع")
+        td O
+        td ע
+        td 𐤏
+      tr
+        td fā'
+        td f
+        td f
+        +forms4("ف")
+        td P
+        td פ
+        td 𐤐
+      tr
+        td ṣād
+        td ṣ
+        td sˤ
+        +forms4("ص")
+        td
+        td צ
+        td 𐤑
+      tr
+        td ḳāf
+        td ḳ
+        td q
+        +forms4("ق")
+        td Q
+        td ק
+        td 𐤒
+      tr
+        td rā'
+        td r
+        td r
+        +forms2("ر")
+        td R
+        td ר
+        td 𐤓
+      tr
+        td xīn
+        td x
+        td ʃ
+        +forms4("ش")
+        td S
+        td ש
+        td 𐤔
+      tr
+        td tā'
+        td t
+        td t
+        +forms4("ت")
+        td T
+        td ת
+        td 𐤕
+
+      tr
+        td ŧā'
+        td ŧ
+        td θ
+        +forms4("ث")
+      tr
+        td ꝁā'
+        td ꝁ
+        td x
+        +forms4("خ")
+      tr
+        td đāl
+        td đ
+        td ð
+        +forms2("ذ")
+      tr
+        td ḍād
+        td ḍ
+        td dˤ
+        +forms4("ض")
+      tr
+        td ẓā'
+        td ẓ
+        td ðˤ
+        +forms4("ظ")
+      tr
+        td ǥajn
+        td ǥ
+        td ɣ
+        +forms4("غ")
+
+
+
+
+
+
+      tr
+        td hamzah
+        td '
+        td ʔ
+        td(colspan=4).ar ء
+
+      tr
+        td fat-ḥah
+        td a
+        td
+        td(colspan=4).ar ـَ
+      tr
+        td ḍammah
+        td u
+        td
+        td(colspan=4).ar ـُ
+      tr
+        td kasrah
+        td i
+        td
+        td(colspan=4).ar ـِ
+      tr
+        td tā' marbūṭat
+        td t
+        td t, h
+        +forms2("ة")
+
