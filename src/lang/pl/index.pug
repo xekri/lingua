@@ -1,0 +1,412 @@
+extend /_layout.pug
+
+block head
+	- const title = "polish"
+	- const tags = ["draft"]
+
+block main
+	table
+		tr
+			td(rowspan=5) noun
+			td(rowspan=3) masculine
+			td(rowspan=2) animate
+			td personal
+		tr
+			td impersonal
+		tr
+			td(colspan=2) inanimate
+		tr
+			td(colspan=3) neuter
+		tr
+			td(colspan=3) feminine
+
+	+section("alphabet")
+		table
+			tr
+				td и
+				td є
+				td а
+				td о
+				td у
+			tr
+				td і
+				td ѥ
+				td ꙗ
+				td е
+				td ꙕ
+
+
+	+section("pronoun")
+		table
+			caption i
+			tr
+				th
+				th sg.
+				th pl.
+			tr
+				th N
+				td ꙗ
+				td ми
+			tr
+				th AGL
+				td(rowspan=2) мнѥ
+				td нас
+			tr
+				th D
+				td нам
+			tr
+				th I
+				td мнѫ
+				td намі
+
+		table
+			caption you
+			tr
+				th
+				th sg.
+				th pl.
+			tr
+				th N
+				td ти
+				td ви
+			tr
+				th AG
+				td тѩ
+				td(rowspan=2) вас
+			tr
+				th L
+				td тобѥ
+			tr
+				th D
+				td ті
+				td вам
+			tr
+				th I
+				td тобѫ
+				td вамі
+
+		table
+			caption it
+			tr
+				th
+				th m.sg.
+				th n.sg.
+				th f.sg.
+				th p.pl.
+				th ip.pl.
+			tr
+				th N
+				td он
+				td оно
+				td она
+				td оні
+				td онє
+			tr
+				th A
+				td(rowspan=2) (ѥ)го
+				td ѥ
+				td ѭ
+				td(rowspan=3) іх
+				td ѥ
+			tr
+				th G
+				td (ѥ)го
+				td(rowspan=3) ѥи
+				td(rowspan=2) іх
+			tr
+				th L
+				td(colspan=2) ім
+			tr
+				th D
+				td(colspan=2) (ѥ)му
+				td(colspan=2) ім
+			tr
+				th I
+				td(colspan=2) ім
+				td ѭ
+				td(colspan=2) імі
+
+		table
+			caption what
+			tr
+				th N
+				td кто
+				td(rowspan=2) цо
+			tr
+				th A
+				td(rowspan=2) кого
+			tr
+				th G
+				td чєго
+			tr
+				th D
+				td кому
+				td чєму
+			tr
+				th LI
+				td кім
+				td чим
+
+	+section("noun")
+			table
+				caption brother, personal
+				tr
+					th
+					th sg
+					th pl
+				tr
+					th N
+					td брат
+					td братꙗ
+				tr
+					th AG
+					td брата
+					td браті
+				tr
+					th V
+					td(rowspan=2) братѥ
+					td братꙗ
+				tr
+					th L
+					td братꙗх
+				tr
+					th D
+					td брату
+					td братем
+				tr
+					th I
+					td братєм
+					td братьмі
+
+			table
+				caption house, inanimate
+				tr
+					th
+					th sg
+					th pl
+				tr
+					th NA
+					td дом
+					td(rowspan=2) доми
+				tr
+					th V
+					td(rowspan=3) дому
+				tr
+					th L
+					td домах
+				tr
+					th G
+					td домоов
+				tr
+					th D
+					td домові
+					td домом
+				tr
+					th I
+					td домєм
+					td домамі
+			table
+				caption word, neuter
+				tr
+					th
+					th sg
+					th pl
+				tr
+					th NVA
+					td слово
+					td слова
+				tr
+					th L
+					td словѥ
+					td словах
+				tr
+					th D
+					td слову
+					td словом
+				tr
+					th G
+					td слова
+					td слоов
+				tr
+					th I
+					td словєм
+					td словамі
+
+			table
+				caption crow, feminine
+				tr
+					th
+					th sg
+					th pl
+				tr
+					th N
+					td врона
+					td(rowspan=3) врони
+				tr
+					th A
+					td вронѧ
+				tr
+					th V
+					td вроно
+				tr
+					th L
+					td(rowspan=2) вронѥ
+					td вронах
+				tr
+					th D
+					td вроном
+				tr
+					th G
+					td врони
+					td врон
+				tr
+					th I
+					td вронѫ
+					td вронамі
+
+	+section("verb")
+		table
+			caption to be, imperfective
+			tr
+				th(rowspan=3)
+				th(rowspan=3) infinitve
+				th(colspan=2) present
+				th(colspan=2) future
+				th(colspan=2) imperative
+				th(colspan=5) past
+				th(colspan=5) conditional
+			tr
+				for i in [0, 1, 2]
+					th(rowspan=2) sg.
+					th(rowspan=2) pl.
+				for i in [0, 1]
+					th(colspan=3) sg.
+					th(colspan=2) pl.
+			tr
+				for i in [0, 1]
+					th m.
+					th n.
+					th f.
+					th p.
+					th ip.
+			tr
+				th 1
+				td(rowspan=3) бить
+				td ѥстєм
+				td ѥстєсьми
+				td бѧдѧ
+				td бѧдѥми
+				td
+				td бѫдьми
+				td билєм
+				td (билом)
+				td билам
+				td билісьми
+				td билисьми
+				td билбим
+				td (билобим)
+				td билабим
+				td билібисьми
+				td билибисьми
+			tr
+				th 2
+				td ѥстєсь
+				td ѥстєстѥ
+				td бѧдѥш
+				td бѧдѥтѥ
+				td бѫдь
+				td бѫдьтѥ
+				td билєсь
+				td (билось)
+				td билась
+				td билістѥ
+				td билистѥ
+				td билбись
+				td (билобись)
+				td билабись
+				td билібистѥ
+				td билибистѥ
+			tr
+				th 3
+				td ѥст
+				td сѫ
+				td бѧдѥ
+				td бѧдѫ
+				td
+				td
+				td бил
+				td било
+				td била
+				td билі
+				td били
+				td билби
+				td билоби
+				td билаби
+				td биліби
+				td билиби
+
+		table
+			caption to read, imperfective
+			tr
+				th(rowspan=3)
+				th(rowspan=3) infinitve
+				th(colspan=2) present
+				th(colspan=5) past
+				th(colspan=5) past
+			tr
+				th(rowspan=2) sg.
+				th(rowspan=2) pl.
+				for i in [0, 1]
+					th(colspan=3) sg.
+					th(colspan=2) pl.
+			tr
+				for i in [0, 1]
+					th m.
+					th n.
+					th f.
+					th p.
+					th ip.
+			tr
+				th 1
+				td(rowspan=3) читать
+				td читам
+				td читами
+				td читалєм
+				td (читалом)
+				td читалам
+				td читалісьми
+				td читалисьми
+				td читалбим
+				td (читалобим)
+				td читалабим
+				td читалібисьми
+				td читалибисьми
+			tr
+				th 2
+				td читаш
+				td читатѥ
+				td читалєсь
+				td (читалось)
+				td читалась
+				td читалістѥ
+				td читалистѥ
+				td читалбись
+				td (читалабись)
+				td читалобись
+				td читалібистѥ
+				td читалибистѥ
+			tr
+				th 3
+				td чита
+				td читаѭ
+				td читал
+				td читало
+				td читала
+				td читалі
+				td читали
+				td читалби
+				td читалоби
+				td читалаби
+				td читаліби
+				td читалиби
+

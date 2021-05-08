@@ -7,6 +7,8 @@ $bgcolor: #000
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
 
+$cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
+
 @font-face
   src: local('YuGothic')
   font-family: 'YuGothic'
@@ -14,8 +16,19 @@ $bgcolor: #000
   unicode-range: U+1B001, U+30A8
 
 @font-face
+  src: url('/assets/fonts/MonomakhUnicode.otf') format('opentype')
+  font-family: 'Monomakh'
+  font-weight: lighter
+  unicode-range: $cyrillic
+
+@font-face
+  font-family: "Arimo"
+  src: url('https://fonts.googleapis.com/css2?family=Arimo&display=swap')
+  unicode-range: $cyrillic
+
+@font-face
   font-family: "Nishiki Kana"
-  src: url("/nishiki-kana.otf") format('opentype')
+  src: url("/assets/fonts/nishiki-kana.otf") format('opentype')
   unicode-range: U+1B000, U+1B001, U+30A8
 
 @font-face
@@ -55,7 +68,7 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Source Sans Pro", "Noto Sans TC", "Meiryo", "Nishiki Kana", sans-serif
+  font-family: "Nishiki Kana", "Noto Sans TC", "Arimo", "Source Sans Pro", "Meiryo", sans-serif
   font-weight: 100
 
   @media screen and (max-device-width:$thresh)
@@ -146,6 +159,7 @@ main section
   margin-bottom: $space
   section
     margin-bottom: 0
+    overflow-x: auto
 
 section, .my-div
   margin: 0
