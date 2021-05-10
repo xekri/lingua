@@ -5,7 +5,7 @@ $mobileSwitchHeight: 56pt
 $color: #DDD
 $bgcolor: #000
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&display=swap')
 
 $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 
@@ -19,11 +19,6 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   src: url('/assets/fonts/MonomakhUnicode.otf') format('opentype')
   font-family: 'Monomakh'
   font-weight: lighter
-  unicode-range: $cyrillic
-
-@font-face
-  font-family: "Arimo"
-  src: url('https://fonts.googleapis.com/css2?family=Arimo&display=swap')
   unicode-range: $cyrillic
 
 @font-face
@@ -68,7 +63,7 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Nishiki Kana", "Noto Sans TC", "Arimo", "Source Sans Pro", "Meiryo", sans-serif
+  font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif
   font-weight: 100
 
   @media screen and (max-device-width:$thresh)

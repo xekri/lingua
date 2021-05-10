@@ -15,7 +15,7 @@
     <!-- local files-->
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="icon" href="/images/icon.ico">
+    <link rel="icon" href="/images/sumi.svg" type="image/svg+xml">
     <title>sumi / polish</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -85,10 +85,21 @@ polish
               <td colspan="3">feminine</td>
             </tr>
           </table>
-          <section id="alphabet">
-            <h1><a href="#alphabet">#</a> 
-alphabet
+          <section id="orthography">
+            <h1><a href="#orthography">#</a> 
+orthography
             </h1>
+            <textarea id="0"># POWSZECHNA DEKLARACJA PRAW CZŁOWIEKA
+## Artykuł 1
+Wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
+Są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.
+
+## Artykuł 2
+Każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
+
+Nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.</textarea>
+            <textarea id="1"></textarea>
+            <textarea id="2"></textarea>
             <table>
               <tr>
                 <td>и</td>
@@ -96,13 +107,17 @@ alphabet
                 <td>а</td>
                 <td>о</td>
                 <td>у</td>
+                <td>ѧ</td>
+                <td>ѫ</td>
               </tr>
               <tr>
                 <td>і</td>
                 <td>ѥ</td>
                 <td>ꙗ</td>
-                <td>е</td>
-                <td>ꙕ</td>
+                <td>ю</td>
+                <td>ѵ</td>
+                <td>ѩ</td>
+                <td>ѭ</td>
               </tr>
             </table>
           </section>
@@ -189,32 +204,32 @@ pronoun
               </tr>
               <tr>
                 <th>A</th>
-                <td rowspan="2">(ѥ)го</td>
-                <td>ѥ</td>
+                <td rowspan="2">(є)го</td>
+                <td>є</td>
                 <td>ѭ</td>
-                <td rowspan="3">іх</td>
-                <td>ѥ</td>
+                <td rowspan="3">их</td>
+                <td>є</td>
               </tr>
               <tr>
                 <th>G</th>
-                <td>(ѥ)го</td>
-                <td rowspan="3">ѥи</td>
-                <td rowspan="2">іх</td>
+                <td>(є)го</td>
+                <td rowspan="3">єи</td>
+                <td rowspan="2">их</td>
               </tr>
               <tr>
                 <th>L</th>
-                <td colspan="2">ім</td>
+                <td colspan="2">им</td>
               </tr>
               <tr>
                 <th>D</th>
-                <td colspan="2">(ѥ)му</td>
-                <td colspan="2">ім</td>
+                <td colspan="2">(є)му</td>
+                <td colspan="2">им</td>
               </tr>
               <tr>
                 <th>I</th>
-                <td colspan="2">ім</td>
+                <td colspan="2">им</td>
                 <td>ѭ</td>
-                <td colspan="2">імі</td>
+                <td colspan="2">имі</td>
               </tr>
             </table>
             <table>
@@ -277,7 +292,7 @@ noun
               <tr>
                 <th>D</th>
                 <td>брату</td>
-                <td>братем</td>
+                <td>братюм</td>
               </tr>
               <tr>
                 <th>I</th>
@@ -436,8 +451,8 @@ verb
               <tr>
                 <th>1</th>
                 <td rowspan="3">бить</td>
-                <td>ѥстєм</td>
-                <td>ѥстєсьми</td>
+                <td>єстєм</td>
+                <td>єстєсьми</td>
                 <td>бѧдѧ</td>
                 <td>бѧдѥми</td>
                 <td></td>
@@ -455,8 +470,8 @@ verb
               </tr>
               <tr>
                 <th>2</th>
-                <td>ѥстєсь</td>
-                <td>ѥстєстѥ</td>
+                <td>єстєсь</td>
+                <td>єстєстѥ</td>
                 <td>бѧдѥш</td>
                 <td>бѧдѥтѥ</td>
                 <td>бѫдь</td>
@@ -474,7 +489,7 @@ verb
               </tr>
               <tr>
                 <th>3</th>
-                <td>ѥст</td>
+                <td>єст</td>
                 <td>сѫ</td>
                 <td>бѧдѥ</td>
                 <td>бѧдѫ</td>
@@ -498,10 +513,13 @@ verb
                 <th rowspan="3"></th>
                 <th rowspan="3">infinitve</th>
                 <th colspan="2">present</th>
+                <th colspan="2">imperative</th>
                 <th colspan="5">past</th>
-                <th colspan="5">past</th>
+                <th colspan="5">conditional</th>
               </tr>
               <tr>
+                <th rowspan="2">sg.</th>
+                <th rowspan="2">pl.</th>
                 <th rowspan="2">sg.</th>
                 <th rowspan="2">pl.</th>
                 <th colspan="3">sg.</th>
@@ -526,6 +544,8 @@ verb
                 <td rowspan="3">читать</td>
                 <td>читам</td>
                 <td>читами</td>
+                <td></td>
+                <td>читаьми</td>
                 <td>читалєм</td>
                 <td>(читалом)</td>
                 <td>читалам</td>
@@ -541,6 +561,8 @@ verb
                 <th>2</th>
                 <td>читаш</td>
                 <td>читатѥ</td>
+                <td>читаь</td>
+                <td>читаьтѥ</td>
                 <td>читалєсь</td>
                 <td>(читалось)</td>
                 <td>читалась</td>
@@ -556,6 +578,8 @@ verb
                 <th>3</th>
                 <td>чита</td>
                 <td>читаѭ</td>
+                <td></td>
+                <td></td>
                 <td>читал</td>
                 <td>читало</td>
                 <td>читала</td>
@@ -566,6 +590,31 @@ verb
                 <td>читалаби</td>
                 <td>читаліби</td>
                 <td>читалиби</td>
+              </tr>
+            </table>
+          </section>
+          <section id="sentences">
+            <h1><a href="#sentences">#</a> 
+sentences
+            </h1>
+            <table>
+              <tr>
+                <td>my friend speaks.<br><span class="pl">mój przyjaciel mówi.</span></td>
+              </tr>
+              <tr>
+                <td>i like my friend.<br><span class="pl">lubię mojego przyjaciela.</span></td>
+              </tr>
+              <tr>
+                <td>i envy my friend.<br><span class="pl">zazdroszczę przyjaciela.</span></td>
+              </tr>
+              <tr>
+                <td>i trust my friend.<br><span class="pl">ufam mojemu przyjacielowi</span></td>
+              </tr>
+              <tr>
+                <td>i think of my friend.<br><span class="pl">myślę o moim przyjacielu.</span></td>
+              </tr>
+              <tr>
+                <td>i travel with my friend.<br><span class="pl">podróżuję z moim przyjacielem.</span></td>
               </tr>
             </table>
           </section>

@@ -20,7 +20,20 @@ block main
 		tr
 			td(colspan=3) feminine
 
-	+section("alphabet")
+	+section("orthography")
+		textarea#0.
+			# POWSZECHNA DEKLARACJA PRAW CZŁOWIEKA
+			## Artykuł 1
+			Wszyscy ludzie rodzą się wolni i równi pod względem swej godności i swych praw.
+			Są oni obdarzeni rozumem i sumieniem i powinni postępować wobec innych w duchu braterstwa.
+
+			## Artykuł 2
+			Każdy człowiek posiada wszystkie prawa i wolności zawarte w niniejszej Deklaracji bez względu na jakiekolwiek różnice rasy, koloru, płci, języka, wyznania, poglądów politycznych i innych, narodowości, pochodzenia społecznego, majątku, urodzenia lub jakiegokolwiek innego stanu.
+
+			Nie wolno ponadto czynić żadnej różnicy w zależności od sytuacji politycznej, prawnej lub międzynarodowej kraju lub obszaru, do którego dana osoba przynależy, bez względu na to, czy dany kraj lub obszar jest niepodległy, czy też podlega systemowi powiernictwa, nie rządzi się samodzielnie lub jest w jakikolwiek sposób ograniczony w swej niepodległości.
+		textarea#1
+		textarea#2
+
 		table
 			tr
 				td и
@@ -28,13 +41,16 @@ block main
 				td а
 				td о
 				td у
+				td ѧ
+				td ѫ
 			tr
 				td і
 				td ѥ
 				td ꙗ
-				td е
-				td ꙕ
-
+				td ю
+				td ѵ
+				td ѩ
+				td ѭ
 
 	+section("pronoun")
 		table
@@ -103,28 +119,28 @@ block main
 				td онє
 			tr
 				th A
-				td(rowspan=2) (ѥ)го
-				td ѥ
+				td(rowspan=2) (є)го
+				td є
 				td ѭ
-				td(rowspan=3) іх
-				td ѥ
+				td(rowspan=3) их
+				td є
 			tr
 				th G
-				td (ѥ)го
-				td(rowspan=3) ѥи
-				td(rowspan=2) іх
+				td (є)го
+				td(rowspan=3) єи
+				td(rowspan=2) их
 			tr
 				th L
-				td(colspan=2) ім
+				td(colspan=2) им
 			tr
 				th D
-				td(colspan=2) (ѥ)му
-				td(colspan=2) ім
+				td(colspan=2) (є)му
+				td(colspan=2) им
 			tr
 				th I
-				td(colspan=2) ім
+				td(colspan=2) им
 				td ѭ
-				td(colspan=2) імі
+				td(colspan=2) имі
 
 		table
 			caption what
@@ -172,7 +188,7 @@ block main
 				tr
 					th D
 					td брату
-					td братем
+					td братюм
 				tr
 					th I
 					td братєм
@@ -292,8 +308,8 @@ block main
 			tr
 				th 1
 				td(rowspan=3) бить
-				td ѥстєм
-				td ѥстєсьми
+				td єстєм
+				td єстєсьми
 				td бѧдѧ
 				td бѧдѥми
 				td
@@ -310,8 +326,8 @@ block main
 				td билибисьми
 			tr
 				th 2
-				td ѥстєсь
-				td ѥстєстѥ
+				td єстєсь
+				td єстєстѥ
 				td бѧдѥш
 				td бѧдѥтѥ
 				td бѫдь
@@ -328,7 +344,7 @@ block main
 				td билибистѥ
 			tr
 				th 3
-				td ѥст
+				td єст
 				td сѫ
 				td бѧдѥ
 				td бѧдѫ
@@ -351,11 +367,13 @@ block main
 				th(rowspan=3)
 				th(rowspan=3) infinitve
 				th(colspan=2) present
+				th(colspan=2) imperative
 				th(colspan=5) past
-				th(colspan=5) past
+				th(colspan=5) conditional
 			tr
-				th(rowspan=2) sg.
-				th(rowspan=2) pl.
+				for i in [0, 1]
+					th(rowspan=2) sg.
+					th(rowspan=2) pl.
 				for i in [0, 1]
 					th(colspan=3) sg.
 					th(colspan=2) pl.
@@ -371,6 +389,8 @@ block main
 				td(rowspan=3) читать
 				td читам
 				td читами
+				td
+				td читаьми
 				td читалєм
 				td (читалом)
 				td читалам
@@ -385,6 +405,8 @@ block main
 				th 2
 				td читаш
 				td читатѥ
+				td читаь
+				td читаьтѥ
 				td читалєсь
 				td (читалось)
 				td читалась
@@ -399,6 +421,8 @@ block main
 				th 3
 				td чита
 				td читаѭ
+				td
+				td
 				td читал
 				td читало
 				td читала
@@ -410,3 +434,35 @@ block main
 				td читаліби
 				td читалиби
 
+	+section("sentences")
+		table
+			tr
+				td
+					| my friend speaks.
+					br
+					span.pl mój przyjaciel mówi.
+			tr
+				td
+					| i like my friend.
+					br
+					span.pl lubię mojego przyjaciela.
+			tr
+				td
+					| i envy my friend.
+					br
+					span.pl zazdroszczę przyjaciela.
+			tr
+				td
+					| i trust my friend.
+					br
+					span.pl ufam mojemu przyjacielowi
+			tr
+				td
+					| i think of my friend.
+					br
+					span.pl myślę o moim przyjacielu.
+			tr
+				td
+					| i travel with my friend.
+					br
+					span.pl podróżuję z moim przyjacielem.
