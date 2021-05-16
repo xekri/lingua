@@ -4,17 +4,33 @@ const jyutpingTableParser = require('jyutping-table-parser');
 const jyutpingTable = jyutpingTableParser.parseJyutpingInput();
 
 
+const toneSymbols = [..."ˋˊˉˈ"]
+
 const show = (initial, final, tone) =>
-  (initial + final + tone)
-    .replace(/0$/, "ˋ")
-    .replace(/1$/, "ˊ")
-    .replace(/2$/, "")
-    .replace(/g3$/, "k")
-    .replace(/n3$/, "t")
-    .replace(/m3$/, "p");
+  initial + final + toneSymbols[tone]
+//.replace(/gˈ$/, "k")
+//.replace(/nˈ$/, "t")
+//.replace(/mˈ$/, "p");
+
+const showAscii = (...xs) =>
+  show(...xs)
+    .replace(/^ŧ/, "ts")
+    .replace(/^đ/, "dz")
+    .replace(/š/, "sj")
+    .replace(/ž/, "zj")
+    .replace(/ť/, "tj")
+    .replace(/ď/, "dj")
+    .replace(/ň/, "nj")
+    .replace(/ǝ/, "r")
+    .replace(/ø/, "eo")
+    .replace(/jx/, "xj")
+    .replace(/[ˋˊˉˈ]$/, x => toneSymbols.indexOf(x));
 
 const yue = Object.fromEntries(
   jyutpingTable
+    .concat([
+      { ch: "十", infoArray: [{ jyutping: ["sap6"] }] }
+    ])
     .filter(x => "infoArray" in x)
     .map(x => {
       const c = x.ch;
@@ -57,12 +73,12 @@ const yue = Object.fromEntries(
 
         final = final
           .replace(/ng$/, "g")
-          .replace(/a/g, "ă")
-          .replace(/ăă/, "a")
+          .replace(/a/g, "ǝ")
+          .replace(/ǝǝ/, "a")
           .replace(/oe|eo/, "ø")
           .replace(/yu/, "y")
-          .replace(/(?<=.)i$/, "j")
-          .replace(/(?<=.)u$/, "v")
+          .replace(/(?<!^)i$/, "j")
+          .replace(/(?<!^)u$/, "v")
 
         initial = initial
           .replace(/^k/, "kx")
@@ -73,8 +89,8 @@ const yue = Object.fromEntries(
           .replace(/^z/, "ŧ")
           .replace(/^p/, "px")
           .replace(/^b/, "p")
-          .replace(/ng/, "g")
-          .replace(/h/, "x")
+          .replace(/^ng/, "g")
+          .replace(/^h/, "x")
           .replace(/w/, "v");
 
         if (/^[iyø]/.test(final))
@@ -125,23 +141,24 @@ const yue = Object.fromEntries(
         if (mcs.some(mc => mc.final.sjep == "止"))
           final = final.replace(/ej/, "i")
         if (mcs.some(mc => mc.final.sjep == "止") && /v/.test(initial))
-          final = final.replace(/ăj/, "i");
+          final = final.replace(/ǝj/, "i");
         if (mcs.some(mc => mc.final.sjep == "遇"))
           final = final.replace(/øj/, "y");
-        if (mcs.some(mc => ["", "模"].includes(mc.final.yonh)))
+        if (mcs.some(mc => mc.final.yonh) == "模")
           final = final.replace(/ov/, "u");
         if (mcs.some(mc => mc.final.sjep == "咸" && mc.final.ho == "開口" && mc.final.tongx == 1))
-          final = final.replace(/ăm/, "om");
+          final = final.replace(/ǝm/, "om");
         if (mcs.some(mc => mc.final.sjep == "蟹"))
           final = final.replace(/øj/, "uj");
 
-        return [initial, final, "平上去入"[tone], show(initial, final, tone), mcs.length == 0 ? "!" : ""];
-      }).filter(y => y)]
+        const triple = [initial, final, tone];
+        return triple.concat([show(...triple), showAscii(...triple), mcs.length == 0 ? "!" : ""]);
+      }).filter(y => y)];
     })
 );
 
 const path = "yue.tsv";
-fs.writeFileSync(path, "字\t聲\t韻\t調\t拼音\t未修正\n")
+fs.writeFileSync(path, "character\tinitial\tfinal\ttone\troman\tascii\tno-emc-data\n")
 for (let [c, vs] of Object.entries(yue))
   for (const v of vs)
     fs.appendFileSync(path, `${c}\t${v.join("\t")}\n`);
