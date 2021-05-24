@@ -52,9 +52,6 @@ body {
   background-color: #000;
   font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif;
   font-weight: 100; }
-  @media screen and (max-device-width: 1080px) {
-    body {
-      font-size: 24px; } }
 
 main {
   margin: 0;
@@ -78,18 +75,14 @@ main {
 
 nav {
   z-index: 50;
-  max-width: 33.3%;
+  max-width: calc(100% / 3);
   width: 240px;
   height: 100%;
   margin: 0;
   position: fixed;
   border-right: 1px #DDD solid;
   top: 0; }
-  nav ul {
-    margin-left: 0;
-    list-style-position: inside; }
   nav #menu ul {
-    margin: 0;
     margin-top: 32px; }
     @media screen and (max-device-width: 1080px) {
       nav #menu ul li:not(:first-of-type) {
@@ -101,7 +94,7 @@ nav {
       background-color: #000;
       overflow-y: scroll; } }
   nav ul {
-    margin-left: 0;
+    margin-left: 16px;
     padding-left: 0; }
   nav #nav-in {
     margin-left: 32px;
@@ -134,6 +127,9 @@ nav {
 
 main section {
   margin-bottom: 32px; }
+  @media screen and (max-device-width: 1080px) {
+    main section {
+      margin-bottom: 0; } }
   main section section {
     margin-bottom: 0;
     overflow-x: auto; }
@@ -143,8 +139,7 @@ section, .my-div {
   padding: 0;
   padding-left: 32px;
   border: solid #DDD;
-  border-width: 1px 0 0 1px;
-  font-size: inherit; }
+  border-width: 1px 0 0 1px; }
   section section, section .my-div, .my-div section, .my-div .my-div {
     margin-top: 32px; }
     @media screen and (max-device-width: 1080px) {
@@ -204,16 +199,11 @@ table {
 
 ul, ol {
   text-align: left;
-  margin: 0; }
-
-ul {
   list-style-type: square;
-  list-style-position: inside; }
-
-ul {
+  list-style-position: outside;
+  margin: 0;
+  margin-left: 1.5em;
   padding-left: 0; }
-  ul ul {
-    padding-left: 32px; }
 
 textarea {
   font: inherit;
@@ -247,11 +237,7 @@ p {
 details:focus, summary:focus {
   outline: none; }
 
-td {
-  font-size: inherit; }
-
 ruby {
-  font-size: inherit;
   ruby-align: center;
   margin-left: -3px; }
 

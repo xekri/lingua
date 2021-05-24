@@ -1,7 +1,7 @@
 extend /_layout.pug
 
-mixin color(name, back)
-	span(style=`background-color: ${back};`)= name
+mixin color(color)
+	span(style=`color: ${color};`) ■
 
 mixin img(src, width)
 	a(href=src): img(src=src, width=width)
@@ -76,7 +76,7 @@ block main
 				td MN
 			tr
 				th {hair, eye} color
-				td light gray <span style="color: lightgray;">■</span>
+				td light gray #[+color("lightgray")]
 				td black □
 			tr
 				th location
@@ -100,25 +100,25 @@ block main
 			tr
 				th language
 				td: ul
+					li english
 					li japanese
 					li mandarin
-					li english
 					li cantonese
 					li interslavic
 				td: ul
+					li english
 					li japanese
 					li mandarin
-					li english
 					li interslavic
 			tr
 				th theme color
 				td: ul
 					li black □
-					li crimson <span style="color: crimson;">■</span>
+					li crimson #[+color("crimson")]
 				td
 					ul
-						li white <span style="color: white;">■</span>
-						li spring green <span style="color: springgreen;">■</span>
+						li white #[+color("white")]
+						li spring green #[+color("springgreen")]
 			tr
 				th fashion
 				td

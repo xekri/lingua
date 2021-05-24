@@ -66,9 +66,6 @@ body
   font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif
   font-weight: 100
 
-  @media screen and (max-device-width:$thresh)
-    font-size: 24px
-
 main
   margin: 0
   padding: 0
@@ -90,7 +87,7 @@ main
 
 nav
   z-index: 50
-  max-width: 33.3%
+  max-width: calc(100% / 3)
   width: $navWidth
   height: 100%
   margin: 0
@@ -98,12 +95,7 @@ nav
   border-right: 1px $color solid
   top: 0
 
-  ul
-    margin-left: 0
-    list-style-position: inside
-
   #menu ul
-    margin: 0
     margin-top: $space
 
     @media screen and (max-device-width:$thresh)
@@ -117,7 +109,7 @@ nav
     overflow-y: scroll
 
   ul
-    margin-left: 0
+    margin-left: 16px
     padding-left: 0
 
   #nav-in
@@ -152,6 +144,9 @@ nav
 
 main section
   margin-bottom: $space
+  @media screen and (max-device-width:$thresh)
+    margin-bottom: 0
+
   section
     margin-bottom: 0
     overflow-x: auto
@@ -163,7 +158,6 @@ section, .my-div
   border: solid $color
   border-width: 1px 0 0 1px
   //background-color: #FFF2
-  font-size: inherit
 
   section, .my-div
     margin-top: $space
@@ -240,16 +234,12 @@ table
 
 ul, ol
   text-align: left
-  margin: 0
 
-ul
   list-style-type: square
-  list-style-position: inside
-
-ul
+  list-style-position: outside
+  margin: 0
+  margin-left: 1.5em
   padding-left: 0
-  ul
-    padding-left: 32px
 
 textarea
   font: inherit
@@ -284,11 +274,7 @@ details, summary
   &:focus
     outline: none
 
-td
-  font-size: inherit
-
 ruby
-  font-size: inherit
   ruby-align: center
   margin-left: -3px
 

@@ -8,3 +8,20 @@ block head
 
 block main
 	p website introduce auþor sumi and his work.
+
+	mixin entry(year, day, path, comment)
+		tr
+			td=year
+			td=day
+			td: a(href=path)= path
+			td= comment
+
+	center
+		table
+			caption history
+			tr
+				th year
+				th day
+				th path
+				th revision
+			+entry(12021, 144, "/", "add history of revision.")
