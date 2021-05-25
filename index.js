@@ -3,28 +3,30 @@ const yonh = require("yonh");
 const jyutpingTableParser = require('jyutping-table-parser');
 const jyutpingTable = jyutpingTableParser.parseJyutpingInput();
 
-
 const toneSymbols = [..."ˋˊˉˈ"]
 
 const show = (initial, final, tone) =>
-  initial + final + toneSymbols[tone]
-//.replace(/gˈ$/, "k")
-//.replace(/nˈ$/, "t")
-//.replace(/mˈ$/, "p");
+  initial + final + toneSymbols[tone];
 
 const showAscii = (...xs) =>
   show(...xs)
     .replace(/^ŧ/, "ts")
     .replace(/^đ/, "dz")
-    .replace(/š/, "sj")
-    .replace(/ž/, "zj")
-    .replace(/ť/, "tj")
-    .replace(/ď/, "dj")
-    .replace(/ň/, "nj")
+    .replace(/ṣ/, "sj")
+    .replace(/ẓ/, "zj")
+    .replace(/ṭ/, "tj")
+    .replace(/ḍ/, "dj")
+    .replace(/ṇ/, "nj")
     .replace(/ǝ/, "r")
     .replace(/ø/, "eo")
     .replace(/jx/, "xj")
     .replace(/[ˋˊˉˈ]$/, x => toneSymbols.indexOf(x));
+
+const showComb = (initial, final, tone) =>
+  (initial + final)
+    .replace(/(?<=[iyueøoǝa])/, "\u0300\u0301\u0304\u030D"[tone])
+    .replace(/(?<=^[gm])$/, "ˋˊˉˈ"[tone])
+    .normalize("NFC");
 
 const yue = Object.fromEntries(
   jyutpingTable
@@ -119,24 +121,23 @@ const yue = Object.fromEntries(
         if (mcs.some(mc => mc.initial.sjeng == "疑"))
           initial = initial.replace(/(?<=^q?)(?=[jv]?$)/, "g");
         if (mcs.some(mc => mc.initial.sjeng == "日"))
-          initial = initial.replace(/(?<=^q?)j?(?=$)/, "nj");
+          initial = initial.replace(/(?<=^q?)j?(?=$)/, "ṇ");
         if (mcs.some(mc => mc.initial.sjeng == "匣"))
           initial = initial
             .replace(/^(?=[jv]?$)/, "h")
             .replace(/w/, "hv");
-        if (mcs.some(mc => mc.initial.sjeng == "曉"))
+        if (mcs.some(mc => ["曉", "見", "溪"].includes(mc.initial.sjeng)))
           initial = initial
             .replace(/^(?<=^q)(?=[jv]?$)/, "x")
             .replace(/f/, "xv");
-
-        if (mcs.some(mc => mc.initial.sjeng == "日"))
-          initial = initial.replace(/(?<=^q?)j?(?=$)/, "ň");
+        if (mcs.some(mc => mc.initial.sjeng == "滂"))
+          initial = initial.replace(/^f/, "fx");
         if (mcs.every(mc => !["精", "清", "從", "心", "邪",].includes(mc.initial.sjeng)))
           initial = initial
-            .replace(/s/, "š")
-            .replace(/z/, "ž")
-            .replace(/ŧ/, "ť")
-            .replace(/đ/, "ď");
+            .replace(/s/, "ṣ")
+            .replace(/z/, "ẓ")
+            .replace(/ŧ/, "ṭ")
+            .replace(/đ/, "ḍ");
 
         if (mcs.some(mc => mc.final.sjep == "止"))
           final = final.replace(/ej/, "i")
@@ -165,4 +166,4 @@ for (let [c, vs] of Object.entries(yue))
 
 const cs = process.argv[2] || "君子聖哲";
 for (const c of cs)
-  console.log(yue[c].map(x => x[3]));
+  console.log(yue[c].map(xs => showComb(...xs.slice(0, 3)).concat(xs.slice(-1))));
