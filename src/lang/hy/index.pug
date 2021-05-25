@@ -1,0 +1,78 @@
+extend /_layout.pug
+
+block head
+	- const title = "armenian"
+	- const tags = ["draft"]
+
+block main
+	.textareas
+		textarea(lang="hy")#0.
+			# ՄԱՐԴՈՒ ԻՐԱՎՈՒՆՔՆԵՐԻ ՀԱՄԸՆԴՀԱՆՈՒՐ ՀՌՉԱԿԱԳԻՐ
+			## Հոդված 1
+			Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։
+		textarea#1
+
+	table.c
+		tr
+			th
+			th.v: span glottal
+			th.v: span velar
+			th.v: span palatal
+			th(colspan=2).v: span dental
+			th.v: span labial
+		tr
+			th vowel
+			td
+			td.hy i
+			td.hy e
+			td.hy a
+			td.hy o
+			td.hy u
+		tr
+			th tenuis
+			td
+			td.hy k
+			td.hy č
+			td.hy c
+			td.hy t
+			td.hy p
+		tr
+			th aspirated
+			td
+			td.hy k'
+			td.hy č'
+			td.hy c'
+			td.hy t'
+			td.hy p'
+		tr
+			th voiced
+			td
+			td.hy g
+			td.hy ǯ
+			td.hy ʒ
+			td.hy d
+			td.hy b
+		tr
+			th fricative
+			td.hy h
+			td.hy x
+			td.hy š
+			td.hy s
+			td.hy
+			td.hy (f)
+		tr
+			th v. fricative
+			td
+			td.hy ğ
+			td.hy ž
+			td.hy z
+			td.hy
+			td.hy w
+		tr
+			th sonorant
+			td
+			td
+			td
+			td.hy l
+			td.hy n
+			td.hy m

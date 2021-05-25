@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   f(0)();
 
-  for (const e of document.getElementsByClassName("ka"))
+  for (const e of document.getElementsByClassName("hy"))
     e.innerHTML = convert[1](e.innerHTML);
 });
 
@@ -31,18 +31,21 @@ const table = [
   ["ի", "i"],
   ["լ", "l"],
   ["խ", "x"],
+  ["ց", "c'"],
   ["ծ", "c"],
+  ["ք", "k'"],
   ["կ", "k"],
   ["հ", "h"],
   ["ձ", "ʒ"],
   ["ղ", "ğ"],
+  ["չ", "č'"],
   ["ճ", "č"],
   ["մ", "m"],
   ["յ", "j"],
   ["ն", "n"],
   ["շ", "š"],
   ["ո", "o"],
-  ["չ", "č'"],
+  ["փ", "p'"],
   ["պ", "p"],
   ["ջ", "ǯ"],
   ["ռ", "ŕ"],
@@ -50,14 +53,11 @@ const table = [
   ["վ", "w"],
   ["տ", "t"],
   ["ր", "r"],
-  ["ց", "c;"],
   ["ւ", "v"],
-  ["փ", "p'"],
-  ["ք", "k'"],
   ["օ", "ō"],
   ["ֆ", "f"],
   ["ու", "u"],
-  ["և", "ev"],
+  ["և", "ew"],
 ];
 
 const convert = [

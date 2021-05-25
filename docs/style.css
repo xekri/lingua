@@ -179,7 +179,8 @@ table {
   border-collapse: collapse;
   margin: 16px; }
   table th {
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: right; }
   table th, table td {
     padding: 8px; }
   table tbody {
@@ -246,3 +247,12 @@ ruby {
   stroke-dasharray: 700px;
   stroke-dashoffset: 700px;
   animation: draw 2s linear infinite; }
+
+table.c td {
+  text-align: center; }
+
+table th.v {
+  vertical-align: bottom;
+  text-align: center; }
+  table th.v span {
+    writing-mode: vertical-lr; }
