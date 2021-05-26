@@ -1,22 +1,23 @@
 body {
   font-family: "Noto Sans";
   font-weight: lighter;
-  background-color: black;
-  color: white;
-  font-weight: 300; }
-  body textarea {
-    color: inherit;
-    background-color: transparent;
-    font-size: 125%;
-    width: 50%;
-    height: 90%; }
-    @media screen and (orientation: portrait) {
-      body textarea {
-        width: 100%;
-        height: 45%; } }
-  body select, body option {
-    color: inherit;
-    background-color: black; }
-  body h1, body textarea, body select, body option {
-    font-family: inherit;
-    font-weight: inherit; }
+}
+body textarea {
+  font-size: inherit;
+  background-color: transparent;
+  width: 50%;
+  height: 90%;
+  resize: none;
+}
+body textarea:not(:first-of-type) {
+  border-left: none;
+}
+body select, body option {
+  color: inherit;
+}
+body h1, body textarea, body select, body option {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */
