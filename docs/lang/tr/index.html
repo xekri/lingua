@@ -16,7 +16,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/sumi.svg" type="image/svg+xml">
-    <title>sumi / language</title>
+    <title>sumi / turkish</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -26,7 +26,7 @@
       
     </script>
     <meta name="twitter:site" content="@smiqy">
-    <meta name="twitter:title" content="sumi / language">
+    <meta name="twitter:title" content="sumi / turkish">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
     <meta name="twitter:card" content="summary">
@@ -58,26 +58,45 @@
     <main>
       <article>
         <p>⚠ þis website {use google analytics, not be mobile-friendly}.</p>
-        <section id="language">
-          <h1><a href="#language">#</a> 
-language
+        <section id="turkish">
+          <h1><a href="#turkish">#</a> 
+turkish
           </h1>
-          <p>language and orthography.</p>
+          <div class="textareas">
+            <textarea id="0"># İnsan hakları evrensel beyannamesi
+
+## Madde 1
+Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
+Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
+</textarea>
+            <textarea id="1"></textarea>
+          </div>
           <ul>
-            <li><a href="https://xekri.github.io/english">artificial dialect of english</a></li>
-            <li><a href="ja">japanese romanization</a></li>
-            <li><a href="pl">polish cyrillization</a></li>
-            <li><a href="interslavic">artificial dialect of interslavic</a></li>
-            <li><a href="tr">turkish orthography</a></li>
-            <li><a href="ka">georgian romanization</a></li>
-            <li><a href="hy">armenian romanization</a></li>
-            <li><a href="https://github.com/xekri/chinese">chinese romanization</a></li>
-            <li><a href="https://github.com/xekri/yue">yue romanization</a></li>
-            <!--li: a(href=`https://${author.github}.github.io/interslavic-minimal/`) interslavic minimal-->
-            <li><a href="https://xekri.github.io/romanize-san/">sanskrit romanization</a></li>
-            <!--li: a(href="https://cdpn.io/sumigv/debug/poEyLrY/vPrKKgwXJeor") greek-->
-            <!--li: a(href="https://cdpn.io/sumigv/debug/WNGveym/dGMXWjJDORGk") russian-->
-            <!--li: a(href="vn") vietnamese-->
+            <li>consonant
+              <ul>
+                <li>ç, c ↦ ṭ, ḍ</li>
+                <li>ş, j ↦ ṣ, ẓ</li>
+                <li>y ↦ j</li>
+              </ul>
+            </li>
+            <li>vowel
+              <ul>
+                <li>ı, i ↦ î, ǐ</li>
+                <li>a, e ↦ â, ǎ</li>
+                <li>o, ö ↦ ô, ǒ</li>
+                <li>u, ü ↦ û, ǔ</li>
+              </ul>
+            </li>
+            <li>the same diacritics (ˆ or ˇ) in a row on vowels in a word can be omitted except the initial one.
+              <ul>
+                <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranḍi</li>
+              </ul>
+            </li>
+            <li>the initial vowel with no diacritic in a word is thought to be with ˆ by default.
+              <ul>
+                <li>arkadaş ↦ ârkâdâṣ ↦ ârkadaṣ ↦ arkadaṣ</li>
+              </ul>
+            </li>
           </ul>
         </section>
         <!--+section("")include _discus.pug
