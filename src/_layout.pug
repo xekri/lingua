@@ -55,7 +55,6 @@ html
     meta(name="twitter:card", content="summary")
 
   body
-    #nav-switch
     nav
       #nav-in
         div#logo
@@ -85,7 +84,10 @@ html
 
     main(class=verticalMain ? "vertical" : "")
       article
-        p ⚠ þis website {use google analytics, not be mobile-friendly}.
+        p
+          | ⚠ this website uses Google Analytics. this website is not mobile-friendly.
+          br
+          | ⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。
 
         +section(title, tags)
           block main

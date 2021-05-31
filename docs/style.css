@@ -25,15 +25,8 @@
 * {
   box-sizing: border-box; }
 
-.mobile {
-  display: none; }
-  @media screen and (max-devive-width: 1080px) {
-    .mobile {
-      display: block; } }
-
 .center {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   text-align: center; }
@@ -52,7 +45,7 @@ body {
   width: 100%;
   color: #DDD;
   background-color: #000;
-  font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif;
+  font-family: "Nishiki Kana", "Noto Sans", "Noto Sans TC", sans-serif;
   font-weight: 100; }
 
 main {
@@ -63,23 +56,16 @@ main {
   width: calc(100% - 240px - 32px);
   overflow: auto;
   margin-left: 272px;
-  padding: 32px; }
+  padding: 32px;
+  font-size: inherit; }
   main:not(.vertical) {
     padding-top: 0;
     padding-left: 0; }
   main.vertical {
     writing-mode: vertical-lr; }
-  @media screen and (max-device-width: 1080px) {
-    main {
-      padding: 0; } }
   main article {
     margin: 0;
     padding: 0; }
-    @media screen and (max-device-width: 1080px) {
-      main article {
-        width: 100%;
-        padding-inline-start: 0;
-        padding-inline-end: 0; } }
 
 nav {
   z-index: 50;
@@ -88,18 +74,10 @@ nav {
   margin: 0;
   position: fixed;
   border-right: 1px #DDD solid;
-  top: 0; }
+  top: 0;
+  overflow: scroll; }
   nav #menu ul {
     margin-top: 32px; }
-    @media screen and (max-device-width: 1080px) {
-      nav #menu ul li:not(:first-of-type) {
-        margin-top: 32px; } }
-  @media screen and (max-device-width: 1080px) {
-    nav {
-      padding-bottom: 32px;
-      display: none;
-      background-color: #000;
-      overflow-y: scroll; } }
   nav ul {
     margin-left: 16px;
     padding-left: 0; }
@@ -118,25 +96,8 @@ nav {
       width: 100%;
       text-align: center; }
 
-#nav-switch {
-  z-index: 100;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0; }
-  @media screen and (max-device-width: 1080px) {
-    #nav-switch {
-      display: block;
-      width: 96px;
-      height: 96px;
-      background-color: #DDD;
-      opacity: 25%; } }
-
 main section {
   margin-block-end: 32px; }
-  @media screen and (max-device-width: 1080px) {
-    main section {
-      margin-block-end: 0; } }
   main section section {
     margin-block-end: 0;
     overflow-x: auto; }
@@ -151,9 +112,6 @@ section, .my-div {
     margin-block-end: 0; }
   section section, section .my-div, .my-div section, .my-div .my-div {
     margin-block-start: 32px; }
-    @media screen and (max-device-width: 1080px) {
-      section section, section .my-div, .my-div section, .my-div .my-div {
-        overflow-x: auto; } }
   section h1, .my-div h1 {
     margin: 0;
     margin-block-end: 32px;
@@ -250,16 +208,10 @@ details:focus, summary:focus {
 ruby {
   ruby-align: center;
   margin-inline-start: -3px; }
-  main.vertical ruby {
-    ruby-position: under; }
 
 #logo {
   text-align: center; }
   #logo svg {
-    stroke: white;
-    stroke-dasharray: 700px;
-    stroke-dashoffset: 700px;
-    animation: draw 2s linear infinite;
     margin: auto; }
 
 table.c td {

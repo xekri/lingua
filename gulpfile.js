@@ -63,14 +63,13 @@ const js = done => {
 const other = done => {
   gulp
     .src([
+      `${paths.src}/**/*.*`,
       `${paths.src}/**/*`,
       `!${paths.src}/**/*.pug`,
       `!${paths.src}/**/*.sass`,
       `!${paths.src}/**/*.js`,
     ])
-    .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
+    .pipe(plumber())
     .pipe(gulp.dest(paths.dst))
     .pipe(browserSync.stream());
   done();
@@ -80,6 +79,7 @@ const watch = done => {
   gulp.watch(`${paths.src}/**/*.sass`).on('change', gulp.series(sass_, browserSync.reload));
   gulp.watch(`${paths.src}/**/*.pug`).on('change', gulp.series(pug_, browserSync.reload));
   gulp.watch(`${paths.src}/**/*.js`).on('change', gulp.series(js, browserSync.reload));
+  gulp.watch(`${paths.src}/**/*.*`).on('change', gulp.series(other, browserSync.reload));
   gulp.watch(`${paths.src}/**/*`).on('change', gulp.series(other, browserSync.reload));
   done();
 };

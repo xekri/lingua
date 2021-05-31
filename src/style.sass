@@ -1,7 +1,5 @@
 $space: 32px
 $navWidth: 240px
-$thresh: 1080px
-$mobileSwitchHeight: 56pt
 $color: #DDD
 $bgcolor: #000
 
@@ -35,14 +33,8 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 *
   box-sizing: border-box
 
-.mobile
-  display: none
-  @media screen and (max-devive-width: $thresh)
-    display: block
-
 .center
   width: 100%
-  height: 100%
   margin: 0
   padding: 0
   text-align: center
@@ -65,7 +57,7 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif
+  font-family: "Nishiki Kana", "Noto Sans", "Noto Sans TC", sans-serif
   font-weight: 100
 
 main
@@ -77,22 +69,16 @@ main
   overflow: auto
   margin-left: $navWidth + $space
   padding: $space
+  font-size: inherit
   &:not(.vertical)
     padding-top: 0
     padding-left: 0
   &.vertical
     writing-mode: vertical-lr
 
-  @media screen and (max-device-width:$thresh)
-    padding: 0
-
   article
     margin: 0
     padding: 0
-    @media screen and (max-device-width:$thresh)
-      width: 100%
-      padding-inline-start: 0
-      padding-inline-end: 0
 
 nav
   z-index: 50
@@ -102,19 +88,10 @@ nav
   position: fixed
   border-right: 1px $color solid
   top: 0
+  overflow: scroll
 
   #menu ul
     margin-top: $space
-
-    @media screen and (max-device-width:$thresh)
-      li:not(:first-of-type)
-        margin-top: $space
-
-  @media screen and (max-device-width:$thresh)
-    padding-bottom: $space
-    display: none
-    background-color: $bgcolor
-    overflow-y: scroll
 
   ul
     margin-left: 16px
@@ -135,25 +112,9 @@ nav
       margin-bottom: $space
       width: 100%
       text-align: center
-      @media screen and (max-device-width:$thresh)
-
-#nav-switch
-  z-index: 100
-  display: none
-  position: fixed
-  top: 0
-  left: 0
-  @media screen and (max-device-width:$thresh)
-    display: block
-    width: 96px
-    height: 96px
-    background-color: $color
-    opacity: 25%
 
 main section
   margin-block-end: $space
-  @media screen and (max-device-width:$thresh)
-    margin-block-end: 0
 
   section
     margin-block-end: 0
@@ -171,8 +132,6 @@ section, .my-div
 
   section, .my-div
     margin-block-start: $space
-    @media screen and (max-device-width:$thresh)
-      overflow-x: auto
 
   h1
     margin: 0
@@ -211,7 +170,6 @@ a
   &:active
   main.vertical &
     //text-decoration: none
-    //border-block-end: 4px solid #FFF4
 
 table
   border-collapse: collapse
@@ -293,15 +251,11 @@ ruby
   margin-inline-start: -3px
 
   main.vertical &
-    ruby-position: under
+    //ruby-position: under
 
 #logo
   text-align: center
   svg
-    stroke: white
-    stroke-dasharray: 700px
-    stroke-dashoffset: 700px
-    animation: draw 2s linear infinite
     margin: auto
 
 table

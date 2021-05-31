@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // mobile menu switch
-  const sw = document.getElementById("nav-switch");
-  const nav = document.getElementsByTagName("nav")[0];
-  sw.onclick = () => {
-    nav.style["display"] =
-      nav.style["display"] === "none" ?
-        "block" :
-        "none";
-  };
-
   // submenu
   const section = document.getElementsByTagName("section")[0];
   const subsections = Array.prototype.filter.call(section.childNodes, child => child.tagName === "SECTION");

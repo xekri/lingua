@@ -2,12 +2,12 @@ extend /_layout.pug
 
 block head
 	-
-		const title = author.id
-		const tags = ["language='english analytic'"]
-		const isRoot = true
+		const title = author.id;
+		const tags = ["language=\"english reduce'en\""];
+		const isRoot = true;
 
 block main
-	p website introduce auþor sumi and his work.
+	p website introduce auþor sumi and work of he.
 
 	mixin entry(year, day, path, comment)
 		tr
@@ -24,5 +24,6 @@ block main
 				th day
 				th path
 				th revision
+			+entry(12021, 150, "author", "add vertical page. remove mobile option.")
 			+entry(12021, 146, "lang/tr", "add turkish romanization.")
 			+entry(12021, 144, ".", "add history of revision.")
