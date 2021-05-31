@@ -48,6 +48,8 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100%;
   color: #DDD;
   background-color: #000;
   font-family: "Nishiki Kana", "Noto Sans TC", "Noto Sans", sans-serif;
@@ -56,26 +58,31 @@ body {
 main {
   margin: 0;
   padding: 0;
-  margin-left: 240px;
-  margin-right: 32px;
-  padding-left: 32px; }
+  top: 0;
+  height: 100%;
+  width: calc(100% - 240px - 32px);
+  overflow: auto;
+  margin-left: 272px;
+  padding: 32px; }
+  main:not(.vertical) {
+    padding-top: 0;
+    padding-left: 0; }
+  main.vertical {
+    writing-mode: vertical-lr; }
   @media screen and (max-device-width: 1080px) {
     main {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 0; } }
+      padding: 0; } }
   main article {
     margin: 0;
     padding: 0; }
     @media screen and (max-device-width: 1080px) {
       main article {
         width: 100%;
-        padding-left: 0;
-        padding-right: 0; } }
+        padding-inline-start: 0;
+        padding-inline-end: 0; } }
 
 nav {
   z-index: 50;
-  max-width: calc(100% / 3);
   width: 240px;
   height: 100%;
   margin: 0;
@@ -126,43 +133,45 @@ nav {
       opacity: 25%; } }
 
 main section {
-  margin-bottom: 32px; }
+  margin-block-end: 32px; }
   @media screen and (max-device-width: 1080px) {
     main section {
-      margin-bottom: 0; } }
+      margin-block-end: 0; } }
   main section section {
-    margin-bottom: 0;
+    margin-block-end: 0;
     overflow-x: auto; }
 
 section, .my-div {
   margin: 0;
   padding: 0;
-  padding-left: 32px;
+  padding-inline-start: 32px;
   border: solid #DDD;
   border-width: 1px 0 0 1px; }
+  section:last-child, .my-div:last-child {
+    margin-block-end: 0; }
   section section, section .my-div, .my-div section, .my-div .my-div {
-    margin-top: 32px; }
+    margin-block-start: 32px; }
     @media screen and (max-device-width: 1080px) {
       section section, section .my-div, .my-div section, .my-div .my-div {
         overflow-x: auto; } }
   section h1, .my-div h1 {
     margin: 0;
-    margin-bottom: 32px;
+    margin-block-end: 32px;
     font-weight: inherit;
     font-size: inherit; }
 
 section {
-  padding-top: 32px; }
+  padding-block-start: 32px; }
 
 .my-div {
-  margin-bottom: 32px; }
+  margin-block-end: 32px; }
   .my-div .my-div {
-    margin-bottom: 0; }
+    margin-block-end: 0; }
 
 .tile section {
   display: inline-block;
   width: fit-content;
-  margin-right: 32px;
+  margin-inline-end: 32px;
   vertical-align: top; }
 
 figure {
@@ -184,19 +193,19 @@ table {
   table th, table td {
     padding: 8px; }
   table tbody {
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD; }
+    border-block-start: 1px solid #DDD;
+    border-block-end: 1px solid #DDD; }
   table:not(.transpose) tr + tr {
-    border-top: 1px solid #444; }
+    border-block-start: 1px solid #444; }
   table.transpose tr {
     display: block;
     float: left; }
   table.transpose th, table.transpose td {
     display: block; }
   table.transpose td + td, table.transpose td + th, table.transpose th + td, table.transpose th + th {
-    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+    border-block-start: 1px solid rgba(255, 255, 255, 0.25); }
   table.transpose tr + tr {
-    border-left: 1px solid rgba(255, 255, 255, 0.25); }
+    border-inline-start: 1px solid rgba(255, 255, 255, 0.25); }
 
 ul, ol {
   text-align: left;
@@ -240,13 +249,18 @@ details:focus, summary:focus {
 
 ruby {
   ruby-align: center;
-  margin-left: -3px; }
+  margin-inline-start: -3px; }
+  main.vertical ruby {
+    ruby-position: under; }
 
-#logo svg {
-  stroke: white;
-  stroke-dasharray: 700px;
-  stroke-dashoffset: 700px;
-  animation: draw 2s linear infinite; }
+#logo {
+  text-align: center; }
+  #logo svg {
+    stroke: white;
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 700px;
+    animation: draw 2s linear infinite;
+    margin: auto; }
 
 table.c td {
   text-align: center; }

@@ -60,6 +60,8 @@ h1, #menu
 body
   margin: 0
   padding: 0
+  height: 100vh
+  width: 100%
   color: $color
   background-color: $bgcolor
 
@@ -69,25 +71,31 @@ body
 main
   margin: 0
   padding: 0
-  margin-left: $navWidth
-  margin-right: $space
-  padding-left: $space
-  @media screen and (max-device-width:$thresh)
-    margin-left: 0
-    margin-right: 0
+  top: 0
+  height: 100%
+  width: calc(100% - #{$navWidth} - #{$space})
+  overflow: auto
+  margin-left: $navWidth + $space
+  padding: $space
+  &:not(.vertical)
+    padding-top: 0
     padding-left: 0
+  &.vertical
+    writing-mode: vertical-lr
+
+  @media screen and (max-device-width:$thresh)
+    padding: 0
 
   article
     margin: 0
     padding: 0
     @media screen and (max-device-width:$thresh)
       width: 100%
-      padding-left: 0
-      padding-right: 0
+      padding-inline-start: 0
+      padding-inline-end: 0
 
 nav
   z-index: 50
-  max-width: calc(100% / 3)
   width: $navWidth
   height: 100%
   margin: 0
@@ -143,45 +151,47 @@ nav
     opacity: 25%
 
 main section
-  margin-bottom: $space
+  margin-block-end: $space
   @media screen and (max-device-width:$thresh)
-    margin-bottom: 0
+    margin-block-end: 0
 
   section
-    margin-bottom: 0
+    margin-block-end: 0
     overflow-x: auto
 
 section, .my-div
   margin: 0
   padding: 0
-  padding-left: $space
+  padding-inline-start: $space
   border: solid $color
   border-width: 1px 0 0 1px
   //background-color: #FFF2
+  &:last-child
+    margin-block-end: 0
 
   section, .my-div
-    margin-top: $space
+    margin-block-start: $space
     @media screen and (max-device-width:$thresh)
       overflow-x: auto
 
   h1
     margin: 0
-    margin-bottom: $space
+    margin-block-end: $space
     font-weight: inherit
     font-size: inherit
 
 section
-  padding-top: $space
+  padding-block-start: $space
 
 .my-div
-  margin-bottom: $space
+  margin-block-end: $space
   .my-div
-    margin-bottom: 0
+    margin-block-end: 0
 
 .tile section
   display: inline-block
   width: fit-content
-  margin-right: $space
+  margin-inline-end: $space
   vertical-align: top
 
 figure
@@ -199,6 +209,9 @@ a
     // text-shadow: none
   &:hover
   &:active
+  main.vertical &
+    //text-decoration: none
+    //border-block-end: 4px solid #FFF4
 
 table
   border-collapse: collapse
@@ -212,14 +225,14 @@ table
     padding: 8px
 
   tbody
-    border-top: 1px solid $color
-    border-bottom: 1px solid $color
+    border-block-start: 1px solid $color
+    border-block-end: 1px solid $color
 
   &:not(.transpose)
     td + td, td + th, th + td, th + th
       //border-left: 1px solid #444
     tr + tr
-      border-top: 1px solid #444
+      border-block-start: 1px solid #444
 
   &.transpose
     tr
@@ -229,9 +242,9 @@ table
       display: block
 
     td + td, td + th, th + td, th + th
-      border-top: 1px solid rgba(255, 255, 255, .25)
+      border-block-start: 1px solid rgba(255, 255, 255, .25)
     tr + tr
-      border-left: 1px solid rgba(255, 255, 255, .25)
+      border-inline-start: 1px solid rgba(255, 255, 255, .25)
 
 ul, ol
   text-align: left
@@ -277,14 +290,19 @@ details, summary
 
 ruby
   ruby-align: center
-  margin-left: -3px
+  margin-inline-start: -3px
+
+  main.vertical &
+    ruby-position: under
 
 #logo
+  text-align: center
   svg
     stroke: white
     stroke-dasharray: 700px
     stroke-dashoffset: 700px
     animation: draw 2s linear infinite
+    margin: auto
 
 table
   &.c td

@@ -56,35 +56,34 @@ html
 
   body
     #nav-switch
-    .center
-      nav
-        #nav-in
-          div#logo
-            a(href="/")
-              img(src=icon, width="50%")
-          #datetime
-          +div("menu")
-            ul
-              li: a(href="/") /
-              li: a(href="/author") auþor
-              li: a(href="/suzuri-mituru") suzuri & mituru
-              li: a(href="/fav") favorite
-              // li: a(href="/thought") thought
-              li: a(href="/work") work
-              li: a(href="/misc") misc
+    nav
+      #nav-in
+        div#logo
+          a(href="/")
+            img(src=icon, width="50%")
+        #datetime
+        +div("menu")
+          ul
+            li: a(href="/") /
+            li: a(href="/author") auþor
+            li: a(href="/suzuri-mituru") suzuri & mituru
+            li: a(href="/fav") favorite
+            // li: a(href="/thought") thought
+            li: a(href="/work") work
+            li: a(href="/misc") misc
 
-            +div("submenu")
+          +div("submenu")
 
-          center
-            a(
-              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-              , class="twitter-share-button"
-              , data-show-count="true"
-              , data-via=author.twitter
-            ) Tweet
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        center
+          a(
+            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            , class="twitter-share-button"
+            , data-show-count="true"
+            , data-via=author.twitter
+          ) Tweet
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    main
+    main(class=verticalMain ? "vertical" : "")
       article
         p ⚠ þis website {use google analytics, not be mobile-friendly}.
 
