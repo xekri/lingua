@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+    </script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/misc/date/date.js"></script>
+    <script src="/script.js"></script>
+    <!-- local files-->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="icon" href="/images/sumi.svg" type="image/svg+xml">
+    <title>sumi / latin</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
+      })
+      
+    </script>
+    <meta name="twitter:site" content="@smiqy">
+    <meta name="twitter:title" content="sumi / latin">
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
+    <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
+    <meta name="twitter:card" content="summary">
+  </head>
+  <body>
+    <nav>
+      <div id="nav-in">
+        <div id="logo"><a href="/"><img src="/images/sumi.svg" width="50%"></a></div>
+        <div id="datetime"></div>
+        <div class="my-div" id="menu">
+          <ul>
+            <li><a href="/">/</a></li>
+            <li><a href="/author">auþor</a></li>
+            <li><a href="/suzuri-mituru">suzuri & mituru</a></li>
+            <li><a href="/fav">favorite</a></li>
+            <!-- li: a(href="/thought") thought-->
+            <li><a href="/work">work</a></li>
+            <li><a href="/misc">misc</a></li>
+          </ul>
+          <div class="my-div" id="submenu">
+          </div>
+        </div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="smiqy">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+      </div>
+    </nav>
+    <main>
+      <article>
+        <p>⚠ this website uses Google Analytics. this website is not mobile-friendly.<br>⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。</p>
+        <section id="latin">
+          <div class="tags">
+            <div class="tag">draft</div>
+          </div>
+          <h1><a href="#latin">#</a> 
+latin
+          </h1>
+          <div class="textareas"></div>
+          <section id="declension">
+            <h1><a href="#declension">#</a> 
+declension
+            </h1>
+            <table>
+              <tr>
+                <th></th>
+                <th colspan="2">table (A-stem)</th>
+                <th colspan="2">master (O-stem)</th>
+                <th colspan="2">name (Con-stem)</th>
+                <th colspan="2">animal (I-stem)</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>Sg</th>
+                <th>Pl</th>
+                <th>Sg</th>
+                <th>Pl</th>
+                <th>Sg</th>
+                <th>Pl</th>
+                <th>Sg</th>
+                <th>Pl</th>
+              </tr>
+              <tr>
+                <th>Nom</th>
+                <td rowspan="2">mens-a</td>
+                <td rowspan="2">mens-ae</td>
+                <td>domin-us</td>
+                <td rowspan="2">domin-ī</td>
+                <td rowspan="3">nōmen</td>
+                <td rowspan="3">nōmin-a</td>
+                <td rowspan="3">animal</td>
+                <td rowspan="3">animāl-ia</td>
+              </tr>
+              <tr>
+                <th>Voc</th>
+                <td>domin-e</td>
+              </tr>
+              <tr>
+                <th>Acc</th>
+                <td>mens-am</td>
+                <td>mens-ās</td>
+                <td>domin-um</td>
+                <td>domin-ōs</td>
+              </tr>
+              <tr>
+                <th>Gen</th>
+                <td rowspan="2">mens-ae</td>
+                <td>mens-ārum</td>
+                <td>domin-ī</td>
+                <td>domin-ōrum</td>
+                <td>nōmin-is</td>
+                <td>nōmin-um</td>
+                <td>animāl-is</td>
+                <td>animāl-ium</td>
+              </tr>
+              <tr>
+                <th>Dat</th>
+                <td rowspan="2">mens-īs</td>
+                <td rowspan="2">domin-ō</td>
+                <td rowspan="2">domin-īs</td>
+                <td>nōmin-ī</td>
+                <td rowspan="2">nōmin-ibus</td>
+                <td rowspan="2">animāl-ī</td>
+                <td rowspan="2">animāl-ibus</td>
+              </tr>
+              <tr>
+                <th>Abl</th>
+                <td>mens-ā</td>
+                <td>nōmin-e</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <th>Gen</th>
+                <td>domin</td>
+                <td>domin-i</td>
+              </tr>
+              <tr>
+                <th>Acc</th>
+                <td>domin-um</td>
+                <td>domin-ium</td>
+              </tr>
+              <tr>
+                <th>Dat</th>
+                <td>domin-o</td>
+                <td>domin-io</td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <!--+section("")include _discus.pug
+        -->
+      </article>
+    </main>
+  </body>
+</html>

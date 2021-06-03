@@ -1,0 +1,77 @@
+extend /_layout.pug
+
+block head
+	- const title = "latin"
+	- const tags = ["draft"]
+
+block main
+	.textareas
+	+section("declension")
+		table
+			tr
+				th
+				th(colspan=2) table (A-stem)
+				th(colspan=2) master (O-stem)
+				th(colspan=2) name (Con-stem)
+				th(colspan=2) animal (I-stem)
+			tr
+				th
+				for i in [0, 1, 2, 3]
+					th Sg
+					th Pl
+			tr
+				th Nom
+				td(rowspan=2) mens-a
+				td(rowspan=2) mens-ae
+				td domin-us
+				td(rowspan=2) domin-ī
+				td(rowspan=3) nōmen
+				td(rowspan=3) nōmin-a
+				td(rowspan=3) animal
+				td(rowspan=3) animāl-ia
+			tr
+				th Voc
+				td domin-e
+			tr
+				th Acc
+				td mens-am
+				td mens-ās
+				td domin-um
+				td domin-ōs
+			tr
+				th Gen
+				td(rowspan=2) mens-ae
+				td mens-ārum
+				td domin-ī
+				td domin-ōrum
+				td nōmin-is
+				td nōmin-um
+				td animāl-is
+				td animāl-ium
+			tr
+				th Dat
+				td(rowspan=2) mens-īs
+				td(rowspan=2) domin-ō
+				td(rowspan=2) domin-īs
+				td nōmin-ī
+				td(rowspan=2) nōmin-ibus
+				td(rowspan=2) animāl-ī
+				td(rowspan=2) animāl-ibus
+			tr
+				th Abl
+				td mens-ā
+				td nōmin-e
+
+		table
+			tr
+				th Gen
+				td domin
+				td domin-i
+			tr
+				th Acc
+				td domin-um
+				td domin-ium
+			tr
+				th Dat
+				td domin-o
+				td domin-io

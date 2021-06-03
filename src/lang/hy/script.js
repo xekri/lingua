@@ -14,53 +14,67 @@ document.addEventListener("DOMContentLoaded", () => {
   f(0)();
 
   for (const e of document.getElementsByClassName("hy"))
-    e.innerHTML = convert[1](e.innerHTML);
+    e.innerHTML = e.innerHTML ? `${convert[1](e.innerHTML)} (${e.innerHTML})` : "";
 });
 
 const table = [
   ["ա", "a"],
   ["բ", "b"],
-  ["գ", "g"],
+  ["գ", "c"],
   ["դ", "d"],
   ["ե", "e"],
   ["զ", "z"],
   ["է", "ē"],
   ["ը", "ə"],
   ["թ", "t'"],
-  ["ժ", "ž"],
+  ["ժ", "ẓ"],
   ["ի", "i"],
   ["լ", "l"],
   ["խ", "x"],
-  ["ց", "c'"],
-  ["ծ", "c"],
+  ["ց", "ŧ'"],
+  ["ծ", "ŧ"],
   ["ք", "k'"],
   ["կ", "k"],
   ["հ", "h"],
-  ["ձ", "ʒ"],
-  ["ղ", "ğ"],
-  ["չ", "č'"],
-  ["ճ", "č"],
+  ["ձ", "đ"],
+  ["ղ", "g"],
+  ["չ", "ṭ'"],
+  ["ճ", "ṭ"],
   ["մ", "m"],
   ["յ", "j"],
   ["ն", "n"],
-  ["շ", "š"],
+  ["շ", "ṣ"],
+  //["ու", "u"],
   ["ո", "o"],
   ["փ", "p'"],
   ["պ", "p"],
-  ["ջ", "ǯ"],
-  ["ռ", "ŕ"],
+  ["ջ", "ḍ"],
+  ["ռ", "r"],
   ["ս", "s"],
   ["վ", "w"],
   ["տ", "t"],
-  ["ր", "r"],
+  ["ր", "y"],
   ["ւ", "v"],
   ["օ", "ō"],
   ["ֆ", "f"],
-  ["ու", "u"],
   ["և", "ew"],
+  ["․", ":"],
+  ["։", "."],
+  ["֊", "-"],
+  ["՜", "!"],
+  ["՛", "*"],
+  ["՞", "?"],
 ];
 
 const convert = [
-  s => table.reduce((acc, [x, y]) => acc.replace(new RegExp(x, "gi"), y), s),
-  s => table.reduce((acc, [x, y]) => acc.replace(new RegExp(y, "gi"), x), s),
-]
+  s => table.reduce((acc, [x, y]) =>
+    acc
+      .replaceAll(x, y)
+      .replaceAll(x.toUpperCase(), y.toUpperCase()),
+    s),
+  s => table.reduce((acc, [x, y]) =>
+    acc
+      .replaceAll(y, x)
+      .replaceAll(y.toUpperCase(), x.toUpperCase()),
+    s),
+];

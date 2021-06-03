@@ -5,27 +5,164 @@ block head
   - const tags = ["draft"]
 
 block main
-  table
-    +trs([
-      "ア イ ウ 𛀀 オ".split(" "),
-      "a i u e o".split(" "),
-    ])
+  +section("vocabulary")
+    table
+      tr
+        td *我
+        td われ
+        td vale
+        td i
+        td noun
+      tr
+        td *汝
+        td なむち
+        td namti
+        td thou
+        td noun
+      tr
+        td *彼
+        td かれ
+        td kale
+        td he
+        td noun
+      tr
+        td *爲
+        td す
+        td s
+        td do
+        td verb
+      tr
+        td *往く
+        td ゆく
+        td juk
+        td go
+        td verb
+      tr
+        td *思ふ
+        td おもふ
+        td omop
+        td think
+        td verb
+      tr
+        td *食べる
+        td たべる
+        td tabel
+        td eat
+        td verb
+      tr
+        td *覺ゆ
+        td おぼゆ
+        td oboj
+        td feel
+        td verb
+      tr
+        td
+        td
+        td z
+        td not
+        td unreal \ verb
+      tr
+        td
+        td
+        td l
+        td can
+        td unreal \ verb
+      tr
+        td
+        td
+        td lel
+        td (passive)
+        td unreal \ verb
+      tr
+        td
+        td ば
+        td ba
+        td if
+        td unreal \ clause
+      tr
+        td
+        td ば
+        td ba
+        td because
+        td real \ clause
+      tr
+        td
+        td よ
+        td jo
+        td (command)
+        td real \ sentence
+      tr
+        td 天
+        td てん
+        td Ten
+        td
+        td
+      tr
+        td 地
+        td ぢ
+        td Di
+        td
+        td
+      tr
+        td 人
+        td にん
+        td Nin
+        td
+        td
+      tr
+        td 言
+        td げん
+        td Gen
+        td
+        td
+      tr
+        td 語
+        td ご
+        td Go
+        td
+        td
+      tr
+        td 思
+        td し
+        td Si
+        td
+        td
+      tr
+        td 考
+        td かう
+        td Kau
+        td
+        td
 
-  table
-    +trs([
-      "ア カ ガ サ ザ タ ダ ナ ハ バ マ ヤ ラ ワ".split(" "),
-      "(h) k c s z t d n p b m j l v".split(" "),
-    ])
 
-  table
-    +trs([
-　    ["ある日の事でございます。", "alu pi no koto de cozaimasu."],
-      ["御釋迦樣は極樂の蓮池のふちを、", "o-SjaKa-sama pa CokLak no pasuike no puti vo,"],
-      ["獨りでぶらぶら御步きになっていらっしゃいました。", "pitoli de bulabula o-alukini nalte ilassjai masita."],
-      ["池の中に咲いている蓮の花は、", "ike no naka ni saite vilu pasu no pana pa"],
-      ["みんな玉のようにまっ白で、", "minna tama no Jag ni massilo de,"],
-      ["そのまん中にある金色の蕊からは、", "sono mannaka ni alu Kim-ilo no Zui kala pa"],
-      ["何とも云えない好い匂が、", "nan to mo ipe nai joi nipopi ca"],
-      ["絕間なくあたりへ溢れて居ります。", "tajema naku atali pe apulete voli masu."],
-      ["極樂は丁度朝なのでございましょう。", "CokLak pa TjagDo asa na no de cozaimaseu."],
-    ])
+  +section("grammar")
+    table
+      tr
+        th
+        th verb
+      tr
+        th unreal
+        td -a
+      tr
+        th nounal
+        td -i
+      tr
+        th adjectival
+        td -u
+      tr
+        th real
+        td -e
+  +section("example")
+    +section("UDHR")
+      table
+        tr
+          th original
+          td すべての人間は、生れながらにして自由であり、かつ、尊厳と権利とについて平等である。人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。
+        tr
+          th kana
+          td すびの人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかれりゐて, たがひに同胞の精神をもちて行動すべく.
+        tr
+          th roman
+          td
+            | sub-i no NinKen pa, um-a l-i nacala ni s-i te DziIu nal-i te, katu, TsonGen to ConLi to ni tuk-i te BjagTag nal-u.
+            | NinKen pa, LiSjag to LagSim to vo sazuk-a l-i v-i te, tacap-i ni DugPau no TsjagZin vo mot-i te HagDug s-u bek-u.
