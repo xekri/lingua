@@ -149,7 +149,7 @@ const yue = Object.fromEntries(
           final = final.replace(/ov/, "u");
         if (mcs.some(mc => mc.final.sjep == "咸" && mc.final.ho == "開口" && mc.final.tongx == 1))
           final = final.replace(/ǝm/, "om");
-        if (mcs.some(mc => mc.final.sjep == "蟹"))
+        if (mcs.some(mc => ["蟹", "止"].includes(mc.final.sjep)))
           final = final.replace(/øj/, "uj");
 
         const triple = [initial, final, tone];
@@ -166,4 +166,4 @@ for (let [c, vs] of Object.entries(yue))
 
 const cs = process.argv[2] || "君子聖哲";
 for (const c of cs)
-  console.log(yue[c].map(xs => showComb(...xs.slice(0, 3)).concat(xs.slice(-1))));
+  console.log(yue[c].map(xs => show(...xs.slice(0, 3)).concat(xs.slice(-1))));

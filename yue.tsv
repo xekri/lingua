@@ -179,7 +179,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㒵	m	av	2	mavˉ	mav2	!
 㒶	k	ug	0	kugˋ	kug0	!
 㒷	x	ig	0	xigˋ	xig0	!
-㒸	z	øj	2	zøjˉ	zeoj2	
+㒸	z	uj	2	zujˉ	zuj2	
 㒹	t	in	0	tinˋ	tin0	
 㒺	m	og	1	mogˊ	mog1	!
 㒻	m	ov	2	movˉ	mov2	!
@@ -1234,7 +1234,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㢸	b	ǝn	3	bǝnˈ	brn3	
 㢹	ṣ	ǝn	0	ṣǝnˋ	sjrn0	!
 㢺		in	0	inˋ	in0	!
-㢻		øj	2	øjˉ	eoj2	
+㢻		uj	2	ujˉ	uj2	
 㢼	p	in	3	pinˈ	pin3	
 㢽	n	ej	2	nejˉ	nej2	!
 㢾	k	yn	2	kynˉ	kyn2	
@@ -1407,7 +1407,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㥦	x	im	3	ximˈ	xim3	
 㥦	h	im	3	himˈ	him3	
 㥧	ẓ	øn	2	ẓønˉ	zjeon2	!
-㥨	ẓ	øj	2	ẓøjˉ	zjeoj2	
+㥨	ẓ	uj	2	ẓujˉ	zjuj2	
 㥩	t	o	1	toˊ	to1	!
 㥫	t	øn	0	tønˋ	teon0	!
 㥬	b	og	0	bogˋ	bog0	!
@@ -1560,7 +1560,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㨂	t	ug	1	tugˊ	tug1	!
 㨃	t	øj	1	tøjˊ	teoj1	!
 㨄	ṭ	ǝv	0	ṭǝvˋ	tjrv0	!
-㨅	n	øj	2	nøjˉ	neoj2	
+㨅	n	uj	2	nujˉ	nuj2	
 㨆	l	ǝm	1	lǝmˊ	lrm1	!
 㨆	l	ǝm	2	lǝmˉ	lrm2	!
 㨇	b	o	0	boˋ	bo0	!
@@ -1688,7 +1688,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㩻	kx	i	0	kxiˋ	kxi0	
 㩼	ṭ	i	0	ṭiˋ	tji0	
 㩽	c	i	0	ciˋ	ci0	
-㩾	ṭ	øj	0	ṭøjˋ	tjeoj0	
+㩾	ṭ	uj	0	ṭujˋ	tjuj0	
 㩿	xv	ǝn	3	xvǝnˈ	xvrn3	
 㪀	q	y	0	qyˋ	qy0	!
 㪁	c	om	0	comˋ	com0	
@@ -1720,7 +1720,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㪚	ṣ	an	2	ṣanˉ	sjan2	!
 㪚	ṣ	an	1	ṣanˊ	sjan1	!
 㪛	ṭ	ǝm	1	ṭǝmˊ	tjrm1	!
-㪜	ṭx	øj	1	ṭxøjˊ	txjeoj1	
+㪜	ṭx	uj	1	ṭxujˊ	txjuj1	
 㪝	l	in	2	linˉ	lin2	
 㪞	m	ov	2	movˉ	mov2	!
 㪟	t	øn	0	tønˋ	teon0	!
@@ -1938,7 +1938,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㭭	p	an	3	panˈ	pan3	
 㭮	ṭ	an	3	ṭanˈ	tjan3	!
 㭯	ṭ	im	3	ṭimˈ	tjim3	
-㭰	ŧ	øj	1	ŧøjˊ	tseoj1	
+㭰	ŧ	uj	1	ŧujˊ	tsuj1	
 㭱	h	am	3	hamˈ	ham3	!
 㭲	c	ig	3	cigˈ	cig3	!
 㭳	x	av	2	xavˉ	xav2	!
@@ -1958,7 +1958,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㮂	k	ug	3	kugˈ	kug3	
 㮃	qv	i	0	qviˋ	qvi0	
 㮄	p	og	1	pogˊ	pog1	!
-㮅	ṭ	øj	0	ṭøjˋ	tjeoj0	
+㮅	ṭ	uj	0	ṭujˋ	tjuj0	
 㮆		in	3	inˈ	in3	!
 㮇	tx	im	2	tximˉ	txim2	
 㮈	n	oj	2	nojˉ	noj2	!
@@ -2168,7 +2168,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㱓	l	ig	0	ligˋ	lig0	!
 㱔	ṣ	e	0	ṣeˋ	sje0	!
 㱕	kv	i	0	kviˋ	kvi0	
-㱖	z	øj	2	zøjˉ	zeoj2	
+㱖	z	uj	2	zujˉ	zuj2	
 㱗	qj	ǝv	0	qjǝvˋ	qjrv0	!
 㱘	q	im	1	qimˊ	qim1	!
 㱙	qn	ǝv	1	qnǝvˊ	qnrv1	
@@ -2491,7 +2491,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㶜	q	yn	0	qynˋ	qyn0	!
 㶝	q	ig	2	qigˉ	qig2	!
 㶞	n	og	1	nogˊ	nog1	!
-㶟	l	øj	1	løjˊ	leoj1	
+㶟	l	uj	1	lujˊ	luj1	
 㶠		ig	3	igˈ	ig3	!
 㶡	d	aj	2	dajˉ	daj2	!
 㶢	k	ǝv	1	kǝvˊ	krv1	!
@@ -2966,7 +2966,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 㽴	ḍ	øg	2	ḍøgˉ	djeog2	
 㽵	ṭ	og	0	ṭogˋ	tjog0	
 㽶	k	ej	1	kejˊ	kej1	!
-㽷	ṣ	øj	2	ṣøjˉ	sjeoj2	
+㽷	ṣ	uj	2	ṣujˉ	sjuj2	
 㽸	ẓ	ǝm	0	ẓǝmˋ	zjrm0	
 㽹	fx	an	1	fxanˊ	fxan1	
 㽺	k	om	3	komˈ	kom3	
@@ -3410,7 +3410,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䄯	k	in	1	kinˊ	kin1	!
 䄰	g	a	0	gaˋ	ga0	!
 䄱	f	og	0	fogˋ	fog0	
-䄲	ṇ	øj	2	ṇøjˉ	njeoj2	
+䄲	ṇ	uj	2	ṇujˉ	njuj2	
 䄳	ṣ	in	0	ṣinˋ	sjin0	!
 䄴		yn	3	ynˈ	yn3	!
 䄵	l	ǝj	0	lǝjˋ	lrj0	!
@@ -3440,13 +3440,13 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䅎	j	ǝv	1	jǝvˊ	jrv1	!
 䅏	m	i	2	miˉ	mi2	
 䅐	k	in	1	kinˊ	kin1	!
-䅑	ṇ	øj	0	ṇøjˋ	njeoj0	
+䅑	ṇ	uj	0	ṇujˋ	njuj0	
 䅒	m	og	0	mogˋ	mog0	!
 䅓	k	y	1	kyˊ	ky1	
 䅔	ṭ	i	0	ṭiˋ	tji0	!
 䅕	k	øj	0	køjˋ	keoj0	!
 䅖	q	ǝm	0	qǝmˋ	qrm0	!
-䅗	s	øj	2	søjˉ	seoj2	
+䅗	s	uj	2	sujˉ	suj2	
 䅘	l	oj	0	lojˋ	loj0	
 䅙	m	ug	3	mugˈ	mug3	!
 䅚	x	yn	1	xynˊ	xyn1	
@@ -3496,7 +3496,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䆇	w	ug	2	wugˉ	wug2	!
 䆈	ḍ	i	2	ḍiˉ	dji2	!
 䆉	b	a	2	baˉ	ba2	!
-䆊	z	øj	2	zøjˉ	zeoj2	
+䆊	z	uj	2	zujˉ	zuj2	
 䆋	ṭx	ǝv	0	ṭxǝvˋ	txjrv0	!
 䆌	kx	ǝj	0	kxǝjˋ	kxrj0	!
 䆍	l	ug	0	lugˋ	lug0	
@@ -3683,7 +3683,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䈿	m	ig	3	migˈ	mig3	
 䉀	ṣ	y	2	ṣyˉ	sjy2	!
 䉁	l	ig	0	ligˋ	lig0	
-䉂	l	øj	1	løjˊ	leoj1	
+䉂	l	uj	1	lujˊ	luj1	
 䉃	ŧ	øg	1	ŧøgˊ	tseog1	
 䉄	l	ig	0	ligˋ	lig0	!
 䉅	ṭ	ǝm	3	ṭǝmˈ	tjrm3	!
@@ -3693,7 +3693,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䉉	k	u	0	kuˋ	ku0	
 䉊	w	an	2	wanˉ	wan2	!
 䉋	m	i	2	miˉ	mi2	
-䉌	z	øj	2	zøjˉ	zeoj2	
+䉌	z	uj	2	zujˉ	zuj2	
 䉍	k	an	1	kanˊ	kan1	!
 䉎	d	og	0	dogˋ	dog0	
 䉏	h	aj	1	hajˊ	haj1	!
@@ -4272,7 +4272,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䒕	s	iv	1	sivˊ	siv1	
 䒖	ṣ	øn	2	ṣønˉ	sjeon2	!
 䒗	x	ǝn	3	xǝnˈ	xrn3	
-䒘	s	øj	0	søjˋ	seoj0	
+䒘	s	uj	0	sujˋ	suj0	
 䒙	ḍ	og	0	ḍogˋ	djog0	!
 䒚	ṣ	iv	1	ṣivˊ	sjiv1	
 䒛	v	an	2	vanˉ	van2	!
@@ -5273,7 +5273,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䡲	ẓ	an	0	ẓanˋ	zjan0	
 䡳	ṣ	i	0	ṣiˋ	sji0	!
 䡴	ṭx	ug	0	ṭxugˋ	txjug0	
-䡵	z	øj	2	zøjˉ	zeoj2	
+䡵	z	uj	2	zujˉ	zuj2	
 䡶	px	ig	3	pxigˈ	pxig3	!
 䡷	h	ǝn	3	hǝnˈ	hrn3	!
 䡸	m	in	3	minˈ	min3	!
@@ -5708,7 +5708,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䨦	px	og	0	pxogˋ	pxog0	
 䨦	b	og	0	bogˋ	bog0	
 䨧	qj	ǝm	0	qjǝmˋ	qjrm0	!
-䨨	ṭ	øj	0	ṭøjˋ	tjeoj0	
+䨨	ṭ	uj	0	ṭujˋ	tjuj0	
 䨩	l	ig	0	ligˋ	lig0	!
 䨪	m	aj	0	majˋ	maj0	!
 䨫	m	ǝg	3	mǝgˈ	mrg3	!
@@ -5940,7 +5940,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䬍	xv	ǝn	3	xvǝnˈ	xvrn3	
 䬎	kv	og	3	kvogˈ	kvog3	
 䬏	b	ǝv	2	bǝvˉ	brv2	!
-䬐	ṇ	øj	0	ṇøjˋ	njeoj0	
+䬐	ṇ	uj	0	ṇujˋ	njuj0	
 䬑	v	i	2	viˉ	vi2	
 䬒	ṣ	ǝv	0	ṣǝvˋ	sjrv0	
 䬓	q	ǝm	2	qǝmˉ	qrm2	!
@@ -5999,7 +5999,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䭆	n	ǝg	3	nǝgˈ	nrg3	
 䭇	q	in	3	qinˈ	qin3	!
 䭈	k	in	0	kinˋ	kin0	
-䭉	s	øj	1	søjˊ	seoj1	
+䭉	s	uj	1	sujˊ	suj1	
 䭊	q	ig	1	qigˊ	qig1	!
 䭋	p	av	1	pavˊ	pav1	!
 䭌		u	0	uˋ	u0	!
@@ -6076,7 +6076,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䮑	l	øj	2	løjˉ	leoj2	!
 䮒	px	ov	0	pxovˋ	pxov0	
 䮓	ṭ	øg	3	ṭøgˈ	tjeog3	!
-䮔	ŧ	øj	0	ŧøjˋ	tseoj0	
+䮔	ŧ	uj	0	ŧujˋ	tsuj0	
 䮕	ṭ	yn	3	ṭynˈ	tjyn3	!
 䮖	ṭx	øg	0	ṭxøgˋ	txjeog0	!
 䮗	g	on	2	gonˉ	gon2	
@@ -6571,7 +6571,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䶃	h	om	0	homˋ	hom0	
 䶄	b	ig	0	bigˋ	big0	
 䶅	h	og	3	hogˈ	hog3	
-䶆	ṭ	øj	0	ṭøjˋ	tjeoj0	
+䶆	ṭ	uj	0	ṭujˋ	tjuj0	
 䶇	ḍ	ǝv	2	ḍǝvˉ	djrv2	!
 䶈	p	og	3	pogˈ	pog3	
 䶉	l	ǝv	0	lǝvˋ	lrv0	!
@@ -6618,7 +6618,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 䶱	d	ug	0	dugˋ	dug0	
 䶲	ṇ	im	0	ṇimˋ	njim0	
 䶳		øg	3	øgˈ	eog3	!
-䶴	ṭx	øj	0	ṭxøjˋ	txjeoj0	
+䶴	ṭx	uj	0	ṭxujˋ	txjuj0	
 䶵	ḍ	i	0	ḍiˋ	dji0	
 一	qj	ǝn	3	qjǝnˈ	qjrn3	
 丁	t	ig	0	tigˋ	tig0	
@@ -7265,7 +7265,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 倒	t	ov	2	tovˉ	tov2	
 倓	d	am	0	damˋ	dam0	
 倔	cv	ǝn	3	cvǝnˈ	cvrn3	
-倕	ẓ	øj	0	ẓøjˋ	zjeoj0	
+倕	ẓ	uj	0	ẓujˋ	zjuj0	
 倖	h	ǝg	2	hǝgˉ	hrg2	
 倗	b	ǝg	0	bǝgˋ	brg0	
 倘	tx	og	1	txogˊ	txog1	!
@@ -7283,7 +7283,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 倞	l	øg	2	løgˉ	leog2	
 借	ŧ	e	2	ŧeˉ	tse2	
 借	ŧ	e	1	ŧeˊ	tse1	
-倠	ṣ	øj	0	ṣøjˋ	sjeoj0	
+倠	ṣ	uj	0	ṣujˋ	sjuj0	
 倡	ṭx	øg	0	ṭxøgˋ	txjeog0	
 倡	ṭx	øg	2	ṭxøgˉ	txjeog2	
 倢	ŧ	in	3	ŧinˈ	tsin3	
@@ -8341,7 +8341,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 厙	ṣ	e	2	ṣeˉ	sje2	
 厚	h	ǝv	1	hǝvˊ	hrv1	
 厛	tx	eg	0	txegˋ	txeg0	!
-厜	z	øj	0	zøjˋ	zeoj0	
+厜	z	uj	0	zujˋ	zuj0	
 厝	ŧx	ov	2	ŧxovˉ	tsxov2	
 厞	w	ej	2	wejˉ	wej2	!
 原	g	yn	0	gynˋ	gyn0	
@@ -8384,7 +8384,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 去	x	y	2	xyˉ	xy2	
 去	x	y	1	xyˊ	xy1	
 厼		i	1	iˊ	i1	!
-厽	l	øj	1	løjˊ	leoj1	
+厽	l	uj	1	lujˊ	luj1	
 厾	t	ug	3	tugˈ	tug3	!
 叀	ṭ	yn	0	ṭynˋ	tjyn0	
 叁	ṣ	am	0	ṣamˋ	sjam0	!
@@ -8553,8 +8553,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 吶	qn	e	0	qneˋ	qne0	!
 吷	x	yn	3	xynˈ	xyn3	
 吸	kx	ǝm	3	kxǝmˈ	kxrm3	
-吹	ṭx	øj	0	ṭxøjˋ	txjeoj0	
-吹	ṭx	øj	2	ṭxøjˉ	txjeoj2	
+吹	ṭx	uj	0	ṭxujˋ	txjuj0	
+吹	ṭx	uj	2	ṭxujˉ	txjuj2	
 吺	t	ǝv	0	tǝvˋ	trv0	
 吻	m	ǝn	1	mǝnˊ	mrn1	
 吼	x	ǝv	2	xǝvˉ	xrv2	
@@ -9430,7 +9430,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 噼	bx	en	3	bxenˈ	bxen3	!
 噽	px	ej	1	pxejˊ	pxej1	!
 噾	qj	ǝm	0	qjǝmˋ	qjrm0	!
-噿	ŧ	øj	1	ŧøjˊ	tseoj1	
+噿	ŧ	uj	1	ŧujˊ	tsuj1	
 嚀	n	ig	0	nigˋ	nig0	
 嚁	d	ig	3	digˈ	dig3	!
 嚂	l	am	2	lamˉ	lam2	
@@ -9601,7 +9601,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 圊	ŧx	ig	0	ŧxigˋ	tsxig0	
 國	kv	og	3	kvogˈ	kvog3	
 圌	ḍ	yn	0	ḍynˋ	djyn0	
-圌	ẓ	øj	0	ẓøjˋ	zjeoj0	
+圌	ẓ	uj	0	ẓujˋ	zjuj0	
 圍	v	i	0	viˋ	vi0	
 圎		yn	0	ynˋ	yn0	!
 圏	x	yn	0	xynˋ	xyn0	!
@@ -9743,7 +9743,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 坿	w	u	2	wuˉ	wu2	
 垀	f	u	0	fuˋ	fu0	!
 垁	ḍ	i	2	ḍiˉ	dji2	!
-垂	ẓ	øj	0	ẓøjˋ	zjeoj0	
+垂	ẓ	uj	0	ẓujˋ	zjuj0	
 垃	l	am	3	lamˈ	lam3	!
 垃	ql	aj	0	qlajˋ	qlaj0	!
 垃	ql	a	0	qlaˋ	qla0	!
@@ -10083,7 +10083,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 墘	c	in	0	cinˋ	cin0	!
 墚	l	øg	0	løgˋ	leog0	!
 墛	qv	ǝj	2	qvǝjˉ	qvrj2	!
-墜	ḍ	øj	2	ḍøjˉ	djeoj2	
+墜	ḍ	uj	2	ḍujˉ	djuj2	
 墝	x	av	0	xavˋ	xav0	
 增	ŧ	ǝg	0	ŧǝgˋ	tsrg0	
 增	đ	ǝg	0	đǝgˋ	dzrg0	
@@ -10160,9 +10160,9 @@ character	initial	final	tone	roman	ascii	no-emc-data
 壕	h	ov	0	hovˋ	hov0	
 壖		yn	0	ynˋ	yn0	!
 壗	đ	øn	2	đønˉ	dzeon2	
-壘	l	øj	1	løjˊ	leoj1	
-壘	l	øj	2	løjˉ	leoj2	
-壘	l	øj	0	løjˋ	leoj0	
+壘	l	uj	1	lujˊ	luj1	
+壘	l	uj	2	lujˉ	luj2	
+壘	l	uj	0	lujˋ	luj0	
 壘	l	øn	3	lønˈ	leon3	
 壙	kxv	og	2	kxvogˉ	kxvog2	
 壚	l	ov	0	lovˋ	lov0	
@@ -10217,7 +10217,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 夆	f	ug	0	fugˋ	fug0	
 夈	ṭ	aj	0	ṭajˋ	tjaj0	!
 変	p	in	2	pinˉ	pin2	!
-夊	s	øj	0	søjˋ	seoj0	
+夊	s	uj	0	sujˋ	suj0	
 夋	ŧx	øn	0	ŧxønˋ	tsxeon0	
 夌	l	ig	0	ligˋ	lig0	
 夎	ŧ	o	2	ŧoˉ	tso2	
@@ -10594,7 +10594,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 娶	ŧx	y	1	ŧxyˊ	tsxy1	
 娶	ŧx	ov	1	ŧxovˊ	tsxov1	
 娶	ŧx	y	2	ŧxyˉ	tsxy2	
-娷	ṭ	øj	2	ṭøjˉ	tjeoj2	
+娷	ṭ	uj	2	ṭujˉ	tjuj2	
 娸	x	i	0	xiˋ	xi0	
 娹		in	0	inˋ	in0	!
 娺	tx	o	2	txoˉ	txo2	
@@ -11237,7 +11237,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 屣	ṣ	aj	1	ṣajˊ	sjaj1	
 層	đ	ǝg	0	đǝgˋ	dzrg0	
 履	l	i	1	liˊ	li1	
-履	l	øj	1	løjˊ	leoj1	
+履	l	uj	1	lujˊ	luj1	
 屧	s	in	3	sinˈ	sin3	
 屧	s	im	3	simˈ	sim3	
 屨	k	y	2	kyˉ	ky2	
@@ -11549,7 +11549,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 嶆	ḍ	ov	0	ḍovˋ	djov0	!
 嶇	kx	y	0	kxyˋ	kxy0	
 嶈	ŧx	øg	0	ŧxøgˋ	tsxeog0	
-嶉	ŧx	øj	0	ŧxøjˋ	tsxeoj0	
+嶉	ŧx	uj	0	ŧxujˋ	tsxuj0	
 嶊	ŧ	uj	1	ŧujˊ	tsuj1	
 嶋	t	ov	1	tovˊ	tov1	!
 嶌	t	ov	1	tovˊ	tov1	!
@@ -11594,7 +11594,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 嶰	h	aj	1	hajˊ	haj1	
 嶱	k	on	3	konˈ	kon3	!
 嶲	kxv	i	0	kxviˋ	kxvi0	
-嶲	z	øj	1	zøjˊ	zeoj1	
+嶲	z	uj	1	zujˊ	zuj1	
 嶳	d	ej	2	dejˉ	dej2	!
 嶴	q	ov	2	qovˉ	qov2	!
 嶴	q	av	2	qavˉ	qav2	!
@@ -11719,7 +11719,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 帢	x	ǝm	3	xǝmˈ	xrm3	
 帣	k	yn	2	kynˉ	kyn2	
 帤		y	0	yˋ	y0	
-帥	ṣ	øj	2	ṣøjˉ	sjeoj2	
+帥	ṣ	uj	2	ṣujˉ	sjuj2	
 帥	ṣ	øn	3	ṣønˈ	sjeon3	
 帨	s	uj	2	sujˉ	suj2	
 帩	ŧx	iv	2	ŧxivˉ	tsxiv2	
@@ -12491,8 +12491,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 悱	fx	i	1	fxiˊ	fxi1	
 悲	p	i	0	piˋ	pi0	
 悲	t	ǝg	3	tǝgˈ	trg3	
-悴	z	øj	2	zøjˉ	zeoj2	
-悴	z	øj	1	zøjˊ	zeoj1	
+悴	z	uj	2	zujˉ	zuj2	
+悴	z	uj	1	zujˊ	zuj1	
 悵	ṭx	øg	2	ṭxøgˉ	txjeog2	
 悵	ṭ	øg	2	ṭøgˉ	tjeog2	
 悶	m	un	2	munˉ	mun2	
@@ -12560,7 +12560,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 惱	n	ov	1	novˊ	nov1	
 惲	v	ǝn	2	vǝnˉ	vrn2	
 想	s	øg	1	søgˊ	seog1	
-惴	ṭ	øj	2	ṭøjˉ	tjeoj2	
+惴	ṭ	uj	2	ṭujˉ	tjuj2	
 惵	d	im	3	dimˈ	dim3	
 惶	hv	og	0	hvogˋ	hvog0	
 惷	ṭx	øn	1	ṭxønˊ	txjeon1	
@@ -12837,8 +12837,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 懜	m	ug	1	mugˊ	mug1	
 懝	g	oj	2	gojˉ	goj2	
 懞	m	ug	0	mugˋ	mug0	!
-懟	d	øj	2	døjˉ	deoj2	
-懟	ḍ	øj	2	ḍøjˉ	djeoj2	
+懟	d	uj	2	dujˉ	duj2	
+懟	ḍ	uj	2	ḍujˉ	djuj2	
 懠	đ	ǝj	0	đǝjˋ	dzrj0	
 懡	m	o	1	moˊ	mo1	
 懢	l	am	0	lamˋ	lam0	
@@ -13117,7 +13117,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 押	q	am	3	qamˈ	qam3	
 抽	ṭx	ǝv	0	ṭxǝvˋ	txjrv0	
 抾	k	im	3	kimˈ	kim3	
-抾	kx	øj	0	kxøjˋ	kxeoj0	
+抾	kx	uj	0	kxujˋ	kxuj0	
 抾	x	i	0	xiˋ	xi0	
 抿	m	ǝn	1	mǝnˊ	mrn1	!
 抿	qm	ǝn	1	qmǝnˊ	qmrn1	!
@@ -13346,7 +13346,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 捵	ṭx	ǝn	1	ṭxǝnˊ	txjrn1	!
 捵	tx	in	1	txinˊ	txin1	!
 捵	t	in	1	tinˊ	tin1	!
-捶	ḍ	øj	0	ḍøjˋ	djeoj0	
+捶	ḍ	uj	0	ḍujˋ	djuj0	
 捷	đ	in	3	đinˈ	dzin3	
 捷	ŧ	in	3	ŧinˈ	tsin3	
 捷	ŧx	im	3	ŧximˈ	tsxim3	
@@ -13493,7 +13493,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 揢	kx	ig	3	kxigˈ	kxig3	
 揢	kx	ag	3	kxagˈ	kxag3	
 揢	kx	ǝg	3	kxǝgˈ	kxrg3	
-揣	ṭx	øj	1	ṭxøjˊ	txjeoj1	
+揣	ṭx	uj	1	ṭxujˊ	txjuj1	
 揣	ṭx	yn	1	ṭxynˊ	txjyn1	
 揣	ṭx	aj	0	ṭxajˋ	txjaj0	
 揤	ŧ	ǝn	3	ŧǝnˈ	tsrn3	
@@ -14171,7 +14171,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 旛	fx	an	0	fxanˋ	fxan0	
 旜	ṭ	in	0	ṭinˋ	tjin0	
 旝	kx	uj	1	kxujˊ	kxuj1	
-旞	z	øj	2	zøjˉ	zeoj2	
+旞	z	uj	2	zujˉ	zuj2	
 旟		y	0	yˋ	y0	
 旡	k	i	2	kiˉ	ki2	
 既	k	ej	2	kejˉ	kej2	!
@@ -14933,7 +14933,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 桕	kx	ǝv	2	kxǝvˉ	kxrv2	!
 桖	x	yn	3	xynˈ	xyn3	!
 桗	t	o	2	toˉ	to2	
-桘	ḍ	øj	0	ḍøjˋ	djeoj0	
+桘	ḍ	uj	0	ḍujˋ	djuj0	
 桙		y	0	yˋ	y0	!
 桚	ṭ	an	3	ṭanˈ	tjan3	!
 桛	l	ug	2	lugˉ	lug2	!
@@ -14953,7 +14953,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 桳	b	ǝn	2	bǝnˉ	brn2	!
 桴	fx	u	0	fxuˋ	fxu0	
 桴	w	ǝv	0	wǝvˋ	wrv0	
-桵	ṇ	øj	0	ṇøjˋ	njeoj0	
+桵	ṇ	uj	0	ṇujˋ	njuj0	
 桶	tx	ug	1	txugˊ	txug1	
 桷	k	og	3	kogˈ	kog3	
 桸	x	i	0	xiˋ	xi0	
@@ -15141,8 +15141,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 椋	l	øg	0	løgˋ	leog0	
 椌	x	og	0	xogˋ	xog0	
 植	ḍ	ig	3	ḍigˈ	djig3	
-椎	ḍ	øj	0	ḍøjˋ	djeoj0	
-椎	ṭ	øj	0	ṭøjˋ	tjeoj0	
+椎	ḍ	uj	0	ḍujˋ	djuj0	
+椎	ṭ	uj	0	ṭujˋ	tjuj0	
 椏	q	a	0	qaˋ	qa0	
 椐	k	y	0	kyˋ	ky0	
 椑	b	i	0	biˋ	bi0	
@@ -15321,7 +15321,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 榮	v	ig	0	vigˋ	vig0	
 榯	ẓ	i	0	ẓiˋ	zji0	
 榰	ṭ	i	0	ṭiˋ	tji0	
-榱	ṭx	øj	0	ṭxøjˋ	txjeoj0	
+榱	ṭx	uj	0	ṭxujˋ	txjuj0	
 榲	qv	ǝn	3	qvǝnˈ	qvrn3	!
 榲	qv	ǝn	0	qvǝnˋ	qvrn0	!
 榳	d	ig	0	digˋ	dig0	!
@@ -15355,7 +15355,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 槊	ṣ	og	3	ṣogˈ	sjog3	
 構	kx	ǝv	2	kxǝvˉ	kxrv2	
 構	k	ǝv	2	kǝvˉ	krv2	
-槌	ḍ	øj	0	ḍøjˋ	djeoj0	
+槌	ḍ	uj	0	ḍujˋ	djuj0	
 槍	ŧx	øg	0	ŧxøgˋ	tsxeog0	
 槎	ḍ	a	0	ḍaˋ	dja0	
 槏	x	am	1	xamˊ	xam1	
@@ -15429,7 +15429,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 樌	k	un	2	kunˉ	kun2	
 樍	ŧ	ig	3	ŧigˈ	tsig3	
 樎	ṣ	ug	3	ṣugˈ	sjug3	
-樏	l	øj	0	løjˋ	leoj0	
+樏	l	uj	0	lujˋ	luj0	
 樐	l	ov	1	lovˊ	lov1	
 樑	l	øg	0	løgˋ	leog0	!
 樑	ql	øg	1	qløgˊ	qleog1	!
@@ -15593,7 +15593,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 檔	t	og	1	togˊ	tog1	
 檔	t	og	2	togˉ	tog2	
 檕	h	ǝj	2	hǝjˉ	hrj2	
-檖	z	øj	2	zøjˉ	zeoj2	
+檖	z	uj	2	zujˉ	zuj2	
 檗	px	ag	3	pxagˈ	pxag3	
 檗	p	ag	3	pagˈ	pag3	
 檘	b	ig	0	bigˋ	big0	!
@@ -15659,7 +15659,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 櫍	ṭ	ǝn	3	ṭǝnˈ	tjrn3	
 櫎	f	og	1	fogˊ	fog1	
 櫏	ŧx	in	0	ŧxinˋ	tsxin0	
-櫐	l	øj	1	løjˊ	leoj1	
+櫐	l	uj	1	lujˊ	luj1	
 櫑	l	uj	0	lujˋ	luj0	
 櫑	l	uj	1	lujˊ	luj1	
 櫒	ṣ	an	3	ṣanˈ	sjan3	!
@@ -15746,7 +15746,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 欖	ql	am	1	qlamˊ	qlam1	
 欗	l	an	0	lanˋ	lan0	!
 欘	ṭ	ug	3	ṭugˈ	tjug3	
-欙	l	øj	0	løjˋ	leoj0	
+欙	l	uj	0	lujˋ	luj0	
 欚	l	ǝj	1	lǝjˊ	lrj1	
 欛	p	a	2	paˉ	pa2	
 欜	n	og	0	nogˋ	nog0	!
@@ -16076,7 +16076,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 氱		øg	0	øgˋ	eog0	!
 氲	qv	ǝn	0	qvǝnˋ	qvrn0	!
 氳	qv	ǝn	0	qvǝnˋ	qvrn0	
-水	ṣ	øj	1	ṣøjˊ	sjeoj1	
+水	ṣ	uj	1	ṣujˊ	sjuj1	
 氵	ṣ	øj	1	ṣøjˊ	sjeoj1	!
 氶	ṭx	ig	1	ṭxigˊ	txjig1	
 氷	p	ig	0	pigˋ	pig0	!
@@ -16206,7 +16206,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 沚	ṭ	i	1	ṭiˊ	tji1	
 沛	px	uj	2	pxujˉ	pxuj2	
 沜	px	un	2	pxunˉ	pxun2	
-沝	ṭ	øj	1	ṭøjˊ	tjeoj1	
+沝	ṭ	uj	1	ṭujˊ	tjuj1	
 沞	ŧ	am	3	ŧamˈ	tsam3	
 沠	px	aj	2	pxajˉ	pxaj2	!
 没	m	un	3	munˈ	mun3	
@@ -16551,7 +16551,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 淘	d	ov	0	dovˋ	dov0	!
 淙	đ	ug	0	đugˋ	dzug0	
 淙	ŧ	ug	0	ŧugˋ	tsug0	
-淚	l	øj	2	løjˉ	leoj2	
+淚	l	uj	2	lujˉ	luj2	
 淚	l	ǝj	2	lǝjˉ	lrj2	
 淛	ṭ	in	3	ṭinˈ	tjin3	
 淜	b	ǝg	0	bǝgˋ	brg0	
@@ -17121,7 +17121,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 澹	d	am	2	damˉ	dam2	
 澹	d	am	0	damˋ	dam0	
 澺	q	ig	3	qigˈ	qig3	
-澻	z	øj	2	zøjˉ	zeoj2	
+澻	z	uj	2	zujˉ	zuj2	
 澼	px	ig	3	pxigˈ	pxig3	
 澽	c	y	2	cyˉ	cy2	
 澽	k	y	2	kyˉ	ky2	
@@ -17139,7 +17139,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 濇	ṣ	ig	3	ṣigˈ	sjig3	
 濇	ṣ	ǝm	3	ṣǝmˈ	sjrm3	
 濈	ṭx	ǝm	3	ṭxǝmˈ	txjrm3	
-濉	s	øj	0	søjˋ	seoj0	
+濉	s	uj	0	sujˋ	suj0	
 濊	qv	ǝj	2	qvǝjˉ	qvrj2	
 濊	kx	un	3	kxunˈ	kxun3	
 濋	ṭx	o	1	ṭxoˊ	txjo1	
@@ -17168,7 +17168,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 濟	ŧ	ǝj	1	ŧǝjˊ	tsrj1	
 濠	h	ov	0	hovˋ	hov0	
 濡	ṇ	y	0	ṇyˋ	njy0	
-濢	ŧx	øj	2	ŧxøjˉ	tsxeoj2	
+濢	ŧx	uj	2	ŧxujˉ	tsxuj2	
 濣	qv	an	3	qvanˈ	qvan3	!
 濤	d	ov	0	dovˋ	dov0	
 濥	j	ǝn	1	jǝnˊ	jrn1	
@@ -17248,7 +17248,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 瀞	ḍ	ig	2	ḍigˉ	djig2	!
 瀟	ṣ	iv	0	ṣivˋ	sjiv0	!
 瀠		ig	0	igˋ	ig0	!
-瀡	z	øj	1	zøjˊ	zeoj1	
+瀡	z	uj	1	zujˊ	zuj1	
 瀢	v	i	1	viˊ	vi1	
 瀣	h	aj	2	hajˉ	haj2	
 瀤	hv	aj	0	hvajˋ	hvaj0	
@@ -17359,7 +17359,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 炆	qm	ǝn	0	qmǝnˋ	qmrn0	!
 炇	px	og	3	pxogˈ	pxog3	!
 炈		ig	3	igˈ	ig3	
-炊	ṭx	øj	0	ṭxøjˋ	txjeoj0	
+炊	ṭx	uj	0	ṭxujˋ	txjuj0	
 炋	px	uj	0	pxujˋ	pxuj0	!
 炌	kx	aj	2	kxajˉ	kxaj2	!
 炍	px	un	2	pxunˉ	pxun2	!
@@ -17758,7 +17758,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 燤	tx	aj	2	txajˉ	txaj2	!
 燥	ŧx	ov	2	ŧxovˉ	tsxov2	
 燦	ŧx	an	2	ŧxanˉ	tsxan2	
-燧	z	øj	2	zøjˉ	zeoj2	
+燧	z	uj	2	zujˉ	zuj2	
 燨	x	ej	0	xejˋ	xej0	!
 燩	kx	og	3	kxogˈ	kxog3	
 燪	ṭ	ug	1	ṭugˊ	tjug1	!
@@ -18465,7 +18465,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 瑛	q	ig	0	qigˋ	qig0	
 瑜		y	0	yˋ	y0	
 瑝	hv	ag	0	hvagˋ	hvag0	
-瑞	ẓ	øj	2	ẓøjˉ	zjeoj2	
+瑞	ẓ	uj	2	ẓujˉ	zjuj2	
 瑟	ṣ	ǝn	3	ṣǝnˈ	sjrn3	
 瑠	l	ǝv	0	lǝvˋ	lrv0	
 瑡	ṣ	i	0	ṣiˋ	sji0	!
@@ -18559,7 +18559,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 環	hv	an	0	hvanˋ	hvan0	
 環	qv	an	1	qvanˊ	qvan1	
 璱	ṣ	ǝn	3	ṣǝnˈ	sjrn3	
-璲	z	øj	2	zøjˉ	zeoj2	
+璲	z	uj	2	zujˉ	zuj2	
 璳	d	in	0	dinˋ	din0	!
 璴	ṭx	o	1	ṭxoˊ	txjo1	!
 璵		y	0	yˋ	y0	
@@ -18643,7 +18643,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 瓽	d	og	2	dogˉ	dog2	
 瓾	qv	a	0	qvaˋ	qva0	!
 瓿	px	ǝv	1	pxǝvˊ	pxrv1	
-甀	ḍ	øj	2	ḍøjˉ	djeoj2	
+甀	ḍ	uj	2	ḍujˉ	djuj2	
 甁	b	ig	0	bigˋ	big0	!
 甂	px	in	0	pxinˋ	pxin0	
 甃	ṭ	ǝv	2	ṭǝvˉ	tjrv2	
@@ -18686,8 +18686,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 甡	ṣ	ǝn	0	ṣǝnˋ	sjrn0	
 甡	ṭx	an	1	ṭxanˊ	txjan1	
 産	ṭx	an	1	ṭxanˊ	txjan1	
-甤	ṇ	øj	2	ṇøjˉ	njeoj2	
-甤	ṇ	øj	0	ṇøjˋ	njeoj0	
+甤	ṇ	uj	2	ṇujˉ	njuj2	
+甤	ṇ	uj	0	ṇujˋ	njuj0	
 甥	ṣ	ǝg	0	ṣǝgˋ	sjrg0	
 甥	ṣ	ag	0	ṣagˋ	sjag0	
 甦	ṣ	ov	0	ṣovˋ	sjov0	!
@@ -18965,8 +18965,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 痿	qv	i	1	qviˊ	qvi1	
 瘀	q	y	1	qyˊ	qy1	
 瘀	q	y	0	qyˋ	qy0	
-瘁	z	øj	2	zøjˉ	zeoj2	
-瘁	z	øj	1	zøjˊ	zeoj1	
+瘁	z	uj	2	zujˉ	zuj2	
+瘁	z	uj	1	zujˊ	zuj1	
 瘂	q	a	1	qaˊ	qa1	
 瘃	ḍ	ug	3	ḍugˈ	djug3	
 瘃	ṭ	ug	3	ṭugˈ	tjug3	
@@ -19383,10 +19383,10 @@ character	initial	final	tone	roman	ascii	no-emc-data
 睜	ŧ	ag	0	ŧagˋ	tsag0	
 睝	l	ej	0	lejˋ	lej0	!
 睞	l	oj	2	lojˉ	loj2	
-睟	z	øj	2	zøjˉ	zeoj2	
+睟	z	uj	2	zujˉ	zuj2	
 睠	k	yn	2	kynˉ	kyn2	
-睡	ẓ	øj	2	ẓøjˉ	zjeoj2	
-睢	s	øj	0	søjˋ	seoj0	
+睡	ẓ	uj	2	ẓujˉ	zjuj2	
+睢	s	uj	0	sujˋ	suj0	
 督	t	ug	3	tugˈ	tug3	
 睤	b	ǝj	1	bǝjˊ	brj1	!
 睥	b	ǝj	1	bǝjˊ	brj1	
@@ -19713,7 +19713,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 硼	b	ag	0	bagˋ	bag0	!
 硼	b	ǝg	0	bǝgˋ	brg0	!
 硽	q	im	0	qimˋ	qim0	!
-硾	ḍ	øj	2	ḍøjˉ	djeoj2	
+硾	ḍ	uj	2	ḍujˉ	djuj2	
 硿	x	ug	0	xugˋ	xug0	
 碀	ḍ	ǝg	0	ḍǝgˋ	djrg0	!
 碁	k	i	0	kiˋ	ki0	
@@ -19970,7 +19970,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 神	ẓ	ǝn	0	ẓǝnˋ	zjrn0	
 神	ṣ	ǝn	1	ṣǝnˊ	sjrn1	
 神	ṣ	ǝn	0	ṣǝnˋ	sjrn0	
-祟	z	øj	2	zøjˉ	zeoj2	
+祟	z	uj	2	zujˉ	zuj2	
 祠	đ	i	0	điˋ	dzi0	
 祡	ḍ	aj	0	ḍajˋ	djaj0	
 祣	l	y	1	lyˊ	ly1	
@@ -20068,7 +20068,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 禴		øg	3	øgˈ	eog3	
 禵	d	ǝj	0	dǝjˋ	drj0	!
 禶	đ	an	2	đanˉ	dzan2	
-禷	l	øj	2	løjˉ	leoj2	
+禷	l	uj	2	lujˉ	luj2	
 禸	j	ǝv	0	jǝvˋ	jrv0	!
 禹		y	1	yˊ	y1	
 禺	g	y	0	gyˋ	gy0	
@@ -20236,8 +20236,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 穔	v	og	0	vogˋ	vog0	!
 穕	ŧx	im	3	ŧximˈ	tsxim3	
 穖	k	i	0	kiˋ	ki0	
-穗	z	øj	2	zøjˉ	zeoj2	
-穗	s	øj	1	søjˊ	seoj1	
+穗	z	uj	2	zujˉ	zuj2	
+穗	s	uj	1	sujˊ	suj1	
 穘	x	iv	0	xivˋ	xiv0	
 穙	b	ug	3	bugˈ	bug3	
 穚	k	iv	0	kivˋ	kiv0	
@@ -20246,7 +20246,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 穜	ṭ	ug	2	ṭugˉ	tjug2	
 穜	ṭ	ug	1	ṭugˊ	tjug1	
 穝	ṭ	øj	2	ṭøjˉ	tjeoj2	!
-穟	z	øj	2	zøjˉ	zeoj2	
+穟	z	uj	2	zujˉ	zuj2	
 穠	n	ug	0	nugˋ	nug0	
 穡	ṣ	ig	3	ṣigˈ	sjig3	
 穢	qv	ǝj	2	qvǝjˉ	qvrj2	
@@ -20603,8 +20603,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 箞	x	yn	0	xynˋ	xyn0	!
 箟	kxv	ǝn	1	kxvǝnˊ	kxvrn1	
 箟	kxv	ǝn	2	kxvǝnˉ	kxvrn2	
-箠	ẓ	øj	0	ẓøjˋ	zjeoj0	
-箠	ḍ	øj	0	ḍøjˋ	djeoj0	
+箠	ẓ	uj	0	ẓujˋ	zjuj0	
+箠	ḍ	uj	0	ḍujˋ	djuj0	
 管	k	un	1	kunˊ	kun1	
 箢	q	yn	0	qynˋ	qyn0	!
 箣	ṭx	ag	3	ṭxagˈ	txjag3	!
@@ -20917,9 +20917,9 @@ character	initial	final	tone	roman	ascii	no-emc-data
 粶	l	ug	3	lugˈ	lug3	!
 粷	k	ug	3	kugˈ	kug3	!
 粸	c	ej	0	cejˋ	cej0	!
-粹	z	øj	2	zøjˉ	zeoj2	
-粹	z	øj	1	zøjˊ	zeoj1	
-粹	s	øj	2	søjˉ	seoj2	
+粹	z	uj	2	zujˉ	zuj2	
+粹	z	uj	1	zujˊ	zuj1	
+粹	s	uj	2	sujˉ	suj2	
 粺	b	aj	2	bajˉ	baj2	
 粺	b	ǝj	2	bǝjˉ	brj2	
 粺	b	ej	0	bejˋ	bej0	
@@ -21070,9 +21070,9 @@ character	initial	final	tone	roman	ascii	no-emc-data
 紬	ṭx	ǝv	0	ṭxǝvˋ	txjrv0	
 紭	hv	ǝg	0	hvǝgˋ	hvrg0	
 紮	ṭ	an	3	ṭanˈ	tjan3	
-累	l	øj	2	løjˉ	leoj2	
-累	l	øj	1	løjˊ	leoj1	
-累	l	øj	0	løjˋ	leoj0	
+累	l	uj	2	lujˉ	luj2	
+累	l	uj	1	lujˊ	luj1	
+累	l	uj	0	lujˋ	luj0	
 細	s	ǝj	2	sǝjˉ	srj2	
 細	s	ǝj	1	sǝjˊ	srj1	
 紱	f	ǝn	3	fǝnˈ	frn3	
@@ -21149,7 +21149,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 絨	ṇ	ug	0	ṇugˋ	njug0	
 絩	tx	iv	2	txivˉ	txiv2	
 絪	qj	ǝn	0	qjǝnˋ	qjrn0	
-絫	l	øj	1	løjˊ	leoj1	
+絫	l	uj	1	lujˊ	luj1	
 絬	s	in	3	sinˈ	sin3	
 絭	k	yn	2	kynˉ	kyn2	
 絭	x	yn	2	xynˉ	xyn2	
@@ -21190,7 +21190,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 綍	f	ǝn	3	fǝnˈ	frn3	
 綎	tx	ig	0	txigˋ	txig0	
 綎	d	ig	0	digˋ	dig0	
-綏	s	øj	0	søjˋ	seoj0	
+綏	s	uj	0	sujˋ	suj0	
 綐	d	uj	2	dujˉ	duj2	
 綑	kxv	ǝn	1	kxvǝnˊ	kxvrn1	!
 綒	f	u	0	fuˋ	fu0	!
@@ -21268,7 +21268,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 緉	l	øg	1	løgˊ	leog1	
 緊	k	ǝn	1	kǝnˊ	krn1	
 緋	f	i	0	fiˋ	fi0	
-緌	ṇ	øj	0	ṇøjˋ	njeoj0	
+緌	ṇ	uj	0	ṇujˋ	njuj0	
 緍	m	ǝn	0	mǝnˋ	mrn0	!
 緎	v	ig	3	vigˈ	vig3	
 総	ṭ	ug	1	ṭugˊ	tjug1	!
@@ -21343,7 +21343,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 縈		ig	0	igˋ	ig0	
 縉	ŧ	øn	2	ŧønˉ	tseon2	
 縊	q	ǝj	2	qǝjˉ	qrj2	
-縋	ḍ	øj	2	ḍøjˉ	djeoj2	
+縋	ḍ	uj	2	ḍujˉ	djuj2	
 縌	g	ig	3	gigˈ	gig3	
 縍	p	og	0	pogˋ	pog0	
 縎	kv	ǝn	3	kvǝnˈ	kvrn3	
@@ -21460,7 +21460,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 繞	qṇ	iv	1	qṇivˊ	qnjiv1	
 繞	ṇ	iv	1	ṇivˊ	njiv1	
 繟	d	an	0	danˋ	dan0	
-繠	ṇ	øj	1	ṇøjˊ	njeoj1	
+繠	ṇ	uj	1	ṇujˊ	njuj1	
 繡	s	ǝv	2	sǝvˉ	srv2	
 繢	kx	uj	1	kxujˊ	kxuj1	
 繣	hv	ag	3	hvagˈ	hvag3	
@@ -21516,9 +21516,9 @@ character	initial	final	tone	roman	ascii	no-emc-data
 纊	kxv	og	2	kxvogˉ	kxvog2	
 纋	qj	ǝv	0	qjǝvˋ	qjrv0	
 續	đ	ug	3	đugˈ	dzug3	
-纍	l	øj	0	løjˋ	leoj0	
-纍	l	øj	1	løjˊ	leoj1	
-纍	l	øj	2	løjˉ	leoj2	
+纍	l	uj	0	lujˋ	luj0	
+纍	l	uj	1	lujˊ	luj1	
+纍	l	uj	2	lujˉ	luj2	
 纎	ṭx	im	0	ṭximˋ	txjim0	!
 纏	ḍ	in	0	ḍinˋ	djin0	
 纏	ḍ	in	2	ḍinˉ	djin2	
@@ -21543,7 +21543,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 纛	d	ug	3	dugˈ	dug3	
 纛	d	ov	2	dovˉ	dov2	
 纜	l	am	2	lamˉ	lam2	
-纝	l	øj	0	løjˋ	leoj0	
+纝	l	uj	0	lujˋ	luj0	
 纞	l	yn	1	lynˊ	lyn1	!
 缶	f	ǝv	1	fǝvˊ	frv1	
 缷	ṣ	e	2	ṣeˉ	sje2	!
@@ -21696,7 +21696,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 羶	ṭ	in	0	ṭinˋ	tjin0	
 羶	ṣ	an	0	ṣanˋ	sjan0	
 羷	l	im	1	limˊ	lim1	
-羸	l	øj	0	løjˋ	leoj0	
+羸	l	uj	0	lujˋ	luj0	
 羹	k	ǝg	0	kǝgˋ	krg0	
 羺	n	ǝv	0	nǝvˋ	nrv0	
 羻	x	øg	2	xøgˉ	xeog2	
@@ -21737,7 +21737,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 翞	k	øg	0	køgˋ	keog0	!
 翟	d	ig	3	digˈ	dig3	
 翟	ḍ	ag	3	ḍagˈ	djag3	
-翠	ŧx	øj	2	ŧxøjˉ	tsxeoj2	
+翠	ŧx	uj	2	ŧxujˉ	tsxuj2	
 翡	f	i	1	fiˊ	fi1	
 翢	d	ug	3	dugˈ	dug3	
 翣	ṣ	am	3	ṣamˈ	sjam3	
@@ -22130,7 +22130,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 脺	ẓ	øj	1	ẓøjˊ	zjeoj1	!
 脻	ṭ	im	3	ṭimˈ	tjim3	!
 脼	l	øg	1	løgˊ	leog1	
-脽	ẓ	øj	0	ẓøjˋ	zjeoj0	
+脽	ẓ	uj	0	ẓujˋ	zjuj0	
 脾	b	i	0	biˋ	bi0	
 脾	px	i	1	pxiˊ	pxi1	
 脿	p	iv	1	pivˊ	piv1	!
@@ -22138,7 +22138,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 腁	b	in	0	binˋ	bin0	!
 腂	l	øj	1	løjˊ	leoj1	!
 腃	qv	i	2	qviˉ	qvi2	
-腄	ḍ	øj	0	ḍøjˋ	djeoj0	
+腄	ḍ	uj	0	ḍujˋ	djuj0	
 腅	d	am	2	damˉ	dam2	
 腆	tx	in	1	txinˊ	txin1	
 腇	n	øj	1	nøjˊ	neoj1	!
@@ -22220,8 +22220,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 膅	d	og	0	dogˋ	dog0	!
 膆	s	ov	2	sovˉ	sov2	
 膆	s	y	2	syˉ	sy2	
-膇	ḍ	øj	2	ḍøjˉ	djeoj2	
-膇	t	øj	2	tøjˉ	teoj2	
+膇	ḍ	uj	2	ḍujˉ	djuj2	
+膇	t	uj	2	tujˉ	tuj2	
 膈	k	ag	3	kagˈ	kag3	
 膉	q	ig	3	qigˈ	qig3	
 膊	p	og	3	pogˈ	pog3	
@@ -22310,7 +22310,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 臋	d	yn	0	dynˋ	dyn0	!
 臌	k	u	1	kuˊ	ku1	!
 臍	đ	i	0	điˋ	dzi0	
-臎	ŧx	øj	2	ŧxøjˉ	tsxeoj2	
+臎	ŧx	uj	2	ŧxujˉ	tsxuj2	
 臏	p	ǝn	2	pǝnˉ	prn2	
 臐	xv	ǝn	0	xvǝnˋ	xvrn0	
 臑	n	av	2	navˉ	nav2	
@@ -22813,8 +22813,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 荼	d	ov	0	dovˋ	dov0	
 荼	ḍ	a	0	ḍaˋ	dja0	
 荼	ṣ	y	0	ṣyˋ	sjy0	
-荽	s	øj	0	søjˋ	seoj0	
-荾	s	øj	0	søjˋ	seoj0	
+荽	s	uj	0	sujˋ	suj0	
+荾	s	uj	0	sujˋ	suj0	
 荿	ẓ	ig	0	ẓigˋ	zjig0	!
 莀	ẓ	ǝn	0	ẓǝnˋ	zjrn0	!
 莁	m	ov	0	movˋ	mov0	
@@ -22917,7 +22917,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 菖	ṭx	øg	0	ṭxøgˋ	txjeog0	
 菗	ḍ	ǝv	0	ḍǝvˋ	djrv0	
 菘	s	ug	0	sugˋ	sug0	
-菙	ḍ	øj	0	ḍøjˋ	djeoj0	
+菙	ḍ	uj	0	ḍujˋ	djuj0	
 菚	ḍ	an	2	ḍanˉ	djan2	!
 菛	m	un	0	munˋ	mun0	!
 菜	ŧx	oj	2	ŧxojˉ	tsxoj2	
@@ -22969,7 +22969,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 萁	c	i	0	ciˋ	ci0	
 萁	k	i	0	kiˋ	ki0	
 萂	v	o	0	voˋ	vo0	!
-萃	z	øj	2	zøjˉ	zeoj2	
+萃	z	uj	2	zujˉ	zuj2	
 萄	d	ov	0	dovˋ	dov0	
 萄	tx	ov	1	txovˊ	txov1	
 萅	ṭx	øn	0	ṭxønˋ	txjeon0	!
@@ -22989,7 +22989,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 萏	d	am	2	damˉ	dam2	
 萐	ṣ	am	3	ṣamˈ	sjam3	
 萑	h	un	0	hunˋ	hun0	
-萑	tx	øj	0	txøjˋ	txeoj0	
+萑	tx	uj	0	txujˋ	txuj0	
 萒		in	1	inˊ	in1	
 萓		i	0	iˋ	i0	!
 萔	d	iv	0	divˋ	div0	!
@@ -23097,7 +23097,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 葮	d	yn	2	dynˉ	dyn2	!
 葯		øg	3	øgˈ	eog3	
 葯	q	øg	3	qøgˈ	qeog3	
-葰	s	øj	0	søjˋ	seoj0	
+葰	s	uj	0	sujˋ	suj0	
 葰	ŧ	øn	2	ŧønˉ	tseon2	
 葱	ŧx	ug	0	ŧxugˋ	tsxug0	
 葲	đ	yn	0	đynˋ	dzyn0	
@@ -23300,7 +23300,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 蔤	m	ǝn	3	mǝnˈ	mrn3	
 蔥	ṭx	ug	0	ṭxugˋ	txjug0	!
 蔦	n	iv	1	nivˊ	niv1	
-蔧	z	øj	2	zøjˉ	zeoj2	
+蔧	z	uj	2	zujˉ	zuj2	
 蔧	v	i	2	viˉ	vi2	
 蔨	c	yn	2	cynˉ	cyn2	
 蔩	j	ǝn	0	jǝnˋ	jrn0	
@@ -23340,8 +23340,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 蕈	d	am	0	damˋ	dam0	
 蕉	ŧ	iv	0	ŧivˋ	tsiv0	
 蕉	đ	iv	0	đivˋ	dziv0	
-蕊	ṇ	øj	1	ṇøjˊ	njeoj1	
-蕊	ṇ	øj	2	ṇøjˉ	njeoj2	
+蕊	ṇ	uj	1	ṇujˊ	njuj1	
+蕊	ṇ	uj	2	ṇujˉ	njuj2	
 蕋		øj	1	øjˊ	eoj1	!
 蕋		øj	2	øjˉ	eoj2	!
 蕌	l	øj	1	løjˊ	leoj1	!
@@ -23370,8 +23370,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 蕡	w	ǝn	0	wǝnˋ	wrn0	
 蕢	cv	i	2	cviˉ	cvi2	
 蕣	ṣ	øn	2	ṣønˉ	sjeon2	
-蕤	ṇ	øj	2	ṇøjˉ	njeoj2	
-蕤	ṇ	øj	0	ṇøjˋ	njeoj0	
+蕤	ṇ	uj	2	ṇujˉ	njuj2	
+蕤	ṇ	uj	0	ṇujˋ	njuj0	
 蕥	g	a	1	gaˊ	ga1	!
 蕦	s	y	0	syˋ	sy0	
 蕧	fx	ug	3	fxugˈ	fxug3	
@@ -23522,7 +23522,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 藜	l	ǝj	0	lǝjˋ	lrj0	
 藝	g	ǝj	2	gǝjˉ	grj2	
 藞	l	a	1	laˊ	la1	
-藟	l	øj	1	løjˊ	leoj1	
+藟	l	uj	1	lujˊ	luj1	
 藠	kx	iv	1	kxivˊ	kxiv1	!
 藠	c	iv	1	civˊ	civ1	!
 藡	d	ig	3	digˈ	dig3	!
@@ -23563,8 +23563,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 蘀	tx	og	3	txogˈ	txog3	
 蘁	g		2	gˉ	g2	!
 蘁	g	og	3	gogˈ	gog3	!
-蘂	ṇ	øj	1	ṇøjˊ	njeoj1	
-蘂	ṇ	øj	2	ṇøjˉ	njeoj2	
+蘂	ṇ	uj	1	ṇujˊ	njuj1	
+蘂	ṇ	uj	2	ṇujˉ	njuj2	
 蘃		øj	1	øjˊ	eoj1	!
 蘄	c	i	0	ciˋ	ci0	
 蘅	h	ǝg	0	hǝgˋ	hrg0	
@@ -23634,7 +23634,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 蘺	l	i	0	liˋ	li0	
 蘻	h	ǝj	2	hǝjˉ	hrj2	
 蘼	m	i	0	miˋ	mi0	
-蘽	l	øj	1	løjˊ	leoj1	
+蘽	l	uj	1	lujˊ	luj1	
 蘾	hv	aj	2	hvajˉ	hvaj2	
 蘿	l	o	0	loˋ	lo0	
 虀	ṭ	ǝj	0	ṭǝjˋ	tjrj0	!
@@ -23643,7 +23643,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 虃	ŧ	im	0	ŧimˋ	tsim0	
 虄	ṣ	an	3	ṣanˈ	sjan3	!
 虅	d	ǝg	0	dǝgˋ	drg0	!
-虆	l	øj	0	løjˋ	leoj0	
+虆	l	uj	0	lujˋ	luj0	
 虇	x	yn	1	xynˊ	xyn1	
 虈	x	iv	0	xivˋ	xiv0	
 虉	g	ig	3	gigˈ	gig3	
@@ -24279,8 +24279,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 衭	f	u	2	fuˉ	fu2	
 衮	kv	ǝn	1	kvǝnˊ	kvrn1	
 衯	fx	ǝn	0	fxǝnˋ	fxrn0	
-衰	ṣ	øj	0	ṣøjˋ	sjeoj0	
-衰	ṭx	øj	0	ṭxøjˋ	txjeoj0	
+衰	ṣ	uj	0	ṣujˋ	sjuj0	
+衰	ṭx	uj	0	ṭxujˋ	txjuj0	
 衱	k	im	3	kimˈ	kim3	
 衲	n	am	3	namˈ	nam3	
 衳	ṭ	ug	0	ṭugˋ	tjug0	
@@ -24386,7 +24386,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 裌	k	am	3	kamˈ	kam3	
 裍	kxv	ǝn	1	kxvǝnˊ	kxvrn1	
 裎	ḍ	ig	0	ḍigˋ	djig0	
-裏	l	øj	1	løjˊ	leoj1	
+裏	l	uj	1	lujˊ	luj1	
 裏	l	i	1	liˊ	li1	
 裐	k	yn	0	kynˋ	kyn0	!
 裑	ṣ	ǝn	0	ṣǝnˋ	sjrn0	!
@@ -24550,7 +24550,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 襗	d	og	3	dogˈ	dog3	
 襘	kx	uj	1	kxujˊ	kxuj1	
 襙	ṭx	ov	2	ṭxovˉ	txjov2	!
-襚	z	øj	2	zøjˉ	zeoj2	
+襚	z	uj	2	zujˉ	zuj2	
 襛	n	ug	0	nugˋ	nug0	
 襜	ṭx	im	0	ṭximˋ	txjim0	
 襜	ẓ	im	0	ẓimˋ	zjim0	
@@ -24692,7 +24692,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 觚	k	u	0	kuˋ	ku0	
 觛	d	an	2	danˉ	dan2	
 觜	ŧ	i	0	ŧiˋ	tsi0	
-觜	ŧ	øj	1	ŧøjˊ	tseoj1	
+觜	ŧ	uj	1	ŧujˊ	tsuj1	
 觝	t	ǝj	1	tǝjˊ	trj1	
 觟	hv	a	2	hvaˉ	hva2	
 觟	h	aj	2	hajˉ	haj2	
@@ -24904,7 +24904,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 誃	ṭx	i	1	ṭxiˊ	txji1	
 誃		i	0	iˋ	i0	
 誄	l	oj	2	lojˉ	loj2	
-誄	l	øj	2	løjˉ	leoj2	
+誄	l	uj	2	lujˉ	luj2	
 誅	ṭ	y	0	ṭyˋ	tjy0	
 誆	x	og	0	xogˋ	xog0	
 誆	cv	og	0	cvogˋ	cvog0	
@@ -24964,8 +24964,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 読	d	ug	3	dugˈ	dug3	!
 誮	qv	a	0	qvaˋ	qva0	!
 誯	ṭx	øg	2	ṭxøgˉ	txjeog2	!
-誰	ẓ	øj	0	ẓøjˋ	zjeoj0	
-誰	ṣ	øj	1	ṣøjˊ	sjeoj1	
+誰	ẓ	uj	0	ẓujˋ	zjuj0	
+誰	ṣ	uj	1	ṣujˊ	sjuj1	
 誱	đ	in	3	đinˈ	dzin3	
 課	xv	o	2	xvoˉ	xvo2	
 誳	qv	ǝn	3	qvǝnˈ	qvrn3	!
@@ -24994,7 +24994,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 諅	c	i	2	ciˉ	ci2	
 諆	x	i	0	xiˋ	xi0	
 談	d	am	0	damˋ	dam0	
-諈	ṭ	øj	2	ṭøjˉ	tjeoj2	
+諈	ṭ	uj	2	ṭujˉ	tjuj2	
 諉	qv	i	1	qviˊ	qvi1	
 諊	k	ug	3	kugˈ	kug3	
 請	ŧx	ig	1	ŧxigˊ	tsxig1	
@@ -25181,7 +25181,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 譟	ŧx	ov	2	ŧxovˉ	tsxov2	
 譠	tx	an	0	txanˋ	txan0	
 譡	t	og	1	togˊ	tog1	
-譢	z	øj	2	zøjˉ	zeoj2	
+譢	z	uj	2	zujˉ	zuj2	
 譣	x	im	1	ximˊ	xim1	
 譤	k	ig	3	kigˈ	kig3	!
 譥	k	iv	2	kivˉ	kiv2	
@@ -25217,7 +25217,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 讁	ḍ	ag	3	ḍagˈ	djag3	
 讂	k	yn	2	kynˉ	kyn2	
 讃	ŧ	an	2	ŧanˉ	tsan2	
-讄	l	øj	1	løjˊ	leoj1	
+讄	l	uj	1	lujˊ	luj1	
 讅	ṣ	ǝm	1	ṣǝmˊ	sjrm1	!
 讆	v	ǝj	2	vǝjˉ	vrj2	!
 讇	ṭx	im	1	ṭximˊ	txjim1	
@@ -25461,7 +25461,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 賣	m	aj	2	majˉ	maj2	
 賣	qm	aj	1	qmajˊ	qmaj1	
 賤	đ	in	2	đinˉ	dzin2	
-賥	z	øj	2	zøjˉ	zeoj2	
+賥	z	uj	2	zujˉ	zuj2	
 賦	f	u	2	fuˉ	fu2	
 賧	d	am	2	damˉ	dam2	
 賨	đ	ug	0	đugˋ	dzug0	
@@ -25601,7 +25601,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 趟	tx	og	0	txogˋ	txog0	
 趟	ṭx	ag	0	ṭxagˋ	txjag0	
 趠	ṭx	øg	3	ṭxøgˈ	txjeog3	
-趡	ŧx	øj	1	ŧxøjˊ	tsxeoj1	
+趡	ŧx	uj	1	ŧxujˊ	tsxuj1	
 趢	l	ug	3	lugˈ	lug3	
 趣	ŧx	y	2	ŧxyˉ	tsxy2	
 趣	ŧx	y	1	ŧxyˊ	tsxy1	
@@ -26275,7 +26275,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 迺	n	aj	1	najˊ	naj1	
 迻		i	0	iˋ	i0	
 迼	kx	in	3	kxinˈ	kxin3	!
-追	ṭ	øj	0	ṭøjˋ	tjeoj0	
+追	ṭ	uj	0	ṭujˋ	tjuj0	
 迾	l	in	3	linˈ	lin3	
 迾	l	an	3	lanˈ	lan3	
 迿	z	øn	2	zønˉ	zeon2	
@@ -26357,7 +26357,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 逿	d	og	0	dogˋ	dog0	
 遀	ḍ	øj	0	ḍøjˋ	djeoj0	!
 遁	d	øn	2	dønˉ	deon2	
-遂	z	øj	2	zøjˉ	zeoj2	
+遂	z	uj	2	zujˉ	zuj2	
 遃	g	in	1	ginˊ	gin1	
 遄	ḍ	yn	0	ḍynˋ	djyn0	
 遅	ḍ	i	0	ḍiˋ	dji0	!
@@ -26445,7 +26445,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 邁	m	aj	2	majˉ	maj2	
 邂	h	aj	1	hajˊ	haj1	
 邂	h	aj	2	hajˉ	haj2	
-邃	z	øj	2	zøjˉ	zeoj2	
+邃	z	uj	2	zujˉ	zuj2	
 還	hv	an	0	hvanˋ	hvan0	
 還	z	yn	0	zynˋ	zyn0	
 邅	ṭ	in	0	ṭinˋ	tjin0	
@@ -26733,7 +26733,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 醆	ṭ	an	1	ṭanˊ	tjan1	
 醇	ẓ	øn	0	ẓønˋ	zjeon0	
 醈	d	am	0	damˋ	dam0	!
-醉	ŧ	øj	2	ŧøjˉ	tseoj2	
+醉	ŧ	uj	2	ŧujˉ	tsuj2	
 醊	ṭ	yn	3	ṭynˈ	tjyn3	
 醊	ṭ	uj	2	ṭujˉ	tjuj2	
 醋	ŧx	ov	2	ŧxovˉ	tsxov2	
@@ -27217,7 +27217,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 錍	px	ǝj	0	pxǝjˋ	pxrj0	
 錎	h	am	2	hamˉ	ham2	
 錏	q	a	0	qaˋ	qa0	
-錐	ṭ	øj	0	ṭøjˋ	tjeoj0	
+錐	ṭ	uj	0	ṭujˋ	tjuj0	
 錑	l	uj	2	lujˉ	luj2	
 錒	q	a	2	qaˉ	qa2	!
 錒	q	a	0	qaˋ	qa0	!
@@ -27228,8 +27228,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 錕	kxv	ǝn	0	kxvǝnˋ	kxvrn0	
 錖	t	ug	3	tugˈ	tug3	
 錗	n	øj	2	nøjˉ	neoj2	!
-錘	ḍ	øj	0	ḍøjˋ	djeoj0	
-錘	ṭx	øj	1	ṭxøjˊ	txjeoj1	
+錘	ḍ	uj	0	ḍujˋ	djuj0	
+錘	ṭx	uj	1	ṭxujˊ	txjuj1	
 錙	ṭ	i	0	ṭiˋ	tji0	!
 錚	ṭ	ǝg	0	ṭǝgˋ	tjrg0	
 錚	ṭ	ag	0	ṭagˋ	tjag0	
@@ -27508,7 +27508,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 鐄	hv	ag	0	hvagˋ	hvag0	
 鐄	hv	og	0	hvogˋ	hvog0	
 鐅	px	in	3	pxinˈ	pxin3	
-鐆	z	øj	2	zøjˉ	zeoj2	
+鐆	z	uj	2	zujˉ	zuj2	
 鐇	w	an	0	wanˋ	wan0	
 鐈	c	iv	0	civˋ	civ0	
 鐉	ŧx	yn	0	ŧxynˋ	tsxyn0	
@@ -27552,7 +27552,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 鐧	k	an	1	kanˊ	kan1	
 鐧	k	an	2	kanˉ	kan2	
 鐨	f	ǝj	2	fǝjˉ	frj2	!
-鐩	z	øj	2	zøjˉ	zeoj2	
+鐩	z	uj	2	zujˉ	zuj2	
 鐪	l	ov	1	lovˊ	lov1	
 鐫	ŧ	yn	0	ŧynˋ	tsyn0	
 鐫	ŧ	øn	2	ŧønˉ	tseon2	
@@ -27911,7 +27911,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 陰	qj	ǝm	2	qjǝmˉ	qjrm2	
 陰	q	ǝm	0	qǝmˋ	qrm0	
 陱	k	ug	3	kugˈ	kug3	!
-陲	ẓ	øj	0	ẓøjˋ	zjeoj0	
+陲	ẓ	uj	0	ẓujˋ	zjuj0	
 陳	ḍ	ǝn	0	ḍǝnˋ	djrn0	
 陳	ṭx	ǝn	1	ṭxǝnˊ	txjrn1	
 陳	ḍ	ǝn	2	ḍǝnˉ	djrn2	
@@ -27950,7 +27950,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 隊	d	uj	2	dujˉ	duj2	
 隊	t	uj	1	tujˊ	tuj1	
 隊	ḍ	uj	2	ḍujˉ	djuj2	
-隋	đ	øj	0	đøjˋ	dzeoj0	
+隋	đ	uj	0	đujˋ	dzuj0	
 隋	d	o	2	doˉ	do2	
 隌	q	om	1	qomˊ	qom1	
 隍	hv	og	0	hvogˋ	hvog0	
@@ -27988,8 +27988,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 隤	d	uj	0	dujˋ	duj0	
 隥	t	ǝg	2	tǝgˉ	trg2	
 隦	b	ej	0	bejˋ	bej0	!
-隧	z	øj	2	zøjˉ	zeoj2	
-隨	đ	øj	0	đøjˋ	dzeoj0	
+隧	z	uj	2	zujˉ	zuj2	
+隨	đ	uj	0	đujˋ	dzuj0	
 隩	qj	ug	3	qjugˈ	qjug3	
 隩	q	ov	2	qovˉ	qov2	
 險	x	im	1	ximˊ	xim1	
@@ -28009,7 +28009,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 隸	d	ǝj	2	dǝjˉ	drj2	
 隸	d	oj	2	dojˉ	doj2	
 隸	l	ǝj	2	lǝjˉ	lrj2	
-隹	ṭ	øj	0	ṭøjˋ	tjeoj0	
+隹	ṭ	uj	0	ṭujˋ	tjuj0	
 隺	h	og	3	hogˈ	hog3	
 隻	ṭ	eg	3	ṭegˈ	tjeg3	
 隼	ŧ	øn	1	ŧønˊ	tseon1	
@@ -28040,7 +28040,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 雓		y	0	yˋ	y0	
 雔	ḍ	ǝv	0	ḍǝvˋ	djrv0	
 雕	t	iv	0	tivˋ	tiv0	
-雖	s	øj	0	søjˋ	seoj0	
+雖	s	uj	0	sujˋ	suj0	
 雗	h	on	2	honˉ	hon2	
 雘	qv	og	3	qvogˈ	qvog3	
 雙	ṣ	øg	0	ṣøgˋ	sjeog0	
@@ -28169,7 +28169,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 靂	ql	ig	3	qligˈ	qlig3	
 靂	l	ig	3	ligˈ	lig3	
 靃	xv	og	3	xvogˈ	xvog3	
-靃	z	øj	1	zøjˊ	zeoj1	
+靃	z	uj	1	zujˊ	zuj1	
 靄	q	oj	1	qojˊ	qoj1	
 靅	fx	ǝj	2	fxǝjˉ	fxrj2	
 靆	d	oj	2	dojˉ	doj2	
@@ -28477,15 +28477,15 @@ character	initial	final	tone	roman	ascii	no-emc-data
 頽	d	uj	0	dujˋ	duj0	
 頾	ṭ	i	0	ṭiˋ	tji0	!
 頿	ŧ	i	0	ŧiˋ	tsi0	
-顀	ḍ	øj	0	ḍøjˋ	djeoj0	
+顀	ḍ	uj	0	ḍujˋ	djuj0	
 顁	t	ig	2	tigˉ	tig2	
 顂	l	aj	2	lajˉ	laj2	!
 顃	d	am	0	damˋ	dam0	!
 顄	h	om	1	homˊ	hom1	
 顅	x	an	0	xanˋ	xan0	
 顆	xv	o	1	xvoˊ	xvo1	
-顇	z	øj	2	zøjˉ	zeoj2	
-顇	z	øj	1	zøjˊ	zeoj1	
+顇	z	uj	2	zujˉ	zuj2	
+顇	z	uj	1	zujˊ	zuj1	
 顈	kv	ig	1	kvigˊ	kvig1	
 顉	h	om	2	homˉ	hom2	
 顉	qgj	om	0	qgjomˋ	qgjom0	
@@ -28513,8 +28513,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 顜	k	og	1	kogˊ	kog1	!
 顜	k	og	3	kogˈ	kog3	!
 顝	xv	uj	0	xvujˋ	xvuj0	
-類	l	øj	2	løjˉ	leoj2	
-類	ql	øj	1	qløjˊ	qleoj1	
+類	l	uj	2	lujˉ	luj2	
+類	ql	uj	1	qlujˊ	qluj1	
 顟	l	av	0	lavˋ	lav0	
 顠	b	iv	1	bivˊ	biv1	
 顡	g	uj	2	gujˉ	guj2	
@@ -28886,7 +28886,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 騃	t	aj	0	tajˋ	taj0	
 騃	ḍ	i	2	ḍiˉ	dji2	
 騄	l	ug	3	lugˈ	lug3	
-騅	ṭ	øj	0	ṭøjˋ	tjeoj0	
+騅	ṭ	uj	0	ṭujˋ	tjuj0	
 騆	ṭ	ǝv	0	ṭǝvˋ	tjrv0	!
 騇	ṣ	e	2	ṣeˉ	sje2	
 騇	b	in	0	binˋ	bin0	
@@ -29056,8 +29056,8 @@ character	initial	final	tone	roman	ascii	no-emc-data
 髑	d	ug	3	dugˈ	dug3	
 髒	ŧ	og	0	ŧogˋ	tsog0	
 髒	ŧ	og	2	ŧogˉ	tsog2	
-髓	z	øj	1	zøjˊ	zeoj1	
-髓	s	øj	1	søjˊ	seoj1	
+髓	z	uj	1	zujˊ	zuj1	
+髓	s	uj	1	sujˊ	suj1	
 體	tx	ǝj	1	txǝjˊ	txrj1	
 髕	p	ǝn	2	pǝnˉ	prn2	
 髖	xv	un	0	xvunˋ	xvun0	
@@ -29124,7 +29124,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 鬋	ŧ	in	1	ŧinˊ	tsin1	
 鬌	t	o	1	toˊ	to1	
 鬌	d	o	2	doˉ	do2	
-鬌	ḍ	øj	0	ḍøjˋ	djeoj0	
+鬌	ḍ	uj	0	ḍujˋ	djuj0	
 鬍		u	0	uˋ	u0	!
 鬎	ql	an	3	qlanˈ	qlan3	!
 鬎	l	an	3	lanˈ	lan3	!
@@ -29728,7 +29728,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 鵸	c	i	0	ciˋ	ci0	
 鵹	l	i	0	liˋ	li0	
 鵺	j	e	2	jeˉ	je2	
-鵻	ŧ	øj	0	ŧøjˋ	tseoj0	
+鵻	ŧ	uj	0	ŧujˋ	tsuj0	
 鵼	x	ug	0	xugˋ	xug0	
 鵽	ṭ	yn	3	ṭynˈ	tjyn3	
 鵾	kxv	ǝn	0	kxvǝnˋ	kxvrn0	
@@ -29899,7 +29899,7 @@ character	initial	final	tone	roman	ascii	no-emc-data
 鸑	g	og	3	gogˈ	gog3	
 鸒		y	2	yˉ	y2	
 鸒		y	0	yˋ	y0	
-鸓	l	øj	1	løjˊ	leoj1	
+鸓	l	uj	1	lujˊ	luj1	
 鸔	p	ug	3	pugˈ	pug3	!
 鸕	l	ov	0	lovˋ	lov0	
 鸖	h	og	3	hogˈ	hog3	!
