@@ -34,8 +34,9 @@
 .tables table {
   display: inline-block;
   vertical-align: top;
-  margin-left: 0;
-  margin-bottom: 0;
+  margin: 0; }
+
+.tables table:not(:last-of-type) {
   margin-right: 32px; }
 
 body {
@@ -213,6 +214,12 @@ ruby {
   text-align: center; }
   #logo svg {
     margin: auto; }
+
+table tr:first-of-type th {
+  text-align: center; }
+
+table tr th:first-of-type:not(.v) {
+  text-align: right; }
 
 table.c td {
   text-align: center; }

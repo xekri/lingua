@@ -39,12 +39,13 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   padding: 0
   text-align: center
 
-.tables table
-  display: inline-block
-  vertical-align: top
-  margin-left: 0
-  margin-bottom: 0
-  margin-right: $space
+.tables
+  table
+    display: inline-block
+    vertical-align: top
+    margin: 0
+  table:not(:last-of-type)
+    margin-right: $space
 
 h1, #menu
   //text-transform: uppercase
@@ -259,6 +260,13 @@ ruby
     margin: auto
 
 table
+  tr:first-of-type
+    th
+      text-align: center
+  tr
+    th:first-of-type:not(.v)
+      text-align: right
+
   &.c td
     text-align: center
   th.v

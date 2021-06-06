@@ -1,11 +1,88 @@
 extend /_layout.pug
 
 block head
-  - const title = "japanese"
-  - const tags = ["draft"]
+  - const title = "NitPonGo"
+  - const tags = ["version=0.1"]
 
 block main
+  +section("history")
+    center
+      table
+        tr
+          th.v: span date
+          th.v: span version
+          th.v: span detail
+        +trs([
+          ["12021/156","0.1", "conjugation, auxilary verb, 世界人權宣言, 羅生門, name of language"],
+          ["12021/153","0", "romanization system"],
+        ])
+
+  +section("orthography")
+    ul
+      li write with latin alphabet and chinese character.
+      li write chinese character only for sino-japonic words.
+      li separate every word with spaces.
+
+    table
+      tr
+        for x in ";;k, c;s, z;t, d;n;p, b;m;j;l;v".split(";")
+          th.v: span= x
+      +thTrs([
+        "a あ か さ た な は ま や ら わ",
+        "i い き し ち に ぴ み 𛀆 り ゐ",
+        "u う く す つ ぬ ふ む ゆ る 𛄟",
+        "e え け せ て ね へ め 𛀁 れ ゑ",
+        "o お こ そ と の ほ も よ ろ を",
+      ].map(it => it.split(" ")))
+
+  +section("phonology")
+    .tables
+      table
+        tr
+          th
+          th.v: span velar
+          th(colspan=2).v: span dental
+          th.v: span labial
+        tr
+          th unvoiced
+          td k [k, x]
+          td t [t, θ]
+          td s [ts, s]
+          td p [p, f]
+        tr
+          th voiced
+          td c [g, ɣ]
+          td d [d, ð]
+          td z [dz, z]
+          td b [b, v]
+        tr
+          th sonorant
+          td j [j]
+          td n [n]
+          td l [l, r]
+          td v [w]
+
+      table.c
+        tr
+          th
+          th.v: span front
+          th.v: span back
+        tr
+          th close
+          td i
+          td u
+        tr
+          th mid
+          td e
+          td o
+        tr
+          th open
+          td(colspan=2) a
+
   +section("vocabulary")
+    p every verb ends in a consonant.
+    p every chinese character has a single sound.
+
     table
       tr
         td *我
@@ -25,144 +102,180 @@ block main
         td kale
         td he
         td noun
-      tr
-        td *爲
-        td す
-        td s
-        td do
-        td verb
-      tr
-        td *往く
-        td ゆく
-        td juk
-        td go
-        td verb
-      tr
-        td *思ふ
-        td おもふ
-        td omop
-        td think
-        td verb
-      tr
-        td *食べる
-        td たべる
-        td tabel
-        td eat
-        td verb
-      tr
-        td *覺ゆ
-        td おぼゆ
-        td oboj
-        td feel
-        td verb
+      +trs([
+        "*爲;す;s;do;verb",
+        "*在る;ある;al;exist;verb",
+        "*往く;ゆく;juk;go;verb",
+        "*來;く;k;come;verb",
+        "*食ふ;くふ;kup;eat;verb",
+        "*思ふ;おもふ;omop;think;verb",
+        "*覺ゆ;おぼゆ;oboj;feel;verb",
+        "*良く;よく;jok;good;verb",
+        "*大きく;おほきく;opokik;great;verb",
+        "*多い;おほく;opok;many;verb",
+      ].map(it => it.split(";")))
       tr
         td
-        td
-        td z
+        td ず
+        td az
         td not
-        td unreal \ verb
+        td verb \ verb
       tr
         td
+        td す
+        td as
+        td let
+        td verb \ verb
+      tr
         td
-        td l
+        td む
+        td am
+        td (future)
+        td verb \ verb
+      tr
+        td
+        td る
+        td al
         td can
-        td unreal \ verb
+        td verb \ verb
       tr
         td
-        td
-        td lel
+        td れる
+        td alel
         td (passive)
-        td unreal \ verb
+        td verb \ verb
       tr
         td
         td ば
-        td ba
+        td aba
         td if
-        td unreal \ clause
+        td verb \ clause
+      tr
+        td
+        td ける
+        td ikel
+        td (past)
+        td verb \ verb
+      tr
+        td
+        td たる
+        td ital
+        td (perfective)
+        td verb \ verb
+      tr
+        td
+        td ある
+        td ial
+        td (continuitive)
+        td verb \ verb
+      tr
+        td
+        td べく
+        td ubek
+        td must
+        td verb \ verb
       tr
         td
         td ば
-        td ba
+        td eba
         td because
-        td real \ clause
+        td verb \ clause
       tr
         td
         td よ
-        td jo
+        td ejo
         td (command)
-        td real \ sentence
+        td verb \ sentence
       tr
-        td 天
-        td てん
-        td Ten
         td
         td
+        td u
+        td
+        td verb \ adjective
       tr
-        td 地
-        td ぢ
-        td Di
         td
         td
+        td i
+        td
+        td verb \ adverb
       tr
-        td 人
-        td にん
-        td Nin
         td
-        td
-      tr
-        td 言
-        td げん
-        td Gen
-        td
-        td
-      tr
-        td 語
-        td ご
-        td Go
-        td
-        td
-      tr
-        td 思
-        td し
-        td Si
-        td
-        td
-      tr
-        td 考
-        td かう
-        td Kau
-        td
-        td
+        td なる
+        td nal
+        td be
+        td noun \ verb
+      +trs([
+        ["天地", "てんぢ", "TenDi", "heaven and earth", ""],
+        ["陰陽", "おむやう", "OmJau", "", ""],
+        ["人間", "にんけん", "NinKen", "human", ""],
+        ["言語", "げんご", "GenGo", "language", ""],
+        ["行動", "がぐづぐ", "HagDug", "action", ""],
+        ["思考", "しかう", "SiKau", "thought", ""],
+      ])
 
-
-  +section("grammar")
     table
       tr
-        th
-        th verb
+        each x in ["irrealis", "adverbial", "adjectival", "realis"]
+          th.v: span= x
       tr
-        th unreal
         td -a
-      tr
-        th nounal
         td -i
-      tr
-        th adjectival
         td -u
-      tr
-        th real
         td -e
+
+  +section("grammar")
+
   +section("example")
     +section("UDHR")
       table
         tr
-          th original
-          td すべての人間は、生れながらにして自由であり、かつ、尊厳と権利とについて平等である。人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。
+          th: a(href="https://www.ohchr.org/EN/UDHR/Pages/Language.aspx?LangID=jpn") original
+          td
+            p 世界人権宣言 第1条
+            p すべての人間は、生れながらにして自由であり、かつ、尊厳と権利とについて平等である。人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。
         tr
           th kana
-          td すびの人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかれりゐて, たがひに同胞の精神をもちて行動すべく.
-        tr
-          th roman
           td
-            | sub-i no NinKen pa, um-a l-i nacala ni s-i te DziIu nal-i te, katu, TsonGen to ConLi to ni tuk-i te BjagTag nal-u.
-            | NinKen pa, LiSjag to LagSim to vo sazuk-a l-i v-i te, tacap-i ni DugPau no TsjagZin vo mot-i te HagDug s-u bek-u.
+            p 世界人權宣言 第1條
+            p すびての人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかれたりて, たがひに同胞の精神をもちて行動すべく.
+        tr
+          th romanized
+          td
+            p SjaiKai-NinCon-SenGen Dai-It Deu
+            p
+              |sub-ite no NinKen pa, um al inacala ni s ite DziIu nal ite, katu, TsonGen to ConLi to ni tuk ite BjagTag nal.
+              |NinKen pa, LiSjag to LagSim to vo sazuk al ital ite, tacap-i ni DugPau no TsjagZin vo mot ite HagDug s ubek.
+
+    +section("羅生門")
+      table
+        tr
+          th: a(href="https://www.aozora.gr.jp/cards/000879/files/128_15261.html") original
+          td
+            p 羅生門
+            p
+              |或日の暮方の事である。
+              |一人の下人が、羅生門の下で雨やみを待つてゐた。
+            p
+              |廣い門の下には、この男の外に誰もゐない。
+              br
+              |唯、所々丹塗の剥げた、大きな圓柱に、蟋蟀が一匹とまつてゐる。
+              br
+              |羅生門が、朱雀大路にある以上は、この男の外にも、雨やみをする市女笠や揉烏帽子が、もう二三人はありさうなものである。
+              br
+              |それが、この男の外には誰もゐない。
+        tr
+          th romanized
+          td 羅生門(LaSjagMon)
+            p
+            p
+              |al u pi no kul-kata no koto nal.
+              br
+              |pito-tali no 下人(HeNin) ca, 羅生門(LaSjagMon) no sita de ama-jam i vo mat ial ikel.
+            p
+              |pilok u mon no sita ni pa, kono votoko no poka ni dale mo al az.
+              br
+              |tada, tokolo-tokolo ni-nul i no pac ital u opoku malu-pasila ni kilikilisu ca It-piki tomal ial.
+              br
+              |羅生門(LaSjagMon) ca, 朱雀(TsjuTsjak)-opo-di ni al u 以上(IZjag) pa, kono votoko no poka ni mo, ama-jam i vo sul u iti-me-kasa ja mom-i-烏帽子(UMouTsi) ca mou 二三人(Ni-SamNin) pa al isou nal u mono nal.
+              br
+              |sole ca, kono votoko no poka ni pa dale mo al az.
