@@ -8,24 +8,24 @@ mixin img(src, width)
 
 block head
 	-
-		const title = "suzuri and mituru"
+		const title = "suzuli and mitulu"
 		const tags = ["language=english|japanese"]
 
-		const suzuri = {};
-		const mituru = {};
+		const suzuli = {};
+		const mitulu = {};
 
 		const toDay = s =>
 			Math.ceil(
 				new Date(s).getTime() - new Date(`${s.split("-")[0]}-01-01`).getTime()
 			) / (1000 * 3600 * 24)
 
-		suzuri.age = 22
-		suzuri.birthYear = 2017 + 10000 - suzuri.age
-		suzuri.birthDay = toDay("2017-11-01")
+		suzuli.age = 22
+		suzuli.birthYear = 2017 + 10000 - suzuli.age
+		suzuli.birthDay = toDay("2017-11-01")
 
-		mituru.age = suzuri.age - 2
-		mituru.birthYear = suzuri.birthYear - mituru.age + suzuri.age
-		mituru.birthDay = toDay("2020-04-14")
+		mitulu.age = suzuli.age - 2
+		mitulu.birthYear = suzuli.birthYear - mitulu.age + suzuli.age
+		mitulu.birthDay = toDay("2020-04-14")
 
 block main
 	p in the present page, contents marked with "⚠" are yet to finalize.
@@ -35,20 +35,20 @@ block main
 			tr
 				th
 				td(style="text-align: center;")
-					img.logo(src="/images/suzuri.svg")
+					img.logo(src="/images/suzuli.svg")
 				td(style="text-align: center;")
-					img.logo(src="/images/mituru.svg")
+					img.logo(src="/images/mitulu.svg")
 			tr
 				th name
 				td 硯玄
 					ul
-						li japanese: suzuri faru
+						li japanese: suzuli faru
 						li mandarin: ŋiàn xyán
 						li cantonese: gin hỳn
 
 				td 盈冬
 					ul
-						li japanese: mituru fuju
+						li japanese: mitulu fuju
 						li mandarin: íŋ dūŋ
 						li cantonese: ìg tùg
 			tr
@@ -60,8 +60,8 @@ block main
 					p ⚠
 			tr
 				th age
-				td #{suzuri.age} (born on #{suzuri.birthYear}/#{suzuri.birthDay})
-				td #{mituru.age} (born on #{mituru.birthYear}/#{mituru.birthDay})
+				td #{suzuli.age} (born on #{suzuli.birthYear}/#{suzuli.birthDay})
+				td #{mitulu.age} (born on #{mitulu.birthYear}/#{mitulu.birthDay})
 			tr
 				th height/m
 				td 1.75
@@ -178,7 +178,7 @@ block main
 					li easily gets lonely
 					li has sensitive nipples
 				tr
-					td(colspan=2): a(href="https://twitter.com/search?q=from%3Asumiqj%20(%E7%A1%AF%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20suzuri%20OR%20%E7%9B%88%20OR%20%E3%83%9F%E3%83%84%E3%83%AB%20OR%20mituru)&f=live") unofficial talks by the author
+					td(colspan=2): a(href="https://twitter.com/search?q=from%3Asumiqj%20(%E7%A1%AF%20OR%20%E3%82%B9%E3%82%BA%E3%83%AA%20OR%20suzuli%20OR%20%E7%9B%88%20OR%20%E3%83%9F%E3%83%84%E3%83%AB%20OR%20mitulu)&f=live") unofficial talks by the author
 				tr
 					th 日本語の概要
 					td: ul
@@ -187,6 +187,7 @@ block main
 						li 體毛は平均的な量だが自分で薄く調へる
 						li 性器: 下反り, 勃起時半剝け, 230mm (但し數值は目安であり, 視覺上は#[+ruby("大","おほ")]きいほど好く, 爆根も#[+ruby("歡迎","XvanGjag")]します)
 						li 健康的, 引き締まった筋肉質, 色白
+						li 服裝: {モノクロ, 素朴}な物を好む
 						li 基本的に表情が薄い
 						li 口數少なく單獨#[+ruby("行動","HjagDog")]が多いが人嫌ひではなく, 智識#[+ruby("量","Ljag")]と#[+ruby("面倒","MenTau")]見の良さから#[+ruby("研究","GenKiu")]室の後輩らには賴りにされてゐる. 計算機科學と語學と倫理學が好き. 性依存の快樂主義者.
 					td: ul
@@ -196,6 +197,7 @@ block main
 						li 體毛はやや深め
 						li 性器: #[+ruby("上","うは")]反り, 勃起時半剝け, 210mm (但し數值は目安であり, 視覺上は大きいほど好く, 爆根も歡迎します)
 						li 健康的, 筋肉質で大柄
+						li 服裝: {高彩度, 明るめ, #[+ruby("輕松的", "casual")]}な物を好む
 						li #[+ruby("惡戲","いたづら")]ぽい笑顏が印象的
 						li 社交的で學內に知人が多い. 嫌はれる恐怖から誰にでも親切にしがち. 硯の獨立不羈に憧れてゐる. 純愛志向. 淚脆い.
 
@@ -214,15 +216,15 @@ block main
 
 	+section("interaction")
 		ul
-			li suzuri and mituru are students at the same university.
-			li suzuri's thoughts attract mituru. suzuri however does not like to exhibit his ideology.
+			li suzuli and mitulu are students at the same university.
+			li suzuli's thoughts attract mitulu. suzuli however does not like to exhibit his ideology.
 			li
-				| suzuri usually stays home and read books when he is alone. mituru often takes suzuri out and mostly they watch a movie.
-				| mituru is the only one (for now) to whom suzuri reveals his emotion.
+				| suzuli usually stays home and read books when he is alone. mitulu often takes suzuli out and mostly they watch a movie.
+				| mitulu is the only one (for now) to whom suzuli reveals his emotion.
 			li
-				| when mituru has no partner, he often comes to suzuri's house and shares the bed.
+				| when mitulu has no partner, he often comes to suzuli's house and shares the bed.
 				| once every 2 times, they have sexual intercourse.
-				| once every 4 times, suzuri bottoms, and the rest he tops.
+				| once every 4 times, suzuli bottoms, and the rest he tops.
 
 	+section("彼等を描く方へ")
 		ul
@@ -236,7 +238,9 @@ block main
 
 	+section("art")
 		.tile
-			//+section("12021/131")
+			+section("12021/157")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/lewd?src=hash&amp;ref_src=twsrc%5Etfw">#lewd</a> 盈君 <a href="https://t.co/rsJF0TLQMu">pic.twitter.com/rsJF0TLQMu</a></p>&mdash; 初夏の夜風の涼しさ (@sumiqj) <a href="https://twitter.com/sumiqj/status/1401933201350664197?ref_src=twsrc%5Etfw">June 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				p 本物はもっと肉附きがよい.
 
 			+section("12021/129")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">生首しか描けない <a href="https://t.co/Tb41nUC7wO">pic.twitter.com/Tb41nUC7wO</a></p>&mdash; 初夏の夜風の涼しさ (@sumiqj) <a href="https://twitter.com/sumiqj/status/1391770750495850498?ref_src=twsrc%5Etfw">May 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -272,7 +276,7 @@ block main
 
 			+section("12020/288")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">共感を得られなかったグロかわ狼フード <a href="https://t.co/MxQJZq1Ls4">pic.twitter.com/MxQJZq1Ls4</a></p>&mdash; 絹豆腐📛 (@momentoufuR18) <a href="https://twitter.com/momentoufuR18/status/1318916428586627073?ref_src=twsrc%5Etfw">October 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				+img("/character/mituru/image/2020-10-15.png")
+				+img("/character/mitulu/image/2020-10-15.png")
 
 			+section("12020/288")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">有り難う……神…………<a href="https://twitter.com/momentoufuR18?ref_src=twsrc%5Etfw">@momentoufuR18</a> <a href="https://t.co/ewEG9IIfod">pic.twitter.com/ewEG9IIfod</a></p>&mdash; ſumı (@smiqy) <a href="https://twitter.com/smiqy/status/1316746721121058817?ref_src=twsrc%5Etfw">October 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -304,14 +308,14 @@ block main
 
 			//+section("12020/234")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">- 硯君の表情 考<br>- 後輩君 <a href="https://t.co/ngIBx6kHit">pic.twitter.com/ngIBx6kHit</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1296894217789136896?ref_src=twsrc%5Etfw">August 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				p mituru: 後から見るとかわいくない
-				p suzuri: 後ろ髪は刈り上げる事も有る
+				p mitulu: 後から見るとかわいくない
+				p suzuli: 後ろ髪は刈り上げる事も有る
 
 			+section("12020/216")
 				p <a href="https://twitter.com/intent/user?user_id=948471113448792064">絹豆腐</a>
-				+img("/character/suzuri/images/2020-08-04.png")
-				//img(src="/character/suzuri/images/2020-08-04-1.png", width="50%")
-				//img(src="/character/suzuri/images/2020-08-04-2.png", width="50%")
+				+img("/character/suzuli/images/2020-08-04.png")
+				//img(src="/character/suzuli/images/2020-08-04-1.png", width="50%")
+				//img(src="/character/suzuli/images/2020-08-04-2.png", width="50%")
 
 			+section("12020/212")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">🔞NFSW🔞<br>skeb納品しました！穴まで描きたかった〜〜〜〜ッ！<br>リクエストありがとうございました🌞<a href="https://t.co/cqMdrGNWyZ">https://t.co/cqMdrGNWyZ</a> <a href="https://t.co/kYUK5iYora">pic.twitter.com/kYUK5iYora</a></p>&mdash; たま魂👼 (@mkotan) <a href="https://twitter.com/mkotan/status/1289200726829195264?ref_src=twsrc%5Etfw">July 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -338,7 +342,7 @@ block main
 			+section("12020/115")
 				P @shi46_u
 				a(href="https://twitter.com/intent/user?user_id=800300702937399296") 司ろう。君
-				+img("/character/suzuri/images/2020-04-25.jpg")
+				+img("/character/suzuli/images/2020-04-25.jpg")
 
 			+section("12020/114")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">リクエストありがとうございました～！Skeb(<a href="https://t.co/b5k3RNydjW">https://t.co/b5k3RNydjW</a> )にて、納品完了です！ <br>※NSFW+18 <a href="https://t.co/GJ892FBly9">pic.twitter.com/GJ892FBly9</a></p>&mdash; 九磨🔞 (@9ma_param) <a href="https://twitter.com/9ma_param/status/1253513328783065088?ref_src=twsrc%5Etfw">April 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -357,22 +361,22 @@ block main
 
 			//+section("12020/98")
 				p @nikuda2929 (有償)
-				//+nsfw: img(src="/character/suzuri/images/2020-04-08.jpg")
-				//img(src="/suzuri-mituru/image/2020-04-08'.jpg")
-				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/NSFW?src=hash&amp;ref_src=twsrc%5Etfw">#NSFW</a><br>from <a href="https://twitter.com/nikuda2929?ref_src=twsrc%5Etfw">@nikuda2929</a> 先生<br>大麻でラリってハメられるスズリ君<br>suzuri-kun being stoned and fucked <a href="https://t.co/bqQ7B7jAJE">pic.twitter.com/bqQ7B7jAJE</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1247826591792517123?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				//+nsfw: img(src="/character/suzuli/images/2020-04-08.jpg")
+				//img(src="/suzuli-mitulu/image/2020-04-08'.jpg")
+				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/hashtag/OC?src=hash&amp;ref_src=twsrc%5Etfw">#OC</a> <a href="https://twitter.com/hashtag/commission?src=hash&amp;ref_src=twsrc%5Etfw">#commission</a> <a href="https://twitter.com/hashtag/NSFW?src=hash&amp;ref_src=twsrc%5Etfw">#NSFW</a><br>from <a href="https://twitter.com/nikuda2929?ref_src=twsrc%5Etfw">@nikuda2929</a> 先生<br>大麻でラリってハメられるスズリ君<br>suzuli-kun being stoned and fucked <a href="https://t.co/bqQ7B7jAJE">pic.twitter.com/bqQ7B7jAJE</a></p>&mdash; 初夏の夜風の涼しさ (@sumigv) <a href="https://twitter.com/sumigv/status/1247826591792517123?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("12019-328")
 				p 非公開
 				//
 					p @inuqw
-					+img("/character/suzuri/images/2019-11-25.jpg")
+					+img("/character/suzuli/images/2019-11-25.jpg")
 
 			//+section("2019-10-27")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/WSN80Ga6jB">pic.twitter.com/WSN80Ga6jB</a></p>&mdash; sumi (@melanophil) <a href="https://twitter.com/melanophil/status/1188098375045935104?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("12019/283")
 				p @shi46_u
-				+img("/character/suzuri/images/2019-10-11.jpg")
+				+img("/character/suzuli/images/2019-10-11.jpg")
 
 			+section("12019/277")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://twitter.com/melanophil?ref_src=twsrc%5Etfw">@melanophil</a> さんが生活物資支援してくれたからお礼に彼のオリキャラ(硯くん)のfanart描いた(これがパパ活)<br><br>みんなも絹くん(180/73/21/大学生)にサポしてくれよな～ <a href="https://t.co/hA3AXsvwSy">pic.twitter.com/hA3AXsvwSy</a></p>&mdash; 絹豆腐 (@momentoufuR18) <a href="https://twitter.com/momentoufuR18/status/1180149743692812288?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -388,7 +392,7 @@ block main
 
 			+section("12019/206")
 				p @AI67448472
-				+img("/character/suzuri/images/2019-07-26.jpg")
+				+img("/character/suzuli/images/2019-07-26.jpg")
 
 			// +section("2019-07-26 0")
 				<blockquote class="twitter-tweet" data-conversation="none" data-theme="dark"><p dir="ltr">遅くなりましたが誕生日おめでとう御座います!スズリくん描かせて頂きました… <a href="https://t.co/3JS1r6kXg2">pic.twitter.com/3JS1r6kXg2</a></p>&mdash; まぁく (@MK2ma_c) <a href="https://twitter.com/MK2ma_c/status/1154736325766942720?ref_src=twsrc%5Etfw">July 26, 2019</a></blockquote>
@@ -398,12 +402,12 @@ block main
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr"><a href="https://t.co/tRtU7KUMdD">https://t.co/tRtU7KUMdD</a><a href="https://twitter.com/sikotamazou?ref_src=twsrc%5Etfw">@sikotamazou</a> 先生に依頼していたスズリ君が納品されました　最高に可愛い　文句無し　依頼して良かった</p>&mdash; ſumı (@smiqy) <a href="https://twitter.com/smiqy/status/1151805582556352513?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			+section("12019/112")
-				+img("/character/suzuri/images/2019-04-23.png")
+				+img("/character/suzuli/images/2019-04-23.png")
 
 			+section("12018/337")
 				<blockquote class="twitter-tweet" data-theme="dark"><p dir="ltr">わかんなかったとこは、捏造した <a href="https://t.co/MPDLpSVi1Q">pic.twitter.com/MPDLpSVi1Q</a></p>&mdash; 一人 (@nasu_zoi) <a href="https://twitter.com/nasu_zoi/status/1069800047636856832?ref_src=twsrc%5Etfw">2018年12月4日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				+img("/character/suzuri/images/2018-12-04.jpg")
+				+img("/character/suzuli/images/2018-12-04.jpg")
 
 			+section("12018/212")
 				p 非公開
-				//img(src="/character/suzuri/images/2018-08-01.png")
+				//img(src="/character/suzuli/images/2018-08-01.png")
