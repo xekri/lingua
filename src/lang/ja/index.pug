@@ -20,7 +20,6 @@ block main
   +section("orthography")
     ul
       li write with latin alphabet and chinese character.
-      li write chinese character only for sino-japonic words.
       li separate every word with spaces.
 
     table
@@ -136,12 +135,12 @@ block main
         td
         td る
         td al
-        td can
+        td can, may
         td verb \ verb
       tr
         td
         td れる
-        td alel
+        td elal
         td (passive)
         td verb \ verb
       tr
@@ -159,13 +158,13 @@ block main
       tr
         td
         td たる
-        td ital
+        td inul
         td (perfective)
         td verb \ verb
       tr
         td
         td ある
-        td ial
+        td ital
         td (continuitive)
         td verb \ verb
       tr
@@ -204,14 +203,6 @@ block main
         td nal
         td be
         td noun \ verb
-      +trs([
-        ["天地", "てんぢ", "TenDi", "heaven and earth", ""],
-        ["陰陽", "おむやう", "OmJau", "", ""],
-        ["人間", "にんけん", "NinKen", "human", ""],
-        ["言語", "げんご", "GenGo", "language", ""],
-        ["行動", "がぐづぐ", "HagDug", "action", ""],
-        ["思考", "しかう", "SiKau", "thought", ""],
-      ])
 
     table
       tr
@@ -223,7 +214,59 @@ block main
         td -u
         td -e
 
-  +section("grammar")
+  +section("chinese character")
+    ul
+      li every chinese character has just one sound
+      li write sino-japnic words with special orthography based on 呉音 and middle chinese
+      li capitalize the initial of every chinese character
+
+    table
+      tr
+        td g
+        td [ŋ]
+      tr
+        td x
+        td [h]
+      tr
+        td h
+        td [ɣ]
+      tr
+        td q
+        td [ʔ]
+
+    table
+      +trs([
+        ["天地", "てんぢ", "TenDi", "heaven and earth"],
+        ["陰陽", "おむやう", "QomJau", "dark and light"],
+        ["人間", "にんけん", "NinKen", "human"],
+        ["言語", "げんご", "GenGo", "language"],
+        ["行動", "がぐづぐ", "HagDug", "action"],
+        ["思考", "しかう", "SiKau", "thought"],
+      ])
+
+  +section("TAM")
+    table
+      tr
+        th(style="text-align:center;") En
+        th Ja
+        th NPG
+      +trs([
+        ["do", "する", "s"],
+        ["did", "した", "s ikel"],
+        ["will do", "しよう", "s am"],
+        ["be doing", "してゐる", "s ital"],
+        ["have done", "してゐる", "s inul"],
+        ["be done", "される", "s elal"],
+        ["must do", "すべき", "s ubek"],
+        ["may do", "される", "s al"],
+        ["let do", "させる", "s as"],
+        ["do!", "しろ", "s ejo"],
+        ["did not do", "しなかった", "s ikel az"],
+        ["was not done", "されなかった", "s elal ikel az"],
+        ["had not been done", "されてゐなかった", "s elal inul ikel az"],
+        ["had not been forced to do", "させられてゐなかった", "s as elal inul ikel az"],
+        ["had not been able to be forced to do", "させられられてゐなかった", "s as elal al inul ikel az"],
+      ])
 
   +section("example")
     +section("UDHR")
@@ -237,14 +280,14 @@ block main
           th kana
           td
             p 世界人權宣言 第1條
-            p すびての人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかれたりて, たがひに同胞の精神をもちて行動すべく.
+            p すびての人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかりぬりて, たがひに同胞の精神をもちて行動すべく.
         tr
           th romanized
           td
             p SjaiKai-NinCon-SenGen Dai-It Deu
             p
               |sub-ite no NinKen pa, um al inacala ni s ite DziIu nal ite, katu, TsonGen to ConLi to ni tuk ite BjagTag nal.
-              |NinKen pa, LiSjag to LagSim to vo sazuk al ital ite, tacap-i ni DugPau no TsjagZin vo mot ite HagDug s ubek.
+              |NinKen pa, LiSjag to LagSim to vo sazuk al inul ite, tacap-i ni DugPau no TsjagZin vo mot ite HagDug s ubek.
 
     +section("羅生門")
       table
@@ -270,11 +313,11 @@ block main
             p
               |al u pi no kul-kata no koto nal.
               br
-              |pito-tali no 下人(HeNin) ca, 羅生門(LaSjagMon) no sita de ama-jam i vo mat ial ikel.
+              |pito-tali no 下人(HeNin) ca, 羅生門(LaSjagMon) no sita de ama-jam i vo mat ital ikel.
             p
               |pilok u mon no sita ni pa, kono votoko no poka ni dale mo al az.
               br
-              |tada, tokolo-tokolo ni-nul i no pac ital u opoku malu-pasila ni kilikilisu ca It-piki tomal ial.
+              |tada, tokolo-tokolo ni-nul i no pac inul u opoku malu-pasila ni kilikilisu ca It-piki tomal ital.
               br
               |羅生門(LaSjagMon) ca, 朱雀(TsjuTsjak)-opo-di ni al u 以上(IZjag) pa, kono votoko no poka ni mo, ama-jam i vo sul u iti-me-kasa ja mom-i-烏帽子(UMouTsi) ca mou 二三人(Ni-SamNin) pa al isou nal u mono nal.
               br

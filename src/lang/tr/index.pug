@@ -5,6 +5,9 @@ block head
 	- const tag = ["draft"]
 
 block main
+	label
+		input(type="checkbox", checked)
+		|#{" "}consonant
 	.textareas
 		textarea#0.
 			# İnsan hakları evrensel beyannamesi
@@ -21,6 +24,7 @@ block main
 				li ç, c ↦ ṭ, ḍ
 				li ş, j ↦ ṣ, ẓ
 				li y ↦ j
+				li h ↦ x
 		li vowel
 			ul
 				li ı, i ↦ î, ǐ

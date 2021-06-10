@@ -3,23 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.getElementById("0"),
 		document.getElementById("1"),
 	];
+	const check = document.getElementsByTagName("input")[0];
 
 	const onInput = [
 		() =>
-			tas[1].value = convert[0](tas[0].value)
+			tas[1].value = convert[0](tas[0].value, check.checked)
 	];
 
-	tas[0].addEventListener("input", onInput[0]);
+	for (const e of [tas[0], check])
+		e.addEventListener("input", onInput[0]);
 
 	onInput[0]();
 })
 
 const xss = [
-	["ç", "ṭ"],
-	["c", "ḍ"],
-	["ş", "ṣ"],
-	["j", "ẓ"],
-	["y", "j"],
+	["ç", "ṭ", true],
+	["c", "ḍ", true],
+	["ş", "ṣ", true],
+	["j", "ẓ", true],
+
+	["y", "j", true],
+	["h", "x", true],
 
 	["i", "ǐ"],
 	["ı", "î"],
@@ -40,14 +44,14 @@ const replaceLowerAndUpperWithTable = (s, xss) =>
 
 
 const convert = [
-	s =>
-		xss
+	(s, checked) =>
+		(checked ? xss : xss.filter(xs => !(2 in xs)))
 			.reduce((acc, [x, y]) =>
 				acc
 					.replace(new RegExp(x, "g"), y)
 					.replace(new RegExp(x.toLocaleUpperCase("TR"), "g"), y.toUpperCase()),
 				s.normalize("NFC"))
-			.replace(/[a-vzğṭḍṣẓâôîûǎǒǐǔ']+/gi, word => {
+			.replace(/[a-zçşğṭḍṣẓâôîûǎǒǐǔ']+/gi, word => {
 				let r = "";
 				let state = 0;
 				for (const c of word) {
