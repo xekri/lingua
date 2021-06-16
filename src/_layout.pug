@@ -15,8 +15,6 @@ include /_mixins.pug
     , github: "xekri"
     }
 
-  const icon = "/images/sumi.svg"
-
 html
   head
     include _google-analytics.pug
@@ -30,7 +28,7 @@ html
     link(href="style.css", rel="stylesheet")
     script(src="script.js")
 
-    link(rel="icon", href=icon, type="image/svg+xml")
+    link(rel="icon", href="/images/sumi-color.svg", type="image/svg+xml")
 
     block head
 
@@ -59,7 +57,7 @@ html
       #nav-in
         div#logo
           a(href="/")
-            img(src=icon, width="50%")
+            img(src="/images/sumi''.svg", width="50%")
         #datetime
         +div("menu")
           ul

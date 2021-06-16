@@ -26,10 +26,8 @@
   box-sizing: border-box; }
 
 .center {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .tables table {
   display: inline-block;
@@ -58,7 +56,8 @@ main {
   overflow: auto;
   margin-left: 272px;
   padding: 32px;
-  font-size: inherit; }
+  font-size: inherit;
+  white-space-collapsing: discard; }
   main:not(.vertical) {
     padding-top: 0;
     padding-left: 0; }
@@ -207,13 +206,12 @@ details:focus, summary:focus {
   outline: none; }
 
 ruby {
-  ruby-align: center;
-  margin-inline-start: -3px; }
+  ruby-align: center; }
 
 #logo {
   text-align: center; }
   #logo svg {
-    margin: auto; }
+    margin: 0; }
 
 table tr:first-of-type th {
   text-align: center; }
@@ -229,3 +227,15 @@ table th.v {
   text-align: center; }
   table th.v span {
     writing-mode: vertical-lr; }
+
+.textareas {
+  padding: 0;
+  margin: 0;
+  white-space-collapse: discard;
+  display: flex; }
+  .textareas textarea {
+    width: 50%;
+    height: 320px;
+    margin: 0;
+    outline: none;
+    resize: none; }

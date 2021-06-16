@@ -6,23 +6,23 @@ block head
 
 block main
   +section("history")
-    center
-      table
-        tr
-          th.v: span date
-          th.v: span version
-          th.v: span detail
-        +trs([
-          ["12021/156","0.1", "conjugation, auxilary verb, 世界人權宣言, 羅生門, name of language"],
-          ["12021/153","0", "romanization system"],
-        ])
+    table.center
+      tr
+        th.v: span date
+        th.v: span version
+        th.v: span detail
+      +trs([
+        ["12021/160","0.2", "fix perfective and progressive"],
+        ["12021/156","0.1", "conjugation, auxilary verb, 世界人權宣言, 羅生門, name of language"],
+        ["12021/153","0", "romanization system"],
+      ])
 
   +section("orthography")
     ul
       li write with latin alphabet and chinese character.
       li separate every word with spaces.
 
-    table
+    table.center
       tr
         for x in ";;k, c;s, z;t, d;n;p, b;m;j;l;v".split(";")
           th.v: span= x
@@ -35,7 +35,7 @@ block main
       ].map(it => it.split(" ")))
 
   +section("phonology")
-    .tables
+    center.tables
       table
         tr
           th
@@ -82,7 +82,7 @@ block main
     p every verb ends in a consonant.
     p every chinese character has a single sound.
 
-    table
+    table.center
       tr
         td *我
         td われ
@@ -157,13 +157,13 @@ block main
         td verb \ verb
       tr
         td
-        td たる
+        td ぬる
         td inul
         td (perfective)
         td verb \ verb
       tr
         td
-        td ある
+        td たる
         td ital
         td (continuitive)
         td verb \ verb
@@ -181,8 +181,8 @@ block main
         td verb \ clause
       tr
         td
-        td よ
-        td ejo
+        td
+        td e
         td (command)
         td verb \ sentence
       tr
@@ -204,15 +204,13 @@ block main
         td be
         td noun \ verb
 
-    table
-      tr
-        each x in ["irrealis", "adverbial", "adjectival", "realis"]
-          th.v: span= x
-      tr
-        td -a
-        td -i
-        td -u
-        td -e
+    table.center
+      +thTrs([
+       ["irrealis", "-a"],
+       ["adverbial","-i"],
+       ["adjectival", "-u"],
+       ["realis", "-e"],
+      ])
 
   +section("chinese character")
     ul
@@ -234,7 +232,7 @@ block main
         td q
         td [ʔ]
 
-    table
+    table.center
       +trs([
         ["天地", "てんぢ", "TenDi", "heaven and earth"],
         ["陰陽", "おむやう", "QomJau", "dark and light"],
@@ -245,7 +243,7 @@ block main
       ])
 
   +section("TAM")
-    table
+    table.center
       tr
         th(style="text-align:center;") En
         th Ja
@@ -260,7 +258,7 @@ block main
         ["must do", "すべき", "s ubek"],
         ["may do", "される", "s al"],
         ["let do", "させる", "s as"],
-        ["do!", "しろ", "s ejo"],
+        ["do!", "しろ", "s e"],
         ["did not do", "しなかった", "s ikel az"],
         ["was not done", "されなかった", "s elal ikel az"],
         ["had not been done", "されてゐなかった", "s elal inul ikel az"],
@@ -270,7 +268,7 @@ block main
 
   +section("example")
     +section("UDHR")
-      table
+      table.center
         tr
           th: a(href="https://www.ohchr.org/EN/UDHR/Pages/Language.aspx?LangID=jpn") original
           td
