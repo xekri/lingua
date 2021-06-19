@@ -17,16 +17,22 @@ const showAscii = (...xs) =>
     .replace(/ṭ/, "tj")
     .replace(/ḍ/, "dj")
     .replace(/ṇ/, "nj")
-    .replace(/ǝ/, "r")
-    .replace(/ø/, "eo")
+    .replace(/ă/, "r")
+    .replace(/ơ/, "eo")
+    .replace(/ư/, "y")
     .replace(/jx/, "xj")
     .replace(/[ˋˊˉˈ]$/, x => toneSymbols.indexOf(x));
 
-const showComb = (initial, final, tone) =>
-  (initial + final)
-    .replace(/(?<=[iyueøoǝa])/, "\u0300\u0301\u0304\u030D"[tone])
-    .replace(/(?<=^[gm])$/, "ˋˊˉˈ"[tone])
-    .normalize("NFC");
+const showPretty = (initial, final, tone) =>
+  tone == 3 ?
+    initial + final
+      .replace(/g$/, "k")
+      .replace(/n$/, "t")
+      .replace(/m$/, "p")
+    :
+    (initial + final)
+      .replace(/(?<=[iưueơoăa])|(?<=^[gm])$/, ["\u0300", "\u0301", ""][tone])
+      .normalize("NFC");
 
 const yue = Object.fromEntries(
   jyutpingTable
@@ -75,13 +81,13 @@ const yue = Object.fromEntries(
 
         final = final
           .replace(/ng$/, "g")
-          .replace(/a/g, "ǝ")
-          .replace(/ǝǝ/, "a")
-          .replace(/oe|eo/, "ø")
-          .replace(/yu/, "y")
+          .replace(/a/g, "ă")
+          .replace(/ăă/, "a")
+          .replace(/oe|eo/, "ơ")
+          .replace(/yu/, "ư")
           .replace(/(?<!^)i$/, "j")
           .replace(/(?<!^)u$/, "v")
-          .replace(/øn/, "on")
+          .replace(/ơn/, "on")
           ;
 
         initial = initial
@@ -98,17 +104,17 @@ const yue = Object.fromEntries(
           .replace(/w/, "v")
           ;
 
-        if (/^[iyø]/.test(final))
+        if (/^[iươ]/.test(final))
           initial = initial.replace(/j$/, "")
         else if (/^u/.test(final))
           initial = initial.replace(/v$/, "")
 
-        if (/^ø/.test(initial + final)) {
+        if (/^ơ/.test(initial + final)) {
           initial = "j";
-          final = final.replace(/ø/, "o");
+          final = final.replace(/ơ/, "o");
         }
         if (/v/.test(initial))
-          final = final.replace(/ǝj/, "i");
+          final = final.replace(/ăj/, "i");
 
         if (voice)
           initial = initial
@@ -118,7 +124,8 @@ const yue = Object.fromEntries(
             .replace(/^p/, "b")
             .replace(/^x/, "h")
             .replace(/^s/, "z")
-            .replace(/^f/, "w");
+            .replace(/^f/, "w")
+            ;
         else
           initial = initial
             .replace(/^(?=[gnmljv]?$)/, "q");
@@ -152,26 +159,26 @@ const yue = Object.fromEntries(
         if (mcs.some(mc => mc.final.sjep == "止"))
           final = final.replace(/ej/, "i")
         if (mcs.some(mc => mc.final.sjep == "遇"))
-          final = final.replace(/øj/, "y");
+          final = final.replace(/ơj/, "ư");
         if (mcs.some(mc => mc.final.yonh) == "模")
           final = final.replace(/ov/, "u");
         if (mcs.some(mc => mc.final.sjep == "咸" && mc.final.ho == "開口" && mc.final.tongx == 1))
-          final = final.replace(/ǝm/, "om");
+          final = final.replace(/ăm/, "om");
         if (mcs.some(mc => ["蟹", "止"].includes(mc.final.sjep)))
-          final = final.replace(/øj/, "uj");
+          final = final.replace(/ơj/, "uj");
 
         const triple = [initial, final, tone];
-        return triple.concat([show(...triple), showAscii(...triple), mcs.length == 0 ? "!" : ""]);
+        return triple.concat([show(...triple), showAscii(...triple), showPretty(...triple), mcs.length == 0 ? "!" : ""]);
       }).filter(y => y)];
     })
 );
 
 const path = "yue.tsv";
-fs.writeFileSync(path, "character\tinitial\tfinal\ttone\troman\tascii\tno-emc-data\n")
+fs.writeFileSync(path, "character\tinitial\tfinal\ttone\troman\Tascii\tpretty\tno-emc-data\n")
 for (let [c, vs] of Object.entries(yue))
   for (const v of vs)
     fs.appendFileSync(path, `${c}\t${v.join("\t")}\n`);
 
 const cs = process.argv[2] || "君子聖哲";
 for (const c of cs)
-  console.log(yue[c].map(xs => show(...xs.slice(0, 3)).concat(xs.slice(-1))));
+  console.log(yue[c].map(xs => showPretty(...xs.slice(0, 3)).concat(xs.slice(-1))));
