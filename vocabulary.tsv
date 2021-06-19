@@ -1,15 +1,15 @@
 type	english	write		read
 numeral	0	零		ligˋ
-numeral	1	一		qjănˈ
+numeral	1	一		qjrnˈ
 numeral	2	二		ṇiˉ
 numeral	3	三		samˋ
 numeral	4	四		siˉ
 numeral	5	五		gˊ
 numeral	6	六		lugˈ
-numeral	7	七		ŧxănˈ
+numeral	7	七		ŧxrnˈ
 numeral	8	八		panˈ
-numeral	9	九		kăvˊ
-numeral	10	十		ẓămˈ
+numeral	9	九		krvˊ
+numeral	10	十		ẓrmˈ
 numeral	10^2	百		pagˈ
 numeral	10^3	千		ŧxinˋ
 numeral	10^4	萬		manˉ
@@ -23,7 +23,7 @@ pronoun	this	呢		qniˋ
 pronoun	that (formal)	彼		piˊ
 pronoun	that	嗰		koˊ
 interrogative pronoun	who	誰		ẓujˋ
-interrogative pronoun	what	乜	物	qmănˈ
+interrogative pronoun	what	乜	物	qmrnˈ
 interorgative	when (formal)	何時		hoˋẓiˋ
 interrogative proadverb	when	幾時		kiˊẓiˋ
 interrogative proadverb	where (formal)	何處		hoˋṭxyˉ
@@ -32,19 +32,19 @@ interrogative proadverb	why (formal)	爲何		viˋhoˋ
 interrogative proadverb	why	點解	怎解	timˊkajˊ
 interrogative proadverb	how (formal)	如何		ṇyˋhoˋ
 interrogative proadverb	how	點樣	怎樣	timˊơgˉ
-conjunction	or … ?	定係		digˉ hă̄j
-verb	be (noun)	係		hăjˉ
+conjunction	or … ?	定係		digˉ hr̄j
+verb	be (noun)	係		hrjˉ
 adverb	be (adjective), very	好		xovˊ
 adverb	not	唔	毋	mˋ
-verb	have	有		jăvˊ
+verb	have	有		jrvˊ
 verb	not have	冇	無	movˊ
 counter	(singular)	個		koˉ
 counter	(plural)	啲		tiˋ
 preposition	of (formal)	之		ṭiˋ
 preposition	of	嘅	忌	keˉ
 preposition	at (formal)	於		qyˋ
-preposition	at	喺		xăjˊ
-preposition	from	由 … 至		jăvˋ … ṭiˉ
+preposition	at	喺		xrjˊ
+preposition	from	由 … 至		jrvˋ … ṭiˉ
 preposition	for	爲		viˋ
 preposition	like	如		ṇyˋ
 conjunction	and (formal)	與		yˊ
@@ -53,17 +53,17 @@ conjunction	or	或		hvagˈ
 	also	而且		ṇiˋŧxeˊ
 	also	亦		igˈ
 	already	已		iˊ
-conjunction	because (formal)	因 … 故		qjănˋ … kuˉ
-conjunction	because	因爲 … 所以		qjănˋviˋ  … ṣoˊiˊ
-conjunction	if (formal)	如 … 就		ṇyˋ … đăvˉ
-conjunction	if	如果 … 就		ṇyˋkvoˊ … đăvˉ
+conjunction	because (formal)	因 … 故		qjrnˋ … kuˉ
+conjunction	because	因爲 … 所以		qjrnˋviˋ  … ṣoˊiˊ
+conjunction	if (formal)	如 … 就		ṇyˋ … đrvˉ
+conjunction	if	如果 … 就		ṇyˋkvoˊ … đrvˉ
 conjunction	even if	即使		ŧigˈṣiˊ
-conjunction	but	雖然 … 不過		sujˋṇinˋ … pănˈkvoˉ
+conjunction	but	雖然 … 不過		sujˋṇinˋ … prnˈkvoˉ
 conjunction	so as to	以		iˊ
-adverb	not only	不但		pănˈdanˉ
+adverb	not only	不但		prnˈdanˉ
 adverb	originally	本來		punˊlojˋ
 adverb	for example	譬如		pxiˉṇyˋ
-adverb	and so on	等等		tăgˊtăgˊ
+adverb	and so on	等等		trgˊtrgˊ
 auxilary verb	may	可		xoˊ
 proadverb	thus	噉		komˊ
 proadverb	thus much	咁		komˉ
@@ -73,36 +73,36 @@ modal	it is that …	嘅		keˉ
 modal	is it that … ?	㗎		kaˉ
 modal	please, let us …	啦		qlaˋ
 verb	eat	食		ẓigˈ
-verb	drink	飲		qjămˊ
+verb	drink	飲		qjrmˊ
 verb	go	去		xyˉ
-verb	come	來		lăjˋ
+verb	come	來		lrjˋ
 verb	listen	聽		txegˋ
 verb	speak	講		kogˊ
 verb	read	讀		dugˈ
 verb	write	寫		seˊ
-verb	watch	睇		txăjˊ
+verb	watch	睇		txrjˊ
 verb	learn	學		hogˈ
 verb	teach	教		kavˉ
 verb	live	住		ḍyˉ
 verb	sell	賣		majˉ
 verb	buy	買		majˊ
-verb	think	諗		qnămˊ
+verb	think	諗		qnrmˊ
 verb	like	中意		ṭugˋqiˉ
 verb	translate	飜譯		fxanˋigˈ
 adjective	large	大		dajˉ
 adjective	small	小		sivˊ
-adjective	new	新		sănˋ
-adjective	old	舊		că̄vˉ
+adjective	new	新		srnˋ
+adjective	old	舊		cr̄vˉ
 adjective	long	長		ḍơgˋ
 adjective	short	短		tynˊ
 adjective	tall	高		kovˋ
-adjective	short	矮		qăjˊ
+adjective	short	矮		qrjˊ
 adjective	many	多		toˋ
 adjective	few	少		ṣivˊ
 adjective	fat	肥		wiˋ
-adjective	slim	瘦		ṣăvˉ
+adjective	slim	瘦		ṣrvˉ
 adjective	far	遠		ynˊ
-adjective	close	近		cănˉ
+adjective	close	近		crnˉ
 adjective	fast	快		xvajˉ
 adjective	slow	慢		manˉ
 adjective	early	早		ŧovˊ
@@ -111,29 +111,29 @@ adjective	cold	凍		tugˉ
 adjective	hot	熱		ṇinˈ
 adjective	cool	涼		lơgˋ
 adjective	warm	暖		nynˊ
-adjective	thick	厚		hăvˊ
+adjective	thick	厚		hrvˊ
 adjective	thin	薄		bogˈ
 adjective	heavy	重		ḍugˊ
 adjective	light	輕		xigˋ
-adjective	deep	深		ṣămˋ
+adjective	deep	深		ṣrmˋ
 adjective	shallow	淺		ŧxinˊ
-adjective	tight	緊		kănˊ
+adjective	tight	緊		krnˊ
 adjective	loose	鬆		sugˋ
 adjective	difficult	難		nanˋ
 adjective	easy	易		iˉ
-noun	person	人		ṇănˋ
+noun	person	人		ṇrnˋ
 noun	moon, month	月		gynˈ
-noun	sun, day	日		ṇănˈ
+noun	sun, day	日		ṇrnˈ
 noun	year	年		ninˋ
 noun	book	書		ṣyˋ
 noun	week	星期		sigˋciˋ
 noun	sibling	同胞		dugˋpavˋ
-noun	spouse	配偶		pxujˉgăvˊ
-noun	teacher	先生		sinˋṣăgˋ
-noun	student	學生		hogˈṣăgˋ
+noun	spouse	配偶		pxujˉgrvˊ
+noun	teacher	先生		sinˋṣrgˋ
+noun	student	學生		hogˈṣrgˋ
 noun	university	大學		dajˉhogˈ
-noun	chinese written language	中文		ṭugˋmănˋ
-proper noun	japan	日本		ṇănˈpunˊ
+noun	chinese written language	中文		ṭugˋmrnˋ
+proper noun	japan	日本		ṇrnˈpunˊ
 proper noun	hong kong	香港		xơgˋkogˊ
-proper noun	canton	廣州		kvogˊṭăvˋ
+proper noun	canton	廣州		kvogˊṭrvˋ
 proper noun	taiwan	臺灣		dojˋqvanˋ

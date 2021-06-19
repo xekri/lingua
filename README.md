@@ -1,6 +1,6 @@
-# 新粵 SằnƯt
+# 新粵 Sr̀nYt
 
-SằnƯt is a romanization system for yue chinese, based on guanzhou and wuzhou dialect, and middle chinese.
+Sr̀nYt is a romanization system for yue chinese, based on guanzhou and wuzhou dialect, and middle chinese.
 
 ## romanization
 
@@ -26,7 +26,7 @@ SằnƯt is a romanization system for yue chinese, based on guanzhou and wuzhou 
   <tr>
     <td>i</td>
     <td>u</td>
-    <td>ư y</td>
+    <td>y</td>
   </tr>
   <tr>
     <td>e</td>
@@ -34,7 +34,7 @@ SằnƯt is a romanization system for yue chinese, based on guanzhou and wuzhou 
     <td>ơ eo</td>
   </tr>
   <tr>
-    <td colspan=3>a, ă r</td>
+    <td colspan=3>a, r</td>
   </tr>
 </table>
 
@@ -49,11 +49,10 @@ SằnƯt is a romanization system for yue chinese, based on guanzhou and wuzhou 
 
 - since the latter does not occur but is simpler, wholly,
   - ơn ↦ on
-  - văj ↦ vi
+  - vrj ↦ vi
 - based on older cantonese, partially,
   - f ↦ xv
   - j ↦ ṇ
-  - ơj ↦ uj
   - ơj ↦ uj
   - ơj ↦ y
   - ej ↦ i
@@ -62,16 +61,16 @@ SằnƯt is a romanization system for yue chinese, based on guanzhou and wuzhou 
 ## example
 
 春暁 ṭxòn xív
-<br>春眠不覺曉 ṭxòn mìn păt kok xív
-<br>處處聞啼鳥 ṭxư ṭxư mằn dằj nív
-<br>夜來風雨聲 je lòj fùg ứ ṣìg
+<br>春眠不覺曉 ṭxòn mìn prt kok xív
+<br>處處聞啼鳥 ṭxy ṭxy mr̀n dr̀j nív
+<br>夜來風雨聲 je lòj fùg ý ṣìg
 <br>花落知多少 xvà lok ṭì tò ṣív
 
-世界人權宣言 第一條 ṣăjkaj ṇằncừn sừngìn dăjqjăt dìv
-<br>人人生而自由， ṇằnṇằn ṣằg ṇì đijằv,
-<br>在尊嚴和權利上一律平等。 đoj ŧừngìm hvò cừnli ẓơg qjătlot bìgtắg.
-<br>他們賦有理性和良心， txàmùn fu'jắv lísig hvò lờgsằm,
-<br>並應以兄弟關係的精神相對待。 bigqig í xìgdăj kvànhăj tik ŧìg ẓằnsờg tujdoj.
+世界人權宣言 第一條 ṣrjkaj ṇr̀ncỳn sỳngìn drjqjrt dìv
+<br>人人生而自由， ṇr̀nṇr̀n ṣr̀g ṇì đijr̀v,
+<br>在尊嚴和權利上一律平等。 đoj ŧỳngìm hvò cỳnli ẓơg qjrtlot bìgtŕg.
+<br>他們賦有理性和良心， txàmùn fu'jŕv lísig hvò lờgsr̀m,
+<br>並應以兄弟關係的精神相對待。 bigqig í xìgdrj kvànhrj tik ŧìg ẓr̀nsờg tujdoj.
 <br>https://unicode.org/udhr/d/udhr_cmn_hant.html
 
 ## vocabulary
