@@ -81,6 +81,8 @@ const yue = Object.fromEntries(
           .replace(/yu/, "y")
           .replace(/(?<!^)i$/, "j")
           .replace(/(?<!^)u$/, "v")
+          .replace(/øn/, "on")
+          ;
 
         initial = initial
           .replace(/^k/, "kx")
@@ -93,12 +95,20 @@ const yue = Object.fromEntries(
           .replace(/^b/, "p")
           .replace(/^ng/, "g")
           .replace(/^h/, "x")
-          .replace(/w/, "v");
+          .replace(/w/, "v")
+          ;
 
         if (/^[iyø]/.test(final))
           initial = initial.replace(/j$/, "")
         else if (/^u/.test(final))
           initial = initial.replace(/v$/, "")
+
+        if (/^ø/.test(initial + final)) {
+          initial = "j";
+          final = final.replace(/ø/, "o");
+        }
+        if (/v/.test(initial))
+          final = final.replace(/ǝj/, "i");
 
         if (voice)
           initial = initial
@@ -141,8 +151,6 @@ const yue = Object.fromEntries(
 
         if (mcs.some(mc => mc.final.sjep == "止"))
           final = final.replace(/ej/, "i")
-        if (mcs.some(mc => mc.final.sjep == "止") && /v/.test(initial))
-          final = final.replace(/ǝj/, "i");
         if (mcs.some(mc => mc.final.sjep == "遇"))
           final = final.replace(/øj/, "y");
         if (mcs.some(mc => mc.final.yonh) == "模")

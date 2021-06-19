@@ -44,7 +44,7 @@ i y u e ø o ǝ a
 天地玄黃 宇宙洪荒 txinˋdi hynˋhvogˋyˊḍǝv hugˋxvogˋ
 <br>日月盈昃 辰宿列張 ṇǝt gyt igˋṭǝk d'ẓǝnˋsǝv† lit ṭøgˋ
 <br>寒來暑往 秋收冬藏 honˋlojˋṣyˊvogˊŧxǝvˋṣǝvˋtugˋđogˋ†
-<br>閏餘成歲 律呂調陽 ṇøn yˋd'ẓigˋsøj løt lyˊdivˋ† øgˋ
+<br>閠餘成歲 律呂調陽 ṇøn yˋd'ẓigˋsøj løt lyˊdivˋ† øgˋ
 <br>雲騰致雨 露結爲霜 vǝnˋdǝgˋṭi yˊ† lu kit vǝjˋ† ṣøgˋ
 <br>金生麗水 玉出崑岡 kǝmˋṣǝgˋ† lǝj ṣøjˊgyk ṭxøt kxvǝnˋkogˋ
 <br>劍號巨闕 珠稱夜光 kim hovˋ† cy kxyt ṭyˋṭxig† je kvogˋ
