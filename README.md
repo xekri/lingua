@@ -2,6 +2,8 @@
 
 Sr̀nYt is a romanization system for yue chinese, based on guanzhou and wuzhou dialect, and middle chinese.
 
+https://srnyt.herokuapp.com
+
 ## romanization
 
 ### consonant
@@ -44,6 +46,7 @@ Sr̀nYt is a romanization system for yue chinese, based on guanzhou and wuzhou d
 |   0   |   1   |   2   |     3      |
 |   ˋ   |   ˊ   |   ˉ   |     ˈ      |
 |   ˋ   |   ˊ   |   ∅   | -{k, t, p} |
+|   x   |   h   |   ∅   | -{k, t, p} |
 
 ### transformation
 
@@ -60,7 +63,7 @@ Sr̀nYt is a romanization system for yue chinese, based on guanzhou and wuzhou d
 
 ## example
 
-春暁 ṭxòn xív
+春曉 ṭxòn xív
 <br>春眠不覺曉 ṭxòn mìn prt kok xív
 <br>處處聞啼鳥 ṭxy ṭxy mr̀n dr̀j nív
 <br>夜來風雨聲 je lòj fùg ý ṣìg

@@ -1,13 +1,206 @@
+mixin tds(xs)
+  for x in xs
+    td= x
+
 html
   head
     link(rel="stylesheet", href="/style.css")
     script(src="/script.js")
   body
-    textarea.
-      世界人權宣言 第一條
-      人人生而自由，
-      在尊嚴和權利上一律平等。
-      他們賦有理性和良心，
-      並應以兄弟關係的精神相對待。
-    div
-    div
+    h1 新粵 Sr̀nYt
+    a(href="https://github.com/xekri/yue") repository
+
+    h2 convert
+    section#convert
+      if text
+        textarea= text
+      else
+        textarea.
+          零一二三四五六七八九十
+
+          春曉
+          春眠不覺曉
+          處處聞啼鳥
+          夜來風雨聲
+          花落知多少
+
+          世界人權宣言 第一條
+          人人生而自由，
+          在尊嚴和權利上一律平等。
+          他們賦有理性和良心，
+          並應以兄弟關係的精神相對待。
+      div
+        - const key = "combining"
+
+        if data
+          for datum in data
+            if Array.isArray(datum)
+              if datum.length == 1
+                - let [[initial, final, tone, roman, emcNum]] = datum
+                span(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
+              else
+                select
+                  for entry in datum
+                    - let [initial, final, tone, roman, emcNum] = entry
+                    option(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
+              | #{" "}
+            else
+              | #{datum}
+      div
+
+    ul
+      li input in the left area and unfocus
+      li select in the middle area
+
+    h2 system
+    section#system
+      table#initial
+        caption initial
+        tr
+          th
+          th(colspan=2) labial
+          th(colspan=3) dental
+          th(colspan=2) palatal
+          th(colspan=2) labio<br>-velar
+          th(colspan=2) velar
+        tr
+          th tenuis
+          +tds("p;f;t;ŧ (ts);s;ṭ (tj);ṣ (sj);kv;xv;k;x".split(";"))
+        tr
+          th aspirated
+          +tds("px;fx;tx;ŧx (tsx);;ṭx (txj);;kxv;;kx;".split(";"))
+        tr
+          th low
+          +tds("b;w;d;đ (dz);z;ḍ (dj);ẓ (zj);cv;hv;c;h".split(";"))
+        tr
+          th sonorant
+          +tds("m;v;n;l;;ṇ (nj);j;gv;;g;∅".split(";"))
+
+      table#final
+        caption final
+        tr
+          th
+          th ∅
+          th j
+          th v
+          th g
+          th n
+          th m
+        tr
+          th i
+          +tds("i;;iv;ĭg;in;im".split(";"))
+        tr
+          th u
+          +tds("u;uj;;ŭg;un;um".split(";"))
+        tr
+          th y
+          +tds("y;;;;yn;".split(";"))
+        tr
+          th e
+          +tds("e;ĕj;;eg;;".split(";"))
+        tr
+          th o
+          +tds("o;oj;ŏv;og;ŏn;om".split(";"))
+        tr
+          th ơ
+          +tds("ơ;ơ\u0306j;;ơg;;".split(";"))
+        tr
+          th ǝ
+          td
+          +tds("jvgnm".split("").map(x => "r\u0306" + x))
+        tr
+          th a
+          td a
+          +tds("jvgnm".split("").map(x => "a" + x))
+
+      table#tone
+        caption tone
+        tr
+          th(colspan=2)
+          th 平
+          th 上
+          th 去
+          th 入
+        tr
+          th(colspan=2) number
+          +tds([0, 1, 2, 3])
+        tr
+          th(colspan=2) verbose
+          td à
+          td á
+          td ā
+          td a&#x30D;
+        tr
+          th(colspan=2) standard
+          td àn
+          td án
+          td an
+          td at
+        tr
+          th(colspan=2) alphabet
+          td anh
+          td anx
+          td an
+          td at
+      //
+        tr
+          th(rowspan=6, style="border-right: none") coda
+          th(style="border-right: 1px solid; text-align: right;") ∅
+          td l
+          td q
+          td ∅
+          td
+        tr
+          th j
+          td e
+          td i
+          td j
+          td
+        tr
+          th v
+          td o
+          td u
+          td v
+          td
+        tr
+          th g
+          td c
+          td h
+          td g
+          td k
+        tr
+          th n
+          td d
+          td z
+          td n
+          td t
+        tr
+          th m
+          td b
+          td w
+          td m
+          td p
+
+      table#low
+        caption low aspiration
+        tr
+          th
+          th: span 平上
+          th: span 去入
+        tr
+          th tenuis
+          td dh
+          td d
+        tr
+          th aspirated
+          td d
+          td dx
+
+      table#sonorant
+        caption sonorant height
+          tr
+            th(style="border-right: none") high
+            th low
+          tr
+            td qn
+            td n

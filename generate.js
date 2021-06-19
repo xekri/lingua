@@ -2,45 +2,19 @@ const fs = require("fs");
 const yonh = require("yonh");
 const jyutpingTableParser = require('jyutping-table-parser');
 const jyutpingTable = jyutpingTableParser.parseJyutpingInput();
-
-const toneSymbols = [..."ˋˊˉˈ"]
-
-const show = (initial, final, tone) =>
-  initial + final + toneSymbols[tone];
-
-const showAscii = (...xs) =>
-  show(...xs)
-    .replace(/^ŧ/, "ts")
-    .replace(/^đ/, "dz")
-    .replace(/ṣ/, "sj")
-    .replace(/ẓ/, "zj")
-    .replace(/ṭ/, "tj")
-    .replace(/ḍ/, "dj")
-    .replace(/ṇ/, "nj")
-    .replace(/ơ/, "eo")
-    .replace(/jx/, "xj")
-    .replace(/[ˋˊˉˈ]$/, x => toneSymbols.indexOf(x));
-
-const showPretty = (initial, final, tone) =>
-  tone == 3 ?
-    initial + final
-      .replace(/g$/, "k")
-      .replace(/n$/, "t")
-      .replace(/m$/, "p")
-    :
-    (initial + final)
-      .replace(/(?<=[iyueơora])|(?<=^[gm])$/, ["\u0300", "\u0301", ""][tone])
-      .normalize("NFC");
+const show = require("./show.js");
 
 const yue = Object.fromEntries(
   jyutpingTable
     .concat([
-      { ch: "十", infoArray: [{ jyutping: ["sap6"] }] }
+      { ch: "十", infoArray: [{ jyutping: ["sap6"] }] },
     ])
     .filter(x => "infoArray" in x)
     .map(x => {
       const c = x.ch;
-      let mcs = yonh.lookup(c);
+      let mcs = yonh.lookup(c
+        .replace(/你/, "伱")
+      );
       if (!Array.isArray(mcs))
         mcs = [mcs];
 
@@ -156,34 +130,33 @@ const yue = Object.fromEntries(
 
         if (mcs.some(mc => mc.final.sjep == "止"))
           final = final.replace(/ej/, "i")
+        if (mcs.some(mc => ["蟹", "止"].includes(mc.final.sjep)))
+          final = final.replace(/ơj/, "uj");
         if (mcs.some(mc => mc.final.sjep == "遇"))
           final = final.replace(/ơj/, "y");
         if (mcs.some(mc => mc.final.yonh) == "模")
           final = final.replace(/ov/, "u");
         if (mcs.some(mc => mc.final.sjep == "咸" && mc.final.ho == "開口" && mc.final.tongx == 1))
           final = final.replace(/rm/, "om");
-        if (mcs.some(mc => ["蟹", "止"].includes(mc.final.sjep)))
-          final = final.replace(/ơj/, "uj");
 
         const triple = [initial, final, tone];
-        return triple.concat([show(...triple), showAscii(...triple), showPretty(...triple), mcs.length == 0 ? "!" : ""]);
+        return triple.concat([show.combining(...triple), mcs.length]);
       }).filter(y => y)];
     })
 );
 
 const path = "yue.tsv";
-fs.writeFileSync(path, "character\tinitial\tfinal\ttone\troman\tascii\tpretty\tno-emc-data\n")
+fs.writeFileSync(path, "character\tinitial\tfinal\ttone\troman\temc-entry\n")
 for (let [c, vs] of Object.entries(yue))
   for (const v of vs)
     fs.appendFileSync(path, `${c}\t${v.join("\t")}\n`);
 
-fs.writeFileSync("yue.json", JSON.stringify(
-  Object.entries(yue).map(([c, vss]) => [c, vss.map(vs => [vs[5], vs[6] == "!"])]),
-));
+fs.writeFileSync("yue.json", JSON.stringify(yue));
 
 const fromString = s =>
   [...s].map(c =>
-    c in yue ? yue[c].map(xs => showPretty(...xs.slice(0, 3)).concat(xs.slice(-1)))
+    c in yue
+      ? yue[c].map(xs => show.combining(...xs.slice(0, 3)) + (xs[4] ? "" : "!"))
       : c
   );
 
