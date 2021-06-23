@@ -8,199 +8,370 @@ html
     script(src="/script.js")
   body
     h1 新粵 Sr̀nYt
-    a(href="https://github.com/xekri/yue") repository
+    a(href="https://github.com/xekri/yue") repository (in progress)
 
-    h2 convert
-    section#convert
-      if text
-        textarea= text
-      else
-        textarea.
-          零一二三四五六七八九十
+    section
+      h2 convert
 
-          春曉
-          春眠不覺曉
-          處處聞啼鳥
-          夜來風雨聲
-          花落知多少
+      ul
+        li input in the left area and unfocus
+        li select in the middle area
 
-          世界人權宣言 第一條
-          人人生而自由，
-          在尊嚴和權利上一律平等。
-          他們賦有理性和良心，
-          並應以兄弟關係的精神相對待。
-      div
-        - const key = "combining"
+      div#convert
+        if text
+          textarea= text
+        else
+          textarea.
+            零一二三四五六七八九十
 
-        if data
-          for datum in data
-            if Array.isArray(datum)
-              if datum.length == 1
-                - let [[initial, final, tone, roman, emcNum]] = datum
-                span(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
+            春曉
+            春眠不覺曉
+            處處聞啼鳥
+            夜來風雨聲
+            花落知多少
+
+            世界人權宣言 第一條
+            人人生而自由，
+            在尊嚴和權利上一律平等。
+            他們賦有理性和良心，
+            並應以兄弟關係的精神相對待。
+        div
+          - const key = "combining"
+
+          if data
+            for datum in data
+              if Array.isArray(datum)
+                if datum.length == 1
+                  - let [[initial, final, tone, roman, emcNum]] = datum
+                  span(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
+                else
+                  select
+                    for entry in datum
+                      - let [initial, final, tone, roman, emcNum] = entry
+                      option(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
+                | #{" "}
               else
-                select
-                  for entry in datum
-                    - let [initial, final, tone, roman, emcNum] = entry
-                    option(class=emcNum ? "" : "no-emc")= show[key](initial, final, tone)
-              | #{" "}
-            else
-              | #{datum}
-      div
+                | #{datum}
+        div
 
-    ul
-      li input in the left area and unfocus
-      li select in the middle area
-
-    h2 system
-    section#system
-      table#initial
-        caption initial
-        tr
-          th
-          th(colspan=2) labial
-          th(colspan=3) dental
-          th(colspan=2) palatal
-          th(colspan=2) labio<br>-velar
-          th(colspan=2) velar
-        tr
-          th tenuis
-          +tds("p;f;t;ŧ (ts);s;ṭ (tj);ṣ (sj);kv;xv;k;x".split(";"))
-        tr
-          th aspirated
-          +tds("px;fx;tx;ŧx (tsx);;ṭx (txj);;kxv;;kx;".split(";"))
-        tr
-          th low
-          +tds("b;w;d;đ (dz);z;ḍ (dj);ẓ (zj);cv;hv;c;h".split(";"))
-        tr
-          th sonorant
-          +tds("m;v;n;l;;ṇ (nj);j;gv;;g;∅".split(";"))
-
-      table#final
-        caption final
-        tr
-          th
-          th ∅
-          th j
-          th v
-          th g
-          th n
-          th m
-        tr
-          th i
-          +tds("i;;iv;ĭg;in;im".split(";"))
-        tr
-          th u
-          +tds("u;uj;;ŭg;un;um".split(";"))
-        tr
-          th y
-          +tds("y;;;;yn;".split(";"))
-        tr
-          th e
-          +tds("e;ĕj;;eg;;".split(";"))
-        tr
-          th o
-          +tds("o;oj;ŏv;og;ŏn;om".split(";"))
-        tr
-          th ơ
-          +tds("ơ;ơ\u0306j;;ơg;;".split(";"))
-        tr
-          th ǝ
-          td
-          +tds("jvgnm".split("").map(x => "r\u0306" + x))
-        tr
-          th a
-          td a
-          +tds("jvgnm".split("").map(x => "a" + x))
-
-      table#tone
-        caption tone
-        tr
-          th(colspan=2)
-          th 平
-          th 上
-          th 去
-          th 入
-        tr
-          th(colspan=2) number
-          +tds([0, 1, 2, 3])
-        tr
-          th(colspan=2) verbose
-          td à
-          td á
-          td ā
-          td a&#x30D;
-        tr
-          th(colspan=2) standard
-          td àn
-          td án
-          td an
-          td at
-        tr
-          th(colspan=2) alphabet
-          td anh
-          td anx
-          td an
-          td at
-      //
-        tr
-          th(rowspan=6, style="border-right: none") coda
-          th(style="border-right: 1px solid; text-align: right;") ∅
-          td l
-          td q
-          td ∅
-          td
-        tr
-          th j
-          td e
-          td i
-          td j
-          td
-        tr
-          th v
-          td o
-          td u
-          td v
-          td
-        tr
-          th g
-          td c
-          td h
-          td g
-          td k
-        tr
-          th n
-          td d
-          td z
-          td n
-          td t
-        tr
-          th m
-          td b
-          td w
-          td m
-          td p
-
-      table#low
-        caption low aspiration
-        tr
-          th
-          th: span 平上
-          th: span 去入
-        tr
-          th tenuis
-          td dh
-          td d
-        tr
-          th aspirated
-          td d
-          td dx
-
-      table#sonorant
-        caption sonorant height
+    section
+      h2 summary
+      div#summary
+        table#initial
+          caption initial
           tr
-            th(style="border-right: none") high
+            th
+            th(colspan=2) labial
+            th(colspan=3) dental
+            th(colspan=2) palatal
+            th(colspan=2) labio<br>-velar
+            th(colspan=2) velar
+          tr
+            th tenuis
+            +tds("p;f;t;ŧ (ts);s;ṭ (tj);ṣ (sj);kv;xv;k;x".split(";"))
+          tr
+            th aspirated
+            +tds("px;fx;tx;ŧx (tsx);;ṭx (txj);;kxv;;kx;".split(";"))
+          tr
             th low
+            +tds("b;w;d;đ (dz);z;ḍ (dj);ẓ (zj);cv;hv;c;h".split(";"))
           tr
-            td qn
+            th sonorant
+            +tds("m;v;n;l;;ṇ (nj);j;gv;;g;∅".split(";"))
+
+        table#final
+          caption final
+          tr
+            th
+            th ∅
+            th j
+            th v
+            th g
+            th n
+            th m
+          tr
+            th i
+            +tds("i;;iv;ĭg;in;im".split(";"))
+          tr
+            th u
+            +tds("u;uj;;ŭg;un;um".split(";"))
+          tr
+            th y
+            +tds("y;;;;yn;".split(";"))
+          tr
+            th e
+            +tds("e;ĕj;;eg;;".split(";"))
+          tr
+            th o
+            +tds("o;oj;ŏv;og;ŏn;om".split(";"))
+          tr
+            th ơ
+            +tds("ơ;ơ\u0306j;;ơg;;".split(";"))
+          tr
+            th r
+            td
+            +tds("jvgnm".split("").map(x => "r\u0306" + x))
+          tr
+            th a
+            td a
+            +tds("jvgnm".split("").map(x => "a" + x))
+
+        table#tone
+          caption tone
+          tr
+            th(colspan=2)
+            th 平
+            th 上
+            th 去
+            th 入
+          tr
+            th(colspan=2) number
+            +tds([0, 1, 2, 3])
+          tr
+            th(colspan=2) verbose
+            td à
+            td á
+            td ā
+            td a&#x30D;
+          tr
+            th(colspan=2) standard
+            td àn
+            td án
+            td an
+            td at
+          tr
+            th(colspan=2) alphabet
+            td an(x)
+            td anq
+            td ans
+            td at
+        //
+          tr
+            th(rowspan=6, style="border-right: none") coda
+            th(style="border-right: 1px solid; text-align: right;") ∅
+            td l
+            td q
+            td ∅
+            td
+          tr
+            th j
+            td e
+            td i
+            td j
+            td
+          tr
+            th v
+            td o
+            td u
+            td v
+            td
+          tr
+            th g
+            td c
+            td h
+            td g
+            td k
+          tr
+            th n
+            td d
+            td z
             td n
+            td t
+          tr
+            th m
+            td b
+            td w
+            td m
+            td p
+
+        table#low
+          caption low aspiration
+          tr
+            th
+            th: span 平上
+            th: span 去入
+          tr
+            th tenuis
+            td dh
+            td d
+          tr
+            th aspirated
+            td d
+            td dx
+
+        table#sonorant
+          caption sonorant lowness
+            tr
+              th(style="border-right: none") high
+              th low
+            tr
+              td qn
+              td n
+
+    section
+      h2 phonology
+      ul
+        li syllable ∈ initial × nucleus × coda × tone × lowness
+        li initial = tenuis ∪ aspirated ∪ sonorant = {∅, k, x, kʷ, ts, s, t, p, f } ∪ {kʰ, kʷʰ, tsʰ, tʰ, pʰ, } ∪ { g, j, n, l, m, v }
+        li nucleus = { i, u, y, e, o, ơ, a, ӑ }
+        li coda = { ∅, j, v, g, n, m }
+        li tone = { falling, rising, flat, checked }
+        li lowness = { high, low }
+
+    section
+      h2 romanization
+
+      section
+        h3 aspiration
+        ul
+          li in many existing romanizations, tenuis and aspirated (dental obstruents for example) are written d- and t-
+          li however we want to reserve voiced-looking letters like d- for other use, so we write t- and tx-
+
+      section
+        h3 tone
+        ul
+          li falling and rising tones are written -à- and -á-
+          li flat tone is unmarked
+          li checked tone is indicated by replacing -g, -n, and -m with -k, -t, and -p
+          li these method are almost identical to yale romanziation
+          li since whether the high checked tone is upper high or lower high is obvious from whether the vowel is short or long, we don't write it explicitly
+
+      section
+        h3 lowness
+        ul
+          li whether the tone is high or low is determined by whether the inital was unvoiced or voiced originally in middle chinese
+          li so we use voiced-looking letters like d- to indicate low tone
+          li since sonorant is essentially voiced, n- is low and qn- marked with "q" is high (exceptional)
+
+      section
+        h3 aspiration and lowness
+        ul
+          li voiced obstruent initial in middle chinese became aspirated if tone ∈ {falling, rising} or unaspirated otherwise
+          li so we write as:
+            ul
+              li "dà" is aspirated
+              li "dhà" is not aspirated (exceptional)
+              li "da" is not aspirated
+              li "dxa" is aspirated (exceptional)
+
+      section
+        h3 simplification
+        ul
+          li since -on and -ơn are complementarily distributed, we only use the former
+
+      section
+        h3 allocaiton
+        ul
+          li since "c" originally had [g] sound (like greek "γ"), we use it as the low counterpart of "k", and use "g" that is left as [ŋ]
+          li since "v" originally had [w] sound (as a variant of "u"), we use it as an approximant, and use "w" that is left as a low fricative (like polish)
+          li sicne both "x" and "h" can indicate [h], we use the former as high and the latter as low
+          li since "r" had no other place to be used in, we use it as the short counterpart of "a"
+
+    section#grammar
+      h2 grammar
+
+      section
+        h3 pronoun
+
+        table
+          tr
+            td 我
+            td gó
+            td i
+          tr
+            td 你
+            td ní
+            td thou
+          tr
+            td 佢
+            td cý
+            td he
+          tr
+            td -哋
+            td di
+            td (plural)
+
+        table
+          tr
+            td 誰
+            td ẓùj
+            td who
+          tr
+            td 乜 (物)
+            td qmӑt
+            td what
+          tr
+            td 幾時
+            td kí ẓì
+            td when
+          tr
+            td 邊度 (焉道)
+            td pìn dov
+            td where
+          tr
+            td 點樣 (怎樣)
+            td tím jog
+            td how
+          tr
+            td 點解 (怎解)
+            td tím káj
+            td why
+
+      section
+        h3 word order
+          table
+            tr
+              td 我愛你
+              td gó qoj ní
+              td i love thou
+
+      section
+        h3 copula, question, and nagation
+        table
+          tr
+            td 係
+            td hӑj
+            td be (noun)
+          tr
+            td 唔 (毋)
+            td m̀
+            td not
+
+        table
+          tr
+            td 你係唔係學生？
+            td ní hӑj m̀ hӑj hok-ṣàg
+            td are you a student
+          tr
+            td 我係老師
+            td gó hӑj lóv-ṣì
+            td i am a teacher
+          tr
+            td 我唔係學生
+            td gó m̀ hӑj hok-ṣàg
+            td i am no student
+
+      section
+        h3 aspect
+        table
+          tr
+            td 過
+            td kvo
+            td (experiential)
+          tr
+            td 咗
+            td ṭó
+            td (perfective)
+          tr
+            td 緊
+            td kắn
+            td (progressive)
+          tr
+            td 住
+            td ḍy
+            td (durative)
+
+
+
+
+

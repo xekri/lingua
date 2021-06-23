@@ -26,20 +26,23 @@ exports.ascii = (initial, final, tone) =>
     .replace(/$/, tone);
 
 exports.combining = (initial, final, tone) =>
-  tone == 3 ?
-    initial + tone3(final, tone)
-      .replace(/r/, "ӑ")
-    :
-    (initial + final)
-      .replace(/(?<=[iyueơora])|(?<=^[gm])$/, ["\u0300", "\u0301", ""][tone])
-      .replace(/r/, "ӑ")
-      .normalize("NFC");
+  (
+    tone == 3
+      ? initial + tone3(final, tone)
+      : (initial + final)
+        .replace(/(?<=[iyueơora])|(?<=^[gm])$/, ["\u0300", "\u0301", ""][tone])
+  )
+    .replace(/r/, "ӑ")
+    .replace(/ӑ\u0300/, "ằ")
+    .replace(/ӑ\u0301/, "ắ")
+    .normalize("NFD")
+    .normalize("NFC");
 
 exports.alphabet = (initial, final, tone) =>
   (initial + final + tone)
-    .replace(/0$/, "h")
-    .replace(/1$/, "x")
-    .replace(/2$/, "")
+    .replace(/0$/, "")
+    .replace(/1$/, "q")
+    .replace(/2$/, "s")
     .replace(/g3$/, "k")
     .replace(/n3$/, "t")
     .replace(/m3$/, "p")
@@ -86,12 +89,12 @@ exports.greek = (initial, final, tone) =>
     .replace(/a/, ["ὴ", "ή", "η"][Math.min(tone, 2)])
     .replace(/r/, ["ὰ", "ά", "α"][Math.min(tone, 2)])
 
-    .replace(/q/g, "ϙ")
+    .replace(/^q/, "ϙ")
 
     .replace(/k/g, "κ")
-    .replace(/c/g, "γ")
-    .replace(/g/g, "ξ")
-    .replace(/h/g, "χ")
+    .replace(/^c/, "γ")
+    .replace(/g/, "ξ")
+    .replace(/^h/, "χ")
 
     .replace(/^ṭ/, "tj")
     .replace(/^ḍ/, "dj")
@@ -99,21 +102,21 @@ exports.greek = (initial, final, tone) =>
     .replace(/^ṣ/, "sj")
     .replace(/^ẓ/, "zj")
 
-    .replace(/t/g, "τ")
-    .replace(/d/g, "δ")
-    .replace(/n/g, "ν")
-
-    .replace(/^ŧ/, "τσ")
-    .replace(/^đ/, "δσ")
+    .replace(/^ŧ/, "θ")
+    .replace(/^đ/, "ϻ")
     .replace(/^l/, "λ")
-    .replace(/s/, "σ")
-    .replace(/z/, "ζ")
+    .replace(/^s/, "σ")
+    .replace(/^z/, "ζ")
+
+    .replace(/t/g, "τ")
+    .replace(/^d/, "δ")
+    .replace(/n/, "ν")
 
     .replace(/p/g, "π")
-    .replace(/b/g, "β")
+    .replace(/^b/, "β")
     .replace(/m/g, "μ")
-    .replace(/f/g, "φ")
-    .replace(/w/g, "ψ")
+    .replace(/^f/, "φ")
+    .replace(/^w/, "ψ")
 
     .replace(/j$/, "ι")
     .replace(/v$/, "υ")

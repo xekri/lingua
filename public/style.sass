@@ -5,14 +5,14 @@ body
   ul
     list-style-type: square
 
-  h1, h2, textarea, table, th
+  h1, h2, h3, textarea, table, th
     font-family: inherit
     font-weight: inherit
 
   select
     font: inherit
 
-  section#convert
+  #convert
     display: flex
     white-space: nowrap
     height: 50%
@@ -43,7 +43,7 @@ body
     .no-emc
       background-color: lightgray
 
-  section#system
+  #summary
     display: flex
     justify-content: space-evenly
 
@@ -70,3 +70,8 @@ body
         th:first-of-type
           text-align: right
           border-right: 1px solid
+
+  #grammar
+    table
+      td:not(:first-of-type)
+        padding-left: 16px

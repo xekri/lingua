@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const [input, divSelect, output] = document.querySelectorAll("textarea, div");
+  const [input, divSelect, output] = document.querySelectorAll("#convert textarea, #convert div");
 
   if (window.location.href.indexOf("?") == -1)
     window.location.href = "/?s=" + encodeURIComponent(input.value);
