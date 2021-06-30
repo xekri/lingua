@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-pug": "pug -w docs",
-    "watch-sass": "sass -w docs:docs",
+    "watch-pug": "pug -w src -o docs",
+    "watch-sass": "sass -w src:docs",
     "watch": "npm run watch-pug & npm run watch-sass"
   },
   "repository": {
