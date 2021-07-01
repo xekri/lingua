@@ -1,0 +1,135 @@
+extend /_layout.pug
+
+block head
+	- const title = "german"
+	- const tags = ["draft"]
+
+block main
+	p Deutsch ohne Geschlecht (german without gender) is an artificial genderless dialect of german.
+	a(href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsumi.space%2Flang%2Fde&hashtags=aaaa") tweet
+
+	+section("declension")
+		table
+			tr
+				th
+				th
+				th
+				th strong
+				th mixed
+				th weak
+				th M
+				th N
+				th F
+			tr
+				th(rowspan=4) Sg
+				th N
+				td er
+				td jung-er
+				td ein jung-er
+				td d-er jung-e
+				td Hund
+				td Lamm
+				td Katze
+			tr
+				th A
+				td ihn
+				td jung-en
+				td ein-en jung-en
+				td d-en jung-en
+				td Hund
+				td Lamm
+				td Katze
+			tr
+				th D
+				td ihm
+				td jung-em
+				td ein-em jung-en
+				td d-em jung-en
+				td Hund-e
+				td Lamm-e
+				td Katze
+			tr
+				th G
+				td seiner
+				td jung-en
+				td ein-es jung-en
+				td d-es jung-en
+				td Hund-es
+				td Lamm-es
+				td Katze-s
+
+			tr
+				th(rowspan=4) Pl
+				th N
+				td sie
+				td jung-e
+				td
+				td d-ie jung-en
+				td Hund-e
+				td Lämm-er
+				td Katze-n
+			tr
+				th A
+				td sie
+				td jung-e
+				td
+				td d-ie jung-en
+				td Hund-e
+				td Lämm-er
+				td Katze-n
+			tr
+				th D
+				td ihnen
+				td jung-en
+				td
+				td d-en jung-en
+				td Hund-en
+				td Lämm-ern
+				td Katze-n
+			tr
+				th G
+				td ihrer
+				td jung-er
+				td
+				td d-er jung-en
+				td Hund-e
+				td Lämm-er
+				td Katze-n
+
+	+section("vocabulary")
+		p avoid using gendered words.
+		p if there is no suitable common-gendered word, use a masculine word.
+
+		table
+			tr
+				th(style="text-align: center") M
+				th F
+				th U
+			tr
+				td er
+				td sie
+				td er
+			tr
+				td Fater
+				td Mutter
+				td Elter, Elternteil
+			tr
+				td Gatte
+				td Gattin
+				td Gatte
+			tr
+				td Bruder
+				td Schwester
+				td Geschwist, Geschwisterchen
+			tr
+				td Freund
+				td Freundin
+				td Freund
+			tr
+				td Student
+				td Studentin
+				td Student
+			tr
+				td Lehrer
+				td Lehrerin
+				td Lehrer

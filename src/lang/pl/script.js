@@ -39,30 +39,29 @@ const convert0 = s =>
 
     .replace(/(?<=[sz])j/g, "'j")
 
+    .replace(/dź|dzi(?=[eaouęǫō])/g, "dj")
     .replace(/dzi/g, "di")
-    .replace(/dź|dzi(?=[yieaouęǫō])/g, "dj")
+    .replace(/ć|ci(?=[eaouęǫō])/g, "tj")
     .replace(/ci/g, "ti")
-    .replace(/ć|ci(?=[yieaouęǫō])/g, "tj")
 
-    .replace(/ś|si(?=[yieaouęǫō])/g, "sj")
-    .replace(/ź|zi(?=[yieaouęǫō])/g, "zj")
-    .replace(/ń|ni(?=[yieaouęǫō])/g, "nj")
+    .replace(/ś/g, "sj")
+    .replace(/ź/g, "zj")
+    .replace(/ń/g, "nj")
 
     .replace(/cji/g, "ci")
+    .replace(/i(?=[eaouęǫō])/g, "j")
 
     .replace(/dz/g, "ʒ")
     .replace(/dž/g, "ď")
 
-    .replace(/i(?=[eaouęǫ])/g, "j")
-
-    .replace(/sjt(?=[ij])/g, "st")
-    .replace(/sjm(?=[ij])/g, "sm")
-
     .replace(/i/g, "ji")
     .replace(/y/g, "i")
 
-    .replace(/^j(?=[ieę])/g, "")
+    .replace(/sj([tm])j/g, "s$1j")
 
+    .replace(/(?<=^|[ieaouęǫō])j(?=[ieę])/g, "")
+
+    //.replace(/ji/g, "ǐ")
     //.replace(/je/g, "ě")
     //.replace(/ja/g, "ǎ")
     //.replace(/jo/g, "ǒ")
@@ -70,21 +69,21 @@ const convert0 = s =>
     //.replace(/ję/g, "ę\u030C")
     //.replace(/jǫ/g, "ǫ\u030C")
 
-    .replace(/(?<=[eaouěǎǒǔō]|[ęǫ]\u030C?)[jǐ]/g, "i")
-
     .normalize("NFC");
 
 const convert1 = s =>
   s
     .toLowerCase()
 
-    .replace(/ji/g, "і")
-    .replace(/je/g, "ѥ")
-    .replace(/ja/g, "ꙗ")
-    .replace(/jo/g, "ю")
-    .replace(/ju/g, "ѵ")
-    .replace(/ję/g, "ѩ")
-    .replace(/jǫ/g, "ѭ")
+    .replace(/ō/g, "у")
+
+    .replace(/ji|ǐ/g, "і")
+    //.replace(/je/g, "ѥ")
+    //.replace(/ja/g, "ꙗ")
+    //.replace(/jo/g, "ю")
+    //.replace(/ju/g, "ѵ")
+    //.replace(/ję/g, "ѩ")
+    //.replace(/jǫ/g, "ѭ")
 
     .replace(/i/g, "и")
     .replace(/e/g, "є")
@@ -93,7 +92,6 @@ const convert1 = s =>
     .replace(/u/g, "у")
     .replace(/ę/g, "ѧ")
     .replace(/ǫ/g, "ѫ")
-    .replace(/ō/g, "у")
 
     .replace(/p/g, "п")
     .replace(/b/g, "б")
