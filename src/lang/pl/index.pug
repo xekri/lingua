@@ -55,232 +55,240 @@ block main
 				td ѭ
 
 	+section("pronoun")
-		table
+		table.Pl-table
 			caption i
 			tr
 				th
-				th sg.
-				th pl.
+				th Sg
+				th Pl
 			tr
 				th N
-				td ꙗ
-				td ми
+				td ja
+				td my
 			tr
 				th AGL
-				td(rowspan=2) мнѥ
-				td нас
+				td(rowspan=2) mnie
+				td nas
 			tr
 				th D
-				td нам
+				td nam
 			tr
 				th I
-				td мнѫ
-				td намі
+				td mną
+				td nami
 
-		table
+		table.Pl-table
 			caption you
 			tr
 				th
-				th sg.
-				th pl.
+				th Sg
+				th Pl
 			tr
 				th N
-				td ти
-				td ви
+				td ty
+				td wy
 			tr
 				th AG
-				td тѩ
-				td(rowspan=2) вас
+				td cię
+				td(rowspan=2) was
 			tr
 				th L
-				td тобѥ
+				td tobie
 			tr
 				th D
-				td ті
-				td вам
+				td ci
+				td wam
 			tr
 				th I
-				td тобѫ
-				td вамі
+				td tobą
+				td wami
 
-		table
+		table.Pl-table
 			caption it
 			tr
 				th
-				th m.sg.
-				th n.sg.
-				th f.sg.
-				th p.pl.
-				th ip.pl.
+				th(colspan=3) Sg
+				th(colspan=2) Pl
+			tr(style="text-align: center;")
+				th
+				th M
+				th N
+				th F
+				th P
+				th Ip
 			tr
 				th N
-				td он
-				td оно
-				td она
-				td оні
-				td онє
+				td on
+				td ono
+				td ona
+				td oni
+				td one
 			tr
 				th A
-				td(rowspan=2) (є)го
-				td є
-				td ѭ
-				td(rowspan=3) их
-				td є
+				td(rowspan=2, style="border-right: none;") go
+				td je
+				td ją
+				td(rowspan=3, style="border-right: none;") ich
+				td je
 			tr
 				th G
-				td (є)го
-				td(rowspan=3) єи
-				td(rowspan=2) их
+				td(style="border-left: none")
+				td(rowspan=3) jej
+				td(rowspan=2, style="border-left: none")
 			tr
 				th L
-				td(colspan=2) им
+				td(colspan=2) im
 			tr
 				th D
-				td(colspan=2) (є)му
-				td(colspan=2) им
+				td(colspan=2) mu
+				td(colspan=2) im
 			tr
 				th I
-				td(colspan=2) им
-				td ѭ
-				td(colspan=2) имі
+				td(colspan=2) im
+				td ją
+				td(colspan=2) imi
 
-		table
-			caption what
+		table.Pl-table
+			caption wh-
+			tr
+				th
+				th P
+				th Ip
 			tr
 				th N
-				td кто
-				td(rowspan=2) цо
+				td kto
+				td(rowspan=2) co
 			tr
 				th A
-				td(rowspan=2) кого
+				td(rowspan=2) kogo
 			tr
 				th G
-				td чєго
+				td czego
 			tr
 				th D
-				td кому
-				td чєму
+				td komu
+				td czemu
 			tr
 				th LI
-				td кім
-				td чим
+				td kom
+				td czym
 
 	+section("noun")
-			table
+			table.pl-table
 				caption brother, personal
 				tr
 					th
-					th sg
-					th pl
+					th Sg
+					th Pl
 				tr
 					th N
-					td брат
-					td братꙗ
+					td brat
+					td bracia
 				tr
 					th AG
-					td брата
-					td браті
+					td brata
+					td braci
 				tr
 					th V
-					td(rowspan=2) братѥ
-					td братꙗ
+					td(rowspan=2) bracie
+					td bracia
 				tr
 					th L
-					td братꙗх
+					td braciach
 				tr
 					th D
-					td брату
-					td братюм
+					td bratu
+					td braciom
 				tr
 					th I
-					td братєм
-					td братьмі
+					td bratem
+					td braćmi
 
-			table
+			table.pl-table
 				caption house, inanimate
 				tr
 					th
-					th sg
-					th pl
+					th Sg
+					th Pl
 				tr
 					th NA
-					td дом
-					td(rowspan=2) доми
+					td dom
+					td(rowspan=2) domy
 				tr
 					th V
-					td(rowspan=3) дому
+					td(rowspan=3) domu
 				tr
 					th L
-					td домах
+					td domach
 				tr
 					th G
-					td домоов
+					td domów
 				tr
 					th D
-					td домові
-					td домом
+					td domowi
+					td domom
 				tr
 					th I
-					td домєм
-					td домамі
-			table
+					td domem
+					td domami
+			table.pl-table
 				caption word, neuter
 				tr
 					th
-					th sg
-					th pl
+					th Sg
+					th Pl
 				tr
 					th NVA
-					td слово
-					td слова
+					td słowo
+					td słowa
 				tr
 					th L
-					td словѥ
-					td словах
+					td slowje
+					td slowach
 				tr
 					th D
-					td слову
-					td словом
+					td słowu
+					td słowam
 				tr
 					th G
-					td слова
-					td слоов
+					td słowa
+					td słowow
 				tr
 					th I
-					td словєм
-					td словамі
+					td slowom
+					td slowami
 
 			table
 				caption crow, feminine
 				tr
 					th
-					th sg
-					th pl
+					th Sg
+					th Pl
 				tr
 					th N
-					td врона
-					td(rowspan=3) врони
+					td wrona
+					td(rowspan=3) wrony
 				tr
 					th A
-					td вронѧ
+					td wronę
 				tr
 					th V
-					td вроно
+					td wrono
 				tr
 					th L
-					td(rowspan=2) вронѥ
-					td вронах
+					td(rowspan=2) wronie
+					td wronach
 				tr
 					th D
-					td вроном
+					td wronom
 				tr
 					th G
-					td врони
-					td врон
+					td wrony
+					td wron
 				tr
 					th I
-					td вронѫ
-					td вронамі
+					td wroną
+					td wronami
 
 	+section("verb")
 		table
@@ -295,11 +303,11 @@ block main
 				th(colspan=5) conditional
 			tr
 				for i in [0, 1, 2]
-					th(rowspan=2) sg.
-					th(rowspan=2) pl.
+					th(rowspan=2, style="text-align: center") Sg
+					th(rowspan=2) Pl
 				for i in [0, 1]
-					th(colspan=3) sg.
-					th(colspan=2) pl.
+					th(colspan=3) Sg
+					th(colspan=2) Pl
 			tr
 				for i in [0, 1]
 					th m.
@@ -309,7 +317,7 @@ block main
 					th ip.
 			tr
 				th 1
-				td(rowspan=3) бить
+				td(rowspan=3) być
 				td єстєм
 				td єстєсьми
 				td бѧдѧ
@@ -374,11 +382,11 @@ block main
 				th(colspan=5) conditional
 			tr
 				for i in [0, 1]
-					th(rowspan=2) sg.
-					th(rowspan=2) pl.
+					th(rowspan=2) Sg
+					th(rowspan=2) Pl
 				for i in [0, 1]
-					th(colspan=3) sg.
-					th(colspan=2) pl.
+					th(colspan=3) Sg
+					th(colspan=2) Pl
 			tr
 				for i in [0, 1]
 					th m.
@@ -436,7 +444,7 @@ block main
 				td читаліби
 				td читалиби
 
-	+section("sentences")
+	+section("sentence")
 		table
 			tr
 				td
@@ -468,3 +476,20 @@ block main
 					| i travel with my friend.
 					br
 					span.pl podróżuję z moim przyjacielem.
+
+	+section("vocabulary")
+		table
+			-
+				const xss = [
+					["parent", "rodzic", "P"],
+					["child", "dziecko", "N"],
+					["sibling", "rodzeństwo", "N"],
+					["spouse", ""],
+					["", ""],
+				]
+
+			for xs in xss
+				tr
+					td= xs[0]
+					td.pl= xs[1]
+					td= xs[2]

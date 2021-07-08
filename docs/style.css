@@ -59,7 +59,6 @@ main {
   font-size: inherit;
   white-space-collapsing: discard; }
   main:not(.vertical) {
-    padding-top: 0;
     padding-left: 0; }
   main.vertical {
     writing-mode: vertical-lr; }
@@ -143,16 +142,17 @@ a {
   text-decoration-thickness: 4px; }
 
 table {
+  margin: 16px;
   border-collapse: collapse;
-  margin: 16px; }
+  border-block-start: 1px solid #DDD;
+  border-inline-start: 1px solid #DDD; }
   table th {
     font-weight: normal;
     text-align: right; }
   table th, table td {
     padding: 8px; }
-  table tbody {
-    border-block-start: 1px solid #DDD;
-    border-block-end: 1px solid #DDD; }
+    table th:not([colspan="1"]), table td:not([colspan="1"]) {
+      text-align: center; }
   table:not(.transpose) tr + tr {
     border-block-start: 1px solid #444; }
   table.transpose tr {
@@ -213,7 +213,7 @@ ruby {
   #logo svg {
     margin: 0; }
 
-table tr:first-of-type th {
+table tr th {
   text-align: center; }
 
 table tr th:first-of-type:not(.v) {
@@ -239,3 +239,5 @@ table th.v {
     margin: 0;
     outline: none;
     resize: none; }
+    .textareas textarea:not(:first-of-type) {
+      border-left: none; }

@@ -42,7 +42,7 @@ const pug_ = done => {
 const js = done => {
   gulp
     .src(`${paths.src}/**/*.js`)
-    .pipe(babel({
+    /*.pipe(babel({
       presets: [
         ["@babel/preset-env", {
           "targets": {
@@ -55,7 +55,7 @@ const js = done => {
         //"@babel/plugin-proposal-do-expressions",
         //"@babel/plugin-transform-runtime",
       ],
-    }))
+    }))*/
     .pipe(gulp.dest(paths.dst));
   done();
 };

@@ -71,7 +71,6 @@ main
   font-size: inherit
   white-space-collapsing: discard
   &:not(.vertical)
-    padding-top: 0
     padding-left: 0
   &.vertical
     writing-mode: vertical-lr
@@ -172,8 +171,10 @@ a
     //text-decoration: none
 
 table
-  border-collapse: collapse
   margin: $space / 2
+  border-collapse: collapse
+  border-block-start: 1px solid $color
+  border-inline-start: 1px solid $color
 
   th
     font-weight: normal
@@ -181,10 +182,8 @@ table
 
   th, td
     padding: 8px
-
-  tbody
-    border-block-start: 1px solid $color
-    border-block-end: 1px solid $color
+    &:not([colspan="1"])
+      text-align: center
 
   &:not(.transpose)
     td + td, td + th, th + td, th + th
@@ -258,7 +257,7 @@ ruby
     margin: 0
 
 table
-  tr:first-of-type
+  tr
     th
       text-align: center
   tr
@@ -284,3 +283,6 @@ table
     margin: 0
     outline: none
     resize: none
+
+    &:not(:first-of-type)
+      border-left: none

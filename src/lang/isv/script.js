@@ -4,6 +4,4 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const td of table.querySelectorAll("td"))
       td.innerHTML = td.innerHTML.replace(stem, `<span class="stem">${stem}</span>`)
   }
-
-
 })

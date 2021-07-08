@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   onInput();
 
-  for (const e of document.getElementsByClassName("pl"))
+  for (const e of document.querySelectorAll(".pl, .pl-table td"))
     e.innerHTML = replaceNewPolishWordsKeepCase(replacePolishWordsKeepCase(e.innerHTML, convert0), convert1);
 })
 
@@ -77,12 +77,12 @@ const convert1 = s =>
 
     .replace(/ō/g, "у")
 
-    .replace(/ji|ǐ/g, "і")
-    //.replace(/je/g, "ѥ")
+    .replace(/ji/g, "і")
+    .replace(/je/g, "ѥ")
     //.replace(/ja/g, "ꙗ")
     //.replace(/jo/g, "ю")
     //.replace(/ju/g, "ѵ")
-    //.replace(/ję/g, "ѩ")
+    .replace(/ję/g, "ѩ")
     //.replace(/jǫ/g, "ѭ")
 
     .replace(/i/g, "и")
