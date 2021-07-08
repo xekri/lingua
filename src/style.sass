@@ -41,9 +41,8 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   table
     display: inline-block
     vertical-align: top
-    margin: 0
-  table:not(:last-of-type)
-    margin-right: $space
+  table:not(:first-of-type)
+    margin-left: 0
 
 h1, #menu
   //text-transform: uppercase
@@ -51,7 +50,7 @@ h1, #menu
 body
   margin: 0
   padding: 0
-  height: 100vh
+  height: 100%
   width: 100%
   color: $color
   background-color: $bgcolor
@@ -173,23 +172,32 @@ a
 table
   margin: $space / 2
   border-collapse: collapse
-  border-block-start: 1px solid $color
-  border-inline-start: 1px solid $color
+  border-block-start: 1px solid
+  border-inline-start: 1px solid
 
   th
     font-weight: normal
-    text-align: right
+    text-align: center
 
-  th, td
-    padding: 8px
+  td
+    text-align: left !important
     &:not([colspan="1"])
       text-align: center
 
-  &:not(.transpose)
-    td + td, td + th, th + td, th + th
-      //border-left: 1px solid #444
-    tr + tr
-      border-block-start: 1px solid #444
+  th, td
+    padding: $space / 4
+
+  tr + tr
+    border-block-start: 1px solid #444
+
+  &.c td
+    text-align: center
+
+  th.v
+    vertical-align: bottom
+    text-align: center
+    span
+      writing-mode: vertical-lr
 
   &.transpose
     tr
@@ -248,29 +256,10 @@ details, summary
 ruby
   ruby-align: center
 
-  main.vertical &
-    //ruby-position: under
-
 #logo
   text-align: center
   svg
     margin: 0
-
-table
-  tr
-    th
-      text-align: center
-  tr
-    th:first-of-type:not(.v)
-      text-align: right
-
-  &.c td
-    text-align: center
-  th.v
-    vertical-align: bottom
-    text-align: center
-    span
-      writing-mode: vertical-lr
 
 .textareas
   padding: 0
