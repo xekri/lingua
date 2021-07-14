@@ -36,6 +36,7 @@
       <div id="nav-in">
         <div id="logo"><a href="/"><img src="/images/sumi''.svg" width="50%"></a></div>
         <div id="datetime"></div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         <div class="my-div" id="menu">
           <ul>
             <li><a href="/">/</a></li>
@@ -44,54 +45,59 @@
             <li><a href="/fav">favorite</a></li>
             <!-- li: a(href="/thought") thought-->
             <li><a href="/work">work</a></li>
+            <li><a href="/lang">language</a></li>
             <li><a href="/misc">misc</a></li>
           </ul>
           <div class="my-div" id="submenu">
           </div>
         </div>
-        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
-        <p>⚠ this website uses Google Analytics. this website is not mobile-friendly.<br>⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。</p>
+        <div class="my-div" id="⚠">this website
+          <ul>
+            <li>uses Google Analytics.</li>
+            <li>is not optimised for mobile.</li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
-      <article>
-        <section id="convert alphabet style">
-          <h1><a href="#convert alphabet style">#</a> 
+      <section id="convert alphabet style">
+        <h1><a href="#convert alphabet style">#</a> 
 convert alphabet style
-          </h1>
-          <ul>
-            <li>
-              <input class="trigger" type="checkbox" name="undot">
-              <label>dotless</label>
-            </li>
-            <li>
-              <label>case</label>
-              <select class="trigger" name="case">
-                <option selected></option>
-                <option value="lower">lower</option>
-                <option value="upper">upper</option>
-              </select>
-            </li>
-            <li>
-              <label>style</label>
-              <select class="trigger" name="style">
-                <option selected></option>
-                <option value="serif-bold">serif bold</option>
-                <option value="serif-italic">serif italic</option>
-                <option value="serif-bold-italic">serif bold italic</option>
-                <option value="sans">sans</option>
-                <option value="sans-bold">sans bold</option>
-                <option value="sans-italic">sans italic</option>
-                <option value="sans-bold-italic">sans bold italic</option>
-                <option value="fraktur">fraktur</option>
-                <option value="fraktur-bold">fraktur bold</option>
-                <option value="script">script</option>
-                <option value="script-bold">script bold</option>
-                <option value="mono">mono</option>
-                <option value="double">double</option>
-              </select>
-            </li>
-          </ul>
+        </h1>
+        <ul>
+          <li>
+            <input class="trigger" type="checkbox" name="undot">
+            <label>dotless</label>
+          </li>
+          <li>
+            <label>case</label>
+            <select class="trigger" name="case">
+              <option selected></option>
+              <option value="lower">lower</option>
+              <option value="upper">upper</option>
+            </select>
+          </li>
+          <li>
+            <label>style</label>
+            <select class="trigger" name="style">
+              <option selected></option>
+              <option value="serif-bold">serif bold</option>
+              <option value="serif-italic">serif italic</option>
+              <option value="serif-bold-italic">serif bold italic</option>
+              <option value="sans">sans</option>
+              <option value="sans-bold">sans bold</option>
+              <option value="sans-italic">sans italic</option>
+              <option value="sans-bold-italic">sans bold italic</option>
+              <option value="fraktur">fraktur</option>
+              <option value="fraktur-bold">fraktur bold</option>
+              <option value="script">script</option>
+              <option value="script-bold">script bold</option>
+              <option value="mono">mono</option>
+              <option value="double">double</option>
+            </select>
+          </li>
+        </ul>
+        <div class="textareas">
           <textarea class="trigger" id="in">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 ΑΒΓΔΕϜΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεϝζηθικλμνξοπρςστυφχψω
 0123456789
@@ -99,10 +105,10 @@ convert alphabet style
 All human beings are born free and equal in dignity and rights.
 They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.</textarea>
           <textarea id="out"></textarea>
-        </section>
-        <!--+section("")include _discus.pug
-        -->
-      </article>
+        </div>
+      </section>
+      <!--+section("")include _discus.pug
+      -->
     </main>
   </body>
 </html>

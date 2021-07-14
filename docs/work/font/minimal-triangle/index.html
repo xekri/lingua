@@ -38,6 +38,7 @@
       <div id="nav-in">
         <div id="logo"><a href="/"><img src="/images/sumi''.svg" width="50%"></a></div>
         <div id="datetime"></div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         <div class="my-div" id="menu">
           <ul>
             <li><a href="/">/</a></li>
@@ -46,83 +47,86 @@
             <li><a href="/fav">favorite</a></li>
             <!-- li: a(href="/thought") thought-->
             <li><a href="/work">work</a></li>
+            <li><a href="/lang">language</a></li>
             <li><a href="/misc">misc</a></li>
           </ul>
           <div class="my-div" id="submenu">
           </div>
         </div>
-        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
-        <p>⚠ this website uses Google Analytics. this website is not mobile-friendly.<br>⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。</p>
+        <div class="my-div" id="⚠">this website
+          <ul>
+            <li>uses Google Analytics.</li>
+            <li>is not optimised for mobile.</li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
-      <article>
-        <section id="minimal-triangle">
-          <h1><a href="#minimal-triangle">#</a> 
+      <section id="minimal-triangle">
+        <h1><a href="#minimal-triangle">#</a> 
 minimal-triangle
-          </h1>
-          <center>
-            <textarea class="trigger" id="input">abcdefghijklm
+        </h1>
+        <center>
+          <textarea class="trigger" id="input">abcdefghijklm
 nopqrstuvwxyz
 .,:;-'`</textarea>
-            <table id="options">
-              <tr>
-                <td>character width</td>
-                <td>(posisive int)</td>
-                <td>
-                  <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
-                </td>
-              </tr>
-              <tr>
-                <td>stroke width</td>
-                <td>(positive int)</td>
-                <td>
-                  <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
-                </td>
-              </tr>
-              <tr>
-                <td>space between characters</td>
-                <td>(float)</td>
-                <td>
-                  <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
-                </td>
-              </tr>
-              <tr>
-                <td>space between lines</td>
-                <td>(float)</td>
-                <td>
-                  <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
-                </td>
-              </tr>
-              <tr>
-                <td>margin</td>
-                <td>(nonnegative float)</td>
-                <td>
-                  <input class="trigger" id="margin" type="number" min="0" value="1" step="any"> [character]
-                </td>
-              </tr>
-              <tr>
-                <td>color</td>
-                <td></td>
-                <td>
-                  <input class="trigger" id="color" type="color" value="#ffffff">
-                </td>
-              </tr>
-              <tr>
-                <td>background color</td>
-                <td></td>
-                <td>
-                  <input class="trigger" id="bg-color" type="color" value="#000000">
-                </td>
-              </tr>
-            </table>
-            <canvas id="output"></canvas>
-            <div><a id="tweet">tweet</a></div>
-          </center>
-        </section>
-        <!--+section("")include _discus.pug
-        -->
-      </article>
+          <table id="options">
+            <tr>
+              <td>character width</td>
+              <td>(posisive int)</td>
+              <td>
+                <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
+              </td>
+            </tr>
+            <tr>
+              <td>stroke width</td>
+              <td>(positive int)</td>
+              <td>
+                <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
+              </td>
+            </tr>
+            <tr>
+              <td>space between characters</td>
+              <td>(float)</td>
+              <td>
+                <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>space between lines</td>
+              <td>(float)</td>
+              <td>
+                <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>margin</td>
+              <td>(nonnegative float)</td>
+              <td>
+                <input class="trigger" id="margin" type="number" min="0" value="1" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td></td>
+              <td>
+                <input class="trigger" id="color" type="color" value="#ffffff">
+              </td>
+            </tr>
+            <tr>
+              <td>background color</td>
+              <td></td>
+              <td>
+                <input class="trigger" id="bg-color" type="color" value="#000000">
+              </td>
+            </tr>
+          </table>
+          <canvas id="output"></canvas>
+          <div><a id="tweet">tweet</a></div>
+        </center>
+      </section>
+      <!--+section("")include _discus.pug
+      -->
     </main>
   </body>
 </html>

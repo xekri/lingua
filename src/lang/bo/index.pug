@@ -1,0 +1,29 @@
+extend /_layout.pug
+
+block head
+  - const title = "tibetan"
+  - const tags = [""]
+
+
+block main
+  table
+    tr.vs
+      th
+      th tenuis
+      th aspirated
+      th voiced
+      th (aspirated voiced)
+      th nasal
+      th approximant
+      th fricative
+      th voiced fricative
+      th vowel
+    +thTrs([
+      ["none"       , "ཨ q", ""    , "འ  ", ""   , ""   , ""   , ""   , ""   , ""   , ""   ],
+      ["velar"      , "ཀ k", "ཁ kx", "ག c", "གྷ ch", "ང g", ""   , "ཧ x", ""   , "ཨ a", ""   ],
+      ["palatal"    , "ཅ ḳ", "ཆ ḳx", "ཇ ċ", "ཛྷ ċh", "ཉ ġ", "ཡ j", "ཤ ẋ", "ཞ ḣ", "ཨི i", "ཨེ e"],
+      ["(retroflex)", "ཊ ṫ", "ཋ ṫx", "ཌ ḋ", "ཌྷ ḋh", "ཎ ṅ", ""   , "ཥ ṡ", ""   , ""   , ""   ],
+      ["dental"     , "ཏ t", "ཐ tx", "ད d", "དྷ dh", "ན n", "ར r", ""   , ""   , ""   , ""   ],
+      [""           , "ཙ ŧ", "ཚ ŧx", "ཛ đ", ""    , ""   , "ལ l", "ས s", "ཟ z", ""   , ""   ],
+      ["labial"     , "པ p", "ཕ px", "བ b", "བྷ bh", "མ m", "ཝ v", ""   , ""   , "ཨུ u", "ཨོ o"],
+    ].map(xs => xs.map(x => x.replace(/ /, "\n"))))

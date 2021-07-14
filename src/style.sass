@@ -1,5 +1,7 @@
-$space: 32px
-$navWidth: 240px
+@use "sass:math"
+
+$space: 2em
+$navWidth: 16em
 $color: #DDD
 $bgcolor: #000
 
@@ -34,9 +36,12 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   box-sizing: border-box
 
 .center
-  margin-left: auto
-  margin-right: auto
+  margin-inline-start: auto
+  margin-inline-end: auto
   display: block
+
+table.center
+  display: table
 
 .tables
   table
@@ -48,51 +53,39 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 h1, #menu
   //text-transform: uppercase
 
-body
-  margin: 0
-  padding: 0
+html, body
   height: 100%
   width: 100%
+  margin: 0
+
+body
   color: $color
   background-color: $bgcolor
 
   font-family: "Nishiki Kana", "Noto Sans", "Noto Sans TC", sans-serif
   font-weight: 100
 
-main
-  margin: 0
-  padding: 0
-  top: 0
-  height: 100%
-  width: calc(100% - #{$navWidth} - #{$space})
-  overflow: auto
-  margin-left: $navWidth + $space
-  padding: $space
-  font-size: inherit
-  white-space-collapsing: discard
-  padding-left: 0
-  &.vertical
-    writing-mode: vertical-lr
+  display: flex
+  align-items: stretch
+  flex-flow: row nowrap
+  justify-content: space-between
 
-  article
-    margin: 0
-    padding: 0
+  padding: $space
+
+main, nav
+  height: 100%
 
 nav
-  z-index: 50
   width: $navWidth
-  height: 100%
-  margin: 0
-  position: fixed
-  border-right: 1px $color solid
+  height: auto
   top: 0
-  overflow: scroll
-
-  #menu ul
-    margin-top: $space
+  bottom: 0
+  border-top: 1px solid
+  border-left: 1px solid
+  overflow-y: auto
 
   ul
-    margin-left: 16px
+    margin-left: 1em
     padding-left: 0
 
   #nav-in
@@ -101,6 +94,9 @@ nav
     margin-top: $space
     padding: 0
     display: inline-block
+
+    .my-div
+      padding-top: $space
 
     #datetime
       text-align: center
@@ -111,12 +107,27 @@ nav
       width: 100%
       text-align: center
 
-main section
-  margin-block-end: $space
+    .twitter-share-button
+      margin-bottom: $space
 
-  section
-    margin-block-end: 0
-    overflow-x: auto
+main
+  width: 100%
+  margin-left: 0
+  font-size: inherit
+  margin-left: $space
+  overflow: auto
+  height: 100%
+  border-left: 1px solid
+  border-top: 1px solid
+
+  & > section
+    border: none
+
+  &.vertical
+    writing-mode: vertical-lr
+
+section
+  margin-block-end: $space
 
 section, .my-div
   margin: 0
@@ -159,21 +170,16 @@ figure
 a
   color: $color
   text-decoration-color: #FFF4
-  text-decoration-thickness: 4px
-  &:link
-    //text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5)
-  &:visited
-    // text-shadow: none
-  &:hover
-  &:active
-  main.vertical &
-    //text-decoration: none
+  text-decoration-thickness: 0.25em
 
 table
-  margin: $space / 2
+  margin: math.div($space, 2)
   border-collapse: collapse
-  border-block-start: 1px solid
-  border-inline-start: 1px solid
+
+  tr:first-of-type
+    border-top: 1px solid
+  tr
+    border-left: 1px solid
 
   th
     font-weight: normal
@@ -185,7 +191,7 @@ table
       text-align: center
 
   th, td
-    padding: $space / 4
+    padding: math.div($space, 4)
 
   tr + tr
     border-block-start: 1px solid #444
@@ -193,11 +199,9 @@ table
   &.c td
     text-align: center
 
-  th.v
-    vertical-align: bottom
-    text-align: center
-    span
-      writing-mode: vertical-lr
+  th.v, tr.vs th
+    text-align: right
+    writing-mode: vertical-lr
 
   &.transpose
     tr

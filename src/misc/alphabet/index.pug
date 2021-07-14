@@ -21,11 +21,12 @@ block main
         for k in "serif-bold serif-italic serif-bold-italic sans sans-bold sans-italic sans-bold-italic fraktur fraktur-bold script script-bold mono double".split(" ")
           option(value=k)= k.replace(/-/g, " ")
 
-  textarea#in.trigger.
-    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-    ΑΒΓΔΕϜΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεϝζηθικλμνξοπρςστυφχψω
-    0123456789
+  .textareas
+    textarea#in.trigger.
+      ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+      ΑΒΓΔΕϜΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεϝζηθικλμνξοπρςστυφχψω
+      0123456789
 
-    All human beings are born free and equal in dignity and rights.
-    They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
-  textarea#out
+      All human beings are born free and equal in dignity and rights.
+      They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
+    textarea#out

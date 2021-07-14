@@ -7,10 +7,10 @@ block head
 block main
   +section("history")
     table.center
-      tr
-        th.v: span date
-        th.v: span version
-        th.v: span detail
+      tr.vs
+        th date
+        th version
+        th detail
       +trs([
         ["12021/160","0.2", "fix perfective and progressive"],
         ["12021/156","0.1", "conjugation, auxilary verb, 世界人權宣言, 羅生門, name of language"],
@@ -23,9 +23,9 @@ block main
       li separate every word with spaces.
 
     table.center
-      tr
+      tr.vs
         for x in ";;k, c;s, z;t, d;n;p, b;m;j;l;v".split(";")
-          th.v: span= x
+          th: span= x
       +thTrs([
         "a あ か さ た な は ま や ら わ",
         "i い き し ち に ぴ み 𛀆 り ゐ",
@@ -35,13 +35,13 @@ block main
       ].map(it => it.split(" ")))
 
   +section("phonology")
-    center.tables
+    .tables
       table
-        tr
+        tr.vs
           th
-          th.v: span velar
-          th(colspan=2).v: span dental
-          th.v: span labial
+          th velar
+          th(colspan=2) dental
+          th labial
         tr
           th unvoiced
           td k [k, x]

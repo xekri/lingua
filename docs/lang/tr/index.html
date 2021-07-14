@@ -36,6 +36,7 @@
       <div id="nav-in">
         <div id="logo"><a href="/"><img src="/images/sumi''.svg" width="50%"></a></div>
         <div id="datetime"></div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
         <div class="my-div" id="menu">
           <ul>
             <li><a href="/">/</a></li>
@@ -44,65 +45,68 @@
             <li><a href="/fav">favorite</a></li>
             <!-- li: a(href="/thought") thought-->
             <li><a href="/work">work</a></li>
+            <li><a href="/lang">language</a></li>
             <li><a href="/misc">misc</a></li>
           </ul>
           <div class="my-div" id="submenu">
           </div>
         </div>
-        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
-        <p>⚠ this website uses Google Analytics. this website is not mobile-friendly.<br>⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。</p>
+        <div class="my-div" id="⚠">this website
+          <ul>
+            <li>uses Google Analytics.</li>
+            <li>is not optimised for mobile.</li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
-      <article>
-        <section id="turkish">
-          <h1><a href="#turkish">#</a> 
+      <section id="turkish">
+        <h1><a href="#turkish">#</a> 
 turkish
-          </h1>
-          <label>
-            <input type="checkbox" checked> consonant
-          </label>
-          <div class="textareas">
-            <textarea id="0"># İnsan hakları evrensel beyannamesi
+        </h1>
+        <label>
+          <input type="checkbox" checked> consonant
+        </label>
+        <div class="textareas">
+          <textarea id="0"># İnsan hakları evrensel beyannamesi
 
 ## Madde 1
 Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
 Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
 </textarea>
-            <textarea id="1"></textarea>
-          </div>
-          <ul>
-            <li>consonant
-              <ul>
-                <li>ç, c ↦ ṭ, ḍ</li>
-                <li>ş, j ↦ ṣ, ẓ</li>
-                <li>y ↦ j</li>
-                <li>h ↦ x</li>
-              </ul>
-            </li>
-            <li>vowel
-              <ul>
-                <li>ı, i ↦ î, ǐ</li>
-                <li>a, e ↦ â, ǎ</li>
-                <li>o, ö ↦ ô, ǒ</li>
-                <li>u, ü ↦ û, ǔ</li>
-              </ul>
-            </li>
-            <li>the same diacritics (ˆ or ˇ) in a row on vowels in a word can be omitted except the initial one.
-              <ul>
-                <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranḍi</li>
-              </ul>
-            </li>
-            <li>the initial vowel with no diacritic in a word is thought to be with ˆ by default.
-              <ul>
-                <li>arkadaş ↦ ârkâdâṣ ↦ ârkadaṣ ↦ arkadaṣ</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <!--+section("")include _discus.pug
-        -->
-      </article>
+          <textarea id="1"></textarea>
+        </div>
+        <ul>
+          <li>consonant
+            <ul>
+              <li>ç, c ↦ ṭ, ḍ</li>
+              <li>ş, j ↦ ṣ, ẓ</li>
+              <li>y ↦ j</li>
+              <li>h ↦ x</li>
+            </ul>
+          </li>
+          <li>vowel
+            <ul>
+              <li>ı, i ↦ î, ǐ</li>
+              <li>a, e ↦ â, ǎ</li>
+              <li>o, ö ↦ ô, ǒ</li>
+              <li>u, ü ↦ û, ǔ</li>
+            </ul>
+          </li>
+          <li>the same diacritics (ˆ or ˇ) in a row on vowels in a word can be omitted except the initial one.
+            <ul>
+              <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranḍi</li>
+            </ul>
+          </li>
+          <li>the initial vowel with no diacritic in a word is thought to be with ˆ by default.
+            <ul>
+              <li>arkadaş ↦ ârkâdâṣ ↦ ârkadaṣ ↦ arkadaṣ</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <!--+section("")include _discus.pug
+      -->
     </main>
   </body>
 </html>

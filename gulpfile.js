@@ -1,13 +1,12 @@
 const gulp = require("gulp");
 const pug = require("gulp-pug");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const babel = require("gulp-babel");
 const cssmin = require("gulp-cssmin");
 const browserSync = require("browser-sync");
 const del = require("del");
-
 const paths = {
   src: "src",
   dst: "docs",
@@ -63,6 +62,7 @@ const js = done => {
 const other = done => {
   gulp
     .src([
+      `${paths.src}/CNAME`,
       `${paths.src}/**/*.*`,
       `${paths.src}/**/*`,
       `!${paths.src}/**/*.pug`,

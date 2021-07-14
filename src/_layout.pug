@@ -58,7 +58,18 @@ html
         div#logo
           a(href="/")
             img(src="/images/sumi''.svg", width="50%")
+
         #datetime
+
+        center
+          a(
+            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            , class="twitter-share-button"
+            , data-show-count="true"
+            , data-via=author.twitter
+          ) tweet
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
         +div("menu")
           ul
             li: a(href="/") /
@@ -67,28 +78,20 @@ html
             li: a(href="/fav") favorite
             // li: a(href="/thought") thought
             li: a(href="/work") work
+            li: a(href="/lang") language
             li: a(href="/misc") misc
 
           +div("submenu")
 
-        center
-          a(
-            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-            , class="twitter-share-button"
-            , data-show-count="true"
-            , data-via=author.twitter
-          ) Tweet
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        +div("⚠")
+          | this website
+          ul
+            li uses Google Analytics.
+            li is not optimised for mobile.
 
-        p
-          |⚠ this website uses Google Analytics. this website is not mobile-friendly.
-          br
-          |⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。
+    main(class=vertical ? "vertical" : "")
+      +section(title, tags)
+        block main
 
-    main(class=verticalMain ? "vertical" : "")
-      article
-        +section(title, tags)
-          block main
-
-        //+section("")
-          include _discus.pug
+      //+section("")
+        include _discus.pug

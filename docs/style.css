@@ -1,177 +1,224 @@
 300&display=swap");
 @font-face {
   src: local("YuGothic");
-  font-family: 'YuGothic';
+  font-family: "YuGothic";
   font-weight: lighter;
-  unicode-range: U+1B001, U+30A8; }
-
+  unicode-range: U+1B001, U+30A8;
+}
 @font-face {
   src: url(/assets/fonts/MonomakhUnicode.otf) format("opentype");
-  font-family: 'Monomakh';
+  font-family: "Monomakh";
   font-weight: lighter;
-  unicode-range: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F; }
-
+  unicode-range: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F;
+}
 @font-face {
   font-family: "Nishiki Kana";
   src: url(/assets/fonts/nishiki-kana.otf) format("opentype");
-  unicode-range: U+1B000, U+1B001, U+30A8; }
-
+  unicode-range: U+1B000, U+1B001, U+30A8;
+}
 @font-face {
   font-family: "tri";
   src: url(/work/font/tri.woff2) format("woff2");
   font-style: normal;
-  font-weight: normal; }
-
+  font-weight: normal;
+}
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .center {
-  margin-left: auto;
-  margin-right: auto;
-  display: block; }
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: block;
+}
+
+table.center {
+  display: table;
+}
 
 .tables table {
   display: inline-block;
-  vertical-align: top; }
-
+  vertical-align: top;
+}
 .tables table:not(:first-of-type) {
-  margin-left: 0; }
+  margin-left: 0;
+}
 
-body {
-  margin: 0;
-  padding: 0;
+html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+}
+
+body {
   color: #DDD;
   background-color: #000;
   font-family: "Nishiki Kana", "Noto Sans", "Noto Sans TC", sans-serif;
-  font-weight: 100; }
+  font-weight: 100;
+  display: flex;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 2em;
+}
 
-main {
-  margin: 0;
-  padding: 0;
-  top: 0;
+main, nav {
   height: 100%;
-  width: calc(100% - 240px - 32px);
-  overflow: auto;
-  margin-left: 272px;
-  padding: 32px;
-  font-size: inherit;
-  white-space-collapsing: discard;
-  padding-left: 0; }
-  main.vertical {
-    writing-mode: vertical-lr; }
-  main article {
-    margin: 0;
-    padding: 0; }
+}
 
 nav {
-  z-index: 50;
-  width: 240px;
-  height: 100%;
-  margin: 0;
-  position: fixed;
-  border-right: 1px #DDD solid;
+  width: 16em;
+  height: auto;
   top: 0;
-  overflow: scroll; }
-  nav #menu ul {
-    margin-top: 32px; }
-  nav ul {
-    margin-left: 16px;
-    padding-left: 0; }
-  nav #nav-in {
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-top: 32px;
-    padding: 0;
-    display: inline-block; }
-    nav #nav-in #datetime {
-      text-align: center;
-      font-family: "Source Code Pro", monospace;
-      padding: 0;
-      margin: 0;
-      margin-bottom: 32px;
-      width: 100%;
-      text-align: center; }
+  bottom: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  overflow-y: auto;
+}
+nav ul {
+  margin-left: 1em;
+  padding-left: 0;
+}
+nav #nav-in {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  padding: 0;
+  display: inline-block;
+}
+nav #nav-in .my-div {
+  padding-top: 2em;
+}
+nav #nav-in #datetime {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2em;
+  width: 100%;
+  text-align: center;
+}
+nav #nav-in .twitter-share-button {
+  margin-bottom: 2em;
+}
 
-main section {
-  margin-block-end: 32px; }
-  main section section {
-    margin-block-end: 0;
-    overflow-x: auto; }
+main {
+  width: 100%;
+  margin-left: 0;
+  font-size: inherit;
+  margin-left: 2em;
+  overflow: auto;
+  height: 100%;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+main > section {
+  border: none;
+}
+main.vertical {
+  writing-mode: vertical-lr;
+}
+
+section {
+  margin-block-end: 2em;
+}
 
 section, .my-div {
   margin: 0;
   padding: 0;
-  padding-inline-start: 32px;
+  padding-inline-start: 2em;
   border: solid #DDD;
-  border-width: 1px 0 0 1px; }
-  section:last-child, .my-div:last-child {
-    margin-block-end: 0; }
-  section section, section .my-div, .my-div section, .my-div .my-div {
-    margin-block-start: 32px; }
-  section h1, .my-div h1 {
-    margin: 0;
-    margin-block-end: 32px;
-    font-weight: inherit;
-    font-size: inherit; }
+  border-width: 1px 0 0 1px;
+}
+section:last-child, .my-div:last-child {
+  margin-block-end: 0;
+}
+section section, section .my-div, .my-div section, .my-div .my-div {
+  margin-block-start: 2em;
+}
+section h1, .my-div h1 {
+  margin: 0;
+  margin-block-end: 2em;
+  font-weight: inherit;
+  font-size: inherit;
+}
 
 section {
-  padding-block-start: 32px; }
+  padding-block-start: 2em;
+}
 
 .my-div {
-  margin-block-end: 32px; }
-  .my-div .my-div {
-    margin-block-end: 0; }
+  margin-block-end: 2em;
+}
+.my-div .my-div {
+  margin-block-end: 0;
+}
 
 .tile section {
   display: inline-block;
   width: fit-content;
-  margin-inline-end: 32px;
-  vertical-align: top; }
+  margin-inline-end: 2em;
+  vertical-align: top;
+}
 
 figure {
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
 
 a {
   color: #DDD;
   text-decoration-color: #FFF4;
-  text-decoration-thickness: 4px; }
+  text-decoration-thickness: 0.25em;
+}
 
 table {
-  margin: 16px;
+  margin: 1em;
   border-collapse: collapse;
-  border-block-start: 1px solid;
-  border-inline-start: 1px solid; }
-  table th {
-    font-weight: normal;
-    text-align: center; }
-  table td {
-    text-align: left !important; }
-    table td:not([colspan="1"]) {
-      text-align: center; }
-  table th, table td {
-    padding: 8px; }
-  table tr + tr {
-    border-block-start: 1px solid #444; }
-  table.c td {
-    text-align: center; }
-  table th.v {
-    vertical-align: bottom;
-    text-align: center; }
-    table th.v span {
-      writing-mode: vertical-lr; }
-  table.transpose tr {
-    display: block;
-    float: left; }
-  table.transpose th, table.transpose td {
-    display: block; }
-  table.transpose td + td, table.transpose td + th, table.transpose th + td, table.transpose th + th {
-    border-block-start: 1px solid rgba(255, 255, 255, 0.25); }
-  table.transpose tr + tr {
-    border-inline-start: 1px solid rgba(255, 255, 255, 0.25); }
+}
+table tr:first-of-type {
+  border-top: 1px solid;
+}
+table tr {
+  border-left: 1px solid;
+}
+table th {
+  font-weight: normal;
+  text-align: center;
+}
+table td {
+  text-align: left !important;
+}
+table td:not([colspan="1"]) {
+  text-align: center;
+}
+table th, table td {
+  padding: 0.5em;
+}
+table tr + tr {
+  border-block-start: 1px solid #444;
+}
+table.c td {
+  text-align: center;
+}
+table th.v, table tr.vs th {
+  text-align: right;
+  writing-mode: vertical-lr;
+}
+table.transpose tr {
+  display: block;
+  float: left;
+}
+table.transpose th, table.transpose td {
+  display: block;
+}
+table.transpose td + td, table.transpose td + th, table.transpose th + td, table.transpose th + th {
+  border-block-start: 1px solid rgba(255, 255, 255, 0.25);
+}
+table.transpose tr + tr {
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.25);
+}
 
 ul, ol {
   text-align: left;
@@ -179,58 +226,72 @@ ul, ol {
   list-style-position: outside;
   margin: 0;
   margin-left: 1.5em;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 textarea {
   font: inherit;
   background-color: inherit;
-  color: inherit; }
+  color: inherit;
+}
 
-input[type="checkbox"] {
-  vertical-align: middle; }
+input[type=checkbox] {
+  vertical-align: middle;
+}
 
 .tags {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 2em;
   padding: 0;
-  float: right; }
-  .tags .tag {
-    clear: both;
-    display: inline-block;
-    margin: 0;
-    margin-left: 8px;
-    padding: 4px;
-    font-size: 80%;
-    border: 1px solid;
-    border-radius: 4px; }
-    .tags .tag:first-child {
-      margin-left: 0; }
+  float: right;
+}
+.tags .tag {
+  clear: both;
+  display: inline-block;
+  margin: 0;
+  margin-left: 8px;
+  padding: 4px;
+  font-size: 80%;
+  border: 1px solid;
+  border-radius: 4px;
+}
+.tags .tag:first-child {
+  margin-left: 0;
+}
 
 p {
   margin-top: 8px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 details:focus, summary:focus {
-  outline: none; }
+  outline: none;
+}
 
 ruby {
-  ruby-align: center; }
+  ruby-align: center;
+}
 
 #logo {
-  text-align: center; }
-  #logo svg {
-    margin: 0; }
+  text-align: center;
+}
+#logo svg {
+  margin: 0;
+}
 
 .textareas {
   padding: 0;
   margin: 0;
   white-space-collapse: discard;
-  display: flex; }
-  .textareas textarea {
-    width: 50%;
-    height: 320px;
-    margin: 0;
-    outline: none;
-    resize: none; }
-    .textareas textarea:not(:first-of-type) {
-      border-left: none; }
+  display: flex;
+}
+.textareas textarea {
+  width: 50%;
+  height: 320px;
+  margin: 0;
+  outline: none;
+  resize: none;
+}
+.textareas textarea:not(:first-of-type) {
+  border-left: none;
+}
