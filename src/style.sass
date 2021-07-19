@@ -48,7 +48,7 @@ table.center
     display: inline-block
     vertical-align: top
   table:not(:first-of-type)
-    margin-left: 0
+    margin-inline-start: 0
 
 h1, #menu
   //text-transform: uppercase
@@ -74,6 +74,7 @@ body
 
 main, nav
   height: 100%
+  box-shadow: inset black 0 0 1em 2em
 
 nav
   width: $navWidth
@@ -90,7 +91,7 @@ nav
 
   #nav-in
     margin-left: $space
-    margin-right: $space
+    margin-right: 0
     margin-top: $space
     padding: 0
     display: inline-block
@@ -176,10 +177,13 @@ table
   margin: math.div($space, 2)
   border-collapse: collapse
 
+  table + table
+    margin-block-start: $space
+
   tr:first-of-type
-    border-top: 1px solid
+    border-block-start: 1px solid
   tr
-    border-left: 1px solid
+    border-inline-start: 1px solid
 
   th
     font-weight: normal

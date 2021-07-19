@@ -1,89 +1,124 @@
-const convert = s => s
+const convertWord = w => w
   .toLowerCase()
   .normalize("NFC")
+
   .replace(/å/g, "ꜵ")
   .replace(/ć/g, "ŧ")
-  .replace(/č/g, "ṭ")
-  .replace(/d́/g, "dj")
+  .replace(/č/g, "ḳ")
+  .replace(/d\u0301/g, "dĭ")
   //.replace(/đ/g, "")
-  .replace(/dž/g, "ḍ")
-  .replace(/ė/g, "ĭ")
+  .replace(/dz/g, "ʒ")
+  //.replace(/dž/g, "ď")
+  .replace(/ė/g, "ĕ")
   .replace(/ě/g, "æ")
   .replace(/h/g, "x")
-  .replace(/ĺ/g, "lj")
-  .replace(/ń/g, "nj")
-  .replace(/ȯ/g, "ŭ")
-  .replace(/ŕ/g, "rj")
-  .replace(/ś/g, "sj")
-  .replace(/š/g, "ṣ")
-  .replace(/t́/g, "tj")
-  //.replace(/ų/g, "ǫ")
+  .replace(/ĺ/g, "lĭ")
+  .replace(/ń/g, "nĭ")
+  .replace(/ȯ/g, "ŏ")
+  .replace(/ŕ/g, "rĭ")
+  .replace(/ś/g, "sĭ")
+  .replace(/š/g, "ẋ")
+  .replace(/t\u0301/g, "tĭ")
+  .replace(/ų/g, "ǫ")
   .replace(/v/g, "w")
-  .replace(/ź/g, "zj")
-  .replace(/ž/g, "ẓ")
+  .replace(/ź/g, "zĭ")
+  .replace(/ž/g, "ġ")
 
-/*
-.replace(/a/g, "а")
-.replace(/ꜵ/g, "о")
-.replace(/c/g, "ц")
-.replace(/ŧ/g, "щ")
-.replace(/ṭ/g, "ч")
-.replace(/dj/g, "дй")
-.replace(/d/g, "д")
-.replace(/đ/g, "җ")
-.replace(/ḍ/g, "ђ")
-.replace(/e/g, "є")
-.replace(/ę/g, "ѧ")
-.replace(/ĭ/g, "ь")
-.replace(/æ/g, "ѣ")
-.replace(/f/g, "ф")
-.replace(/g/g, "г")
-.replace(/x/g, "х")
-.replace(/i/g, "йи")
-.replace(/k/g, "к")
-.replace(/lj/g, "лй")
-.replace(/l/g, "л")
-.replace(/m/g, "м")
-.replace(/nj/g, "нй")
-.replace(/n/g, "н")
-.replace(/o/g, "о")
-.replace(/ŭ/g, "ъ")
-.replace(/p/g, "п")
-.replace(/rj/g, "рй")
-.replace(/r/g, "р")
-.replace(/sj/g, "сй")
-.replace(/s/g, "с")
-.replace(/ṣ/g, "ш")
-.replace(/tj/g, "тй")
-.replace(/t/g, "т")
-.replace(/u/g, "у")
-.replace(/ų/g, "ѫ")
-.replace(/w/g, "в")
-.replace(/y/g, "и")
-.replace(/zj/g, "зй")
-.replace(/z/g, "з")
-.replace(/ẓ/g, "ж")
-.replace(/j/g, "й")
+  .replace(/^j(?=[eę])/g, "")
+  //.replace(/(?<=[yiuaꜵæeoĕŏęǫ])j(?=[eę])/g, "")
+  //.replace(/^j(?=i)/g, "")
+  //.replace(/^i/g, "y")
+  //.replace(/i/g, "jy")
+  //.replace(/y/g, "i")
 
-.replace(/йи/g, "і")
-.replace(/йа/g, "ꙗ")
-.replace(/йє/g, "ѥ")
-.replace(/йѧ/g, "ѩ")
-.replace(/йо/g, "ю")
-.replace(/йu/g, "ѵ")
-.replace(/йų/g, "ѭ")
-*/
+  /*
+  .replace(/a/g, "а")
+  .replace(/ꜵ/g, "о")
+  .replace(/c/g, "ц")
+  .replace(/ŧ/g, "щ")
+  .replace(/ḳ/g, "ч")
+  .replace(/dj/g, "дй")
+  .replace(/d/g, "д")
+  .replace(/đ/g, "җ")
+  .replace(/ď/g, "ђ")
+  .replace(/e/g, "є")
+  .replace(/ę/g, "ѧ")
+  .replace(/ĭ/g, "ь")
+  .replace(/æ/g, "ѣ")
+  .replace(/f/g, "ф")
+  .replace(/g/g, "г")
+  .replace(/x/g, "х")
+  .replace(/i/g, "йи")
+  .replace(/k/g, "к")
+  .replace(/lj/g, "лй")
+  .replace(/l/g, "л")
+  .replace(/m/g, "м")
+  .replace(/nj/g, "нй")
+  .replace(/n/g, "н")
+  .replace(/o/g, "о")
+  .replace(/ŭ/g, "ъ")
+  .replace(/p/g, "п")
+  .replace(/rj/g, "рй")
+  .replace(/r/g, "р")
+  .replace(/sj/g, "сй")
+  .replace(/s/g, "с")
+  .replace(/š/g, "ш")
+  .replace(/tj/g, "тй")
+  .replace(/t/g, "т")
+  .replace(/u/g, "у")
+  .replace(/ǫ/g, "ѫ")
+  .replace(/w/g, "в")
+  .replace(/y/g, "и")
+  .replace(/zj/g, "зй")
+  .replace(/z/g, "з")
+  .replace(/ž/g, "ж")
+  .replace(/j/g, "й")
+
+  .replace(/йи/g, "і")
+  .replace(/йа/g, "ꙗ")
+  .replace(/йє/g, "ѥ")
+  .replace(/йѧ/g, "ѩ")
+  .replace(/йо/g, "ю")
+  .replace(/йu/g, "ѵ")
+  .replace(/йų/g, "ѭ")
+  */
+  ;
+
+const capitalize = w =>
+  w.slice(0, 1).toUpperCase() + w;
+
+const kase = w =>
+  w == w.toUpperCase()
+    ? "up"
+    : w == capitalize(w)
+      ? "cap"
+      : "low"
+  ;
+
+const applyCase = (c, w) =>
+  ({
+    up: x => x.toUpperCase(),
+    cap: capitalize,
+    low: x => x.toLowerCase(),
+  })[c](w);
+
+const convertWordWithCase = w =>
+  applyCase(kase(w), convertWord(w));
+
+const convertText = s => s
+  .normalize("NFC")
+  .replace(/[a-zěęųåėȯćđčžšĺńŕśź\u0301]+/ig, convertWordWithCase);
 
 document.addEventListener("DOMContentLoaded", () => {
   const [ta0, ta1] = document.querySelectorAll("textarea");
 
   const f = () => {
-    ta1.value = convert(ta0.value);
+    ta1.value = convertText(ta0.value);
   };
 
   ta0.addEventListener("input", f);
   f();
 
   for (const td of document.querySelectorAll(".isv, .isv-tds td"))
-    td.innerHTML = convert(td.innerHTML);
+    td.innerHTML = convertText(td.innerHTML);
 });

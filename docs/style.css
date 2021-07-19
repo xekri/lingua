@@ -41,7 +41,7 @@ table.center {
   vertical-align: top;
 }
 .tables table:not(:first-of-type) {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 html, body {
@@ -64,6 +64,7 @@ body {
 
 main, nav {
   height: 100%;
+  box-shadow: inset black 0 0 1em 2em;
 }
 
 nav {
@@ -81,7 +82,7 @@ nav ul {
 }
 nav #nav-in {
   margin-left: 2em;
-  margin-right: 2em;
+  margin-right: 0;
   margin-top: 2em;
   padding: 0;
   display: inline-block;
@@ -177,11 +178,14 @@ table {
   margin: 1em;
   border-collapse: collapse;
 }
+table table + table {
+  margin-block-start: 2em;
+}
 table tr:first-of-type {
-  border-top: 1px solid;
+  border-block-start: 1px solid;
 }
 table tr {
-  border-left: 1px solid;
+  border-inline-start: 1px solid;
 }
 table th {
   font-weight: normal;

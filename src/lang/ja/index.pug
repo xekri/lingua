@@ -113,96 +113,23 @@ block main
         "*大きく;おほきく;opokik;great;verb",
         "*多い;おほく;opok;many;verb",
       ].map(it => it.split(";")))
-      tr
-        td
-        td ず
-        td az
-        td not
-        td verb \ verb
-      tr
-        td
-        td す
-        td as
-        td let
-        td verb \ verb
-      tr
-        td
-        td む
-        td am
-        td (future)
-        td verb \ verb
-      tr
-        td
-        td る
-        td al
-        td can, may
-        td verb \ verb
-      tr
-        td
-        td れる
-        td elal
-        td (passive)
-        td verb \ verb
-      tr
-        td
-        td ば
-        td aba
-        td if
-        td verb \ clause
-      tr
-        td
-        td ける
-        td ikel
-        td (past)
-        td verb \ verb
-      tr
-        td
-        td ぬる
-        td inul
-        td (perfective)
-        td verb \ verb
-      tr
-        td
-        td たる
-        td ital
-        td (continuitive)
-        td verb \ verb
-      tr
-        td
-        td べく
-        td ubek
-        td must
-        td verb \ verb
-      tr
-        td
-        td ば
-        td eba
-        td because
-        td verb \ clause
-      tr
-        td
-        td
-        td e
-        td (command)
-        td verb \ sentence
-      tr
-        td
-        td
-        td u
-        td
-        td verb \ adjective
-      tr
-        td
-        td
-        td i
-        td
-        td verb \ adverb
-      tr
-        td
-        td なる
-        td nal
-        td be
-        td noun \ verb
+      +trs([
+        "; ; az; not; verb \\ verb",
+        "; ; as; let; verb \\ verb",
+        "; ; am; will; verb \\ verb",
+        "; ; el; can, may; verb \\ verb",
+        "; ; al; be done; verb \\ verb",
+        "; ; aba; if; verb \\ clause",
+        "; ; eba; because; verb \\ clause",
+        "; ; ik; did; verb \\ verb",
+        "; ; in; have done; verb \\ verb",
+        "; ; it; be doing; verb \\ verb",
+        "; ; ub; must; verb \\ verb",
+        "; ; e; do!; verb \\ sentence",
+        "; ; u; of doing; verb \\ adjective",
+        "; ; i; of doing; verb \\ adverb",
+        "; ; nal; be; noun \\ verb",
+      ].map(xs => xs.split("; ")))
 
     table.center
       +thTrs([
@@ -220,17 +147,9 @@ block main
 
     table
       tr
-        td g
-        td [ŋ]
+        +tds("gxhq")
       tr
-        td x
-        td [h]
-      tr
-        td h
-        td [ɣ]
-      tr
-        td q
-        td [ʔ]
+        +tds("[ŋ] [h] [ɣ] [ʔ]".split(" "))
 
     table.center
       +trs([
@@ -250,20 +169,20 @@ block main
         th NPG
       +trs([
         ["do", "する", "s"],
-        ["did", "した", "s ikel"],
+        ["did", "した", "s ik"],
         ["will do", "しよう", "s am"],
         ["be doing", "してゐる", "s ital"],
         ["have done", "してゐる", "s inul"],
-        ["be done", "される", "s elal"],
-        ["must do", "すべき", "s ubek"],
-        ["may do", "される", "s al"],
+        ["be done", "される", "s al"],
+        ["must do", "すべき", "s ub"],
+        ["may do", "される", "s el"],
         ["let do", "させる", "s as"],
         ["do!", "しろ", "s e"],
-        ["did not do", "しなかった", "s ikel az"],
-        ["was not done", "されなかった", "s elal ikel az"],
-        ["had not been done", "されてゐなかった", "s elal inul ikel az"],
-        ["had not been forced to do", "させられてゐなかった", "s as elal inul ikel az"],
-        ["had not been able to be forced to do", "させられられてゐなかった", "s as elal al inul ikel az"],
+        ["did not do", "しなかった", "s ik az"],
+        ["was not done", "されなかった", "s al ik az"],
+        ["had not been done", "されてゐなかった", "s al inul ik az"],
+        ["had not been forced to do", "させられてゐなかった", "s as al inul ik az"],
+        ["had not been able to be forced to do", "させられられてゐなかった", "s as al el inul ik az"],
       ])
 
   +section("example")
@@ -275,17 +194,12 @@ block main
             p 世界人権宣言 第1条
             p すべての人間は、生れながらにして自由であり、かつ、尊厳と権利とについて平等である。人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。
         tr
-          th kana
-          td
-            p 世界人權宣言 第1條
-            p すびての人間は, うまりながらにして自由なりて, かつ, 尊嚴と權利とにつきて平等なる. 人間は, 理性と良心とをさずかりぬりて, たがひに同胞の精神をもちて行動すべく.
-        tr
-          th romanized
+          th NPG
           td
             p SjaiKai-NinCon-SenGen Dai-It Deu
             p
               |sub-ite no NinKen pa, um al inacala ni s ite DziIu nal ite, katu, TsonGen to ConLi to ni tuk ite BjagTag nal.
-              |NinKen pa, LiSjag to LagSim to vo sazuk al inul ite, tacap-i ni DugPau no TsjagZin vo mot ite HagDug s ubek.
+              |NinKen pa, LiSjag to LagSim to vo sazuk al inul ite, tacap-i ni DugPau no TsjagZin vo mot ite HagDug s ub.
 
     +section("羅生門")
       table
@@ -311,7 +225,7 @@ block main
             p
               |al u pi no kul-kata no koto nal.
               br
-              |pito-tali no 下人(HeNin) ca, 羅生門(LaSjagMon) no sita de ama-jam i vo mat ital ikel.
+              |pito-tali no 下人(HeNin) ca, 羅生門(LaSjagMon) no sita de ama-jam i vo mat ital ik.
             p
               |pilok u mon no sita ni pa, kono votoko no poka ni dale mo al az.
               br
@@ -320,3 +234,17 @@ block main
               |羅生門(LaSjagMon) ca, 朱雀(TsjuTsjak)-opo-di ni al u 以上(IZjag) pa, kono votoko no poka ni mo, ama-jam i vo sul u iti-me-kasa ja mom-i-烏帽子(UMouTsi) ca mou 二三人(Ni-SamNin) pa al isou nal u mono nal.
               br
               |sole ca, kono votoko no poka ni pa dale mo al az.
+
+
+    +section("りんご文")
+      a(href="https://zaslon.info/langcontents/1450/") source
+      ol
+        li vale pa LimCom vo tab.
+        li vale pa LimCom vo tab ik.
+        li kale pa LimCom vo tab ital.
+        li kale LimCom vo tab i opal inul.
+        li kale LimCom vo tab i opal inul ik.
+        li vale no tuma pa LimCom vo tab ik u koto al．
+        li vale no tuma pa LimCom vo MaiNit ni tab.
+        li vale to vale no tuma pa SakNit ni LimCom vo tab ik.
+        li vale to vale no tuma pa LokNit mape ni vo tab ik.
