@@ -7,7 +7,7 @@ block head
 		const isRoot = true;
 
 block main
-	p website introduce auþor sumi and work of he.
+	p website introduce auþor sumi and wurk of he.
 
 	mixin entry(year, day, path, comment)
 		tr
@@ -30,3 +30,8 @@ block main
 		+entry(12021, 150, "author", "add vertical page. remove mobile option.")
 		+entry(12021, 146, "lang/tr", "add turkish romanization.")
 		+entry(12021, 144, ".", "add history of revision.")
+
+	//script.
+		const u = new SpeechSynthesisUtterance("i speak english.");
+		u.lang = "en-GB";
+		window.speechSynthesis.speak(u);

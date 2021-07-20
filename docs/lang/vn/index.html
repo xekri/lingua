@@ -16,13 +16,6 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/sumi-color.svg" type="image/svg+xml">
-    <style>
-      textarea {
-      	width: 45%;
-      	height: 640px;
-      }
-      
-    </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
       	const value0 = document.getElementById("0").value
@@ -98,9 +91,9 @@
             <li><a href="/">/</a></li>
             <li><a href="/author">auþor</a></li>
             <li><a href="/suzuli-mitulu">suzuli & mitulu</a></li>
-            <li><a href="/fav">favorite</a></li>
+            <li><a href="/fav">favourite</a></li>
             <!-- li: a(href="/thought") thought-->
-            <li><a href="/work">work</a></li>
+            <li><a href="/wurk">wurk</a></li>
             <li><a href="/lang">language</a></li>
             <li><a href="/misc">misc</a></li>
           </ul>
@@ -120,11 +113,13 @@
         <h1><a href="#vietnamese">#</a> 
 vietnamese
         </h1>
-        <textarea id="0">## Điều 1
+        <div class="textareas">
+          <textarea id="0">## Điều 1
 Tất cả mọi người sinh ra đều được tự do và bình đẳng về nhân phẩm và quyền.
 Mọi con người đều được tạo hoá ban cho lý trí và lương tâm và cần phải đối xử với nhau trong tình bằng hữu.
 </textarea>
-        <textarea id="1"></textarea>
+          <textarea id="1"></textarea>
+        </div>
       </section>
       <!--+section("")include _discus.pug
       -->

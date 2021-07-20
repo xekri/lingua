@@ -41,13 +41,13 @@ block main
         th vowel
       -
         const xss = [
-          ["none"       , "ཨ \u0fb8 q", "", "འ \u0fb0 '", "", "", "", "", "", ""],
-          ["velar"      , "ཀ \u0f90 k", "ཁ \u0f91 kx", "ག \u0f92 c", "གྷ \u0f93 ch", "ང \u0f94 g", ""          , "ཧ \u0fb7 x", ""          , "\u0f84 ⱥ"],
-          ["palatal"    , "ཅ \u0f95 ḳ", "ཆ \u0f96 ḳx", "ཇ \u0f97 ċ", ""           , "ཉ \u0f99 ġ", "ཡ \u0fbb j", "ཤ \u0fb4 ẋ", "ཞ \u0fae ḥ", "\u0f72 i", "\u0f7a e"],
-          ["(retroflex)", "ཊ \u0f9a ṫ", "ཋ \u0f9b ṫx", "ཌ \u0f9c ḋ", "ཌྷ \u0f9d ḋh", "ཎ \u0f9e ṅ", ""          , "ཥ \u0fb5 ṡ", ""          , ""        , ""],
-          ["dental"     , "ཏ \u0f9f t", "ཐ \u0fa0 tx", "ད \u0fa1 d", "དྷ \u0fa2 dh", "ན \u0fa3 n", "ར \u0fbc r", ""          , ""          , ""        , ""],
-          [""           , "ཙ \u0fa9 ŧ", "ཚ \u0faa ŧx", "ཛ \u0fab đ", "ཛྷ \u0fac đh", ""          , "ལ \u0fb3 l", "ས \u0fb6 s", "ཟ \u0faf z", ""        , ""],
-          ["labial"     , "པ \u0fa4 p", "ཕ \u0fa5 px", "བ \u0fa6 b", "བྷ \u0fa7 bh", "མ \u0fa8 m", "ཝ \u0fba v", ""          , ""          , "\u0f74 u", "\u0f7c o"],
+          ["none"       , "ཨ \u0fb8 q", "", "", "", "", "", "", "", ""],
+          ["velar"      , "ཀ \u0f90 k", "ཁ \u0f91 kx", "ག \u0f92 c", "གྷ \u0f93 ch", "ང \u0f94 g", ""          , ""        , "ཧ \u0fb7 x", "འ \u0fb0 h", ""                    ],
+          ["palatal"    , "ཅ \u0f95 ṫ", "ཆ \u0f96 ṫx", "ཇ \u0f97 ḋ", ""           , "ཉ \u0f99 ṅ", "ཡ \u0fbb j", "\u0fb1 j", "ཤ \u0fb4 ṡ", "ཞ \u0fae ż", "\u0f72 i", "\u0f7a e"],
+          ["(retroflex)", "ཊ \u0f9a ʈ", "ཋ \u0f9b ʈx", "ཌ \u0f9c ɖ", "ཌྷ \u0f9d ɖh", "ཎ \u0f9e ɳ", ""          , ""        , "ཥ \u0fb5 ʂ", ""          , ""        , ""        ],
+          ["dental"     , "ཏ \u0f9f t", "ཐ \u0fa0 tx", "ད \u0fa1 d", "དྷ \u0fa2 dh", "ན \u0fa3 n", "ར \u0fbc r", "\u0fb2 r", ""          , ""          , ""        , ""        ],
+          [""           , "ཙ \u0fa9 ŧ", "ཚ \u0faa ŧx", "ཛ \u0fab đ", "ཛྷ \u0fac đh", ""          , "ལ \u0fb3 l", ""        , "ས \u0fb6 s", "ཟ \u0faf z", ""        , ""        ],
+          ["labial"     , "པ \u0fa4 p", "ཕ \u0fa5 px", "བ \u0fa6 b", "བྷ \u0fa7 bh", "མ \u0fa8 m", "ཝ \u0fba v", "\u0fad v", ""          , ""          , "\u0f74 u", "\u0f7c o"],
         ]
 
       for xs in xss
@@ -59,12 +59,28 @@ block main
                 - const ys = x.split(" ")
                 for y in ys.slice(0, -1)
                   button= y
-                br
                 |#{ys.slice(-1)[0]}
 
-    ul
-      li in non-Unicode environment, use "y" instead of combining dot
-      li in ASCII environment, use "w" instead of "'"
+      table.center
+        tr
+          th digit
+          for xi of [..."༠༡༢༣༤༥༦༧༨༩"].map((x, i) => [x, i])
+            td
+              button= xi[0]
+              |#{xi[1]}
+        tr
+          th punctuation
+          td
+            button ་
+            |␠
+          td
+            button །
+            |,
+          td
+            button ༎
+            |.
+
+    p in ASCII environment, use "y" instead of combining dot
 
   +section("vocabulary")
     table.center
@@ -80,6 +96,31 @@ block main
           ["7", "བདུན་"],
           ["8", "པརྒྱད་"],
           ["9", "དགུ་"],
+          ["10", "བཅུ་"],
+          ["-th (Ord)", "- པ་"],
+
+          ["this", "འདི་"],
+          ["that", "དེ་"],
+          ["-s (Pl)", "- ཙོ་"],
+
+          ["what", "ཅི་"],
+          ["who", "སུ་"],
+          ["when", "ནམ་"],
+          ["where", "ག་"],
+          ["some (Wh)", "- ཞིག་"],
+          ["every (Wh)", "- ཡང་"],
+
+          ["then", "ད་ནས་"],
+          ["but", "འོན་ཀྱང་"],
+          ["because", "དེ་ཐྱིར་"],
+          ["if", "གའ་ཏེ་"],
+
+          ["not", "མ་"],
+          ["be", "ཡིན་"],
+          ["exist", "ཡོད་"],
+          ["like", "དགའ་"],
+
+          ["person", "མི་"],
         ]
       for x in xs
         - const [a, b] = x
@@ -87,3 +128,25 @@ block main
           td= a
           td= b
           td.bo= b
+
+      table.center.bo-tds
+        tr
+          th
+          th i
+          th thou
+          th he
+        tr
+          th Sg
+          td ང་
+          td ཁྱོད་
+          td ཁོ་
+        tr
+          th Pl
+          td ང་ཙོ་
+          td ཁྱོད་ཙོ་
+          td ཁོད་ཙོ་
+        tr
+          th formal
+          td ངེད་
+          td ཁེད་
+          td ཁོད་

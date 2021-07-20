@@ -24,15 +24,17 @@ const convert0 = s =>
 		.replace(/য়/g, "য়")
 		.replace(/ৰ/g, "র")
 
+		// ƙƈɠɦ
+		// ᶄꞔᶃᶍꞕ
 		.replace(/ক/g, "k" + maybeA)
-		.replace(/খ/g, "kh" + maybeA)
+		.replace(/খ/g, "kx" + maybeA)
 		.replace(/গ/g, "c" + maybeA)
 		.replace(/ঘ/g, "ch" + maybeA)
 		.replace(/ঙ/g, "g" + maybeA)
-		.replace(/হ/g, "h" + maybeA)
+		.replace(/ཧ/g, "x" + maybeA)
 
 		.replace(/চ/g, "ḳ" + maybeA)
-		.replace(/ছ/g, "ḳh" + maybeA)
+		.replace(/ছ/g, "ḳx" + maybeA)
 		.replace(/জ/g, "ċ" + maybeA)
 		.replace(/ঝ/g, "ċh" + maybeA)
 		.replace(/ঞ/g, "ġ" + maybeA)
@@ -40,8 +42,9 @@ const convert0 = s =>
 		.replace(/য/g, "j" + maybeA)
 		.replace(/শ/g, "ẋ" + maybeA)
 
+		// ʈɖʂʐɳ
 		.replace(/ট/g, "ṫ" + maybeA)
-		.replace(/ঠ/g, "ṫh" + maybeA)
+		.replace(/ঠ/g, "ṫx" + maybeA)
 		.replace(/ড়/g, "ŗ" + maybeA) // nukta
 		.replace(/ড/g, "ḋ" + maybeA)
 		.replace(/ঢ়/g, "ŗh" + maybeA) // nukta
@@ -51,7 +54,7 @@ const convert0 = s =>
 		.replace(/ষ/g, "ṡ" + maybeA)
 
 		.replace(/ত/g, "t" + maybeA)
-		.replace(/থ/g, "th" + maybeA)
+		.replace(/থ/g, "tx" + maybeA)
 		.replace(/দ/g, "d" + maybeA)
 		.replace(/ধ/g, "dh" + maybeA)
 		.replace(/ন/g, "n" + maybeA)
@@ -59,7 +62,7 @@ const convert0 = s =>
 		.replace(/স/g, "s" + maybeA)
 
 		.replace(/প/g, "p" + maybeA)
-		.replace(/ফ/g, "ph" + maybeA)
+		.replace(/ফ/g, "px" + maybeA)
 		.replace(/ব/g, "b" + maybeA)
 		.replace(/ভ/g, "bh" + maybeA)
 		.replace(/ম/g, "m" + maybeA)

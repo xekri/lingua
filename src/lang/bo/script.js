@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   for (const e of document.getElementsByClassName("bo"))
     e.innerHTML = convert(e.innerHTML);
 
+  for (const td of document.querySelectorAll(".bo-tds td"))
+    td.innerHTML += "<br>" + convert(td.innerHTML)
+
+
   for (const button of document.querySelectorAll("button"))
     button.addEventListener("click", event => {
       ts[0].value += event.target.innerHTML;
@@ -21,28 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
 const maybeA = "<<<maybe a>>>";
 const table = [
   ["ཨ", "q"],
-  ["འ", "'"],
+
   ["ཀ", "k"],
   ["ཁ", "kx"],
   ["ག", "c"],
   ["གྷ", "ch"],
   ["ང", "g"],
   ["ཧ", "x"],
+  ["འ", "h"],
 
-  ["ཅ", "ḳ"],
-  ["ཆ", "ḳx"],
-  ["ཇ", "ċ"],
-  ["ཉ", "ġ"],
+  ["ཅ", "ṫ"],
+  ["ཆ", "ṫx"],
+  ["ཇ", "ḋ"],
+  ["ཉ", "ṅ"],
   ["ཡ", "j"],
-  ["ཤ", "ẋ"],
-  ["ཞ", "ḥ"],
+  ["ཤ", "ṡ"],
+  ["ཞ", "ż"],
 
-  ["ཊ", "ṫ"],
-  ["ཋ", "ṫx"],
-  ["ཌ", "ḋ"],
-  ["ཌྷ", "ḋh"],
-  ["ཎ", "ṅ"],
-  ["ཥ", "ṡ"],
+  ["ཊ", "ʈ"],
+  ["ཋ", "ʈx"],
+  ["ཌ", "ɖ"],
+  ["ཌྷ", "ɖh"],
+  ["ཎ", "ɳ"],
+  ["ཥ", "ʂ"],
 
   ["ཏ", "t"],
   ["ཐ", "tx"],
@@ -66,13 +71,13 @@ const table = [
   ["མ", "m"],
   ["ཝ", "v"],
 
-  ["ཀཱ".replace(/ཀ/, ""), "'a"],
+  ["ཀཱ".replace(/ཀ/, ""), "ha"],
   ["ཀྱ".replace(/ཀ/, ""), "ja"],
   ["ཀྲ".replace(/ཀ/, ""), "ra"],
   ["ཀླ".replace(/ཀ/, ""), "la"],
   ["ཀྭ".replace(/ཀ/, ""), "va"],
 
-  ["གྷ".replace(/ག/, ""), "ha"],
+  ["གྷ".replace(/ག/, ""), "xa"],
 
   ["རྐ".replace(/ར/, ""), "ka"],
   ["རྟ".replace(/ར/, ""), "ta"],
@@ -80,13 +85,13 @@ const table = [
   ["རྤ".replace(/ར/, ""), "pa"],
 
   ["རྒ".replace(/ར/, ""), "ca"],
-  ["རྗ".replace(/ར/, ""), "ċa"],
+  ["རྗ".replace(/ར/, ""), "ḋa"],
   ["རྡ".replace(/ར/, ""), "da"],
   ["རྫ".replace(/ར/, ""), "đa"],
   ["རྦ".replace(/ར/, ""), "ba"],
 
   ["རྔ".replace(/ར/, ""), "ga"],
-  ["རྙ".replace(/ར/, ""), "ġa"],
+  ["རྙ".replace(/ར/, ""), "ṅa"],
   ["རྣ".replace(/ར/, ""), "na"],
   ["རྨ".replace(/ར/, ""), "ma"],
 

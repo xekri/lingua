@@ -5,16 +5,12 @@ $navWidth: 16em
 $color: #DDD
 $bgcolor: #000
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&display=swap')
+@import url(//fonts.googleapis.com/earlyaccess/notosans.css)
+@import url(//fonts.googleapis.com/earlyaccess/notosanstibetan.css)
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css)
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
 
 $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
-
-@font-face
-  src: local('YuGothic')
-  font-family: 'YuGothic'
-  font-weight: lighter
-  unicode-range: U+1B001, U+30A8
-
 @font-face
   src: url('/assets/fonts/MonomakhUnicode.otf') format('opentype')
   font-family: 'Monomakh'
@@ -22,13 +18,8 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   unicode-range: $cyrillic
 
 @font-face
-  font-family: "Nishiki Kana"
-  src: url("/assets/fonts/nishiki-kana.otf") format('opentype')
-  unicode-range: U+1B000, U+1B001, U+30A8
-
-@font-face
   font-family: "tri"
-  src: url(/work/font/tri.woff2) format('woff2')
+  src: url(/wurk/font/tri.woff2) format('woff2')
   font-style: normal
   font-weight: normal
 
@@ -62,8 +53,9 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Nishiki Kana", "Noto Sans", "Noto Sans TC", sans-serif
+  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans TC", "Noto Sans Tibetan", "Nishiki Kana", sans-serif
   font-weight: 100
+  font-stretch: extra-condensed
 
   display: flex
   align-items: stretch
@@ -86,8 +78,8 @@ nav
   overflow-y: auto
 
   ul
-    margin-left: 1em
-    padding-left: 0
+    margin-inline-start: 1em
+    padding-inline-start: 0
 
   #nav-in
     margin-left: $space
@@ -157,11 +149,24 @@ section
   .my-div
     margin-block-end: 0
 
-.tile section
-  display: inline-block
-  width: fit-content
-  margin-inline-end: $space
-  vertical-align: top
+.tile
+  section
+    box-sizing: border-box
+    width: 22%
+    display: inline-block
+    margin-inline-end: $space
+    vertical-align: top
+    padding-inline-start: math.div($space, 2)
+    padding-block-start: math.div($space, 2)
+
+    img
+      vertical-align: top
+      width: calc(100% - 16px)
+      margin: 0
+      display: block
+
+.twitter-tweet
+  margin: 0
 
 figure
   display: flex
@@ -171,7 +176,7 @@ figure
 a
   color: $color
   text-decoration-color: #FFF4
-  text-decoration-thickness: 0.25em
+  text-decoration-thickness: calc(1em / 5)
 
 table
   margin: math.div($space, 2)
@@ -225,8 +230,8 @@ ul, ol
   list-style-type: square
   list-style-position: outside
   margin: 0
-  margin-left: 1.5em
-  padding-left: 0
+  margin-inline-start: 1.5em
+  padding-inline-start: 0
 
 textarea
   font: inherit

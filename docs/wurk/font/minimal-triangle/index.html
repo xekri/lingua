@@ -16,7 +16,9 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/sumi-color.svg" type="image/svg+xml">
-    <title>sumi / þree series</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>sumi / minimal-triangle</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -26,7 +28,7 @@
       
     </script>
     <meta name="twitter:site" content="@sumiqj">
-    <meta name="twitter:title" content="sumi / þree series">
+    <meta name="twitter:title" content="sumi / minimal-triangle">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
     <meta name="twitter:card" content="summary">
@@ -42,9 +44,9 @@
             <li><a href="/">/</a></li>
             <li><a href="/author">auþor</a></li>
             <li><a href="/suzuli-mitulu">suzuli & mitulu</a></li>
-            <li><a href="/fav">favorite</a></li>
+            <li><a href="/fav">favourite</a></li>
             <!-- li: a(href="/thought") thought-->
-            <li><a href="/work">work</a></li>
+            <li><a href="/wurk">wurk</a></li>
             <li><a href="/lang">language</a></li>
             <li><a href="/misc">misc</a></li>
           </ul>
@@ -60,17 +62,68 @@
       </div>
     </nav>
     <main>
-      <section id="þree series">
-        <h1><a href="#þree series">#</a> 
-þree series
+      <section id="minimal-triangle">
+        <h1><a href="#minimal-triangle">#</a> 
+minimal-triangle
         </h1>
-        <textarea>c t p g d b ŋ n m i a u
-x s f h z w j r v e ə o
-C T P G D B Ŋ N M I A U
-X S F H Z W J R V E Ə O
-^ - _ = | / \ . ' , : ; ! ?
-" ( ) { } < > [ ] @ & #</textarea>
-        <canvas></canvas>
+        <center>
+          <textarea class="trigger" id="input">abcdefghijklm
+nopqrstuvwxyz
+.,:;-'`</textarea>
+          <table id="options">
+            <tr>
+              <td>character width</td>
+              <td>(posisive int)</td>
+              <td>
+                <input class="trigger" id="char-w" type="number" min="1" value="64"> [px]
+              </td>
+            </tr>
+            <tr>
+              <td>stroke width</td>
+              <td>(positive int)</td>
+              <td>
+                <input class="trigger" id="stroke-w" type="number" min="1" value="4"> [px]
+              </td>
+            </tr>
+            <tr>
+              <td>space between characters</td>
+              <td>(float)</td>
+              <td>
+                <input class="trigger" id="space-x" type="number" value="0" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>space between lines</td>
+              <td>(float)</td>
+              <td>
+                <input class="trigger" id="space-y" type="number" value="0.5" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>margin</td>
+              <td>(nonnegative float)</td>
+              <td>
+                <input class="trigger" id="margin" type="number" min="0" value="1" step="any"> [character]
+              </td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td></td>
+              <td>
+                <input class="trigger" id="color" type="color" value="#ffffff">
+              </td>
+            </tr>
+            <tr>
+              <td>background color</td>
+              <td></td>
+              <td>
+                <input class="trigger" id="bg-color" type="color" value="#000000">
+              </td>
+            </tr>
+          </table>
+          <canvas id="output"></canvas>
+          <div><a id="tweet">tweet</a></div>
+        </center>
       </section>
       <!--+section("")include _discus.pug
       -->
