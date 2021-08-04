@@ -67,28 +67,19 @@
         <h1><a href="#latin">#</a> 
 latin
         </h1>
-        <div class="textareas">
-          <textarea>zerus ūnus duo trēs quattuor quīnque sex septem octō novem
-
-# Ūniversa hūmānōrum iūrium dēclārātiō
-## I
-omnēs hominēs dignitāte et iūre līberī et parēs nāscuntur,
-ratiōnis et cōnscientiae participēs sunt,
-quibus inter sē concordiae studiō est agendum.
-</textarea>
-          <textarea></textarea>
-        </div>
         <section id="declension">
           <h1><a href="#declension">#</a> 
 declension
           </h1>
-          <table class="la-table">
+          <table class="center">
             <tr>
               <th></th>
               <th></th>
               <th rowspan="2">1</th>
               <th rowspan="2">2</th>
+              <th colspan="3">this</th>
               <th colspan="3">that</th>
+              <th colspan="3">yon</th>
               <th colspan="3">it</th>
               <th colspan="3">good</th>
             </tr>
@@ -104,12 +95,24 @@ declension
               <th>M</th>
               <th>N</th>
               <th>F</th>
+              <th>M</th>
+              <th>N</th>
+              <th>F</th>
+              <th>M</th>
+              <th>N</th>
+              <th>F</th>
             </tr>
             <tr>
               <th rowspan="6">Sg</th>
               <th>Nom</th>
               <td rowspan="2">egō</td>
               <td rowspan="2">tū</td>
+              <td rowspan="2">hic</td>
+              <td rowspan="3">hoc</td>
+              <td rowspan="2">haec</td>
+              <td rowspan="2">iste</td>
+              <td rowspan="3">istud</td>
+              <td rowspan="2">ista</td>
               <td rowspan="2">ille</td>
               <td rowspan="3">illud</td>
               <td rowspan="2">illa</td>
@@ -128,6 +131,10 @@ declension
               <th>Acc</th>
               <td>mē</td>
               <td>tē</td>
+              <td>hunc</td>
+              <td>hanc</td>
+              <td>istum</td>
+              <td>istam</td>
               <td>illum</td>
               <td>illam</td>
               <td>eum</td>
@@ -139,6 +146,8 @@ declension
               <th>Gen</th>
               <td>meī</td>
               <td>tuī</td>
+              <td colspan="3">huius</td>
+              <td colspan="3">istīus</td>
               <td colspan="3">illīus</td>
               <td colspan="3">eius</td>
               <td colspan="2">bonī</td>
@@ -148,6 +157,8 @@ declension
               <th>Dat</th>
               <td>mihī</td>
               <td>tibī</td>
+              <td colspan="3">huic</td>
+              <td colspan="3">istī</td>
               <td colspan="3">illī</td>
               <td colspan="3">eī</td>
               <td colspan="2" rowspan="2">bonō</td>
@@ -156,6 +167,10 @@ declension
               <th>Abl</th>
               <td>mē</td>
               <td>tē</td>
+              <td colspan="2">hōc</td>
+              <td>hāc</td>
+              <td colspan="2">istō</td>
+              <td>istā</td>
               <td colspan="2">illō</td>
               <td>illā</td>
               <td colspan="2">eō</td>
@@ -167,6 +182,12 @@ declension
               <th>Nom</th>
               <td rowspan="3">nōs</td>
               <td rowspan="3">vōs</td>
+              <td rowspan="2">hī</td>
+              <td rowspan="3">haec</td>
+              <td rowspan="2">hae</td>
+              <td rowspan="2">istī</td>
+              <td rowspan="3">ista</td>
+              <td rowspan="2">istae</td>
               <td rowspan="2">illī</td>
               <td rowspan="3">illa</td>
               <td rowspan="2">illae</td>
@@ -182,6 +203,10 @@ declension
             </tr>
             <tr>
               <th>Acc</th>
+              <td>hōs</td>
+              <td>hās</td>
+              <td>istōs</td>
+              <td>istās</td>
               <td>illōs</td>
               <td>illās</td>
               <td>eōs</td>
@@ -193,6 +218,10 @@ declension
               <th>Gen</th>
               <td>nostrum</td>
               <td>vestrum</td>
+              <td colspan="2">hōrum</td>
+              <td>hārum</td>
+              <td colspan="2">istōrum</td>
+              <td>istārum</td>
               <td colspan="2">illōrum</td>
               <td>illārum</td>
               <td colspan="2">eōrum</td>
@@ -204,6 +233,8 @@ declension
               <th>Dat</th>
               <td rowspan="2">nōbīs</td>
               <td rowspan="2">vōbīs</td>
+              <td colspan="3" rowspan="2">hīs</td>
+              <td colspan="3" rowspan="2">istīs</td>
               <td colspan="3" rowspan="2">illīs</td>
               <td colspan="3" rowspan="2">eīs</td>
               <td colspan="3" rowspan="2">bonīs</td>
@@ -213,55 +244,227 @@ declension
             </tr>
           </table>
         </section>
-        <section id="inflection">
-          <h1><a href="#inflection">#</a> 
-inflection
+        <section id="conjugation">
+          <h1><a href="#conjugation">#</a> 
+conjugation
           </h1>
-          <table>
+          <div class="tables">
+            <table>
+              <caption>suffix</caption>
+              <tr>
+                <th></th>
+                <th colspan="3">Sg</th>
+                <th colspan="3">Pl</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+              </tr>
+              <tr>
+                <th>active A</th>
+                <td>-⌫ō</td>
+                <td rowspan="2">-ˉs</td>
+                <td rowspan="2">-t</td>
+                <td rowspan="2">-ˉmus</td>
+                <td rowspan="2">-ˉtis</td>
+                <td rowspan="2">-nt</td>
+              </tr>
+              <tr>
+                <th>active B</th>
+                <td>-m</td>
+              </tr>
+              <tr>
+                <th>passive A</th>
+                <td>-⌫or</td>
+                <td rowspan="2">-ˉris</td>
+                <td rowspan="2">-ˉtur</td>
+                <td rowspan="2">-ˉmur</td>
+                <td rowspan="2">-ˉminī</td>
+                <td rowspan="2">-ntur</td>
+              </tr>
+              <tr>
+                <th>passive B</th>
+                <td>-r</td>
+              </tr>
+            </table>
+            <table>
+              <caption>esse</caption>
+              <tr>
+                <th></th>
+                <th colspan="3">imperfect</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>present</th>
+                <th>past</th>
+                <th>future</th>
+              </tr>
+              <tr>
+                <th>active</th>
+                <td>
+                  <ul>
+                    <li><del>e</del>s-um</li>
+                    <li>es-<del>s</del></li>
+                    <li>es-t</li>
+                    <li><del>e</del>s-umus</li>
+                    <li>es-tis</li>
+                    <li><del>e</del>s-unt</li>
+                  </ul>
+                </td>
+                <td>era-{$voice suffix B}</td>
+                <td>
+                  <ul>
+                    <li>eri-⌫ō</li>
+                    <li>eri-s</li>
+                    <li>eri-t</li>
+                    <li>eri-mus</li>
+                    <li>eri-tis</li>
+                    <li>eri-⌫unt</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <table class="center">
             <tr>
               <th></th>
               <th></th>
-              <th>Pre</th>
-              <th>Imp</th>
-              <th>Fut</th>
+              <th colspan="3">imperfect</th>
+              <th colspan="3">perfect</th>
             </tr>
             <tr>
-              <th rowspan="3">Sg</th>
-              <th>1</th>
-              <td>sum</td>
-              <td>eram</td>
-              <td>erō</td>
+              <th></th>
+              <th></th>
+              <th>present</th>
+              <th>past</th>
+              <th>future</th>
+              <th>present</th>
+              <th>past</th>
+              <th>future</th>
             </tr>
             <tr>
-              <th>2</th>
-              <td>es</td>
-              <td>erās</td>
-              <td>eris</td>
+              <th rowspan="2">indicative</th>
+              <th>active</th>
+              <td rowspan="2">ama-{$voice suffix A}</td>
+              <td rowspan="2">ama-ˉba-{$voice suffix B}</td>
+              <td>
+                <ul>
+                  <li>ama-ˉbi-⌫ō</li>
+                  <li>ama-ˉbi-s</li>
+                  <li>ama-ˉbi-t</li>
+                  <li>ama-ˉbi-mus</li>
+                  <li>ama-ˉbi-tis</li>
+                  <li>ama-ˉbunt</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>ama-ˉvi-ˉ</li>
+                  <li>ama-ˉvi-stī</li>
+                  <li>ama-ˉvi-t</li>
+                  <li>ama-ˉvi-mus</li>
+                  <li>ama-ˉvi-stis</li>
+                  <li>ama-ˉvērunt</li>
+                </ul>
+              </td>
+              <td colspan="2">ama-ˉv-{$mood $tense imperfect "esse"}</td>
             </tr>
             <tr>
-              <th>3</th>
-              <td>est</td>
-              <td>erat</td>
-              <td>erit</td>
+              <th>passive</th>
+              <td>
+                <ul>
+                  <li>ama-ˉbi-⌫or</li>
+                  <li>ama-ˉberis</li>
+                  <li>ama-ˉbi-tur</li>
+                  <li>ama-ˉbi-mur</li>
+                  <li>ama-ˉbi-minī</li>
+                  <li>ama-ˉbuntur</li>
+                </ul>
+              </td>
+              <td colspan="3">{$mood $tense imperfect "esse"} ama-ˉtus</td>
             </tr>
             <tr>
-              <th rowspan="3">Pl</th>
-              <th>1</th>
-              <td>sumus</td>
-              <td>erāmus</td>
-              <td>erimus</td>
+              <th rowspan="2">subjunctive</th>
+              <th>active</th>
+              <td rowspan="2">ama-⌫e-{$voice suffix B}</td>
+              <td rowspan="2">ama-ˉre-{$voice suffix B}</td>
+              <td rowspan="2"></td>
+              <td>ama-ˉaveri-{$voice suffix B}</td>
+              <td>ama-ˉvisse-{$voice suffix B}</td>
+              <td rowspan="2"></td>
             </tr>
             <tr>
-              <th>2</th>
-              <td>estis</td>
-              <td>erātis</td>
-              <td>eritis</td>
+              <th>passive</th>
+              <td colspan="2">{$mood $tense imperfect "esse"} ama-ˉtus</td>
             </tr>
             <tr>
-              <th>3</th>
-              <td>sunt</td>
-              <td>erant</td>
-              <td>erunt</td>
+              <th rowspan="2">imperative</th>
+              <th>active</th>
+              <td>
+                <ul>
+                  <li></li>
+                  <li>ama-ˉ</li>
+                  <li></li>
+                  <li></li>
+                  <li>ama-ˉte</li>
+                  <li></li>
+                </ul>
+              </td>
+              <td rowspan="2"></td>
+              <td>
+                <ul>
+                  <li></li>
+                  <li>ama-ˉtō</li>
+                  <li>ama-ˉtō</li>
+                  <li></li>
+                  <li>ama-ˉtōte</li>
+                  <li>ama-ntō</li>
+                </ul>
+              </td>
+              <td rowspan="2" colspan="3"></td>
+            </tr>
+            <tr>
+              <th>passive</th>
+              <td>
+                <ul>
+                  <li></li>
+                  <li>ama-ˉre</li>
+                  <li></li>
+                  <li></li>
+                  <li>ama-ˉminī</li>
+                  <li></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li></li>
+                  <li>ama-ˉtōr</li>
+                  <li>ama-ˉtōr</li>
+                  <li></li>
+                  <li></li>
+                  <li>ama-ntor</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2">infinitive</th>
+              <th>active</th>
+              <td>ama-ˉre</td>
+              <td rowspan="2"></td>
+              <td>ama-ˉtūrum esse</td>
+              <td>ama-ˉvisse</td>
+              <td colspan="2" rowspan="2"></td>
+            </tr>
+            <tr>
+              <th>passive</th>
+              <td>ama-ˉrī</td>
+              <td>ama-ˉtum īrī</td>
+              <td>ama-ˉtum esse</td>
             </tr>
           </table>
         </section>

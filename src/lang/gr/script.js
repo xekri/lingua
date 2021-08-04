@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const table = [//gjwy
   ["α", "a"],
+  ["ᾱ", "a\u0304"],
   ["β", "b"],
   ["γ", "c"],
   ["δ", "d"],
@@ -41,6 +42,7 @@ const table = [//gjwy
   ["ς", "s"],
   ["τ", "t"],
   ["υ", "u"],
+  ["ῡ", "u\u0304"],
   ["φ", "f"],
   ["χ", "x"],
   ["ψ", "ps"],
