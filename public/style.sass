@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Sans+Pro:wght@200&display=swap')
+
 body
-  font-family: "Noto Sans", "Noto Sans TC", sans-serif
-  font-weight: 100
+  font-family: "Source Sans Pro", "Noto Sans TC", sans-serif
 
   ul
     list-style-type: square
@@ -55,6 +56,9 @@ body
       &:not(:first-of-type)
         //margin-left: 16px
 
+      tr:first-of-type th
+        writing-mode: vertical-lr
+
       tr
         th, td
           padding: 4px
@@ -62,13 +66,11 @@ body
         &:first-of-type
           td, th
             border-bottom: 1px solid
-          th
-            vertical-align: bottom
-            span
-              writing-mode: vertical-lr
+
+        th
+          text-align: right
 
         th:first-of-type
-          text-align: right
           border-right: 1px solid
 
   #grammar

@@ -14,7 +14,9 @@ const yue = Object.fromEntries(
       const c = x.ch;
       let mcs = yonh.lookup(c
         .replace(/你/, "伱")
+        .replace(/咗/, "左")
       );
+
       if (!Array.isArray(mcs))
         mcs = [mcs];
 
@@ -60,6 +62,8 @@ const yue = Object.fromEntries(
           .replace(/(?<!^)i$/, "j")
           .replace(/(?<!^)u$/, "v")
           .replace(/ơn/, "on")
+          .replace(/ej/, "i")
+          .replace(/ov/, "u")
           ;
 
         initial = initial
@@ -128,14 +132,14 @@ const yue = Object.fromEntries(
             .replace(/ŧ/, "ṭ")
             .replace(/đ/, "ḍ");
 
-        if (mcs.some(mc => mc.final.sjep == "止"))
-          final = final.replace(/ej/, "i")
+        if (!mcs.some(mc => mc.final.sjep == "止"))
+          final = final.replace(/^i$/, "ej")
         if (mcs.some(mc => ["蟹", "止"].includes(mc.final.sjep)))
           final = final.replace(/ơj/, "uj");
         if (mcs.some(mc => mc.final.sjep == "遇"))
           final = final.replace(/ơj/, "y");
-        if (mcs.some(mc => mc.final.yonh) == "模")
-          final = final.replace(/ov/, "u");
+        if (!mcs.some(mc => mc.final.yonh) == "模")
+          final = final.replace(/^u$/, "ov");
         if (mcs.some(mc => mc.final.sjep == "咸" && mc.final.ho == "開口" && mc.final.tongx == 1))
           final = final.replace(/rm/, "om");
 

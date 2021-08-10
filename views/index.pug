@@ -2,12 +2,17 @@ mixin tds(xs)
   for x in xs
     td= x
 
+mixin trs(xss)
+  for xs in xss
+    tr
+      +tds(xs)
+
 html
   head
     link(rel="stylesheet", href="/style.css")
     script(src="/script.js")
   body
-    h1 新粵 Sr̀nYt
+    h1 新粵 SằnYt
     a(href="https://github.com/xekri/yue") repository (in progress)
 
     section
@@ -105,16 +110,15 @@ html
             th o
             +tds("o;oj;ŏv;og;ŏn;om".split(";"))
           tr
-            th ơ
+            th ơ (eo)
             +tds("ơ;ơ\u0306j;;ơg;;".split(";"))
           tr
-            th r
+            th ӑ (r)
             td
-            +tds("jvgnm".split("").map(x => "r\u0306" + x))
+            +tds("jvgnm".split("").map(x => "ӑ" + x))
           tr
             th a
-            td a
-            +tds("jvgnm".split("").map(x => "a" + x))
+            +tds(";j;v;g;n;m".split(";").map(x => "a" + x))
 
         table#tone
           caption tone
@@ -144,6 +148,12 @@ html
             td an(x)
             td anq
             td ans
+            td at
+          tr
+            th(colspan=2) coda
+            td an
+            td ad
+            td az
             td at
         //
           tr
@@ -188,8 +198,8 @@ html
           caption low aspiration
           tr
             th
-            th: span 平上
-            th: span 去入
+            th 平上
+            th 去入
           tr
             th tenuis
             td dh
@@ -224,29 +234,29 @@ html
       section
         h3 aspiration
         ul
-          li in many existing romanizations, tenuis and aspirated (dental obstruents for example) are written d- and t-
-          li however we want to reserve voiced-looking letters like d- for other use, so we write t- and tx-
+          li in many existing romanizations, {tenuis, aspirated} (dental obstruents for example) is written {d-, t-}
+          li since we want to reserve voiced-looking letters like d- for other use, in our system it is written {t-, tx-}
 
       section
         h3 tone
         ul
-          li falling and rising tones are written -à- and -á-
+          li {falling, rising} tone is written {-à-, -á-}
           li flat tone is unmarked
-          li checked tone is indicated by replacing -g, -n, and -m with -k, -t, and -p
-          li these method are almost identical to yale romanziation
+          li checked tone is indicated by replacing {-g, -n, -m} with {-k, -t, -p}
+          li these methods are identical to yale romanziation
           li since whether the high checked tone is upper high or lower high is obvious from whether the vowel is short or long, we don't write it explicitly
 
       section
         h3 lowness
         ul
-          li whether the tone is high or low is determined by whether the inital was unvoiced or voiced originally in middle chinese
+          li {high, low} tones arose from {unvoiced, voiced} initials in middle chinese
           li so we use voiced-looking letters like d- to indicate low tone
-          li since sonorant is essentially voiced, n- is low and qn- marked with "q" is high (exceptional)
+          li since sonorant (dental nasal for example) is essentially voiced, n- is low and qn- marked with "q" is high (exceptional)
 
       section
         h3 aspiration and lowness
         ul
-          li voiced obstruent initial in middle chinese became aspirated if tone ∈ {falling, rising} or unaspirated otherwise
+          li voiced obstruent initial in middle chinese became {aspirated, unaspirated} if tone was {falling or rising, flat or checked}
           li so we write as:
             ul
               li "dà" is aspirated
@@ -260,12 +270,12 @@ html
           li since -on and -ơn are complementarily distributed, we only use the former
 
       section
-        h3 allocaiton
+        h3 grapheme
         ul
           li since "c" originally had [g] sound (like greek "γ"), we use it as the low counterpart of "k", and use "g" that is left as [ŋ]
           li since "v" originally had [w] sound (as a variant of "u"), we use it as an approximant, and use "w" that is left as a low fricative (like polish)
           li sicne both "x" and "h" can indicate [h], we use the former as high and the latter as low
-          li since "r" had no other place to be used in, we use it as the short counterpart of "a"
+          li since "r" had no other place to be used in, we use it as the short counterpart of "a" in ASCII environment
 
     section#grammar
       h2 grammar
@@ -274,48 +284,26 @@ html
         h3 pronoun
 
         table
-          tr
-            td 我
-            td gó
-            td i
-          tr
-            td 你
-            td ní
-            td thou
-          tr
-            td 佢
-            td cý
-            td he
-          tr
-            td -哋
-            td di
-            td (plural)
+          +trs([
+            ["我", "gó", "i"],
+            ["你", "ní", "thou"],
+            ["佢", "cý", "he"],
+            ["-哋", "di", "(plural)"],
 
-        table
-          tr
-            td 誰
-            td ẓùj
-            td who
-          tr
-            td 乜 (物)
-            td qmӑt
-            td what
-          tr
-            td 幾時
-            td kí ẓì
-            td when
-          tr
-            td 邊度 (焉道)
-            td pìn dov
-            td where
-          tr
-            td 點樣 (怎樣)
-            td tím jog
-            td how
-          tr
-            td 點解 (怎解)
-            td tím káj
-            td why
+            ["邊個 (焉個)", "pìn ko", "who"],
+            ["乜 (物)", "qmӑt", "what"],
+            ["幾時", "kí ẓì", "when"],
+            ["邊度 (焉道)", "pìn dov", "where"],
+            ["點樣 (怎樣)", "tím jog", "how"],
+            ["點解 (怎解)", "tím káj", "why"],
+
+            ["誰", "ẓùj", "who (written)"],
+            ["何", "hò", "what (written)"],
+            ["何時", "hò ẓì", "when (written)"],
+            ["何處", "hò ṭxy", "where (written)"],
+            ["如何", "ṇỳ hò", "how (written)"],
+            ["爲何", "vì hò", "why (written)"],
+          ])
 
       section
         h3 word order
