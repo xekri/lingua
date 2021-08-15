@@ -15,9 +15,15 @@ body textarea:not(:first-of-type) {
 body select, body option {
   color: inherit;
 }
-body h1, body textarea, body select, body option {
+body h1, body textarea, body select, body option, body table, body td {
   font-family: inherit;
   font-weight: inherit;
+}
+body table {
+  margin: 0 auto;
+}
+body table th {
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
