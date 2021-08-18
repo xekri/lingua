@@ -8,7 +8,7 @@ $bgcolor: #000
 @import url(//fonts.googleapis.com/earlyaccess/notosanstibetan.css)
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css)
 @import url(//fonts.googleapis.com/earlyaccess/notosansphagspa.css)
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Kanit:wght@100&display=swap')
 
 $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 @font-face
@@ -37,6 +37,8 @@ table.center
 .tables
   display: flex
   justify-content: space-evenly
+  vertical-align: top
+  align-items: flex-start
 
 h1, #menu
   //text-transform: uppercase
@@ -50,7 +52,7 @@ body
   color: $color
   background-color: $bgcolor
 
-  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans TC", "Noto Sans Tibetan", "Noto Sans Phags Pa", "Nishiki Kana", sans-serif
+  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans TC", "Noto Sans Tibetan", "Noto Sans Phags Pa", "Kanit", "Nishiki Kana", sans-serif
   font-weight: 100
   font-stretch: extra-condensed
 
@@ -90,12 +92,13 @@ nav
 
     #datetime
       text-align: center
-      font-family: "Source Code Pro", monospace
+      font-family: "Noto Sans Mono", monospace
       padding: 0
       margin: 0
       margin-bottom: $space
       width: 100%
       text-align: center
+      white-space: pre
 
     .twitter-share-button
       margin-bottom: $space
@@ -250,6 +253,8 @@ details, summary
 
 ruby
   ruby-align: center
+  rt
+    font-size: 80%
 
 #logo
   text-align: center
@@ -280,3 +285,11 @@ button
   font-size: 150%
 button:hover
   background-color: #fff4
+
+pre
+  border-top: 1px solid
+  border-left: 1px solid
+  padding: 1em
+  background-color: #FFF2
+  code
+    font-family: "Noto Sans Mono", monospace

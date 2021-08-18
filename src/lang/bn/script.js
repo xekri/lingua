@@ -24,34 +24,32 @@ const convert0 = s =>
 		.replace(/য়/g, "য়")
 		.replace(/ৰ/g, "র")
 
-		// ƙƈɠɦ
-		// ᶄꞔᶃᶍꞕ
 		.replace(/ক/g, "k" + maybeA)
 		.replace(/খ/g, "kx" + maybeA)
 		.replace(/গ/g, "c" + maybeA)
 		.replace(/ঘ/g, "ch" + maybeA)
 		.replace(/ঙ/g, "g" + maybeA)
-		.replace(/ཧ/g, "x" + maybeA)
+		.replace(/হ/g, "h" + maybeA)
 
-		.replace(/চ/g, "ḳ" + maybeA)
-		.replace(/ছ/g, "ḳx" + maybeA)
-		.replace(/জ/g, "ċ" + maybeA)
-		.replace(/ঝ/g, "ċh" + maybeA)
-		.replace(/ঞ/g, "ġ" + maybeA)
-		.replace(/য়/g, "y" + maybeA) // nukta
+		.replace(/চ/g, "ᶄ" + maybeA)
+		.replace(/ছ/g, "ᶄx" + maybeA)
+		.replace(/জ/g, "ꞔ" + maybeA)
+		.replace(/ঝ/g, "ꞔh" + maybeA)
+		.replace(/ঞ/g, "ᶃ" + maybeA)
+		.replace(/য়/g, "ȷ" + maybeA) // nukta
 		.replace(/য/g, "j" + maybeA)
-		.replace(/শ/g, "ẋ" + maybeA)
+		.replace(/শ/g, "ᶍ" + maybeA)
 
-		// ʈɖʂʐɳ
-		.replace(/ট/g, "ṫ" + maybeA)
-		.replace(/ঠ/g, "ṫx" + maybeA)
-		.replace(/ড়/g, "ŗ" + maybeA) // nukta
-		.replace(/ড/g, "ḋ" + maybeA)
-		.replace(/ঢ়/g, "ŗh" + maybeA) // nukta
-		.replace(/ঢ/g, "ḋh" + maybeA)
-		.replace(/ণ/g, "ṅ" + maybeA)
+		// ʐ
+		.replace(/ট/g, "ʈ" + maybeA)
+		.replace(/ঠ/g, "ʈx" + maybeA)
+		.replace(/ড়/g, "ḍ" + maybeA) // nukta
+		.replace(/ড/g, "ɖ" + maybeA)
+		.replace(/ঢ়/g, "ḍh" + maybeA) // nukta
+		.replace(/ঢ/g, "ɖh" + maybeA)
+		.replace(/ণ/g, "ɳ" + maybeA)
 		.replace(/র/g, "r" + maybeA)
-		.replace(/ষ/g, "ṡ" + maybeA)
+		.replace(/ষ/g, "ʂ" + maybeA)
 
 		.replace(/ত/g, "t" + maybeA)
 		.replace(/থ/g, "tx" + maybeA)
@@ -100,12 +98,12 @@ const convert0 = s =>
 		.replace(new RegExp(maybeA, "g"), "a")
 
 
-		.replace(/ৎ/g, "ţ")
+		.replace(/ৎ/g, "t")
 		.replace(/ঽ/g, "~")
 
-		.replace(/ঁ/g, "ņ")
-		.replace(/ং/g, "ģ")
-		.replace(/ঃ/g, "ḩ")
+		.replace(/ঁ/g, "\u0328")
+		.replace(/ং/g, "ṇ")
+		.replace(/ঃ/g, "x")
 
 		.replace(/ঽ/g, "'")
 		.replace(/।/g, ".")

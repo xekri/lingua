@@ -7,14 +7,12 @@
       const base = params.get("b") || 10;
       const precision = params.get("p") || (base == 16 ? 4 : 5);
       setInterval(() => {
-        document.querySelector("body").innerText = dateString(...now(), base, precision)
+        document.querySelector("body").innerHTML = dateString(...now(), base, precision)
       }, 100);
     })
     
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap');
-    
     html {
       background-color: transparent;
     }
@@ -22,9 +20,15 @@
       margin: 0;
       padding: 0;
       background-color: transparent;
-      font-family: "Source Sans Pro";
+      font-family: "Noto Sans Mono", monospace;
+      font-weight: 100;
+      font-stretch: condensed;
       font-size: 144pt;
       margin: 0 auto;
+      white-space: pre;
+    }
+    .over-nine {
+      font-weight: 300;
     }
     
   </style>

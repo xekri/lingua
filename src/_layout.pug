@@ -17,7 +17,8 @@ include /_mixins.pug
 
 html
   head
-    include _google-analytics.pug
+    include include/_google-analytics.pug
+    include include/_mathjax.pug
     meta(charset="UTF-8")
 
     link(href="/style.css", rel="stylesheet")
@@ -84,10 +85,9 @@ html
           +div("submenu")
 
         +div("⚠")
-          | this website
           ul
-            li uses Google Analytics.
-            li is not optimised for mobile.
+            li using Google Analytics.
+            li not optimised for mobile.
 
     main(class=vertical ? "vertical" : "")
       +section(title, tags)
