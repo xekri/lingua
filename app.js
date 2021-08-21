@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { convert } = require("./generate.js");
+const { convert } = require("./convert.js");
 
 const app = express();
 app.set("view engine", "pug");

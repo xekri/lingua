@@ -5,9 +5,13 @@ html
         const [ta] = document.getElementsByTagName("textarea");
         const [div] = document.getElementsByTagName("div");
 
-        ta.addEventListener("blur", () => {
+        const f = () => {
           window.location.href = `/?a=${encodeURIComponent(ta.value)}`;
-        })
+        }
+
+        ta.addEventListener("blur", f);
+        if(new URLSearchParams(window.location.search).get("a") == null)
+          f();
       });
 
     style.
@@ -19,19 +23,24 @@ html
         height: 100%;
         border: 1px solid;
         padding: 1em;
+        font-family: "Noto Sans", sans-serif;
       }
       textarea {
         resize: none;
         outline: none;
+        word-break: break-all;
       }
       div {
         display: inline-block;
         box-sizing: border-box;
         white-space: pre;
         border-left: none;
+        overflow-y: auto;
       }
       .single {
         border-bottom: 1px solid;
+        margin-left: 1px;
+        margin-right: 1px;
       }
 
   body
@@ -40,8 +49,8 @@ html
     else
       textarea.
         世界人權宣言　第一條
-        人人生而自由，在尊嚴和權利上一律平等。他們賦有理性和良心，並應以兄弟
-        關係的精神相對待。
+        人人生而自由，在尊嚴和權利上一律平等。
+        他們賦有理性和良心，並應以兄弟關係的精神相對待。
     div
       for x in b
         if Array.isArray(x)
