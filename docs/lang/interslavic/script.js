@@ -26,12 +26,11 @@ const convertWord = w => w
 
   .replace(/^j(?=[eę])/g, "")
   //.replace(/(?<=[yiuaꜵæeoĕŏęǫ])j(?=[eę])/g, "")
-  //.replace(/^j(?=i)/g, "")
-  //.replace(/^i/g, "y")
-  //.replace(/i/g, "jy")
-  //.replace(/y/g, "i")
+  .replace(/^j(?=i)/g, "")
+  .replace(/^i/g, "y")
+  .replace(/i/g, "jy")
+  .replace(/y/g, "i")
 
-  /*
   .replace(/a/g, "а")
   .replace(/ꜵ/g, "о")
   .replace(/c/g, "ц")
@@ -47,7 +46,7 @@ const convertWord = w => w
   .replace(/f/g, "ф")
   .replace(/g/g, "г")
   .replace(/x/g, "х")
-  .replace(/i/g, "йи")
+  .replace(/i/g, "и")
   .replace(/k/g, "к")
   .replace(/l/g, "л")
   .replace(/m/g, "м")
@@ -62,7 +61,6 @@ const convertWord = w => w
   .replace(/u/g, "у")
   .replace(/ǫ/g, "ѫ")
   .replace(/w/g, "в")
-  .replace(/y/g, "и")
   .replace(/z/g, "з")
   .replace(/ž/g, "ж")
   .replace(/j/g, "й")
@@ -74,7 +72,6 @@ const convertWord = w => w
   .replace(/йо/g, "ю")
   .replace(/йu/g, "ѵ")
   .replace(/йų/g, "ѭ")
-  */
   ;
 
 const capitalize = w =>
