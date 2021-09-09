@@ -29,6 +29,7 @@ const convert0 = s =>
     .replace(/c?h/g, "x")
     .replace(/sz/g, "š")
     .replace(/cz/g, "ť")
+    .replace(/dż/g, "ď")
     .replace(/ż/g, "ž")
 
     .replace(/l/g, "lj")
@@ -52,22 +53,14 @@ const convert0 = s =>
     .replace(/i(?=[eaouęǫō])/g, "j")
 
     .replace(/dz/g, "ʒ")
-    .replace(/dž/g, "ď")
 
     .replace(/i/g, "ji")
     .replace(/y/g, "i")
 
     .replace(/sj([tm])j/g, "s$1j")
 
+    .replace(/(?<=[ieaouęǫō])j(?![ieaouęǫō])/g, "i")
     .replace(/(?<=^|[ieaouęǫō])j(?=[ieę])/g, "")
-
-    //.replace(/ji/g, "ǐ")
-    //.replace(/je/g, "ě")
-    //.replace(/ja/g, "ǎ")
-    //.replace(/jo/g, "ǒ")
-    //.replace(/ju/g, "ǔ")
-    //.replace(/ję/g, "ę\u030C")
-    //.replace(/jǫ/g, "ǫ\u030C")
 
     .normalize("NFC");
 
@@ -75,14 +68,14 @@ const convert1 = s =>
   s
     .toLowerCase()
 
-    .replace(/ō/g, "у")
+    .replace(/ō/g, "ӧ")
 
-    .replace(/ji/g, "і")
-    .replace(/je/g, "ѥ")
+    //.replace(/ji/g, "і")
+    //.replace(/je/g, "ѥ")
     //.replace(/ja/g, "ꙗ")
     //.replace(/jo/g, "ю")
     //.replace(/ju/g, "ѵ")
-    .replace(/ję/g, "ѩ")
+    //.replace(/ję/g, "ѩ")
     //.replace(/jǫ/g, "ѭ")
 
     .replace(/i/g, "и")
