@@ -6,11 +6,6 @@ include /_mixins.pug
   const root = "https://sumi.space"
   const author =
     { id: "sumi"
-    , name:
-      { han: ["墨", "幽"]
-      , ja: ["sumi|mok", "kura|iu"]
-      , yue: ["mək", "qȷə̀v"]
-      }
     , twitter: "sumiqj"
     , github: "xekri"
     }
@@ -58,7 +53,7 @@ html
       #nav-in
         div#logo
           a(href="/")
-            img(src="/images/sumi''.svg", width="50%")
+            img(src="/images/sumi-color.svg", width="50%")
 
         #datetime
 
@@ -74,20 +69,20 @@ html
         +div("menu")
           ul
             li: a(href="/") /
-            li: a(href="/author") auþor
-            li: a(href="/char") character
-            li: a(href="/fav") favourite
-            // li: a(href="/thought") thought
-            li: a(href="/wurk") wurk
-            li: a(href="/lang") language
-            li: a(href="/misc") misc
+            li: a(href="/author") AUÞOR
+            li: a(href="/char") CHARACTER
+            li: a(href="/fav") FAVOURITE
+            // li: a(href="/thought") THOUGHT
+            li: a(href="/wurk") WURK
+            li: a(href="/lang") LANGUAGE
+            li: a(href="/misc") MISCELLANEOUS
 
           +div("submenu")
 
         +div("⚠")
           ul
-            li using Google Analytics.
-            li not optimised for mobile.
+            li USING <it>GOOGLE ANALYTICS</it>
+            li NOT OPTIMISED FOR MOBILE
 
     main(class=vertical ? "vertical" : "")
       +section(title, tags)

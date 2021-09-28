@@ -8,6 +8,7 @@ mixin ruby(main, above)
 		rt= above
 
 mixin section(title, tags)
+	- title = title?.toUpperCase()
 	section(id=title)
 		if tags
 			.tags

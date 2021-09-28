@@ -39,6 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // date
   setInterval(() => {
-    document.getElementById("datetime").innerText = dateString(...now(), 16, 4);
+    document.getElementById("datetime").innerText = dateString(...now(), 10, 5);
   }, 100);
 });

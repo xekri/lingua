@@ -71,7 +71,7 @@ const convert1 = s =>
     .replace(/ō/g, "ӧ")
 
     //.replace(/ji/g, "і")
-    //.replace(/je/g, "ѥ")
+    //y.replace(/je/g, "ѥ")
     //.replace(/ja/g, "ꙗ")
     //.replace(/jo/g, "ю")
     //.replace(/ju/g, "ѵ")

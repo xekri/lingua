@@ -1,14 +1,13 @@
 @use "sass:math"
 
 $space: 2em
-$navWidth: 16em
-$color: #DDD
-$bgcolor: #000
+$navWidth: 20em
+$color: lightgray
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanstibetan.css)
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css)
+@import url(//fonts.googleapis.com/earlyaccess/notosanstibetan.css)
 @import url(//fonts.googleapis.com/earlyaccess/notosansphagspa.css)
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+TC:wght@100&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Kanit:wght@100&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+JP:wght@200&family=Noto+Sans+TC:wght@200&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Kanit:wght@100&display=swap')
 
 $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 @font-face
@@ -50,9 +49,9 @@ html, body
 
 body
   color: $color
-  background-color: $bgcolor
+  background-color: black
 
-  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans TC", "Noto Sans Tibetan", "Noto Sans Phags Pa", "Kanit", "Nishiki Kana", sans-serif
+  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans JP", "Noto Sans TC", "Noto Sans Tibetan", "Noto Sans Phags Pa", "Kanit", sans-Sans
   font-weight: 100
   font-stretch: extra-condensed
 
@@ -65,7 +64,6 @@ body
 
 main, nav
   height: 100%
-  box-shadow: inset black 0 0 1em 2em
 
 nav
   width: $navWidth
@@ -74,7 +72,7 @@ nav
   bottom: 0
   border-top: 1px solid
   border-left: 1px solid
-  overflow-y: auto
+  overflow: auto
 
   ul
     margin-inline-start: 1em
@@ -174,9 +172,8 @@ figure
   align-items: center
 
 a
-  color: $color
-  text-decoration-color: #FFF4
-  text-decoration-thickness: calc(1em / 5)
+  color: inherit
+  text-decoration-thickness: 1px
 
 table + table, ul + ul
   margin-block-start: $space
