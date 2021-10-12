@@ -63,6 +63,8 @@ const other = done => {
   gulp
     .src([
       `${paths.src}/CNAME`,
+      `${paths.src}/**/*.woff2`,
+      `${paths.src}/**/*.ttf`,
       `${paths.src}/**/*.*`,
       `${paths.src}/**/*`,
       `!${paths.src}/**/*.pug`,

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (const e of document.querySelectorAll("table td"))
     e.innerHTML = e.innerHTML
-      ? `<button class="phag">${e.innerHTML}</button><br>${convert[0](e.innerHTML)}`
+      ? `<button class="phag">${e.innerHTML}</button>`
       : ""
       ;
 

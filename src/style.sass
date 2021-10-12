@@ -4,10 +4,7 @@ $space: 2em
 $navWidth: 20em
 $color: lightgray
 
-@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css)
-@import url(//fonts.googleapis.com/earlyaccess/notosanstibetan.css)
-@import url(//fonts.googleapis.com/earlyaccess/notosansphagspa.css)
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Noto+Sans+JP:wght@200&family=Noto+Sans+TC:wght@200&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Noto+Sans+Arabic:wght@100&family=Noto+Sans+Symbols:wght@100&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&family=Noto+Sans+Armenian:wght@200&family=Noto+Sans+Bengali:wght@200&family=Noto+Sans+Devanagari:wght@200&family=Noto+Sans+Display:wght@200&family=Noto+Sans+Georgian:wght@200&family=Noto+Sans+Hebrew:wght@200&family=Noto+Sans+JP:wght@200&family=Noto+Sans+Phags+Pa&family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols:wght@200&family=Noto+Sans+TC:wght@200&family=Noto+Serif+Tibetan:wght@200&family=Noto+Sans+Zanabazar+Square&display=swap')
 
 $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
 @font-face
@@ -15,12 +12,6 @@ $cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
   font-family: 'Monomakh'
   font-weight: lighter
   unicode-range: $cyrillic
-
-@font-face
-  font-family: "tri"
-  src: url(/wurk/font/tri.woff2) format('woff2')
-  font-style: normal
-  font-weight: normal
 
 *
   box-sizing: border-box
@@ -51,7 +42,7 @@ body
   color: $color
   background-color: black
 
-  font-family: "Noto Sans", "Noto Sans Japanese", "Noto Sans JP", "Noto Sans TC", "Noto Sans Symbols", sans-serif
+  font-family: "Noto Sans Display", "Noto Sans JP", "Noto Sans TC", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Serif Tibetan", "Noto Sans Phags Pa", "Noto Sans Zanabazar Square", "Noto Sans Georgian", "Noto Sans Armenian", "Noto Sans Symbols", sans-serif
   font-weight: 200
   font-stretch: extra-condensed
 
@@ -174,6 +165,10 @@ figure
 a
   color: inherit
   text-decoration-thickness: 1px
+  text-decoration-style: dotted
+
+a:before
+  //content: "🔗"
 
 table + table, ul + ul
   margin-block-start: $space
@@ -219,6 +214,7 @@ textarea
   font: inherit
   background-color: inherit
   color: inherit
+  outline: none
 
 input[type="checkbox"]
   vertical-align: middle
@@ -280,6 +276,7 @@ button
   border-bottom: 0
   background-color: transparent
   font-size: 150%
+  outline: none
 button:hover
   background-color: #fff4
 
