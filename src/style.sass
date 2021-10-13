@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Display&display=swap')
+
 body
-  font-family: "Noto Sans"
-  font-weight: lighter
+  font-family: "Noto Sans Devanagari", "Noto Sans Display", "Noto Sans"
+
+  h1
+    font-family: inherit
+    font-weight: inherit
+  textarea, select, option, table, td
+    font: inherit
 
   textarea
     font-size: inherit
     background-color: transparent
     width: 50%
-    height: 90%
+    height: 100%
     resize: none
 
     &:not(:first-of-type)
@@ -14,10 +21,6 @@ body
 
   select, option
     color: inherit
-
-  h1, textarea, select, option, table, td
-    font-family: inherit
-    font-weight: inherit
 
   table
     margin: 0 auto

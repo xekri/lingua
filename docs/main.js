@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ta1 = document.getElementById("to");
 
   const update0 = () => {
-    ta1.value = convert0(ta0.value,
-      parseInt(document.getElementById("mode").value)
-    );
+    ta1.value = convert0(ta0.value, document.getElementById("mode").checked ? 1 : 0);
   };
 
   for (const e of document.getElementsByClassName("trigger"))

@@ -1,12 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Display&display=swap");
 body {
-  font-family: "Noto Sans";
-  font-weight: lighter;
+  font-family: "Noto Sans Devanagari", "Noto Sans Display", "Noto Sans";
+}
+body h1 {
+  font-family: inherit;
+  font-weight: inherit;
+}
+body textarea, body select, body option, body table, body td {
+  font: inherit;
 }
 body textarea {
   font-size: inherit;
   background-color: transparent;
   width: 50%;
-  height: 90%;
+  height: 100%;
   resize: none;
 }
 body textarea:not(:first-of-type) {
@@ -14,10 +21,6 @@ body textarea:not(:first-of-type) {
 }
 body select, body option {
   color: inherit;
-}
-body h1, body textarea, body select, body option, body table, body td {
-  font-family: inherit;
-  font-weight: inherit;
 }
 body table {
   margin: 0 auto;

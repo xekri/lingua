@@ -1,3 +1,3 @@
-# romanize sanskrit
+romanize devanagari
 
-xekri.github.io/language-sa/
+https://xekri.github.io/language-sa/
