@@ -5,22 +5,9 @@ block head
 	- const tags = ["draft"]
 
 block main
-	table.category
-		tr
-			td(rowspan=5) noun
-			td(rowspan=3) masculine
-			td(rowspan=2) animate
-			td personal
-		tr
-			td impersonal
-		tr
-			td(colspan=2) inanimate
-		tr
-			td(colspan=3) neuter
-		tr
-			td(colspan=3) feminine
-
 	+section("orthography")
+		input(type="checkbox")
+		label iotated
 		.textareas
 			textarea#0.
 				# POWSZECHNA DEKLARACJA PRAW CZŁOWIEKA
@@ -55,395 +42,413 @@ block main
 				td ѩ
 				td ѭ
 
-	+section("pronoun")
-		table.pl-table
-			caption i
-			tr
-				th
-				th Sg
-				th Pl
-			tr
-				th N
-				td ja
-				td my
-			tr
-				th AGL
-				td(rowspan=2) mnie
-				td nas
-			tr
-				th D
-				td nam
-			tr
-				th I
-				td mną
-				td nami
+	+section("grammar")
+		table.category
+		tr
+			td(rowspan=5) noun
+			td(rowspan=3) masculine
+			td(rowspan=2) animate
+			td personal
+		tr
+			td impersonal
+		tr
+			td(colspan=2) inanimate
+		tr
+			td(colspan=3) neuter
+		tr
+			td(colspan=3) feminine
 
-		table.pl-table
-			caption you
-			tr
-				th
-				th Sg
-				th Pl
-			tr
-				th N
-				td ty
-				td wy
-			tr
-				th AG
-				td cię
-				td(rowspan=2) was
-			tr
-				th L
-				td tobie
-			tr
-				th D
-				td ci
-				td wam
-			tr
-				th I
-				td tobą
-				td wami
+		+section("pronoun")
+			.tables
+				table.pl-table
+					caption i
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th N
+						td ja
+						td my
+					tr
+						th AGL
+						td(rowspan=2) mnie
+						td nas
+					tr
+						th D
+						td nam
+					tr
+						th I
+						td mną
+						td nami
 
-		table.pl-table
-			caption it
-			tr
-				th
-				th(colspan=3) Sg
-				th(colspan=2) Pl
-			tr(style="text-align: center;")
-				th
-				th M
-				th N
-				th F
-				th P
-				th Ip
-			tr
-				th N
-				td on
-				td ono
-				td ona
-				td oni
-				td one
-			tr
-				th A
-				td(rowspan=2, style="border-right: none;") go
-				td je
-				td ją
-				td(rowspan=3, style="border-right: none;") ich
-				td je
-			tr
-				th G
-				td(style="border-left: none")
-				td(rowspan=3) jej
-				td(rowspan=2, style="border-left: none")
-			tr
-				th L
-				td(colspan=2) im
-			tr
-				th D
-				td(colspan=2) mu
-				td(colspan=2) im
-			tr
-				th I
-				td(colspan=2) im
-				td ją
-				td(colspan=2) imi
+				table.pl-table
+					caption you
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th N
+						td ty
+						td wy
+					tr
+						th AG
+						td cię
+						td(rowspan=2) was
+					tr
+						th L
+						td tobie
+					tr
+						th D
+						td ci
+						td wam
+					tr
+						th I
+						td tobą
+						td wami
 
-		table.pl-table
-			caption wh-
-			tr
-				th
-				th P
-				th Ip
-			tr
-				th N
-				td kto
-				td(rowspan=2) co
-			tr
-				th A
-				td(rowspan=2) kogo
-			tr
-				th G
-				td czego
-			tr
-				th D
-				td komu
-				td czemu
-			tr
-				th LI
-				td kom
-				td czym
+				table.pl-table
+					caption it
+					tr
+						th
+						th(colspan=3) Sg
+						th(colspan=2) Pl
+					tr(style="text-align: center;")
+						th
+						th M
+						th N
+						th F
+						th P
+						th Ip
+					tr
+						th N
+						td on
+						td ono
+						td ona
+						td oni
+						td one
+					tr
+						th A
+						td(rowspan=2, style="border-right: none;") go
+						td je
+						td ją
+						td(rowspan=3, style="border-right: none;") ich
+						td je
+					tr
+						th G
+						td(style="border-left: none")
+						td(rowspan=3) jej
+						td(rowspan=2, style="border-left: none")
+					tr
+						th L
+						td(colspan=2) im
+					tr
+						th D
+						td(colspan=2) mu
+						td(colspan=2) im
+					tr
+						th I
+						td(colspan=2) im
+						td ją
+						td(colspan=2) imi
 
-	+section("noun")
-			table.pl-table
-				caption brother, personal
-				tr
-					th
-					th Sg
-					th Pl
-				tr
-					th N
-					td brat
-					td bracia
-				tr
-					th AG
-					td brata
-					td braci
-				tr
-					th V
-					td(rowspan=2) bracie
-					td bracia
-				tr
-					th L
-					td braciach
-				tr
-					th D
-					td bratu
-					td braciom
-				tr
-					th I
-					td bratem
-					td braćmi
+				table.pl-table
+					caption wh-
+					tr
+						th
+						th P
+						th Ip
+					tr
+						th N
+						td kto
+						td(rowspan=2) co
+					tr
+						th A
+						td(rowspan=2) kogo
+					tr
+						th G
+						td czego
+					tr
+						th D
+						td komu
+						td czemu
+					tr
+						th LI
+						td kom
+						td czym
 
-			table.pl-table
-				caption house, inanimate
-				tr
-					th
-					th Sg
-					th Pl
-				tr
-					th NA
-					td dom
-					td(rowspan=2) domy
-				tr
-					th V
-					td(rowspan=3) domu
-				tr
-					th L
-					td domach
-				tr
-					th G
-					td domów
-				tr
-					th D
-					td domowi
-					td domom
-				tr
-					th I
-					td domem
-					td domami
-			table.pl-table
-				caption word, neuter
-				tr
-					th
-					th Sg
-					th Pl
-				tr
-					th NVA
-					td słowo
-					td słowa
-				tr
-					th L
-					td slowje
-					td slowach
-				tr
-					th D
-					td słowu
-					td słowam
-				tr
-					th G
-					td słowa
-					td słowow
-				tr
-					th I
-					td slowom
-					td slowami
+		+section("noun")
+			.tables
+				table.pl-table
+					caption brother, personal
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th N
+						td brat
+						td bracia
+					tr
+						th AG
+						td brata
+						td braci
+					tr
+						th V
+						td(rowspan=2) bracie
+						td bracia
+					tr
+						th L
+						td braciach
+					tr
+						th D
+						td bratu
+						td braciom
+					tr
+						th I
+						td bratem
+						td braćmi
 
-			table.pl-table
-				caption crow, feminine
-				tr
-					th
-					th Sg
-					th Pl
-				tr
-					th N
-					td wrona
-					td(rowspan=3) wrony
-				tr
-					th A
-					td wronę
-				tr
-					th V
-					td wrono
-				tr
-					th L
-					td(rowspan=2) wronie
-					td wronach
-				tr
-					th D
-					td wronom
-				tr
-					th G
-					td wrony
-					td wron
-				tr
-					th I
-					td wroną
-					td wronami
+				table.pl-table
+					caption house, inanimate
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th NA
+						td dom
+						td(rowspan=2) domy
+					tr
+						th V
+						td(rowspan=3) domu
+					tr
+						th L
+						td domach
+					tr
+						th G
+						td domów
+					tr
+						th D
+						td domowi
+						td domom
+					tr
+						th I
+						td domem
+						td domami
+				table.pl-table
+					caption word, neuter
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th NVA
+						td słowo
+						td słowa
+					tr
+						th L
+						td slowje
+						td slowach
+					tr
+						th D
+						td słowu
+						td słowam
+					tr
+						th G
+						td słowa
+						td słowow
+					tr
+						th I
+						td slowom
+						td slowami
 
-	+section("verb")
-		table
-			caption to be, imperfective
-			tr
-				th(rowspan=3)
-				th(rowspan=3) infinitve
-				th(colspan=2) present
-				th(colspan=2) future
-				th(colspan=2) imperative
-				th(colspan=5) past
-				th(colspan=5) conditional
-			tr
-				for i in [0, 1, 2]
-					th(rowspan=2, style="text-align: center") Sg
-					th(rowspan=2) Pl
-				for i in [0, 1]
-					th(colspan=3) Sg
-					th(colspan=2) Pl
-			tr
-				for i in [0, 1]
-					th m.
-					th n.
-					th f.
-					th p.
-					th ip.
-			tr
-				th 1
-				td(rowspan=3) być
-				td єстєм
-				td єстєсьми
-				td бѧдѧ
-				td бѧдѥми
-				td
-				td бѫдьми
-				td билєм
-				td (билом)
-				td билам
-				td билісьми
-				td билисьми
-				td билбим
-				td (билобим)
-				td билабим
-				td билібисьми
-				td билибисьми
-			tr
-				th 2
-				td єстєсь
-				td єстєстѥ
-				td бѧдѥш
-				td бѧдѥтѥ
-				td бѫдь
-				td бѫдьтѥ
-				td билєсь
-				td (билось)
-				td билась
-				td билістѥ
-				td билистѥ
-				td билбись
-				td (билобись)
-				td билабись
-				td билібистѥ
-				td билибистѥ
-			tr
-				th 3
-				td єст
-				td сѫ
-				td бѧдѥ
-				td бѧдѫ
-				td
-				td
-				td бил
-				td било
-				td била
-				td билі
-				td били
-				td билби
-				td билоби
-				td билаби
-				td биліби
-				td билиби
+				table.pl-table
+					caption crow, feminine
+					tr
+						th
+						th Sg
+						th Pl
+					tr
+						th N
+						td wrona
+						td(rowspan=3) wrony
+					tr
+						th A
+						td wronę
+					tr
+						th V
+						td wrono
+					tr
+						th L
+						td(rowspan=2) wronie
+						td wronach
+					tr
+						th D
+						td wronom
+					tr
+						th G
+						td wrony
+						td wron
+					tr
+						th I
+						td wroną
+						td wronami
 
-		table
-			caption to read, imperfective
-			tr
-				th(rowspan=3)
-				th(rowspan=3) infinitve
-				th(colspan=2) present
-				th(colspan=2) imperative
-				th(colspan=5) past
-				th(colspan=5) conditional
-			tr
-				for i in [0, 1]
-					th(rowspan=2) Sg
-					th(rowspan=2) Pl
-				for i in [0, 1]
-					th(colspan=3) Sg
-					th(colspan=2) Pl
-			tr
-				for i in [0, 1]
-					th m.
-					th n.
-					th f.
-					th p.
-					th ip.
-			tr
-				th 1
-				td(rowspan=3) читать
-				td читам
-				td читами
-				td
-				td читаьми
-				td читалєм
-				td (читалом)
-				td читалам
-				td читалісьми
-				td читалисьми
-				td читалбим
-				td (читалобим)
-				td читалабим
-				td читалібисьми
-				td читалибисьми
-			tr
-				th 2
-				td читаш
-				td читатѥ
-				td читаь
-				td читаьтѥ
-				td читалєсь
-				td (читалось)
-				td читалась
-				td читалістѥ
-				td читалистѥ
-				td читалбись
-				td (читалабись)
-				td читалобись
-				td читалібистѥ
-				td читалибистѥ
-			tr
-				th 3
-				td чита
-				td читаѭ
-				td
-				td
-				td читал
-				td читало
-				td читала
-				td читалі
-				td читали
-				td читалби
-				td читалоби
-				td читалаби
-				td читаліби
-				td читалиби
+		+section("verb")
+			table
+				caption to be, imperfective
+				tr
+					th(rowspan=3)
+					th(rowspan=3) infinitve
+					th(colspan=2) present
+					th(colspan=2) future
+					th(colspan=2) imperative
+					th(colspan=5) past
+					th(colspan=5) conditional
+				tr
+					for i in [0, 1, 2]
+						th(rowspan=2, style="text-align: center") Sg
+						th(rowspan=2) Pl
+					for i in [0, 1]
+						th(colspan=3) Sg
+						th(colspan=2) Pl
+				tr
+					for i in [0, 1]
+						th m.
+						th n.
+						th f.
+						th p.
+						th ip.
+				tr
+					th 1
+					td(rowspan=3) być
+					td єстєм
+					td єстєсьми
+					td бѧдѧ
+					td бѧдѥми
+					td
+					td бѫдьми
+					td билєм
+					td (билом)
+					td билам
+					td билісьми
+					td билисьми
+					td билбим
+					td (билобим)
+					td билабим
+					td билібисьми
+					td билибисьми
+				tr
+					th 2
+					td єстєсь
+					td єстєстѥ
+					td бѧдѥш
+					td бѧдѥтѥ
+					td бѫдь
+					td бѫдьтѥ
+					td билєсь
+					td (билось)
+					td билась
+					td билістѥ
+					td билистѥ
+					td билбись
+					td (билобись)
+					td билабись
+					td билібистѥ
+					td билибистѥ
+				tr
+					th 3
+					td єст
+					td сѫ
+					td бѧдѥ
+					td бѧдѫ
+					td
+					td
+					td бил
+					td било
+					td била
+					td билі
+					td били
+					td билби
+					td билоби
+					td билаби
+					td биліби
+					td билиби
+
+			table
+				caption to read, imperfective
+				tr
+					th(rowspan=3)
+					th(rowspan=3) infinitve
+					th(colspan=2) present
+					th(colspan=2) imperative
+					th(colspan=5) past
+					th(colspan=5) conditional
+				tr
+					for i in [0, 1]
+						th(rowspan=2) Sg
+						th(rowspan=2) Pl
+					for i in [0, 1]
+						th(colspan=3) Sg
+						th(colspan=2) Pl
+				tr
+					for i in [0, 1]
+						th m.
+						th n.
+						th f.
+						th p.
+						th ip.
+				tr
+					th 1
+					td(rowspan=3) читать
+					td читам
+					td читами
+					td
+					td читаьми
+					td читалєм
+					td (читалом)
+					td читалам
+					td читалісьми
+					td читалисьми
+					td читалбим
+					td (читалобим)
+					td читалабим
+					td читалібисьми
+					td читалибисьми
+				tr
+					th 2
+					td читаш
+					td читатѥ
+					td читаь
+					td читаьтѥ
+					td читалєсь
+					td (читалось)
+					td читалась
+					td читалістѥ
+					td читалистѥ
+					td читалбись
+					td (читалабись)
+					td читалобись
+					td читалібистѥ
+					td читалибистѥ
+				tr
+					th 3
+					td чита
+					td читаѭ
+					td
+					td
+					td читал
+					td читало
+					td читала
+					td читалі
+					td читали
+					td читалби
+					td читалоби
+					td читалаби
+					td читаліби
+					td читалиби
 
 	+section("sentence")
 		table

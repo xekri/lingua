@@ -7,18 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const t0 = document.getElementById("0");
   const t1 = document.getElementById("1");
   const t2 = document.getElementById("2");
+  const input = document.getElementsByTagName("input")[0];
 
   const onInput = () => {
     t1.value = replacePolishWordsKeepCase(t0.value, convert0);
-    t2.value = replaceNewPolishWordsKeepCase(t1.value, convert1);
+    t2.value = replaceNewPolishWordsKeepCase(t1.value, x => convert1(x, input.checked));
   };
 
-  t0.addEventListener("input", onInput);
+  for (const e of [input, t0])
+    e.addEventListener("input", onInput);
 
   onInput();
 
   for (const e of document.querySelectorAll(".pl, .pl-table td"))
-    e.innerHTML = replaceNewPolishWordsKeepCase(replacePolishWordsKeepCase(e.innerHTML, convert0), convert1);
+    e.innerHTML = replaceNewPolishWordsKeepCase(replacePolishWordsKeepCase(e.innerHTML, convert0), x => convert1(x, input.checked));
 })
 
 const convert0 = s =>
@@ -26,7 +28,7 @@ const convert0 = s =>
     .toLowerCase()
     .replace(/ą/g, "ǫ")
     .replace(/ó/g, "ō")
-    .replace(/c?h/g, "x")
+    .replace(/ch/g, "x")
     .replace(/sz/g, "š")
     .replace(/cz/g, "ť")
     .replace(/dż/g, "ď")
@@ -64,19 +66,19 @@ const convert0 = s =>
 
     .normalize("NFC");
 
-const convert1 = s =>
+const convert1 = (s, iotate) =>
   s
     .toLowerCase()
 
     .replace(/ō/g, "ӧ")
 
-    //.replace(/ji/g, "і")
-    //y.replace(/je/g, "ѥ")
-    //.replace(/ja/g, "ꙗ")
-    //.replace(/jo/g, "ю")
-    //.replace(/ju/g, "ѵ")
-    //.replace(/ję/g, "ѩ")
-    //.replace(/jǫ/g, "ѭ")
+    .replace(/ji/g, x => iotate ? "і" : x)
+    .replace(/je/g, x => iotate ? "ѥ" : x)
+    .replace(/ja/g, x => iotate ? "ꙗ" : x)
+    .replace(/jo/g, x => iotate ? "ю" : x)
+    .replace(/ju/g, x => iotate ? "ѵ" : x)
+    .replace(/ję/g, x => iotate ? "ѩ" : x)
+    .replace(/jǫ/g, x => iotate ? "ѭ" : x)
 
     .replace(/i/g, "и")
     .replace(/e/g, "є")
@@ -95,6 +97,7 @@ const convert1 = s =>
     .replace(/k/g, "к")
     .replace(/g/g, "г")
     .replace(/x/g, "х")
+    .replace(/h/g, "ғ")
 
     .replace(/t/g, "т")
     .replace(/d/g, "д")
