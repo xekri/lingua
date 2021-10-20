@@ -1,0 +1,100 @@
+extend /_layout.pug
+
+mixin tdRu(x)
+	- const ns = x.match(/^\d/)
+	td(data-ru=x.replace(/^\d:/, ""), colspan=(ns && ns.length)? ns[0] : null)
+
+
+block head
+	- const title = "russian"
+	- const tags = ["draft"]
+
+block main
+	+section("orthography")
+		a(href="https://www.ohchr.org/en/udhr/pages/Language.aspx?LangID=rus") UDHR
+		.textareas
+			textarea#0.
+				# Всеобщая декларация прав человека
+				## Статья 1
+				Все люди рождаютсѧ свободными и равными в своем достоинстве и правах.
+				Они наделены разумом и совестьѭ и должны постѫпать в отношении друг друга в духе братства.
+			textarea#1
+
+
+	+section("grammar")
+		+section("declension")
+			.tables
+				table
+					tr
+						th
+						th(colspan=6) sg.
+						th(colspan=6) pl.
+					tr
+						th
+						for i in [0, 1]
+							th N
+							th A
+							th G
+							th L
+							th D
+							th I
+					tr
+						th i
+						for x in ["я", "2:меня", "2:мне", "мной", "мы", "3:нас", "нам", "нами"]
+							+tdRu(x)
+					tr
+						th thou
+						for x in ["ты", "2:тебя", "2:тебе", "тобой", "вы", "3:вас", "вам", "вами"]
+							+tdRu(x)
+					tr
+						th he
+						td(data-ru="он")
+						td(data-ru="его", rowspan=2, colspan=2)
+						td(data-ru="ём", rowspan=2)
+						td(data-ru="ему", rowspan=2)
+						td(data-ru="им", rowspan=2)
+
+						td(data-ru="они", rowspan=2)
+						td(data-ru="их", rowspan=3, colspan=3)
+						td(data-ru="им", rowspan=3)
+						td(data-ru="ими", rowspan=3)
+					tr
+						th it
+						td(data-ru="оно")
+					tr
+						th she
+						td(data-ru="она")
+						td(data-ru="её", colspan=2)
+						td(data-ru="ей", colspan=2)
+						td(data-ru="ею")
+
+						td(data-ru="оне")
+					tr
+						th student, m. anim.
+						for x in ["студент", "2:студентa", "студенте", "студенту", "студентом", "студенты", "2:студентов", "студентaх", "студентaм", "студентaми"]
+							+tdRu(x)
+					tr
+						th airplain, m. inanim.
+						for x in ["2:самолёт", "самолётa", "самолёте", "самолёту", "самолётом", "2:самолёты", "самолётов", "самолётaх", "самолётaм", "самолётaми"]
+							+tdRu(x)
+					tr
+						th child, n. anim.
+						for x in ["2:чадо", "чада", "чаде", "чаду", "чадом", "чада", "2:чад", "чадах", "чадам", "чадами"]
+							+tdRu(x)
+					tr
+						th wine, n. inanim.
+						for x in ["2:вино", "вина", "вине", "вину", "вином", "2:вина", "вин", "винах", "винам", "винами"]
+							+tdRu(x)
+					tr
+						th name, n. inanim. "мѧ"
+						for x in ["2:имѧ", "2:имени", "имени", "именем", "2:имена", "имён", "именах", "именам", "именами"]
+							+tdRu(x)
+					tr
+						th crow, f. anim
+						for x in ["ворона", "ворону", "вороны", "2:вороне", "вороною", "вороны", "2:ворон", "воронах", "воронам", "воронами"]
+							+tdRu(x)
+					tr
+						th star, f. inanim
+						for x in ["звезда", "звезду", "звезды", "2:звезде", "звездою", "2:звезды", "звезд", "звездах", "звездам", "звездами"]
+							+tdRu(x)
+

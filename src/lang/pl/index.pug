@@ -60,123 +60,100 @@ block main
 
 		+section("pronoun")
 			.tables
-				table.pl-table
-					caption i
+				table
 					tr
 						th
-						th Sg
-						th Pl
-					tr
-						th N
-						td ja
-						td my
-					tr
-						th AGL
-						td(rowspan=2) mnie
-						td nas
-					tr
-						th D
-						td nam
-					tr
-						th I
-						td mną
-						td nami
-
-				table.pl-table
-					caption you
+						th(colspan=2) i
+						th(colspan=2) thou
+						th(colspan=5) it
+						th(colspan=2) what
 					tr
 						th
-						th Sg
-						th Pl
-					tr
-						th N
-						td ty
-						td wy
-					tr
-						th AG
-						td cię
-						td(rowspan=2) was
-					tr
-						th L
-						td tobie
-					tr
-						th D
-						td ci
-						td wam
-					tr
-						th I
-						td tobą
-						td wami
-
-				table.pl-table
-					caption it
-					tr
-						th
+						for i in [0, 1]
+							th Sg
+							th Pl
 						th(colspan=3) Sg
 						th(colspan=2) Pl
-					tr(style="text-align: center;")
+						th(colspan=2) Sg
+					tr
 						th
+						th(colspan=2)
+						th(colspan=2)
 						th M
 						th N
 						th F
 						th P
 						th Ip
-					tr
-						th N
-						td on
-						td ono
-						td ona
-						td oni
-						td one
-					tr
-						th A
-						td(rowspan=2, style="border-right: none;") go
-						td je
-						td ją
-						td(rowspan=3, style="border-right: none;") ich
-						td je
-					tr
-						th G
-						td(style="border-left: none")
-						td(rowspan=3) jej
-						td(rowspan=2, style="border-left: none")
-					tr
-						th L
-						td(colspan=2) im
-					tr
-						th D
-						td(colspan=2) mu
-						td(colspan=2) im
-					tr
-						th I
-						td(colspan=2) im
-						td ją
-						td(colspan=2) imi
-
-				table.pl-table
-					caption wh-
-					tr
-						th
 						th P
 						th Ip
 					tr
 						th N
-						td kto
-						td(rowspan=2) co
+						td(data-pl="ja")
+						td(data-pl="my")
+						td(data-pl="ty")
+						td(data-pl="wy")
+
+						td(data-pl="on")
+						td(data-pl="ono")
+						td(data-pl="ona")
+						td(data-pl="oni")
+						td(data-pl="one")
+
+						td(data-pl="kto")
+						td(data-pl="co", rowspan=2)
 					tr
 						th A
-						td(rowspan=2) kogo
+						td(data-pl="mnie", rowspan=4)
+						td(data-pl="nas", rowspan=3)
+						td(data-pl="cię", rowspan=2)
+						td(data-pl="was", rowspan=3)
+
+						td(data-pl="jego", rowspan=2, style="border-right: none;")
+						td(data-pl="je")
+						td(data-pl="ją")
+						td(data-pl="ich", rowspan=3, style="border-right: none;")
+						td(data-pl="je")
+
+						td(data-pl="kogo", rowspan=2)
 					tr
 						th G
-						td czego
+						td(style="border-left: none")
+						td(data-pl="jej", rowspan=3)
+						td(data-pl="", rowspan=2, style="border-left: none")
+
+						td(data-pl="czego")
+					tr
+						th L
+						td(data-pl="tobie")
+
+						td(data-pl="im", colspan=2)
+
+						td(data-pl="kom")
+						td(data-pl="czym")
 					tr
 						th D
-						td komu
-						td czemu
+						td(data-pl="nam")
+						td(data-pl="ci")
+						td(data-pl="wam")
+
+						td(data-pl="jemu", colspan=2)
+						td(data-pl="im", colspan=2)
+
+						td(data-pl="komu")
+						td(data-pl="czemu")
 					tr
-						th LI
-						td kom
-						td czym
+						th I
+						td(data-pl="mną")
+						td(data-pl="nami")
+						td(data-pl="tobą")
+						td(data-pl="wami")
+
+						td(data-pl="im", colspan=2)
+						td(data-pl="ją")
+						td(data-pl="imi", colspan=2)
+
+						td(data-pl="kom")
+						td(data-pl="czym")
 
 		+section("noun")
 			.tables
