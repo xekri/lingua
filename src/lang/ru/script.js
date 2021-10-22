@@ -3,35 +3,84 @@ const log = x => {
   return x;
 };
 
-const wordRe = "[\u0430-\u044f\u0451]+";
+const wordRe0 = "[\u0430-\u044f\u0451]+";
 
-const replacements = [
-  [/(?<=[гкхжчшщ])и/g, "ы"],
-
-  [/э/g, "е"],
+const replacements0 = [
+  [/э/g, "є"],
+  [/[её]/g, "ѥ"],
   [/я/g, "ꙗ"],
   [/ю/g, "ꙕ"],
   [/и/g, "і"],
   [/ы/g, "ꙑ"],
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const t0 = document.getElementById("0");
-  const t1 = document.getElementById("1");
+const wordRe1 = "[а-яёєѥꙗіꙑꙕѣѫѭѧѕ]+";
 
-  const onInput = () => {
-    t1.value = replaceWordsKeepCase(t0.value, convert);
+const replacements1 = [
+  [/а/g, "ⰰ"],
+  [/б/g, "ⰱ"],
+  [/в/g, "ⰲ"],
+  [/г/g, "ⰳ"],
+  [/д/g, "ⰴ"],
+  [/ѥ/g, "ⰵ"],
+  [/ж/g, "ⰶ"],
+  [/з/g, "ⰷ"],
+  [/ѕ/g, "ⰸ"],
+  [/і/g, "ⰺ"],
+  [/й/g, "ⰹ"],
+  [/к/g, "ⰽ"],
+  [/л/g, "ⰾ"],
+  [/м/g, "ⰿ"],
+  [/н/g, "ⱀ"],
+  [/о/g, "ⱁ"],
+  [/п/g, "ⱂ"],
+  [/р/g, "ⱃ"],
+  [/с/g, "ⱄ"],
+  [/т/g, "ⱅ"],
+  [/у/g, "ⱆ"],
+  [/ф/g, "ⱇ"],
+  [/х/g, "ⱈ"],
+  [/ц/g, "ⱌ"],
+  [/ч/g, "ⱍ"],
+  [/ш/g, "ⱎ"],
+  [/щ/g, "ⱋ"],
+  [/ъ/g, "ⱏ"],
+  [/ꙑ/g, "ⱏⰺ"],
+  [/ь/g, "ⱐ"],
+  [/є/g, "ⱏⰵ"],
+  [/ꙗ/g, "ⱐⰰ"],
+  [/ꙕ/g, "ⱓ"],
+  [/ѣ/g, "ⱑ"],
+  [/ѫ/g, "ⱘ"],
+  [/ѭ/g, "ⱙ"],
+  [/ѧ/g, "ⱔ"],
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const [t0, t1, t2] = document.getElementsByTagName("textarea");
+
+  const f0 = s => replaceWordsKeepCase(wordRe0, replacements0, s);
+  const f1 = s => replaceWordsKeepCase(wordRe1, replacements1, s);
+
+  const onInput1 = () => {
+    t2.value = f1(t1.value);
   };
 
-  t0.addEventListener("input", onInput);
+  const onInput0 = () => {
+    t1.value = f0(t0.value);
+    onInput1();
+  };
+
+  t0.addEventListener("input", onInput0);
+  t1.addEventListener("input", onInput1);
 
   for (const e of document.querySelectorAll("[data-ru]"))
-    e.innerHTML = replaceWordsKeepCase(e.getAttribute("data-ru"), convert);
+    e.innerHTML = f0(e.getAttribute("data-ru"));
 
-  onInput();
+  onInput0();
 });
 
-const convert = s =>
+const convert = (replacements, s) =>
   replacements.reduce(
     (acc, [x, y]) =>
       acc.replace(x, y),
@@ -54,7 +103,7 @@ const applyKeepCase = (s, f) =>
     cap: capitalize,
   })[kase(s)](f(s));
 
-const replaceWordsKeepCase = (s, f) =>
+const replaceWordsKeepCase = (wordRe, replacements, s) =>
   s.replace(new RegExp(wordRe, "giu"), word =>
-    applyKeepCase(word, f)
+    convert(replacements, word)
   );

@@ -17,7 +17,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" href="/images/sumi-color.svg" type="image/svg+xml">
-    <title>sumi / turkish</title>
+    <title>sumi / kana</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         for(const e of document.querySelectorAll(".undot")) {
@@ -27,7 +27,7 @@
       
     </script>
     <meta name="twitter:site" content="@sumiqj">
-    <meta name="twitter:title" content="sumi / turkish">
+    <meta name="twitter:title" content="sumi / kana">
     <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
     <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
     <meta name="twitter:card" content="summary">
@@ -61,49 +61,12 @@
       </div>
     </nav>
     <main>
-      <section id="turkish">
-        <h1><a href="#turkish">#</a> 
-turkish
+      <section id="kana">
+        <h1><a href="#kana">#</a> 
+kana
         </h1>
-        <label>
-          <input type="checkbox" checked> consonant
-        </label>
-        <div class="textareas">
-          <textarea id="0"># İnsan hakları evrensel beyannamesi
-
-## Madde 1
-Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
-Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
-</textarea>
-          <textarea id="1"></textarea>
-        </div>
-        <ul>
-          <li>consonant
-            <ul>
-              <li>ç, c ↦ ṭ, ḍ</li>
-              <li>ş, j ↦ ṣ, ẓ</li>
-              <li>y ↦ j</li>
-            </ul>
-          </li>
-          <li>vowel
-            <ul>
-              <li>ı, i ↦ î, ǐ</li>
-              <li>a, e ↦ â, ǎ</li>
-              <li>o, ö ↦ ô, ǒ</li>
-              <li>u, ü ↦ û, ǔ</li>
-            </ul>
-          </li>
-          <li>the same diacritics (ˆ or ˇ) in a row in a word can be omitted except the initial one.
-            <ul>
-              <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranḍi</li>
-            </ul>
-          </li>
-          <li>the initial vowel with no diacritic in a word is supposed to have ˆ by default.
-            <ul>
-              <li>arkadaş ↦ ârkâdâṣ ↦ ârkadaṣ ↦ arkadaṣ</li>
-            </ul>
-          </li>
-        </ul>
+        <textarea class="trigger" id="in">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</textarea>
+        <textarea id="out"></textarea>
       </section>
       <!--+section("")include _discus.pug
       -->
