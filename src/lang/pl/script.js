@@ -4,9 +4,7 @@ const log = x => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const t0 = document.getElementById("0");
-  const t1 = document.getElementById("1");
-  const t2 = document.getElementById("2");
+  const [t0, t1, t2] = document.getElementsByTagName("textarea");
   const input = document.getElementsByTagName("input")[0];
 
   const onInput = () => {
@@ -33,9 +31,10 @@ const convert0 = s =>
     .replace(/ch/g, "x")
     .replace(/w/g, "v")
     .replace(/sz/g, "š")
-    .replace(/cz/g, "ť")
-    .replace(/dż/g, "ď")
+    .replace(/cz/g, "č")
+    .replace(/dż/g, "ǯ")
     .replace(/ż/g, "ž")
+    .replace(/(?<=[čǯšž])y/, "i")
 
     .replace(/l/g, "lj")
     .replace(/lji/g, "li")
@@ -73,7 +72,7 @@ const convert1 = (s, iotate) =>
   s
     .toLowerCase()
 
-    .replace(/ō/g, "ӧ")
+    .replace(/ō/g, "ѡ")
 
     .replace(/ji/g, x => iotate ? "і" : x)
     .replace(/je/g, x => iotate ? "ѥ" : x)
@@ -83,7 +82,7 @@ const convert1 = (s, iotate) =>
     .replace(/ję/g, x => iotate ? "ѩ" : x)
     .replace(/ją/g, x => iotate ? "ѭ" : x)
 
-    .replace(/i/g, "и")
+    .replace(/i/g, x => iotate ? "ꙑ" : "и")
     .replace(/e/g, "є")
     .replace(/a/g, "а")
     .replace(/o/g, "о")
@@ -110,8 +109,8 @@ const convert1 = (s, iotate) =>
     .replace(/l/g, "л")
     .replace(/r/g, "р")
 
-    .replace(/ť/g, "ч")
-    .replace(/ď/g, "џ")
+    .replace(/č/g, "ч")
+    .replace(/ǯ/g, "џ")
     .replace(/š/g, "ш")
     .replace(/ž/g, "ж")
     .replace(/c/g, "ц")
@@ -142,6 +141,6 @@ const replacePolishWordsKeepCase = (s, f) =>
   );
 
 const replaceNewPolishWordsKeepCase = (s, f) =>
-  s.replace(/[a-pr-vxzōęąǐěǎǒǔťďšžʒ'\u030C]+/gi, word =>
+  s.replace(/[a-pr-vxzōęąʒǐěǎǒǔťďčǯšž'\u030C]+/gi, word =>
     applyKeepCase(word, f)
   );

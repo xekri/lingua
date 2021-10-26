@@ -6,7 +6,7 @@ block head
 
 block main
 	+section("orthography")
-		input(type="checkbox")
+		input(type="checkbox", checked)
 		label iotated
 		.textareas
 			textarea#0.
@@ -25,7 +25,7 @@ block main
 		table
 			tr
 				th
-				td и
+				td ꙑ
 				td є
 				td а
 				td о
@@ -474,5 +474,5 @@ block main
 			for xs in xss
 				tr
 					td= xs[0]
-					td.pl= xs[1]
+					td(data-pl=xs[1])
 					td= xs[2]
