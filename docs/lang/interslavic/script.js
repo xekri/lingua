@@ -2,6 +2,8 @@ const convertWord = w => w
   .toLowerCase()
   .normalize("NFC")
 
+  .replace(/ji/g, "i")
+
   .replace(/å/g, "ꜵ")
   .replace(/ć/g, "ŧ")
   .replace(/d\u0301/g, "dĭ")
@@ -13,17 +15,15 @@ const convertWord = w => w
   .replace(/ń/g, "nĭ")
   .replace(/ŕ/g, "rĭ")
   .replace(/ś/g, "sĭ")
-  .replace(/š/g, "ẋ")
   .replace(/t\u0301/g, "tĭ")
   .replace(/ų/g, "ǫ")
   .replace(/v/g, "w")
   .replace(/ź/g, "zĭ")
 
-  .replace(/^i/g, "y")
-  .replace(/i/g, "jy")
-  .replace(/y/g, "i")
+  //.replace(/i/g, "jy")
+  //.replace(/y/g, "i")
 
-  .replace(/^j(?=[ieę])/g, "")
+  //.replace(/^j(?=[ieę])/g, "")
   //.replace(/(?<=[yiuaꜵæeoĕŏęǫ])j(?=[eę])/g, "")
 
   .replace(/a/g, "а")
@@ -59,17 +59,18 @@ const convertWord = w => w
   .replace(/u/g, "у")
   .replace(/ǫ/g, "ѫ")
   .replace(/w/g, "в")
+  .replace(/y/g, "ꙑ")
   .replace(/z/g, "з")
   .replace(/ž/g, "ж")
   .replace(/j/g, "й")
 
-  .replace(/йи/g, "і")
-  .replace(/йа/g, "ꙗ")
-  .replace(/йє/g, "ѥ")
-  .replace(/йѧ/g, "ѩ")
-  .replace(/йо/g, "ю")
-  .replace(/йu/g, "ѵ")
-  .replace(/йų/g, "ѭ")
+  //.replace(/йꙑ/g, "і")
+  //.replace(/йє/g, "ѥ")
+  //.replace(/йа/g, "ꙗ")
+  //.replace(/йѧ/g, "ѩ")
+  //.replace(/йо/g, "ю")
+  //.replace(/йу/g, "ѵ")
+  //.replace(/йų/g, "ѭ")
   ;
 
 const capitalize = w =>
@@ -109,4 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (const td of document.querySelectorAll(".isv, .isv-tds td"))
     td.innerHTML = convertText(td.innerHTML);
+
+  for (const td of document.querySelectorAll("[data-isv]"))
+    td.innerHTML = convertText(td.getAttribute("data-isv"));
+
 });

@@ -34,13 +34,13 @@ const convert0 = s =>
     .replace(/cz/g, "č")
     .replace(/dż/g, "ǯ")
     .replace(/ż/g, "ž")
-    .replace(/(?<=[čǯšž])y/, "i")
 
     .replace(/l/g, "lj")
     .replace(/lji/g, "li")
     .replace(/ł/g, "l")
+    .replace(/ri/g, "r'i")
     .replace(/rzy/g, "ri")
-    .replace(/rz/g, "rj")
+    .replace(/(?<!zama|mie)rz/g, "rj")
 
     .replace(/(?<=[sz])j/g, "'j")
 
@@ -63,14 +63,33 @@ const convert0 = s =>
 
     .replace(/sj([tm])j/g, "s$1j")
 
+    .replace(/^j(?=[ieę])/g, "")
     //.replace(/(?<=[ieaouęąō])j(?![ieaouęąō])/g, "i")
     //.replace(/(?<=^|[ieaouęąō])j(?=[ieę])/g, "")
+
+    //.replace(/lj/g, "ľ")
+    //.replace(/rj/g, "ř")
+    //.replace(/nj/g, "ň")
+    //.replace(/tj/g, "ť")
+    //.replace(/dj/g, "ď")
+    //.replace(/sj/g, "ś")
+    //.replace(/zj/g, "ź")
 
     .normalize("NFC");
 
 const convert1 = (s, iotate) =>
   s
     .toLowerCase()
+
+    .replace(/ľ/g, "lj")
+    .replace(/ř/g, "rj")
+    .replace(/ň/g, "nj")
+    .replace(/ť/g, "tj")
+    .replace(/ď/g, "dj")
+    .replace(/ś/g, "sj")
+    .replace(/ź/g, "zj")
+
+    .replace(/(?<=[šžčǯ]|^)i/g, "ji")
 
     .replace(/ō/g, "ѡ")
 
@@ -141,6 +160,6 @@ const replacePolishWordsKeepCase = (s, f) =>
   );
 
 const replaceNewPolishWordsKeepCase = (s, f) =>
-  s.replace(/[a-pr-vxzōęąʒǐěǎǒǔťďčǯšž'\u030C]+/gi, word =>
+  s.replace(/[a-pr-vxzōęąʒǐěǎǒǔťďčǯšžľřňťďśź'\u030C]+/gi, word =>
     applyKeepCase(word, f)
   );

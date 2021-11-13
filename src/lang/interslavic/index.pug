@@ -1,5 +1,9 @@
 extend /_layout.pug
 
+mixin tdsIsv(xs, option)
+	for x in xs
+		td(data-isv=x)
+
 block head
 	- const title = "interslavic"
 	- const tags = ["language=english"]
@@ -40,41 +44,163 @@ block main
 			tr
 			+tds("nula jedin dva tri četyri pęt́ šest́ sedm osm devęt́ tysęć".split(" "))
 
-	+section("pronoun")
-		.tables.center(style="display: table")
-			table.isv-tds
-				tr.vs
-					+ths([1, 2, 3, "what", "which"])
+	+section("grammar")
+		.tables
+			table
 				tr
-					+tds("ja;ty;on;čto;koj".split(";"))
-
-			table.isv-tds
-				tr.vs
-					+ths("no;some;every".split(";"))
+					th
+					th(colspan=7) sg.
+					th(colspan=6) pl.
 				tr
-					+tds("ni-;ně-;vse-".split(";"))
+					th
+					for i in [0, 1]
+						if i == 0
+							th N
+						else
+							th NV
+						th A
+						th G
+						th L
+						th D
+						th I
+						if i == 0
+							th V
+				tr
+					th i
+					+tdsIsv(["ja", "mene (mę)", "mene", "mně", "mně (mi)", "mnojų"])
+					td
+					td(data-isv="my")
+					td(data-isv="nas", colspan=3)
+					+tdsIsv(["nam", "nami"])
+				tr
+					th thou
+					+tdsIsv(["ty", "tebe (tę)", "tebe", "tobe", "tobe (ti)", "tobojų"])
+					td
+					td(data-isv="vy")
+					td(data-isv="vas", colspan=3)
+					+tdsIsv(["vam", "vami"])
+				tr
+					th he
+					td(data-isv="on")
+					td(data-isv="jego (go)", rowspan=2)
+					td(data-isv="jego", rowspan=2)
+					td(data-isv="jem", rowspan=2)
+					td(data-isv="jemu", rowspan=2)
+					td(data-isv="jim", rowspan=2)
+					td
+					td(data-isv="oni")
+					td(data-isv="jih", colspan=2)
+					td(data-isv="jih", rowspan=3)
+					td(data-isv="jim", rowspan=3)
+					td(data-isv="jimi", rowspan=3)
+				tr
+					th it
+					td(data-isv="ono")
+					td
+					td(data-isv="one", rowspan=2)
+					td(data-isv="je", rowspan=2)
+					td(data-isv="jih", rowspan=2)
+				tr
+					th she
+					+tdsIsv(["ona", "jų", "jej", "jej", "jej", "jejų"])
+				tr
+					th who
+					td(data-isv="kto")
+					td(data-isv="kogo", colspan=2)
+					+tdsIsv(["kom", "komu", "kym"])
+					+tdsIsv(["", "", "", "", "", "", ""])
+				tr
+					th what
+					td(data-isv="čto", colspan=2)
+					td(data-isv="čego")
+					+tdsIsv(["čem", "čemu", "čim"])
+					+tdsIsv(["", "", "", "", "", "", ""])
+				tr
+					th boy (m. anim.)
+					td(data-isv="hlåpec")
+					td(data-isv="hlåpca", colspan=2)
+					td(data-isv="hlåpcu", colspan=2)
+					td(data-isv="hlåpcem")
+					td(data-isv="hlåpce")
 
-	+section("case")
-		table.center.isv-tds
-			tr
-				+ths("N;G;A;D;L;I".split(";"))
-			tr
-				+tds("∅;od;go;k;v;s".split(";"))
+					td(data-isv="hlåpci")
+					td(data-isv="hlåpcev", colspan=2)
+					+tdsIsv(["hlåpceh", "hlåpcem", "hlåpcemi"])
+				tr
+					th fire (m. inanim.)
+					td(data-isv="ogȯnj", colspan=2)
+					td(data-isv="ogȯnja")
+					td(data-isv="ogȯnju", colspan=2)
+					td(data-isv="ogȯnjem")
+					td(data-isv="ogȯnju")
 
-	+section("verb")
-		table.center.isv-tds
-			tr.vs
-				th infinitive
-				th present
-				th past
-				th future
-				th imperative
-			tr
-				td dělati
-				td děla
-				td běše děla
-				td bųde děla
-				td bųd́ děla
+					td(data-isv="ogȯnje", colspan=2)
+					+tdsIsv(["ogȯnjev", "ogȯnjah", "ogȯnjam", "ogȯnjami"])
+				tr
+					th sea (n.)
+					td(data-isv="morje", colspan=2)
+					td(data-isv="morja")
+					td(data-isv="morju", colspan=2)
+					td(data-isv="morjem")
+					td(data-isv="morje")
+
+					td(data-isv="morja", colspan=2)
+					+tdsIsv(["morej", "morjah", "morjam", "morjami"])
+				tr
+					th name (n.)
+					td(data-isv="imę", colspan=2)
+					td(data-isv="imene")
+					td(data-isv="imeni", colspan=2)
+					td(data-isv="imenem")
+					td(data-isv="imę")
+
+					td(data-isv="imena", colspan=2)
+					+tdsIsv(["imen", "imenah", "imenam", "imenami"])
+				tr
+					th book (f.)
+					td(data-isv="kniga")
+					td(data-isv="knigų")
+					td(data-isv="knigy")
+					td(data-isv="knigě", colspan=2)
+					td(data-isv="knigojų")
+					td(data-isv="knigo")
+
+					td(data-isv="knigy", colspan=2)
+					+tdsIsv(["knig", "knigah", "knigam", "knigami"])
+
+		.tables
+			table
+				tr
+					th
+					th(colspan=6) present
+					th(colspan=6) past
+					th(colspan=3) imperative
+					th perfect
+				tr
+					th
+					for i in [0, 1]
+						th i
+						th thou
+						th he
+						th we
+						th ye
+						th they
+					th thou
+					th we
+					th ye
+					th
+				tr
+					th be
+					+tdsIsv(["jesm", "jesi", "jest (je)", "jesmo", "jeste", "sųt"])
+					+tdsIsv(["běh", "běše", "běše", "běhmo", "běste", "běhų"])
+					+tdsIsv(["bųd́", "bųd́mo", "bųd́te"])
+					td(data-isv="byl")
+				tr
+					th read
+					+tdsIsv(["čitajų", "čitaješ", "čitaje", "čitajemo", "čitajete", "čitajųt"])
+					+tdsIsv(["čitah", "čitaše", "čitaše", "čitahmo", "čitaste", "čitahų"])
+					+tdsIsv(["čitajd́", "čitajmo", "čitajte"])
+					td(data-isv="čital")
 
 	+section("examples")
 		table.center
