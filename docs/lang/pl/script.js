@@ -7,12 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const [t0, t1, t2] = document.getElementsByTagName("textarea");
   const input = document.getElementsByTagName("input")[0];
 
+  const f0 = x => replacePolishWordsKeepCase(x, convert0);
+  const f1 = x => replaceNewPolishWordsKeepCase(x, x => convert1(x, input.checked));
+
   const onInput = () => {
-    t1.value = replacePolishWordsKeepCase(t0.value, convert0);
-    t2.value = replaceNewPolishWordsKeepCase(t1.value, x => convert1(x, input.checked));
+    t1.value = f0(t0.value);
+    t2.value = f1(t1.value);
 
     for (const e of document.querySelectorAll("[data-pl]"))
-      e.innerHTML = replaceNewPolishWordsKeepCase(replacePolishWordsKeepCase(e.getAttribute("data-pl"), convert0), x => convert1(x, input.checked));
+      e.innerHTML = f0(e.getAttribute("data-pl"));
+
   };
 
   for (const e of [input, t0])
@@ -21,19 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
   onInput();
 
   for (const e of document.querySelectorAll(".pl, .pl-table td"))
-    e.innerHTML = replaceNewPolishWordsKeepCase(replacePolishWordsKeepCase(e.innerHTML, convert0), x => convert1(x, input.checked));
+    e.innerHTML = f0(e.innerHTML);
 })
 
 const convert0 = s =>
   s
     .toLowerCase()
-    .replace(/ó/g, "ō")
-    .replace(/ch/g, "x")
+    .replace(/ó/g, "u")
+    .replace(/ch/g, "h")
     .replace(/w/g, "v")
-    .replace(/sz/g, "š")
-    .replace(/cz/g, "č")
-    .replace(/dż/g, "ǯ")
-    .replace(/ż/g, "ž")
+    .replace(/sz/g, "ȟ")
+    .replace(/cz/g, "ǩ")
+    .replace(/ż/g, "ǧ")
 
     .replace(/l/g, "lj")
     .replace(/lji/g, "li")
@@ -44,36 +47,41 @@ const convert0 = s =>
 
     .replace(/(?<=[sz])j/g, "'j")
 
-    .replace(/dź|dzi(?=[eaouęąō])/g, "dj")
-    .replace(/dzi/g, "di")
+
+    .replace(/(?<=[td])(?=i)/g, "'")
     .replace(/ć|ci(?=[eaouęąō])/g, "tj")
     .replace(/ci/g, "ti")
+    .replace(/dź|dzi(?=[eaouęąō])/g, "dj")
+    .replace(/dzi/g, "di")
 
     .replace(/ś/g, "sj")
     .replace(/ź/g, "zj")
     .replace(/ń/g, "nj")
 
     .replace(/cji/g, "ci")
+
     .replace(/i(?=[eaouęąō])/g, "j")
+    .replace(/i/g, "jy")
+
+    .replace(/sjtj/g, "stj")
+    .replace(/zjdj/g, "zdj")
 
     .replace(/dz/g, "ʒ")
 
-    .replace(/i/g, "ji")
-    .replace(/y/g, "i")
-
-    .replace(/sj([tm])j/g, "s$1j")
-
-    .replace(/^j(?=[ieę])/g, "")
+    .replace(/^j(?=[ie])/g, "")
     //.replace(/(?<=[ieaouęąō])j(?![ieaouęąō])/g, "i")
     //.replace(/(?<=^|[ieaouęąō])j(?=[ieę])/g, "")
+
+    .replace(/jy/g, "i")
+    .replace(/je/g, "ě")
 
     //.replace(/lj/g, "ľ")
     //.replace(/rj/g, "ř")
     //.replace(/nj/g, "ň")
     //.replace(/tj/g, "ť")
     //.replace(/dj/g, "ď")
-    //.replace(/sj/g, "ś")
-    //.replace(/zj/g, "ź")
+    //.replace(/sj/g, "š")
+    //.replace(/zj/g, "ž")
 
     .normalize("NFC");
 
@@ -86,10 +94,11 @@ const convert1 = (s, iotate) =>
     .replace(/ň/g, "nj")
     .replace(/ť/g, "tj")
     .replace(/ď/g, "dj")
-    .replace(/ś/g, "sj")
-    .replace(/ź/g, "zj")
-
-    .replace(/(?<=[šžčǯ]|^)i/g, "ji")
+    .replace(/š/g, "sj")
+    .replace(/ž/g, "zj")
+    .replace(/i/g, "jy")
+    .replace(/y/g, "i")
+    .replace(/ě/g, "je")
 
     .replace(/ō/g, "ѡ")
 
@@ -117,8 +126,7 @@ const convert1 = (s, iotate) =>
 
     .replace(/k/g, "к")
     .replace(/g/g, "г")
-    .replace(/x/g, "х")
-    .replace(/h/g, "ғ")
+    .replace(/h/g, "х")
 
     .replace(/t/g, "т")
     .replace(/d/g, "д")
@@ -128,10 +136,10 @@ const convert1 = (s, iotate) =>
     .replace(/l/g, "л")
     .replace(/r/g, "р")
 
-    .replace(/č/g, "ч")
+    .replace(/ǩ/g, "ч")
     .replace(/ǯ/g, "џ")
-    .replace(/š/g, "ш")
-    .replace(/ž/g, "ж")
+    .replace(/ȟ/g, "ш")
+    .replace(/ǧ/g, "ж")
     .replace(/c/g, "ц")
     .replace(/ʒ/g, "ѕ")
 
@@ -155,11 +163,11 @@ const applyKeepCase = (s, f) =>
   })[kase(s)](f(s));
 
 const replacePolishWordsKeepCase = (s, f) =>
-  s.replace(/[a-pr-uwyzóęąćśźżńł]+/gi, word =>
+  s.replace(/[a-pr-uwyzóęąćśźńłż]+/gi, word =>
     applyKeepCase(word, f)
   );
 
 const replaceNewPolishWordsKeepCase = (s, f) =>
-  s.replace(/[a-pr-vxzōęąʒǐěǎǒǔťďčǯšžľřňťďśź'\u030C]+/gi, word =>
+  s.replace(/[a-pr-vzōęąʒěǯǩǧȟťďšžňľř'\u030C]+/gi, word =>
     applyKeepCase(word, f)
   );

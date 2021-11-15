@@ -69,20 +69,18 @@ html
         +div("menu")
           ul
             li: a(href="/") /
-            li: a(href="/author") AUÞOR
-            li: a(href="/char") CHARACTER
-            li: a(href="/fav") FAVOURITE
-            // li: a(href="/thought") THOUGHT
-            li: a(href="/wurk") WURK
-            li: a(href="/lang") LANGUAGE
-            li: a(href="/misc") MISCELLANEOUS
+            li: a(href="/author") auþor
+            li: a(href="/char") character
+            li: a(href="/fav") favourite
+            li: a(href="/wurk") wurk
+            li: a(href="/lang") language
+            li: a(href="/misc") miscellaneous
 
           +div("submenu")
 
-        +div("⚠")
-          ul
-            li USING <it>GOOGLE ANALYTICS</it>
-            li NOT OPTIMISED FOR MOBILE
+        ul.caution
+          li useþ <it>google analytics</it>
+          li is not optimised for mobile
 
     main(class=vertical ? "vertical" : "")
       +section(title, tags)
