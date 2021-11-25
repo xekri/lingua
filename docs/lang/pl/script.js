@@ -41,6 +41,7 @@ const convert0 = s =>
     .replace(/l/g, "lj")
     .replace(/lji/g, "li")
     .replace(/ł/g, "l")
+    .replace(/ł/g, "l")
     .replace(/ri/g, "r'i")
     .replace(/rzy/g, "ri")
     .replace(/(?<!zama|mie)rz/g, "rj")
@@ -63,8 +64,11 @@ const convert0 = s =>
     .replace(/i(?=[eaouęąō])/g, "j")
     .replace(/i/g, "jy")
 
+    .replace(/(?<=[sz])jr/g, "rj")
     .replace(/sjtj/g, "stj")
     .replace(/zjdj/g, "zdj")
+    //.replace(/(?![yeaouęą])j([^yeaouęą])j/g, "$1j")
+
 
     .replace(/dz/g, "ʒ")
 
