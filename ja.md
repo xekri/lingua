@@ -1,5 +1,3 @@
-# language-ja
-
 ## kana
 
 |  い   |  え   |  あ   |  お   |  う   |
