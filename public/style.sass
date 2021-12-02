@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Source+Sans+Pro:wght@200&display=swap')
+
+body
+  font-family: "Source Sans Pro", "Noto Sans TC", sans-serif
+
+  ul
+    list-style-type: square
+
+  h1, h2, h3, textarea, table, th
+    font-family: inherit
+    font-weight: inherit
+
+  select
+    font: inherit
+
+  #convert
+    display: flex
+    white-space: nowrap
+    height: 50%
+
+    textarea, div
+      box-sizing: border-box
+      width: calc(100% / 3)
+      height: 100%
+      resize: none
+      display: flexbox
+      padding: 4px
+
+    textarea
+      outline: none
+      font-size: inherit
+
+    div
+      border: 1px solid
+      border-left: none
+      white-space: pre
+
+    select
+      appearance: none
+      padding: 0
+      border: 1px solid lightgray
+      //outline: 0
+
+    .no-emc
+      background-color: lightgray
+
+  #summary
+    display: flex
+    justify-content: space-evenly
+
+    table
+      display: inline-block
+      vertical-align: top
+      border-collapse: collapse
+
+      &:not(:first-of-type)
+        //margin-left: 16px
+
+      tr:first-of-type th
+        writing-mode: vertical-lr
+
+      tr
+        th, td
+          padding: 4px
+
+        &:first-of-type
+          td, th
+            border-bottom: 1px solid
+
+        th
+          text-align: right
+
+        th:first-of-type
+          border-right: 1px solid
+
+  #grammar
+    table
+      td:not(:first-of-type)
+        padding-left: 16px
