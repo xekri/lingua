@@ -1,0 +1,1 @@
+table td,table th{border:1px solid #333}table td[colspan]:not([colspan="1"]),table th{text-align:center}table tr th:first-of-type{text-align:right}table tr td:first-child,table tr th:first-child{border-left:none}table tr td:last-child,table tr th:last-child{border-right:none}

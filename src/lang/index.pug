@@ -1,0 +1,33 @@
+extend /_layout.pug
+
+block head
+	- const title = "language"
+	- const tag = ["draft"]
+
+block main
+	p language and orthography.
+
+	ul
+		li: a(href=`https://${author.github}.github.io/english`) EN artificial dialect of english
+		li: a(href="ja") JA artificial dialect of japanese
+		li: a(href="ja/grammar") JA classical grammar
+		li: a(href="pl") PL polish cyrillisation
+		li: a(href="cs") CS czech orthography
+		li: a(href="interslavic") ISV dialect of interslavic
+		li: a(href="tr") TR turkish orthography
+		li: a(href="ka") KA georgian romanisation
+		li: a(href="hy") HY armenian romanisation
+		li: a(href="la") LA latin orthography
+		li: a(href="la-var") LA latin artificial dialect
+		li: a(href="bo") BO tibetan romanisation
+		li: a(href="bn") BN bengali romanisation
+		li: a(href="bn") GR greek romanisation
+		li: a(href="ru") RU russyan orthography
+		li: a(href="ar") AR arabic romanisation
+		li: a(href=`https://github.com/${author.github}/cmn`) CMN mandarin romanisation
+		li: a(href=`https://github.com/${author.github}/yue`) YUE yue romanisation
+		li: a(href=`https://github.com/${author.github}/romanize-sa/`) DEVA devanagari romanisation
+		li: a(href=`phag`) PHAG phags-pa romanisation
+		li: a(href=`zanb`) ZANB phags-pa romanisation
+		//li: a(href="https://cdpn.io/sumigv/debug/WNGveym/dGMXWjJDORGk") russian
+		//li: a(href="vn") vietnamese

@@ -1,0 +1,48 @@
+extend /_layout.pug
+
+block head
+	- const title = ""
+	script.
+		document.addEventListener("DOMContentLoaded", () => {
+			const value0 = document.getElementById("0").value
+			value1 = value0
+				.toLowerCase()
+				.normalize("NFC")
+
+			const ta1 = document.getElementById("1")
+			ta1.value = value1
+		})
+
+block main
+	.textareas
+		textarea#0.
+		textarea#1
+
+	table.center
+		tr.vs
+			th
+			th plossive
+			th voiced plossive
+			th nasal
+			th fricative
+			th voiced fricative
+			th approximant
+			th nonmid vowel
+			th altered nonmid vowel
+			th mid vowel
+			th altered mid vowel
+		+thTrs([
+			["glottal"  , "q", "" , "" , "" , "" , "" , "" , "" , "" , "" ],
+			["velar"    , "k", "c", "g", "x", "h", "" , "a", "" , "ɐ", "" ],
+			["palatal"  , "ᶄ", "ꞔ", "ᶃ", "ᶍ", "ꞕ", "j", "i", "į", "e", "ę"],
+			["retroflex", "ʈ", "ɖ", "ɳ", "ʂ", "ʐ", "r", "" , "" , "" , "" ],
+			["alveolar" , "ʦ", "ʣ", "n", "s", "z", "l", "" , "" , "" , "" ],
+			["dental"   , "t", "d", "" , "þ", "ð", "" , "" , "" , "" , "" ],
+			["labial"   , "p", "b", "m", "f", "w", "v", "u", "ų", "o", "ǫ"],
+		])
+
+		//
+			|ḳċġẋḣ
+			|ṫḋṅṡż
+			|ṭḍṇṣẓ
+

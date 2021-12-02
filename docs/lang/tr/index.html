@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+    </script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/misc/date/date.js"></script>
+    <script src="/script.js"></script>
+    <!-- local files-->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="icon" href="/images/sumi-outline.svg" type="image/svg+xml">
+    <title>sumi / turkish</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
+      })
+      
+    </script>
+    <meta name="twitter:site" content="@sumiqj">
+    <meta name="twitter:title" content="sumi / turkish">
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
+    <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
+    <meta name="twitter:card" content="summary">
+  </head>
+  <body>
+    <nav>
+      <div id="nav-in">
+        <div id="logo"><a href="/"><img src="/images/sumi-outline.svg" width="50%"></a></div>
+        <div id="datetime"></div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        <div class="my-div" id="menu">
+          <ul>
+            <li><a href="/">/</a></li>
+            <li><a href="/author">auþor</a></li>
+            <li><a href="/char">character</a></li>
+            <li><a href="/fav">favourite</a></li>
+            <li><a href="/wurk">wurk</a></li>
+            <li><a href="/lang">language</a></li>
+            <li><a href="/misc">miscellaneous</a></li>
+          </ul>
+          <div class="my-div" id="submenu">
+          </div>
+        </div>
+        <ul class="caution">
+          <li>useþ <it>google analytics</it></li>
+          <li>is not optimised for mobile</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="turkish">
+        <h1><a href="#turkish">#</a> 
+turkish
+        </h1>
+        <label>
+          <input type="checkbox" checked> consonant
+        </label>
+        <div class="textareas">
+          <textarea id="0"># İnsan hakları evrensel beyannamesi
+
+## Madde 1
+Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
+Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
+</textarea>
+          <textarea id="1"></textarea>
+        </div>
+        <ul>
+          <li>consonant
+            <ul>
+              <li>ç, c ↦ ṭ, ḍ</li>
+              <li>ş, j ↦ ṣ, ẓ</li>
+              <li>y ↦ j</li>
+            </ul>
+          </li>
+          <li>vowel
+            <ul>
+              <li>ı, i ↦ î, ǐ</li>
+              <li>a, e ↦ â, ǎ</li>
+              <li>o, ö ↦ ô, ǒ</li>
+              <li>u, ü ↦ û, ǔ</li>
+            </ul>
+          </li>
+          <li>the same diacritics (ˆ or ˇ) in a row in a word can be omitted except the initial one.
+            <ul>
+              <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranḍi</li>
+            </ul>
+          </li>
+          <li>the initial vowel with no diacritic in a word is supposed to have ˆ by default.
+            <ul>
+              <li>arkadaş ↦ ârkâdâṣ ↦ ârkadaṣ ↦ arkadaṣ</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <!--+section("")include _discus.pug
+      -->
+    </main>
+  </body>
+</html>

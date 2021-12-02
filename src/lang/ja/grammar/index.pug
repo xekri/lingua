@@ -1,0 +1,163 @@
+extend /_layout.pug
+
+block head
+  - const title = "日本語"
+  - const tags = ["draft"]
+
+block main
+  .tables
+    table
+      tr.vs
+        th
+        th 未然<br>irrealis
+        th 命令<br>imperative
+        th 連用<br>conjunctive
+        th 終止<br>terminal
+        th 連體<br>attributive
+        th 已然<br>realis
+        th 例<br>example
+      tr
+        th ラ行變格<br><em>R</em>-irregular
+        td(rowspan=3) あ<br>-a
+        td(rowspan=3)  え<br>-e
+        td(rowspan=6) い<br>-i
+        td い<br>-i
+        td(rowspan=2) う<br>-u
+        td(rowspan=2) え<br>-e
+        td 有り<br>al- (exist)
+      tr
+        th 四段<br>4-row
+        td(rowspan=6) う<br>-u
+        td 書く<br>kak- (write)
+      tr
+        th ナ行變格<br><em>N</em>-irregular
+        td(rowspan=5) うる<br>-ulu
+        td(rowspan=5) うれ<br>-ule
+        td 死ぬ<br>sin- (die)
+      tr
+        th 上二段<br>upper 2-row
+        td(colspan=2) い<br>-i
+        td 生く<br>ik- (live)
+      tr
+        th サ行變格<br><em>S</em>-irregular
+        td(colspan=2) え<br>-e
+        td 爲<br>s- (do)
+      tr
+        th カ行變格<br><em>K</em>-irregular
+        td(colspan=2) お<br>-o
+        td 來<br>k- (come)
+      tr
+        th 下二段<br>lower 2-row
+        td(colspan=2) え<br>-e
+        td え<br>-e
+        td 受く<br>uk- (receive)
+      tr
+        th 一段<br>1-row
+        td(colspan=2) -∅
+        td -∅
+        td る<br>-lu
+        td る<br>-lu
+        td れ<br>-le
+        td 着る<br>kil- (put on)
+      tr
+        th ク<br><em>k</em>
+        td(rowspan=2) け<br>-ke
+        td(rowspan=2)
+        td(rowspan=2) く<br>-ku
+        td し<br>-si
+        td(rowspan=2) き<br>-ki
+        td(rowspan=2) け<br>-kele
+        td 高<br>taka- (high)
+      tr
+        th シク<br><em>sik</em>
+        td -∅
+        td 美し<br>utukusi- (beautiful)
+
+    table
+      tr.vs
+        th
+        th 語<br>word
+        th 接續<br>required verb
+        th 活用<br>conjugation type
+      tr
+        th 否定<br>negative
+        td ず<br>z-
+        td 未然
+        td {ず, !, ず, ず, !, !}<br>{-u, !, -u, -u, !, !}
+      tr
+        th 體驗過去<br>experienced past
+        td き<br>-
+        td 連用
+        td {せ, !, !, き, し, しか}<br>{se, !, !, ki, si, sika}
+      tr
+        th 傳聞過去<br>hearsay past
+        td けり<br>kel-
+        td 連用
+        td ラ行變格
+      tr
+        th 未來<br>future
+        td む<br>m-
+        td 未然
+        td 四段
+      tr
+        th 完了<br>perfect
+        td ぬ<br>n-
+        td 連用
+        td ナ行變格
+      tr
+        th 進行<br>imperfect
+        td たり<br>tal-
+        td 連用
+        td ラ行變格
+      tr
+        th(rowspan=2) 受動<br>passive
+        td る<br> l-
+        td 未然 = -a
+        td(rowspan=2) 下二段
+      tr
+        td らる<br>lal-
+        td 未然 ≠ -a
+      tr
+        th(rowspan=2) 使役<br>causative
+        td す<br>s-
+        td 未然 = -a
+        td(rowspan=2) 下二段
+      tr
+        td さす<br>sas-
+        td 未然 ≠ -a
+    table
+      tr.vs
+        th
+        th 語<br>word
+        th 接續<br>requirement
+      tr
+        th 對自願望<br>self optation
+        td ばや<br>baja
+        td 文末
+      tr
+        th 對他願望<br>nonself optation
+        td なむ<br>namu
+        td 文末
+      tr
+        th 強調<br>emphasis
+        td ぞ<br>namu
+        td 文末
+      tr
+        th 疑問<br>interogative
+        td か<br>ka
+        td 文末
+      tr
+        th 順接假定條件<br>hypothetical causal
+        td(rowspan=2) ば<br>ba
+        td 未然
+      tr
+        th 順接確定條件<br>acutal causal
+        td 已然
+      tr
+        th 逆接確定條件<br>hypothetical adversative
+        td とも<br>tomo
+        td 終止
+      tr
+        th 逆接假定條件<br>actual adversative
+        td ど<br>do
+        td 已然

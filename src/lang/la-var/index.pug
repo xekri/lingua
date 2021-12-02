@@ -1,0 +1,90 @@
+extend /_layout.pug
+
+block head
+	- const title = "simplified latin"
+	- const tags = ["draft"]
+
+block main
+	.textareas
+		textarea#0.
+			Ūniversa hūmānōrum jūrium dēclārātiō
+
+			# 1
+			Omnēs hominēs dignitāte et jūre līberī et parēs nāscuntur, ratiōnis et cōnscientiae participēs sunt, quibus inter sē concordiae studiō est agendum.
+
+			# 2
+			Omnium hominum propria sunt quae jūra et lībertātēs in hāc DĒCLĀRĀTIŌNE ēnūntiantur: generis,vultūs, sexūs, linguae, religiōnis, opīniōnis cīvīlis, nūllō discrīmine atque sine nātiōne dīvitiīs locō discrētīs.
+
+			Praetereā nūllum discrīmen statuētur cīvitātis fōrma et jūris aut gentium, regiōnis aut territōriī cujus quīdam est, sīve ea regiō aut territōrium suī jūris est vel in administrātiōnis fīdūciāriae diciōne vel nōn līberum vel in cujuslibet imperiī modī potestāte.
+		textarea#1
+
+	table.center.las
+		caption pronoun
+		tr
+			th 1
+			th 2
+			th 3
+			th self
+			th this
+			th that
+			th what, which
+		tr
+			td mē
+			td tū
+			td is
+			td sū
+			td hic
+			td ille
+			td quī
+
+	table.center
+		caption declension (verbum, word)
+		tr
+			th
+			th No
+			th Ac
+			th Ge
+			th Da
+		tr
+			th Sg
+			td verb
+			td verb-om
+			td verb-ī
+			td verb-ō
+		tr
+			th pl
+			td verb-ei
+			td verb-ei-om
+			td verb-ei-ī
+			td verb-ei-ō
+
+	ul
+		li negation: verb + nex
+		li adjective: -a
+
+	ul
+		li stem
+			ul: li ama-
+		li type
+			ul
+				li noun -se-
+				li adjective -se-
+				li verb -∅-
+					ul
+						li aspect
+							ul
+								li imperfect -∅-
+								li perfect -ˉvi-
+						li tense
+							ul
+								li present -∅-
+								li past -ˉba-
+								li past -ˉbi-
+						li mood
+							ul
+								li indicative -∅-
+								li subjunctive -ˉe-
+						li voice
+							ul
+								li active -∅
+								li passive -ˉtur

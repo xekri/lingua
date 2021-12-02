@@ -1,0 +1,250 @@
+extend /_layout.pug
+
+mixin tdsIsv(xs, option)
+	for x in xs
+		td(data-isv=x)
+
+block head
+	- const title = "interslavic"
+	- const tags = ["language=english"]
+
+block main
+	p þis be personal dialect of <a href="http://steen.free.fr/interslavic/index.html">interslavic</a>.
+
+	+section("orthography")
+		p input <a href="http://steen.free.fr/interslavic/orthography.html#etymological_alphabet">etymological orthography</a> in the left area.
+
+		.textareas
+			textarea.
+				# Universaĺnoj Deklaracije Prav Člověka
+				## členȯk 1
+				Vsi ljudi rodęt sę svobodni i råvni v dostojnosti i pravah.
+				Oni sųt obdarjeni råzumom i svěst́jų i imajųt postųpati jedin k drugomu v duhu bratstva.
+
+				# Strižik
+				Strižik iměl svoje gnězdo v garažu. Jedin raz oboje roditeljev odletělo – oni htěli prinesti jedų svojim malym - i ostavili jih samyh.
+				Poslě někojego vrěmene, otėc strižik vråtil sę do doma.
+				«Čto stalo sę tu?», zapytal. «Kto vam zlo učinil, děti? Vy jeste cělo prěstrašeni!»
+				«Oj, tato», skazali oni, «toliko čto bylo tu někako veliko čudovišče. Ono bylo zaisto grozno i strašno! Ględělo svojimi velikymi očami bezposrědnje v naše gnězdo. Zato my jesmo taki prěstrašeni!»
+				«Aha, jasno», skazal otėc strižik, «a kamo pošlo?»
+				«Nu», odgovorili děti, «pošlo v tamtų strånų.»
+				«Počekajte sde», otėc strižik skazal, «pojdų za njim. Uže ne bojte sę, děti. Ja go shvaćų.» Potom on odletěl za čudoviščem.
+				Kȯgda on dosęgnųl za vųglȯm, on uviděl, že ide ljėv.
+				Ale strižik ne iměl strah. Prizemil na hrėbet ljva i načęl go napominati. «Kako ty imaješ pravo idti do mojego doma», rěkl, «i čemu jesi postrašil moje děti?!»
+				Ljėv vpȯlno ignoroval go i šėl dalje.
+				To råzgněvalo malogo krikuna, ktory načęl kričati ješče glåsněje. «Ty ne imaješ tam ničto do råboty, ja ti govorjų! I ako ty tam ješče raz prijdeš», on skazal, «tȯgda uvidiš něčto! Ja napravdų ne hoćų sdělati to», skazal, podimajųći jednų nogų, «ale tutojų nogojų mogų slomiti ti hrėbet v jednoj sekundě!»
+				Poslě togo on poletěl nazad do svojego gnězda.
+				«Dobro, děti», rěkl, «jesm dal mu lekcijų. Toj uže nikȯgda sę tu ne vråti.»
+			textarea
+
+	+section("number")
+		table.center.isv-tds
+			tr
+				+ths("0 1 2 3 4 5 6 7 8 9 1000".split(" "))
+			tr
+			+tds("nula jedin dva tri četyri pęt́ šest́ sedm osm devęt́ tysęć".split(" "))
+
+	+section("grammar")
+		.tables
+			table
+				tr
+					th
+					th(colspan=7) sg.
+					th(colspan=6) pl.
+				tr
+					th
+					for i in [0, 1]
+						if i == 0
+							th N
+						else
+							th NV
+						th A
+						th G
+						th L
+						th D
+						th I
+						if i == 0
+							th V
+				tr
+					th i
+					+tdsIsv(["ja", "mene (mę)", "mene", "mně", "mně (mi)", "mnojų"])
+					td
+					td(data-isv="my")
+					td(data-isv="nas", colspan=3)
+					+tdsIsv(["nam", "nami"])
+				tr
+					th thou
+					+tdsIsv(["ty", "tebe (tę)", "tebe", "tobe", "tobe (ti)", "tobojų"])
+					td
+					td(data-isv="vy")
+					td(data-isv="vas", colspan=3)
+					+tdsIsv(["vam", "vami"])
+				tr
+					th he
+					td(data-isv="on")
+					td(data-isv="jego (go)", rowspan=2)
+					td(data-isv="jego", rowspan=2)
+					td(data-isv="jem", rowspan=2)
+					td(data-isv="jemu", rowspan=2)
+					td(data-isv="jim", rowspan=2)
+					td
+					td(data-isv="oni")
+					td(data-isv="jih", colspan=2)
+					td(data-isv="jih", rowspan=3)
+					td(data-isv="jim", rowspan=3)
+					td(data-isv="jimi", rowspan=3)
+				tr
+					th it
+					td(data-isv="ono")
+					td
+					td(data-isv="one", rowspan=2)
+					td(data-isv="je", rowspan=2)
+					td(data-isv="jih", rowspan=2)
+				tr
+					th she
+					+tdsIsv(["ona", "jų", "jej", "jej", "jej", "jejų"])
+				tr
+					th who
+					td(data-isv="kto")
+					td(data-isv="kogo", colspan=2)
+					+tdsIsv(["kom", "komu", "kym"])
+					+tdsIsv(["", "", "", "", "", "", ""])
+				tr
+					th what
+					td(data-isv="čto", colspan=2)
+					td(data-isv="čego")
+					+tdsIsv(["čem", "čemu", "čim"])
+					+tdsIsv(["", "", "", "", "", "", ""])
+				tr
+					th boy (m. anim.)
+					td(data-isv="hlåpec")
+					td(data-isv="hlåpca", colspan=2)
+					td(data-isv="hlåpcu", colspan=2)
+					td(data-isv="hlåpcem")
+					td(data-isv="hlåpce")
+
+					td(data-isv="hlåpci")
+					td(data-isv="hlåpcev", colspan=2)
+					+tdsIsv(["hlåpceh", "hlåpcem", "hlåpcemi"])
+				tr
+					th fire (m. inanim.)
+					td(data-isv="ogȯnj", colspan=2)
+					td(data-isv="ogȯnja")
+					td(data-isv="ogȯnju", colspan=2)
+					td(data-isv="ogȯnjem")
+					td(data-isv="ogȯnju")
+
+					td(data-isv="ogȯnje", colspan=2)
+					+tdsIsv(["ogȯnjev", "ogȯnjah", "ogȯnjam", "ogȯnjami"])
+				tr
+					th sea (n.)
+					td(data-isv="morje", colspan=2)
+					td(data-isv="morja")
+					td(data-isv="morju", colspan=2)
+					td(data-isv="morjem")
+					td(data-isv="morje")
+
+					td(data-isv="morja", colspan=2)
+					+tdsIsv(["morej", "morjah", "morjam", "morjami"])
+				tr
+					th name (n.)
+					td(data-isv="imę", colspan=2)
+					td(data-isv="imene")
+					td(data-isv="imeni", colspan=2)
+					td(data-isv="imenem")
+					td(data-isv="imę")
+
+					td(data-isv="imena", colspan=2)
+					+tdsIsv(["imen", "imenah", "imenam", "imenami"])
+				tr
+					th book (f.)
+					td(data-isv="kniga")
+					td(data-isv="knigų")
+					td(data-isv="knigy")
+					td(data-isv="knigě", colspan=2)
+					td(data-isv="knigojų")
+					td(data-isv="knigo")
+
+					td(data-isv="knigy", colspan=2)
+					+tdsIsv(["knig", "knigah", "knigam", "knigami"])
+
+		.tables
+			table
+				tr
+					th
+					th(colspan=6) present
+					th(colspan=6) past
+					th(colspan=3) imperative
+					th perfect
+				tr
+					th
+					for i in [0, 1]
+						th i
+						th thou
+						th he
+						th we
+						th ye
+						th they
+					th thou
+					th we
+					th ye
+					th
+				tr
+					th be
+					+tdsIsv(["jesm", "jesi", "jest (je)", "jesmo", "jeste", "sųt"])
+					+tdsIsv(["běh", "běše", "běše", "běhmo", "běste", "běhų"])
+					+tdsIsv(["bųd́", "bųd́mo", "bųd́te"])
+					td(data-isv="byl")
+				tr
+					th read
+					+tdsIsv(["čitajų", "čitaješ", "čitaje", "čitajemo", "čitajete", "čitajųt"])
+					+tdsIsv(["čitah", "čitaše", "čitaše", "čitahmo", "čitaste", "čitahų"])
+					+tdsIsv(["čitajd́", "čitajmo", "čitajte"])
+					td(data-isv="čital")
+
+	+section("examples")
+		table.center
+			tr
+				td you bought a book.
+				td.isv: ul
+					li ty běše kupova kniga.
+					li ty kniga běše kupova.
+					li go kniga ty běše kupova.
+				td
+					|word order is free.
+					br
+					|when A comes before N, use <span class="isv">go</span>.
+			tr
+				td you bought two books.
+				td.isv ty běše kupova dwa kniga.
+				td no plural mark.
+			tr
+				td do you bought a book?
+				td.isv či ty běše kupova kniga?
+				td
+			tr
+				td it is your book.
+				td.isv on by kniga od ty?
+				td
+			tr
+				td which book is yours?
+				td.isv koj kniga by od ty?
+				td
+			tr
+				td the book which you bought.
+				td.isv kniga, go koj ty běše kupova.
+				td
+
+			table.center
+				td
+					|Universaĺnoj Deklaracije Prav Člověka
+					br
+					|Vsi ljudi rodęt sę svobodni i råvni v dostojnosti i pravah.
+					br
+					|Oni sųt obdarjeni råzumom i svěst́jų i imajųt postųpati jedin k drugomu v duhu bratstva.
+				td.isv
+					|deklaracija universaĺny od pravo od člověk
+					br
+					|go vsi osoba rodi svobodny i råvny v dostojnost́ i pravo.
+					br
+					|go on obdari s råzum i svěst́, i imě že postųpa k jedin drugy v duh od bratstvo.

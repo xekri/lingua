@@ -1,0 +1,39 @@
+extend /_layout.pug
+
+block head
+	-
+		const title = author.id;
+		const tags = ["language=\"english reduce'en\""];
+		const isRoot = true;
+
+block main
+	p þis website introduceþ me, <i>sumi</i>,  and my wurk.
+
+	mixin entry(year, day, path, comment)
+		tr
+			td=year
+			td=day
+			td: a(href=path)= path
+			td= comment
+
+	table.center
+		caption history
+		tr
+			th year
+			th day
+			th path
+			th revision
+		+entry(12021, 319, "lang/ar", "add arabic romanisation.")
+		+entry(12021, 319, "char/1", "modify structure pages of characters.")
+		+entry(12021, 292, "lang/ru", "add russian orthography.")
+		+entry(12021, 284, "lang/phnx", "add phoenecian alphabet group.")
+		+entry(12021, 277, "suzuli-mitulu/ja", "add summary of character in japanese.")
+		+entry(12021, 272, "lang/cs", "add czech orthogaphy.")
+		+entry(12021, 213, "lang/la-var", "add latin artificial dialect.")
+		+entry(12021, 195, "lang/bo", "add tibetan romanisation.")
+		+entry(12021, 195, "lang/interslavic", "fix interslavic dialect.")
+		+entry(12021, 187, "lang/bn", "add bengali romanisation.")
+		+entry(12021, 153, "lang/ja", "add japanese artificial dialect.")
+		+entry(12021, 150, "author", "add vertical page. remove mobile option.")
+		+entry(12021, 146, "lang/tr", "add turkish romanisation.")
+		+entry(12021, 144, "./", "add history of revision.")

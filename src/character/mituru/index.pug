@@ -1,0 +1,117 @@
+extend /_layout.pug
+include ../_common.pug
+
+block head
+	-
+		const id = "митуру"
+		const name = {
+			han: "盈",
+			ja: "mıturu",
+			cmn: "iŋ̌",
+			yue: "iŋ̀",
+		};
+		const title = id;
+		const tags = ["draft"]
+
+	link(href="../style.css", rel="stylesheet")
+
+block main
+	.warn
+		| この頁の更新は停止しました.
+		br
+		| <a href="/suzuri-mituru">新頁</a>を御覧下さい.
+
+	p #{id}は#{author.id}が作成した人格です
+	p <a href="../suzuri">сузури</a>の後輩で友人です
+
+	+section("fact")
+		p: em これらを豫告無く變更し得ます
+
+		ul
+				li 識別子: #{id}
+				li
+					| 名前:
+					table
+						for key in Object.keys(name)
+							tr
+								th.undoth= key
+								td.undot= name[key]
+								td.undot= name[key]
+				li
+					| 固有色:&#x20;
+					span(style="background-color: black; border: 1px solid;") black
+					| ,&#x20;
+					span(style="background-color: #0f0; color: black;") lıme
+				li 年齢: сузури.age - 2
+				li 國籍: 日本
+				li.undot 言語: japanese, english, mandarin, russian, interslavic
+				li 數學科の學部生
+				li 身長: 1.85m
+				li 體質量: 85kg
+				li ピアス孔: 右耳のrob (сузуриが空けた)
+				li 髪色: 黒
+				li 體毛: 濃いめ
+				li 陰莖: 220mm・カリ高・上反り
+				li ALDH2はMM型
+				li 愛讀書は«存在と無»
+				li 菜食主義者
+				li 社會自由主義者
+				li cısgender, 兩性愛者 (公開), 男性
+				li monoamorıst
+				li 受
+				li 胸が弱い
+				li 大體2囘/週自慰する
+				//li 童貞・初めての性體驗は<a href="../suzuri">сузури</a>相手の受で21歳の時
+
+	+section("talk")
+		a(href="https://twitter.com/search?q=(from%3Asumigv%20OR%20from%3Asumimq%20OR%20from%3Asmiqy)%20(%E3%83%9F%E3%83%84%E3%83%AB%20OR%20%E7%9B%88%20OR%20(%E5%BE%8C%E8%BC%A9%E5%90%9B%20%E5%81%87))%20since%3A2014-01-01%20until%3A2030-01-01") tweets
+		p 非公式なものなので別解釋を常に許容します
+
+	+section("art")
+		ul
+			li 自發的に描く方へ
+				+for_volunteer
+			li 依頼で描く方へ
+				ul
+					li 作者が繪を描くを得ない爲に判り易い規範的な資料は有りません.
+					li 開發段階の爲に造形は確定しません. 基本的に最新を優先します.
+					li 既存資料は, それに從ふと言ふよりはそれを通じて好みの男を描く事を望みます.
+					li #{id}として意圖されたどの描像も#{id}となります. <a href="#fact">fact</a>に反する物を含めいかなる解釋も許容します.
+					li 主要な要素を提示します:
+						ul
+							li 太め吊り眉. 垂れ目.
+							li 髪: 兩目隱れだが左目は見𛀁隱れする. 黑. 輕い癖毛.
+							li 性器: 上反り, 勃起時半剥け, 220mm (但し數値は目安であり, 視覺上は大きいほど良く, 爆根も歡迎します). <a href="../suzuri">сузури</a>には劣る.
+							li 健康的, 筋肉質で體格が良い. <a href="../suzuri">сузури</a>より大きい.
+
+		.tile
+			+section("2020-10-15")
+				p <a href="https://twitter.com/intent/user?user_id=948471113448792064">絹豆腐</a>君
+				img(src="image/2020-10-15.png")
+
+			+section("2020-10-9")
+				ul
+					li 髪は輕い癖毛 (假)
+					li 服が思ひ浮かばず困った
+					li 左目は大抵見𛀁ない
+				<blockquote class="twitter-tweet" ><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> 盈君 <a href="https://t.co/BbstJTFwK5">https://t.co/BbstJTFwK5</a> <a href="https://t.co/K5B93wGDQq">pic.twitter.com/K5B93wGDQq</a></p>&mdash; suzurı ıs my orıgınal character. (@smiqy) <a href="https://twitter.com/smiqy/status/1314648291636703232?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			//+section("2020-9-9")
+				ul
+					li 服が思ひ浮かばず困った
+					li 髪は輕い癖毛な氣がする
+				<blockquote class="twitter-tweet" ><p dir="ltr">身長差 (列べただけ) <a href="https://t.co/5rReHHdnqA">pic.twitter.com/5rReHHdnqA</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1303539039505506305?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<blockquote class="twitter-tweet" ><p dir="ltr"><a href="https://twitter.com/TOS?ref_src=twsrc%5Etfw">@tos</a> <a href="https://t.co/ioHVgV2BKi">pic.twitter.com/ioHVgV2BKi</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1304978773935177728?ref_src=twsrc%5Etfw">September 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			+section("2020-8-23")
+				<blockquote class="twitter-tweet" ><p dir="ltr">後輩君の表情 考 <a href="https://t.co/I2JEPNS3nt">pic.twitter.com/I2JEPNS3nt</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1297245606977523712?ref_src=twsrc%5Etfw">August 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			//+section("2020-8-22")
+				<blockquote class="twitter-tweet" ><p dir="ltr">- 硯君の表情 考<br>- 後輩君 <a href="https://t.co/ngIBx6kHit">pic.twitter.com/ngIBx6kHit</a></p>&mdash; 初夏の夜風の涼しさ (@smiqy) <a href="https://twitter.com/smiqy/status/1296894217789136896?ref_src=twsrc%5Etfw">August 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				p 後から見るとかわいくない
+
+			//+section("2020-05-31")
+				<blockquote class="twitter-tweet" ><p dir="ltr">完 <a href="https://t.co/sZA5QWL5K9">pic.twitter.com/sZA5QWL5K9</a></p>&mdash; СУМИ (@SumiMq) <a href="https://twitter.com/SumiMq/status/1266767231813214208?ref_src=twsrc%5Etfw">May 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			+section("2020-04-14")
+				<blockquote class="twitter-tweet" ><p dir="ltr">スズリ君の後輩君ことミツル君、この感じで行きます <a href="https://t.co/IzSj30XZYI">pic.twitter.com/IzSj30XZYI</a></p>&mdash; 𝔭𝔥𝔞𝔩𝔩𝔲𝔰, 𝔠𝔞𝔫𝔫𝔞𝔟𝔦𝔰, 𝔱𝔥𝔞𝔫𝔞𝔱𝔬𝔰 (@smgvn) <a href="https://twitter.com/smgvn/status/1250046521636085761?ref_src=twsrc%5Etfw">April 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

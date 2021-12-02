@@ -1,0 +1,294 @@
+@use "sass:math"
+
+$space: 2em
+$navWidth: 20em
+$color: lightgray
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&family=Noto+Sans+Armenian:wght@200&family=Noto+Sans+Bengali:wght@200&family=Noto+Sans+Devanagari:wght@200&family=Noto+Sans+Display:wght@200&family=Noto+Sans+Georgian:wght@200&family=Noto+Sans+Hebrew:wght@200&family=Noto+Sans+JP:wght@100&family=Noto+Sans+Phags+Pa&family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols:wght@200&family=Noto+Sans+TC:wght@200&family=Noto+Serif+Tibetan:wght@200&family=Noto+Sans+Zanabazar+Square&display=swap')
+
+$cyrillic: U+0400-04FF, U+2DE0-2DFF, U+A640-A69F
+@font-face
+  src: url('/assets/fonts/MonomakhUnicode.otf') format('opentype')
+  font-family: 'Monomakh'
+  font-weight: lighter
+  unicode-range: $cyrillic
+
+*
+  box-sizing: border-box
+
+.center
+  margin-inline-start: auto
+  margin-inline-end: auto
+  display: block
+
+table.center
+  display: table
+
+.tables
+  display: flex
+  justify-content: space-evenly
+  align-items: flex-start
+  vertical-align: top
+  table
+    margin: 0
+
+.tables + .tables
+  margin-top: 2em
+
+h1, #menu
+  //text-transform: uppercase
+
+html, body
+  height: 100%
+  width: 100%
+  margin: 0
+
+body
+  color: $color
+  background-color: black
+
+  font-family: "Noto Sans Display", "Noto Sans JP", "Noto Sans TC", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Serif Tibetan", "Noto Sans Phags Pa", "Noto Sans Zanabazar Square", "Noto Sans Georgian", "Noto Sans Armenian", "Noto Sans Symbols", sans-serif
+  font-weight: 200
+  font-stretch: extra-condensed
+
+  display: flex
+  align-items: stretch
+  flex-flow: row nowrap
+  justify-content: space-between
+
+  padding-top: $space
+  padding-bottom: $space
+
+main, nav
+  height: 100%
+
+nav
+  width: $navWidth
+  height: auto
+  top: 0
+  bottom: 0
+  border-top: 1px solid
+  border-left: 1px solid
+  overflow: auto
+
+  ul
+    margin-inline-start: 1em
+    padding-inline-start: 0
+
+  #nav-in
+    margin-left: $space
+    margin-right: 0
+    margin-top: $space
+    padding: 0
+    display: inline-block
+
+    .my-div
+      padding-top: $space
+
+    #datetime
+      text-align: center
+      font-family: "Noto Sans Mono", monospace
+      padding: 0
+      margin: 0
+      margin-bottom: $space
+      width: 100%
+      text-align: center
+      white-space: pre
+
+    .twitter-share-button
+      margin-bottom: $space
+
+main
+  width: 100%
+  margin-left: 0
+  font-size: inherit
+  margin-left: $space
+  overflow: auto
+  height: 100%
+  border-left: 1px solid
+  border-top: 1px solid
+
+  & > section
+    border: none
+
+  &.vertical
+    writing-mode: vertical-lr
+
+section
+  margin-block-end: $space
+
+section, .my-div
+  margin: 0
+  padding: 0
+  padding-inline-start: $space
+  border: solid $color
+  border-width: 1px 0 0 1px
+  //background-color: #FFF2
+  &:last-child
+    margin-block-end: 0
+
+  section, .my-div
+    margin-block-start: $space
+
+  h1
+    margin: 0
+    margin-block-end: $space
+    font-weight: inherit
+    font-size: inherit
+
+section
+  padding-block-start: $space
+
+.my-div
+  margin-block-end: $space
+  .my-div
+    margin-block-end: 0
+
+.tile
+  section
+    box-sizing: border-box
+    width: 22%
+    display: inline-block
+    margin-inline-end: $space
+    vertical-align: top
+    padding-inline-start: math.div($space, 2)
+    padding-block-start: math.div($space, 2)
+
+    img
+      vertical-align: top
+      width: calc(100% - 16px)
+      margin: 0
+      display: block
+
+.twitter-tweet
+  margin: 0
+
+figure
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+a
+  color: inherit
+  text-decoration-thickness: 1px
+  text-decoration-style: dotted
+
+a:before
+  //content: "🔗"
+
+table + table, ul + ul
+  margin-block-start: $space
+
+table
+  margin: math.div($space, 2)
+  border-collapse: collapse
+
+  tr:first-of-type
+    td, th
+      border-top: 1px solid
+  tr > *:first-child
+    border-left: 1px solid
+
+  th
+    font-weight: 300
+    text-align: center
+  td
+    text-align: left !important
+    &[colspan]:not([colspan="1"])
+      text-align: center !important
+  th, td
+    padding: math.div($space, 4)
+    border: 1px solid #444
+
+  &.c td
+    text-align: center
+
+  th.v, tr.vs th
+    text-align: right
+    writing-mode: vertical-lr
+
+ul, ol
+  text-align: left
+
+  list-style-type: square
+  list-style-position: outside
+  margin: 0
+  margin-inline-start: 1.5em
+  padding-inline-start: 0
+
+textarea
+  font: inherit
+  background-color: inherit
+  color: inherit
+  outline: none
+  resize: none
+
+input[type="checkbox"]
+  vertical-align: middle
+
+.tags
+  margin: 0
+  margin-bottom: $space
+  padding: 0
+  float: right
+  .tag
+    clear: both
+    display: inline-block
+    margin: 0
+    margin-left: 8px
+    padding: 4px
+    font-size: 80%
+    border: 1px solid
+    border-radius: 4px
+    &:first-child
+      margin-left: 0
+
+p
+  margin-top: 8px
+  margin-bottom: 0
+
+details, summary
+  &:focus
+    outline: none
+
+ruby
+  ruby-align: center
+
+#logo
+  text-align: center
+  svg
+    margin: 0
+
+.textareas
+  padding: 0
+  margin: 0
+  white-space-collapse: discard
+  display: flex
+  textarea
+    width: 50%
+    height: 320px
+    margin: 0
+    outline: none
+    resize: none
+
+    &:not(:first-of-type)
+      border-inline-start: none
+
+button
+  color: inherit
+  border: 1px solid
+  border-right: 0
+  border-bottom: 0
+  background-color: transparent
+  font-size: 150%
+  outline: none
+button:hover
+  background-color: #fff4
+
+pre
+  border-top: 1px solid
+  border-left: 1px solid
+  padding: 1em
+  background-color: #FFF2
+  code
+    font-family: "Noto Sans Mono", monospace

@@ -1,0 +1,16 @@
+extend /_layout.pug
+
+block head
+  - const title = "wurk"
+  - const vertical = true
+
+block main
+  ul
+    li font
+      ul
+        li: a(href="font/minimal-triangle") minimal triangle
+        li: a(href="font/three-series") þree series
+        li: a(href="font/tri") tri
+    //li: a(href="calendar") calendar
+    //li: a(href="duality/document.pdf") sequent calculi for intuitionistic substructural logics and their duals (PDF)
+    li: a(href=`https://${author.github}.github.io/sjagci`) 將棋 SjagCi

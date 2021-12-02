@@ -1,0 +1,1 @@
+.tile,img{padding:0}img{margin:0}.tile{width:100%}.tile section{box-sizing:border-box;width:320px}.tile section img{vertical-align:top;width:calc(100% - 16px);margin:0;display:block}.warn{position:fixed;top:0;right:0;background-color:#fff2;font-weight:400;margin:16px;padding:2px;font-size:200%}

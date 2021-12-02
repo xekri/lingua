@@ -1,0 +1,125 @@
+extend /_layout.pug
+
+block head
+  - const title = "language"
+  - const tags = ["draft"]
+
+block main
+  +section("syntax")
+
+  +section("phonology")
+    .tables
+      table.c
+        tr: +tds("i ü ï u".split(" "))
+        tr: +tds("e ö ë o".split(" "))
+        tr
+          td(colspan=2) ä
+          td(colspan=2) a
+      table.c
+        +trs([
+          "q k č c t p",
+          " g ǯ ʒ d b",
+          " x š s þ f",
+          " h ž z ð w",
+        ].map(x => x.split(" ")))
+        tr
+          td
+          td ŋ
+          td(colspan=3) n
+          td m
+
+  +section("vocabulary")
+    p complex concept be from sanskrit. simple concept be from middle chinese.
+
+    ul
+      li male = semen animate
+      li female = ovum animate
+      li liquid = flow matter
+      li solid = stand matter
+      li fly = sky go
+      li swim = sea go
+      li gas = ?
+      li {specie} = {scientific vocabulary borrowing}
+
+    table#vocabulary
+      +trs([
+        "go;गम्",
+        "liquid;drava",
+        "sperm;bīja",
+        "ovum;āṇḍa",
+        "star;nakṣatra",
+        "god;deva",
+        "eat;khād",
+        "human;mānava",
+        "sky;ākāśa",
+        "earth;bhūmi",
+        "coitus;yābha",
+        "brain;mastiṣka",
+        "phallus;śiśna",
+        "cat;biḍālā",
+        "dog;śunaka",
+        "crow;kāka",
+        "black;kṛṣṇa",
+        "sea;samudra",
+        "water;jala",
+        "music;saṅgīta",
+        "book;pustaka",
+        "sleep;nidrā",
+        "death;mṛtyu",
+        "new;nava",
+        "night;nakti",
+        "sun;sūrya",
+        "far;dūra",
+        "natural;prakṛti",
+        "say;vakti",
+        "think;cintayati",
+        "0;〇 來青平　leŋ",
+        "1;一 影眞入 ʔiɪt̚",
+        "2;二 日脂去 ȵiɪH",
+        "3;三 心談平 sɑm",
+        "4;四 心脂去 siɪH",
+        "5;五 疑模上 ŋuoX",
+        "6;六 來東入 lɨuk̚",
+        "7;七 清眞入 t͡sʰiɪt̚",
+        "8;八 幫刪入 pˠɛt̚",
+        "9;九 見尤上 kɨuX",
+        "every;各 見唐入 kɑk̚",
+        "many;多 端歌平 tɑ",
+        "few;少 書宵上 ɕiᴇuX",
+        "more than;更 見庚平 kˠæŋ",
+        "i;吾 疑模平 ŋuo",
+        "thou;爾 日支上 ȵiᴇX",
+        "what;何 匣歌平 ɦɑ",
+        "from;由 以尤平 jɨu",
+        "with;將 精陽平 t͡sɨɐŋ",
+        "to;至 章脂去 t͡ɕiɪH",
+      ].map(x => x.split(";")))
+
+    table
+      tr
+        th
+        th -∅
+        th -i
+        th -u
+        th -ŋ
+        th -uŋ
+        th -n
+        th -m
+      tr
+        th ə
+        td 遇 ë
+        td 止 i
+        td 流 u
+        td 曾
+        td 通
+        td 臻
+        td 深
+      tr
+        th a
+        td 果假 a
+        td 蟹 e
+        td 効 o
+        td 宕梗
+        td 江
+        td 山
+        td 咸

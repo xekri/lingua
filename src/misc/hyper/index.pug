@@ -1,0 +1,17 @@
+extend /_layout.pug
+
+block head
+	- const title = "hyper operation"
+
+block main
+	pre: code.
+		hyper 0 a b = 1 + b
+		hyper 1 a b = a + b
+		hyper 2 a b = a * b
+		hyper 3 a b = a ^ b
+
+		hyper 0 a b = 1 + b
+		hyper 1 a 0 = a
+		hyper 2 a 0 = 0
+		hyper 3 a 0 = 1
+		hyper n a b = hyper (n - 1) a (hyper n a (b - 1))

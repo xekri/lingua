@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104159380-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104159380-5');
+    </script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/misc/date/date.js"></script>
+    <script src="/script.js"></script>
+    <!-- local files-->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="icon" href="/images/sumi-outline.svg" type="image/svg+xml">
+    <title>sumi / convert alphabet style</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for(const e of document.querySelectorAll(".undot")) {
+          e.innerHTML = e.innerHTML.replace(/i/g, "ı").replace(/j/g, "ȷ")
+        }
+      })
+      
+    </script>
+    <meta name="twitter:site" content="@sumiqj">
+    <meta name="twitter:title" content="sumi / convert alphabet style">
+    <!-- meta(name="twitter:description", content=`${author.id}'s information.`)-->
+    <meta name="twitter:image" content="https://sumi.space/character/suzuri/images/2019-04-23.png">
+    <meta name="twitter:card" content="summary">
+  </head>
+  <body>
+    <nav>
+      <div id="nav-in">
+        <div id="logo"><a href="/"><img src="/images/sumi-outline.svg" width="50%"></a></div>
+        <div id="datetime"></div>
+        <center><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="true" data-via="sumiqj">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        <div class="my-div" id="menu">
+          <ul>
+            <li><a href="/">/</a></li>
+            <li><a href="/author">auþor</a></li>
+            <li><a href="/char">character</a></li>
+            <li><a href="/fav">favourite</a></li>
+            <li><a href="/wurk">wurk</a></li>
+            <li><a href="/lang">language</a></li>
+            <li><a href="/misc">miscellaneous</a></li>
+          </ul>
+          <div class="my-div" id="submenu">
+          </div>
+        </div>
+        <ul class="caution">
+          <li>useþ <it>google analytics</it></li>
+          <li>is not optimised for mobile</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="convert alphabet style">
+        <h1><a href="#convert alphabet style">#</a> 
+convert alphabet style
+        </h1>
+        <ul>
+          <li>
+            <input class="trigger" type="checkbox" name="undot">
+            <label>dotless</label>
+          </li>
+          <li>
+            <label>case</label>
+            <select class="trigger" name="case">
+              <option selected></option>
+              <option value="lower">lower</option>
+              <option value="upper">upper</option>
+            </select>
+          </li>
+          <li>
+            <label>style</label>
+            <select class="trigger" name="style">
+              <option selected></option>
+              <option value="serif-bold">serif bold</option>
+              <option value="serif-italic">serif italic</option>
+              <option value="serif-bold-italic">serif bold italic</option>
+              <option value="sans">sans</option>
+              <option value="sans-bold">sans bold</option>
+              <option value="sans-italic">sans italic</option>
+              <option value="sans-bold-italic">sans bold italic</option>
+              <option value="fraktur">fraktur</option>
+              <option value="fraktur-bold">fraktur bold</option>
+              <option value="script">script</option>
+              <option value="script-bold">script bold</option>
+              <option value="mono">mono</option>
+              <option value="double">double</option>
+            </select>
+          </li>
+        </ul>
+        <div class="textareas">
+          <textarea class="trigger" id="in">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+ΑΒΓΔΕϜΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεϝζηθικλμνξοπρςστυφχψω
+0123456789
+
+All human beings are born free and equal in dignity and rights.
+They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.</textarea>
+          <textarea id="out"></textarea>
+        </div>
+      </section>
+      <!--+section("")include _discus.pug
+      -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap')
+
+@font-face
+  font-family: "Nishiki Kana"
+  src: url("/nishiki-kana.otf") format('opentype')
+  unicode-range: U+1B000, U+1B001, U+30A8
+
+body
+  margin: 0
+  padding: 0
+  background-color: black
+  width: 100vw
+  height: 100vh
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  font-family: "Noto Serif JP", "Nishiki Kana", serif
+
+  main
+    color: lightgray
+    writing-mode: vertical-lr
+    //text-orientation: upright;
+    //background-color: #fff2
+    border: 1px solid
+    width: 1280px
+    height: 640px
+    padding: 2em
+    overflow-x: scroll
+    font-size: 14pt
+    ruby-align: start
+
+    p
+      text-indent: 1em
+      margin: 0

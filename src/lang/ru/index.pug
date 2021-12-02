@@ -1,0 +1,151 @@
+extend /_layout.pug
+
+mixin tdRu(x)
+	- const ns = x.match(/^\d/)
+	td(data-ru=x.replace(/^\d:/, ""), colspan=(ns && ns.length)? ns[0] : null)
+
+mixin tdsRu(xs)
+	for x in xs
+		+tdRu(x)
+
+block head
+	- const title = "russian"
+	- const tags = ["draft"]
+
+block main
+	+section("orthography")
+		a(href="https://www.ohchr.org/en/udhr/pages/Language.aspx?LangID=rus") UDHR
+		.textareas
+			textarea#0.
+				# Всеобщая декларация прав человѣка
+				## Статья 1
+				Все люди рождаѭтсѧ свободными и равными в своем достоинстве и правах.
+				Они надѣлены разумом и совѣстьѭ и должны постѫпать в отношении друг друга в духе братства.
+			textarea#1
+			textarea#2
+
+
+	+section("grammar")
+		+section("declension")
+			.tables
+				table
+					tr
+						th
+						th(colspan=6) sg.
+						th(colspan=6) pl.
+					tr
+						th
+						for i in [0, 1]
+							th N
+							th A
+							th G
+							th L
+							th D
+							th I
+					tr
+						th i
+						for x in ["я", "2:меня", "2:мнѣ", "мноѭ", "мы", "3:нас", "нам", "нами"]
+							+tdRu(x)
+					tr
+						th thou
+						for x in ["ты", "2:тебя", "2:тебѣ", "тобоѭ", "вы", "3:вас", "вам", "вами"]
+							+tdRu(x)
+					tr
+						th he
+						td(data-ru="он")
+						td(data-ru="его", rowspan=2, colspan=2)
+						td(data-ru="ём", rowspan=2)
+						td(data-ru="ему", rowspan=2)
+						td(data-ru="им", rowspan=2)
+
+						td(data-ru="они", rowspan=2)
+						td(data-ru="их", rowspan=3, colspan=3)
+						td(data-ru="им", rowspan=3)
+						td(data-ru="ими", rowspan=3)
+					tr
+						th it
+						td(data-ru="оно")
+					tr
+						th she
+						td(data-ru="она")
+						td(data-ru="её", colspan=2)
+						td(data-ru="ей", colspan=2)
+						td(data-ru="еѭ")
+
+						td(data-ru="оне")
+					tr
+						th student, m. anim.
+						+tdsRu(["студент", "2:студентa", "студенте", "студенту", "студентом", "студенты", "2:студентов", "студентaх", "студентaм", "студентaми"])
+					tr
+						th airplain, m. inanim.
+						+tdsRu(["2:самолёт", "самолётa", "самолёте", "самолёту", "самолётом", "2:самолёты", "самолётов", "самолётaх", "самолётaм", "самолётaми"])
+					tr
+						th child, n. anim.
+						+tdsRu(["2:чадо", "чада", "чаде", "чаду", "чадом", "чада", "2:чад", "чадах", "чадам", "чадами"])
+					tr
+						th wine, n. inanim.
+						+tdsRu(["2:вино", "вина", "вине", "вину", "вином", "2:вина", "вин", "винах", "винам", "винами"])
+					tr
+						th name, n. inanim. "мѧ"
+						+tdsRu(["2:имѧ", "2:имени", "имени", "именем", "2:имена", "имён", "именах", "именам", "именами"])
+					tr
+						th crow, f. anim
+						+tdsRu(["ворона", "воронѫ", "вороны", "2:воронѣ", "вороноѭ", "вороны", "2:ворон", "воронах", "воронам", "воронами"])
+					tr
+						th star, f. inanim
+						+tdsRu(["ѕвѣзда", "ѕвѣздѫ", "ѕвѣзды", "2:ѕвѣздѣ", "ѕвѣздоѭ", "2:ѕвѣзды", "ѕвѣзд", "ѕвѣздах", "ѕвѣздам", "ѕвѣздами"])
+
+		+section("conjugation")
+			.tables
+				table
+					tr
+						th
+						th inf.
+						th(colspan=6) present
+						th(colspan=2) imperative
+						th past
+					tr
+						th
+						th
+						th i
+						th thou
+						th he
+						th we
+						th ye
+						th they
+						th thou
+						th ye
+						th
+					tr
+						th be
+						+tdsRu(["быть", "есмь", "еси", "есть", "есмы", "есте", "сѫть", "бѫдь", "бѫдьте", "был"])
+					tr
+						th be, fut.
+						+tdsRu(["", "бѫдѫ", "бѫдешь", "бѫдет", "бѫдем", "бѫдете", "бѫдѫт", "", "", ""])
+					tr
+						th read
+						+tdsRu(["читать", "читаѭ", "читаешь", "читает", "читаем", "читаете", "читаѭт", "читай", "читайте", "читал"])
+
+	+section("vocabulary")
+		.tables
+			table
+				-
+					const xss = [
+						["zero", "ноль"],
+						["one", "один"],
+						["two", "два"],
+						["three", "три"],
+						["four", "четыре"],
+						["five", "пѧть"],
+						["six", "шесть"],
+						["seven", "семь"],
+						["eight", "восемь"],
+						["nine", "девѧть"],
+						["ten", "десѧть"],
+						["eat", "ѣсть, съѣсть"],
+						["know", "знать, узнать"]
+					]
+				for xs in xss
+					tr
+						td= xs[0]
+						td(data-ru=xs[1])
