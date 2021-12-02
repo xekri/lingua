@@ -1,0 +1,29 @@
+{
+  "name": "romanize-san",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-pug": "pug -w src -o docs",
+    "watch-sass": "sass -w src:docs",
+    "watch": "concurrently \"npm run watch-pug\" \"npm run watch-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smiqy/romanize-san.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smiqy/romanize-san/issues"
+  },
+  "homepage": "https://github.com/xekri/romanize-san#readme",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.34.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0"
+  }
+}
