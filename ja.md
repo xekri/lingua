@@ -84,3 +84,14 @@ g
 -->
 
 ## vocabulary
+
+|      |      |      |
+| :--- | :--- | :--- |
+| i    | 我   | vale |
+| thou | 汝   | nale |
+| he   | 伊   | kale |
+| who  | 誰   | tale |
+| this | 此   | kole |
+| that | 其   | sole |
+| yon  | 彼   | ale  |
+|      |      |      |
