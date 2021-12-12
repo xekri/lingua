@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tas = document.getElementsByTagName("textarea");
+      const onInput = () => {
+        tas[1].innerHTML = convert(tas[0].innerHTML);
+      };
+      tas[0].addEventListener("input", onInput);
+      onInput();
+    });
+  </script>
+
+  <style>
+    textarea {
+      width: 50%;
+      height: 20em;
+      font: inherit;
+    }
+
+    .textareas {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>turish</h1>
+  <div class="textareas">
+    <textarea>
+İnsan hakları evrensel beyannamesi
+Madde 1
+Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
+Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
+    </textarea>
+    <textarea></textarea>
+  </div>
+  <table>
+    <tr>
+      <th>old</th>
+      <th>new</th>
+    </tr>
+    <tr>
+      <td>ı,
+        i</td>
+      <td>î,
+        ǐ</td>
+    </tr>
+    <tr>
+      <td>a,
+        e</td>
+      <td>â,
+        ǎ</td>
+    </tr>
+    <tr>
+      <td>o,
+        ö</td>
+      <td>ô,
+        ǒ</td>
+    </tr>
+    <tr>
+      <td>u,
+        ü</td>
+      <td>û,
+        ǔ</td>
+    </tr>
+  </table>
+  <ul>
+    <li>the same diacritics (ˆ or ˇ) in a row in a word can be omitted except the initial one. </li>
+    <li>the initial vowel with no diacritic in a word is supposed to have ˆ by default. </li>
+    <li>examples <ul>
+        <li>öğrenci ↦ ǒğrǎncǐ ↦ ǒğranci</li>
+        <li>arkadaş ↦ ârkâdâş ↦ ârkadaş ↦ arkadaş</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
