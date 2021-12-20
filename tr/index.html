@@ -1,17 +1,8 @@
 <html>
 
 <head>
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tas = document.getElementsByTagName("textarea");
-      const onInput = () => {
-        tas[1].innerHTML = convert(tas[0].innerHTML);
-      };
-      tas[0].addEventListener("input", onInput);
-      onInput();
-    });
-  </script>
+  <script src="convert.js"></script>
+  <script src="main.js"></script>
 
   <link rel="stylesheet" href="../common/style.css" />
 </head>
@@ -19,12 +10,10 @@
 <body>
   <h1>turish</h1>
   <div class="textareas">
-    <textarea>
-İnsan hakları evrensel beyannamesi
+    <textarea>İnsan hakları evrensel beyannamesi
 Madde 1
 Bütün insanlar hür, haysiyet ve haklar bakımından eşit doğarlar.
-Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.
-    </textarea>
+Akıl ve vicdana sahiptirler ve birbirlerine karşı kardeşlik zihniyeti ile hareket etmelidirler.</textarea>
     <textarea></textarea>
   </div>
   <table>

@@ -2,39 +2,39 @@
 
 bulgarian orthography reform
 <br>реформа на българския правопис
-<br>reforma na bvlgarskiya prawolis
+<br>reforma na bvlgarskija prawolis
 
 ## orthography
 
-### ќ, ѓ
+### щ, ђ
 
-- `щ` → `ќ`
-- `жд` → `ѓ`
-- `щ` which does not originate from `tj` → `шт`
+- `щ` which does not originate from `*tj` → `шт`
+- `жд` which originates from `*dj` → `ђ`
 
 | current | new  |
 | :------ | :--- |
-| нощ     | ноќ  |
-| межда   | меѓа |
 | що      | што  |
+| межда   | међа |
 
 ### ѣ
 
-- `е` which alternates with `я` → `ѣ`
+- `я` and `е` which alternates → `ѣ`
 
-| current             | new          |
-| :------------------ | :----------- |
-| бял, бели (pl.)     | бѣл, бѣли    |
-| свят, светът (def.) | свѣт, свѣтът |
+| current             | new           |
+| :------------------ | :------------ |
+| бял, бели (pl.)     | бѣл, бѣли     |
+| свят, светът (def.) | свѣт, свѣт-ът |
 
 ### ь
 
-- -∅ which requires soft suffixes → `ь`
-- `е` which alternates with ∅ → `ь`
+- after noun which requires soft suffixes → `ь`
+- after feminine noun which ends in consonant → `ь`
+- `е` and ∅ which alternates → `ь`
 
 | current                | new           |
 | :--------------------- | :------------ |
-| кон, конят (def.)      | конь, коньът  |
+| кон, конят (def.)      | конь, конь-ът |
+| кост                   | кость         |
 | черен (m.), черно (n.) | черьн, черьно |
 
 ### ѧ
@@ -48,8 +48,7 @@ bulgarian orthography reform
 
 ### ѫ, ѭ
 
-- `а` in personal suffix which reads as `ъ` → `ѫ`
-- `я` in personal suffix which reads as `йъ` → `ѭ`
+- {`а`, `я`} in personal suffix which reads as {`ъ`, `йъ`} → {`ѫ`, `ѭ`}
 
 | current               | new         |
 | :-------------------- | :---------- |
@@ -58,55 +57,75 @@ bulgarian orthography reform
 
 ## romanisation
 
-| cyr.  | rom. |
-| :---: | :--- |
-|   а   | a    |
-|   б   | b    |
-|   в   | w    |
-|   г   | g    |
-|   д   | d    |
-|   ѓ   | ḋ    |
-|   е   | e    |
-|   ж   | j    |
-|   ѕ   | ʒ    |
-|   з   | z    |
-|   и   | i    |
-|   й   | y    |
-|   к   | k    |
-|   л   | l    |
-|   м   | m    |
-|   н   | n    |
-|   о   | o    |
-|   п   | p    |
-|   р   | r    |
-|   с   | s    |
-|   т   | t    |
-|   ќ   | ṫ    |
-|   у   | u    |
-|   ф   | f    |
-|   х   | h    |
-|   ц   | c    |
-|   ч   | q    |
-|   ш   | x    |
-|   ъ   | v    |
-|   ь   | y    |
-|   ѣ   | ye   |
-|   ю   | yu   |
-|   я   | ya   |
-|   ѧ   | ę    |
-|   ѫ   | ǫ    |
-|   ѭ   | yǫ   |
+| cyr.  |  rom.  |
+| :---: | :----: |
+|   а   |   a    |
+|   б   |   b    |
+|   в   |   w    |
+|   г   |   c    |
+|   д   |   d    |
+|   ђ   |  ᶁ dh  |
+|   е   |   e    |
+|   ж   |  ꞔ ch  |
+|  (ѕ)  |   g    |
+|   з   |   z    |
+|   и   |   i    |
+|   й   |   j    |
+|   к   |   k    |
+|   л   |   l    |
+|   м   |   m    |
+|   н   |   n    |
+|   о   |   o    |
+|   п   |   p    |
+|   р   |   r    |
+|   с   |   s    |
+|   т   |   t    |
+|   щ   |  ƫ th  |
+|   у   |   u    |
+|   ф   |   f    |
+|   х   |   x    |
+|   ц   |   q    |
+|   ч   |  ᶄ kh  |
+|   ш   |  ꞕ xh  |
+|   ъ   |   v    |
+|   ь   |   j    |
+|   ѣ   |   je   |
+|   ю   |   ju   |
+|   я   |   ja   |
+|   ѧ   |  ę eh  |
+|   ѫ   |  ǫ oh  |
+|   ѭ   | jǫ joh |
 
 ## example
 
 [UDHR](https://unicode.org/udhr/d/udhr_bul.html)
 
-ВСЕОБЌА ДЕКЛАРАЦИЯ ЗА ПРАВАТА НА ЧОВЕКА
+ВСЕОБЩА ДЕКЛАРАЦИЯ ЗА ПРАВАТА НА ЧОВЕКА
 <br>Член 1
-<br>Всички хора се раѓѫт свободни и равни по достойнство и права.
-<br>Те сѫ надарени с разум и съвест и следвѫ да се отнасѭт помеѓу си в дух на братство.
+<br>Всички хора се рађѫт свободни и равни по достойнство и права.
+<br>Те сѫ надарени с разум и съвест и следвѫ да се отнасѭт помеђу си в дух на братство.
 
-WSEOBṪA DEKLARACIYA ZA PRAWATA NA QOWEKA
-<br>Qlen 1
-<br>Wsiqki hora se raḋǫt swobodni i rawni po dostoynstwo i prawa.
-<br>Te sǫ nadareni s razum i svwest i sledwǫ da se otnasyǫt pomeḋu si w duh na bratstwo.
+wseobƫa deklaraqija za pravata na ᶄoweka
+<br>ᶄlen 1
+<br>wsiᶄki xora se raᶁǫt swobodni i rawni po dostojnstwo i prawa.
+<br>te sǫ nadareni s razum i svwest i sledwǫ da se otnasjǫt pomeᶁu si w dux na bratstwo.
+
+## grammar
+
+### noun
+
+### verb
+
+#### present
+
+|      | аз       | ти        | той  | ние       | вие        | те        |
+| :--- | :------- | :-------- | :--- | :-------- | :--------- | :-------- |
+| be   | съм      | си        | е    | сме       | сте        | сѫ        |
+| read | чет**ѫ** | чете**ш** | чете | чете**м** | чете**те** | чет**ѫт** |
+
+#### past
+
+|      | аз        | ти         | той        | ние         | вие         | те         |
+| :--- | :-------- | :--------- | :--------- | :---------- | :---------- | :--------- |
+| be   | б**ѣх**   | б**ѣше**   | б**ѣше**   | б**ѣхме**   | б**ѣхте**   | б**ѣхѫ**   |
+| read | чет**ѣх** | чет**ѣше** | чет**ѣше** | чет**ѣхме** | чет**ѣхте** | чет**ѣхѫ** |
