@@ -86,7 +86,7 @@ bulgarian orthography reform
 |   х   |   x    |
 |   ц   |   q    |
 |   ч   |  ᶄ kh  |
-|   ш   |  ꞕ xh  |
+|   ш   |  ᶍ xh  |
 |   ъ   |   v    |
 |   ь   |   j    |
 |   ѣ   |   je   |

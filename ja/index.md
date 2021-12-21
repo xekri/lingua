@@ -38,7 +38,7 @@
 | 天地玄黃 宇宙洪荒 | ten di cven vag u diu cug kvag   |
 | 日月盈昃 辰宿列張 | nit gvat eg sok zin siu let tjag |
 | 寒來暑往 秋收冬藏 | can lai sjo vag siu siu tog zag  |
-g
+
 ## conjugation
 
 |      |    未然 |    命令 |    連用 |    終止 |    已然 |
@@ -85,13 +85,13 @@ g
 
 ## vocabulary
 
-|      |      |      |
-| :--- | :--- | :--- |
-| i    | 我   | vale |
-| thou | 汝   | nale |
-| he   | 伊   | kale |
-| who  | 誰   | tale |
-| this | 此   | kole |
-| that | 其   | sole |
-| yon  | 彼   | ale  |
-|      |      |      |
+|      |      |       |
+| :--- | :--- | :---- |
+| i    | 我   | vale  |
+| thou | 汝   | nale  |
+| he   | 伊   | kale  |
+| who  | 誰   | tale  |
+| this | 此   | kole  |
+| that | 其   | sole  |
+| yon  | 彼   | ale   |
+| self | 己   | onole |
