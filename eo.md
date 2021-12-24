@@ -1,11 +1,11 @@
-# esperanto
+ н # esperanto
 
 ## alphabet
 
-|   C   |   Ĉ   |   G   |   Ĝ   |   Ĥ   |   Ĵ   |   Ŝ   |   Ŭ   |   V   |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|   Q   |   Q   |   C   |  Cj   |   X   |  Zj   |  Sj   |   U   |   V   |
-|   Ц   |   Ц   |   Г   |   Џ   |   Х   |   Ж   |   Ш   |   У   |   В   |
+|   Ĉ   |   G   |   Ĝ   |   Ĥ   |   Ĵ   |   Ŝ   |   Ŭ   |   V   |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|   C   |   G   |  Gj   |   K   | J, Zj |  Sj   |   U   |   V   |
+|   Ц   |   Г   |   Џ   |   К   | Й, Ж  |   Ш   |   У   |   В   |
 
 ## grammar
 
@@ -54,13 +54,13 @@
       <br>Plie, nenia diferencigo estu farata surbaze de la politika, jurisdikcia aŭ internacia pozicio de la lando aŭ teritorio, al kiu apartenas la koncerna persono, senkonsidere ĉu ĝi estas sendependa, sub kuratoreco, ne-sinreganta aŭ sub kia ajn alia limigo de la suvereneco.
     </td>
     <td>
-      universala deklaraqio de homa rajti
+      universala deklaracio de homa raiti
       <br>artikolo 1
-      <br>qia homi estas denaske libera kaj ecala lav dicno kaj rajti.
-      <br>li posedas raqio kaj konsqienqo, kaj devus kondutar unu al alia en spirito de frateqo.
+      <br>cia homi estas denaske libera kai egala lau digno kai raiti.
+      <br>li posedas racio kai konscienco, kai devus kondutar unu al alia en spirito de frateco.
       <br>artikolo 2
-      <br>qia rajto kaj libereqo kion difinas en la deklaraqio validas same por qia homo, sen kia ain diferenqico, qu lau raso, hautkoloro, sekso, lincvo, relicio, politika au alia opinio, naqia au soqia deveno, posedaji, naskigjo au alia stato.
-      <br>plie, nenia diferenqico estes farata surbaze de politika, jurisdikqia au internaqia poziqio de lando au teritorio, al kio apartenas la persono, senkonsidere qu gi estas sendependa, sub kuratoreqo, ne-sinrecanta au sub kia ain alia limico de la suvereneqo.
+      <br>cia raito kai libereco kion difinas en la deklaracio validas same por cia homo, sen kia ain diferencigo, cu lau raso, hautkoloro, sekso, lingvo, religio, politika au alia opinio, nacia au socia deveno, posedaji, naskigjo au alia stato.
+      <br>plie, nenia diferencigo estes farata surbaze de politika, jurisdikcia au internacia pozicio de lando au teritorio, al kio apartenas la persono, senkonsidere cu gi estas sendependa, sub kuratoreco, ne-sinreganta au sub kia ain alia limigo de la suvereneco.
     </td>
   </tr>
 </table>
@@ -72,7 +72,7 @@
 | :--- | :----------- | :--- |
 | naŭa | naua         | nava |
 | ĉar  | pro kauzo ke |      |
-| ĉu   | qu           |      |
+| ĉu   | cu           |      |
 | -aĵ- | -aj-         |      |
 | ĝi   | gi           |      |
-|      |              |      |
+| laŭ  | lau          |      |
