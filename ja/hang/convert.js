@@ -50,7 +50,7 @@ const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
   .replace(/^b/, "<initial>\u1108")
   .replace(/^m/, "<initial>\u1106")
 
-  .replace(/^j/, "<initial>\u1140")
+  //.replace(/^j/, "<initial>\u1140")
   .replace(/^v/, "<initial>\u111D")
 
   .replace(/^q/, "<initial>\u1159")

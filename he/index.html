@@ -1,0 +1,27 @@
+<head>
+  <link rel="stylesheet" href="../common/style.css" />
+
+  <script src="convert.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const [t0, t1] = document.getElementsByTagName("textarea");
+      const f = () => {
+        t1.value = convert(t0.value);
+      };
+      t0.addEventListener("input", f);
+      f();
+    });
+  </script>
+</head>
+
+<body>
+  <a href="https://unicode.org/udhr/d/udhr_heb.html">UDHR</a>
+  <div class="textareas">
+    <textarea dir="rtl">
+הכרזה לכל באי עולם בדבר זכויות האדם
+סעיף א.
+כל בני אדם נולדו בני חורין ושווים בערכם ובזכויותיהם. כולם חוננו בתבונה ובמצפון, לפיכך חובה עליהם לנהוג איש ברעהו ברוח של אחוה.
+</textarea>
+    <textarea></textarea>
+  </div>
+</body>
