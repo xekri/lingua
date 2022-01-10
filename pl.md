@@ -38,7 +38,7 @@ assume `i=jy, ě=je`
 | st - s(j)tj | prosty   | uprości    | prosty   | uprosti  |
 | zd - z(j)dj | bruzda   | bruździe   | bruzda   | bruzdě   |
 |    t - ț    | strata   | stracę     | strata   | strațę   |
-|    d - ḑ    | chód     | chodzę     | hód      | hoḑę     |
+|    d - ḑ    | chód     | chodzę     | hód      | hóḑę     |
 |    s - š    | wynos    | wynoszę    | vynos    | vynošę   |
 |    z - ž    | woz      | wożę       | voz      | vožę     |
 |   st - šť   | prosty   | uproszczę  | prosty   | uprošťę  |
