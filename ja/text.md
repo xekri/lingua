@@ -21,12 +21,12 @@ neko aluk'.
 | :--- | :------------ | :----------- |
 | neko | noun          | cat          |
 | aluk | verb          | walk         |
-| '(l) | verbal suffix | (conclusion) |
+| '(l) | verbal suffix | (conclusive) |
 
 - *nominative* (Nom)
   - is a case for subject.
   - has no postposition.
-- *conclusion*
+- *conclusive*
   - is a form of a verb used as a indicative predicate.
 - in every sentence, the predicate is in the final position.
 - for verbal suffixes,
@@ -70,28 +70,24 @@ neko ca kove vo kik
   - has a postposition `ca`
 - to make a noun qualify another, use a construction [Gen of qualifying × qualified].
 
-## prnoun, copula
+## pronoun, copula
 
 ```
-kale vaca neko nal.
+ka va ca neko nal.
     it is my cat.
 ```
 
-| word | type      | meaning |
-| :--- | :-------- | :------ |
-| nal  | noun→verb | be      |
+| word | type               | meaning |
+| :--- | :----------------- | :------ |
+| nal  | postposition, verb | be      |
 
-- a pronoun has the exceptional nominative.
-
-|      | i      | thou   | he, she, it | who, what | self    |
-| ---: | :----- | :----- | :---------- | :-------- | :------ |
-|  Nom | *vale* | *nale* | *kale*      | *tale*    | *onole* |
-|  Acc | va vo  | na vo  | ka vo       | ta vo     | ono vo  |
-|  Gen | va ca  | na ca  | ka ca       | ta ca     | ono ca  |
+| i    | thou | he, she, it | who, what | self  |
+| :--- | :--- | :---------- | :-------- | :---- |
+| *va* | *na* | *ka*        | *ta*      | *ono* |
 
 - to link two nouns, use a construction [Nom × Nom × `nal`]
 
-## negation, volition, perfect, progress
+## negative, volition, perfect, progress
 
 ```
 pito juk'az.
@@ -117,7 +113,7 @@ neko juk'ital.
   - someone will go (inference)
   - let us go (suggestion)
 
-## capability, obligation
+## potential, obligative
 
 ```
 pito sin'ubek-al.
@@ -170,7 +166,7 @@ miti ni juk'ital neko vo mi'n.
 
 - to make a verb or a sentence qualify a noun, use a construction [conclusive × noun]
 
-## condition, reason, order
+## conditional, rational, imperative
 
 ```
 neko kul'aba pito vem.
@@ -188,11 +184,11 @@ neko kul'ejo.
 
 | verbal suffix | meaning     |
 | :------------ | :---------- |
-| '(a)ba        | condition   |
-| '(l)eba       | reason      |
+| '(a)ba        | conditional |
+| '(l)eba       | rational    |
 | '(e)jo        | order, wish |
 
-## compound, succession
+## compound, successive
 
 ```
 neko tob'i kul.
@@ -204,27 +200,37 @@ neko tob'ite kul
 | verbal suffix | meaning    |
 | :------------ | :--------- |
 | '(i)          | compound   |
-| '(i)te        | succession |
+| '(i)te        | successive |
 
 - *compound* is used to make a new meaning from two verbs.
   - `kup` eat
   - `vope` finish
   - `kup'i vope'l` finish eating
-- *succession* is used to express a succession of multiple verbs.
+- *successive* is used to express a succession of multiple action.
   - `kup'ite kul` eat then come
 
 ## summary of verbal suffixes
 
 |             | ip (say)   | mi (see)  |
 | ----------: | :--------- | :-------- |
-|  conclusion | ip         | mi'l      |
+|  conclusive | ip         | mi'l      |
 |    compound | ip'i       | mi        |
-|  succession | ip'ite     | mi'te     |
-|    negation | ip'az      | mi'z      |
+|  successive | ip'ite     | mi'te     |
+|    negative | ip'az      | mi'z      |
 |  volitional | ip'am      | mi'm      |
-|  perfection | ip'in      | mi'n      |
-| progression | ip'ital    | mi'tal    |
-|  capability | ip'al      | mi'lal    |
-|  obligation | ip'ubek-al | mi'bek-al |
-|      reason | ip'eba     | mi'leba   |
-|   condition | ip'aba     | mi'ba     |
+|  perfective | ip'in      | mi'n      |
+| progressive | ip'ital    | mi'tal    |
+|   potential | ip'al      | mi'lal    |
+|  obligative | ip'ubek-al | mi'bek-al |
+|    rational | ip'eba     | mi'leba   |
+| conditional | ip'aba     | mi'ba     |
+|  imperative | ip'ejo     | mi'jo     |
+
+## translation
+
+| en                      | SJa                        |
+| :---------------------- | :------------------------- |
+| i think, therefore i am | va omop'eba va al          |
+| know yourself           | ono vo sil'ejo             |
+| knowledge is power      | sil'in koto pa tikara nal  |
+| remember that you die   | na sin'am koto vo oboj'ejo |
