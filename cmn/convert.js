@@ -37,8 +37,6 @@ const convertAtone = atone =>
     .replace(/^y/, "i")
     .replace(/^w/, "u")
 
-
-    .replace(/ï/, "ii")
     .replace(/ü/, "y")
 
     .replace(/ao/, "au")
@@ -46,6 +44,8 @@ const convertAtone = atone =>
     .replace(/oŋ/, "uŋ")
     .replace(/o/, "e")
     .replace(/(?<=[iyu])e(?=[iuŋn])/, "")
+
+    .replace(/ï/, "ii")
   ;
 
 const convertChar = (c, pinyin) => {
