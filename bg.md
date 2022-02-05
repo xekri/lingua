@@ -8,8 +8,8 @@ bulgarian orthography reform
 
 ### щ, ђ
 
-- `щ` which does not originate from `*tj` → `шт`
-- `жд` which originates from `*dj` → `ђ`
+- `щ` which does not originate from OCS `*tj` → `шт`
+- `жд` which originates from OCS `*dj` → `ђ`
 
 | current | new  |
 | :------ | :--- |
@@ -18,7 +18,7 @@ bulgarian orthography reform
 
 ### ѣ
 
-- `я` and `е` which alternates → `ѣ`
+- `я` and `е` which alternate → `ѣ`
 
 | current             | new           |
 | :------------------ | :------------ |
@@ -29,7 +29,7 @@ bulgarian orthography reform
 
 - after noun which requires soft suffixes → `ь`
 - after feminine noun which ends in consonant → `ь`
-- `е` and ∅ which alternates → `ь`
+- `е` and ∅ which alternate → `ь`
 
 | current                | new           |
 | :--------------------- | :------------ |
@@ -112,20 +112,74 @@ wseobƫa deklaraqija za pravata na ᶄoweka
 
 ## grammar
 
-### noun
+### declension
 
-### verb
+#### pronoun
+
+
+|      | N    | A    | D    |
+| ---: | :--- | :--- | :--- |
+|    i | аз   | мене | ми   |
+|   we | ние  | нас  | ни   |
+| thou | ти   | тебе | те   |
+|   ye | вие  | вас  | ви   |
+|   he | той  | него | му   |
+|   it | то   | =he  | =he  |
+|  she | тя   | нея  | ѝ    |
+| they | те   | тях  | тям  |
+| what | кой  | кого | кому |
+
+#### noun
+
+town (masculine, polysyllabic, hard)
+
+|      | Indef   | Def N     | Def A |
+| ---: | :------ | :-------- | :---- |
+|   Sg | град    | градът    | града |
+|   Pl | градове | градовете | =N    |
+
+horse (masculine, polysyllabic, soft)
+
+|      | Indef   | Def N     | Def A |
+| ---: | :------ | :-------- | :---- |
+|   Sg | огън    | огъньът   | огъня |
+|   Pl | огньове | огньовете | =N    |
+
+name (neuter, nasal)
+
+|      | Indef | Def     |
+| ---: | :---- | :------ |
+|   Sg | имѧ   | имѧто   |
+|   Pl | имена | имената |
+
+
+book (feminine -a)
+
+|      | Indef | Def     |
+| ---: | :---- | :------ |
+|   Sg | книга | книгата |
+|   Pl | книги | книгите |
+
+bone (feminine, consonantal)
+
+|      | Indef  | Def      |
+| ---: | :----- | :------- |
+|   Sg | кость  | костьта  |
+|   Pl | костьи | костьите |
+
+
+### conjugation
 
 #### present
 
-|      | аз       | ти        | той  | ние       | вие        | те        |
-| :--- | :------- | :-------- | :--- | :-------- | :--------- | :-------- |
-| be   | съм      | си        | е    | сме       | сте        | сѫ        |
-| read | чет**ѫ** | чете**ш** | чете | чете**м** | чете**те** | чет**ѫт** |
+|      | аз   | ти    | той  | ние   | вие    | те    |
+| :--- | :--- | :---- | :--- | :---- | :----- | :---- |
+| be   | съм  | си    | е    | сме   | сте    | сѫ    |
+| read | четѫ | четеш | чете | четем | четете | четѫт |
 
 #### past
 
-|      | аз        | ти         | той        | ние         | вие         | те         |
-| :--- | :-------- | :--------- | :--------- | :---------- | :---------- | :--------- |
-| be   | б**ѣх**   | б**ѣше**   | б**ѣше**   | б**ѣхме**   | б**ѣхте**   | б**ѣхѫ**   |
-| read | чет**ѣх** | чет**ѣше** | чет**ѣше** | чет**ѣхме** | чет**ѣхте** | чет**ѣхѫ** |
+|      | аз    | ти     | той    | ние     | вие     | те     |
+| :--- | :---- | :----- | :----- | :------ | :------ | :----- |
+| be   | бѣх   | бѣше   | бѣше   | бѣхме   | бѣхте   | бѣхѫ   |
+| read | четѣх | четѣше | четѣше | четѣхме | четѣхте | четѣхѫ |

@@ -1,5 +1,3 @@
-const isCyrl = false;
-
 const convertWord = s =>
   [
     [/ch/g, "h"],
@@ -38,7 +36,15 @@ const convertWord = s =>
 
     [/(?<![iyeaouęąó^])jy/g, "i"],
     [/(?<![iyeaouęąó^])je/g, "ě"],
-  ].concat(isCyrl ? [
+  ]
+    .map(([x, y]) =>
+      [x, Array.isArray(y) ? y[mode] : y]
+    )
+    .reduce((acc, [x, y]) => acc.replace(x, y), s.normalize("NFC"))
+
+const convertWordCyrl = s =>
+  [
+    [/^y/g, "jy"],
     [/i/g, "jy"],
     [/ě/g, "je"],
 
@@ -87,7 +93,7 @@ const convertWord = s =>
 
     [/j/g, "ь"],
     [/'/g, "ъ"],
-  ] : [])
+  ]
     .map(([x, y]) =>
       [x, Array.isArray(y) ? y[mode] : y]
     )
@@ -99,13 +105,16 @@ const applyKase = {
   capital: s => s.slice(0, 1).toUpperCase() + s.slice(1),
 };
 
-const convert = s =>
+const convert = (s, cyrl) =>
   s.replace(/\p{L}+/ug, word => {
     let kase = Object.keys(applyKase).filter(kase => word == applyKase[kase](word));
     kase = kase == [] ? null : kase[0];
 
     word = convertWord(word.toLowerCase())
-    if (kase)
+    if (cyrl)
+      word = convertWordCyrl(word)
+    if (kase) {
       word = applyKase[kase](word)
+    }
     return word
   });
