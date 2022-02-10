@@ -1,6 +1,14 @@
 const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
   .toLowerCase()
 
+  .replace(/(?<=^[kcg])vi/, "\u116C")
+  .replace(/(?<=^[kcg])vei/, "\u1180")
+  .replace(/(?<=^[kcg])ve/, "\u117F")
+  .replace(/(?<=^[kcg])vai/, "\u116B")
+  .replace(/(?<=^[kcg])va/, "\u116A")
+
+  .replace(/^q$/, "ㅇ")
+
   .replace(/^k$/, "ㄱ")
   .replace(/^c$/, "ㄲ")
   .replace(/^g$/, "ㆁ")
@@ -16,24 +24,15 @@ const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
   .replace(/^p$/, "ㅂ")
   .replace(/^b$/, "ㅃ")
   .replace(/^m$/, "ㅁ")
-  .replace(/^v$/, "ㅱ")
 
-  .replace(/^q$/, "ㆆ")
-
-  /*
-  .replace(/^i$/, "ㅣ")
-  .replace(/^e$/, "ㅓ")
-  .replace(/^a$/, "ㅏ")
-  .replace(/^o$/, "ㅗ")
-  .replace(/^u$/, "ㅜ")
-  .replace(/^ji$/, "ㅣ")
-  .replace(/^je$/, "ㅓ")
-  .replace(/^ja$/, "ㅏ")
-  .replace(/^jo$/, "ㅗ")
-  .replace(/^ju$/, "ㅜ")
-  */
+  .replace(/^qv$/, "ㅎ")
+  .replace(/^v$/, "ㆅ")
 
   // intial
+  .replace(/^kv/, "<initial>\u112B")
+  .replace(/^cv/, "<initial>\u112C")
+  .replace(/^gv/, "<initial>\u111D")
+
   .replace(/^k/, "<initial>\u1100")
   .replace(/^c/, "<initial>\u1101")
   .replace(/^g/, "<initial>\u114C")
@@ -51,43 +50,30 @@ const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
   .replace(/^m/, "<initial>\u1106")
 
   //.replace(/^j/, "<initial>\u1140")
-  .replace(/^v/, "<initial>\u111D")
+  .replace(/^qv/, "<initial>\u111D")
+  .replace(/^v/, "<initial>\u1158")
 
-  .replace(/^q/, "<initial>\u1159")
-  .replace(/^(?=[a-z])/, "\u110B")
+  .replace(/^q/, "<initial>\u110B")
+  .replace(/^(?=[a-z])/, "\u1147")
   .replace(/<initial>/, "")
 
   // medial
 
-  .replace(/vei/, "\u1170")
-  .replace(/vai/, "\u118A")
-  .replace(/vi/, "\u1171")
-  .replace(/ve/, "\u116F")
-  .replace(/va/, "\u1189")
-
-  .replace(/jei/, "\u1168")
-  .replace(/jai/, "\u1164")
-  .replace(/joi/, "\u1188")
-  .replace(/jui/, "\u1194")
-
-  .replace(/ei/, "\u1166")
-  .replace(/ai/, "\u1162")
-  .replace(/oi/, "\u116C")
-  .replace(/ui/, "\u1171")
-
-  .replace(/jeu/, "\u117E")
-  .replace(/jau/, "\u11A4")
-
-  .replace(/iu/, "\u119B")
-  .replace(/eu/, "\u117B")
-  .replace(/au/, "\u1177")
-  .replace(/ou/, "\u1183")
+  .replace(/jej/, "\u1168")
+  .replace(/jaj/, "\u1164")
+  .replace(/joj/, "\u1188")
+  .replace(/juj/, "\u1194")
 
   .replace(/ji/, "\uD7C4")
   .replace(/je/, "\u1167")
   .replace(/ja/, "\u1163")
   .replace(/jo/, "\u116D")
   .replace(/ju/, "\u1172")
+
+  .replace(/ei/, "\u1166")
+  .replace(/ai/, "\u1162")
+  .replace(/oi/, "\u116C")
+  .replace(/ui/, "\u1171")
 
   .replace(/i/, "\u1175")
   .replace(/e/, "\u1165")
@@ -97,18 +83,23 @@ const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
 
   // terminal
   .replace(/k$/, "\u11A8")
+  .replace(/c$/, "\u11A8")
   .replace(/g$/, "\u11F0")
+
   .replace(/s$/, "\u11BA")
   .replace(/z$/, "\u11BB")
+  .replace(/l$/, "\u11AF")
+
   .replace(/t$/, "\u11AE")
   .replace(/d$/, "\uD7CD")
   .replace(/n$/, "\u11AB")
+
   .replace(/p$/, "\u11B8")
   .replace(/b$/, "\uD7E6")
   .replace(/m$/, "\u11B7")
-  .replace(/j$/, "\u11EB")
-  .replace(/l$/, "\u11AF")
-  .replace(/v$/, "\u11E2")
+
+  //.replace(/j$/, "\u11EB")
+  .replace(/v$/, "\u11C2")
 
   .normalize("NFC")
 );

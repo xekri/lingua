@@ -1,0 +1,250 @@
+\documentclass[]{jlreq}
+
+\usepackage[noto-otf,deluxe]{luatexja-preset}
+\setmainfont{Noto Serif Devanagari}
+\usepackage{multirow}
+\usepackage{float}
+
+\title{新日本語}
+\author{雪島 墨}
+\begin{document}
+\maketitle
+
+\section{表記}
+\subsection{ラテン字}
+\begin{table}[h]
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{ccccc}
+      あ & い & う & え & お \\
+      a  & i  & u  & e  & o
+    \end{tabular}
+    \caption{母音}
+  \end{minipage}%
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{r|ccccccccccc}
+         & あ                 & か & か゚                 & さ & た & な & は & ま                 & や                 & ら                 & わ                 \\
+      \hline
+      清 & \multirow{2}{*}{∅} & k  & \multirow{2}{*}{g} & s  & t  & n  & p  & \multirow{2}{*}{m} & \multirow{2}{*}{j} & \multirow{2}{*}{l} & \multirow{2}{*}{v} \\
+      濁 &                    & c  &                    & z  & d  & n  & b  &                    &                    &                    &
+    \end{tabular}
+    \caption{子音}
+  \end{minipage}
+\end{table}
+
+「g」は漢語の[ŋ]に用ゐる。
+
+\subsection{朝鮮字}
+\begin{table}[h]
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{r|ccccc}
+         & あ    & い & う & え & お \\
+      \hline
+      あ & 아    & 이 & 으 & 어 & 오 \\
+      や & 야    & ᄋퟄ & ᄋᆜ & 여 & 요 \\
+      わ & ㅘ ᆉ & ㅟ & ᆍ & ㅝ & ㅗ \\
+      わ & ᄋힹ    & 의 & ᄋᆖ & ᄋힺ & ᄋힼ
+    \end{tabular}
+    \caption{母音}
+  \end{minipage}%
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{r|ccccccccc}
+         & あ & か & か゚                  & さ & た & な                  & は & ま                  & ら                  \\
+      \hline
+      清 & ㅇ & ㄱ & \multirow{2}{*}{ㆁ} & ㅅ & ㄷ & \multirow{2}{*}{ㄴ} & ㅂ & \multirow{2}{*}{ㅁ} & \multirow{2}{*}{ㄹ} \\
+      濁 & ㆀ & ㄲ &                     & ㅆ & ㅃ &                     & ㅃ &                     &
+    \end{tabular}
+    \caption{子音}
+  \end{minipage}
+\end{table}
+
+\subsection{印度字}
+\begin{table}[h]
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{r|ccccc}
+         & あ & い & う & え & お \\
+      \hline
+      あ & ह  & हि & हु  & हे  & हो \\
+    \end{tabular}
+    \caption{母音}
+  \end{minipage}%
+  \begin{minipage}{.5\linewidth}\centering
+    \begin{tabular}{r|ccccccccccc}
+         & あ                 & か & か゚                 & さ & た & な                 & は & ま                 & や                 & ら                 & わ                 \\
+      \hline
+      清 & \multirow{2}{*}{ह} & क  & \multirow{2}{*}{ङ} & ट  & त  & \multirow{2}{*}{न} & प  & \multirow{2}{*}{म} & \multirow{2}{*}{य} & \multirow{2}{*}{ल} & \multirow{2}{*}{व} \\
+      濁 &                    & ग  &                    & ड  & द  &                    & ब  &                    &
+    \end{tabular}
+    \caption{子音}
+  \end{minipage}
+\end{table}
+
+\section{動詞}
+
+動詞は必ず助名詞を伴ふ。
+
+\begin{table}[h]\centering
+  \begin{tabular}{cl}
+    否定   & -az-   \\
+    可能   & -lal-  \\
+    使役   & -sas-  \\
+    推量   & -am-   \\
+    過去   & -ikel- \\
+    完了   & -in-   \\
+    存続   & -ite-  \\
+    反復   & -ap-   \\
+    假定   & -aba   \\
+    理由   & -leba  \\
+    命令   & -ejo   \\
+    繼續   & -i     \\
+    終止   & -lu    \\
+    名詞化 & -laku
+  \end{tabular}
+  \caption{助動詞}
+\end{table}
+
+\begin{table}[h]\centering
+  \begin{tabular}{llll}
+    書かない   & kak-az-u   & 見ず     & mi-z-u   \\
+    書かれる   & kak-al-u   & 見られる & mi-lal-u \\
+    書かせる   & kak-as-u   & 見させる & mi-sas-u \\
+    書かむ     & kak-am-u   & 見む     & mi-m-u   \\
+    書いた     & kak-in-u   & 見た     & mi-n-u   \\
+    書いてゐる & kak-ite-lu & 見てゐる & mi-te-lu \\
+    書けば     & kak-aba    & 見れば   & mi-ba    \\
+    書くから   & kak-eba    & 見るから & mi-leba  \\
+    書けよ     & kak-ejo    & 見よ     & mi-jo    \\
+    書く       & kak-u      & 見る     & mi-lu    \\
+    書き       & kak-i      & 見       & mi       \\
+    書く事     & kak-aku    & 見る事   & mi-laku
+  \end{tabular}
+  \caption{助動詞の例}
+\end{table}
+
+\begin{table}[h]\centering
+  \begin{tabular}{lll}
+    口語                 & 分析                    & 新日本語         \\
+    書いてゐなかったから & kak-itevi-nakal-ta-kala & kak-ite-z-in-aba
+  \end{tabular}
+  \caption{助動詞の長い例}
+\end{table}
+
+\section{名詞}
+
+名詞は必ず助名詞を伴ふ。
+
+\begin{table}[h]\centering
+  \begin{tabular}{cll}
+    意味   & 助名詞 & 後續   \\
+    \hline
+    主體   & ∅      & ∅      \\
+    客體   & vo     & ∅      \\
+    所在   & ni     & ∅      \\
+    始點   & joli   & ∅      \\
+    終點   & pe     & ∅      \\
+    所有   & ca     & 名詞   \\
+    動詞化 & nal-   & 助動詞 \\
+  \end{tabular}
+  \caption{助名詞}
+\end{table}
+
+\section{助詞}
+
+\begin{tabular}{ll}
+  pa   & \\
+  mo   & \\
+  koso & \\
+  ka   &
+\end{tabular}
+
+\section{數詞}
+
+數詞はTODO。
+
+\begin{table}[h]\centering
+  \begin{tabular}{llllllllllll}
+    0  & 1  & 2  & 3  & 4  & 5  & 6  & 7  & 8  & 9  & 1000 \\
+    零 & 一 & 二 & 三 & 四 & 五 & 六 & 七 & 八 & 九 & 千   \\
+  \end{tabular}
+  \caption{數詞}
+\end{table}
+
+合成數詞は一桁づつ讀むか、千を讀み省略する。
+名詞を修飾する時は「個の」を插む。
+
+\begin{table}[h]\centering
+  \begin{tabular}{ll}
+    2         & 二                               \\
+    123       & 一二三                           \\
+    1000      & 一零零零 または 千               \\
+    1,000,000 & 一零零零零零零 または 千千       \\
+    1,020,003 & 一零二零零零三 または 千二〇千三 \\
+    2人       & 二個の人
+  \end{tabular}
+  \caption{數詞の例}
+\end{table}
+
+\section{語彙}
+
+\begin{table}[h]\centering
+  \begin{tabular}{ll}
+    va     & 私     \\
+    na     & 汝     \\
+    ka     & 彼, 其 \\
+    ono    & 己     \\
+    ta     & 誰, 何 \\
+    s-     & する   \\
+    kul-   & 來る   \\
+    jokal- & 良い
+  \end{tabular}
+  \caption{語彙}
+\end{table}
+
+\section{比較}
+
+\begin{table}[h]\centering
+  \begin{tabular}{r|lllllll|lll}
+    文語     & k                           & sik                        & L變 & 四段 & N變 & S變 & K變 & I二段 & E二段 & 母音幹 \\
+    新日本語 & \multicolumn{7}{c|}{子音幹} & \multicolumn{3}{c}{母音幹}
+  \end{tabular}
+\end{table}
+
+\begin{table}[h]\centering
+  \begin{tabular}{rr|llllll}
+           & 語幹  & 未然                & 命令 & 連用                & 終止 & 連體                & 已然                  \\
+    \hline
+    k      &       & \multirow{2}{*}{ku} &      & \multirow{2}{*}{ku} & si   & \multirow{2}{*}{ki} & \multirow{2}{*}{kele} \\
+    sik    & ...si &                     &      &                     & ∅    &                     &                       \\
+    L變    & ...al & a                   & e    & i                   & i    & u                   & e                     \\
+    四段   & ...C  & a                   & e    & i                   & u    & u                   & ule                   \\
+    N段    & ...n  & a                   & e    & i                   & u    & ulu                 & ule                   \\
+    S變    & ...s  & e                   & e    & i                   & u    & ulu                 & ule                   \\
+    K變    & ...k  & o                   & o    & i                   & u    & ulu                 & ule                   \\
+    子音幹 & ...C  & a                   & a    & i                   & u    & u                   & u
+  \end{tabular}
+  \caption{子音幹の比較}
+\end{table}
+
+\begin{table}[h]\centering
+  \begin{tabular}{rr|llllll}
+           & 語幹 & 未然 & 命令 & 連用 & 終止 & 連體 & 已然 \\
+    \hline
+    I二段  & ...C & i    & i    & e    & u    & ulu  & ule  \\
+    E二段  & ...C & e    & e    & i    & u    & ulu  & ule  \\
+    一段   & ...V & ∅    & ∅    & ∅    & lu   & lu   & le   \\
+    母音幹 & ...C & ∅    & ∅    & ∅    & lu   & lu   & lu   \\
+  \end{tabular}
+  \caption{母音幹類の比較}
+\end{table}
+
+\section{表記}
+
+\section{例}
+
+\subsection{世界人權宣言}
+すべての人間は、生れながらにして自由であり、かつ、尊嚴と權利とについて平等である。\\
+人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。
+
+ta no pito mo qum-al-inacala 自由 nal-i, katu 尊嚴 to 權利 ni tuk-i pitosikal-u.\\
+pito 理性 to 良心 vo sazuk-al-i, tacap-i palakala ca kokolo vo mot-i 行動s-az-al-az.
+
+\end{document}
