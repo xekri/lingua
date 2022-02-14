@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+body {
+  font-family: "Noto Sans Display";
+}
+
 textarea {
   width: 50%;
   height: 20em;
@@ -10,4 +14,28 @@ textarea {
 
 .textareas {
   display: flex;
+}
+
+table:not(.no-left) tr th:first-child {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table:not(.no-top) tr:first-child th {
+  text-align: right;
+  writing-mode: vertical-lr;
+}
+
+table tr.v th {
+  vertical-align: bottom;
+  writing-mode: vertical-lr;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: .5em
 }

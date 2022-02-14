@@ -75,6 +75,17 @@ const convert = s => s.replace(/[A-Z][a-z]*/g, syl => syl
   .replace(/oi/, "\u116C")
   .replace(/ui/, "\u1171")
 
+  .replace(/iu/, "\u119B")
+  .replace(/eu/, "\u117B")
+  .replace(/au/, "\u1177")
+  .replace(/ou/, "\u1183")
+
+  .replace(/vi/, "\u116C")
+  .replace(/ve/, "\u117F")
+  .replace(/va/, "\u116A")
+  .replace(/vo/, "\u1182")
+  .replace(/vu/, "\u1183")
+
   .replace(/i/, "\u1175")
   .replace(/e/, "\u1165")
   .replace(/a/, "\u1161")
