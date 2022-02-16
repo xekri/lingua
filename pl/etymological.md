@@ -6,7 +6,7 @@
 | :----: | :-------- | :------- |
 |  [h]   | ch        | h        |
 |  [ts]  | c         | ķ, ț     |
-|  [dz]  | dz        | ģ, ḑ     |
+|  [dz]  | dz        | ģ, d̦     |
 | [s, ɕ] | s         | s, š, ȟj |
 | [z, ʑ] | z         | z, ǧ     |
 |  [tʂ]  | cz        | ǩ, ť     |
@@ -38,7 +38,7 @@ assume `i=jy, ě=je`
 | st - s(j)tj | prosty   | uprości    | prosty   | uprosti  |
 | zd - z(j)dj | bruzda   | bruździe   | bruzda   | bruzdě   |
 |    t - ț    | strata   | stracę     | strata   | strațę   |
-|    d - ḑ    | chód     | chodzę     | hód      | hóḑę     |
+|    d - d̦    | chód     | chodzę     | hód      | hód̦ę     |
 |    s - š    | wynos    | wynoszę    | vynos    | vynošę   |
 |    z - ž    | woz      | wożę       | voz      | vožę     |
 |   st - šť   | prosty   | uproszczę  | prosty   | uprošťę  |
@@ -74,11 +74,42 @@ assume `i=jy, ě=je`
     <td>
       po-vȟehna dekljarațja prav ǩlověka
       <br>artykul 1
-      <br>vȟysķy ljudje roḑą sję voljni i róvni pod vzglję́dem svej godnosti i svyh prav.
+      <br>vȟysķy ljudje rod̦ą sję voljni i róvni pod vzglję́dem svej godnosti i svyh prav.
       są oni obdarěni rozumem i suměněm i povinni postępovatj v-obeț innyh v duhu braterstva.
     </td>
   </tr>
 </table>
+
+## declension
+
+### noun
+
+plural {locative, dative, instrumental} suffixes are always same.
+
+| Pl L |    D |     I |
+| ---: | ---: | ----: |
+|  -ah |  -om | -amji |
+
+|         | stem              | Sg  G |    A |        N |      V |    L |     D |    I | Pl G |    A |   N=V |
+| ------: | :---------------- | ----: | ---: | -------: | -----: | ---: | ----: | ---: | ---: | ---: | ----: |
+|     boy | hlopëķ-           |    -a |   =G |       -∅ | hlopǩe |   -u |    =L |  -em |  -óv |   =G |    -i |
+|  father | ojț-              |    -a |   =G |   ojtjeķ |   ojťe |   -u |    =L |  -em |  -óv |   =G | -óvje |
+| student | uǩenj-            |    -a |   =G |       -∅ |     =L |   -u | -óvji |  -em |  -óv |   =G | -óvje |
+|    pole | polak-            |    -a |   =G |       -∅ |     =L |   -u | -óvji | -jem |  -óv |   =G |   -ʻi |
+|   czech | ǩeh-              |    -a |   =G |       -∅ |     =L |   -u | -óvji |  -em |  -óv |   =G |   -ʻi |
+| teacher | nauǩitielj-       |    -a |   =G |       -∅ |     =L |   -u | -óvji |  -em |   -i |   =G |    -e |
+|  pigeon | goléñbj-          |    -a |   =G |       -∅ |     =L |   -u | -óvji |  -em |   -i |   =N |    -e |
+|    horn | róg-              |    -u |   =N |       -∅ |     =L |   -u | -óvji | -jem |  -óv |   =N |   -ji |
+|    club | klub-             |    -u |   =N |       -∅ |     =L |  -je | -óvji |  -em |  -óv |   =N |    -i |
+|   tooth | zéñb-             |    -a |   =N |       -∅ |     =L |  -je | -óvji |  -em |  -óv |   =N |    -i |
+|    meat | mjeñs-            |    -a |   =N |       -o |     =N |  -je |    -u |  -em |   -∅ |   =N |    -a |
+|    town | měst-             |    -a |   =N |       -o |     =N |  -je |    -u |  -em |   -∅ |   =N |    -a |
+|  animal | zvjirjéñt{j, ∅}-  |    -a |   =N | zvjirjéñ |     =N |   -u |    =L |  -em |   -∅ |   =N |    -a |
+|    name | imj{e, o}n{j, ∅}- |    -a |   =N |    imjeñ |     =N |   -u |    =L |  -em |   -∅ |   =N |    -a |
+|     map | map-              |    -i |  -eñ |       -a |     -o |  -je |    =L |  -añ |   -∅ |   =N |    -i |
+|    star | gvězd-            |    -i |  -eñ |       -a |     -o |  -je |    =L |  -añ |   -∅ |   =N |    -i |
+|   night | noķ-              |    -i |   =N |       -∅ |     =G |   =G |    =G |  -añ |   -i |   =N |    -e |
+| thought | mislj-            |    -i |   =N |       -∅ |     =G |   =G |    =G |  -añ |   -i |   =N |    -e |
 
 ## reference
 

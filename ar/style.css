@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+
+body {
+  font-family: "Noto Sans Devanagari", "Noto Sans Display";
+}
+
+
+tr th:first-child {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: .5em
+}

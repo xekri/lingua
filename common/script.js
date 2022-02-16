@@ -1,5 +1,5 @@
-const convertWord = (xss, s) =>
-  xss
+const convertWord = (rules, s) =>
+  rules
     .reduce((acc, [x, y]) =>
       acc.replace(x, y), s.normalize("NFC")
     )
@@ -28,10 +28,28 @@ const getKase = s => {
   return null;
 }
 
-const convert = (xss, s) =>
-  s.replace(/\p{L}+/ug, word =>
+const convert = (regexp, rules, s) =>
+  s.replace(regexp, word =>
     applyKase(
       getKase(word),
-      convertWord(xss, word.toLowerCase())
+      convertWord(rules, word.toLowerCase())
     )
   );
+
+const converter = (regexp, rules) =>
+  document.addEventListener("DOMContentLoaded", () => {
+    const textareas = document.getElementsByTagName("textarea");
+
+    const onInput = () => {
+      textareas[1].value = convert(
+        regexp,
+        rules,
+        textareas[0].value
+      );
+    };
+
+    for (const e of document.getElementsByClassName("trigger"))
+      e.addEventListener("input", onInput)
+
+    onInput();
+  });
