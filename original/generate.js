@@ -1,10 +1,11 @@
 const fs = require('fs');
 
-const vs = 'A I U AA II UU'.split(' ');
-const cs = 'I R L U O H Z Ẓ V E X S̩ S F Ꝗ Ꝁ Ṯ Ŧ Ᵽ Q K Ṯ T P G C Ḍ D B W Y Ṇ N M'.split(' ')
+const vs = 'a i u ą į ų y j v'.split(' ');
+const cs = 'n j r l v o h ẓ z w e x s̩ s f ꝗ ꝁ ṯ ŧ ᵽ q k ṭ t p g c ḍ d b'.split(' ')
 
-fs.writeFileSync('./syllable.txt',
-  cs.flatMap(c => vs.flatMap(v => c + v))
-    .filter(it => !/(.)\1\1|^(.)\2$/.test(it))
-    .join('\n')
-);
+const syllables = cs.flatMap(c => vs.flatMap(v => c + v))
+//.filter(it => !/ /.test(it))
+fs.writeFileSync('./syllable.txt', syllables.join('\n'));
+
+const syllable2 = syllables.flatMap(s0 => syllables.flatMap(s1 => s0 + s1));
+fs.writeFileSync('./syllable2.txt', syllable2.join('\n'));

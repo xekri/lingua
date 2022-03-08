@@ -1,12 +1,12 @@
 const xss = [
-	["i", "ǐ"],
-	["ı", "î"],
-	["a", "â"],
-	["e", "ǎ"],
-	["o", "ô"],
-	["ö", "ǒ"],
-	["u", "û"],
-	["ü", "ǔ"],
+	["ı", "í"],
+	["i", "ì"],
+	["a", "á"],
+	["e", "à"],
+	["o", "ó"],
+	["ö", "ò"],
+	["u", "ú"],
+	["ü", "ù"],
 ];
 
 const replaceLowerAndUpperWithTable = (s, xss) =>
@@ -22,21 +22,21 @@ const convert = s =>
 			.replace(new RegExp(x, "g"), y)
 			.replace(new RegExp(x.toLocaleUpperCase("TR"), "g"), y.toUpperCase()),
 		s.normalize("NFC"))
-		.replace(/[a-zçşğâôîûǎǒǐǔ']+/gi, word => {
+		.replace(/[a-zçşğàáìíòóùú']+/gi, word => {
 			let r = "";
 			let state = 0;
 			for (const c of word) {
 				const stateNew =
-					/[âôîû]/i.test(c) ? 0 :
-						/[ǎǒǐǔ]/i.test(c) ? 1 :
+					/[áíóú]/i.test(c) ? 0 :
+						/[àìòù]/i.test(c) ? 1 :
 							state;
 
 				if (state == stateNew)
 					r += replaceLowerAndUpperWithTable(c, [
-						["[âǎ]", "a"],
-						["[ôǒ]", "o"],
-						["[îǐ]", "i"],
-						["[ûǔ]", "u"],
+						["[áà]", "a"],
+						["[óò]", "o"],
+						["[íì]", "i"],
+						["[úù]", "u"],
 					]);
 				else {
 					r += c;
