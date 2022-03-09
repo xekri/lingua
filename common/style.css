@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 
 body {
-  font-family: "Noto Sans Display";
+  font-family: 'Noto Sans Display';
 }
 
 textarea {
@@ -10,6 +10,7 @@ textarea {
   font: inherit;
   resize: none;
   outline: none;
+  padding: 1em;
 }
 
 .textareas {
@@ -38,4 +39,9 @@ th,
 td {
   border: 1px solid black;
   padding: .5em
+}
+
+.tables {
+  display: flex;
+  justify-content: space-evenly;
 }

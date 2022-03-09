@@ -1,27 +1,40 @@
 <head>
+  <title>hebrew</title>
   <link rel="stylesheet" href="../common/style.css" />
-
-  <script src="convert.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const [t0, t1] = document.getElementsByTagName("textarea");
-      const f = () => {
-        t1.value = convert(t0.value);
-      };
-      t0.addEventListener("input", f);
-      f();
-    });
-  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="../common/script.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
   <a href="https://unicode.org/udhr/d/udhr_heb.html">UDHR</a>
   <div class="textareas">
-    <textarea dir="rtl">
-הכרזה לכל באי עולם בדבר זכויות האדם
+    <textarea lang="he" dir='rtl'>הכרזה לכל באי עולם בדבר זכויות האדם
+
 סעיף א.
 כל בני אדם נולדו בני חורין ושווים בערכם ובזכויותיהם. כולם חוננו בתבונה ובמצפון, לפיכך חובה עליהם לנהוג איש ברעהו ברוח של אחוה.
-</textarea>
+
+סעיף ב.
+כל אדם זכאי לזכויות ולחרויות שנקבעו בהכרזש זו ללא הפליה כלשהיא מטעמי גזע, צבע, מין, לשון, דח, דעה פוליטית או דעה בבעיות אחרות, בגלל מוצא לאומי או חברתי, קנין, לידה או מעמד אחר.
+
+גדולה מזו, לא יופלה אדם על פי מעמדה המדיני, על פי סמכותה או על פי מעמדה הבינלאומי של המדינה או הארץ שאליה הוא שייך, דין שהארץ היא עצמאית, ובין שהיא נתונה לנאמנות, בין שהיא נטולת שלטון עצמי ובין שריבונותה מוגבלת כל הגבלה אחרת.
+
+סעיף ג.
+כל אדם יש לו הזכות לחיים, לחרות ולבטחון אישי.
+    </textarea>
     <textarea></textarea>
+  </div>
+
+  <div class="tables">
+    <table class="no-top">
+      <tr>
+        <th>arab</th>
+      </tr>
+      <tr>
+        <th>latn</th>
+      </tr>
+    </table>
+
+    <p>see <a href="../ar">arabic</a>.</p>
   </div>
 </body>

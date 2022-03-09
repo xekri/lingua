@@ -1,4 +1,4 @@
-converter(/[\u0600-\u06FF]+/ug, [
+const convert_ = converter(/\p{sc=Arabic}+/ug, [
   [/[إأ]/g, x => x.normalize("NFD")],
 
   [/ا/g, "a"],
@@ -50,10 +50,16 @@ converter(/[\u0600-\u06FF]+/ug, [
   [/uv(?![ạuiāūīąųį])/g, "ū"],
   [/ij(?![ạuiāūīąųį])/g, "ī"],
 
-  [/(?<=ạ)v(?![ạuiāūīąųį])/g, "u"],
-  [/(?<=ạ)j(?![ạuiāūīąųį])/g, "i"],
-
   [/([^ạuiāūīąųį])([ạuiāūīąųį]*)\u0651/g, "$1$1"],
 
   [/،/g, ","],
 ]);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const trs = document.querySelectorAll('table tr');
+  ['ا', 'ب', 'ج', 'د', 'ذ', 'ه', 'و', 'ز', 'ح', 'خ', 'ط', 'ظ', 'ي', 'ك', 'ل', 'م', 'ن', 'ع', 'غ', 'ف', 'ص', 'ض', 'ق', 'ر', 'س', 'ش', 'ت', 'ث', 'ة',]
+    .forEach((x) => {
+      trs[0].innerHTML += `<td>${x}</td>`;
+      trs[1].innerHTML += `<td>${convert_(x)}</td>`;
+    })
+});

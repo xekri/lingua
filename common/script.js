@@ -36,7 +36,7 @@ const convert = (regexp, rules, s) =>
     )
   );
 
-const converter = (regexp, rules) =>
+const converter = (regexp, rules) => {
   document.addEventListener("DOMContentLoaded", () => {
     const textareas = document.getElementsByTagName("textarea");
 
@@ -53,3 +53,5 @@ const converter = (regexp, rules) =>
 
     onInput();
   });
+  return x => convert(regexp, rules, x);
+};
