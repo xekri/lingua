@@ -1,9 +1,9 @@
 const convertWord = (rules, s) =>
   rules
     .reduce((acc, [x, y]) =>
-      acc.replace(x, y), s.normalize("NFC")
+      acc.replace(x, y), s.normalize("NFKC")
     )
-    .normalize("NFC");
+    .normalize("NFKC");
 
 const applyKase = (kase, s) => {
   switch (kase) {

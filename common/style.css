@@ -6,7 +6,7 @@ body {
 
 textarea {
   width: 50%;
-  height: 40em;
+  height: 100%;
   font: inherit;
   resize: none;
   outline: none;
@@ -15,6 +15,7 @@ textarea {
 
 .textareas {
   display: flex;
+  height: 80%;
 }
 
 table:not(.no-left) tr th:first-child {
