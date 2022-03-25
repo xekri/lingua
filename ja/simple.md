@@ -1,8 +1,11 @@
+in þis document, i use no article.
+
 # simplified japanese grammar
 
-this document introduces the grammar of an artificial dialect made by the author based on classical and modern japanese.
+þis document introduceþ grammar of *simplified japanese* (SJp).
+it is artificial dialect which auþor made, based on classical and modern japanese.
 
-## phonology, orthography
+## orþography
 
 - vowels: i, e, a, o, u
 - consonants:
@@ -10,100 +13,87 @@ this document introduces the grammar of an artificial dialect made by the author
   - c, z, d, b
   - j, n, l, m, v
 
-|      | い    | え    | あ       | お    | う    | あ   | か   | が   | か゚  | さ   | ざ   | や   | た   | だ   | な   | ら   | は   | ば   | ま   | わ   |
-| ---: | :---- | :---- | :------- | :---- | :---- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| latn | I     | E     | A        | O     | U     | Q    | K    | C    | G    | S    | Z    | J    | T    | D    | N    | L    | P    | B    | M    | V    |
-| cyrl | И     | Є     | А        | О     | У     | Ҁ    | К    | Г    | Ӈ    | С    | З    | Й    | Т    | Д    | Н    | Л    | П    | Б    | М    | Ў    |
-| hang | ㅣ ㅟ | ㅓ ㅝ | ㅑ ㅏ ㅘ | ㅛ ㅗ | ㅠ ㅜ |      | ㄱ   | ㄲ   | ㅇ   | ㅅ   | ㅆ   | ㅿ   | ㄷ   | ㄸ   | ㄴ   | ㄹ   | ㅂ   | ㅃ   | ㅁ   | ㅱ   |
+|      | い   | え   | あ   | お   | う   | ∅    | か   | が   | か゚  | さ   | ざ   | や   | た   | だ   | な   | ら   | は   | ば   | ま   | わ   |
+| ---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| latn | I    | E    | A    | O    | U    | Q    | K    | C    | G    | S    | Z    | J    | T    | D    | N    | L    | P    | B    | M    | V    |
 
-## nominative, conclusive, consonantal verb
+## nominative, accusative, conclusive, consonantal verb, vocalic verb
 
 ```
-neko aluk u.
-    a cat walks.
+neko qajum.
+    cat walks.
+pito neko vo mi'l.
+    person seeþ cat.
 ```
 
-| word | type          | meaning      |
-| :--- | :------------ | :----------- |
-| neko | noun          | cat          |
-| aluk | verb          | walk         |
-| (l)u | verbal suffix | (conclusive) |
+| word  | type         | meaning      |
+| :---- | :----------- | :----------- |
+| neko  | noun         | cat          |
+| qajum | verb         | walk         |
+| pito  | noun         | person       |
+| miq   | verb         | look, see    |
+| vo    | postposition | (accusative) |
+| '(l)  | auxiliary    | (conclusive) |
 
 - *nominative* (Nom)
-  - is a case for subject.
-  - has no postposition.
-- *conclusive*
-  - is a form of a verb used as a indicative predicate.
-- in every sentence, the predicate is in the final position.
-- for verbal suffixes,
-  - let C, C0 and C1 be consonants. let V, V0 and V1 be vowels
-  - C0 (C1)V becomes C0 V
-  - V0' (V1)C becomes V0'C
-
-## accusative
-
-```
-pito neko vo mi'lu.
-    a person sees a cat.
-```
-
-| word | type         | meaning      |
-| :--- | :----------- | :----------- |
-| pito | noun         | person       |
-| mi'  | verb         | look, see    |
-| vo   | postposition | (accusative) |
-
+  - is case for subject.
+  - requireþ zero nominal suffix.
 - *accusative* (Acc)
-  - is a case for direct object.
-  - has a postposition `vo`.
+  - is case for direct object.
+  - requireþ nominal suffix `vo`.
+- every sentence haþ one predicate in its final position.
+- every verb endeþ in consonant letter.
+- *conlusive*
+  - is verbal form used as predicate and nominal modifer.
+  - coclusive of Q-terminated verb `{x}q` is `{x}'l`
+- nominal modifer comeþ before noun which it modifieþ
 
 ## genitive
 
 ```
-neko ca kove vo kik u
-  (some one) hears voice of a cat
+neko ca kove vo kik
+  (some one) heareþ voice of cat
 ```
 
-| word | type         | meaning      |
-| :--- | :----------- | :----------- |
-| kove | noun         | voice        |
-| kik  | verb         | listen, hear |
-| ca   | postposition | (genitive)   |
+| word | type           | meaning      |
+| :--- | :------------- | :----------- |
+| kove | noun           | voice        |
+| kik  | verb           | listen, hear |
+| ca   | nominal suffix | (genitive)   |
 
 - *genitive* (Gen)
-  - is a form of a noun used to qualify another noun
-  - means various meaning but the main one is posession.
-  - has a postposition `ca`
-- to make a noun qualify another, use a construction [Gen of qualifying × qualified].
+  - is nominal form for nominal modifier.
+  - meaneþ various meaning but main one is posession.
+  - requireþ nominal suffix `ca`
 
 ## pronoun, copula
 
 ```
-ka va ca neko nal u.
-    it is my cat.
+ka va ca neko nal.
+    it is cat of me.
 ```
 
-| word | type               | meaning |
-| :--- | :----------------- | :------ |
-| nal  | postposition, verb | be      |
+| word | type                 | meaning |
+| :--- | :------------------- | :------ |
+| nal  | nominal sufiix, verb | be      |
 
-| i    | thou | he, she, it | who, what | self  |
+| i    | þou  | he, she, it | who, what | self  |
 | :--- | :--- | :---------- | :-------- | :---- |
 | *va* | *na* | *ka*        | *ta*      | *ono* |
 
-- to link two nouns, use a construction [Nom × Nom × `nal`]
+- `nal` changeþ noun to verb meaning ‹to be {noun}›.
 
 ## negative, volition, perfect, progress
 
 ```
-pito juk az u.
-    a person does not go.
-neko juk am u.
-    a cat will go.
-pito juk in u.
-    a person has gone.
-neko juk itel u.
-    a cat is going.
+pito juk az.
+    person doþ not go.
+neko juk am.
+    cat will go.
+pito juk in.
+    person haþ gone.
+neko juk itel.
+    cat is going.
 ```
 
 | word   | type                 | meaning           |
@@ -114,18 +104,20 @@ neko juk itel u.
 | (i)n   | verbal suffix & verb | did, have done    |
 | (i)tel | verbal suffix & verb | be doing          |
 
-- `am` can express various meaning. for example, `juk am` can mean:
-  - i will go (intention)
-  - someone will go (inference)
+- initial vowel of verbal suffix dropeþ after vocalic verb
+  - `miq`+`(a)z`=`mi'z`
+- `am` may express various meaning. for example, `juk am` can mean:
+  - i shall go (intention)
+  - someone shall go (inference)
   - let us go (suggestion)
 
 ## potential, obligative
 
 ```
-pito tob al az u.
+pito tob al az.
     human can not fly.
 pito sin az al az.
-    human must die.
+    human must die .
 ```
 
 | word  | type | meaning   |
@@ -134,25 +126,26 @@ pito sin az al az.
 | tob   | verb | fly, jump |
 | (l)al | verb | may, can  |
 
-must = not may not
+- must = not may not
+- initial consonant of verbal suffix dropeþ after consonantal verb
 
 ## dative, locative, ablative
 
 ```
-neko pe esa vo jal u.
-    (someone) gives food to a cat.
-ipe ni jok-al neko al u.
-    a good cat exists in a house.
-ipe joli soto pe id u.
-    (someone) goes out of a house.
+neko pe esa vo jal.
+    (someone) giveþ food to cat.
+qipe ni jok-al neko qal.
+    good cat is in house.
+qipe joli soto pe qid.
+    (someone) goþ out of house.
 ```
 
 | word   | type | meaning    |
 | :----- | :--- | :--------- |
 | jal    | verb | give, send |
-| ipe    | noun | house      |
+| qipe   | noun | house      |
 | jok-al | verb | be good    |
-| id     | verb | exit       |
+| qid    | verb | exit       |
 
 |           case | postposition | meaning             |
 | -------------: | :----------- | :------------------ |
@@ -160,26 +153,24 @@ ipe joli soto pe id u.
 | locative (Loc) | ni           | time-space position |
 | ablative (Abl) | joli         | origin of action    |
 
-## adjective
+## modify by clause
 
 ```
-miti ni juk ital u neko vo mi'n u.
-  i saw a cat going on a road.
+miti ni juk itel neko vo mi'n.
+  i saw cat which was going on road.
 ```
 
 | word | type | meaning |
 | :--- | :--- | :------ |
 | miti | noun | road    |
 
-- to make a verb or a sentence qualify a noun, use a construction [conclusive × noun]
-
 ## conditional, rational, imperative
 
 ```
-neko kul aba pito vem u.
-    a person smiles if a cat comes.
-neko kul eba pito vem u.
-    a person smiles because a cat comes.
+neko kul aba pito vem.
+    person smileþ if cat comes.
+neko kul eba pito vem.
+    person smileþ because cat comes.
 neko kul ejo.
     o cat, come.
 ```
@@ -198,10 +189,10 @@ neko kul ejo.
 ## compound, successive
 
 ```
-neko tob i kul u.
-    a cat comes jumping.
-neko tob ite kul u.
-    a cat jumps then comes.
+neko tob i kul.
+    cat comesþ jumping.
+neko tob ite kul.
+    cat jumpeþ þen comes.
 ```
 
 | verbal suffix | meaning    |
@@ -209,35 +200,59 @@ neko tob ite kul u.
 | (i)           | compound   |
 | (i)te         | successive |
 
-- *compound* is used to make a new meaning from two verbs.
+- *compound* is used to make new meaning from two verbs.
   - `kup` eat
   - `vop` end
-  - `kup i vop u` end eating
-- *successive* is used to express a succession of multiple action.
-  - `kup'ite kul` eat then come
+  - `kup i vop` end eating
+- *successive* is used to express succession of multiple action.
+  - `kup'ite kul` eat þen come
 
 ## summary of verbal suffixes
 
-|             |        | ip (say) | mi (see) |
-| ----------: | :----- | :------- | :------- |
-|    negative | (a)z   | ip az    | mi'z     |
-|  volitional | (a)m   | ip am    | mi'm     |
-|  perfective | (i)n   | ip in    | mi'n     |
-| progressive | (i)tel | ip itel  | mi'tel   |
-|   potential | (l)al  | ip al    | mi'lal   |
-|   conlusive | (l)u   | ip u     | mi'lu    |
-|    compound | (i)    | ip i     | mi       |
-|  successive | (i)te  | ip ite   | mi'te    |
-|    rational | (l)eba | ip eba   | mi'leba  |
-| conditional | (a)ba  | ip aba   | mi'ba    |
-|  imperative | (e)jo  | ip ejo   | mi'jo    |
-|      gerund | (l)aku | ip aku   | mi'laku  |
+|             |        | qip (say) | miq (see) |
+| ----------: | :----- | :-------- | :-------- |
+|   conlusive | (l)u   | qip       | mi'l      |
+|    negative | (a)z   | qip az    | mi'z      |
+|  volitional | (a)m   | qip am    | mi'm      |
+|  perfective | (i)n   | qip in    | mi'n      |
+| progressive | (i)tel | qip itel  | mi'tel    |
+|   potential | (l)al  | qip al    | mi'lal    |
+|    compound | (i)    | qip i     | mi        |
+|  successive | (i)te  | qip ite   | mi'te     |
+|    rational | (l)eba | qip eba   | mi'leba   |
+| conditional | (a)ba  | qip aba   | mi'ba     |
+|  imperative | (e)jo  | qip ejo   | mi'jo     |
+|      gerund | (l)aku | qip aku   | mi'laku   |
 
 ## translation
 
-| en                     | SJa                          |
-| :--------------------- | :--------------------------- |
-| i think therefore i am | va omop eba va al u          |
-| know yourself          | ono vo sil ejo               |
-| knowledge is power     | sil aku pa tikara nal u      |
-| remember that you die  | na sin am u koto vo oboj ejo |
+| en                   | SJa                         |
+| :------------------- | :-------------------------- |
+| i þink þerefore i am | va qomop eba va al          |
+| know yourself        | qono vo sil ejo             |
+| knowledge is power   | sil aku pa tikara nal       |
+| remember þat you die | na sin am koto vo qoboj ejo |
+
+## vocabulary
+
+|       |                      |
+| :---- | :------------------- |
+| s     | do                   |
+| qal   | exist                |
+| juk   | go                   |
+| qajum | walk (=asi nite juk) |
+| qik   | live                 |
+| pazim | begin                |
+| vop   | end                  |
+| sin   | die (=ik i vop)      |
+| konom | like                 |
+| miq   | see, look            |
+| kik   | hear, listen         |
+| pul   | touch                |
+| qap   | meet, match          |
+| panal | leave                |
+| qos   | push                 |
+| pik   | pull                 |
+| qak   | become open          |
+| tod   | become closed        |
+|       |                      |
