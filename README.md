@@ -9,3 +9,4 @@
 - [persian](fa)
 - [turkish](tr) 2021-12-02
 - [mongolian](mn) 2022-03-09
+- [korean](kr) 2022-05-30

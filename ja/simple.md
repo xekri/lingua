@@ -2,13 +2,14 @@ in þis document, i use no article.
 
 # simplified japanese grammar
 
-þis document introduceþ grammar of *simplified japanese* (SJp).
+þis document introduceþ grammar of *simplified japanese* (SJa).
 it is artificial dialect which auþor made, based on classical and modern japanese.
 
 ## orþography
 
 - vowels: i, e, a, o, u
 - consonants:
+  - q
   - k, s, t, p
   - c, z, d, b
   - j, n, l, m, v
@@ -46,7 +47,7 @@ pito neko vo mi'l.
 - *conlusive*
   - is verbal form used as predicate and nominal modifer.
   - coclusive of Q-terminated verb `{x}q` is `{x}'l`
-- nominal modifer comeþ before noun which it modifieþ
+- nominal modifer comeþ before noun which it modifieþ.
 
 ## genitive
 
@@ -235,24 +236,24 @@ neko tob ite kul.
 
 ## vocabulary
 
-|       |                      |
-| :---- | :------------------- |
-| s     | do                   |
-| qal   | exist                |
-| juk   | go                   |
-| qajum | walk (=asi nite juk) |
-| qik   | live                 |
-| pazim | begin                |
-| vop   | end                  |
-| sin   | die (=ik i vop)      |
-| konom | like                 |
-| miq   | see, look            |
-| kik   | hear, listen         |
-| pul   | touch                |
-| qap   | meet, match          |
-| panal | leave                |
-| qos   | push                 |
-| pik   | pull                 |
-| qak   | become open          |
-| tod   | become closed        |
-|       |                      |
+| word  | character | meaning         | synonym                   |
+| :---- | :-------- | :-------------- | :------------------------ |
+| s     | 爲        | do              |                           |
+| qal   | 在        | exist           |                           |
+| juk   | 往        | go              |                           |
+| qajum | 步        | walk            | asi nite juk (go on foot) |
+| qik   | 生        | live            |                           |
+| sin   | 死        | die             | ik i vop (finish living)  |
+| pazim | 始        | begin (oneself) |                           |
+| vop   | 終        | end (oneself)   |                           |
+| konom | 好        | like            |                           |
+| kilap | 惡        | dislike         |                           |
+| miq   | 見        | see, look       |                           |
+| kik   | 聞        | hear, listen    |                           |
+| pul   | 觸        | touch           |                           |
+| qap   | 會        | meet, match     |                           |
+| panal | 離        | leave           |                           |
+| qos   | 押        | push            |                           |
+| pik   | 引        | pull            | saka-qak (counter-open)   |
+| qak   | 開        | open (oneself)  |                           |
+| tod   | 閉        | close (oneself) |                           |
