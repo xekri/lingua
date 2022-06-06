@@ -1,5 +1,3 @@
-console.log(Hangul.disassemble('아'))
-
 converter(/\p{sc=Hangul}+/ug, [
   [/./g, x => '<hangul>' + Hangul.disassemble(x).join('') + '</hangul>'],
 
@@ -8,7 +6,7 @@ converter(/\p{sc=Hangul}+/ug, [
   [/ㄱ/g, 'k'],
   [/ㅋ/g, 'ꝅ'],
   [/ㄲ/g, 'c'],
-  [/ㆁ/g, 'g'],
+  //[/ㆁ/g, 'g'],
   [/ㅎ/g, 'x'],
   [/ㆅ/g, 'h'],
 

@@ -32,7 +32,7 @@ const convert_ = converter(/(\p{sc=Hebrew}|[\u05B0-\u05BC\u05C1\u05C2])+/ug, [
   [/ק/g, "Q"],
   [/ר/g, "R"],
   [/\uFB2A/g, "Š"],//š
-  [/\uFB2B/g, "Ŝ"],//ŝ
+  [/\uFB21/g, "Ŝ"],//ŝ
   [/ש/g, "S"],
   [/ת/g, "T"],
 
