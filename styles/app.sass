@@ -2,3 +2,43 @@
 
 body
   font-family: 'Noto Sans', sans-serif
+
+table
+  border-collapse: collapse
+
+  tr
+    th:first-of-type
+      text-align: right
+
+    td, th
+      border: 1px solid #0002
+      padding: .5em
+
+ul
+  li
+    list-style-type: square
+
+.textareas
+  margin: 1em
+  display: grid
+  justify-content: space-between
+  grid-gap: 1em
+  grid-auto-columns: minmax(0, 1fr)
+  grid-auto-flow: column
+  height: 64ex
+
+  textarea
+    resize: none
+    outline: none
+    white-space: pre-line
+    font: inherit
+    padding: 1em
+
+.tables
+  margin: 1em
+  display: flex
+  justify-content: space-evenly
+
+.v-parent *, .v
+  writing-mode: vertical-lr
+  text-align: right
