@@ -1,8 +1,15 @@
 import Link from 'next/link'
 
 export default () => <>
-  <h2>top</h2>
   <ul>
+    <li><Link href='el'>greek</Link></li>
+    <li><Link href='pl'>polish</Link></li>
+    <li><Link href='nl'>dutch</Link></li>
+    <li><Link href='sa'>sanskrit</Link></li>
+    <li><Link href='ar'>arabic</Link></li>
     <li><Link href='fa'>persian</Link></li>
+    <li><Link href='tr'>turkish</Link></li>
+    <li><Link href='id'>indonesian</Link></li>
+    <li><Link href='ka'>georgian</Link></li>
   </ul>
 </>
