@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const ps = 'A I R L U O H Ẓ Z W E X S̩ S F Ꝗ Ꝁ Ṯ Ŧ Ᵽ Q K Ṭ T P G C Ḍ D B Ŋ Ɲ Ṇ N M'.split(' ')
+const ps = 'A I R L U O H Ẓ Z W E X S̩ S F Ꝗ Ꝁ Ṯ Ŧ ꝑ Q K Ṭ T P G C Ḍ D B Ŋ Ɲ Ṇ N M'.split(' ')
 
 const forbidden = /(.)\1|^[^AIRLU]+$/;
 

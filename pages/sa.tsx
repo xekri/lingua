@@ -40,7 +40,7 @@ export default () => {
       [/छ/g, "ꝁ"],
       [/ठ/g, "ṯ"],
       [/थ/g, "ŧ"],
-      [/फ/g, "ᵽ"],
+      [/फ/g, "ꝑ"],
 
       [/ग/g, "c"],
       [/ज/g, "z"],
@@ -201,7 +201,7 @@ export default () => {
           <th>labial</th>
           <td></td>
           <td>प<br />p</td>
-          <td>फ<br />ᵽ</td>
+          <td>फ<br />ꝑ</td>
           <td>ब<br />b</td>
           <td>भ<br />ƀ</td>
           <td>म<br />m</td>
