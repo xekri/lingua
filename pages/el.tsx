@@ -5,8 +5,7 @@ import { replaceAll } from '../utils/util'
 export default () => {
   const { convert } = new class extends Converter {
     wordRe = /\S+/ig
-    locale0 = 'el-GR'
-    locale1 = 'en-GB'
+    locale = 'el-GR'
 
     convertWord = (word: string) => replaceAll(word.normalize('NFKD'), [
       [/α/g, 'a'],

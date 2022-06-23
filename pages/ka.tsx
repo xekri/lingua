@@ -5,8 +5,7 @@ import Textareas from '../components/textareas'
 export default () => {
   const { convert } = new class extends Converter {
     wordRe = /\S+/ig
-    locale0 = 'ka-GE'
-    locale1 = 'en-GB'
+    locale = 'ka-GE'
 
     convertWord = (s: string) => replaceAll(s, [
       [/ა/g, 'a'],

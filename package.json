@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "next": "12.1.6",
+    "pinyin": "^3.0.0-alpha.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "yonh": "^0.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-proposal-do-expressions": "^7.16.7",
+    "@babel/plugin-proposal-unicode-property-regex": "^7.17.12",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "eslint": "8.17.0",

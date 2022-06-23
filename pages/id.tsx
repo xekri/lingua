@@ -5,8 +5,7 @@ import Textareas from '../components/textareas'
 export default () => {
   const { convert } = new class extends Converter {
     wordRe = /[a-zé]+/ig
-    locale0 = 'id-ID'
-    locale1 = 'en-GB'
+    locale = 'id-ID'
 
     convertWord = (s: string) => replaceAll(s.normalize("NFC"), [
       [/j/g, 'ď'], //dj

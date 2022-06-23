@@ -2,8 +2,7 @@ import { LetterCase } from "./util"
 
 export default abstract class Converter {
   abstract wordRe: RegExp
-  abstract locale0: string
-  abstract locale1: string
+  abstract locale: string
 
   applyCase = (kase: LetterCase, locale, s) => {
     switch (kase) {
@@ -31,8 +30,8 @@ export default abstract class Converter {
   convert = (text: string): string => text.replace(
     this.wordRe,
     (word: string) => this.applyCase(
-      this.getCase(this.locale0, word),
-      this.locale1,
-      this.convertWord(word.toLocaleLowerCase(this.locale0)))
+      this.getCase(this.locale, word),
+      'en-GB',
+      this.convertWord(word.toLocaleLowerCase(this.locale)))
   )
 }

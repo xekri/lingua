@@ -4,8 +4,7 @@ import Textareas from '../components/textareas'
 
 class ConverterTr extends Converter {
   wordRe = /[a-zçğıİöşü]+/ig
-  locale0 = 'TR'
-  locale1 = 'EN'
+  locale = 'tr-TR'
 
   convertWord = (word: string) => {
     const map: Array<[RegExp, string]> = [

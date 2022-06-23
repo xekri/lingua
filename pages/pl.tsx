@@ -65,8 +65,7 @@ const convertWordCyrl = s =>
 export default () => {
   const { convert } = new class extends Converter {
     wordRe = /[a-zęąóżłćśźń]+/ig
-    locale0 = 'pl-PL'
-    locale1 = 'en-GB'
+    locale = 'pl-PL'
 
     convertWord = (s: string) => replaceAll(s.normalize("NFC"), [
       [/ch/g, "h"],

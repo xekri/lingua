@@ -3,6 +3,7 @@
     "next/babel"
   ],
   "plugins": [
-    "@babel/plugin-proposal-do-expressions"
+    "@babel/plugin-proposal-do-expressions",
+    "@babel/plugin-proposal-unicode-property-regex"
   ]
 }
