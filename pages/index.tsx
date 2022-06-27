@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 export default () => <>
   <ul>
+    <li><Link href='yue'>cantonese</Link></li>
     <li><Link href='cmn'>mandarin</Link></li>
     <li><Link href='el'>greek</Link></li>
     <li><Link href='pl'>polish</Link></li>
