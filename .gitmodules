@@ -1,0 +1,3 @@
+[submodule "old/yue"]
+	path = old/yue
+	url = https://github.com/xekri/yue.git
