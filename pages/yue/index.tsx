@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { tify } from 'chinese-conv'
 import style from '../../styles/yue.module.sass'
 
 import show from './show.mjs'
@@ -7,7 +6,9 @@ import yue from './yue.json'
 
 const toData = (s: string) =>
   [...s].map(c =>
-    c in yue ? { yues: yue[c] } : { char: c }
+    c in yue
+      ? { char: c, yues: yue[c] }
+      : { char: c }
   )
 
 const defaultInput = `零一二三四五六七八九十
@@ -25,48 +26,49 @@ const defaultInput = `零一二三四五六七八九十
 並應以兄弟關係的精神相對待。
 `
 
-const defaultNormalised = tify(defaultInput)
-
 export default () => {
   const [data, setData] = useState({
     format: 'unicode',
     input: defaultInput,
-    normalised: defaultNormalised,
-    output: toData(defaultNormalised)
+    output: toData(defaultInput)
   })
 
-  const onChange = async (event) => {
+  const onChange = (event) => {
     const input = event.target.value;
-    const normalised = tify(input)
     setData({
-      format: 'unicode',
+      format: data.format,
       input,
-      normalised,
-      output: toData(normalised)
+      output: toData(input),
+    })
+  }
+
+  const onChangeSelect = (event) => {
+    setData({
+      format: event.target.value,
+      ...data,
     })
   }
 
   return <>
-    <select value={data.format} onChange={() => null}>{
-      ['unicode', 'ascii'].map((key, i) =>
-        <option key={i}>{key}</option>)
+    <select onChange={onChangeSelect}>{
+      ['unicode', 'ascii'].map((format, i) =>
+        <option key={i} value={format}>{format}</option>)
     }</select>
     <div className='textareas'>
       <textarea value={data.input} onChange={onChange}></textarea>
-      <textarea value={data.normalised} readOnly></textarea>
       <div className={style.out}>{
         data.output.map((datum, i) => {
           if ('yues' in datum)
             if (datum.yues.length == 1) {
-              return <span key={i}>{
-                datum.yues.map(([initial, final, tone, roman, emcNum], j) => {
+              return <span key={`${datum.char}-${data.format}-${i}`}>{
+                datum.yues.map(({ initial, final, tone, roman, emcNum }, j) => {
                   return (emcNum == 0 ? '*' : '') + show[data.format](initial, final, tone)
                 })[0]
               }</span>
             } else {
-              return <select>{
-                datum.yues.map(([initial, final, tone, roman, emcNum], j) =>
-                  <option key={`${i}-${j}`}>{
+              return <select key={`${datum.char}-${data.format}-${i}`}>{
+                datum.yues.map(({ initial, final, tone, roman, emcNum }, j) =>
+                  <option key={`${datum.char}-${data.format}-${i}-${j}`}>{
                     (emcNum == 0 ? '*' : '') + show[data.format](initial, final, tone)
                   }</option>
                 )

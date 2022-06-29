@@ -197,7 +197,7 @@ for (const x of jyutpingTable.concat([
 
     if (mcs.some(mc => ['蟹', '止'].includes(mc.final.sjep)))
       final = final.replace(/wj/, 'uj');
-    if (mcs.some(mc => mc.final.sjep == '遇'))
+    if (mcs.some(mc => mc.final.sjep3 == '遇'))
       final = final
         .replace(/wj/, 'y')
         .replace(/ov/, 'u');
@@ -234,12 +234,19 @@ for (const x of jyutpingTable.concat([
       [/^px/, 'ꝑ'],
     ]);
 
-    const triple = [initial, final, tone];
-    return triple.concat([show.unicode(...triple), mcs.map(x => prettifyEmc(x.roman)).join(',')]);
+    return {
+      initial, final, tone, voice,
+      mcs: mcs.map(x => prettifyEmc(x.roman)).join(',')
+    }
   })
     .filter(y => y)
     .filter((it, i, self) =>
-      self.slice(0, i).every(precedent => precedent[3] != it[3].replace(/^q/, ''))
+      self.slice(0, i).every(precedent =>
+        ! /^q/.test(it.initial) || !(
+          precedent.initial == it.initial.replace(/^q/, '')
+          && precedent.final == it.final
+        )
+      )
     )
 }
 
@@ -254,17 +261,17 @@ for (const configuration of ['jp2t'])
 
 const directory = '../pages/yue'
 const pathTsv = directory + '/yue.tsv'
-fs.writeFileSync(pathTsv, 'character\tinitial\tfinal\ttone\tstylized\tmc\n')
+fs.writeFileSync(pathTsv, 'character\tinitial\tfinal\ttone\tmc\n')
 for (let [c, vs] of Object.entries(yue))
   for (const v of vs)
-    fs.appendFileSync(pathTsv, `${c}\t${v.join('\t')}\n`);
+    fs.appendFileSync(pathTsv, `${c}\t${v.initial}\t${v.final}\t${v.tone}\t${v.mcs}\n`);
 
 fs.writeFileSync(directory + '/yue.json', JSON.stringify(yue));
 
 const fromString = s =>
   [...s].map(c =>
     c in yue
-      ? yue[c].map(xs => xs[3] + (xs[4] ? '' : '!'))
+      ? yue[c].map(x => show.unicode(x.initial, x.final, x.tone) + (x.mcs ? '' : '!'))
       : c
   );
 
