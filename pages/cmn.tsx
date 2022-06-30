@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import convert from '../utils/convert-cmn'
-import style from '../styles/cmn.module.sass'
+import style from '../styles/zh.module.sass'
 
 export default () => {
   const defaultText =
@@ -18,12 +18,19 @@ export default () => {
     <textarea defaultValue={defaultText} onChange={onChange}></textarea>
     <div className={style.out}>{
       data.content.map((textOrHan, i) =>
-        'han' in textOrHan ?
-          <span key={i} className={textOrHan.romans.length > 1 ? style.multiple : ''}>
-            {textOrHan.romans.join('|')}
-          </span>
+        'han' in textOrHan
+          ? (
+            textOrHan.romans.length > 1
+              ? <span key={i}>{textOrHan.romans[0]}</span>
+              : <select>{
+                textOrHan.romans.map((roman, j) => <option key={`${i}-${j}`} value={roman}>{roman}</option>)
+              }</select>
+          )
           : textOrHan.text
       )
     }</div>
+    <div className={style.out}>
+      not implemented
+    </div>
   </div>
 }

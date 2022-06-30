@@ -17,7 +17,7 @@ export default () => {
       [/w/g, 'v'],
       [/kh/g, 'x'],
       [/g/g, 'c'],
-      [/ng/g, 'g'],
+      [/nc/g, 'g'],
 
       [/aa/g, 'ā'],
       [/ee/g, 'ē'],

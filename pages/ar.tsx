@@ -66,7 +66,7 @@ export default () => {
   return <>
     <h2>arabic</h2>
     <Textareas lang="ar" dir='rtl' convert={convert}>{
-      `ي و ه ن م ل ك ق ف غ ع ظ ط ض ص ش س ز ر ذ د خ ح ج ث ت ب ا
+      `ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي
 
 الإعلان العالمي لحقوق الإنسان
 المادة 1

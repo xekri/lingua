@@ -1,5 +1,5 @@
 import { useState } from "react"
-import style from '../../styles/yue.module.sass'
+import style from '../../styles/zh.module.sass'
 
 import show from './show.mjs'
 import yue from './yue.json'
