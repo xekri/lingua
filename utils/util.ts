@@ -1,7 +1,5 @@
-type Replace = [RegExp, string]
-
-export const replaceAll = (s: string, map: Array<Replace>) =>
-  map.reduce((acc: string, [x, y]: Replace) => acc.replace(x, y), s)
+export const replaceAll = (s: string, map: Array<any>) =>
+  map.reduce((acc, [x, y]) => acc.replace(x, y), s)
 
 export enum LetterCase {
   Low,
