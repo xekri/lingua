@@ -69,6 +69,7 @@ export default () => {
       [/ᅵ/g, 'i'],
 
       [/<NoConsonant>(.)/g, (match, p) => p.toUpperCase()],
+      [/<NoConsonant>/g, ''],
 
       [/ᆨ/g, 'k'],
       [/ᆩ/g, 'ꝁ'],

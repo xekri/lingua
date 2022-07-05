@@ -3,13 +3,12 @@ import replaceAll from './replaceAll.mjs';
 export default {
   unicode: (initial, final, tone) =>
     (
-      final == '' ? initial + ['', '\u0301', '\u0323', null][tone] :
+      final == '' ? initial + ['', '\u0301', '\u0307', null][tone] :
         initial
         + replaceAll(final, [
-          //[/w/, 'ơ'],
+          [/w/, 'ơ'],
           [/r/, 'ă'],
-          [/(?<=[iuyeowơară])/, ['', '\u0301', '\u0323', '!'][tone]],
-          [/u\u0323/, 'i'],
+          [/(?<=[iuyeowơară])/, ['', '\u0301', '\u0309', '!'][tone]],
           [/!g$/, 'k'],
           [/!n$/, 't'],
           [/!m$/, 'p'],

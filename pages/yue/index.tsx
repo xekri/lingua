@@ -30,7 +30,7 @@ export default () => {
   const [data, setData] = useState({
     format: 'unicode',
     input: defaultInput,
-    output: toData(defaultInput)
+    output: toData(defaultInput),
   })
 
   const onChange = (event) => {

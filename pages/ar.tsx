@@ -6,6 +6,7 @@ export default () => {
   const { convert } = new class extends Converter {
     wordRe = /\S+/iug
     locale = 'ar'
+    hasCase = false
 
     convertWord = (word: string) => replaceAll(word.normalize('NFKD'), [
       [/ا/g, "a"],
@@ -42,22 +43,22 @@ export default () => {
       [/ى/g, "ā"],
       [/آ/g, "ā"],
 
-      [/\u064e/g, "ạ"],
+      [/\u064e/g, "ӑ"],
       [/\u064f/g, "u"],
       [/\u0650/g, "i"],
 
-      [/\u064bạ?/g, "ą"],
+      [/\u064bӑ?/g, "ą"],
       [/\u064c/g, "ų"],
       [/\u064d/g, "į"],
 
       [/[ء\u0654\u0655]/g, "ọ"], // hamza
       [/\u0652/g, ""],
 
-      [/ạa(?![ạuiāūīąųį])/g, "ā"],
-      [/uv(?![ạuiāūīąųį])/g, "ū"],
-      [/ij(?![ạuiāūīąųį])/g, "ī"],
+      [/ӑa(?![ӑuiāūīąųį])/g, "ā"],
+      [/uv(?![ӑuiāūīąųį])/g, "ū"],
+      [/ij(?![ӑuiāūīąųį])/g, "ī"],
 
-      [/([^ạuiāūīąųį])([ạuiāūīąųį]*)\u0651/g, "$1$1"],
+      [/([^ӑuiāūīąųį])([ӑuiāūīąųį]*)\u0651/g, "$1$1"],
 
       [/،/g, ","],
     ]).normalize('NFKC')
@@ -71,10 +72,8 @@ export default () => {
 الإعلان العالمي لحقوق الإنسان
 المادة 1
 يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
-وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.
-`
+وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.`
     }</Textareas>
-
     <a href='https://unicode.org/udhr/d/udhr_arb.html'>source of default text</a>
   </>
 }
