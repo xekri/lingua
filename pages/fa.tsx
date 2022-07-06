@@ -35,7 +35,7 @@ export default () => {
       [/\u064E/g, 'a'],
       [/\u0650/g, 'i'],
       [/\u064F/g, 'u'],
-      [/\u064B/g, 'ą'], //aw
+      [/\u064B/g, 'ą'],
 
       // hamze
       [/ء/g, "'"],
@@ -45,12 +45,12 @@ export default () => {
       [/پ/g, 'p'],
 
       [/ج/g, 'c'],
-      [/چ/g, 'ç'],//ky
+      [/چ/g, 'ç'],
 
-      [/ه/g, 'ḩ'],//hw
+      [/ه/g, 'e'],
 
       [/ز/g, 'z'],
-      [/ژ/g, 'ž'],//zy
+      [/ژ/g, 'ž'],
 
       [/ح/g, 'h'],
       [/خ/g, 'x'],
@@ -62,20 +62,20 @@ export default () => {
       [/م/g, 'm'],
       [/ن/g, 'n'],
 
-      [/ع/g, "'"], //ø
-      [/غ/g, 'ġ'], //gw
+      [/ع/g, "o"],
+      [/غ/g, 'ġ'],
 
       [/ف/g, 'f'],
       [/ق/g, 'q'],
       [/ر/g, 'r'],
 
       [/س/g, 's'],
-      [/ش/g, 'š'], //sy
+      [/ش/g, 'š'],
 
       [/ت/g, 't'],
-      [/ث/g, 'ṫ'],
+      [/ث/g, 'ŧ'],
       [/د/g, 'd'],
-      [/ذ/g, 'ḋ'],
+      [/ذ/g, 'đ'],
 
       [/ط/g, 'ṭ'],
       [/ض/g, 'ḍ'],
@@ -100,8 +100,8 @@ export default () => {
     <Textareas lang='fa' dir='rtl' convert={convert}>{
       `اَ اِ اُ آ ای او ب پ ج چ د ذ ه و ز ژ ح خ ط ظ ی ک گ ل م ن ع غ ف ص ض ق ر س ش ت ث
 
-اِعلامِیه جَهانی حُقوق بَشَر
-مادهٔ ۱
+اِعلامیهِ جَهانی حُقوقِ بَشَر
+مادّهٔ اَوَّل
 تَمامِ اَفْرادِ بَشَر آزاد بِدُنْیا میایَنْد وَ اَز لَحَظِ حَیثیَّت وَ حُقوق با هَم بَرابَرَنْد.
 هَمه دارایِ عَقل وَ وِجْدان میباشَند وَ بایَد نِسْبَت بیِکدیگَر با روحِ بِرادَری رَفْتار کَنَنْد.
 `
@@ -110,5 +110,70 @@ export default () => {
     <aside>
       <a href='https://unicode.org/udhr/d/udhr_pes_1.html'>source of default text</a>
     </aside>
+
+    <div className='tables'>
+      <table>
+        <tr>
+          <th></th>
+          <th>i</th>
+          <th>ī</th>
+          <th>y</th>
+          <th>u</th>
+          <th>ū</th>
+          <th>w</th>
+          <th>a</th>
+          <th>ā</th>
+        </tr>
+        <tr>
+          <th>script</th>
+          <td>اِ</td>
+          <td colSpan={2}>ی</td>
+          <td>اُ</td>
+          <td colSpan={2}>و</td>
+          <td>اَ</td>
+          <td>ا</td>
+        </tr>
+        <tr>
+          <th>early new persian</th>
+          <td>i</td>
+          <td>ī</td>
+          <td>ē</td>
+          <td>u</td>
+          <td>ū</td>
+          <td>ō</td>
+          <td>a</td>
+          <td>ā</td>
+        </tr>
+        <tr>
+          <th>afghan</th>
+          <td>e</td>
+          <td>i</td>
+          <td>ē</td>
+          <td>o</td>
+          <td>u</td>
+          <td>ō</td>
+          <td>a</td>
+          <td>ā</td>
+        </tr>
+        <tr>
+          <th>iran</th>
+          <td>e</td>
+          <td colSpan={2}>i</td>
+          <td>o</td>
+          <td colSpan={2}>u</td>
+          <td>a</td>
+          <td>ā</td>
+        </tr>
+        <tr>
+          <th>tajik</th>
+          <td colSpan={2}>i</td>
+          <td>e</td>
+          <td colSpan={2}>u</td>
+          <td>o</td>
+          <td>a</td>
+          <td>ā</td>
+        </tr>
+      </table>
+    </div>
   </>
 }
