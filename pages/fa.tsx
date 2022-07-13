@@ -89,7 +89,7 @@ export default () => {
   }()
 
   return <>
-    <h2>persian </h2>
+    <h2>persian</h2>
     <table>
       <tr>
         <th>updated at</th>
