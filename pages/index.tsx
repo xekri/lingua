@@ -8,6 +8,7 @@ export default () => <>
     <li><Link href='pl'>polish</Link></li>
     <li><Link href='nl'>dutch</Link></li>
     <li><Link href='sa'>sanskrit</Link></li>
+    <li><Link href='bo'>tibetan</Link></li>
     <li><Link href='ar'>arabic</Link></li>
     <li><Link href='he'>hebrew</Link></li>
     <li><Link href='fa'>persian</Link></li>
