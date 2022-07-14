@@ -17,17 +17,17 @@ export default () => {
       [/उ|\u0941/g, "v"],
 
       [/\u094D/g, ""],
-      [/आ|\u093E/g, "a"],
+      [/आ|\u093E/g, "ā"],
       [/ई|\u0940/g, "i"],
       [/ॠ|\u0943/g, "ṝ"],
       [/ॡ|\u0963/g, "ḹ"],
       [/ऊ|\u0942/g, "u"],
 
-      [/ए|\u0947/g, "e"],
-      [/ओ|\u094B/g, "o"],
+      [/ए|\u0947/g, "ai"],
+      [/ओ|\u094B/g, "au"],
 
-      [/ऐ|\u0948/g, "ē"],
-      [/औ|\u094C/g, "ō"],
+      [/ऐ|\u0948/g, "āi"],
+      [/औ|\u094C/g, "āu"],
 
       [/क/g, "q"],
       [/च/g, "k"],
@@ -115,7 +115,7 @@ export default () => {
           <th colSpan={8}>voiced</th>
         </tr>
         <tr>
-          <th colSpan={5}>obstruent</th>
+          <th colSpan={5} style={{ textAlign: 'center' }}>obstruent</th>
           <th colSpan={6}>sonorant</th>
         </tr>
         <tr>
@@ -165,8 +165,8 @@ export default () => {
           <td>य<br />j</td>
           <td>इ<br />j</td>
           <td>ई<br />i</td>
-          <td>ए<br />e</td>
-          <td>ऐ<br />ē</td>
+          <td>ए<br />ai</td>
+          <td>ऐ<br />āi</td>
         </tr>
         <tr>
           <th>retroflex</th>
@@ -207,8 +207,8 @@ export default () => {
           <td>व<br />v</td>
           <td>उ<br />v</td>
           <td>ऊ<br />u</td>
-          <td>ओ<br />o</td>
-          <td>औ<br />ō</td>
+          <td>ओ<br />au</td>
+          <td>औ<br />āu</td>
         </tr>
         <tr>
           <th></th>

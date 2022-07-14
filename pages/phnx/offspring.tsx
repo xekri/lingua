@@ -1,0 +1,157 @@
+export default () => <>
+  <h2>offsprings of phonecian</h2>
+  <div className='tables'>
+    <table>
+      <tr>
+        <th>Phnx</th>
+        <td>𐤀</td>
+        <td>𐤁</td>
+        <td>𐤂</td>
+        <td>𐤃</td>
+        <td>𐤄</td>
+        <td>𐤅</td>
+        <td>𐤆</td>
+        <td>𐤇</td>
+        <td>𐤈</td>
+        <td>𐤉</td>
+        <td>𐤊</td>
+        <td>𐤋</td>
+        <td>𐤌</td>
+        <td>𐤍</td>
+        <td>𐤎</td>
+        <td>𐤏</td>
+        <td>𐤐</td>
+        <td>𐤑</td>
+        <td>𐤒</td>
+        <td>𐤓</td>
+        <td>𐤔</td>
+        <td>𐤕</td>
+      </tr>
+      <tr>
+        <th>Hebr</th>
+        <td>א</td>
+        <td>ב</td>
+        <td>ג</td>
+        <td>ד</td>
+        <td>ה</td>
+        <td>ו</td>
+        <td>ז</td>
+        <td>ח</td>
+        <td>ט</td>
+        <td>י</td>
+        <td>כך</td>
+        <td>ל</td>
+        <td>מם</td>
+        <td>נן</td>
+        <td>ס</td>
+        <td>ע</td>
+        <td>פף</td>
+        <td>צץ</td>
+        <td>ק</td>
+        <td>ר</td>
+        <td>ש</td>
+        <td>ת</td>
+      </tr>
+      <tr>
+        <th>Arab</th>
+        <td>ﺍ</td>
+        <td>ﺏ</td>
+        <td>ﺝ</td>
+        <td>د ذ</td>
+        <td>ه</td>
+        <td>ﻭ</td>
+        <td>ﺯ</td>
+        <td>ح خ</td>
+        <td>ط ظ</td>
+        <td>ي</td>
+        <td>ﻙ</td>
+        <td>ﻝ</td>
+        <td>ﻡ</td>
+        <td>ﻥ</td>
+        <td></td>
+        <td>ع غ</td>
+        <td>ف</td>
+        <td>ص ض</td>
+        <td>ﻕ</td>
+        <td>ﺭ</td>
+        <td>ش س</td>
+        <td>ت ث</td>
+      </tr>
+      <tr>
+        <th>grek</th>
+        <td>Αα</td>
+        <td>Ββ</td>
+        <td>Γγ</td>
+        <td>Δδ</td>
+        <td>Εε</td>
+        <td>Ϝϝ Υυ</td>
+        <td>Ζζ</td>
+        <td>Ηη</td>
+        <td>Θθ</td>
+        <td>Ιι</td>
+        <td>Κκ</td>
+        <td>Λλ</td>
+        <td>Μμ</td>
+        <td>Νν</td>
+        <td>Ξξ</td>
+        <td>Οο</td>
+        <td>Ππ</td>
+        <td>Ϻϻ</td>
+        <td>Ϙϙ Φφ</td>
+        <td>Ρρ</td>
+        <td>Σσς</td>
+        <td>Ττ</td>
+      </tr>
+      <tr>
+        <th>Ital</th>
+        <td>𐌀</td>
+        <td>𐌁</td>
+        <td>𐌂</td>
+        <td>𐌃</td>
+        <td>𐌄</td>
+        <td>𐌅 𐌖</td>
+        <td>𐌆</td>
+        <td>𐌇</td>
+        <td></td>
+        <td>𐌉</td>
+        <td>𐌊</td>
+        <td>𐌋</td>
+        <td>𐌌</td>
+        <td>𐌍</td>
+        <td></td>
+        <td>𐌏</td>
+        <td>𐌐</td>
+        <td></td>
+        <td>𐌒</td>
+        <td>𐌓</td>
+        <td>𐌔</td>
+        <td>𐌕</td>
+      </tr>
+      <tr>
+        <th>Latn</th>
+        <td>Aa</td>
+        <td>Bb</td>
+        <td>Cc</td>
+        <td>Dd</td>
+        <td>Ee</td>
+        <td>Ff Vv</td>
+        <td>Zz</td>
+        <td>Hh</td>
+        <td></td>
+        <td>Ii</td>
+        <td>Kk</td>
+        <td>Ll</td>
+        <td>Mm</td>
+        <td>Nn</td>
+        <td></td>
+        <td>Oo</td>
+        <td>Pp</td>
+        <td></td>
+        <td>Qq</td>
+        <td>Rr</td>
+        <td>Ss</td>
+        <td>Tt</td>
+      </tr>
+    </table>
+  </div>
+</>
