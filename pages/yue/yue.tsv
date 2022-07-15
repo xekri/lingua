@@ -34,7 +34,7 @@ character	initial	final	tone	mc
 㐠		y	1	
 㐡	n	o	2	
 㐢	bhv	rv	0	
-㐣	pv	u	2	
+㐣	p	u	2	
 㐤	t	an	0	
 㐥	ḑ	o	0	
 㐦	k	y	1	
@@ -106,7 +106,7 @@ character	initial	final	tone	mc
 㑭	p	ej	1	
 㑮	gv	rn	0	xuon0,guon0
 㑯	s	wj	1	
-㑰	pv	uj	2	
+㑰	p	uj	2	
 㑱		iv	1	
 㑲	n	am	0	
 㑳	tj	rv	2	ţryo0,ḑriu2,nrep
@@ -140,7 +140,7 @@ character	initial	final	tone	mc
 㒎	s	am	3	
 㒏	h	on	0	
 㒐	s	on	1	
-㒑	pv	uj	1	
+㒑	p	uj	1	
 㒒	b	ug	3	
 㒓	ŧ	an	3	ŧat
 㒔	zj	ug	3	duk,ḑjyuk
@@ -160,7 +160,7 @@ character	initial	final	tone	mc
 㒢	j	og	3	
 㒣	q	ig	2	
 㒤	ṯ	im	3	
-㒥	ꝑv	ug	0	ꝑiug0
+㒥	ꝑ	ug	0	ꝑiug0
 㒦	l	wj	1	
 㒧	l	rj	2	
 㒨	s	in	0	sien0
@@ -169,7 +169,7 @@ character	initial	final	tone	mc
 㒫	k	ej	2	
 㒬	qv	og	0	
 㒭	ꝁv	rn	0	
-㒮	pv	uj	0	
+㒮	p	uj	0	
 㒯		im	3	
 㒰	ḑ	yn	0	
 㒱	ḑ	ig	3	
@@ -221,7 +221,7 @@ character	initial	final	tone	mc
 㓞	ꝁ	in	3	
 㓟	ꝑ	rj	0	
 㓠	t	im	2	tem1
-㓡	pv	u	1	
+㓡	p	u	1	
 㓢	l	og	3	lak
 㓣	ꝁ	rm	3	ꝁrep
 㓤	k	rn	3	ꝁret
@@ -233,8 +233,8 @@ character	initial	final	tone	mc
 㓨	ṯ	ig	3	
 㓩	x	yn	0	
 㓪	l	og	1	
-㓫	pv	u	0	
-㓬	pv	u	0	
+㓫	p	u	0	
+㓬	p	u	0	
 㓭	x	on	3	
 㓮	t	iv	0	
 㓯	l	ej	0	
@@ -324,7 +324,7 @@ character	initial	final	tone	mc
 㕃	ꝁ	rj	0	
 㕄	ţ	i	1	
 㕅	k	am	3	
-㕆	hv	u	2	to1,xo1
+㕆	h	u	2	to1,xo1
 㕇	l	am	3	lop
 㕈	q	i	1	qai1,quai2
 㕉	h	rm	3	
@@ -368,12 +368,12 @@ character	initial	final	tone	mc
 㕨	bv	an	2	
 㕩	ꝑ	og	2	
 㕪	t	rm	1	
-㕫	pv	ug	0	
+㕫	p	ug	0	
 㕬	tj	ug	0	ţjyug0
 㕭	q	av	2	qrau0
 㕭	q	iv	0	qrau0
 㕭	qj	av	0	qrau0
-㕮	pv	u	1	pyo1,byo1
+㕮	p	u	1	pyo1,byo1
 㕯	n	on	3	nuot,nruet,njyet
 㕰	x	og	3	xruk
 㕱	j	rv	0	
@@ -418,7 +418,7 @@ character	initial	final	tone	mc
 㖘	sj	on	1	ţjin0
 㖘	sj	rn	1	ţjin0
 㖙	k	a	0	
-㖚	bv	u	2	
+㖚	b	u	2	
 㖛	k	u	1	
 㖜	q	ig	0	
 㖝	m	ej	2	
@@ -607,7 +607,7 @@ character	initial	final	tone	mc
 㙌	s	ug	3	
 㙍	ţ	wj	2	
 㙎	qv	i	0	
-㙏	ꝑv	ug	3	ꝑiuk
+㙏	ꝑ	ug	3	ꝑiuk
 㙐	t	o	1	
 㙑		y	1	
 㙒	j	e	1	
@@ -615,7 +615,7 @@ character	initial	final	tone	mc
 㙔	v	i	1	
 㙕	pv	aj	2	
 㙖		y	1	
-㙗	qv	uj	0	
+㙗	q	uj	0	
 㙘	q	iv	0	
 㙙	l	ug	1	lyug1
 㙚	s	ig	0	
@@ -662,14 +662,14 @@ character	initial	final	tone	mc
 㚃	qv	rn	0	qyon0
 㚄	ţ	i	2	
 㚅	l	ug	0	liug0
-㚆	bv	ug	3	
+㚆	b	ug	3	
 㚇	ţ	ug	0	ţug0,ţug2
 㚈	g	oj	2	
 㚉	k	u	1	
 㚊	ꝁ	oj	0	ꝁai0
 㚋	t	iv	0	teu0
 㚌	pv	o	1	
-㚍	ꝁv	uj	1	ꝁuai1
+㚍	ꝁ	uj	1	ꝁuai1
 㚎	x	wj	2	
 㚏	k	ov	1	
 㚐	ŧ	ov	2	
@@ -738,7 +738,7 @@ character	initial	final	tone	mc
 㛑	ṯ	an	2	ṯan2
 㛒	d	rv	2	du2
 㛓	x	ej	0	
-㛔	pv	ug	0	
+㛔	p	ug	0	
 㛕	qj	rm	3	
 㛖	s	o	0	
 㛗	ṯ	e	0	sua0,ṯya0
@@ -764,7 +764,7 @@ character	initial	final	tone	mc
 㛮	s	ov	1	sau1
 㛯	pv	an	2	
 㛰	pv	rn	0	
-㛱	qv	uj	1	quai1
+㛱	q	uj	1	quai1
 㛲	pv	an	3	
 㛳	j	rj	2	jed0
 㛴	n	ov	1	nau1
@@ -780,7 +780,7 @@ character	initial	final	tone	mc
 㛾	h	am	0	
 㜀	s	wg	0	
 㜁	ḑ	a	0	
-㜂	pv	ug	0	
+㜂	p	ug	0	
 㜃	ql	yn	1	
 㜄	ḑ	rm	0	
 㜅	x	ug	3	xiuk
@@ -914,14 +914,14 @@ character	initial	final	tone	mc
 㝿	p	rj	0	pua1
 㝿	p	o	1	pua1
 㝿	p	ej	2	pua1
-㞀	pv	uj	0	
+㞀	p	uj	0	
 㞁		iv	2	jeu2
 㞂	ŧ	uj	1	ŧuai1
 㞃	cx	eg	3	
 㞄	q	om	0	qom0,qom1
 㞅	l	o	2	
 㞆	k	i	1	kie1,ꝁie2
-㞇	qv	uj	1	quai1
+㞇	q	uj	1	quai1
 㞈	p	un	3	
 㞉	ţ	an	3	
 㞊	s	on	3	
@@ -1050,7 +1050,7 @@ character	initial	final	tone	mc
 㠂	g	ov	2	
 㠃	t	ig	3	
 㠄	ḑ	am	3	
-㠅	bv	ug	3	
+㠅	b	ug	3	
 㠆	t	an	0	tan0
 㠇	ḑ	rv	2	ḑiu2
 㠈	j	on	2	
@@ -1083,7 +1083,7 @@ character	initial	final	tone	mc
 㠣	l	ig	3	
 㠤	s	wg	0	
 㠥	l	on	3	lyi0
-㠦	ꝑv	ug	0	ꝑiug0
+㠦	ꝑ	ug	0	ꝑiug0
 㠧	m	ej	1	
 㠨	qv	rn	3	
 㠩	pv	og	0	
@@ -1101,7 +1101,7 @@ character	initial	final	tone	mc
 㠵	xv	og	0	xuag0
 㠶	bhv	an	0	
 㠷	k	om	3	kop
-㠸	pv	u	0	pyo0
+㠸	p	u	0	pyo0
 㠹	k	aj	2	krai2
 㠺	sj	a	0	mjeu0
 㠻	x	ej	0	
@@ -1138,7 +1138,7 @@ character	initial	final	tone	mc
 㡛	m	og	0	
 㡛	pv	og	0	
 㡜	s	in	3	sried0,siet,syet
-㡝	bv	ug	2	byug2
+㡝	b	ug	2	byug2
 㡞	l	rv	0	
 㡟	ţ	ov	0	ţau0,ṯau0
 㡠	ţ	ig	2	
@@ -1216,7 +1216,7 @@ character	initial	final	tone	mc
 㢧	k	yn	1	
 㢨	h	on	2	xan2
 㢩	t	ig	3	
-㢪	ꝁv	u	0	qo0,ꝁo0
+㢪	ꝁ	u	0	qo0,ꝁo0
 㢫	s	an	0	
 㢬	v	rg	0	
 㢭	ŧ	ov	0	
@@ -1322,7 +1322,7 @@ character	initial	final	tone	mc
 㤑	qj	rv	0	
 㤒	k	ov	0	kau0
 㤓	b	rn	2	
-㤔	bv	u	2	
+㤔	b	u	2	
 㤕	ŧj	on	3	ŧryt,tryt
 㤗	ŧ	aj	2	
 㤙	qj	rn	0	
@@ -1350,7 +1350,7 @@ character	initial	final	tone	mc
 㤯	kv	ig	1	
 㤰	ţ	og	3	
 㤰	ḑ	og	3	
-㤱	ꝑv	u	2	ꝑiu1,ꝑiu2
+㤱	ꝑ	u	2	ꝑiu1,ꝑiu2
 㤲	ꝁ	im	3	ꝁep
 㤳	p	uj	1	
 㤴	ŧj	im	3	ṯjep,ŧriep
@@ -1430,13 +1430,13 @@ character	initial	final	tone	mc
 㥽	ŧj	ag	3	ṯrek
 㥾	n	ig	3	nrit,nrik
 㥿	g	ov	2	
-㦀	bhv	ug	0	
+㦀	bh	ug	0	
 㦁	l	in	0	lien0
 㦂	z	wg	0	
 㦃	ŧj	an	1	sren1,ṯren1,ṯruen1
 㦄	m	a	0	mra0
 㦅	d	in	3	det
-㦆	pv	u	0	
+㦆	p	u	0	
 㦇	l	ug	3	
 㦈	q	oj	2	
 㦉	q	i	2	
@@ -1573,7 +1573,7 @@ character	initial	final	tone	mc
 㨏	ŧ	an	0	ŧan0
 㨐	p	rv	1	pu1
 㨑	ţ	ug	0	
-㨒	ꝁv	uj	0	ꝁue0
+㨒	ꝁ	uj	0	ꝁue0
 㨓	l	ov	0	
 㨔	h	rm	2	
 㨕		ig	0	
@@ -1660,7 +1660,7 @@ character	initial	final	tone	mc
 㩡	ql	o	1	
 㩢	m	in	3	me2,mrat,met
 㩣	pv	i	0	
-㩤	ꝑv	u	0	ꝑyo0
+㩤	ꝑ	u	0	ꝑyo0
 㩥	ṯ	im	0	
 㩦	cv	i	0	
 㩧	p	og	3	bruk,ꝑruk
@@ -1782,7 +1782,7 @@ character	initial	final	tone	mc
 㫖	ţ	i	1	
 㫗	h	rv	1	
 㫘	m	rn	3	
-㫙	bhv	u	0	
+㫙	bh	u	0	
 㫚	pv	rn	3	
 㫛	kv	og	2	
 㫜	ŧ	an	1	
@@ -1831,7 +1831,7 @@ character	initial	final	tone	mc
 㬇		un	2	
 㬈	qv	rn	0	
 㬉	n	yn	1	nuan1
-㬊	hv	un	2	xuan1
+㬊	h	un	2	xuan1
 㬋	h	rv	0	
 㬌	k	ig	1	
 㬍	p	og	3	
@@ -1886,7 +1886,7 @@ character	initial	final	tone	mc
 㬹	ţ	ag	0	
 㬺	d	rg	0	
 㬻	xv	og	0	xuag1
-㬼	bv	ug	3	
+㬼	b	ug	3	
 㬽	g	og	3	
 㬾	d	yn	0	
 㬿	ŧ	rn	0	
@@ -1925,12 +1925,12 @@ character	initial	final	tone	mc
 㭡	s	rj	2	
 㭢	x	ig	0	
 㭣	m	rn	2	
-㭥	bv	u	2	
+㭥	b	u	2	
 㭦	ḑ	ag	3	
 㭧	ţ	rv	0	
 㭨	j	e	0	
 㭩	l	yn	3	lo1,luat,lyet
-㭪	pv	u	0	
+㭪	p	u	0	
 㭫	ḑ	o	0	ḑua0
 㭬	t	wg	3	
 㭭	p	an	3	prat,pet
@@ -1990,7 +1990,7 @@ character	initial	final	tone	mc
 㮤	ḑ	ug	0	zyug0
 㮥	b	rn	2	
 㮦	s	og	3	sak
-㮧	qv	u	0	qo0
+㮧	q	u	0	qo0
 㮨	ţ	ig	3	ţik
 㮩	s	ig	3	sik
 㮪	c	ug	0	
@@ -2039,10 +2039,10 @@ character	initial	final	tone	mc
 㯕	s	rj	0	se0
 㯖	d	rg	3	
 㯗	h	an	0	
-㯘	pv	un	1	
+㯘	p	un	1	
 㯙	dj	in	3	driet
 㯚	t	am	3	top
-㯛	hv	u	0	xo0
+㯛	h	u	0	xo0
 㯜	dj	yn	3	srin0
 㯝	l	ov	2	
 㯞	k	yn	2	kjyen2
@@ -2177,7 +2177,7 @@ character	initial	final	tone	mc
 㱝	s	ej	1	
 㱞	g	rm	3	gip
 㱟	ꝑ	i	0	ꝑie0,ꝑie1
-㱠	ꝁv	u	0	ꝁo0
+㱠	ꝁ	u	0	ꝁo0
 㱡	sj	ig	0	srig0,srig1
 㱢	l	og	0	
 㱣	ŧ	uj	1	ŧuai1
@@ -2189,11 +2189,11 @@ character	initial	final	tone	mc
 㱨	l	im	2	
 㱪	pv	rn	0	
 㱫	l	an	2	
-㱬	qv	uj	1	quai1
+㱬	q	uj	1	quai1
 㱭	d	yn	2	
 㱯	g	oj	0	kai0,gai0
 㱰	ţ	oj	1	
-㱱	hv	uj	2	xuai1
+㱱	h	uj	2	xuai1
 㱲	q	i	2	qje2
 㱳	m	og	3	mrak
 㱴	ḑ	i	2	ḑie2
@@ -2231,7 +2231,7 @@ character	initial	final	tone	mc
 㲔	s	in	0	sien0
 㲕	l	aj	2	luad0,lyet
 㲖	s	iv	0	seu0
-㲗	ꝑv	u	0	ꝑyo0
+㲗	ꝑ	u	0	ꝑyo0
 㲘	c	y	0	
 㲙	s	rv	0	
 㲚	sj	a	0	sra0
@@ -2278,7 +2278,7 @@ character	initial	final	tone	mc
 㳄		in	0	zien0
 㳅	l	rv	0	liu0
 㳆	ŧ	rv	1	
-㳇	bv	u	2	
+㳇	b	u	2	
 㳈	ꝑ	uj	2	
 㳉		yn	3	
 㳊	j	rv	0	
@@ -2322,7 +2322,7 @@ character	initial	final	tone	mc
 㳴	m	rn	3	
 㳵	kv	i	2	
 㳶	n	rv	1	nu1
-㳷	pv	uj	2	
+㳷	p	uj	2	
 㳸	pv	a	0	
 㳹	qv	og	1	quag1
 㳺	j	rv	0	
@@ -2420,7 +2420,7 @@ character	initial	final	tone	mc
 㵗	b	rg	0	big0
 㵘	m	an	2	
 㵙	x	ej	1	
-㵚	pv	u	1	
+㵚	p	u	1	
 㵛	z	in	2	
 㵜	n	am	1	
 㵝	j	uj	2	jed0
@@ -2441,7 +2441,7 @@ character	initial	final	tone	mc
 㵬		ig	0	
 㵭	ţ	y	1	
 㵮	z	on	0	
-㵯	bhv	ug	0	
+㵯	bh	ug	0	
 㵰	ḑ	wj	2	
 㵱	ꝑ	iv	1	
 㵲	m	ov	1	
@@ -2517,7 +2517,7 @@ character	initial	final	tone	mc
 㶸	x	im	3	
 㶹	h	ug	2	
 㶺	ŧ	im	2	
-㶻	pv	ug	0	
+㶻	p	ug	0	
 㶼	tj	on	2	xi0,qai0
 㶾	b	iv	2	
 㶿	b	un	3	buot
@@ -2525,10 +2525,10 @@ character	initial	final	tone	mc
 㷁	qj	ug	1	
 㷂	z	wj	1	
 㷃	ṯ	wj	1	
-㷄	xv	uj	1	xuai1,kuan2
+㷄	x	uj	1	xuai1,kuan2
 㷅	ŧj	av	1	ṯrep
 㷆	bv	rv	2	biu1
-㷇	ꝁv	uj	0	ꝁuai0
+㷇	ꝁ	uj	0	ꝁuai0
 㷈	q	rm	3	
 㷉	qv	i	2	qyoi2
 㷊	bhv	rn	0	
@@ -2561,12 +2561,12 @@ character	initial	final	tone	mc
 㷥	ţ	ig	0	
 㷦	kv	ig	3	
 㷧		yn	0	
-㷨	pv	ug	0	
+㷨	p	ug	0	
 㷩	x	ej	0	
 㷪	ţ	on	2	
 㷫	x	ig	2	
 㷬	m	og	3	
-㷭	ꝑv	ug	0	ꝑyug0
+㷭	ꝑ	ug	0	ꝑyug0
 㷮	ţ	ov	0	ţau0
 㷯	b	ug	2	
 㷰	ŧj	i	0	lie0,ŧrie0
@@ -2645,7 +2645,7 @@ character	initial	final	tone	mc
 㸹	l	yn	3	luat,lyet
 㸺	s	a	0	
 㸻	ḑ	i	2	
-㸼	ꝑv	ug	0	ꝑyug0
+㸼	ꝑ	ug	0	ꝑyug0
 㸽	p	uj	2	
 㸾	j	rn	2	
 㸿	d	ug	3	
@@ -2827,7 +2827,7 @@ character	initial	final	tone	mc
 㻮	ṯ	an	2	
 㻯	ŧ	ov	0	ŧo0
 㻰	v	i	2	
-㻱	bhv	ug	0	
+㻱	bh	ug	0	
 㻲	l	wj	1	
 㻳	l	ej	2	
 㻴	m	an	2	
@@ -2873,7 +2873,7 @@ character	initial	final	tone	mc
 㼜	q	og	2	
 㼜	q	og	1	
 㼜	q	on	0	
-㼝	qv	un	1	
+㼝	q	un	1	
 㼞	ꝑ	rg	2	
 㼟	b	ag	3	prak
 㼠	d	o	0	da0
@@ -2952,7 +2952,7 @@ character	initial	final	tone	mc
 㽩	ṯ	om	2	ṯom2
 㽪	ţ	rg	1	
 㽫	qj	ug	0	
-㽬	ꝑv	u	2	ꝑik
+㽬	ꝑ	u	2	ꝑik
 㽭		yn	0	
 㽮	s	ig	0	
 㽯	cv	i	0	
@@ -2980,7 +2980,7 @@ character	initial	final	tone	mc
 㾅	ţ	i	1	
 㾆	ŧj	im	0	ṯjem0,njem0
 㾇	m	ug	3	miuk
-㾈	bv	u	2	byo1
+㾈	b	u	2	byo1
 㾉	l	ig	0	leg0
 㾊	tj	eg	3	srek
 㾋	xj	rv	0	xiu0
@@ -3019,8 +3019,8 @@ character	initial	final	tone	mc
 㾬	k	aj	0	
 㾭	tj	rv	2	ţriu2
 㾮	v	og	0	
-㾯	xv	uj	0	xuai0
-㾰	hv	u	0	xo0
+㾯	x	uj	0	xuai0
+㾰	h	u	0	xo0
 㾱	pv	i	2	
 㾲	g	ov	0	
 㾳	ţ	i	0	
@@ -3119,7 +3119,7 @@ character	initial	final	tone	mc
 䀐	sj	am	0	srem0,sram2
 䀑	qv	an	3	
 䀒	ṯ	in	0	
-䀓	hv	un	2	xuan2
+䀓	h	un	2	xuan2
 䀔	j	rn	2	
 䀕	dj	rn	2	drin1
 䀖	ŧ	in	0	
@@ -3148,7 +3148,7 @@ character	initial	final	tone	mc
 䀮	xv	og	0	xuag0,mag0
 䀯	p	ov	1	
 䀰	k	ug	3	kuk
-䀱	pv	ug	0	
+䀱	p	ug	0	
 䀲	m	ug	3	
 䀳	l	an	3	
 䀴	g	ig	1	geg1,grep
@@ -3266,7 +3266,7 @@ character	initial	final	tone	mc
 䂡	t	rj	1	
 䂢	t	ug	1	
 䂣	ṯ	i	0	
-䂤	bv	u	2	
+䂤	b	u	2	
 䂥	m	rn	0	
 䂦	ţ	rn	0	
 䂧	ṯ	rn	1	
@@ -3314,7 +3314,7 @@ character	initial	final	tone	mc
 䃓	k	rv	2	ku2
 䃔	h	ug	0	xuug0,xuug2
 䃕	l	ov	0	lruk
-䃖	qv	u	1	qo1
+䃖	q	u	1	qo1
 䃗	p	og	3	ṯruk
 䃘	x	rg	0	
 䃙	l	ug	3	
@@ -3356,14 +3356,14 @@ character	initial	final	tone	mc
 䃼	p	ug	3	
 䃽	kv	i	1	kye1
 䃾	p	i	1	pjii1,bjii2,pjii2
-䃿	pv	u	0	pyo0
+䃿	p	u	0	pyo0
 䄀	v	o	2	
 䄁	j	rj	2	
 䄂	l	rv	2	
 䄃	q	wg	0	qiag0
 䄄	qj	rn	0	
 䄅	k	yn	2	
-䄆	hv	un	3	xuat,kruat
+䄆	h	un	3	xuat,kruat
 䄇	ḑ	ig	0	
 䄈	d	rv	2	du2
 䄉	g	o	0	ga0
@@ -3403,7 +3403,7 @@ character	initial	final	tone	mc
 䄫	x	ej	1	
 䄬		i	0	je0
 䄭	n	in	0	
-䄮	pv	u	0	pyo0
+䄮	p	u	0	pyo0
 䄯	k	in	1	
 䄰	g	a	0	
 䄱	pv	og	0	pyag0
@@ -3490,7 +3490,7 @@ character	initial	final	tone	mc
 䆄	tj	in	1	ţjen1
 䆅	ḑ	i	0	ḑii0
 䆆	ṯ	ov	2	
-䆇	bv	ug	2	
+䆇	b	ug	2	
 䆈	ḑ	i	2	
 䆉	b	a	2	
 䆊	z	uj	2	ḑyi2
@@ -3571,7 +3571,7 @@ character	initial	final	tone	mc
 䇕	s	wj	0	
 䇖	v	rn	1	
 䇗	tj	ug	0	ţjyug0
-䇘	hv	u	2	xo2
+䇘	h	u	2	xo2
 䇙	j	rn	1	
 䇚	ꝑ	og	3	
 䇛	ţ	i	1	
@@ -3581,7 +3581,7 @@ character	initial	final	tone	mc
 䇟	k	in	2	
 䇠	ḑ	y	1	
 䇡	ḑ	y	1	
-䇢	pv	u	1	
+䇢	p	u	1	
 䇣	n	im	3	
 䇤	j	oj	2	
 䇥	ţ	ag	3	
@@ -3646,7 +3646,7 @@ character	initial	final	tone	mc
 䈝	s	wj	0	sio0
 䈞	ţ	ug	3	
 䈟	ţ	in	3	
-䈠	hv	un	2	xuan1
+䈠	h	un	2	xuan1
 䈡	ṯ	ug	0	
 䈢	s	oj	1	
 䈣	ţ	ig	2	
@@ -3694,7 +3694,7 @@ character	initial	final	tone	mc
 䉍	k	an	1	
 䉎	d	og	0	dag0
 䉏	h	aj	1	
-䉐	pv	u	0	
+䉐	p	u	0	
 䉑	m	ov	0	myo0,mo0
 䉒	pv	an	0	
 䉓	l	o	2	
@@ -3743,7 +3743,7 @@ character	initial	final	tone	mc
 䉽	p	un	1	puan1
 䉾	p	i	2	pii2
 䉿		u	0	
-䊀	hv	u	0	xo0
+䊀	h	u	0	xo0
 䊁	s	rn	0	
 䊂	ṯ	ag	3	
 䊃	b	uj	2	
@@ -3806,7 +3806,7 @@ character	initial	final	tone	mc
 䊼	ṯ	i	1	
 䊽	kv	aj	2	
 䊾	m	ug	3	
-䊿	pv	u	0	
+䊿	p	u	0	
 䋀	v	a	1	
 䋁	k	rg	1	
 䋂	h	av	0	xrau0
@@ -3847,7 +3847,7 @@ character	initial	final	tone	mc
 䋥	l	ej	0	
 䋦	bhv	an	0	
 䋧	c	y	0	
-䋨	ꝑv	u	1	ꝑyo1
+䋨	ꝑ	u	1	ꝑyo1
 䋩		i	0	
 䋪	q	o	0	qa0
 䋫	tj	rg	0	ţreg0
@@ -3864,13 +3864,13 @@ character	initial	final	tone	mc
 䋶	s	wj	0	
 䋷	m	rv	0	miu0,my0
 䋸	ḑ	on	0	zyn0
-䋹	pv	ug	3	
+䋹	p	ug	3	
 䋺	ṯ	rv	0	
 䋻	n	rm	0	nrim0
 䋼	ŧ	ig	0	ŧeg0
 䋽	p	ug	1	
 䋾	tj	a	1	tra1
-䋿	qv	uj	0	quai0
+䋿	q	uj	0	quai0
 䌀	pv	o	0	
 䌁	q	iv	0	
 䌂	q	rg	3	
@@ -3896,7 +3896,7 @@ character	initial	final	tone	mc
 䌔	q	rv	0	
 䌕	m	ej	0	
 䌖	ṯ	rm	3	ţip,ḑiep
-䌗	ꝑv	u	1	ꝑyo1
+䌗	ꝑ	u	1	ꝑyo1
 䌘	p	in	3	pet
 䌙	v	og	2	
 䌚	s	ug	3	
@@ -4001,14 +4001,14 @@ character	initial	final	tone	mc
 䎊	l	og	3	
 䎋	ꝁ	av	2	
 䎌	ŧj	ug	3	ṯriuk
-䎍	pv	u	0	
+䎍	p	u	0	
 䎎	n	im	3	nryap
 䎏	x	rm	0	
 䎐	ṯ	av	1	
 䎑	l	ug	3	luk
 䎒	tj	an	1	ţran1,ţjen1
 䎓	d	am	3	
-䎔	ꝑv	u	0	ꝑyo0
+䎔	ꝑ	u	0	ꝑyo0
 䎕	kv	rg	0	xruag0,xrueg0
 䎖	ţ	rg	0	ţog0
 䎗	c	iv	0	ţjeu0
@@ -4065,7 +4065,7 @@ character	initial	final	tone	mc
 䏋	s	ug	3	
 䏌	x	rn	3	
 䏍	q	yn	0	
-䏎	bhv	ug	0	
+䏎	bh	ug	0	
 䏏	x	wj	0	
 䏐	ꝁ	yn	3	kuet
 䏑	ţ	eg	3	
@@ -4090,7 +4090,7 @@ character	initial	final	tone	mc
 䏥	ŧ	am	0	
 䏦	kv	an	3	
 䏧	n	a	2	nra2
-䏨	xv	uj	1	xuai1
+䏨	x	uj	1	xuai1
 䏩	x	im	3	
 䏪	n	i	2	nji2
 䏫	qj	rv	0	
@@ -4219,7 +4219,7 @@ character	initial	final	tone	mc
 䑤	c	rm	2	
 䑥	g	om	3	gop
 䑦	ꝁ	rv	0	ku0
-䑧	pv	u	0	
+䑧	p	u	0	
 䑨	d	o	0	
 䑩	k	u	1	
 䑪	g	rm	3	
@@ -4244,15 +4244,15 @@ character	initial	final	tone	mc
 䑽	ŧ	am	3	
 䑾	ţ	eg	3	
 䑿	s	ug	3	siuk
-䒀	ꝑv	u	0	ꝑyo0,bo2
+䒀	ꝑ	u	0	ꝑyo0,bo2
 䒀	b	ov	2	ꝑyo0,bo2
 䒁	ḑ	am	3	zip
 䒂	ţ	wg	1	
 䒃	ḑ	ov	2	
-䒄	pv	u	2	
+䒄	p	u	2	
 䒅	d	rg	0	
 䒆	ŧj	in	3	ŧriet
-䒇	pv	u	2	
+䒇	p	u	2	
 䒈	bv	i	2	byoi1
 䒉	m	ov	1	myo1
 䒊	x	ej	0	xe0
@@ -4323,7 +4323,7 @@ character	initial	final	tone	mc
 䓌	tj	i	2	ţji2
 䓍	x	on	1	xan1
 䓎	ṯ	ug	3	
-䓏	ꝑv	u	0	ꝑyo0
+䓏	ꝑ	u	0	ꝑyo0
 䓐	z	on	0	
 䓑	b	ig	0	
 䓒	kv	aj	1	
@@ -4358,7 +4358,7 @@ character	initial	final	tone	mc
 䓲	j	uj	2	jyed0,jyet
 䓳	x	rn	1	xrai0,xon1
 䓴	nj	yn	1	njyen1
-䓵	ꝑv	u	0	ꝑyo0
+䓵	ꝑ	u	0	ꝑyo0
 䓶	l	aj	2	lad0,lat
 䓷	h	rg	2	
 䓸	k	an	0	
@@ -4418,8 +4418,8 @@ character	initial	final	tone	mc
 䔬		i	2	ji2
 䔭	n	ig	1	neg1
 䔮	s	i	0	sie0
-䔯	ꝁv	u	2	ꝁo2
-䔰	ꝑv	u	2	piu2,ꝑiuk
+䔯	ꝁ	u	2	ꝁo2
+䔰	ꝑ	u	2	piu2,ꝑiuk
 䔱	qj	rm	3	
 䔲	t	rg	0	tog0
 䔳		in	0	
@@ -4435,23 +4435,23 @@ character	initial	final	tone	mc
 䔽	q	oj	2	qied0,qad0
 䔾	ꝁ	ej	2	ꝁied0,mat
 䔿	ţ	yn	1	ţuon1
-䕀	pv	un	1	
+䕀	p	un	1	
 䕁	pv	i	1	pyoi1
 䕂		yn	1	
 䕃	qj	rm	0	
 䕄	tj	ig	0	ţjig0
 䕅	s	ov	1	
 䕆	d	rv	2	du1
-䕇	hv	uj	2	kuai0,xuai1
+䕇	h	uj	2	kuai0,xuai1
 䕈	s	im	3	sep
 䕉	ḑ	ag	3	
 䕊	d	an	0	
 䕋	d	og	0	
 䕌	ḑ	i	2	
 䕍	j	rj	2	jed0
-䕎	pv	ug	3	
+䕎	p	ug	3	
 䕏	g	o	0	
-䕐	pv	ug	3	
+䕐	p	ug	3	
 䕑	s	wj	0	
 䕒	k	a	0	
 䕓	ŧj	an	3	ṯret
@@ -4529,9 +4529,9 @@ character	initial	final	tone	mc
 䖗	g	am	0	
 䖘	d	ov	0	do0
 䖙	ŧ	rj	0	de0,ŧe0
-䖚	qv	u	0	
+䖚	q	u	0	
 䖛	s	og	3	
-䖜	gv	uj	0	gin0
+䖜	g	uj	0	gin0
 䖝	ḑ	ug	0	
 䖞	ţ	rv	1	
 䖟	m	og	0	
@@ -4559,7 +4559,7 @@ character	initial	final	tone	mc
 䖳	tj	in	3	dra2
 䖴		iv	0	
 䖵	ꝁv	rn	0	kuon0
-䖶	xv	uj	0	xuai0
+䖶	x	uj	0	xuai0
 䖷	x	ej	0	
 䖸	g	o	0	
 䖹	m	ej	1	
@@ -4571,9 +4571,9 @@ character	initial	final	tone	mc
 䖿	l	ej	0	
 䗀	ṯ	ig	0	
 䗁	c	i	2	ꝁie0,ţie1
-䗂	xv	u	1	xo1
+䗂	x	u	1	xo1
 䗃	dj	an	2	ḑran1,ḑran2
-䗄	pv	u	1	
+䗄	p	u	1	
 䗅	j	rv	0	driag0
 䗆	k	un	1	kuan1
 䗇	c	ug	3	ţiuk
@@ -4606,13 +4606,13 @@ character	initial	final	tone	mc
 䗣	h	am	0	xam0,xam2
 䗤	j	ug	0	jyug0
 䗥	ţ	ug	0	ţug0,ṯyug0
-䗦	pv	ug	0	
+䗦	p	ug	0	
 䗧	ꝁ	og	0	ꝁag0
 䗨		y	0	
 䗩	ṯ	ig	3	
 䗪	tj	e	2	ţja2,ţjek
 䗫	m	a	0	
-䗬	pv	ug	0	
+䗬	p	ug	0	
 䗭	v	an	2	
 䗮	s	og	1	
 䗯	ţ	on	2	ţin2
@@ -4726,7 +4726,7 @@ character	initial	final	tone	mc
 䙙	ḑ	i	0	
 䙚	n	iv	1	
 䙛	kv	rn	1	
-䙜	bhv	ug	0	
+䙜	bh	ug	0	
 䙝	d	im	3	
 䙞	t	rg	0	
 䙟	hv	i	0	yoi0
@@ -4854,7 +4854,7 @@ character	initial	final	tone	mc
 䛘	nj	rm	0	njim0,nrim0
 䛙	qj	ug	3	
 䛚	l	wg	3	liak
-䛛	pv	uj	2	xuai2
+䛛	p	uj	2	xuai2
 䛜	s	on	2	
 䛝	n	ov	0	
 䛞	h	on	1	xan1
@@ -4868,7 +4868,7 @@ character	initial	final	tone	mc
 䛦	ḑ	ug	2	
 䛧	m	rj	0	
 䛨	s	on	2	
-䛩	qv	u	1	qo1
+䛩	q	u	1	qo1
 䛪	ꝁ	ug	2	ꝁiug2
 䛫	ţ	wg	0	
 䛬	d	ov	0	dau0
@@ -4902,13 +4902,13 @@ character	initial	final	tone	mc
 䜈	tj	iv	1	ṯrau0
 䜉	ŧj	rn	3	ṯrit
 䜊	ţ	ov	0	
-䜋	hv	uj	2	xuai1,xuai2
+䜋	h	uj	2	xuai1,xuai2
 䜌	l	yn	0	luan0,lyen0,lyen2
 䜍	l	iv	0	
 䜎	l	ov	0	
 䜏	ŧ	o	0	ŧua0
 䜐	xv	i	0	xjye0
-䜑	qv	u	2	qo2
+䜑	q	u	2	qo2
 䜒	q	ov	2	qau2
 䜓	s	im	3	
 䜔	ḑ	wj	0	
@@ -4956,9 +4956,9 @@ character	initial	final	tone	mc
 䝂	z	y	2	
 䝃	ḑ	im	3	
 䝄	sj	wg	0	srug0
-䝅	pv	uj	0	
+䝅	p	uj	0	
 䝆	pv	rn	3	
-䝇	pv	uj	0	
+䝇	p	uj	0	
 䝈	q	rg	3	
 䝉	m	ug	0	
 䝊	s	am	3	
@@ -4972,7 +4972,7 @@ character	initial	final	tone	mc
 䝑	ŧj	ug	0	ŧryug0
 䝒	dj	o	2	ḑryo1
 䝓	l	im	3	
-䝔	pv	un	0	
+䝔	p	un	0	
 䝕	tj	im	3	ţjep
 䝖	tj	av	1	ţrau1
 䝗	qj	rv	0	
@@ -4981,7 +4981,7 @@ character	initial	final	tone	mc
 䝛	p	o	0	
 䝜	s	yn	0	suan0
 䝝	q	i	0	
-䝞	pv	u	1	
+䝞	p	u	1	
 䝟	q	an	3	qret
 䝟	qj	ag	3	qret
 䝠		yn	0	
@@ -5011,14 +5011,14 @@ character	initial	final	tone	mc
 䝶	l	wg	0	liag0
 䝷	tj	i	0	trie0
 䝸	c	i	2	ţie2
-䝹	qv	un	1	quan1
+䝹	q	un	1	quan1
 䝺	k	un	2	
 䝻	k	y	0	kio0
 䝼	ḑ	ig	0	ḑieg0,ḑieg2
 䝼	ṯ	ig	1	ḑieg0,ḑieg2
 䝼	ḑ	ig	2	ḑieg0,ḑieg2
 䝽	g	aj	2	
-䝾	pv	u	2	
+䝾	p	u	2	
 䝿	kv	i	2	
 䞀	h	rv	2	xu2
 䞁	q	in	2	qian1,qian2
@@ -5046,7 +5046,7 @@ character	initial	final	tone	mc
 䞙	ţ	am	3	ţop
 䞚	c	i	0	ţje0,ꝁie1
 䞛	q	in	0	
-䞜	pv	u	2	
+䞜	p	u	2	
 䞝	j	ug	3	
 䞞	bv	rn	3	byot
 䞟	ꝑ	ag	3	
@@ -5065,7 +5065,7 @@ character	initial	final	tone	mc
 䞬	ŧ	rv	2	
 䞭	ṯ	on	0	ṯiu2
 䞮	ŧ	ov	0	ŧo0
-䞯	ꝑv	u	2	ꝑyo2
+䞯	ꝑ	u	2	ꝑyo2
 䞰	dj	ag	3	ḑruek
 䞱	h	ug	3	
 䞲	g	o	1	
@@ -5074,7 +5074,7 @@ character	initial	final	tone	mc
 䞵	ꝁ	yn	3	kyet
 䞶	ŧ	og	0	
 䞷	c	yn	3	ţyat
-䞸	pv	u	2	
+䞸	p	u	2	
 䞹	v	og	0	
 䞺	ṯ	on	0	
 䞻	j	ug	1	
@@ -5102,7 +5102,7 @@ character	initial	final	tone	mc
 䟑	j	og	3	jak
 䟒	c	yn	0	ţyen0
 䟓	ŧj	ag	0	ŧrag0,treg0,ŧrieg0
-䟔	bv	u	2	ꝑyo2
+䟔	b	u	2	ꝑyo2
 䟕	ṯ	a	0	
 䟖	ŧ	og	2	
 䟗	zj	i	2	ḑje1
@@ -5125,11 +5125,11 @@ character	initial	final	tone	mc
 䟧	d	in	0	den0
 䟨	m	rn	0	mjin1
 䟩	l	e	1	
-䟪	pv	ug	1	
+䟪	p	ug	1	
 䟫	ŧj	ag	0	drag0,ṯjag1
 䟬	qj	rv	2	
 䟭	ŧ	iv	2	
-䟮	bv	ug	3	
+䟮	b	ug	3	
 䟯	ꝁ	un	3	ꝁuat
 䟰	k	in	1	
 䟱	ţ	ig	3	
@@ -5203,7 +5203,7 @@ character	initial	final	tone	mc
 䠲	l	ig	0	
 䠳	ṯ	rn	0	
 䠴	ţ	rn	1	
-䠵	bv	u	2	byo2
+䠵	b	u	2	byo2
 䠶	zj	e	2	zja2
 䠶		ig	3	zja2
 䠶	j	e	2	zja2
@@ -5229,7 +5229,7 @@ character	initial	final	tone	mc
 䡊	pv	an	1	pyan1
 䡋	c	i	0	ţje0
 䡌	v	rg	0	
-䡍	bhv	u	0	
+䡍	bh	u	0	
 䡎	l	ov	0	
 䡏	v	rg	0	
 䡐	d	o	0	da0
@@ -5255,7 +5255,7 @@ character	initial	final	tone	mc
 䡤	ţ	y	0	
 䡥	j	ug	0	
 䡦	s	og	1	
-䡧	qv	u	0	qo1
+䡧	q	u	0	qo1
 䡨	ḑ	aj	0	
 䡩	ꝁ	rg	0	ꝁreg0
 䡪	s	in	2	
@@ -5287,7 +5287,7 @@ character	initial	final	tone	mc
 䢅	zj	rn	0	ḑjin0
 䢆	qj	ug	1	
 䢇	nj	ug	1	njyug1
-䢈	hv	uj	2	xuad0
+䢈	h	uj	2	xuad0
 䢉	n	ug	0	nuug0
 䢊	j	rv	0	
 䢋	k	ej	2	
@@ -5448,7 +5448,7 @@ character	initial	final	tone	mc
 䤤	x	oj	0	
 䤥	kv	i	1	kye1
 䤦		yn	3	
-䤧	pv	uj	2	
+䤧	p	uj	2	
 䤨	ꝑ	ig	3	ꝑek
 䤩	ḑ	ag	3	
 䤪	t	o	1	tua1
@@ -5498,7 +5498,7 @@ character	initial	final	tone	mc
 䥔	s	ug	3	
 䥕	ꝑ	in	3	
 䥖	d	in	0	
-䥗	ꝁv	un	1	ꝁuan1,ꝁuan2
+䥗	ꝁ	un	1	ꝁuan1,ꝁuan2
 䥘	ṯ	o	2	
 䥙	z	wj	2	
 䥚	ṯ	o	0	
@@ -5559,7 +5559,7 @@ character	initial	final	tone	mc
 䦗	kv	ig	3	xyk
 䦘	h	an	2	xren1
 䦙	ḑ	i	2	
-䦚	pv	un	3	
+䦚	p	un	3	
 䦛	ţ	rg	2	
 䦛	ţ	ag	0	
 䦛	ţ	ag	2	
@@ -5571,8 +5571,8 @@ character	initial	final	tone	mc
 䦟	ṯ	wj	1	
 䦠	s	i	1	
 䦡		un	0	
-䦢	pv	un	3	
-䦣	pv	u	2	
+䦢	p	un	3	
+䦣	p	u	2	
 䦤	ṯ	wj	2	
 䦥	h	an	0	
 䦦	c	rm	0	
@@ -5614,7 +5614,7 @@ character	initial	final	tone	mc
 䧌	s	wj	0	
 䧍	kv	ig	3	
 䧎	h	yn	1	xuen1
-䧏	pv	ug	0	
+䧏	p	ug	0	
 䧐	kv	og	3	
 䧑	t	rj	0	te0
 䧒	l	oj	0	
@@ -5713,7 +5713,7 @@ character	initial	final	tone	mc
 䨮	s	yn	3	syet
 䨯	ḑ	rn	2	
 䨰	ꝑ	og	3	ꝑak
-䨱	pv	ug	3	
+䨱	p	ug	3	
 䨲	n	rv	0	nu0,myan2
 䨳	x	i	2	xii2
 䨴	d	uj	2	duai2
@@ -5725,7 +5725,7 @@ character	initial	final	tone	mc
 䨹	s	ug	3	
 䨺	d	wj	2	
 䨻	b	rg	2	breg2
-䨼	hv	u	2	xo2
+䨼	h	u	2	xo2
 䨽	ꝑv	i	1	ꝑyoi1
 䨾	bv	i	2	byoi2
 䨿	ḑ	am	3	
@@ -5736,8 +5736,8 @@ character	initial	final	tone	mc
 䩅	ţ	in	1	
 䩆	tj	an	1	ţran1
 䩇	tj	am	0	trem0
-䩈	pv	uj	2	
-䩉	bv	u	2	byo1
+䩈	p	uj	2	
+䩉	b	u	2	byo1
 䩊	q	yn	1	quat
 䩋	m	o	1	
 䩌	ḑ	iv	0	ḑieu0,ţieu2
@@ -5788,7 +5788,7 @@ character	initial	final	tone	mc
 䩹	g	ag	3	grak,grek
 䩺	qj	ug	0	qug0
 䩻	p	a	2	
-䩼	bhv	ug	0	byug0
+䩼	bh	ug	0	byug0
 䩽	q	y	0	qyo0
 䩾	ţ	e	2	
 䩿	bhv	rn	0	byon0
@@ -5869,7 +5869,7 @@ character	initial	final	tone	mc
 䫊	b	uj	0	
 䫋	qv	i	0	
 䫌	ꝑ	rj	1	ꝑe1
-䫍	pv	u	1	
+䫍	p	u	1	
 䫎	t	yn	3	ţjyet
 䫏	ꝁ	i	0	ꝁi0
 䫐	l	rm	0	
@@ -5885,7 +5885,7 @@ character	initial	final	tone	mc
 䫚	kv	a	0	
 䫛	h	rv	0	xu0
 䫜	q	rv	0	qrau0
-䫝	pv	ug	3	
+䫝	p	ug	3	
 䫞	x	iv	0	xeu0,ꝁjeu0
 䫟	hv	rn	2	yon1,xuon1
 䫠	ꝑ	i	0	bii0,ꝑii0
@@ -5893,7 +5893,7 @@ character	initial	final	tone	mc
 䫢	s	i	0	sie0
 䫣	h	rj	0	
 䫤	qm	rg	0	meg0
-䫥	ꝁv	uj	1	ꝁi0,ꝁuai1,guai1
+䫥	ꝁ	uj	1	ꝁi0,ꝁuai1,guai1
 䫦	k	om	3	kap
 䫧	h	ov	2	
 䫨	dj	wj	2	gau0,gau2
@@ -6041,7 +6041,7 @@ character	initial	final	tone	mc
 䭵	bhv	an	0	
 䭶	c	ej	0	
 䭷	m	ov	0	
-䭸	bv	u	2	byo1
+䭸	b	u	2	byo1
 䭹	g	og	0	gag0,gag1,gag2
 䭺	g	og	1	
 䭻	pv	rn	0	
@@ -6078,7 +6078,7 @@ character	initial	final	tone	mc
 䮘		i	0	
 䮙	hv	ig	3	yk
 䮚	l	rg	2	
-䮛	bv	u	2	
+䮛	b	u	2	
 䮜	ḑ	am	3	
 䮝	hv	rn	0	xuon0
 䮞	ṯ	on	1	
@@ -6140,7 +6140,7 @@ character	initial	final	tone	mc
 䯘	h	yn	2	xuan2
 䯙	p	og	3	
 䯚		iv	1	
-䯛	qv	un	2	
+䯛	q	un	2	
 䯜	ŧ	ig	3	siek,ŧek
 䯝	z	wj	1	
 䯞	ꝁv	a	0	ꝁrua0
@@ -6218,7 +6218,7 @@ character	initial	final	tone	mc
 䰤	t	ug	0	tug0
 䰥	hv	ag	3	xuok
 䰦	ꝑ	rj	1	
-䰧	xv	u	0	xo0
+䰧	x	u	0	xo0
 䰨	m	ej	2	
 䰩	ŧj	e	1	ṯja1
 䰪	m	ej	2	
@@ -6260,7 +6260,7 @@ character	initial	final	tone	mc
 䱍	k	rg	1	
 䱎	k	rg	1	kog2
 䱏	ŧ	rv	1	ŧu1
-䱐	ꝑv	u	0	ꝑyo0,biu0
+䱐	ꝑ	u	0	ꝑyo0,biu0
 䱑	ḑ	yn	3	
 䱒	q	im	3	qiap
 䱓	d	ig	0	
@@ -6321,7 +6321,7 @@ character	initial	final	tone	mc
 䲉	s	i	0	
 䲊	d	o	2	jyi1,dua1,ŧua1
 䲋	z	rm	0	
-䲌	ꝁv	un	1	ꝁuan1,ꝁuan2
+䲌	ꝁ	un	1	ꝁuan1,ꝁuan2
 䲍	d	rg	0	
 䲎	n	wj	1	
 䲏	l	ov	0	
@@ -6461,12 +6461,12 @@ character	initial	final	tone	mc
 䴜	qv	aj	0	qruai0
 䴝	ŧj	uj	2	ṯruad0
 䴞	d	ig	3	
-䴟	hv	un	0	xuan0
+䴟	h	un	0	xuan0
 䴠	q	ov	1	qau1
 䴠	q	iv	1	qau1
 䴡	l	rj	2	
 䴢	m	ej	0	
-䴣	pv	u	0	
+䴣	p	u	0	
 䴤	sj	rg	0	srieg0
 䴥	k	a	0	kra0
 䴦	g	rn	0	gin0,gion0
@@ -6487,7 +6487,7 @@ character	initial	final	tone	mc
 䴵	p	ig	1	pjeg1
 䴶	b	ug	0	
 䴷	hv	rn	0	xuon0,xruan1
-䴸	pv	u	0	
+䴸	p	u	0	
 䴹	kv	o	1	kua1,xrua1
 䴺	b	rv	2	bu1
 䴻	l	i	0	lii0
@@ -6499,7 +6499,7 @@ character	initial	final	tone	mc
 䵁	ṯ	wg	2	
 䵂	dj	ig	3	driek,dek
 䵃	ꝁv	og	2	kruag1
-䵄	pv	ug	0	
+䵄	p	ug	0	
 䵅	g	av	0	
 䵆	m	ug	0	
 䵇	s	in	2	
@@ -6557,7 +6557,7 @@ character	initial	final	tone	mc
 䵻	z	wj	2	
 䵼	sj	wg	0	sjag0
 䵽	ṯ	am	3	ṯap
-䵾	bhv	u	0	
+䵾	bh	u	0	
 䵿	ŧ	im	3	
 䶀	ŧ	am	3	ŧop,ꝁap
 䶀	d	am	3	ŧop,ꝁap
@@ -6576,7 +6576,7 @@ character	initial	final	tone	mc
 䶍	ŧ	rj	2	
 䶎	x	rm	3	xrep
 䶏		i	0	
-䶐	qv	uj	2	quad0,qruad0
+䶐	q	uj	2	quad0,qruad0
 䶑	ŧ	rj	2	
 䶒	ḑ	rj	0	ḑe0
 䶓	ţ	rj	2	ţe2
@@ -6667,7 +6667,7 @@ character	initial	final	tone	mc
 中	tj	ug	2	triug0,triug2
 丮	k	ig	3	kiek
 丯	k	aj	2	krai2
-丰	ꝑv	ug	0	ꝑyug0
+丰	ꝑ	ug	0	ꝑyug0
 丱	kv	an	2	kruan2
 丱	ꝁ	og	2	kruan2
 丱	ꝁv	og	2	kruan2
@@ -6699,16 +6699,16 @@ character	initial	final	tone	mc
 乍	tj	a	2	ḑra2
 乍	dj	a	2	ḑra2
 乍	tj	og	3	ḑra2
-乎	bhv	u	0	xo0
-乎	pv	u	0	xo0
-乎	hv	u	0	xo0
+乎	bh	u	0	xo0
+乎	p	u	0	xo0
+乎	h	u	0	xo0
 乏	bv	rn	3	byap
 乑	gj	rm	0	gim0
 乒	p	ig	0	
 乒	ꝑ	ig	0	
 乓	p	rm	0	
 乓	ꝑ	og	0	
-乕	pv	u	1	
+乕	p	u	1	
 乖	kv	aj	0	kruai0
 乘	z	ig	0	
 乘	z	ig	2	
@@ -6728,7 +6728,7 @@ character	initial	final	tone	mc
 乢	k	oj	2	
 乣	k	rv	1	
 乤	h	a	2	
-乥	bhv	u	0	
+乥	bh	u	0	
 乧	t	rv	1	
 乨	ṯ	i	1	
 乩	k	ej	0	
@@ -6737,12 +6737,12 @@ character	initial	final	tone	mc
 乬	c	y	2	
 乭	z	eg	3	
 乮	m	av	1	
-乯	bhv	u	0	
+乯	bh	u	0	
 乲	ṯ	i	2	
 乳	nj	y	1	njyo1
 乴	ḑ	yn	3	
 乵		im	1	
-乶	pv	u	1	
+乶	p	u	1	
 乷	s	a	0	
 乸	qn	a	1	
 乹	c	in	0	
@@ -6770,7 +6770,7 @@ character	initial	final	tone	mc
 于	h	y	0	yo0
 亐	q	y	0	
 云	hv	rn	0	yon0
-互	hv	u	2	xo2
+互	h	u	2	xo2
 亓	c	ej	0	
 五	g		1	go1
 井	ţ	eg	1	ţieg1
@@ -6832,7 +6832,7 @@ character	initial	final	tone	mc
 仂	l	ig	3	lik,lok
 仃	t	ig	0	teg0
 仄	tj	rg	3	ţrik
-仆	bv	u	2	ꝑyo2,ꝑiu2,ꝑu2,bok
+仆	b	u	2	ꝑyo2,ꝑiu2,ꝑu2,bok
 仆	bx	ug	3	ꝑyo2,ꝑiu2,ꝑu2,bok
 仆	ꝑ	ug	3	ꝑyo2,ꝑiu2,ꝑu2,bok
 仇	zj	rv	0	ţiu0
@@ -6855,7 +6855,7 @@ character	initial	final	tone	mc
 仗	dj	wg	2	driag1,driag2
 仗	tj	wg	1	driag1,driag2
 仗	tj	wg	2	driag1,driag2
-付	bv	u	2	pyo2
+付	b	u	2	pyo2
 仙	s	in	0	sien0
 仚	x	in	0	
 仛	ŧ	og	3	dak
@@ -6894,7 +6894,7 @@ character	initial	final	tone	mc
 件	k	in	1	ţien1
 价	k	aj	2	krai2
 仸	q	iv	1	qieu1
-仹	ꝑv	ug	0	ꝑyug0
+仹	ꝑ	ug	0	ꝑyug0
 仺	ṯ	og	0	
 任	nj	rm	2	njim0,njim2
 任	nj	rm	0	njim0,njim2
@@ -6921,14 +6921,14 @@ character	initial	final	tone	mc
 伍	g		1	go1
 伎	c	i	2	ţje0,ţie1,ţje2
 伎	c	i	0	ţje0,ţie1,ţje2
-伏	bv	ug	3	biu2,biuk
+伏	b	ug	3	biu2,biuk
 伏	b	ug	3	biu2,biuk
 伐	bv	rn	3	byat
 休	xj	rv	0	xiu0
 伒	k	rn	2	
 伓	ꝑ	ej	0	
 伔	t	rm	1	
-伕	pv	u	0	
+伕	p	u	0	
 伖	ŧ	og	1	
 伙	pv	o	1	
 伜	ṯ	wj	2	
@@ -7017,7 +7017,7 @@ character	initial	final	tone	mc
 佧	ꝁ	a	0	
 佨	p	av	0	
 佩	ꝑ	uj	2	buai2
-佪	hv	uj	0	xuai0
+佪	h	uj	0	xuai0
 佫	h	og	3	xak
 佬	ql	ov	1	
 佬	l	ov	1	
@@ -7039,7 +7039,7 @@ character	initial	final	tone	mc
 佶	k	in	3	ţit
 佷	x	rn	1	
 佸	ꝁ	un	3	kuat,xuat
-佸	hv	un	3	kuat,xuat
+佸	h	un	3	kuat,xuat
 佹	kv	i	1	kye1
 佺	ḑ	yn	0	ṯyen0
 佻	ŧ	iv	0	ŧeu0,deu0
@@ -7137,7 +7137,7 @@ character	initial	final	tone	mc
 俉	g		2	
 俊	ţ	on	2	ţyn2
 俋	qj	rm	3	drip
-俌	bv	u	2	pyo1,ꝑyo1
+俌	b	u	2	pyo1,ꝑyo1
 俍	l	wg	0	lag1
 俎	tj	o	1	ţrio1
 俏	ṯ	iv	2	ṯieu2
@@ -7149,10 +7149,10 @@ character	initial	final	tone	mc
 俕	s	am	2	som2
 俖	ꝑ	uj	1	ꝑai1
 俗	ḑ	ug	3	zyuk
-俘	ꝑv	u	0	ꝑyo0
+俘	ꝑ	u	0	ꝑyo0
 俙	x	i	0	xioi0,xioi1
 俚	l	i	1	li1
-俛	pv	u	1	mien1
+俛	p	u	1	mien1
 俛	m	in	1	mien1
 俜	ꝑ	ig	0	ꝑeg0,ꝑjeg2
 保	p	ov	1	pau1
@@ -7173,7 +7173,7 @@ character	initial	final	tone	mc
 俧	ţ	i	2	
 俬	s	i	0	
 修	s	rv	0	siu0
-俯	pv	u	1	pyo1
+俯	p	u	1	pyo1
 俰	hv	o	2	xua2
 俱	ꝁ	y	0	kyo0
 俱	k	y	0	kyo0
@@ -7185,8 +7185,8 @@ character	initial	final	tone	mc
 俶	ŧj	ug	3	ṯjuk
 俶	ŧ	ig	3	ṯjuk
 俷	pv	i	2	
-俸	bv	ug	2	pug1,byug2
-俸	pv	ug	1	pug1,byug2
+俸	b	ug	2	pug1,byug2
+俸	p	ug	1	pug1,byug2
 俹	q	a	2	qra2
 俺	q	an	1	qiem2,qiam2
 俺	q	im	2	qiem2,qiam2
@@ -7194,7 +7194,7 @@ character	initial	final	tone	mc
 俼	j	ug	3	
 俽	qj	rn	0	
 俾	p	i	1	pje1
-俿	pv	u	1	
+俿	p	u	1	
 倀	ŧj	wg	0	ŧriag0,trag2
 倀	ŧj	ag	0	ŧriag0,trag2
 倀	dj	ag	0	ŧriag0,trag2
@@ -7305,10 +7305,10 @@ character	initial	final	tone	mc
 偌	j	e	2	
 偌	j	og	3	
 偍	d	rj	0	
-偎	qv	uj	0	quai0
+偎	q	uj	0	quai0
 偏	ꝑ	in	0	ꝑjen0,ꝑjen2
 偐	g	an	2	gran2
-偑	pv	ug	0	piug0
+偑	p	ug	0	piug0
 偒	ŧ	og	1	ŧag1
 偓	q	rg	3	qruk
 偓	q	ag	3	qruk
@@ -7339,7 +7339,7 @@ character	initial	final	tone	mc
 偧	ţ	a	2	
 偨	ṯ	i	0	
 偨	ţ	i	0	
-偩	bv	u	2	biu1
+偩	b	u	2	biu1
 偪	p	ig	3	piuk,pik
 偫	ḑ	i	2	
 偬	ţ	ug	1	ţug1,ţug2
@@ -7367,8 +7367,8 @@ character	initial	final	tone	mc
 傂	ḑ	i	2	sie0,drie0,drie1
 傃	s	ov	2	so2
 傄	kv	an	3	xruet
-傅	bv	u	2	pyo2
-傅	pv	u	1	pyo2
+傅	b	u	2	pyo2
+傅	p	u	1	pyo2
 傆	g	yn	2	gyan2
 傇	j	ug	1	
 傈	l	on	3	
@@ -7506,7 +7506,7 @@ character	initial	final	tone	mc
 僺	ṯ	iv	2	
 僻	ꝑ	ig	3	ꝑjek,ꝑek
 僻	b	uj	2	ꝑjek,ꝑek
-僼	pv	ug	0	
+僼	p	ug	0	
 僽	tj	rv	2	ḑriu2
 僽	dj	rv	2	ḑriu2
 僾	q	oj	2	qioi1,qai2
@@ -7702,7 +7702,7 @@ character	initial	final	tone	mc
 冦	ꝁ	rv	2	
 冧	ql	rm	0	
 冧	ql	rm	2	
-冨	pv	u	2	
+冨	p	u	2	
 冩	s	e	1	
 冪	m	ig	3	
 冫	p	ig	0	pig0
@@ -7712,7 +7712,7 @@ character	initial	final	tone	mc
 冰	p	ig	0	pig0
 冰		ig	0	pig0
 冰	c	ig	0	pig0
-冱	hv	u	2	xo2
+冱	h	u	2	xo2
 冲	ṯ	ug	0	
 决	ꝁ	yn	3	
 决	x	yn	3	
@@ -7770,11 +7770,11 @@ character	initial	final	tone	mc
 凣	bhv	an	0	
 凥	k	y	0	
 凧	c	ej	0	
-凨	pv	ug	0	
+凨	p	ug	0	
 凩	t	o	1	
 凪	qj	rv	0	
-凬	pv	ug	0	
-凮	pv	ug	0	
+凬	p	ug	0	
+凮	p	ug	0	
 凰	hv	og	0	xuag0
 凰	qv	og	1	xuag0
 凱	ꝁ	oj	1	ꝁai1
@@ -7850,7 +7850,7 @@ character	initial	final	tone	mc
 刱	ṯ	og	2	
 刱	ṯ	og	0	
 刲	kv	i	0	ꝁue0
-刳	ꝁv	u	0	ꝁo0
+刳	ꝁ	u	0	ꝁo0
 刴	t	wg	3	tua2
 刴	t	o	1	tua2
 刵	nj	i	2	nji2
@@ -7902,8 +7902,8 @@ character	initial	final	tone	mc
 剙	ṯ	og	0	
 剚	tj	i	2	ţri2
 剛	k	og	0	kag0
-剜	qv	un	0	quan0
-剜	qv	un	1	quan0
+剜	q	un	0	quan0
+剜	q	un	1	quan0
 剝	qm	og	3	
 剝	ꝑ	og	3	
 剞	k	i	0	kie1
@@ -7927,7 +7927,7 @@ character	initial	final	tone	mc
 剭	q	ug	3	quk
 剮	kv	a	1	krua1
 剮	xv	a	1	krua1
-副	ꝑv	u	2	ꝑiu2,ꝑiuk,ꝑik
+副	ꝑ	u	2	ꝑiu2,ꝑiuk,ꝑik
 副	ꝑ	ig	3	ꝑiu2,ꝑiuk,ꝑik
 剱	k	im	2	
 割	k	on	3	kat
@@ -8106,7 +8106,7 @@ character	initial	final	tone	mc
 匍	b	ov	0	bo0
 匎	q	rm	3	
 匏	b	av	0	brau0
-匐	bv	ug	3	biuk,bok
+匐	b	ug	3	biuk,bok
 匐	b	ag	3	biuk,bok
 匑	k	ug	0	kiug0,ꝁiug0
 匒	t	am	3	
@@ -8147,7 +8147,7 @@ character	initial	final	tone	mc
 匫	xv	rn	3	xuot
 匬		y	2	
 匭	kv	i	1	kyi1
-匯	hv	uj	2	ꝁruai0,xuai1
+匯	h	uj	2	ꝁruai0,xuai1
 匰	t	rn	0	tan0
 匰	t	an	0	tan0
 匱	cv	i	2	ţyi2
@@ -8500,7 +8500,7 @@ character	initial	final	tone	mc
 呈	dj	ig	0	drieg0,drieg2
 告	k	ov	2	kau2,kuuk
 告	k	ug	3	kau2,kuuk
-呋	pv	u	0	
+呋	p	u	0	
 呌	k	iv	2	
 呍	g	rv	0	
 呎	ṯ	eg	3	
@@ -8564,7 +8564,7 @@ character	initial	final	tone	mc
 呺	x	iv	0	xieu0
 呺	h	ov	0	xieu0
 呻	sj	rn	0	sjin0
-呼	xv	u	0	xo0
+呼	x	u	0	xo0
 命	m	ig	2	mieg2
 命	qm	eg	1	mieg2
 命	m	eg	2	mieg2
@@ -8588,7 +8588,7 @@ character	initial	final	tone	mc
 咉	q	wg	0	qag0,qag1
 咊	hv	o	0	xua0
 咊	hv	o	2	xua0
-咊	hv	u	0	xua0
+咊	h	u	0	xua0
 咊	kv	o	2	xua0
 咋	tj	a	2	ţra2,ḑrak,ţrek
 咋	tj	a	1	ţra2,ḑrak,ţrek
@@ -8597,14 +8597,14 @@ character	initial	final	tone	mc
 和	hv	o	0	xua0,xua2
 和	qv	o	0	xua0,xua2
 和	hv	o	2	xua0,xua2
-和	hv	u	0	xua0,xua2
+和	h	u	0	xua0,xua2
 和	kv	o	2	xua0,xua2
 咍	x	oj	0	xai0
 咎	k	rv	2	kau0,ţiu1
 咎	k	ov	0	kau0,ţiu1
 咏	hv	ig	2	yeg2
-咐	pv	u	2	
-咐	bv	u	2	
+咐	p	u	2	
+咐	b	u	2	
 咑	t	a	0	
 咒	ţ	rv	2	
 咓		a	1	
@@ -8666,7 +8666,7 @@ character	initial	final	tone	mc
 咳	h	aj	0	xai0
 咳	h	oj	0	xai0
 咳	ꝁ	oj	2	xai0
-咴	pv	uj	0	
+咴	p	uj	0	
 咵	ꝁv	a	1	
 咵	ꝁv	a	0	
 咶	hv	an	3	xruai2,xruad0,xruat
@@ -8811,13 +8811,13 @@ character	initial	final	tone	mc
 唧	ţ	eg	3	ţit,ţik
 唨	ţ	o	1	
 唩	qv	o	0	
-唪	pv	ug	1	bug1,byug1
+唪	p	ug	1	bug1,byug1
 唪	p	ug	1	bug1,byug1
 唪	b	ag	2	bug1,byug1
 唫	gj	rm	0	gim0,ţim1
 唫	g	rm	0	gim0,ţim1
 唫	k	rm	2	gim0,ţim1
-唬	xv	u	1	xra2,kruak
+唬	x	u	1	xra2,kruak
 唬	x	ag	3	xra2,kruak
 唬	x	av	0	xra2,kruak
 唭	ꝁ	i	2	ꝁi2
@@ -8986,7 +8986,7 @@ character	initial	final	tone	mc
 喖		u	0	
 喗	gv	rn	1	gyon1
 喘	ŧj	yn	1	ṯjyen1
-喙	xv	uj	2	xyad0
+喙	x	uj	2	xyad0
 喙	tj	rv	2	xyad0
 喚		un	2	xuan2
 喛		un	2	xyan0,xuan2
@@ -9029,8 +9029,8 @@ character	initial	final	tone	mc
 喴	qv	i	0	
 喴	qv	i	0	
 喵	qm	iv	0	
-喸	pv	u	1	
-喹	pv	uj	0	
+喸	p	u	1	
+喹	p	uj	0	
 喹	cv	i	0	
 喺	x	rj	1	
 喻		y	2	jyo2
@@ -9053,7 +9053,7 @@ character	initial	final	tone	mc
 嗈	qj	ug	0	qyug0
 嗉	s	ov	2	so2
 嗉	s	wj	2	so2
-嗊	xv	ug	1	xug1
+嗊	x	ug	1	xug1
 嗊	x	ug	1	xug1
 嗊	k	ug	2	xug1
 嗋	x	im	3	xiap
@@ -9087,7 +9087,7 @@ character	initial	final	tone	mc
 嗙	p	og	1	prag0
 嗙	ꝑ	og	2	prag0
 嗙	p	rg	0	prag0
-嗚	qv	u	0	qo0
+嗚	q	u	0	qo0
 嗛	h	am	0	ꝁem1
 嗛	h	rm	0	ꝁem1
 嗛	ꝁ	im	2	ꝁem1
@@ -9162,8 +9162,8 @@ character	initial	final	tone	mc
 嘏	k	a	1	kra1
 嘐	x	av	0	krau0,xrau0
 嘐	k	av	0	krau0,xrau0
-嘑	xv	u	0	xo0
-嘑	xv	u	2	xo0
+嘑	x	u	0	xo0
+嘑	x	u	2	xo0
 嘑	ql	a	2	xo0
 嘒	xv	i	2	xue2
 嘓	kv	og	3	kruek
@@ -9216,7 +9216,7 @@ character	initial	final	tone	mc
 嘶	s	rj	0	se0
 嘶	s	i	0	se0
 嘷	h	ov	0	
-嘸	pv	u	1	
+嘸	p	u	1	
 嘸	m	ov	1	
 嘹	l	iv	0	leu0,leu2
 嘺	c	iv	0	ţjeu0
@@ -9230,7 +9230,7 @@ character	initial	final	tone	mc
 嘿	m	rg	3	
 噀	s	on	2	
 噁	q	og	3	qo2
-噁	qv	u	2	qo2
+噁	q	u	2	qo2
 噂	ţ	yn	1	ţuon1
 噃	p	o	2	
 噄	x	eg	3	
@@ -9402,7 +9402,7 @@ character	initial	final	tone	mc
 嚼	ḑ	iv	2	ḑiak
 嚼	ţ	iv	2	ḑiak
 嚽	ţ	yn	3	
-嚾	xv	un	0	xuan2
+嚾	x	un	0	xuan2
 嚿	c	rv	2	
 囀	tj	yn	1	tryen2
 囁	tj	im	3	njep,ţjep
@@ -9441,8 +9441,8 @@ character	initial	final	tone	mc
 囜	n	rn	0	
 囝	ţ	rj	1	
 囝	n	am	0	
-回	hv	uj	0	xuai0
-回	qv	uj	1	xuai0
+回	h	uj	0	xuai0
+回	q	uj	1	xuai0
 囟	s	on	2	sin2
 囟	s	on	1	sin2
 因	qj	rn	0	qjin0
@@ -9523,7 +9523,7 @@ character	initial	final	tone	mc
 圪	g	rn	3	git,giot
 圪	k	rn	3	git,giot
 圫	q	ov	2	
-圬	qv	u	0	qo0
+圬	q	u	0	qo0
 圭	kv	i	0	kue0
 圮	ꝑ	i	1	bii1
 圯		i	0	ji0
@@ -9621,8 +9621,8 @@ character	initial	final	tone	mc
 坼	ṯ	ag	3	
 坽	l	ig	0	
 坾	ḑ	y	1	
-坿	bv	u	2	byo0,byo2
-垀	pv	u	0	
+坿	b	u	2	byo0,byo2
+垀	p	u	0	
 垁	ḑ	i	2	
 垂	zj	uj	0	ḑjye0
 垃	l	am	3	
@@ -9660,7 +9660,7 @@ character	initial	final	tone	mc
 垡	bv	rn	3	byat
 垢	k	rv	2	ku1
 垢	h	rv	0	ku1
-垣	hv	un	0	yan0
+垣	h	un	0	yan0
 垤	d	in	3	det
 垥	x	im	3	
 垧	x	wg	1	
@@ -9675,10 +9675,10 @@ character	initial	final	tone	mc
 垶	s	ig	0	syeg0
 垷	h	in	2	ken1,xen1
 垸	h	yn	2	xuan0,xuan2
-垸	qv	un	1	xuan0,xuan2
+垸	q	un	1	xuan0,xuan2
 垹	p	og	0	prug0
 垺	b	rv	0	
-垺	pv	u	0	
+垺	p	u	0	
 垻	p	uj	2	pra2
 垻	p	a	2	pra2
 垼		ig	3	jyek
@@ -9738,7 +9738,7 @@ character	initial	final	tone	mc
 埤	p	i	2	bje0
 埤	p	rj	2	bje0
 埥	ṯ	ig	0	
-埦	qv	un	1	
+埦	q	un	1	
 埧	c	y	2	ţyo2
 埨	l	on	0	
 埩	tj	rg	0	ḑreg0,ţreg0
@@ -9840,7 +9840,7 @@ character	initial	final	tone	mc
 堵	tj	e	1	to1,ţja1
 堶	d	o	0	dua0
 堷	qj	rm	2	
-堸	bhv	ug	0	biug0
+堸	bh	ug	0	biug0
 堹	tj	ug	2	tryug2
 堺	k	aj	2	
 堻	ţ	on	0	
@@ -9889,7 +9889,7 @@ character	initial	final	tone	mc
 塟	ţ	og	2	
 塠	t	uj	0	tuai0
 塡	d	in	0	trin0,den0,trin2,den2
-塢	qv	u	1	qo1
+塢	q	u	1	qo1
 塢	q	ov	2	qo1
 塣	ḑ	ig	2	
 塤	x	yn	0	xyan0
@@ -10074,8 +10074,8 @@ character	initial	final	tone	mc
 壷		u	0	
 壹	qj	rn	3	qjit
 壹	q	ig	3	qjit
-壺	hv	u	0	xo0
-壺	qv	u	1	xo0
+壺	h	u	0	xo0
+壺	q	u	1	xo0
 壻	s	rj	2	se2
 壼	ꝁv	rn	1	ꝁuon1
 壽	zj	rv	2	ḑju1,ḑju2
@@ -10087,7 +10087,7 @@ character	initial	final	tone	mc
 夂	tj	ug	0	trii1
 夃	k	u	1	ko1
 夅	k	og	2	xrug0
-夆	pv	ug	0	byug0,xad0
+夆	p	ug	0	byug0,xad0
 夈	ţ	aj	0	
 夊	s	uj	0	ṯrye0,syi0
 夋	ṯ	on	0	ṯyn0
@@ -10130,8 +10130,8 @@ character	initial	final	tone	mc
 天	ŧ	in	0	ŧen0
 太	ŧ	aj	2	ŧad0
 太	ŧ	aj	1	ŧad0
-夫	pv	u	0	byo0,pyo0
-夫	bhv	u	0	byo0,pyo0
+夫	p	u	0	byo0,pyo0
+夫	bh	u	0	byo0,pyo0
 夬	kv	aj	2	kruad0
 夬	ꝁ	yn	3	kruad0
 夭	q	iv	0	qieu0,qieu1,qau1
@@ -10167,14 +10167,14 @@ character	initial	final	tone	mc
 奇	c	i	0	ţie0,kie0
 奇	k	i	0	ţie0,kie0
 奈	n	oj	2	nad0,na2
-奉	bv	ug	2	byug1
-奉	pv	ug	1	byug1
+奉	b	ug	2	byug1
+奉	p	ug	1	byug1
 奊	ꝁ	in	3	xet
 奊	cv	i	0	xet
 奊	h	rj	1	xet
 奌	t	im	1	
 奍	x	yn	2	
-奎	ꝁv	uj	0	ꝁue0
+奎	ꝁ	uj	0	ꝁue0
 奎	ꝁv	i	0	ꝁue0
 奏	ţ	rv	2	ţu2
 奏	ṯ	rv	2	ţu2
@@ -10254,7 +10254,7 @@ character	initial	final	tone	mc
 妉	t	am	0	tom0
 妊	nj	rm	2	njim2
 妊	nj	rm	0	njim2
-妋	pv	u	0	pyo0,qiu0
+妋	p	u	0	pyo0,qiu0
 妌	ḑ	ig	2	ḑieg1
 妍	g	in	0	gen0
 妎	h	oj	2	xe2,xad0
@@ -10283,8 +10283,8 @@ character	initial	final	tone	mc
 妣	p	i	1	pjii1
 妤		y	0	jo0
 妥	d	o	1	ŧua1
-妦	ꝑv	ug	0	ꝑyug0
-妧	gv	un	2	guan2
+妦	ꝑ	ug	0	ꝑyug0
+妧	g	un	2	guan2
 妨	bhv	og	0	ꝑyag0,ꝑyag2
 妬	t	ov	2	to2
 妭	b	rn	3	buat
@@ -10322,7 +10322,7 @@ character	initial	final	tone	mc
 姅	p	un	2	puan2,ꝑuan2
 姅	ꝑ	un	2	puan2,ꝑuan2
 姆	m	ov	1	mu2
-姇	ꝑv	u	0	ꝑyo0
+姇	ꝑ	u	0	ꝑyo0
 姈	l	ig	0	leg0
 姉	ţ	i	1	
 姉	ţ	e	1	
@@ -10402,7 +10402,7 @@ character	initial	final	tone	mc
 娍	z	ig	0	
 娎	x	in	3	xeu2,xiet
 娏	m	og	0	mrug0
-娐	pv	u	0	
+娐	p	u	0	
 娑	s	o	0	sa0,sa1
 娒	m	ov	1	
 娒	m	uj	0	
@@ -10501,15 +10501,15 @@ character	initial	final	tone	mc
 婜	x	an	0	
 婝	d	in	2	
 婞	h	rg	2	xeg1
-婟	hv	u	2	xo1,xo2
-婠	xv	un	0	quan0,kuan2,qruet
+婟	h	u	2	xo1,xo2
+婠	x	un	0	quan0,kuan2,qruet
 婠	xv	an	3	quan0,kuan2,qruet
 婡	l	oj	0	
 婢	b	i	1	bje1
 婣	qj	rn	0	qjin0
 婤	tj	rv	0	ŧriu0,ţju0
 婥	ŧj	wg	3	ṯjak
-婦	bhv	u	1	biu1
+婦	bh	u	1	biu1
 婧	ḑ	ig	2	ţieg0,ḑieg1,ḑieg2
 婨	l	on	0	
 婩	g	on	2	
@@ -10548,7 +10548,7 @@ character	initial	final	tone	mc
 媊	ţ	in	1	ţie0,ţien1
 媋	ṯ	on	0	
 媌	m	av	0	mrau0,mrau1
-媍	bhv	u	1	
+媍	bh	u	1	
 媎	ţ	e	1	
 媏	t	yn	0	
 媐	x	i	0	ji0,xi0
@@ -10565,7 +10565,7 @@ character	initial	final	tone	mc
 媚	m	i	0	mii2
 媛	h	yn	2	yan0,yen2
 媛	h	yn	0	yan0,yen2
-媛	hv	un	0	yan0,yen2
+媛	h	un	0	yan0,yen2
 媜	ţ	ig	0	
 媝	ṯ	rv	0	
 媞	d	rj	0	de0,ḑje1,de1
@@ -10657,7 +10657,7 @@ character	initial	final	tone	mc
 嫪	l	ov	2	lau0,lau2
 嫫	m	ov	0	mo0
 嫬	ţ	e	0	
-嫭	hv	u	2	xo2
+嫭	h	u	2	xo2
 嫮		u	2	
 嫯	g	ov	2	gau0,gau2
 嫰	n	yn	2	
@@ -10684,7 +10684,7 @@ character	initial	final	tone	mc
 嬄	qj	rn	3	
 嬅	v	a	2	
 嬆	xj	rm	3	xip
-嬇	hv	uj	2	ꝁruai2,xuai2
+嬇	h	uj	2	ꝁruai2,xuai2
 嬈	qnj	iv	1	neu1,njeu1,xeu2
 嬈	nj	iv	0	neu1,njeu1,xeu2
 嬉	x	i	0	xi0,xi2
@@ -10780,7 +10780,7 @@ character	initial	final	tone	mc
 字	ḑ	i	2	ḑi2
 字	ţ	i	1	ḑi2
 存	ḑ	yn	0	ḑuon0
-孚	ꝑv	u	0	ꝑyo0
+孚	ꝑ	u	0	ꝑyo0
 孛	b	uj	2	buai2,buot
 孛	b	un	3	buai2,buot
 孜	ţ	i	0	ţi0
@@ -10812,7 +10812,7 @@ character	initial	final	tone	mc
 孳	ţ	i	0	ţi0,ḑi2
 孳	ţ	i	2	ţi0,ḑi2
 孴	g	i	1	gi1,jip
-孵	ꝑv	u	0	ꝑyo0
+孵	ꝑ	u	0	ꝑyo0
 孶	ţ	i	0	
 孶	ţ	i	2	
 孷	l	i	0	li0
@@ -10850,7 +10850,7 @@ character	initial	final	tone	mc
 宑	q	ig	1	
 宒	ţ	on	0	
 宓	m	rn	3	mjit,mit
-宓	bv	ug	3	mjit,mit
+宓	b	ug	3	mjit,mit
 宔	tj	y	1	ţjyo1
 宕	d	og	2	dag2
 宖	hv	rg	0	xrueg0,qrueg0
@@ -10909,7 +10909,7 @@ character	initial	final	tone	mc
 寉	h	og	3	
 寊	ţ	ig	0	
 寋	c	in	2	ţian1
-富	pv	u	2	piu2
+富	p	u	2	piu2
 寍	n	ig	0	neg0
 寎	p	ig	2	pieg2
 寎	p	ig	1	pieg2
@@ -10946,7 +10946,7 @@ character	initial	final	tone	mc
 審	sj	rm	1	sjim1
 寪	qv	i	1	ye1
 寫	s	e	1	sia1
-寬	ꝁv	un	0	ꝁuan0
+寬	ꝁ	un	0	ꝁuan0
 寭	v	i	2	
 寮	l	iv	0	leu0
 寯	ţ	on	2	ţyn2
@@ -10957,15 +10957,15 @@ character	initial	final	tone	mc
 寴	ṯ	rn	0	ṯin0,ṯin2
 寵	ŧj	ug	1	ŧryug1
 寶	p	ov	1	pau1
-寷	ꝑv	ug	0	ꝑiug0
+寷	ꝑ	ug	0	ꝑiug0
 寸	ṯ	yn	2	ṯuon2
 寸	ṯ	yn	1	ṯuon2
 寺	ḑ	i	2	zi2
 寺	ţ	i	1	zi2
 寽	ql	yn	3	lyt
 尀	ꝑ	o	1	
-封	pv	ug	0	pyug0,pyug2
-尃	ꝑv	u	0	ꝑyo0
+封	p	ug	0	pyug0,pyug2
+尃	ꝑ	u	0	ꝑyo0
 射	zj	e	2	ja2,zja2,jek,zjek
 射		ig	3	ja2,zja2,jek,zjek
 射	j	e	2	ja2,zja2,jek,zjek
@@ -11167,7 +11167,7 @@ character	initial	final	tone	mc
 岱	d	oj	2	dai2
 岲	pv	og	2	
 岴	ꝁ	y	0	
-岵	hv	u	2	xo1
+岵	h	u	2	xo1
 岶	ꝑ	ag	3	
 岷	m	rn	0	min0
 岸	g	on	2	gan2
@@ -11200,7 +11200,7 @@ character	initial	final	tone	mc
 峕	z	i	0	
 峖	q	on	0	
 峗	g	rj	0	gye0
-峘	hv	un	0	xuan0,xog0
+峘	h	un	0	xuan0,xog0
 峙	dj	i	2	dri1
 峙	dj	i	1	dri1
 峙	zj	i	2	dri1
@@ -11224,7 +11224,7 @@ character	initial	final	tone	mc
 峬	p	ov	0	po0
 峭	ṯ	iv	2	ṯieu2
 峮	ꝁv	rn	0	ꝁyn0
-峯	ꝑv	ug	0	ꝑyug0
+峯	ꝑ	ug	0	ꝑyug0
 峱	n	av	0	nau0
 峲	l	ej	1	
 峳	j	rv	0	
@@ -11299,7 +11299,7 @@ character	initial	final	tone	mc
 崳		y	0	jyo0
 崴	qv	i	0	qruai0
 崵	j	og	0	jag0,dag1
-崶	pv	ug	0	pyug0
+崶	p	ug	0	pyug0
 崷	ḑ	rv	0	ḑiu0
 崸	g	og	0	
 崹	d	rj	0	de0
@@ -11319,7 +11319,7 @@ character	initial	final	tone	mc
 嵆	ꝁ	rj	0	
 嵇	ꝁ	rj	0	xe0
 嵇	h	rj	0	xe0
-嵈	hv	un	2	xuan1
+嵈	h	un	2	xuan1
 嵉	d	ig	0	
 嵊	zj	ig	2	zjig2
 嵋	m	i	0	mii0
@@ -11352,7 +11352,7 @@ character	initial	final	tone	mc
 嵥	c	in	3	ţiet
 嵦	x	oj	1	gai0
 嵧	l	rv	0	liu0
-嵨	qv	u	1	
+嵨	q	u	1	
 嵩	s	ug	0	siug0
 嵪	x	iv	0	
 嵫	ţ	i	0	ţi0
@@ -11533,7 +11533,7 @@ character	initial	final	tone	mc
 帊	ꝑ	a	2	ꝑra2
 帋	tj	i	1	ţje1
 希	x	i	0	xioi0
-帍	hv	u	2	xo1
+帍	h	u	2	xo1
 帎	t	am	2	
 帑	ŧ	og	1	no0,ŧag1
 帑	n	ov	0	no0,ŧag1
@@ -11572,7 +11572,7 @@ character	initial	final	tone	mc
 帳	tj	wg	1	triag2
 帴	ţ	in	1	ḑan0,ţen0,ţien1,san2,sret
 帴	ţ	in	0	ḑan0,ţen0,ţien1,san2,sret
-帵	qv	un	0	quan0
+帵	q	un	0	quan0
 帵	q	yn	1	quan0
 帶	t	aj	2	tad0
 帶	t	aj	1	tad0
@@ -11589,7 +11589,7 @@ character	initial	final	tone	mc
 幃	hv	i	0	yoi0
 幄	q	rg	3	qruk
 幄	q	ag	3	qruk
-幅	pv	ug	3	piuk,pik
+幅	p	ug	3	piuk,pik
 幆	q	rj	2	
 幇	p	og	0	
 幈	b	ig	0	
@@ -11615,10 +11615,10 @@ character	initial	final	tone	mc
 幛	ţ	wg	2	
 幜	k	ig	1	
 幝	ŧj	in	1	ṯjen1
-幞	bv	ug	3	byuk
+幞	b	ug	3	byuk
 幞	b	ug	3	byuk
 幟	ŧj	i	2	sji2,ṯji2
-幠	xv	u	0	xo0
+幠	x	u	0	xo0
 幡	ꝑv	an	0	ꝑyan0
 幢	dj	og	0	drug0,drug2
 幢	dj	og	2	drug0,drug2
@@ -11690,7 +11690,7 @@ character	initial	final	tone	mc
 庘	q	am	3	qrap
 庚	k	rg	0	krag0
 庛	ṯ	i	2	ṯie2
-府	pv	u	1	pyo1
+府	p	u	1	pyo1
 庝	d	ug	0	
 庠	ḑ	wg	0	ziag0
 庡	q	i	1	qioi1
@@ -11707,7 +11707,7 @@ character	initial	final	tone	mc
 庩	d	ov	0	ŧo0
 庪	kv	i	1	kye1
 庪	k	i	1	kye1
-庫	ꝁv	u	2	ꝁo2
+庫	ꝁ	u	2	ꝁo2
 庬	b	og	0	
 庬	m	og	0	
 庭	d	ig	0	deg0
@@ -11776,7 +11776,7 @@ character	initial	final	tone	mc
 廡	m	ov	0	myo1
 廢	pv	i	2	pyad0
 廣	kv	og	1	kuag1
-廤	pv	u	2	
+廤	p	u	2	
 廥	ꝁ	uj	1	kuad0
 廦	p	ig	3	ꝑjek,pek
 廧	ḑ	wg	0	ḑiag0
@@ -11835,7 +11835,7 @@ character	initial	final	tone	mc
 弗	pv	rn	3	pyot
 弗	pv	ig	3	pyot
 弘	hv	rg	0	xuog0
-弙	qv	u	0	
+弙	q	u	0	
 弚	d	rj	2	
 弛	dj	i	0	sje1
 弜	c	wg	1	ţie0,ţiag1
@@ -11849,11 +11849,11 @@ character	initial	final	tone	mc
 弟	d	rj	1	de1,de2
 弡	cv	rn	3	
 弢	ŧ	ov	0	ŧau0
-弣	ꝑv	u	1	ꝑyo1
+弣	ꝑ	u	1	ꝑyo1
 弤	t	rj	1	te1
 弦	h	in	0	xen0
 弦	h	yn	0	xen0
-弧	hv	u	0	xo0
+弧	h	u	0	xo0
 弨	ŧj	iv	0	ṯjeu0,ṯjeu1
 弩	n	ov	1	no1
 弫	ṯ	rn	1	
@@ -11966,7 +11966,7 @@ character	initial	final	tone	mc
 徇	ḑ	on	0	zyn2
 很	x	rn	1	xon1
 徉	j	og	0	jag0
-徊	hv	uj	0	xuai0
+徊	h	uj	0	xuai0
 律	l	on	3	lyt
 後	h	rv	2	xu1,xu2
 後	x	rv	1	xu1,xu2
@@ -12005,8 +12005,8 @@ character	initial	final	tone	mc
 徦	k	a	1	
 徧	ꝑ	in	2	pen2
 徨	hv	og	0	xuag0
-復	bv	ug	3	biu2,biuk
-復	pv	ug	3	biu2,biuk
+復	b	ug	3	biu2,biuk
+復	p	ug	3	biu2,biuk
 復	bv	rv	2	biu2,biuk
 循	ḑ	on	0	zyn0
 徫	v	i	1	
@@ -12077,7 +12077,7 @@ character	initial	final	tone	mc
 忤	g		1	go2
 忥	x	i	2	xioi2
 忦	k	in	3	kret
-忨	gv	un	2	guan0,guan2
+忨	g	un	2	guan0,guan2
 忩	ṯ	ug	0	ṯug0
 忪	tj	ug	0	ţjyug0
 忪	sj	ug	0	ţjyug0
@@ -12133,7 +12133,7 @@ character	initial	final	tone	mc
 怗	ŧ	im	3	ŧep
 怗	tj	im	0	ŧep
 怘	k	u	2	
-怙	hv	u	2	xo1
+怙	h	u	2	xo1
 怚	ḑ	wj	2	ţia0,ḑio1,ţio2
 怛	t	an	3	tat
 怛	ŧ	an	1	tat
@@ -12149,7 +12149,7 @@ character	initial	final	tone	mc
 怡		i	0	ji0
 怢	d	rn	3	
 怣	j	rv	0	
-怤	ꝑv	u	0	ꝑyo0
+怤	ꝑ	u	0	ꝑyo0
 急	k	rm	3	kip
 怦	ꝑ	ig	0	ꝑreg0
 性	s	ig	2	sieg2
@@ -12201,7 +12201,7 @@ character	initial	final	tone	mc
 恔	h	av	2	keu1
 恕	sj	y	2	sjo2
 恖	s	i	0	si0
-恗	xv	u	0	xo0
+恗	x	u	0	xo0
 恘	ꝁj	rv	0	ꝁiu0
 恙	j	og	2	jag2
 恚	v	i	2	qjye2
@@ -12214,7 +12214,7 @@ character	initial	final	tone	mc
 恟	x	ug	0	xyug0
 恠	kv	aj	2	kruai2
 恡	l	on	2	
-恢	ꝁv	uj	0	ꝁuai0
+恢	ꝁ	uj	0	ꝁuai0
 恣	ţ	i	2	ţii2
 恣	ṯ	i	2	ţii2
 恣	ţ	i	0	ţii2
@@ -12266,7 +12266,7 @@ character	initial	final	tone	mc
 悑	p	ov	2	ꝑo2
 悒	qj	rm	3	qip
 悓		in	1	
-悔	xv	uj	2	xuai1,xuai2
+悔	x	uj	2	xuai1,xuai2
 悕	x	i	0	xioi0
 悖	b	uj	2	buai2,buot
 悖	p	uj	2	buai2,buot
@@ -12278,7 +12278,7 @@ character	initial	final	tone	mc
 悚	s	ug	1	syug1
 悛	s	yn	0	ṯyen0
 悜	ŧj	ig	1	ŧrieg1
-悝	ꝁv	uj	0	ꝁuai0,li1
+悝	ꝁ	uj	0	ꝁuai0,li1
 悝	l	i	1	ꝁuai0,li1
 悝	ꝁv	i	0	ꝁuai0,li1
 悝	g		2	ꝁuai0,li1
@@ -12325,7 +12325,7 @@ character	initial	final	tone	mc
 惇	t	on	0	ţjyn0,tuon0
 惈	kv	o	1	kua1
 惉	ţ	im	0	
-惋	qv	un	1	quan2
+惋	q	un	1	quan2
 惋	q	yn	1	quan2
 惌	q	yn	0	qyan0,qyan1
 惌	q	yn	2	qyan0,qyan1
@@ -12355,8 +12355,8 @@ character	initial	final	tone	mc
 惟	v	i	0	jyi0
 惠	hv	i	2	xue2
 惡	q	og	3	qo0,qo2,qak
-惡	qv	u	2	qo0,qo2,qak
-惡	qv	u	0	qo0,qo2,qak
+惡	q	u	2	qo0,qo2,qak
+惡	q	u	0	qo0,qo2,qak
 惢	s	o	1	ţie0,ḑye1,sua1
 惣	ţ	ug	1	
 惤	k	in	0	
@@ -12386,7 +12386,7 @@ character	initial	final	tone	mc
 愁	zj	rv	0	ḑriu0
 愂	b	uj	2	
 愃	s	yn	0	syen0,xyan1
-愄	qv	uj	0	
+愄	q	uj	0	
 愅	k	ag	3	
 愆	ꝁ	in	0	ꝁien0
 愇	hv	i	1	yoi1
@@ -12661,7 +12661,7 @@ character	initial	final	tone	mc
 懭	ꝁv	og	2	
 懮	qj	rv	0	qiu1
 懮	qj	rv	1	qiu1
-懯	pv	u	0	
+懯	p	u	0	
 懰	l	rv	0	liu0,liu1
 懱	m	in	3	met
 懲	dj	ig	0	drig0
@@ -12677,7 +12677,7 @@ character	initial	final	tone	mc
 懺	ŧj	am	2	ṯram2
 懻	k	i	2	kii2
 懼	c	y	2	ţyo2
-懽	xv	un	0	xuan0,kuan2
+懽	x	un	0	xuan0,kuan2
 懾	sj	im	3	ţjep
 懾	tj	im	3	ţjep
 懿	q	i	2	qii2
@@ -12737,10 +12737,10 @@ character	initial	final	tone	mc
 戮	l	ug	3	liuk
 戰	tj	in	2	ţjen2
 戰	x	ej	2	ţjen2
-戰	pv	u	0	ţjen2
+戰	p	u	0	ţjen2
 戲	x	i	2	xie0,xo0,xie2
 戲	x	i	0	xie0,xo0,xie2
-戲	xv	u	0	xie0,xo0,xie2
+戲	x	u	0	xie0,xo0,xie2
 戳	ṯ	wg	3	
 戳	ṯ	og	3	
 戴	t	aj	2	tai2
@@ -12751,7 +12751,7 @@ character	initial	final	tone	mc
 戹	q	ag	3	qrek
 戺	zj	i	2	ḑri1
 戼	m	av	1	mrau1
-戽	xv	u	2	xo1,xo1,xo2
+戽	x	u	2	xo1,xo1,xo2
 戾	l	uj	2	le2,let
 戾	l	in	3	le2,let
 戾	ql	rj	1	le2,let
@@ -12769,7 +12769,7 @@ character	initial	final	tone	mc
 扆	q	i	1	qioi1
 扇	sj	in	2	sjen0,sjen2
 扇	sj	in	1	sjen0,sjen2
-扈	hv	u	2	xo1
+扈	h	u	2	xo1
 扉	pv	i	0	pyoi0
 扊		im	1	jem1
 手	sj	rv	1	sju1
@@ -12794,7 +12794,7 @@ character	initial	final	tone	mc
 扛	k	og	0	krug0
 扛	ꝁ	og	0	krug0
 扜	x	y	0	xyo0,qyo0
-扝	ꝁv	u	0	qo0,ꝁo0
+扝	ꝁ	u	0	qo0,ꝁo0
 扞	h	on	2	xan2
 扞	x	on	1	xan2
 扞	h	on	1	xan2
@@ -12825,8 +12825,8 @@ character	initial	final	tone	mc
 扳	p	an	1	pran0,ꝑran0
 扴	k	in	3	kret
 扵	q	y	0	qio0
-扵	qv	u	0	qio0
-扶	bhv	u	0	byo0,pyo0
+扵	q	u	0	qio0
+扶	bh	u	0	byo0,pyo0
 扷	q	ov	2	
 扸	s	ig	3	
 批	ꝑ	rj	0	ꝑe0
@@ -12860,7 +12860,7 @@ character	initial	final	tone	mc
 抎	hv	rn	1	yon1
 抏	g	yn	0	guan0
 抏	gv	an	0	guan0
-抏	gv	un	2	guan0
+抏	g	un	2	guan0
 抐	n	on	3	nuon2,nuot
 抑	q	ig	3	qik
 抒	s	y	0	zio1,zjo1
@@ -12931,7 +12931,7 @@ character	initial	final	tone	mc
 拉	l	aj	2	lop
 拉	l	an	3	lop
 拉	l	am	3	lop
-拊	ꝑv	u	1	ꝑyo1
+拊	ꝑ	u	1	ꝑyo1
 拋	ꝑ	av	0	ꝑrau0
 拌	b	un	2	ꝑuan0,buan1
 拌	ꝑ	un	2	ꝑuan0,buan1
@@ -12984,7 +12984,7 @@ character	initial	final	tone	mc
 拸		i	0	je0
 拹	x	im	3	xiap
 拺	ŧj	ag	3	ṯrek,srek
-拻	pv	uj	0	
+拻	p	uj	0	
 拼	ꝑ	ig	0	preg0
 拼	ꝑ	ig	2	preg0
 拼	ꝑ	un	2	preg0
@@ -13012,7 +13012,7 @@ character	initial	final	tone	mc
 挌	k	ag	3	lak,krak
 挍	h	av	2	
 挎	ꝁv	a	2	ꝁo0
-挎	ꝁv	u	0	ꝁo0
+挎	ꝁ	u	0	ꝁo0
 挏	d	ug	2	dug0,dug1
 挏	d	ug	0	dug0,dug1
 挐	n	a	0	nrio0,nra0
@@ -13066,9 +13066,9 @@ character	initial	final	tone	mc
 挾	h	am	3	xep
 挾	k	am	3	xep
 挾	h	im	3	xep
-捀	bhv	ug	0	byug0,byug2
+捀	bh	ug	0	byug0,byug2
 捁	k	av	1	
-捂	qgv	u	1	go2
+捂	qg	u	1	go2
 捂	g		2	go2
 捃	ꝁv	rn	1	kyon2
 捃	ꝁv	rn	2	kyon2
@@ -13108,7 +13108,7 @@ character	initial	final	tone	mc
 捠	p	rg	0	preg0
 换		un	2	
 捤	m	ej	1	
-捥	qv	un	1	quan2
+捥	q	un	1	quan2
 捦	c	rm	0	ţim0
 捧	ꝑ	ug	1	ꝑyug1
 捧	p	ug	1	ꝑyug1
@@ -13119,7 +13119,7 @@ character	initial	final	tone	mc
 捩	l	uj	2	le2,let
 捪	m	rn	0	
 捫	m	un	0	muon0
-捬	pv	u	1	
+捬	p	u	1	
 捭	p	aj	1	pre1
 据	k	y	0	kio0
 捯	t	ov	2	
@@ -13243,7 +13243,7 @@ character	initial	final	tone	mc
 揈	bhv	rg	0	xrueg0
 揉	nj	rv	0	nju0
 揊	p	ig	3	ꝑik
-揋	qv	uj	0	quai0
+揋	q	uj	0	quai0
 揌	s	rg	3	sai0
 揍	ţ	rv	2	
 揎	s	yn	0	syen0
@@ -13261,7 +13261,7 @@ character	initial	final	tone	mc
 揙	p	in	0	pjen0
 揚	j	og	0	jag0
 揚	q	wg	1	jag0
-換	hv	un	2	xuan2
+換	h	un	2	xuan2
 揜	q	im	1	qam1,qiem1
 揝	ţ	an	1	
 揝	ḑ	an	2	
@@ -13303,7 +13303,7 @@ character	initial	final	tone	mc
 揲		im	3	zjet,jep,dep
 揳	s	in	3	set
 揳	s	im	3	set
-援	hv	un	0	yan0,yen2
+援	h	un	0	yan0,yen2
 援	h	yn	0	yan0,yen2
 援	h	yn	2	yan0,yen2
 揵	c	in	0	ţien0,kian1
@@ -13400,7 +13400,7 @@ character	initial	final	tone	mc
 搾	ţ	a	2	
 搿	k	am	3	
 搿	k	rm	3	
-摀	qv	u	1	
+摀	q	u	1	
 摀	g		2	
 摁	q	on	2	
 摃	k	og	0	
@@ -13419,7 +13419,7 @@ character	initial	final	tone	mc
 摑	kv	og	3	kruek
 摒	p	ig	2	pjeg2
 摒	p	ig	1	pjeg2
-摓	bhv	ug	0	
+摓	bh	ug	0	
 摔	s	on	3	
 摕	t	rj	2	te2,de2,tad0,det
 摖	ṯ	rj	2	ṯe2
@@ -13544,7 +13544,7 @@ character	initial	final	tone	mc
 撨	s	iv	0	seu0,ḑieu0
 撩	l	iv	0	leu0,leu1
 撪	b	rn	2	
-撫	ꝑv	u	1	ꝑyo1
+撫	ꝑ	u	1	ꝑyo1
 撬	c	iv	2	
 撬	x	iv	2	
 播	p	o	2	pua2
@@ -13803,7 +13803,7 @@ character	initial	final	tone	mc
 整	tj	ig	1	ţjeg1
 敵	d	ig	3	dek
 敶	dj	rn	0	drin0,drin2
-敷	ꝑv	u	0	ꝑyo0
+敷	ꝑ	u	0	ꝑyo0
 數	sj	ov	2	sryo1,sryo2,sruk
 數	sj	ov	1	sryo1,sryo2,sruk
 數	sj	og	3	sryo1,sryo2,sruk
@@ -13848,7 +13848,7 @@ character	initial	final	tone	mc
 料	l	iv	2	leu0,leu2
 斚	k	a	1	
 斛	h	ug	3	xuk
-斛	hv	ug	3	xuk
+斛	h	ug	3	xuk
 斜	ḑ	e	0	ja0,zia0
 斜	ṯ	e	1	ja0,zia0
 斜	ṯ	e	2	ja0,zia0
@@ -13866,7 +13866,7 @@ character	initial	final	tone	mc
 斤	k	rn	0	kion0,kion2
 斥	ŧj	ig	3	ṯja2,ṯjek
 斦	g	rn	0	gion0
-斧	pv	u	1	pyo1
+斧	p	u	1	pyo1
 斨	ṯ	wg	0	ṯiag0
 斪	c	y	0	ţyo0
 斫	tj	wg	3	ţjak
@@ -13889,7 +13889,7 @@ character	initial	final	tone	mc
 斺	ṯ	in	1	
 斻	h	og	0	
 於	q	y	0	qio0,qo0
-於	qv	u	0	qio0,qo0
+於	q	u	0	qio0,qo0
 施	sj	i	0	sje0,sje2
 施		i	2	sje0,sje2
 斾	ꝑ	uj	2	
@@ -13906,7 +13906,7 @@ character	initial	final	tone	mc
 旆	ꝑ	uj	2	bad0
 旇	ꝑ	i	0	ꝑie0,bie2
 旈	l	rv	0	
-旉	pv	u	0	
+旉	p	u	0	
 旊	pv	og	1	
 旋	z	yn	0	zyen0,zyen2
 旋	z	yn	2	zyen0,zyen2
@@ -13978,7 +13978,7 @@ character	initial	final	tone	mc
 昆	ꝁv	rn	0	kuon0
 昆	kv	rn	0	kuon0
 昇	sj	ig	0	sjig0
-昈	hv	u	2	xo1
+昈	h	u	2	xo1
 昉	pv	og	1	pyag1
 昊	h	ov	2	xau1
 昋	kv	i	2	kue2
@@ -14078,8 +14078,8 @@ character	initial	final	tone	mc
 晣	tj	in	3	ţjet
 晣	tj	rj	2	ţjet
 晤	g		2	go2
-晥	hv	un	1	xuan1
-晦	xv	uj	2	xuai2
+晥	h	un	1	xuan1
+晦	x	uj	2	xuai2
 晧	h	ov	2	xau1
 晨	zj	rn	0	ḑjin0,zjin0
 晪	l	og	0	ŧen1
@@ -14258,9 +14258,9 @@ character	initial	final	tone	mc
 最	ţ	uj	2	ţuad0
 朁	ṯ	am	1	ḑiem0,ṯom1
 朂	qj	ug	3	
-會	hv	uj	2	xuad0,kuad0
-會	xv	uj	1	xuad0,kuad0
-會	hv	uj	1	xuad0,kuad0
+會	h	uj	2	xuad0,kuad0
+會	x	uj	1	xuad0,kuad0
+會	h	uj	1	xuad0,kuad0
 會	ꝁ	uj	1	xuad0,kuad0
 朄	j	rn	1	
 朄	j	rn	2	
@@ -14277,7 +14277,7 @@ character	initial	final	tone	mc
 朋	ꝑ	rg	1	bog0
 朌	bhv	rn	0	byon0,pran0
 朌	p	an	0	byon0,pran0
-服	bv	ug	3	biuk
+服	b	ug	3	biuk
 朎	l	ig	0	
 朏	ꝑv	i	1	ꝑyoi1,ꝑai1,ꝑuai2
 朐	c	y	0	
@@ -14351,7 +14351,7 @@ character	initial	final	tone	mc
 杅	q	y	0	yo0
 杆	k	on	0	kan2
 杆	k	on	1	kan2
-杇	qv	u	0	qo0
+杇	q	u	0	qo0
 杈	ŧj	a	0	ṯra0,ṯre2
 杈	ŧj	a	2	ṯra0,ṯre2
 杉	ŧj	am	2	srem0
@@ -14422,7 +14422,7 @@ character	initial	final	tone	mc
 板	p	an	1	pran1
 枀	ḑ	ug	0	
 枀	s	ug	0	
-枂	gv	un	3	gyat,guat
+枂	g	un	3	gyat,guat
 枃	ţ	on	2	ţin2
 枅	k	rj	0	ke0
 枆	m	ov	0	mau0
@@ -14433,11 +14433,11 @@ character	initial	final	tone	mc
 枋	pv	og	0	pyag0
 枌	bhv	rn	0	byon0
 枍	j	rj	2	qe2
-枎	bhv	u	0	byo0
+枎	bh	u	0	byo0
 枏	n	am	0	
 析	s	ig	3	sek
 析	ṯ	ig	3	sek
-枑	hv	u	2	xo2
+枑	h	u	2	xo2
 枒	qg	a	0	gra0,gra2
 枓	t	rv	1	ţjyo1,tu1
 枓	tj	y	1	ţjyo1,tu1
@@ -14461,7 +14461,7 @@ character	initial	final	tone	mc
 枩	ḑ	ug	0	
 枬	ţ	in	0	
 枮	ṯ	im	0	trim0,siem0
-枯	ꝁv	u	0	ꝁo0
+枯	ꝁ	u	0	ꝁo0
 枰	b	ig	0	bieg0,bieg2
 枱	ŧ	oj	1	
 枱	d	oj	0	
@@ -14476,7 +14476,7 @@ character	initial	final	tone	mc
 枸	k	rv	1	ku0,kyo1,ku1
 枸	k	y	1	ku0,kyo1,ku1
 枹	p	av	0	byo0,prau0,biu0
-枹	pv	u	0	byo0,prau0,biu0
+枹	p	u	0	byo0,prau0,biu0
 枺	m	un	3	mad0
 枻	j	rj	2	jed0
 枼		im	3	jep
@@ -14505,8 +14505,8 @@ character	initial	final	tone	mc
 柌	ḑ	i	0	zi0
 柍	q	wg	0	qiag1
 柍	q	wg	1	qiag1
-柎	pv	u	0	pyo0
-柎	pv	u	1	pyo0
+柎	p	u	0	pyo0
+柎	p	u	1	pyo0
 柏	ꝑ	ag	3	prak
 柏	p	ag	3	prak
 某	m	rv	1	mu1
@@ -14634,7 +14634,7 @@ character	initial	final	tone	mc
 栻	sj	ig	3	ŧrik
 格	k	ag	3	kak,krak
 栽	ţ	oj	0	ţai0,ḑai2
-栿	bv	ug	3	biuk
+栿	b	ug	3	biuk
 桀	c	in	3	ţiet
 桁	h	rg	0	xag0,xrag0
 桁	h	ag	0	xag0,xrag0
@@ -14661,13 +14661,13 @@ character	initial	final	tone	mc
 桋		i	0	jii0,de0
 桌	ŧj	wg	3	truk
 桌	tj	wg	3	truk
-桍	pv	u	0	
+桍	p	u	0	
 桎	dj	rn	3	ţjit
 桏	c	ug	0	ţyug0
 桐	d	ug	0	dug0
 桑	s	og	0	sag0
 桒	s	og	0	sag0
-桓	hv	un	0	xuan0
+桓	h	un	0	xuan0
 桔	k	rn	3	ket
 桔	k	in	3	ket
 桕	c	rv	1	
@@ -14689,7 +14689,7 @@ character	initial	final	tone	mc
 桱	k	ig	2	keg2
 桲	b	un	3	buot
 桳	b	rn	2	
-桴	ꝑv	u	0	ꝑyo0,biu0
+桴	ꝑ	u	0	ꝑyo0,biu0
 桴	bhv	rv	0	ꝑyo0,biu0
 桵	nj	uj	0	njyi0
 桶	ŧ	ug	1	ŧug1,dug1
@@ -14697,7 +14697,7 @@ character	initial	final	tone	mc
 桸	x	i	0	xie0,xioi0
 桹	l	og	0	lag0
 桺	l	rv	1	
-桻	ꝑv	ug	0	ꝑyug0
+桻	ꝑ	ug	0	ꝑyug0
 桼	ṯ	rn	3	ṯit
 桽	qv	rn	1	
 桾	kv	rn	0	kyon0
@@ -14741,7 +14741,7 @@ character	initial	final	tone	mc
 梞	c	i	2	ţi2
 梟	x	iv	0	keu0
 梠	l	wj	1	lio1
-梡	ꝁv	un	1	xuan0,xuan1,ꝁuan1
+梡	ꝁ	un	1	xuan0,xuan1,ꝁuan1
 梢	sj	av	0	srau0
 梣	z	rm	0	ḑim0,ḑrim0
 梤	bhv	rn	0	byon0
@@ -14839,7 +14839,7 @@ character	initial	final	tone	mc
 棲	ṯ	rj	0	se0
 棲	s	rj	0	se0
 棳	ţ	yn	3	
-棴	bv	ug	3	suk,biuk
+棴	b	ug	3	suk,biuk
 棵	ꝁv	o	1	xuan1,ꝁuan1
 棵	ꝁv	o	0	xuan1,ꝁuan1
 棵	ꝑ	o	0	xuan1,ꝁuan1
@@ -14858,7 +14858,7 @@ character	initial	final	tone	mc
 棽	dj	rm	0	ŧrim0,srim0
 棾	c	ig	0	
 棿	g	rj	0	ge0
-椀	qv	un	1	quan1
+椀	q	un	1	quan1
 椁	kv	og	3	kuak
 椂	l	ug	3	
 椃	h	ov	0	
@@ -14897,15 +14897,15 @@ character	initial	final	tone	mc
 椥	ţ	i	0	
 椦	x	yn	0	
 椧	m	ig	2	
-椨	pv	u	1	
+椨	p	u	1	
 椩	k	rg	0	
 椪	ꝑ	ug	2	
 椬		i	0	
 椯	t	o	1	ḑjyen0
 椰	j	e	0	ja0
-椱	bv	ug	3	biu2,biuk
+椱	b	ug	3	biu2,biuk
 椲	hv	i	1	yoi1
-椳	qv	uj	0	quai0
+椳	q	uj	0	quai0
 椴	d	yn	2	duan2
 椵	k	a	1	kra1
 椵	k	a	0	kra1
@@ -14940,11 +14940,11 @@ character	initial	final	tone	mc
 楍	p	un	1	
 楎	hv	rn	0	xyoi0,xuon0
 楎	xv	i	0	xyoi0,xuon0
-楏	ꝁv	uj	0	ꝁue0
+楏	ꝁ	uj	0	ꝁue0
 楐	k	aj	2	
 楑	cv	i	1	ţjyi0,ţjyi1
 楒	s	i	0	si0
-楓	pv	ug	0	piug0
+楓	p	ug	0	piug0
 楔	s	in	3	kret,set
 楕	d	o	1	
 楖	ţ	in	3	ţit,ţrit,ţik
@@ -14954,8 +14954,8 @@ character	initial	final	tone	mc
 楘	m	ug	3	muk
 楙	m	rv	2	mau0,mu2
 楚	ŧj	o	1	ṯrio1,ṯrio2
-楛	pv	u	1	xo1
-楛	hv	u	2	xo1
+楛	p	u	1	xo1
+楛	h	u	2	xo1
 楜		u	0	
 楝	l	in	2	len2
 楞	l	ig	0	log0
@@ -15013,7 +15013,7 @@ character	initial	final	tone	mc
 榎	k	a	1	kra1
 榏		ig	3	
 榐	ţ	in	1	
-榑	bhv	u	0	byo0
+榑	bh	u	0	byo0
 榒	qn	ig	3	
 榓	m	rn	3	mjit
 榔	l	og	0	lag0,lag1
@@ -15307,7 +15307,7 @@ character	initial	final	tone	mc
 檐	zj	im	0	jem0
 檐	j	rm	0	jem0
 檑	l	wj	0	
-檒	pv	ug	0	piug0
+檒	p	ug	0	piug0
 檓	xv	i	1	xye1
 檔	t	og	1	tag0
 檔	t	og	2	tag0
@@ -15368,7 +15368,7 @@ character	initial	final	tone	mc
 櫃	kv	i	1	ţyi2
 櫄	ŧj	on	0	ŧryn0
 櫅	ţ	rj	0	ţe0
-櫆	pv	uj	0	
+櫆	p	uj	0	
 櫇	b	o	0	
 櫈	t	rg	2	
 櫉	ḑ	wj	0	
@@ -15493,7 +15493,7 @@ character	initial	final	tone	mc
 欲	j	ug	3	jyuk
 欳	qv	i	1	
 欴	l	og	0	lag0
-欵	ꝁv	un	1	ꝁuan1
+欵	ꝁ	un	1	ꝁuan1
 欶	s	og	3	su2,sruk
 欷	x	i	0	xioi0,xioi2
 欸		ej	2	qai0,qai1,xrai2
@@ -15508,10 +15508,10 @@ character	initial	final	tone	mc
 欻	ŧj	an	3	xyot
 欼	tj	yn	3	ṯri1
 欽	ꝁj	rm	0	ꝁim0
-款	ꝁv	un	1	ꝁuan1
+款	ꝁ	un	1	ꝁuan1
 欿	x	om	1	xom1
 欿	d	am	2	xom1
-歀	ꝁv	un	1	ꝁuan1
+歀	ꝁ	un	1	ꝁuan1
 歁	ꝁ	om	1	ꝁom1,ꝁop
 歂	dj	yn	0	ḑjyen0,ḑjyen1
 歂	ŧj	yn	1	ḑjyen0,ḑjyen1
@@ -15526,12 +15526,12 @@ character	initial	final	tone	mc
 歊	x	iv	0	xieu0,xuuk
 歋		i	0	je0
 歌	k	o	0	ka0
-歍	qv	u	0	qo0
+歍	q	u	0	qo0
 歎	ŧ	an	2	ŧan2
 歏	c	rn	2	ţin2
 歐	q	rv	0	qu0,qu1
 歐	q	rv	1	qu0,qu1
-歑	xv	u	0	xo0
+歑	x	u	0	xo0
 歒	ŧ	ig	3	
 歔	x	wj	0	xio0
 歕	ꝑ	rn	2	ꝑuon0,ꝑuon2
@@ -15551,7 +15551,7 @@ character	initial	final	tone	mc
 歞	g	rm	3	
 歟		y	0	jo0,jo1,jo2
 歠	tj	yn	3	ṯjyet
-歡	xv	un	0	xuan0
+歡	x	un	0	xuan0
 止	tj	i	1	ţji1
 正	tj	ig	2	ţjeg0,ţjeg2
 正	tj	ig	0	ţjeg0,ţjeg2
@@ -15600,7 +15600,7 @@ character	initial	final	tone	mc
 殊	zj	y	0	ḑjyo0
 殌	ꝁ	yn	3	
 殍	b	iv	1	ꝑyo0,bii1,bieu1
-殍	ꝑv	u	0	ꝑyo0,bii1,bieu1
+殍	ꝑ	u	0	ꝑyo0,bii1,bieu1
 殎	x	am	3	
 殏	c	rv	0	ţiu0
 殐	s	ug	3	suk
@@ -15831,8 +15831,8 @@ character	initial	final	tone	mc
 汗	h	on	2	xan0,kan0,xan2
 汗	h	on	0	xan0,kan0,xan2
 汘	ḑ	im	0	ṯen0
-汙	qv	u	0	yo0,qo2
-汙	qv	u	2	yo0,qo2
+汙	q	u	0	yo0,qo2
+汙	q	u	2	yo0,qo2
 汙	qv	a	0	yo0,qo2
 汛	s	on	2	sre2,sin2,sen2
 汜	ḑ	i	1	zi1
@@ -15840,8 +15840,8 @@ character	initial	final	tone	mc
 汞	x	ug	2	xug1
 江	k	og	0	krug0
 池	dj	i	0	drie0,da0
-污	qv	u	0	yo0,qo2
-污	qv	u	2	yo0,qo2
+污	q	u	0	yo0,qo2
+污	q	u	2	yo0,qo2
 汢	ŧ	ov	1	
 汣	kv	i	1	
 汥	tj	i	0	ţje0,ţje0,ţie2
@@ -15870,7 +15870,7 @@ character	initial	final	tone	mc
 汹	x	ug	0	
 決	ꝁ	yn	3	xuet,kuet
 決	x	yn	3	xuet,kuet
-汻	xv	u	1	xag1
+汻	x	u	1	xag1
 汼	g	rv	0	
 汽	x	ej	2	
 汾	bhv	rn	0	byon0
@@ -15968,7 +15968,7 @@ character	initial	final	tone	mc
 法	pv	an	3	pyap
 泖	m	av	1	mrau1
 泗	s	i	2	sii2
-泘	pv	u	0	
+泘	p	u	0	
 泙	ꝑ	ag	0	bieg0
 泙	b	ig	0	bieg0
 泚	ṯ	i	1	ṯie1,ṯe1
@@ -15999,7 +15999,7 @@ character	initial	final	tone	mc
 泫	h	yn	1	xuen1
 泬	ꝁ	yn	3	xuet
 泬	x	yn	3	xuet
-泭	ꝑv	u	0	byo0,ꝑyo0
+泭	ꝑ	u	0	byo0,ꝑyo0
 泮	ꝑ	un	2	ꝑuan2
 泮	b	un	2	ꝑuan2
 泯	m	rn	1	mjin0,mjin1
@@ -16016,8 +16016,8 @@ character	initial	final	tone	mc
 洀	ţ	rv	0	
 洀	b	un	0	
 洂		ig	3	
-洃	pv	uj	0	
-洄	hv	uj	0	xuai0
+洃	p	uj	0	
+洄	h	uj	0	xuai0
 洅	ţ	oj	2	ţuai1
 洆	z	ig	0	
 洇	qj	rn	0	qjin0
@@ -16032,8 +16032,8 @@ character	initial	final	tone	mc
 洎	c	i	2	kii2,ţii2
 洏	nj	i	0	nji0
 洐	h	rg	0	xrag0
-洑	bv	ug	3	biuk
-洑	bhv	u	0	biuk
+洑	b	ug	3	biuk
+洑	bh	u	0	biuk
 洒	s	rj	1	se1,sre2
 洒	s	in	1	se1,sre2
 洓	s	ag	3	ṯiek
@@ -16062,7 +16062,7 @@ character	initial	final	tone	mc
 洤	ḑ	yn	0	
 津	ţ	on	0	ţin0
 洦	ꝑ	ag	3	mrak,ꝑrak
-洧	pv	uj	1	yi1
+洧	p	uj	1	yi1
 洨	g	av	0	xrau0
 洩	sj	in	3	jed0
 洩	j	rj	2	jed0
@@ -16084,10 +16084,10 @@ character	initial	final	tone	mc
 洶	x	ug	0	xyug0,xyug1
 洷	ḑ	rn	3	
 洸	kv	og	0	kuag0,quag0
-洹	hv	un	0	yan0,xuan0
+洹	h	un	0	yan0,xuan0
 洹	h	yn	0	yan0,xuan0
 洺	m	ig	0	mjeg0
-活	hv	un	3	kuat,xuat
+活	h	un	3	kuat,xuat
 活	k	un	3	kuat,xuat
 洼	kv	i	0	kue0,qre0,qrua0
 洽	x	rm	3	xrep
@@ -16095,7 +16095,7 @@ character	initial	final	tone	mc
 派	ꝑ	aj	2	ꝑre2
 派	ꝑ	aj	0	ꝑre2
 派	ꝑ	aj	1	ꝑre2
-洿	qv	u	0	qo0,xo1
+洿	q	u	0	qo0,xo1
 浀	ꝁ	ug	3	
 流	l	rv	0	liu0
 浂	k	un	2	
@@ -16117,14 +16117,14 @@ character	initial	final	tone	mc
 浠	x	ej	0	
 浡	b	un	3	buot
 浢	d	rv	2	du2
-浣	hv	un	1	xuan1
-浣	qv	un	1	xuan1
+浣	h	un	1	xuan1
+浣	q	un	1	xuan1
 浤	hv	rg	0	xrueg0
 浥	qj	rm	3	qip,qrep,qiap
 浥	q	am	3	qip,qrep,qiap
 浦	ꝑ	ov	1	ꝑo1
 浦	b	ov	0	ꝑo1
-浧	qv	un	2	jeg1
+浧	q	un	2	jeg1
 浨	l	om	1	lom1
 浩	h	ov	2	xau1,kop
 浪	l	og	2	lag0,lag2
@@ -16139,7 +16139,7 @@ character	initial	final	tone	mc
 浰	l	in	2	len2
 浰	l	ej	2	len2
 浱	z	on	0	
-浲	bhv	ug	0	
+浲	bh	ug	0	
 浳		ig	3	
 浴	j	ug	3	jyuk
 浵	d	ug	0	duug0
@@ -16227,7 +16227,7 @@ character	initial	final	tone	mc
 淋	l	rm	2	lim0
 淌	ŧ	og	1	
 淍	ţ	rv	0	
-淎	pv	ug	1	
+淎	p	ug	1	
 淏	h	ov	2	
 淐	ṯ	wg	0	
 淑	zj	ug	3	ḑjuk
@@ -16320,8 +16320,8 @@ character	initial	final	tone	mc
 渠	h	wj	1	ţio0
 渡	d	ov	2	do2
 渡	t	ov	1	do2
-渢	pv	ug	0	biug0
-渢	bhv	ug	0	biug0
+渢	p	ug	0	biug0
+渢	bh	ug	0	biug0
 渣	tj	a	0	ţra0
 渤	b	un	3	buot
 渥	q	rg	3	qruk
@@ -16329,7 +16329,7 @@ character	initial	final	tone	mc
 渦	xv	o	0	kua0,qua0
 渦	kv	o	0	kua0,qua0
 渧	t	rj	2	te2
-渨	qv	uj	0	quai0
+渨	q	uj	0	quai0
 渨	qv	i	1	quai0
 渪		y	0	
 渫	s	in	3	siet,ḑrep
@@ -16389,8 +16389,8 @@ character	initial	final	tone	mc
 湔	ţ	in	0	ḑen0,ţen0,ţien0,ţien2
 湔	ţ	in	2	ḑen0,ţen0,ţien0,ţien2
 湕	k	in	1	kian1
-湖	hv	u	0	xo0
-湗	bv	ug	2	
+湖	h	u	0	xo0
+湗	b	ug	2	
 湘	s	wg	0	siag0
 湙		ig	3	
 湚	j	rn	2	
@@ -16429,7 +16429,7 @@ character	initial	final	tone	mc
 湰	l	ug	0	
 湱	v	ag	3	xruak,xruek
 湲	h	yn	0	xruen0,yen0
-湲	hv	un	0	xruen0,yen0
+湲	h	un	0	xruen0,yen0
 湳	n	am	1	nom1
 湴	b	an	2	bram2
 湵	j	rv	1	
@@ -16442,7 +16442,7 @@ character	initial	final	tone	mc
 湼	n	im	3	
 湽	tj	i	0	ţri0
 溂	l	an	3	
-溄	bhv	ug	0	
+溄	bh	ug	0	
 溆	ḑ	wj	2	
 溈	kv	i	0	
 溉	ꝁ	oj	2	
@@ -16482,7 +16482,7 @@ character	initial	final	tone	mc
 溦	m	ej	0	
 溧	l	on	3	lit
 溨	ţ	oj	0	ḑai0
-溩	qv	u	1	qo1
+溩	q	u	1	qo1
 溪	ꝁ	rj	0	ꝁe0
 溫	qv	rn	0	quon0
 溬	k	wg	0	
@@ -16527,7 +16527,7 @@ character	initial	final	tone	mc
 滌	d	ig	3	dek
 滍	dj	i	2	drii1
 滎	h	ig	0	xueg0
-滏	pv	u	1	byo1
+滏	p	u	1	byo1
 滐	c	in	3	ţiet
 滑	hv	an	3	kuot,xuot,xruet
 滑	kv	rn	3	kuot,xuot,xruet
@@ -16546,7 +16546,7 @@ character	initial	final	tone	mc
 滫	s	rv	0	siu1
 滫	s	rv	1	siu1
 滫	s	rv	2	siu1
-滬	hv	u	2	xo1
+滬	h	u	2	xo1
 滭	p	rn	3	pjit
 滮	p	iv	0	
 滯	dj	rj	2	dried0
@@ -16559,9 +16559,9 @@ character	initial	final	tone	mc
 滵	m	rn	3	mit
 滶	g	ov	0	gau0
 滷	l	ov	1	lo1,ṯjek,dek
-滸	xv	u	1	xo1
+滸	x	u	1	xo1
 滸	x	wj	1	xo1
-滹	xv	u	0	xo0
+滹	x	u	0	xo0
 滺	j	rv	0	
 滺	d	ig	3	
 滻	ŧj	an	1	sren1
@@ -16615,7 +16615,7 @@ character	initial	final	tone	mc
 漥	qv	a	0	
 漦	l	i	0	zri0
 漧	k	on	0	kan0
-漨	bhv	ug	0	byug0
+漨	bh	ug	0	byug0
 漩	z	yn	0	
 漪	q	i	0	qie0
 漪	q	i	1	qie0
@@ -16746,7 +16746,7 @@ character	initial	final	tone	mc
 澑	l	rv	2	
 澒	h	ug	2	xug1
 澒	x	ug	2	xug1
-澓	bv	ug	3	biuk
+澓	b	ug	3	biuk
 澔	h	ov	2	
 澕	v	o	0	
 澖	h	an	0	
@@ -16763,8 +16763,8 @@ character	initial	final	tone	mc
 澡	ṯ	ov	2	ţau1
 澡	ţ	ov	1	ţau1
 澢	t	og	0	
-澣	hv	un	1	xuan1
-澣	qv	un	1	xuan1
+澣	h	un	1	xuan1
+澣	q	un	1	xuan1
 澤	dj	ag	3	drak
 澤	sj	ig	3	drak
 澥	h	aj	1	xre1
@@ -16849,7 +16849,7 @@ character	initial	final	tone	mc
 濧	d	uj	2	duai2
 濨	ḑ	i	0	ḑi0
 濩	hv	og	3	xo2,xuak,qyek
-濩	hv	u	2	xo2,xuak,qyek
+濩	h	u	2	xo2,xuak,qyek
 濪	ṯ	ig	2	
 濫	l	am	2	xram1,lam2
 濫	l	am	1	xram1,lam2
@@ -16864,7 +16864,7 @@ character	initial	final	tone	mc
 濳	ḑ	im	0	
 濴		ig	0	jyeg0
 濵	p	rn	0	
-濶	pv	un	3	
+濶	p	un	3	
 濷	pv	i	2	
 濸	ṯ	og	0	
 濹	m	rg	3	
@@ -16958,7 +16958,7 @@ character	initial	final	tone	mc
 灁	q	yn	0	
 灂	dj	og	3	ḑruk
 灂	tj	iv	2	ḑruk
-灃	ꝑv	ug	0	ꝑiug0
+灃	ꝑ	ug	0	ꝑiug0
 灄	sj	im	3	sjep
 灅	l	wj	1	
 灆	l	am	0	
@@ -17003,7 +17003,7 @@ character	initial	final	tone	mc
 火	xv	o	1	xua1
 灬	p	iv	0	
 灮	kv	og	0	kuag0
-灰	xv	uj	0	xuai0
+灰	x	uj	0	xuai0
 灱	x	av	0	xrau0
 灲	x	av	0	
 灳	pv	i	0	
@@ -17090,7 +17090,7 @@ character	initial	final	tone	mc
 炻	z	eg	3	
 炾	pv	og	1	
 炿	ţ	rv	0	
-烀	pv	u	0	
+烀	p	u	0	
 烄	k	av	1	krau1,kau2
 烅	kv	ig	3	
 烆	h	rg	0	
@@ -17104,7 +17104,7 @@ character	initial	final	tone	mc
 烌	qj	rv	0	
 烍	s	in	1	
 烎	ḑ	im	0	
-烏	qv	u	0	qo0
+烏	q	u	0	qo0
 烐	ţ	rv	0	
 烑		iv	0	jeu0
 烒	sj	ig	3	sjik
@@ -17128,10 +17128,10 @@ character	initial	final	tone	mc
 烞	ꝑ	og	3	
 烟	q	in	0	qjin0,qen0
 烟	qj	rn	0	qjin0,qen0
-烠	hv	uj	0	xuai0
+烠	h	uj	0	xuai0
 烡	kv	og	0	
 烢	ṯ	ag	3	
-烣	pv	uj	0	
+烣	p	uj	0	
 烤	x	av	0	
 烤	x	av	1	
 烥	c	y	2	
@@ -17152,7 +17152,7 @@ character	initial	final	tone	mc
 烺	l	og	1	
 烻	q	in	2	
 烼	xv	rn	3	xyot
-烽	ꝑv	ug	0	ꝑyug0
+烽	ꝑ	ug	0	ꝑyug0
 烾	ŧj	eg	3	ṯjek
 烿	j	ug	0	
 焀	h	ug	3	xuk
@@ -17194,11 +17194,11 @@ character	initial	final	tone	mc
 無	m	o	0	myo0
 焢	x	ug	0	
 焣	ṯ	av	1	
-焤	bv	u	2	
+焤	b	u	2	
 焥	qv	an	3	quat
 焦	ţ	iv	0	ţieu0
 焧	ṯ	ug	0	
-焨	pv	ug	2	
+焨	p	ug	2	
 焩	b	rg	0	
 焪	ꝁ	ug	2	ꝁiug0,ꝁiug2
 焫	qnj	yn	3	njyet
@@ -17236,7 +17236,7 @@ character	initial	final	tone	mc
 煇	xv	i	0	xyoi0,xuon0,xuon1
 煇	xv	i	0	xyoi0,xuon0,xuon1
 煇	hv	rn	2	xyoi0,xuon0,xuon1
-煈	pv	ug	2	
+煈	p	ug	2	
 煉	l	in	2	
 煊	x	yn	0	
 煋	s	ig	0	
@@ -17269,7 +17269,7 @@ character	initial	final	tone	mc
 煦	x	wj	1	xyo1,xyo2
 煦	x	wj	2	xyo1,xyo2
 照	tj	iv	2	ţjeu2
-煨	qv	uj	0	quai0
+煨	q	uj	0	quai0
 煩	bhv	an	0	byan0
 煪	ḑ	rv	0	ḑiu0
 煫	z	wj	2	
@@ -17429,7 +17429,7 @@ character	initial	final	tone	mc
 燭	tj	ug	3	ţjyuk
 燮	s	in	3	sep
 燯	l	ig	0	
-燰	qv	uj	0	
+燰	q	uj	0	
 燱	q	i	2	
 燲	x	im	3	
 燳	ţ	iv	2	
@@ -17510,15 +17510,15 @@ character	initial	final	tone	mc
 爭	ŧj	ag	0	ţreg0
 爮	b	av	0	
 爯	ŧj	ig	0	ṯjig0
-爰	hv	un	0	yan0
+爰	h	un	0	yan0
 爰	h	yn	0	yan0
 爲	hv	i	0	ye0,ye2
 爲	hv	i	2	ye0,ye2
 爳	v	i	0	
 爴	pv	og	3	
 爵	ţ	wg	3	ţiak
-父	bv	u	2	pyo1,byo1
-父	pv	u	1	pyo1,byo1
+父	b	u	2	pyo1,byo1
+父	p	u	1	pyo1,byo1
 爸	p	a	0	bua1
 爸	bh	a	0	bua1
 爹	t	e	0	tria0,da1
@@ -17616,7 +17616,7 @@ character	initial	final	tone	mc
 犌	k	a	0	kra0
 犍	k	in	0	kian0,ţien0
 犍	c	in	0	kian0,ţien0
-犎	pv	ug	0	pyug0
+犎	p	ug	0	pyug0
 犏	ꝑ	in	0	
 犐	ꝁv	o	0	ꝁua0
 犑	kv	ig	3	kuek
@@ -17668,7 +17668,7 @@ character	initial	final	tone	mc
 犼	x	rv	2	
 犽	g	a	2	gra2
 犾	g	rn	0	
-犿	xv	un	0	xuan0
+犿	x	un	0	xuan0
 犿	xv	an	0	xuan0
 狀	dj	og	2	ḑriag2
 狀	tj	og	1	ḑriag2
@@ -17690,7 +17690,7 @@ character	initial	final	tone	mc
 狍	b	av	0	brau0
 狎	h	am	3	xrap
 狏	d	o	0	
-狐	hv	u	0	xo0
+狐	h	u	0	xo0
 狑	l	ig	0	leg0
 狒	pv	i	2	byoi2
 狒	bv	i	2	byoi2
@@ -17705,7 +17705,7 @@ character	initial	final	tone	mc
 狚	t	an	2	tan1,tan2,tat
 狛	p	ag	3	
 狜	k	u	1	
-狟	hv	un	0	xuan0
+狟	h	un	0	xuan0
 狠	x	rn	1	
 狡	k	av	1	krau1
 狢	h	og	3	xak
@@ -17773,12 +17773,12 @@ character	initial	final	tone	mc
 猝	ṯ	yn	3	ṯuot
 猞	s	e	2	
 猠	t	in	1	
-猢	hv	u	0	xo0
+猢	h	u	0	xo0
 猣	ţ	ug	0	ţug0,ţug1
 猤	kv	i	2	ţjyi2
 猥	qv	i	1	quai1
-猥	qv	uj	0	quai1
-猦	pv	ug	0	piug0
+猥	q	uj	0	quai1
+猦	p	ug	0	piug0
 猧	qv	o	0	
 猨	h	yn	0	yan0
 猩	s	ig	0	srieg0,seg0
@@ -17809,7 +17809,7 @@ character	initial	final	tone	mc
 獀	sj	rv	1	sriu0
 獁	m	a	1	
 獁	m	a	2	
-獂	gv	un	0	gyan0
+獂	g	un	0	gyan0
 獂	g	yn	0	gyan0
 獃	g	oj	0	gai0
 獃	t	aj	0	gai0
@@ -17876,7 +17876,7 @@ character	initial	final	tone	mc
 獼	m	i	0	mje0
 獼	n	i	0	mje0
 獽	nj	wg	0	njag0
-獾	xv	un	0	xuan0
+獾	x	un	0	xuan0
 獿	n	av	0	nau0,nrau1
 獿	n	ov	0	nau0,nrau1
 玀	l	o	0	
@@ -17911,7 +17911,7 @@ character	initial	final	tone	mc
 玘	ꝁ	i	1	ꝁi1
 玜	k	ug	0	
 玝	g		1	
-玞	pv	u	0	pyo0
+玞	p	u	0	pyo0
 玟	m	rn	0	
 玠	k	aj	2	krai2
 玡	g	a	0	
@@ -17924,7 +17924,7 @@ character	initial	final	tone	mc
 玦	ꝁ	yn	3	kuet
 玧	m	un	0	jyn1
 玨	k	og	3	
-玩	gv	un	2	guan2
+玩	g	un	2	guan2
 玩	qgv	an	1	guan2
 玩	gv	an	0	guan2
 玪	k	am	0	krem0
@@ -17938,7 +17938,7 @@ character	initial	final	tone	mc
 玵	g	rm	0	
 玶	b	ig	0	
 玷	t	im	2	tem1
-玸	bhv	u	0	byo0
+玸	bh	u	0	byo0
 玹	h	yn	0	xuen0,xuen2
 玻	p	o	0	ꝑua0
 玼	ṯ	i	0	ḑie0,ṯie1,ṯe1
@@ -18026,7 +18026,7 @@ character	initial	final	tone	mc
 琌	l	ig	0	
 琍	l	ej	0	
 琑	ṯ	iv	2	
-琒	pv	ug	0	
+琒	p	ug	0	
 琓		yn	0	
 琔	d	in	2	
 琕	b	rn	0	ben0
@@ -18046,7 +18046,7 @@ character	initial	final	tone	mc
 琣	p	ug	1	
 琤	tj	rg	0	ṯrag0,ṯreg0
 琤	tj	ag	0	ṯrag0,ṯreg0
-琥	xv	u	1	xo1
+琥	x	u	1	xo1
 琦	c	i	0	ţie0
 琦	ꝁ	i	1	ţie0
 琧	q	og	3	
@@ -18107,7 +18107,7 @@ character	initial	final	tone	mc
 瑘	g	a	0	ja0
 瑘	j	e	0	ja0
 瑙	n	ov	1	
-瑚	hv	u	0	xo0
+瑚	h	u	0	xo0
 瑛	q	ig	0	qieg0
 瑜		y	0	jyo0
 瑝	hv	ag	0	xruag0
@@ -18119,7 +18119,7 @@ character	initial	final	tone	mc
 瑣	s	o	1	sua1
 瑤		iv	0	jeu0
 瑥	qv	rn	0	
-瑦	qv	u	1	qo0,qo1
+瑦	q	u	1	qo0,qo1
 瑧	ţ	on	0	
 瑨	ţ	on	2	ţin2
 瑩	h	ig	0	yeg0,queg2
@@ -18244,13 +18244,13 @@ character	initial	final	tone	mc
 瓘	k	un	2	kuan2
 瓙	d	ov	2	
 瓚	ţ	an	2	
-瓛	hv	un	0	xuan0
+瓛	h	un	0	xuan0
 瓜	kv	a	0	krua0
 瓝	b	og	3	bruk
 瓞	d	in	3	det
 瓟	b	og	3	brau0,bruk
-瓠	hv	u	2	xo0,xo2
-瓠	hv	u	0	xo0,xo2
+瓠	h	u	2	xo0,xo2
+瓠	h	u	0	xo0,xo2
 瓠	hv	og	3	xo0,xo2
 瓡	tj	rm	3	ţjip
 瓢	b	iv	0	bjeu0
@@ -18271,7 +18271,7 @@ character	initial	final	tone	mc
 瓰	pv	rn	0	
 瓱	h	ov	0	
 瓲	d	yn	0	
-瓳	hv	u	0	xo0
+瓳	h	u	0	xo0
 瓴	l	ig	0	leg0
 瓵		i	0	ji0
 瓶	b	ig	0	beg0
@@ -18337,14 +18337,14 @@ character	initial	final	tone	mc
 甩	ql	rn	3	
 甩	s	on	3	
 甪	l	ug	3	
-甫	pv	u	1	pyo1
+甫	p	u	1	pyo1
 甫	ꝑ	ov	1	pyo1
 甫	ꝑ	ov	0	pyo1
 甫	ꝑ	ov	2	pyo1
 甬	qj	ug	1	jyug1
 甭	p	ug	1	
 甭	p	ug	2	
-甮	bv	ug	2	
+甮	b	ug	2	
 甮	m	ug	2	
 甯	n	ig	0	
 甯	n	ig	2	
@@ -18381,7 +18381,7 @@ character	initial	final	tone	mc
 畆	m	rv	1	
 畇	v	rn	0	syn0,jyn0,zyn0,den0
 畈	pv	an	2	pyan2
-畉	bhv	u	0	
+畉	bh	u	0	
 畊	k	ag	0	beg0
 畊	k	rg	0	beg0
 畋	d	in	0	den0,den2
@@ -18389,7 +18389,7 @@ character	initial	final	tone	mc
 畍	k	aj	2	
 畎	x	yn	1	kuen1
 畏	qv	i	2	qyoi2
-畐	bv	ug	3	biuk,ꝑik
+畐	b	ug	3	biuk,ꝑik
 畑	d	in	0	
 畒	m	rv	1	
 畓	ḑ	yn	0	
@@ -18538,7 +18538,7 @@ character	initial	final	tone	mc
 痌	ŧ	ug	0	ŧug0
 痍		i	0	jii0
 痎	k	aj	0	krai0
-痏	pv	uj	1	yi1
+痏	p	uj	1	yi1
 痏	hv	i	1	yi1
 痐		uj	0	
 痑	ŧ	an	0	ŧan0,ŧa0,ta2
@@ -18561,7 +18561,7 @@ character	initial	final	tone	mc
 痟	s	iv	0	sieu0
 痠	s	yn	0	suan0
 痡	ꝑ	ov	0	ꝑyo0,ꝑo0
-痡	ꝑv	u	0	ꝑyo0,ꝑo0
+痡	ꝑ	u	0	ꝑyo0,ꝑo0
 痢	l	i	2	lii2
 痣	tj	i	2	ţji2
 痤	ḑ	o	0	ḑua0
@@ -18610,7 +18610,7 @@ character	initial	final	tone	mc
 瘉		y	2	jyo0,jyo1
 瘉		y	1	jyo0,jyo1
 瘊	h	rv	0	xu0
-瘋	pv	ug	0	
+瘋	p	ug	0	
 瘌	ql	an	3	lat
 瘌	l	an	3	lat
 瘍	j	og	0	jag0
@@ -18620,7 +18620,7 @@ character	initial	final	tone	mc
 瘑	kv	o	0	kua0
 瘒	gv	rn	0	guon0
 瘓		un	2	ŧuan1
-瘔	pv	u	1	
+瘔	p	u	1	
 瘕	k	a	1	kra0,kra1,kra2
 瘕	h	a	0	kra0,kra1,kra2
 瘖	qj	rm	0	qim0
@@ -18639,7 +18639,7 @@ character	initial	final	tone	mc
 瘠	ţ	ig	3	ḑiek
 瘡	ŧj	og	0	ṯriag0
 瘢	p	an	0	buan0
-瘣	hv	uj	2	xuai1
+瘣	h	uj	2	xuai1
 瘤	l	rv	0	liu0,liu2
 瘥	ṯ	aj	2	ḑa0,ţia0,ṯre2
 瘥	ḑ	o	0	ḑa0,ţia0,ṯre2
@@ -18667,7 +18667,7 @@ character	initial	final	tone	mc
 瘼	m	og	3	mak
 瘽	c	rn	0	ţion0,ţion1,ţin2
 癀	hv	og	0	xuag0
-癁	bv	ug	3	
+癁	b	ug	3	
 療	l	iv	0	lieu2
 癃	l	ug	0	liug0
 癄	dj	iv	0	ţrau2
@@ -18755,8 +18755,8 @@ character	initial	final	tone	mc
 皓	h	ov	2	
 皔	h	on	1	xan1
 皕	p	ig	3	pik
-皖	qv	un	1	xruan1
-皖	hv	un	1	xruan1
+皖	q	un	1	xruan1
+皖	h	un	1	xruan1
 皗	ḑ	rv	0	
 皘	s	in	2	
 皙	s	ig	3	sek
@@ -18819,7 +18819,7 @@ character	initial	final	tone	mc
 盉	hv	o	0	xua0,xua2
 益	q	ig	3	qjek
 盋	p	un	3	puat
-盌	qv	un	1	quan1
+盌	q	un	1	quan1
 盍	h	om	3	xap
 盎	q	og	2	qag1,qag2
 盎	q	og	1	qag1,qag2
@@ -18829,7 +18829,7 @@ character	initial	final	tone	mc
 盓	q	y	0	qo0
 盔	ꝁv	i	0	ꝁuai0
 盕	pv	an	2	
-盙	pv	u	1	
+盙	p	u	1	
 盚	c	rv	0	
 盛	zj	ig	2	ḑjeg0,ḑjeg2
 盛	zj	ig	0	ḑjeg0,ḑjeg2
@@ -18847,7 +18847,7 @@ character	initial	final	tone	mc
 盤	b	un	0	buan0
 盤	ꝑ	un	1	buan0
 盥	k	un	2	kuan1,kuan2
-盥	xv	un	1	kuan1,kuan2
+盥	x	un	1	kuan1,kuan2
 盦	q	om	0	qom0,qap
 盧	l	ov	0	lo0
 盨	zj	wj	1	srio1
@@ -18878,7 +18878,7 @@ character	initial	final	tone	mc
 盺	qj	rn	0	
 盻	h	rj	2	ge2,xe2
 盼	ꝑ	an	2	ꝑren2
-盽	pv	ug	0	
+盽	p	ug	0	
 盾	d	on	1	zjyn1,duon1
 盿	m	rn	0	min0
 眀	m	ig	0	
@@ -18973,7 +18973,7 @@ character	initial	final	tone	mc
 睄	s	av	2	
 睅	h	on	2	xruan1
 睅	h	on	1	xruan1
-睆	qv	un	1	xruan1
+睆	q	un	1	xruan1
 睇	ŧ	rj	1	ŧe0,de2
 睇	d	rj	2	ŧe0,de2
 睈	ŧj	ig	1	ŧrieg1
@@ -18991,7 +18991,7 @@ character	initial	final	tone	mc
 睔	kv	rn	2	xuon1,luon1,kuon2
 睕	q	yn	1	qyan1,quan2,quat
 睕	qv	an	0	qyan1,quan2,quat
-睕	qv	un	0	qyan1,quan2,quat
+睕	q	un	0	qyan1,quan2,quat
 睖	l	ig	2	ŧrig0
 睗	sj	ig	3	sjek
 睘	c	ig	0	ţjyeg0
@@ -19025,7 +19025,7 @@ character	initial	final	tone	mc
 睰	qm	an	3	mret
 睱	h	a	2	
 睲	s	ig	1	sieg1,seg2
-睳	xv	uj	0	xue0
+睳	x	uj	0	xue0
 睴	kv	rn	2	xuon1,kuon2
 睵	ţ	oj	0	ţai0,ṯai0
 睶	ṯ	on	1	
@@ -19195,7 +19195,7 @@ character	initial	final	tone	mc
 砃	t	an	0	
 砄	ꝁ	yn	3	
 砅	l	rj	2	lied0
-砆	pv	u	0	
+砆	p	u	0	
 砇	m	rn	0	
 砈	g	o	1	
 砉	v	ag	3	xruak,xuek
@@ -19351,7 +19351,7 @@ character	initial	final	tone	mc
 碔	m	ov	1	myo1
 碕	c	i	0	ţie0,ꝁie0,ţioi0,ꝁie1
 碖	l	on	1	luon1,luon2
-碗	qv	un	1	
+碗	q	un	1	
 碘	t	in	1	
 碘	t	in	0	
 碙	n	av	0	
@@ -19371,7 +19371,7 @@ character	initial	final	tone	mc
 碧	p	ig	3	piek
 碨	qv	i	2	qruai0,quai1
 碨	qv	i	1	qruai0,quai1
-碨	qv	uj	1	qruai0,quai1
+碨	q	uj	1	qruai0,quai1
 碩	zj	eg	3	ḑjek
 碪	tj	rm	0	trim0,jim0
 碫	t	yn	2	tuan2
@@ -19389,7 +19389,7 @@ character	initial	final	tone	mc
 碵	ţ	ig	0	
 碶	ꝁ	rj	2	
 碷	z	on	1	
-碸	pv	ug	0	
+碸	p	ug	0	
 碹	z	yn	0	
 確	ꝁ	og	3	ꝁruk
 碻	ꝁ	og	3	ꝁruk
@@ -19564,7 +19564,7 @@ character	initial	final	tone	mc
 祑	ḑ	rn	3	
 祒	d	iv	0	
 祓	ꝑv	rn	3	ꝑyot
-祔	bv	u	2	
+祔	b	u	2	
 祕	p	i	2	pii2
 祖	ţ	ov	1	ţo1
 祗	tj	i	0	ţjii0
@@ -19572,8 +19572,8 @@ character	initial	final	tone	mc
 祙	m	ej	2	
 祚	ḑ	ov	2	ḑo2
 祛	ꝁ	y	0	
-祜	qv	u	1	xo1
-祜	hv	u	2	xo1
+祜	q	u	1	xo1
+祜	h	u	2	xo1
 祝	tj	ug	3	ţju2,ţjuk
 祝	tj	rv	2	ţju2,ţjuk
 神	zj	rn	0	zjin0
@@ -19627,8 +19627,8 @@ character	initial	final	tone	mc
 禌	ţ	i	0	
 禍	hv	o	2	xua1
 禎	tj	ig	0	trieg0
-福	pv	ug	3	piuk
-福	pv	u	2	piuk
+福	p	ug	3	piuk
+福	p	u	2	piuk
 禐		yn	2	
 禑	g		0	
 禒	s	in	1	
@@ -19663,7 +19663,7 @@ character	initial	final	tone	mc
 禪	zj	in	2	ḑjen0,ḑjen2
 禫	d	am	1	dom1
 禬	ꝁ	uj	1	xuad0,kuad0
-禬	hv	uj	2	xuad0,kuad0
+禬	h	uj	2	xuad0,kuad0
 禭	z	wj	2	
 禮	l	rj	1	le1
 禯	n	ug	0	
@@ -19710,7 +19710,7 @@ character	initial	final	tone	mc
 秕	p	i	1	pjii1
 秖	ţ	i	1	
 秗	q	y	2	
-秙	pv	u	2	
+秙	p	u	2	
 秚	b	un	2	
 秛	ꝑ	i	0	ꝑie0,ꝑie2
 秜	n	i	0	lii0
@@ -19734,7 +19734,7 @@ character	initial	final	tone	mc
 秮		un	3	
 秱	d	ug	0	
 秲	dj	i	2	dri1,ḑji2
-秳	hv	un	3	xuat
+秳	h	un	3	xuat
 秴	h	rm	3	
 秵	qj	rn	0	
 秶	ţ	i	0	
@@ -19744,11 +19744,11 @@ character	initial	final	tone	mc
 秺	d	ov	2	to2
 移		i	0	je0
 秼	tj	y	2	ţjyo0
-秿	bv	u	2	ꝑyo0,po0,byo1
+秿	b	u	2	ꝑyo0,po0,byo1
 稀	x	i	0	xioi0
 稁	k	ov	1	
 稂	l	og	0	lag0
-稃	ꝑv	u	0	ꝑyo0
+稃	ꝑ	u	0	ꝑyo0
 稄	sj	on	2	ţrik
 稅	sj	uj	2	sjyed0
 稆	l	wj	1	
@@ -19790,7 +19790,7 @@ character	initial	final	tone	mc
 稧	h	rj	2	xe2
 稨	p	in	1	
 稩	k	ej	2	
-稪	pv	ug	3	
+稪	p	ug	3	
 稫	ꝑ	ig	3	ꝑik
 稬	n	o	2	nuan1,nuan2,nua2
 稭	k	aj	0	krai0,kret
@@ -19899,7 +19899,7 @@ character	initial	final	tone	mc
 窊	qv	a	0	qrua0,qrua2
 窋	tj	yn	3	tryt
 窌	k	av	2	lrau0,ꝑrau2,liu2
-窏	qv	u	0	
+窏	q	u	0	
 窐	xv	a	0	kue0,xue0
 窑		iv	0	
 窒	dj	rn	3	trit,tet
@@ -19949,8 +19949,8 @@ character	initial	final	tone	mc
 窺	ꝁv	i	0	ꝁjye0
 窻	ṯ	wg	0	
 窼	ţ	av	0	
-窽	pv	un	1	
-窾	ꝁv	un	1	ꝁuan1
+窽	p	un	1	
+窾	ꝁ	un	1	ꝁuan1
 窿	ql	ug	0	liug0
 窿	l	ug	0	liug0
 竀	ŧj	rg	0	ŧrag0,ŧrieg0
@@ -19974,7 +19974,7 @@ character	initial	final	tone	mc
 立	l	am	3	lip
 竌	ṯ	y	2	
 竍	z	rm	3	
-竎	pv	u	2	
+竎	p	u	2	
 竏	ṯ	in	0	
 竐	ṯ	ug	3	
 竑	hv	rg	0	xrueg0
@@ -20063,7 +20063,7 @@ character	initial	final	tone	mc
 笣	p	av	0	
 笤	d	iv	0	
 笥	ḑ	i	2	si2
-符	bhv	u	0	byo0
+符	bh	u	0	byo0
 笧	ŧj	ag	3	ṯrek
 笨	b	rn	2	puon1,buon1
 笩	bv	rn	3	
@@ -20125,7 +20125,7 @@ character	initial	final	tone	mc
 筝	ţ	rg	0	
 筝	ţ	ag	0	
 筞	ṯ	ag	3	
-筟	ꝑv	u	0	ꝑyo0
+筟	ꝑ	u	0	ꝑyo0
 筠	hv	rn	0	yn0
 筠	kv	rn	0	yn0
 筡	zj	wj	1	ŧrio0,do0
@@ -20191,7 +20191,7 @@ character	initial	final	tone	mc
 算	s	yn	2	suan1
 箘	ꝁv	rn	2	ꝁyn0,ţyn1
 箘	ꝁv	rn	1	ꝁyn0,ţyn1
-箙	bv	ug	3	biuk
+箙	b	ug	3	biuk
 箚	ţ	am	3	
 箚	ţ	an	3	
 箛	k	u	0	ko0
@@ -20218,7 +20218,7 @@ character	initial	final	tone	mc
 箴	tj	rm	0	ţjim0
 箵	s	ig	1	seg1
 箵	s	ig	0	seg1
-箶	hv	u	0	xo0
+箶	h	u	0	xo0
 箷		i	0	je0
 箸	dj	y	2	trio2,drio2
 箸	tj	y	2	trio2,drio2
@@ -20239,7 +20239,7 @@ character	initial	final	tone	mc
 篅	zj	yn	0	ḑjye0,ḑjyen0
 篆	zj	yn	2	dryen1
 篇	ꝑ	in	0	ꝑjen0
-篈	pv	ug	0	
+篈	p	ug	0	
 築	tj	ug	3	triuk
 篊	h	ug	0	
 篋	h	am	3	ꝁep
@@ -20307,7 +20307,7 @@ character	initial	final	tone	mc
 簂	kv	og	3	kuai2
 簃		y	0	je0,drie0
 簃		i	0	je0,drie0
-簄	hv	u	2	xo1
+簄	h	u	2	xo1
 簅	ŧj	an	1	sren1
 簆	ꝁ	rv	2	ꝁu2
 簇	ṯ	ug	3	ṯuk
@@ -20335,7 +20335,7 @@ character	initial	final	tone	mc
 簞	t	an	0	tan0
 簟	d	im	1	dem1
 簟	t	im	2	dem1
-簠	ꝑv	u	1	pyo0,pyo1,ꝑyo2
+簠	ꝑ	u	1	pyo0,pyo1,ꝑyo2
 簡	k	an	1	kren1
 簢	m	rn	1	min1
 簣	cv	i	2	ţyi2,ꝁruai2
@@ -20494,7 +20494,7 @@ character	initial	final	tone	mc
 粬	ꝁ	ug	3	
 粭	h	rm	3	
 粯	h	an	2	xren2
-粰	pv	u	0	biu0
+粰	p	u	0	biu0
 粱	l	wg	0	liag0
 粲	ṯ	an	2	ṯan2
 粳	k	rg	0	krag0
@@ -20526,15 +20526,15 @@ character	initial	final	tone	mc
 糈	s	wj	1	sio1,srio1
 糉	ţ	ug	1	ţug2
 糉	ţ	ug	2	ţug2
-糊	hv	u	0	xo0
-糊	qv	u	1	xo0
+糊	h	u	0	xo0
+糊	q	u	1	xo0
 糋	ţ	in	2	
 糌	ţ	am	0	
 糌	ţ	a	0	
 糍	ḑ	i	0	
 糎	l	ej	0	
 糏	s	in	3	set
-糐	pv	u	0	
+糐	p	u	0	
 糑	qn	ig	3	
 糒	b	i	2	bii2
 糓	k	ug	3	kuk
@@ -20643,7 +20643,7 @@ character	initial	final	tone	mc
 紤	k	rv	1	
 紥	ţ	an	3	
 紦	p	a	0	
-紨	ꝑv	u	0	ꝑyo0
+紨	ꝑ	u	0	ꝑyo0
 紩	d	in	3	drit
 紪	ṯ	rj	0	
 紫	ţ	i	1	ţie1
@@ -20711,7 +20711,7 @@ character	initial	final	tone	mc
 絚	k	rg	1	
 絛	ŧ	ov	0	ŧau0
 絜	k	in	3	ket,xet
-絝	ꝁv	u	2	ꝁo2
+絝	ꝁ	u	2	ꝁo2
 絞	k	av	1	krau1
 絟	ṯ	yn	0	ṯyen0,ṯyet
 絠	k	oj	1	kai1
@@ -20721,7 +20721,7 @@ character	initial	final	tone	mc
 絢	sj	on	0	xuen2
 絣	p	rg	0	preg0
 絤	s	in	2	
-絥	bv	ug	3	bii2,biuk
+絥	b	ug	3	bii2,biuk
 絥	b	i	2	bii2,biuk
 給	ꝁ	rm	3	kip
 絧	d	ug	2	dug0,dug2
@@ -20772,13 +20772,13 @@ character	initial	final	tone	mc
 綏	s	uj	0	syi0
 綐	d	uj	2	duad0
 綑	ꝁv	rn	1	
-綒	pv	u	0	
+綒	p	u	0	
 經	k	ig	0	keg0,keg2
 綔		u	2	
 綕	ţ	ig	3	
 綖		in	0	jen0
 綗	kv	ig	1	
-綘	bhv	ug	0	
+綘	bh	ug	0	
 綛	qj	rn	1	
 綜	ţ	ug	0	ţuug2
 綜	ţ	ug	2	ţuug2
@@ -20878,14 +20878,14 @@ character	initial	final	tone	mc
 緦	s	i	0	si0
 緧	ṯ	rv	0	ṯiu0
 編	ꝑ	in	0	pen0,pjen0,pen1
-緩	hv	un	2	xuan1
-緩	hv	un	0	xuan1
+緩	h	un	2	xuan1
+緩	h	un	0	xuan1
 緪	k	rg	0	
 緪	k	rg	1	
 緫	ţ	ug	1	ţug1
 緬	m	in	1	mjen1
 緭	hv	i	2	yoi2
-緮	bv	ug	3	
+緮	b	ug	3	
 緯	hv	i	1	yoi2
 緰	d	rv	0	syo0,du0
 緱	k	rv	0	ku0
@@ -20953,9 +20953,9 @@ character	initial	final	tone	mc
 縨	pv	og	1	
 縩	ṯ	oj	2	
 縪	p	rn	3	pjit
-縫	bhv	ug	0	byug0,byug2
-縫	pv	ug	1	byug0,byug2
-縫	bv	ug	2	byug0,byug2
+縫	bh	ug	0	byug0,byug2
+縫	p	ug	1	byug0,byug2
+縫	b	ug	2	byug0,byug2
 縬	ţ	ug	3	ţiuk,ţriuk
 縭	l	i	0	lie0
 縮	sj	ug	3	sriuk
@@ -21065,7 +21065,7 @@ character	initial	final	tone	mc
 繽	p	rn	0	ꝑjin0
 繾	ꝁ	in	1	ꝁjen1,ꝁjen2
 繿	l	am	0	
-纀	bv	ug	3	puk
+纀	b	ug	3	puk
 纀	b	ug	3	puk
 纁	xv	rn	0	xyon0
 纂	ţ	yn	1	ţuan1
@@ -21159,7 +21159,7 @@ character	initial	final	tone	mc
 罤	d	rj	0	de0
 罥	k	yn	2	kuen1,kuen2
 罦	bhv	rv	0	ꝑyo0,biu0
-罦	ꝑv	u	0	ꝑyo0,biu0
+罦	ꝑ	u	0	ꝑyo0,biu0
 罧	s	rm	0	sim1,srim2
 罨	q	im	1	qiem1,qop,qiap
 罨	qg	om	3	qiem1,qop,qiap
@@ -21308,7 +21308,7 @@ character	initial	final	tone	mc
 翨	ŧj	i	2	sje2,kje2
 翩	ꝑ	in	0	ꝑjen0
 翪	ţ	ug	0	ţug0,ţug1
-翫	gv	un	2	guan2
+翫	g	un	2	guan2
 翫	qgv	an	1	guan2
 翫	gv	an	0	guan2
 翬	xv	i	0	xyoi0
@@ -21492,7 +21492,7 @@ character	initial	final	tone	mc
 肐	k	ag	3	
 肐	k	rn	3	
 肑	p	og	3	pruk,tek
-肒	hv	un	2	xuan2
+肒	h	un	2	xuan2
 肓	xv	og	0	xuag0
 肔	ŧj	i	1	je1
 肕	nj	rn	2	njin2
@@ -21509,7 +21509,7 @@ character	initial	final	tone	mc
 肝	k	on	0	kan0
 肞	ṯ	a	0	
 肟	q	og	3	
-肟	qv	u	0	
+肟	q	u	0	
 股	k	u	1	ko1
 肢	tj	i	0	ţje0
 肣	h	om	0	xom0,xom1
@@ -21568,8 +21568,8 @@ character	initial	final	tone	mc
 胒	n	ej	2	
 胓	b	ig	0	bieg0
 胔	ţ	i	2	ḑie0,ḑie2
-胕	pv	u	0	byo2
-胕	bhv	u	0	byo2
+胕	p	u	0	byo2
+胕	bh	u	0	byo2
 胖	b	un	2	
 胖	b	un	0	
 胗	ŧj	rn	1	ţjin1,kjin1
@@ -21584,8 +21584,8 @@ character	initial	final	tone	mc
 胞	p	av	0	prau0,ꝑrau0
 胟	m	ov	1	mu1
 胠	ꝁ	y	0	ꝁio0,ꝁio2,ꝁiap
-胡	hv	u	0	xo0
-胡	qv	u	1	xo0
+胡	h	u	0	xo0
+胡	q	u	1	xo0
 胢	ꝁ	a	2	
 胣	ṯ	i	1	
 胤	j	rn	2	
@@ -21640,7 +21640,7 @@ character	initial	final	tone	mc
 脖	b	un	3	buot
 脗	m	rn	1	
 脘	k	un	1	kuan1
-脘	xv	un	1	kuan1
+脘	x	un	1	kuan1
 脙	xj	rv	0	xiu0,ţiu0
 脛	h	ig	1	xeg1,xeg2
 脛	k	ig	2	xeg1,xeg2
@@ -21665,7 +21665,7 @@ character	initial	final	tone	mc
 脬	ꝑ	av	0	ꝑrau0
 脭	ḑ	ig	0	
 脮	n	uj	1	ŧuai1,nuai1
-脯	pv	u	1	pyo1
+脯	p	u	1	pyo1
 脯	ꝑ	ov	1	pyo1
 脯	b	ov	0	pyo1
 脰	d	rv	2	du2
@@ -21704,12 +21704,12 @@ character	initial	final	tone	mc
 腎	sj	rn	1	ḑjin1
 腎	zj	rn	2	ḑjin1
 腏	tj	yn	3	tryed0,tuat,tryet
-腐	bv	u	2	byo1
-腑	pv	u	1	pyo1
+腐	b	u	2	byo1
+腑	p	u	1	pyo1
 腒	k	y	0	kio0,ţio0
 腓	bhv	i	0	byoi0,byoi2
 腔	ꝁ	og	0	ꝁrug0
-腕	qv	un	1	quan2
+腕	q	un	1	quan2
 腖	t	ug	2	
 腗	b	ej	0	
 腙	ţ	ug	0	
@@ -21752,7 +21752,7 @@ character	initial	final	tone	mc
 腷	p	ig	3	bik
 腸	dj	wg	0	driag0
 腸	ŧj	wg	1	driag0
-腹	pv	ug	3	piuk
+腹	p	ug	3	piuk
 腺	s	in	2	
 腼	m	in	1	
 腽	qv	rn	3	quot
@@ -21791,7 +21791,7 @@ character	initial	final	tone	mc
 膘	p	iv	0	bjeu1,ꝑjeu1,ţieu1
 膙	c	wg	1	kiag1
 膙	tj	wg	1	kiag1
-膚	pv	u	0	pyo0
+膚	p	u	0	pyo0
 膛	d	og	0	
 膜	m	og	3	mo0,mak
 膜	m	ov	0	mo0,mak
@@ -21825,7 +21825,7 @@ character	initial	final	tone	mc
 膱	ţ	ig	3	
 膲	ţ	iv	0	ţieu0
 膳	zj	in	2	ḑjen2
-膴	xv	u	0	myo0,xo0,myo1
+膴	x	u	0	myo0,xo0,myo1
 膴	m	ov	1	myo0,xo0,myo1
 膵	z	wj	2	
 膵	z	wj	1	
@@ -21868,7 +21868,7 @@ character	initial	final	tone	mc
 臔	h	in	2	xen1
 臕	p	iv	0	pieu0
 臖	x	ig	2	xig2
-臗	ꝁv	un	0	ꝁuon0
+臗	ꝁ	un	0	ꝁuon0
 臘	l	am	3	lap
 臘	l	im	3	lap
 臙	q	in	0	
@@ -22002,7 +22002,7 @@ character	initial	final	tone	mc
 舿	ꝁv	a	0	
 艀	bhv	rv	0	biu0
 艁	ḑ	ov	2	ḑau1,ṯau2
-艂	bhv	ug	0	
+艂	bh	ug	0	
 艃	l	i	0	li0
 艄	s	av	0	
 艅		y	0	jo0
@@ -22082,8 +22082,8 @@ character	initial	final	tone	mc
 芈	m	i	1	mje1
 芉	k	on	0	
 芊	ṯ	in	0	ṯen0,ṯen2
-芋	hv	u	2	yo0,yo2
-芋	qv	u	1	yo0,yo2
+芋	h	u	2	yo0,yo2
+芋	q	u	1	yo0,yo2
 芋	q	y	0	yo0,yo2
 芌		u	2	
 芍	ṯ	wg	3	xeu1,ḑjak,ṯiak,triak,tek
@@ -22092,7 +22092,7 @@ character	initial	final	tone	mc
 芎	ꝁ	ug	0	ꝁiug0
 芎	c	ug	0	ꝁiug0
 芏	d	ov	2	ŧo1
-芐	hv	u	2	xo1,xra2
+芐	h	u	2	xo1,xra2
 芐	h	a	2	xo1,xra2
 芑	ꝁ	i	1	ꝁi1
 芒	m	og	0	myag0,mag0
@@ -22104,7 +22104,7 @@ character	initial	final	tone	mc
 芖	ḑ	i	2	
 芘	b	i	0	bjii0,bjii2
 芘	p	i	2	bjii0,bjii2
-芙	bhv	u	0	byo0
+芙	bh	u	0	byo0
 芚	d	yn	0	duon0
 芚	ŧj	on	0	duon0
 芚	ŧ	on	0	duon0
@@ -22191,7 +22191,7 @@ character	initial	final	tone	mc
 苤	ꝑ	ej	1	
 若	nj	wg	3	nja0,nja1,njak
 若	nj	e	1	nja0,nja1,njak
-苦	ꝁv	u	1	ꝁo1,ꝁo2
+苦	ꝁ	u	1	ꝁo1,ꝁo2
 苦	k	u	1	ꝁo1,ꝁo2
 苧	dj	y	1	drio1
 苨	n	ej	1	ne1
@@ -22213,10 +22213,10 @@ character	initial	final	tone	mc
 苵	d	in	3	det
 苶	n	im	3	net,njet,nep
 苷	k	om	0	kam0
-苸	xv	u	0	xo0
+苸	x	u	0	xo0
 苹	b	ig	0	bieg0
 苺	m	uj	0	mu2
-苻	bhv	u	0	byo0
+苻	bh	u	0	byo0
 苻	b	ov	0	byo0
 苼	s	rg	0	
 苽	k	u	0	ko0
@@ -22281,13 +22281,13 @@ character	initial	final	tone	mc
 茬	dj	i	0	ţri0,ḑri0
 茭	k	av	0	krau0
 茮	ţ	iv	0	ţieu0
-茯	bv	ug	3	biuk
+茯	b	ug	3	biuk
 茰		y	0	
 茱	tj	y	0	ḑjyo0
 茲	tj	i	0	xuen0
 茲	dj	i	0	xuen0
 茳	k	og	0	krug0
-茴	hv	uj	0	xuai0
+茴	h	uj	0	xuai0
 茵	qj	rn	0	qjin0
 茶	dj	a	0	dra0
 茶	ŧj	a	1	dra0
@@ -22304,8 +22304,8 @@ character	initial	final	tone	mc
 茿	tj	ug	3	triuk
 荀	s	on	0	syn0
 荁	h	yn	0	xuan0
-荁	hv	un	0	xuan0
-荂	xv	u	0	xyo0,ꝑyo0
+荁	h	un	0	xuan0
+荂	x	u	0	xyo0,ꝑyo0
 荃	ḑ	yn	0	ṯyen0
 荄	k	oj	0	krai0,kai0
 荅	t	am	3	top
@@ -22335,7 +22335,7 @@ character	initial	final	tone	mc
 荲	x	ug	3	xiuk,ŧriuk,ŧrik
 荳	d	rv	2	du2
 荳	t	rv	1	du2
-荴	pv	u	0	
+荴	p	u	0	
 荵	qnj	rn	1	njin1
 荶	gj	rm	0	gim0
 荷	h	o	0	xa0,xa1
@@ -22358,7 +22358,7 @@ character	initial	final	tone	mc
 莄	k	rg	1	
 莅	l	i	2	lii2
 莆	b	ov	0	pyo1
-莆	pv	u	1	pyo1
+莆	p	u	1	pyo1
 莇	ḑh	o	0	
 莈	m	un	3	muot
 莉	l	i	2	drii0,dri0,le0
@@ -22388,8 +22388,8 @@ character	initial	final	tone	mc
 莞	k	un	0	xuan0,kuan0,xruan1
 莞	kv	an	0	xuan0,kuan0,xruan1
 莞	k	un	1	xuan0,kuan0,xruan1
-莞	xv	un	1	xuan0,kuan0,xruan1
-莞	hv	un	1	xuan0,kuan0,xruan1
+莞	x	un	1	xuan0,kuan0,xruan1
+莞	h	un	1	xuan0,kuan0,xruan1
 莟	h	om	2	xom1,xom2
 莠	j	rv	1	ju1
 莡	ṯ	og	3	ṯak
@@ -22402,7 +22402,7 @@ character	initial	final	tone	mc
 莨	l	wg	0	lag0
 莨	l	og	2	lag0
 莨	l	og	0	lag0
-莩	ꝑv	u	0	ꝑyo0,bieu1
+莩	ꝑ	u	0	ꝑyo0,bieu1
 莩	b	iv	1	ꝑyo0,bieu1
 莪	g	o	0	ga0
 莫	m	og	3	mak
@@ -22444,7 +22444,7 @@ character	initial	final	tone	mc
 菑	ţ	oj	0	
 菒	k	ov	1	kau1
 菓	kv	o	1	kua1
-菔	bv	ug	3	biuk,bok
+菔	b	ug	3	biuk,bok
 菔	b	ag	3	biuk,bok
 菕	l	on	0	luon0
 菖	ŧj	wg	0	ṯjag0
@@ -22498,7 +22498,7 @@ character	initial	final	tone	mc
 菽	zj	ug	3	sjuk
 菾	d	im	0	dem0
 菿	t	ov	2	tau2,truk
-萀	xv	u	1	xo1
+萀	x	u	1	xo1
 萁	c	i	0	ţi0,ki0
 萁	k	i	0	ţi0,ki0
 萂	v	o	0	
@@ -22510,7 +22510,7 @@ character	initial	final	tone	mc
 萆	p	i	0	si1,bjek
 萆	b	i	2	si1,bjek
 萇	dj	wg	0	driag0
-萈	hv	un	0	xuan0
+萈	h	un	0	xuan0
 萉	bv	i	2	byoi2
 萊	l	oj	0	lai0,lai2
 萋	ṯ	rj	0	ṯe0
@@ -22521,7 +22521,7 @@ character	initial	final	tone	mc
 萎	qv	i	0	qye0,qye2
 萏	d	am	2	dom1
 萐	sj	am	3	sriep,srep
-萑	hv	un	0	ţjyi0,xuan0
+萑	h	un	0	ţjyi0,xuan0
 萑	ŧ	uj	0	ţjyi0,xuan0
 萒		in	1	jyen1,ţyen1
 萓		i	0	
@@ -22546,7 +22546,7 @@ character	initial	final	tone	mc
 萭	h	y	1	yo1,kyo1
 萭	k	y	1	yo1,kyo1
 萮		y	0	jyo0
-萯	bv	u	2	biu1
+萯	b	u	2	biu1
 萰	l	in	2	len2
 萱	x	yn	0	xyan0
 萲	x	yn	0	
@@ -22581,13 +22581,13 @@ character	initial	final	tone	mc
 葊	q	rm	0	
 葋	c	y	0	ţyo0
 葌	k	an	0	kran0
-葍	pv	ug	3	piuk
-葍	bv	ug	3	piuk
+葍	p	ug	3	piuk
+葍	b	ug	3	piuk
 葎	l	on	3	lyt
 葏	ţ	in	0	ţien0
 葐	b	un	0	byon0,buon0
-葑	pv	ug	0	pyug0,pyug2
-葑	bv	ug	2	pyug0,pyug2
+葑	p	ug	0	pyug0,pyug2
+葑	b	ug	2	pyug0,pyug2
 葒	h	ug	0	xug0
 葓	h	ug	0	xug0
 葔	h	rv	0	xu0
@@ -22618,12 +22618,12 @@ character	initial	final	tone	mc
 葥	ţ	in	2	ţien2
 葦	hv	i	1	yoi1
 葧	b	un	3	
-葨	qv	uj	0	quai0
+葨	q	uj	0	quai0
 葩	p	a	0	ꝑra0
 葩	ꝑ	a	0	ꝑra0
 葪	k	rj	2	
 葪	k	aj	2	
-葫	hv	u	0	xo0,xo0
+葫	h	u	0	xo0,xo0
 葬	ţ	og	2	ţag2
 葭	k	a	0	kra0
 葮	d	yn	2	
@@ -22760,7 +22760,7 @@ character	initial	final	tone	mc
 蓪	ŧ	ug	0	ŧug0
 蓫	dj	ug	3	driuk,xiuk,ŧriuk
 蓬	b	ug	0	bug0
-蓬	bhv	ug	0	bug0
+蓬	bh	ug	0	bug0
 蓭	q	rm	0	
 蓮	l	in	0	len0,lien1
 蓯	ṯ	ug	0	ţug1
@@ -22901,8 +22901,8 @@ character	initial	final	tone	mc
 蕤	nj	uj	0	njyi0
 蕥	g	a	1	
 蕦	s	wj	0	syo0
-蕧	ꝑv	ug	3	biuk,ꝑiuk
-蕧	bv	ug	3	biuk,ꝑiuk
+蕧	ꝑ	ug	3	biuk,ꝑiuk
+蕧	b	ug	3	biuk,ꝑiuk
 蕨	ꝁ	yn	3	kyat
 蕩	d	og	2	dag1,ŧag2
 蕪	m	ov	0	myo0
@@ -23139,7 +23139,7 @@ character	initial	final	tone	mc
 蘱	l	uj	2	lyi2,luai2
 蘲	l	wj	0	
 蘳	xv	i	0	xjye0,xrua1
-蘴	ꝑv	ug	0	ꝑiug0,ꝑyug0
+蘴	ꝑ	ug	0	ꝑiug0,ꝑyug0
 蘵	ţ	ig	3	
 蘶	g	rj	2	
 蘷	cv	i	0	
@@ -23164,8 +23164,8 @@ character	initial	final	tone	mc
 虊	l	yn	0	
 虋	m	un	0	muon0
 虌	p	in	3	pjet
-虍	xv	u	0	xo0
-虎	xv	u	1	xo1
+虍	x	u	0	xo0
+虎	x	u	1	xo1
 虐	g	wg	3	giak
 虒	s	i	0	sie0
 虓	x	av	0	xrau0
@@ -23175,14 +23175,14 @@ character	initial	final	tone	mc
 處	ŧj	y	2	ṯjo1,ṯjo2
 處	sj	y	1	ṯjo1,ṯjo2
 處	sj	y	2	ṯjo1,ṯjo2
-虖	xv	u	0	xyo0,xo0,xo0
-虖	bhv	u	0	xyo0,xo0,xo0
+虖	x	u	0	xyo0,xo0,xo0
+虖	bh	u	0	xyo0,xo0,xo0
 虗	x	wj	0	
 虘	ḑ	o	0	ḑa0
-虙	bv	ug	3	biuk
+虙	b	ug	3	biuk
 虛	x	wj	0	
 虜	l	ov	1	lo1
-虝	pv	u	1	
+虝	p	u	1	
 虞	g	y	0	gyo0
 號	h	ov	2	xau0,xau2
 號	x	ov	1	xau0,xau2
@@ -23214,7 +23214,7 @@ character	initial	final	tone	mc
 虸	ţ	i	1	ţi1
 虹	h	ug	0	xug0,kug2,krug2
 虺	xv	i	1	xruai0,xuai0,xyoi1
-虺	xv	uj	0	xruai0,xuai0,xyoi1
+虺	x	uj	0	xruai0,xuai0,xyoi1
 虻	m	og	0	
 虼	k	rn	3	
 蚄	pv	og	0	pyag0
@@ -23237,7 +23237,7 @@ character	initial	final	tone	mc
 蚔	c	i	0	ţje0
 蚖	g	yn	0	gyan0,guan0
 蚗	ꝁ	yn	3	kuet
-蚘	hv	uj	0	xuai0
+蚘	h	uj	0	xuai0
 蚙	c	rm	0	
 蚚	c	i	0	ţioi0,xuai2
 蚛	ḑ	ug	2	
@@ -23251,12 +23251,12 @@ character	initial	final	tone	mc
 蚢	h	og	0	xag0,xag1,ꝁag2
 蚣	k	ug	0	kug0,ţjyug0
 蚤	ţ	ov	1	ţau1
-蚥	bv	u	2	pyo1,byo1
+蚥	b	u	2	pyo1,byo1
 蚦		im	0	
 蚦	n	am	0	
 蚧	k	aj	2	
 蚧	k	aj	1	
-蚨	bhv	u	0	byo0
+蚨	bh	u	0	byo0
 蚩	ŧj	i	0	ṯji0
 蚪	t	rv	1	tu1
 蚫	p	av	0	
@@ -23275,7 +23275,7 @@ character	initial	final	tone	mc
 蚶	x	om	0	xam0
 蚷	c	y	2	
 蚸	ṯ	ig	3	
-蚹	bv	u	2	byo2
+蚹	b	u	2	byo2
 蚺	nj	im	0	njem0
 蚺	n	am	0	njem0
 蚻	tj	an	3	ţret
@@ -23305,7 +23305,7 @@ character	initial	final	tone	mc
 蛒	k	ag	3	krak
 蛓	ṯ	i	2	ṯie2,ṯi2
 蛔		uj	0	
-蛕	hv	uj	0	xuai0,xuai1
+蛕	h	uj	0	xuai0,xuai1
 蛖	m	og	0	mrug0
 蛗	bv	rv	2	
 蛘	j	og	1	jag0,jag1
@@ -23317,7 +23317,7 @@ character	initial	final	tone	mc
 蛜	q	i	0	
 蛝	h	an	0	xren0
 蛞	ꝁ	un	3	ꝁuat
-蛞	ꝁv	un	3	ꝁuat
+蛞	ꝁ	un	3	ꝁuat
 蛟	k	av	0	krau0
 蛠	l	rj	2	
 蛡		ig	3	jik
@@ -23354,12 +23354,12 @@ character	initial	final	tone	mc
 蛿	h	rm	1	
 蜀	zj	ug	3	ḑjyuk
 蜁	z	yn	0	zyen0
-蜂	ꝑv	ug	0	bug0,ꝑyug0
+蜂	ꝑ	ug	0	bug0,ꝑyug0
 蜃	zj	rn	2	ḑjin1,ḑjin2
 蜃	zj	rn	1	ḑjin1,ḑjin2
 蜃	zj	rn	0	ḑjin1,ḑjin2
 蜄	z	rn	2	
-蜅	pv	u	1	bo0,pyo1
+蜅	p	u	1	bo0,pyo1
 蜆	x	in	1	xen1,xen1,ꝁen2
 蜇	tj	in	3	triet
 蜈	g		0	go0
@@ -23454,11 +23454,11 @@ character	initial	final	tone	mc
 蝙	ꝑ	in	0	pen0
 蝚	nj	rv	0	nju0
 蝛	qv	i	0	qyoi0
-蝜	bv	u	2	biu1
+蝜	b	u	2	biu1
 蝝		yn	0	jyen0
 蝞	m	i	2	mii2
 蝟	hv	i	2	yoi2
-蝠	pv	ug	3	piuk
+蝠	p	ug	3	piuk
 蝡	nj	y	0	njyn1,njyen1
 蝢	ꝁ	in	3	
 蝣	j	rv	0	ju0
@@ -23475,10 +23475,10 @@ character	initial	final	tone	mc
 蝫	ţ	y	0	
 蝬	ţ	ug	0	ţug0
 蝭	d	rj	0	de0,te2
-蝮	ꝑv	ug	3	ꝑiuk
+蝮	ꝑ	ug	3	ꝑiuk
 蝯	h	yn	0	yan0
 蝰	ꝁv	i	0	ꝁue0
-蝰	ꝁv	uj	0	ꝁue0
+蝰	ꝁ	uj	0	ꝁue0
 蝱	m	og	0	mrag0
 蝱	m	rg	0	mrag0
 蝲	l	an	3	lat
@@ -23512,7 +23512,7 @@ character	initial	final	tone	mc
 融	j	ug	0	jug0
 螎	j	ug	0	
 螏	ḑ	rn	3	
-螐	qv	u	0	qo0
+螐	q	u	0	qo0
 螑	qj	rv	2	
 螒	h	on	2	xan2
 螓	ḑ	on	0	ḑin0
@@ -23695,7 +23695,7 @@ character	initial	final	tone	mc
 蠪	l	ug	0	lug0
 蠫	l	rj	1	
 蠬	l	ug	0	
-蠭	ꝑv	ug	0	ꝑyug0
+蠭	ꝑ	ug	0	ꝑyug0
 蠮	q	in	3	qet
 蠮		in	3	qet
 蠯	b	i	0	bje0,bre0,breg1
@@ -23778,8 +23778,8 @@ character	initial	final	tone	mc
 衪		i	1	je0,je1
 衪		i	0	je0,je1
 衫	sj	am	0	sram0
-衭	pv	u	0	pyo0
-衭	pv	u	2	pyo0
+衭	p	u	0	pyo0
+衭	p	u	2	pyo0
 衮	kv	rn	1	kuon1
 衯	ꝑv	rn	0	ꝑyon0
 衰	sj	uj	0	ṯrye0,sryi0
@@ -23836,7 +23836,7 @@ character	initial	final	tone	mc
 袛	t	rj	0	te0
 袛	tj	i	0	te0
 袜	m	un	3	muat
-袝	bv	u	2	byo2
+袝	b	u	2	byo2
 袞	kv	rn	1	
 袟	d	in	3	
 袠	d	in	3	drit
@@ -23858,10 +23858,10 @@ character	initial	final	tone	mc
 袬	j	ug	3	
 袮		i	1	
 袰	m	ov	1	
-袱	bv	ug	3	
+袱	b	ug	3	
 袲		i	0	je0,ṯje1,na1
 袳	ŧj	i	1	ṯje1
-袴	ꝁv	u	2	ꝁo2
+袴	ꝁ	u	2	ꝁo2
 袵	nj	rm	2	njim1
 袵	nj	rm	1	njim1
 袶	k	og	2	
@@ -23954,7 +23954,7 @@ character	initial	final	tone	mc
 褄	ṯ	rj	0	
 褅	ŧ	rj	2	
 褆	d	rj	0	de0,ḑje1,drie1
-複	pv	ug	3	biu2,piuk
+複	p	ug	3	biu2,piuk
 褈	dj	ug	0	ṯjyug0,dryug0
 褉	ꝁ	in	3	xet
 褊	p	in	1	pjen1
@@ -23969,7 +23969,7 @@ character	initial	final	tone	mc
 褑	h	yn	2	yen2
 褒	p	ov	0	pau0
 褓	p	ov	1	pau1
-褔	ꝑv	u	2	ꝑiu2
+褔	ꝑ	u	2	ꝑiu2
 褕		y	0	jyo0,jeu0
 褖	ŧ	on	2	ŧuan2
 褗	q	in	1	qian1,qian2
@@ -24003,7 +24003,7 @@ character	initial	final	tone	mc
 褯	ḑ	ig	3	ḑia2
 褰	ꝁ	in	0	ꝁien0
 褱	hv	aj	0	xruai0
-褲	pv	u	2	
+褲	p	u	2	
 褳	l	in	0	
 褵	l	i	0	lie0
 褶	ţ	im	3	ḑjip,zip,dep
@@ -24027,7 +24027,7 @@ character	initial	final	tone	mc
 襃	p	ov	0	pau0
 襄	s	wg	0	siag0
 襅	p	rn	3	
-襆	bv	ug	3	puk,byuk
+襆	b	ug	3	puk,byuk
 襆	b	ug	3	puk,byuk
 襇	k	an	1	kren2
 襇	k	an	2	kren2
@@ -24066,7 +24066,7 @@ character	initial	final	tone	mc
 襢	tj	in	2	dan1,trien1,trien2
 襣	b	i	2	bjii2
 襤	l	am	0	lam0
-襥	bv	ug	3	
+襥	b	ug	3	
 襥	b	ug	3	
 襦	nj	y	0	njyo0
 襧	ţ	i	1	
@@ -24104,12 +24104,12 @@ character	initial	final	tone	mc
 西	s	rj	0	se0
 要	q	iv	2	qjeu0,qjeu2
 要	q	iv	0	qjeu0,qjeu2
-覂	pv	ug	1	pyug1
+覂	p	ug	1	pyug1
 覃	d	am	0	dom0
 覃	dj	om	0	dom0
-覄	pv	ug	3	
+覄	p	ug	3	
 覅	pv	iv	2	
-覆	ꝑv	ug	3	ꝑiu2,biu2,ꝑiuk,ꝑok
+覆	ꝑ	ug	3	ꝑiu2,biu2,ꝑiuk,ꝑok
 覈	h	rn	3	xet,xrek
 覉	k	ej	0	
 覊	k	ej	0	
@@ -24235,7 +24235,7 @@ character	initial	final	tone	mc
 訂	t	ig	2	ŧeg0,deg1,teg2
 訂	d	ig	2	ŧeg0,deg1,teg2
 訂	d	eg	2	ŧeg0,deg1,teg2
-訃	bv	u	2	ꝑyo2
+訃	b	u	2	ꝑyo2
 訄	c	rv	0	ꝁau0,ꝁiu0,ţiu0
 訅	c	rv	0	ţiu0
 訆	k	iv	2	keu2
@@ -24294,7 +24294,7 @@ character	initial	final	tone	mc
 訯	s	a	1	
 訰	tj	on	2	ţjyn0,ţjyn2
 許	x	wj	1	xio1
-許	xv	u	1	xio1
+許	x	u	1	xio1
 訲	q	ig	3	
 訴	s	ov	2	so2
 訵	ŧj	i	0	ŧrii0,ŧrii2
@@ -24316,7 +24316,7 @@ character	initial	final	tone	mc
 詀	ŧj	im	3	tem0,trem0,drem2,ṯjep
 詁	k	u	1	ko1
 詁	k	u	2	ko1
-詂	bv	u	2	
+詂	b	u	2	
 詃	k	yn	1	kuen1
 詄	d	in	3	det
 詅	l	ig	0	leg0,lieg2
@@ -24370,14 +24370,14 @@ character	initial	final	tone	mc
 詬	k	rv	2	ku1,ꝁu2,xu2
 詭	kv	i	1	kye1
 詮	ḑ	yn	0	ṯyen0
-詯	xv	uj	2	xuai2,xuai2
+詯	x	uj	2	xuai2,xuai2
 詰	ꝁ	in	3	ꝁjit
 詰	k	rn	3	ꝁjit
 話	hv	a	2	xruad0
 話	qv	a	1	xruad0
 該	k	oj	0	kai0
 詳	ḑ	wg	0	jag0,ziag0
-詴	qv	uj	0	
+詴	q	uj	0	
 詵	sj	rn	0	srin0
 詶	dj	rv	0	ḑju0,ḑju2
 詶	tj	rv	2	ḑju0,ḑju2
@@ -24386,7 +24386,7 @@ character	initial	final	tone	mc
 詹	tj	im	0	ţjem0
 詺	m	ig	2	mjeg2
 詻	g	ag	3	grak
-詼	ꝁv	uj	0	ꝁuai0
+詼	ꝁ	uj	0	ꝁuai0
 詽	g	an	0	gren0,ŧen0
 詾	x	ug	0	xyug1
 詿	kv	a	2	krue2,xrue2
@@ -24446,7 +24446,7 @@ character	initial	final	tone	mc
 誥	k	ov	2	kau2
 誦	ḑ	ug	2	zyug2
 誧	p	ov	0	po0,ꝑo0,ꝑo1,ꝑo2
-誨	xv	uj	2	xuai2
+誨	x	uj	2	xuai2
 誩	c	ig	2	ţiag1,ţieg2,ŧom2
 誩	sj	yn	3	ţiag1,ţieg2,ŧom2
 誩	sj	wj	2	ţiag1,ţieg2,ŧom2
@@ -24529,7 +24529,7 @@ character	initial	final	tone	mc
 諥	tj	ug	2	tryug2
 諦	t	rj	2	te2
 諧	h	aj	0	xrai0
-諨	pv	ug	3	
+諨	p	ug	3	
 諩	ꝑ	ov	1	
 諪	d	ig	0	
 諫	k	an	2	kran2
@@ -24547,7 +24547,7 @@ character	initial	final	tone	mc
 諴	h	am	0	xrem0
 諵	n	am	0	nrem0,nrem2
 諶	zj	rm	0	ḑjim0
-諷	pv	ug	2	piug2
+諷	p	ug	2	piug2
 諸	tj	y	0	ţjo0,ţja0
 諹	j	og	0	jag0,jag2
 諺	g	in	2	gien2
@@ -24625,7 +24625,7 @@ character	initial	final	tone	mc
 謺	tj	im	3	ţjep
 謻		i	0	je0
 謻	ŧj	i	1	je0
-謼	xv	u	0	xo0,xo2
+謼	x	u	0	xo0,xo2
 謽	c	wg	1	
 謾	m	an	0	muan0,mran0,mjen0,muan2,mran2
 謾	m	an	2	muan0,mran0,mjen0,muan2,mran2
@@ -24691,7 +24691,7 @@ character	initial	final	tone	mc
 譴	ꝁ	in	1	ꝁjen2
 譵	d	wj	2	
 譶	d	am	3	drip,dop
-護	hv	u	2	xo2
+護	h	u	2	xo2
 譸	tj	rv	0	triu0
 譹	x	ag	3	
 譺	g	aj	2	gi1,gi2,grai2
@@ -24730,7 +24730,7 @@ character	initial	final	tone	mc
 讖	ŧj	am	2	ṯrim2
 讗	cv	i	0	xue0,kruek
 讘	tj	im	3	njep
-讙	xv	un	0	xyan0,xuan0
+讙	x	un	0	xyan0,xuan0
 讚	ţ	an	2	
 讚	ţ	an	1	
 讛	g	rj	2	
@@ -24767,19 +24767,19 @@ character	initial	final	tone	mc
 豉	zj	i	2	ḑje2
 豉	sj	i	1	ḑje2
 豋	t	rg	0	
-豌	qv	un	0	quan0
-豌	qv	un	1	quan0
+豌	q	un	0	quan0
+豌	q	un	1	quan0
 豍	p	rj	0	pe0
 豎	zj	y	2	ḑjyo1
 豏	h	am	1	xrem1
-豐	ꝑv	ug	0	ꝑiug0
+豐	ꝑ	ug	0	ꝑiug0
 豑	d	in	3	drit
 豒	d	in	3	
 豓		im	2	
 豔		im	2	jem2
 豕	ŧj	i	1	sje1
 豖	ŧj	ug	3	ŧryuk
-豗	xv	uj	0	xuai0
+豗	x	uj	0	xuai0
 豘	d	yn	0	duon0
 豙	g	rj	2	gi2,gioi2
 豚	d	yn	0	duon0
@@ -24795,7 +24795,7 @@ character	initial	final	tone	mc
 豤	ꝁ	rn	1	ꝁuon0,ꝁon1,ꝁen1
 豥	k	oj	0	kai0,xai0
 豦	k	y	2	ţio0,kio2
-豧	ꝑv	u	0	ꝑyo0,ꝑo0,ꝑyo2,ꝑu2
+豧	ꝑ	u	0	ꝑyo0,ꝑo0,ꝑyo2,ꝑu2
 豨	x	i	0	xioi0,xioi1
 豩	p	rn	0	
 豪	h	ov	0	xau0
@@ -24806,7 +24806,7 @@ character	initial	final	tone	mc
 豰	b	og	3	xuk,bruk
 豱	qv	rn	0	quon0
 豲	h	yn	0	xuan0
-豲	hv	un	0	xuan0
+豲	h	un	0	xuan0
 豳	p	rn	0	pin0
 豴	t	ig	3	
 豵	ţ	ug	0	ţug0,ţyug0
@@ -24828,9 +24828,9 @@ character	initial	final	tone	mc
 貃	m	rg	3	
 貄	s	i	2	
 貅	xj	rv	0	xiu0
-貆	hv	un	0	xyan0,xuan0,xuan0
+貆	h	un	0	xyan0,xuan0,xuan0
 貆	x	yn	0	xyan0,xuan0,xuan0
-貆	xv	un	0	xyan0,xuan0,xuan0
+貆	x	un	0	xyan0,xuan0,xuan0
 貇	x	rn	1	
 貈	h	og	3	xak
 貈	m	rg	3	xak
@@ -24854,13 +24854,13 @@ character	initial	final	tone	mc
 貘	m	og	3	mrak
 貙	ŧj	wj	0	ŧryo0
 貚	d	an	0	dan0,den0
-貛	xv	un	0	xuan0
+貛	x	un	0	xuan0
 貜	xv	og	3	kyak,ţyak
 貝	p	uj	2	pad0
 貞	tj	ig	0	trieg0
 貟	h	yn	0	yen0,yon2
 貟	hv	rn	2	yen0,yon2
-負	bv	u	2	biu1
+負	b	u	2	biu1
 財	ḑ	oj	0	ḑai0
 財	ṯ	oj	1	ḑai0
 貢	k	ug	2	kug2
@@ -24868,7 +24868,7 @@ character	initial	final	tone	mc
 貤		i	2	je2,jii2,zjii2
 貤		i	0	je2,jii2,zjii2
 貥	h	og	0	
-貦	gv	un	2	guan2
+貦	g	un	2	guan2
 貧	b	rn	0	bin0
 貨	xv	o	2	xua2
 販	pv	an	2	pyan2
@@ -24909,7 +24909,7 @@ character	initial	final	tone	mc
 賂	l	ov	2	lo2
 賃	j	rm	2	nrim2
 賄	ꝁ	uj	1	xuai1
-賄	xv	uj	1	xuai1
+賄	x	uj	1	xuai1
 賅	k	oj	0	kai0
 賆	b	in	0	ben0
 資	ţ	i	0	ţii0
@@ -24946,7 +24946,7 @@ character	initial	final	tone	mc
 賣	m	aj	2	mre2
 賤	ḑ	in	2	ḑien2
 賥	z	uj	2	syi2
-賦	pv	u	2	pyo2
+賦	p	u	2	pyo2
 賧	d	am	2	ŧam2
 賨	ḑ	ug	0	ḑuug0
 賩	ḑ	ug	0	
@@ -24963,8 +24963,8 @@ character	initial	final	tone	mc
 賲	p	ov	1	pau1
 賳	ţ	oj	0	
 賴	l	aj	2	lad0
-賵	ꝑv	ug	2	ꝑiug2
-賵	bv	ug	2	ꝑiug2
+賵	ꝑ	ug	2	ꝑiug2
+賵	b	ug	2	ꝑiug2
 賶	ṯ	og	2	
 賷	ţ	rj	0	ţe0
 賷	ḑ	rj	0	ţe0
@@ -24973,7 +24973,7 @@ character	initial	final	tone	mc
 賹	j	rn	3	qre2
 賺	ḑ	an	2	
 賺	ţ	an	1	
-賻	bv	u	2	byo2
+賻	b	u	2	byo2
 購	k	rv	2	ku2
 購	ꝁ	rv	2	ku2
 賽	ṯ	oj	2	sai2
@@ -25032,7 +25032,7 @@ character	initial	final	tone	mc
 赲	l	ig	3	
 赳	k	rv	1	ky1
 赳	t	rv	1	ky1
-赴	bv	u	2	ꝑyo2
+赴	b	u	2	ꝑyo2
 起	ꝁ	i	1	ꝁi1
 赸	s	an	2	
 赹	c	ig	0	ţjyeg0
@@ -25110,10 +25110,10 @@ character	initial	final	tone	mc
 趴	ꝑ	a	0	
 趵	ꝑ	av	2	pruk
 趵	p	og	3	pruk
-趶	pv	u	2	
+趶	p	u	2	
 趷	c	rn	3	
 趹	ꝁ	yn	3	kuet
-趺	pv	u	0	pyo0
+趺	p	u	0	pyo0
 趻	ṯ	rm	1	
 趼	k	an	1	gen0,ken1,gen2
 趼	k	in	1	gen0,ken1,gen2
@@ -25135,7 +25135,7 @@ character	initial	final	tone	mc
 跊	m	uj	2	
 跋	b	rn	3	buat
 跌	t	in	3	det
-跍	ꝁv	u	0	ꝁo0
+跍	ꝁ	u	0	ꝁo0
 跎	d	o	0	da0
 跏	k	a	0	kra0
 跐	ṯ	i	1	ṯie1,ţie1,ţrie1
@@ -25153,7 +25153,7 @@ character	initial	final	tone	mc
 跕	dj	am	2	ŧep,tep
 跖	tj	ig	3	ţjek
 跖	tj	eg	3	ţjek
-跗	pv	u	0	pyo0,byo2
+跗	p	u	0	pyo0,byo2
 跘	b	un	0	
 跙	ţ	wj	1	ḑio1
 跙	ţ	wj	0	ḑio1
@@ -25282,7 +25282,7 @@ character	initial	final	tone	mc
 踼	d	og	0	dag0,ŧag0,dag2
 踼	d	og	2	dag0,ŧag0,dag2
 踽	k	y	1	ꝁyo1,kyo1
-踾	ꝑv	ug	3	piuk,ꝑik,bik
+踾	ꝑ	ug	3	piuk,ꝑik,bik
 踿	ţ	ug	3	
 蹀	d	im	3	dep
 蹁	b	in	0	ben0,pen0
@@ -25490,7 +25490,7 @@ character	initial	final	tone	mc
 軠	cv	og	0	
 軡	c	im	0	
 軣	kv	rg	0	
-軤	xv	u	0	xo0
+軤	x	u	0	xo0
 軥	c	y	0	ţyo0,ku0,ku2
 軥	k	rv	0	ţyo0,ku0,ku2
 軦	pv	og	2	
@@ -25510,7 +25510,7 @@ character	initial	final	tone	mc
 軲	k	u	0	ꝁo0
 軳	b	ov	0	bau0
 軴	tj	y	2	tryo2
-軵	pv	u	1	njyug1
+軵	p	u	1	njyug1
 軵	nj	ug	1	njyug1
 軶	q	ag	3	qrek
 軷	b	rn	3	bad0,buat
@@ -25547,7 +25547,7 @@ character	initial	final	tone	mc
 輒	tj	in	3	triep
 輓	v	an	1	myan1,myan2
 輓	m	an	1	myan1,myan2
-輔	bv	u	2	byo1
+輔	b	u	2	byo1
 輕	ꝁ	ig	0	ꝁjeg0,ꝁjeg2
 輕	ꝁ	eg	0	ꝁjeg0,ꝁjeg2
 輕	h	eg	2	ꝁjeg0,ꝁjeg2
@@ -25591,9 +25591,9 @@ character	initial	final	tone	mc
 輶	j	rv	0	ju0,ju1,ju2
 輷	kv	rg	0	xrueg0,xrueg2
 輸	sj	y	0	sjyo0,sjyo2
-輹	pv	ug	3	piuk,biuk
+輹	p	ug	3	piuk,biuk
 輺	tj	i	0	ţri0
-輻	pv	ug	3	piu2,piuk
+輻	p	ug	3	piu2,piuk
 輼	qv	rn	0	quon0
 輽	b	rn	2	
 輾	tj	in	1	trien1,nrien2
@@ -25737,7 +25737,7 @@ character	initial	final	tone	mc
 述	zj	on	3	zjyt
 迱	d	o	0	da0
 迲	x	wj	2	
-迴	hv	uj	0	xuai0,xuai2
+迴	h	uj	0	xuai0,xuai2
 迵	d	ug	2	dug2
 迶	j	rv	2	
 迷	m	rj	0	me0
@@ -25791,7 +25791,7 @@ character	initial	final	tone	mc
 造	ḑ	ov	1	ḑau1,ṯau2
 逡	s	on	0	ṯyn0
 逡	ṯ	on	0	ṯyn0
-逢	bhv	ug	0	byug0
+逢	bh	ug	0	byug0
 逢	b	ug	0	byug0
 逤	s	o	2	
 逥		uj	0	
@@ -25803,7 +25803,7 @@ character	initial	final	tone	mc
 逫	tj	yn	3	tryt
 逬	p	ig	2	
 逬	p	ig	1	
-逭	hv	un	2	xuan2
+逭	h	un	2	xuan2
 逮	d	rj	2	de2,dai2
 逮	d	oj	2	de2,dai2
 逯	l	ug	3	lyuk
@@ -25944,7 +25944,7 @@ character	initial	final	tone	mc
 邚		y	0	
 邛	c	ug	0	ţyug0
 邜	ḑ	ig	3	
-邞	pv	u	0	pyo0
+邞	p	u	0	pyo0
 邟	ꝁ	og	2	ꝁag0,xag0,ꝁag2
 邠	p	rn	0	pin0
 邡	ꝑv	og	0	pyag0,ꝑyag2
@@ -25978,7 +25978,7 @@ character	initial	final	tone	mc
 邽	kv	i	0	kue0
 邾	tj	y	0	tryo0
 邿	sj	i	0	sji0
-郀	ꝁv	u	0	ꝁo0
+郀	ꝁ	u	0	ꝁo0
 郁	qj	ug	3	qiuk
 郂	k	oj	0	kai0
 郃	h	om	3	xop,kop
@@ -26004,9 +26004,9 @@ character	initial	final	tone	mc
 郗	ŧj	i	0	ŧrii0
 郗	x	i	0	ŧrii0
 郘	l	wj	1	lio1
-郙	ꝑv	u	1	ꝑyo0,pyo1
+郙	ꝑ	u	1	ꝑyo0,pyo1
 郚	g		0	go0
-郛	ꝑv	u	0	ꝑyo0
+郛	ꝑ	u	0	ꝑyo0
 郜	k	ov	2	kau2,kuuk
 郝	ꝁ	og	3	xak,sjek,ṯjek
 郝	k	og	3	xak,sjek,ṯjek
@@ -26063,7 +26063,7 @@ character	initial	final	tone	mc
 鄑	ţ	i	0	ţie0
 鄒	tj	rv	0	ţriu0
 鄓	q	im	3	qiap
-鄔	qv	u	0	qo0,qo1,qio2
+鄔	q	u	0	qo0,qo1,qio2
 鄔	x	wg	0	qo0,qo1,qio2
 鄔	x	wg	2	qo0,qo1,qio2
 鄖	hv	rn	0	yon0
@@ -26073,11 +26073,11 @@ character	initial	final	tone	mc
 鄙	ꝑ	i	1	pii1
 鄚	m	og	3	mak
 鄛	dj	av	0	ḑrau0
-鄜	ꝑv	u	0	ꝑyo0,luk
+鄜	ꝑ	u	0	ꝑyo0,luk
 鄝	l	iv	1	leu1
 鄞	g	rn	0	gin0,gion0
 鄟	tj	yn	0	duan0,ţjyen0,ḑjyen1
-鄠	hv	u	2	xo1
+鄠	h	u	2	xo1
 鄡	ꝁ	iv	0	ꝁeu0
 鄢	q	in	0	qien0,qian1,qian2
 鄣	tj	wg	0	ţjag0
@@ -26104,7 +26104,7 @@ character	initial	final	tone	mc
 鄵	ṯ	ov	2	ṯau2
 鄶	ꝁ	uj	1	kuad0
 鄶	ꝁ	uj	2	kuad0
-鄷	pv	ug	0	
+鄷	p	ug	0	
 鄸	m	ug	0	miug2
 鄹	ţ	rv	0	ţriu0,ḑyo1,zuan1
 鄺	ꝁv	og	2	xuag0,kuag1
@@ -26118,9 +26118,9 @@ character	initial	final	tone	mc
 酀	q	in	2	qen2
 酁	dj	am	0	ḑrem0,ḑram0
 酃	l	ig	0	leg0
-酄	xv	un	0	xuan0
+酄	x	un	0	xuan0
 酅	cv	i	0	xue0
-酆	ꝑv	ug	0	ꝑiug0
+酆	ꝑ	ug	0	ꝑiug0
 酇	ţ	an	2	ḑuan0
 酇	ḑ	o	0	ḑuan0
 酈	l	ig	3	lie0,lek
@@ -26148,7 +26148,7 @@ character	initial	final	tone	mc
 酙	ţ	rm	0	
 酚	pv	rn	0	
 酛		yn	0	
-酜	pv	u	0	
+酜	p	u	0	
 酞	ŧ	aj	2	
 酟	ŧ	im	0	
 酠	ꝁ	a	1	
@@ -26203,7 +26203,7 @@ character	initial	final	tone	mc
 醍	ŧ	rj	1	de0,ŧe1
 醎	h	am	0	xrem0
 醏	t	ov	0	to0
-醐	hv	u	0	xo0
+醐	h	u	0	xo0
 醑	s	wj	1	sio1
 醒	s	ig	1	seg0,seg1,seg2
 醒	s	eg	1	seg0,seg1,seg2
@@ -26289,12 +26289,12 @@ character	initial	final	tone	mc
 釙	ꝑ	ug	3	
 釚	c	rv	0	ţiu0
 釛	p	an	3	
-釜	pv	u	1	byo1
+釜	p	u	1	byo1
 針	tj	rm	0	ţjim0,ţjim2
 釞	ţ	rm	3	
 釟	p	an	3	pret
 釠	l	yn	2	
-釡	pv	u	1	
+釡	p	u	1	
 釢	n	aj	1	
 釣	t	iv	2	teu2
 釤	sj	am	0	sram2
@@ -26342,8 +26342,8 @@ character	initial	final	tone	mc
 鈄	t	rv	1	ŧu1
 鈅	g	yn	3	gyat
 鈆		yn	0	ţjyug0,jyen0
-鈇	pv	u	0	pyo0
-鈇	pv	u	1	pyo0
+鈇	p	u	0	pyo0
+鈇	p	u	1	pyo0
 鈈	p	rn	3	
 鈉	n	am	3	njyed0
 鈊	s	rm	0	
@@ -26584,7 +26584,7 @@ character	initial	final	tone	mc
 鋏	k	am	3	kep
 鋐	v	rg	0	
 鋑	ṯ	yn	0	ţyen0
-鋒	ꝑv	ug	0	ꝑyug0
+鋒	ꝑ	ug	0	ꝑyug0
 鋓	ṯ	im	0	
 鋔	v	an	1	
 鋕	ţ	i	2	
@@ -26716,7 +26716,7 @@ character	initial	final	tone	mc
 錻	m	ov	1	
 錼	n	oj	2	
 錽	bv	an	2	myam1
-錿	pv	u	1	
+錿	p	u	1	
 鍀	t	rg	3	
 鍁	x	im	0	
 鍁	x	in	0	
@@ -26738,8 +26738,8 @@ character	initial	final	tone	mc
 鍎	d	rn	3	duot
 鍏	hv	i	0	yoi0,yoi1
 鍐	ţ	ug	0	
-鍑	pv	ug	3	piu2,piuk
-鍑	pv	u	2	piu2,piuk
+鍑	p	ug	3	piu2,piuk
+鍑	p	u	2	piu2,piuk
 鍒	nj	rv	0	nju0
 鍓	ṯ	im	3	
 鍔	g	og	3	gak
@@ -26757,8 +26757,8 @@ character	initial	final	tone	mc
 鍞	x	rg	0	
 鍟	s	eg	2	
 鍠	hv	og	0	xruag0
-鍡	qv	uj	1	quai1
-鍢	pv	ug	3	
+鍡	q	uj	1	quai1
+鍢	p	ug	3	
 鍣	ţ	iv	0	
 鍤	ŧj	am	3	ŧriep,ṯrep
 鍥	ꝁ	in	3	ket,ꝁet
@@ -26774,14 +26774,14 @@ character	initial	final	tone	mc
 鍮	ŧ	rv	0	ŧu0
 鍯	ṯ	ug	0	ṯug0
 鍰	hv	an	0	xruan0
-鍰	hv	un	0	xruan0
+鍰	h	un	0	xruan0
 鍱		im	3	jep
 鍲	m	rn	0	min0
 鍳	k	am	2	
 鍴	t	yn	0	tuan0
 鍵	c	in	2	ţien0,ţian1,ţien1
 鍶	s	i	0	
-鍷	pv	uj	0	
+鍷	p	uj	0	
 鍸		u	0	
 鍹	s	yn	0	
 鍺	tj	e	1	tua1
@@ -26831,7 +26831,7 @@ character	initial	final	tone	mc
 鎟	s	og	1	
 鎠	k	og	2	
 鎡	ţ	i	0	ţi0
-鎢	qv	u	0	qo0
+鎢	q	u	0	qo0
 鎣		ig	0	jyeg0,queg2
 鎤	pv	og	1	
 鎥	d	iv	0	
@@ -26863,7 +26863,7 @@ character	initial	final	tone	mc
 鎺	ţ	ov	1	
 鎻	s	o	1	
 鎼	ql	a	2	
-鎽	pv	ug	0	
+鎽	p	ug	0	
 鎾	qv	rn	0	
 鎿	n	a	0	
 鏀	l	ov	1	lo1
@@ -26903,7 +26903,7 @@ character	initial	final	tone	mc
 鏝	m	an	2	muan0,muan2
 鏞	j	ug	0	jyug0
 鏟	ŧj	an	1	ṯren1,ṯran2
-鏠	pv	ug	0	
+鏠	p	ug	0	
 鏡	k	eg	2	kieg2
 鏡	k	eg	1	kieg2
 鏢	p	iv	0	ꝑjeu0
@@ -27196,14 +27196,14 @@ character	initial	final	tone	mc
 闇	q	om	0	qom2
 闈	hv	i	0	yoi0
 闉	qj	rn	0	qjin0
-闊	ꝁv	un	3	ꝁuat
+闊	ꝁ	un	3	ꝁuat
 闋	ꝁ	yn	3	ꝁuet
 闌	l	an	0	lan0
 闍	t	ov	0	to0,ḑja0
 闍	zj	e	0	to0,ḑja0
 闍	tj	e	0	to0,ḑja0
 闎	ḑ	yn	0	
-闏	pv	ug	0	
+闏	p	ug	0	
 闐	d	in	0	den0,den2
 闑	g	in	3	get,giet
 闑	n	im	3	get,giet
@@ -27295,7 +27295,7 @@ character	initial	final	tone	mc
 陂	ꝑ	o	0	pie0,pie2
 陂	b	i	0	pie0,pie2
 陃	p	ig	1	
-附	bv	u	2	byo2
+附	b	u	2	byo2
 陊	d	o	2	drie1,da1
 陊	d	o	1	drie1,da1
 陋	l	rv	2	lu2
@@ -27308,14 +27308,14 @@ character	initial	final	tone	mc
 陑	nj	i	0	nji0
 陒	kv	i	1	kye1
 陓	q	y	0	qyo0
-陓	qv	u	0	qyo0
+陓	q	u	0	qyo0
 陔	k	oj	0	kai0
 陖	ţ	on	2	syn2
 陗	ṯ	iv	2	ṯieu2
 陘	h	ig	0	xeg0
 陘	k	ig	2	xeg0
 陙	zj	on	0	ḑjyn0
-陚	pv	u	2	pyo2
+陚	p	u	2	pyo2
 陛	b	rj	2	be1
 陜	h	am	3	xrep
 陜	x	am	3	xrep
@@ -27375,7 +27375,7 @@ character	initial	final	tone	mc
 隅	g	y	2	gyo0
 隆	l	ug	0	liug0
 隇	qv	i	0	qyoi0
-隈	qv	uj	0	quai0,quai2
+隈	q	uj	0	quai0,quai2
 隉	n	im	3	get
 隉	n	in	3	get
 隊	d	uj	2	duai2
@@ -27394,7 +27394,7 @@ character	initial	final	tone	mc
 隔	k	ig	3	krek
 隕	hv	rn	1	yn1
 隕	h	yn	0	yn1
-隖	qv	u	1	qo1
+隖	q	u	1	qo1
 隖	q	ov	2	qo1
 隗	g	rj	1	guai1
 隗	g	aj	1	guai1
@@ -27431,7 +27431,7 @@ character	initial	final	tone	mc
 隱	qj	rn	1	qion1,qion2
 隲	ţ	rn	3	
 隳	xv	i	0	xjye0
-隳	xv	uj	0	xjye0
+隳	x	uj	0	xjye0
 隴	l	ug	1	lyug1
 隵	x	i	0	xie0
 隷	d	rj	2	le2
@@ -27462,7 +27462,7 @@ character	initial	final	tone	mc
 雌	ṯ	i	0	ṯie0
 雍	qj	ug	0	qyug0,qyug2
 雎	ţ	wj	0	ṯio0
-雐	xv	u	0	xo0
+雐	x	u	0	xo0
 雒	ql	og	3	lak
 雓		y	0	jo0
 雔	dj	rv	0	ḑju0
@@ -27579,7 +27579,7 @@ character	initial	final	tone	mc
 霸	p	a	2	pra2
 霹	ꝑ	ig	3	ꝑek
 霺	m	ej	0	
-霻	pv	ug	0	
+霻	p	ug	0	
 霼	x	i	2	xioi1,xioi2
 霽	ţ	rj	2	ţe2
 霾	m	aj	0	mrai0
@@ -27600,7 +27600,7 @@ character	initial	final	tone	mc
 靈	l	ig	0	leg0
 靈	l	eg	0	leg0
 靉	q	oj	1	qioi1,qai2
-靊	pv	ug	0	
+靊	p	ug	0	
 靋	l	ig	3	
 靌	p	ov	1	
 靍	pv	og	3	
@@ -27631,7 +27631,7 @@ character	initial	final	tone	mc
 靤	ꝑ	av	2	brau2
 靦	ŧ	in	1	ŧen1
 靦	m	in	1	ŧen1
-靧	xv	uj	2	xuai2
+靧	x	uj	2	xuai2
 靨	q	im	3	qjep
 靨	q	im	1	qjep
 革	k	ag	3	krek
@@ -27645,7 +27645,7 @@ character	initial	final	tone	mc
 靭	g	rn	2	
 靮	t	ig	3	tek
 靯	d	ov	2	do1
-靰	qv	u	0	
+靰	q	u	0	
 靱	j	rn	2	
 靱	g	rn	2	
 靲	c	rm	0	ţim0
@@ -27749,7 +27749,7 @@ character	initial	final	tone	mc
 韃	ŧ	an	3	
 韃	t	an	3	
 韄	hv	ag	3	xo2
-韄	hv	u	2	xo2
+韄	h	u	2	xo2
 韅	x	in	1	xen1
 韆	ṯ	in	0	ṯien0
 韇	d	ug	3	duk
@@ -27811,7 +27811,7 @@ character	initial	final	tone	mc
 韽	q	om	0	qom0,qrem2
 韾	qj	rm	0	qjim0
 響	x	wg	1	xiag1
-頀	hv	u	2	xo2
+頀	h	u	2	xo2
 頁	h	im	3	xet
 頂	t	ig	1	teg1
 頂	t	eg	1	teg1
@@ -27868,12 +27868,12 @@ character	initial	final	tone	mc
 頨	h	y	1	xjyen0,yo1
 頩	ꝑ	ig	0	ꝑeg0,ꝑeg1
 頪	l	oj	2	luad0
-頫	pv	u	1	pyo1,ŧeu2
+頫	p	u	1	pyo1,ŧeu2
 頫	ŧ	iv	2	pyo1,ŧeu2
 頬	k	am	3	
 頭	d	rv	0	du0
 頭	ŧ	rv	1	du0
-頮	xv	uj	2	xuai2
+頮	x	uj	2	xuai2
 頯	cv	i	0	ţyi0,kyi1
 頯	c	rv	0	ţyi0,kyi1
 頰	k	am	3	kep
@@ -27926,11 +27926,11 @@ character	initial	final	tone	mc
 顛	t	in	0	ten0
 顜	k	og	1	
 顜	k	og	3	
-顝	ꝁv	uj	0	ꝁuai0,ꝁuai1,ꝁuot
+顝	ꝁ	uj	0	ꝁuai0,ꝁuai1,ꝁuot
 類	l	uj	2	lyi2
 顟	l	av	0	lrau0
 顠	b	iv	1	bjeu1,ꝑjeu1
-顡	gv	uj	2	guai1,gioi2,ŧruai2
+顡	g	uj	2	guai1,gioi2,ŧruai2
 顢	m	un	0	muan0
 顣	ṯ	ug	3	ţiuk
 顤	g	iv	0	geu0,xrau0,geu2
@@ -27939,7 +27939,7 @@ character	initial	final	tone	mc
 顧	k	u	2	ko2
 顨	s	on	2	
 顩	g	im	1	drim1,giem1
-顪	xv	uj	2	xyad0
+顪	x	uj	2	xyad0
 顫	tj	in	2	ţjen2
 顬	nj	y	0	njyo0
 顭	m	rg	2	
@@ -27950,11 +27950,11 @@ character	initial	final	tone	mc
 顲	l	om	1	lim1,lom1,lom2
 顳	n	im	3	njep
 顴	c	yn	0	ţyen0
-風	pv	ug	0	piug0,piug2
-風	pv	ug	2	piug0,piug2
+風	p	ug	0	piug0,piug2
+風	p	ug	2	piug0,piug2
 颩	p	iv	0	
 颪	h	a	2	
-颫	bhv	u	0	byo0
+颫	bh	u	0	byo0
 颬	x	a	0	xra0
 颭	tj	im	1	ţjem1
 颮	b	av	0	brau0,ꝑruk
@@ -27990,8 +27990,8 @@ character	initial	final	tone	mc
 飉	l	iv	0	leu0
 飊	p	iv	0	pjeu0
 飋	sj	rn	3	srit
-飌	pv	ug	0	piug0
-飌	pv	ug	2	piug0
+飌	p	ug	0	piug0
+飌	p	ug	2	piug0
 飍	x	av	0	xy0
 飛	pv	i	0	pyoi0
 飜	ꝑv	an	0	ꝑyan0
@@ -28099,10 +28099,10 @@ character	initial	final	tone	mc
 餪	n	yn	1	nuan1
 餫	hv	rn	2	xuon0,yon2
 餫	hv	rn	0	xuon0,yon2
-餬	hv	u	0	xo0
+餬	h	u	0	xo0
 餭	hv	og	0	xuag0
 餮	ŧ	in	3	ŧet
-餯	xv	uj	2	xyad0
+餯	x	uj	2	xyad0
 餰	k	in	0	
 餱	h	rv	0	xu0
 餲	q	aj	2	qied0,qrad0,xat,qat
@@ -28183,7 +28183,7 @@ character	initial	final	tone	mc
 馢	ţ	in	0	
 馣	q	om	0	qom0
 馤	q	oj	2	qad0
-馥	pv	ug	3	biuk,bik
+馥	p	ug	3	biuk,bik
 馦	x	im	0	xem0
 馧	qv	rn	0	qyon0,quot
 馨	x	ig	0	xeg0
@@ -28192,7 +28192,7 @@ character	initial	final	tone	mc
 馫	x	ig	0	
 馬	m	a	1	mra1
 馭	g	y	2	gio2
-馮	bhv	ug	0	biug0,big0
+馮	bh	ug	0	biug0,big0
 馮	b	rg	0	biug0,big0
 馯	h	on	2	ꝁran0,xan2
 馯	h	on	0	ꝁran0,xan2
@@ -28242,7 +28242,7 @@ character	initial	final	tone	mc
 駗	ŧj	rn	1	lin0,ţjin1
 駘	d	oj	0	dai0,dai1
 駘	d	oj	1	dai0,dai1
-駙	bv	u	2	byo2
+駙	b	u	2	byo2
 駚	q	wg	1	qiag1,qag1
 駛	sj	rj	1	sri1,sri2,sri2
 駜	b	rn	3	bjit,bit
@@ -28404,7 +28404,7 @@ character	initial	final	tone	mc
 驦	sj	wg	0	sriag0
 驧	c	ug	3	ţiuk
 驨	cv	i	0	xue0
-驩	xv	un	0	xuan0
+驩	x	un	0	xuan0
 驪	l	i	0	lie0,le0
 驫	p	iv	0	pjeu0,py0
 骨	kv	rn	3	kuot
@@ -28427,7 +28427,7 @@ character	initial	final	tone	mc
 骴	ṯ	i	0	ḑie0,ḑie2
 骵	ŧ	rj	1	
 骶	t	rj	1	te2
-骷	pv	u	0	
+骷	p	u	0	
 骸	h	aj	0	xrai0
 骸	h	oj	0	xrai0
 骹	ꝁ	av	0	ꝁrau0,ꝁat
@@ -28463,7 +28463,7 @@ character	initial	final	tone	mc
 髓	s	uj	1	sye1
 體	ŧ	rj	1	ŧe1
 髕	p	rn	2	bjin1
-髖	ꝁv	un	0	ꝁuon0,ꝁuan0
+髖	ꝁ	un	0	ꝁuon0,ꝁuan0
 髗	l	ov	0	lo0
 高	k	ov	0	kau0
 髙	k	ov	0	kau0
@@ -28572,7 +28572,7 @@ character	initial	final	tone	mc
 鬲	k	ag	3	krek,lek
 鬲	x	rg	3	krek,lek
 鬳	g	in	2	gian2
-鬴	pv	u	1	byo1
+鬴	p	u	1	byo1
 鬵	ḑ	rm	0	zim0,ḑim0,ḑiem0
 鬵	ḑ	im	0	zim0,ḑim0,ḑiem0
 鬷	ţ	ug	0	ţug0
@@ -28587,7 +28587,7 @@ character	initial	final	tone	mc
 鬾	c	i	2	ţie0,ţie2
 鬿	c	ej	0	
 魀	k	aj	2	
-魁	ꝁv	uj	0	ꝁuai0
+魁	ꝁ	uj	0	ꝁuai0
 魂	v	rn	0	
 魃	b	rn	3	buat
 魃	b	an	3	buat
@@ -28641,7 +28641,7 @@ character	initial	final	tone	mc
 魮	b	i	0	bjii0
 魯	l	ov	1	lo1
 魰	m	rn	0	
-魱	hv	u	0	xo0
+魱	h	u	0	xo0
 魲	l	ov	0	
 魳	ţ	am	3	ţop
 魴	bhv	og	0	byag0
@@ -28683,7 +28683,7 @@ character	initial	final	tone	mc
 鮐	d	oj	0	ŧai0
 鮑	p	av	0	brau1
 鮑	b	av	2	brau1
-鮒	bv	u	2	byo2
+鮒	b	u	2	byo2
 鮓	tj	a	1	ţra1
 鮓	tj	a	2	ţra1
 鮔	c	y	2	
@@ -28713,9 +28713,9 @@ character	initial	final	tone	mc
 鮨	tj	i	0	ţjii0
 鮨	c	i	0	ţjii0
 鮩	b	ig	2	brag1,beg1,bjit
-鮪	pv	uj	1	yi1
+鮪	p	uj	1	yi1
 鮫	k	av	0	krau0
-鮬	ꝁv	u	0	ꝁo0,bo2
+鮬	ꝁ	u	0	ꝁo0,bo2
 鮭	kv	i	0	kue0,ꝁue0,xre0
 鮭	h	aj	0	kue0,ꝁue0,xre0
 鮭	ꝁv	a	0	kue0,ꝁue0,xre0
@@ -28724,7 +28724,7 @@ character	initial	final	tone	mc
 鮯	k	om	3	kop
 鮰		uj	0	
 鮱	l	ov	1	
-鮲	bv	ug	3	
+鮲	b	ug	3	
 鮳	ꝁ	av	2	
 鮴	qj	rv	0	
 鮵	d	yn	3	duat
@@ -28791,7 +28791,7 @@ character	initial	final	tone	mc
 鯮	ţ	ug	0	
 鯯	ţ	rj	2	
 鯰	n	im	0	
-鯱	pv	u	1	
+鯱	p	u	1	
 鯲	q	y	0	
 鯳	t	rj	1	
 鯴	s	rn	3	
@@ -28814,7 +28814,7 @@ character	initial	final	tone	mc
 鰂	ḑx	ag	3	ḑok
 鰂	ţ	rg	3	ḑok
 鰃	qv	i	0	quai0
-鰃	qv	uj	0	quai0
+鰃	q	uj	0	quai0
 鰄	qv	i	0	qyoi0
 鰅	g	y	0	gyug0,gyo0
 鰅	gj	ug	0	gyug0,gyo0
@@ -28830,7 +28830,7 @@ character	initial	final	tone	mc
 鰏	p	ig	3	
 鰐	g	og	3	gak
 鰑	j	og	0	jag0
-鰒	pv	ug	3	biuk
+鰒	p	ug	3	biuk
 鰓	s	oj	0	sai0
 鰔	k	rm	1	
 鰕	x	a	0	xra0
@@ -28842,7 +28842,7 @@ character	initial	final	tone	mc
 鰛	qv	rn	0	
 鰜	k	im	0	kem0,xrem0
 鰝	h	ov	2	xau1,xak
-鰞	qv	u	0	qo0
+鰞	q	u	0	qo0
 鰟	b	og	0	
 鰟	bhv	og	0	
 鰠	s	ov	0	sau0
@@ -28939,7 +28939,7 @@ character	initial	final	tone	mc
 鱭	ḑ	rj	1	ḑe1
 鱭	ḑ	rj	0	ḑe1
 鱮	ḑ	wj	2	zio1
-鱯	hv	u	2	xo2,xruek
+鱯	h	u	2	xo2,xruek
 鱰	ḑ	y	1	
 鱱	l	rj	2	
 鱲	l	im	3	liep
@@ -28957,22 +28957,22 @@ character	initial	final	tone	mc
 鳥	n	iv	1	teu1
 鳥	t	iv	1	teu1
 鳦		yn	3	qit
-鳧	bhv	u	0	byo0
+鳧	bh	u	0	byo0
 鳨	l	ig	3	lik
 鳩	k	rv	0	kiu0
 鳩	ꝁ	rv	0	kiu0
 鳪	p	ug	3	puk
 鳫	g	an	2	gran2
-鳬	bhv	u	0	
+鳬	bh	u	0	
 鳭	t	ov	0	trau0
 鳮	k	rj	0	
-鳯	bv	ug	2	
+鳯	b	ug	2	
 鳰	j	rm	3	
 鳱	k	on	0	kan0
 鳱	h	on	2	kan0
 鳲	sj	i	0	sjii0
-鳳	bv	ug	2	biug2
-鳳	pv	ug	1	biug2
+鳳	b	ug	2	biug2
+鳳	p	ug	1	biug2
 鳴	m	ig	0	mieg0
 鳵	p	ov	1	
 鳶	q	yn	0	jyen0
@@ -28980,7 +28980,7 @@ character	initial	final	tone	mc
 鳷	tj	i	0	ţje0
 鳸		u	2	
 鳹	c	rm	0	ţiem0
-鳺	pv	u	0	pyo0
+鳺	p	u	0	pyo0
 鳻	p	an	0	byon0,pran0
 鳼	m	rn	0	myon0
 鳽	k	in	0	ken0,gen0,ꝁreg0,grek
@@ -28993,14 +28993,14 @@ character	initial	final	tone	mc
 鴃	kv	ig	3	
 鴃	ꝁ	yn	3	
 鴄	ꝑ	rn	3	
-鴅	xv	un	0	xuan0
+鴅	x	un	0	xuan0
 鴆	dj	rm	2	drim2
 鴇	p	ov	1	pau1
 鴈	g	an	2	gran2
 鴉	q	a	0	qra0
 鴊	tj	ig	2	ţjeg0,ţjeg2
 鴋	pv	og	0	byag0,pyag0
-鴌	bv	ug	2	
+鴌	b	ug	2	
 鴍	m	rn	0	
 鴏	d	rg	3	dok
 鴐	k	a	0	kra0
@@ -29009,7 +29009,7 @@ character	initial	final	tone	mc
 鴓	b	rn	3	met
 鴓	m	in	3	met
 鴓	m	rn	3	met
-鴔	bv	ug	3	
+鴔	b	ug	3	
 鴕	d	o	0	
 鴖	m	rn	0	
 鴗	l	am	3	lip
@@ -29038,7 +29038,7 @@ character	initial	final	tone	mc
 鴫	d	in	0	
 鴬	q	rg	0	
 鴭	t	uj	0	tuai0
-鴮	qv	u	0	qo0
+鴮	q	u	0	qo0
 鴯	nj	i	0	nji0
 鴰	ꝁ	un	3	kuat,kruat
 鴰	kv	an	3	kuat,kruat
@@ -29074,7 +29074,7 @@ character	initial	final	tone	mc
 鵊	k	am	3	krep
 鵋	c	i	2	ţi2
 鵌	d	ov	0	jo0,do0
-鵍	pv	un	0	
+鵍	p	un	0	
 鵎	ŧ	o	1	ŧua1
 鵏	p	ov	1	po0,bo2
 鵐	m	ov	0	myo0
@@ -29103,7 +29103,7 @@ character	initial	final	tone	mc
 鵦	l	ug	3	
 鵧	b	i	0	bjii0
 鵨	sj	y	0	sjo0
-鵩	bv	ug	3	biuk
+鵩	b	ug	3	biuk
 鵪	q	rm	0	
 鵪	q	an	2	
 鵫	dj	og	3	trau2,druk
@@ -29153,18 +29153,18 @@ character	initial	final	tone	mc
 鶕	q	rm	0	
 鶖	ṯ	rv	0	ṯiu0
 鶗	d	rj	0	
-鶘	hv	u	0	xo0
+鶘	h	u	0	xo0
 鶙	d	rj	0	de0
 鶚	g	og	3	gak
 鶛	k	aj	0	krai0
 鶜	m	av	0	mrau0
-鶝	pv	ug	3	piuk,bik
+鶝	p	ug	3	piuk,bik
 鶞	ŧj	on	0	ŧryn0
 鶟	d	rn	3	duot
 鶠	q	in	1	qian1
 鶠	q	an	2	qian1
 鶡	x	on	3	xat
-鶢	hv	un	0	yan0
+鶢	h	un	0	yan0
 鶣	ꝑ	in	0	
 鶤	ꝁv	rn	0	kuon0,yon2
 鶥	m	i	0	mii0
@@ -29363,23 +29363,23 @@ character	initial	final	tone	mc
 麥	m	ag	3	mrek
 麧	h	rn	3	xot
 麨	ŧj	iv	1	ṯjeu1
-麩	ꝑv	u	0	ꝑyo0
+麩	ꝑ	u	0	ꝑyo0
 麪	m	in	2	
 麫	m	in	2	men2
-麬	pv	u	0	
+麬	p	u	0	
 麭	ꝑ	av	2	
 麮	ꝁ	wj	2	ꝁio1,ꝁio2
 麯	ꝁ	ug	3	
 麯	k	ug	3	
 麰	m	rv	0	miu0
-麱	ꝑv	u	0	ꝑyo0
+麱	ꝑ	u	0	ꝑyo0
 麲	h	an	2	
 麳	l	oj	0	lai0
 麴	ꝁ	ug	3	ꝁiuk
 麴	k	ug	3	ꝁiuk
 麵	m	in	2	men2
 麶	ṯ	i	0	
-麷	ꝑv	ug	0	ꝑiug0,ꝑiug2
+麷	ꝑ	ug	0	ꝑiug0,ꝑiug2
 麻	m	a	0	mra0
 麼	qm	o	0	mua1
 麽	qm	o	0	
@@ -29460,7 +29460,7 @@ character	initial	final	tone	mc
 黹	tj	i	1	trii1
 黺	pv	rn	1	pyon1
 黻	pv	rn	3	pyot
-黼	pv	u	1	pyo1
+黼	p	u	1	pyo1
 黽	m	rn	1	mjin1,mjen1,mreg1
 黽	m	ag	1	mjin1,mjen1,mreg1
 黿	g	yn	0	gyan0,guan0
@@ -29639,7 +29639,7 @@ character	initial	final	tone	mc
 𣿅	t	ug	1	
 𤥂		ig	3	
 𨧤	x	rg	0	
-𡧛	bv	u	2	
+𡧛	b	u	2	
 𣳈	s	in	0	
 𤤳		i	1	
 𨦪	j	og	1	
@@ -29651,7 +29651,7 @@ character	initial	final	tone	mc
 𧪄	k	ej	2	
 𣘀	s	rv	0	
 𤪱	s	rv	0	
-𢔓	bv	ug	2	
+𢔓	b	ug	2	
 𠍾	q	in	1	
 𠎀	c	in	3	
 𠍇	ṯ	an	2	
@@ -29780,7 +29780,7 @@ character	initial	final	tone	mc
 𢸍	ţ	rn	2	
 𤧟	d	ig	0	
 𡎎	s	rj	2	
-𡟼	pv	uj	2	
+𡟼	p	uj	2	
 𢸶	ṯ	yn	3	
 𤂌	ꝁ	in	3	
 𥜝	ꝁ	in	3	
@@ -29804,7 +29804,7 @@ character	initial	final	tone	mc
 𢣷	d	ig	3	
 𤎜	l	og	1	
 𤨡	l	og	1	
-𣟂	pv	un	0	
+𣟂	p	un	0	
 𤇍	z	on	3	
 𩃭	ḑ	ug	0	
 𣏦	m	ug	3	
@@ -29923,7 +29923,7 @@ character	initial	final	tone	mc
 𢘜	s	i	0	
 𥡗	m	a	1	
 𧬹	l	rj	1	
-𧄦	pv	ug	3	
+𧄦	p	ug	3	
 𩄍	ṯ	rv	0	
 𣻗		i	0	
 𦻓	ḑ	ig	0	
@@ -30065,7 +30065,7 @@ character	initial	final	tone	mc
 𣲛	z	ig	0	
 𨬌	ꝁv	rn	0	
 𥗛	ḑ	in	0	
-𠴱	hv	u	0	xo0
+𠴱	h	u	0	xo0
 𨫡	c	in	2	
 𨯫	g	og	3	
 𨫢	s	wg	0	
@@ -30097,7 +30097,7 @@ character	initial	final	tone	mc
 𧥺	kv	rn	2	in0,kjyn2
 𧥺	ꝁv	rn	0	in0,kjyn2
 𧅵	b	rn	0	
-𠘰	pv	ug	0	
+𠘰	p	ug	0	
 𤅜	ꝑ	iv	0	
 𥜆	l	rv	0	
 𦴧	pv	ej	0	
@@ -30111,7 +30111,7 @@ character	initial	final	tone	mc
 𩬅		im	0	
 𨘀	qj	ug	3	
 𦦨		im	2	
-𣁽	pv	uj	0	
+𣁽	p	uj	0	
 𩴾	m	in	3	
 𡡣	k	ug	3	
 𤉋	ţ	ig	0	
@@ -30202,7 +30202,7 @@ character	initial	final	tone	mc
 𣺊	k	a	0	
 𣖕	ꝑ	eg	0	
 𣸹	b	ig	0	
-𣺿	pv	ug	0	
+𣺿	p	ug	0	
 𡢄	m	rn	1	
 𣺉	ql	rm	0	
 𠗠	m	ag	2	
@@ -30385,7 +30385,7 @@ character	initial	final	tone	mc
 𦭵	j	og	0	jag0
 𠤖	qm	e	0	
 𠁎	l	in	0	
-𣗏	pv	ug	0	
+𣗏	p	ug	0	
 𦐒	g	rj	2	
 𦏸	j	rj	2	
 𤥢	ꝁ	og	3	
@@ -30467,7 +30467,7 @@ character	initial	final	tone	mc
 𡓨	qv	rn	1	
 𢜟	k	og	0	
 𣶸	p	ig	1	
-𢞁	pv	ug	0	
+𢞁	p	ug	0	
 𢥫	v	rn	2	
 𩸭	l	wj	2	
 𪇵	kv	og	1	
@@ -30558,7 +30558,7 @@ character	initial	final	tone	mc
 𧹏	ţ	an	2	
 𣿭		i	0	
 𣸭	qj	ug	3	
-𠏵	bv	ug	2	
+𠏵	b	ug	2	
 𨰜	ţ	wg	3	
 𦯀	b	rn	2	
 𡑒	k	rm	1	
@@ -30616,7 +30616,7 @@ character	initial	final	tone	mc
 𠘙	l	og	3	
 𡾞	x	ej	0	
 𪊶	ŧ	ig	1	
-𩅛	bhv	ug	0	
+𩅛	bh	ug	0	
 𨩙		ig	0	
 𩐠	x	ug	0	xug0
 𧫴	k	rn	1	
@@ -30632,7 +30632,7 @@ character	initial	final	tone	mc
 𠂔	tj	i	1	ţri1
 𠊷	dj	i	2	drii2
 𠎠	k	ig	1	
-𠓗	ꝑv	u	2	ꝑyo2,ꝑrak
+𠓗	ꝑ	u	2	ꝑyo2,ꝑrak
 𠗕	ţ	on	2	
 𠘕	x	ej	0	
 𠙶	q	rv	1	qu1
@@ -30680,7 +30680,7 @@ character	initial	final	tone	mc
 𡕷	x	ig	2	
 𡘙	ŧ	aj	2	
 𡟃	q	yn	1	
-𡟇	pv	uj	2	
+𡟇	p	uj	2	
 𡠭	s	yn	3	
 𡥪	s	on	2	
 𡨭	ḑ	ug	0	
@@ -30768,7 +30768,7 @@ character	initial	final	tone	mc
 𥊙	ţ	og	0	
 𥐙	ꝑ	an	3	ꝑret
 𣽊	ţ	on	2	
-𤪧	bv	ug	2	
+𤪧	b	ug	2	
 𥑆	k	a	0	
 𥑮	k	u	1	
 𦭒	ţ	ig	2	
@@ -30855,10 +30855,10 @@ character	initial	final	tone	mc
 𨃨	ţ	in	1	
 𡏅	l	og	1	
 𧧝	g	a	2	
-𩆨	pv	ug	0	
+𩆨	p	ug	0	
 𧂯	v	rn	1	
 𨦫		y	1	
-𧧽	pv	ug	0	
+𧧽	p	ug	0	
 𧨊	ḑ	a	2	
 𧬋	pv	an	3	
 𧵦	pv	og	2	
@@ -30909,10 +30909,10 @@ character	initial	final	tone	mc
 𩗩	l	rv	0	
 𩖰	ḑ	rm	0	
 𩖸	h	ov	0	
-𩜲	pv	ug	3	
+𩜲	p	ug	3	
 𩣑	q	on	0	
 𩥉	k	i	2	kii2
-𩥪	pv	ug	0	
+𩥪	p	ug	0	
 𩧃	l	rj	2	lied0
 𩨨	ḑ	i	2	
 𩬎	qj	rm	0	
@@ -30927,7 +30927,7 @@ character	initial	final	tone	mc
 𠲜	ţ	ag	0	
 𢒰	qj	ug	3	
 𤪓	z	yn	0	
-𨬬	pv	u	2	
+𨬬	p	u	2	
 𧢝	l	rj	2	
 𡟵	k	o	0	
 𨀤	ql	wj	0	
@@ -31017,7 +31017,7 @@ character	initial	final	tone	mc
 𣜠	x	ej	0	
 𣻷	qv	i	2	
 𣸬	ṯ	iv	0	
-𠒎	bhv	u	0	
+𠒎	bh	u	0	
 𠺶	n	am	3	
 𪐴	tj	y	1	tryo1
 𣃚	h	og	0	
@@ -31070,7 +31070,7 @@ character	initial	final	tone	mc
 𨬭	ḑ	og	3	
 𣳇	ţ	o	1	
 𥻗	ḑ	a	0	
-𧙖	qv	u	1	
+𧙖	q	u	1	
 𥔱	s	in	2	
 𡥄	ţ	i	1	
 𡋾	b	in	3	
@@ -31270,7 +31270,7 @@ character	initial	final	tone	mc
 𤧚	ṯ	ug	0	ṯug0
 𡠺	v	ig	0	
 𤅷	l	ig	0	
-𨉼	qv	u	2	
+𨉼	q	u	2	
 𥜽	s	in	3	
 𥭴	s	rn	0	
 𣄽	t	wg	3	
@@ -31293,7 +31293,7 @@ character	initial	final	tone	mc
 𥴰	ḑ	ig	2	
 𨨲	ḑ	i	0	
 𣊁	g	ov	0	
-𪄇	pv	u	1	
+𪄇	p	u	1	
 𡦀	l	og	1	
 𨜏		ig	0	jeg0
 𪊺	l	on	0	
@@ -31327,6 +31327,6 @@ character	initial	final	tone	mc
 龯	m	ov	2	
 𨧀	d	ov	2	
 𣽁	ţ	ug	0	
-𠌥	qv	u	2	
+𠌥	q	u	2	
 𠃌	kv	rn	1	
 十	zj	rm	3	ḑjip

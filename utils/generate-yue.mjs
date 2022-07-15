@@ -212,7 +212,7 @@ for (const x of jyutpingTable.concat([
     if (/^[iyw]/.test(final))
       initial = initial.replace(/j$/, '')
     else if (/^u/.test(final))
-      initial = initial.replace(/^v$/, '')
+      initial = initial.replace(/v$/, '')
 
     if (/^w/.test(initial + final)) {
       initial = 'j';
