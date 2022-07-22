@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/yue/generate.js"
+    "pages/yue/generate.js",
   ],
   "exclude": [
     "node_modules"
