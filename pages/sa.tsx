@@ -23,11 +23,11 @@ export default () => {
       [/ॡ|\u0963/g, "ḹ"],
       [/ऊ|\u0942/g, "u"],
 
-      [/ए|\u0947/g, "ai"],
-      [/ओ|\u094B/g, "au"],
+      [/ए|\u0947/g, "aj"],
+      [/ओ|\u094B/g, "av"],
 
-      [/ऐ|\u0948/g, "āi"],
-      [/औ|\u094C/g, "āu"],
+      [/ऐ|\u0948/g, "āj"],
+      [/औ|\u094C/g, "āv"],
 
       [/क/g, "q"],
       [/च/g, "k"],
@@ -42,13 +42,13 @@ export default () => {
       [/फ/g, "ꝑ"],
 
       [/ग/g, "c"],
-      [/ज/g, "z"],
+      [/ज/g, "y"],
       [/ड/g, "ḍ"],
       [/द/g, "d"],
       [/ब/g, "b"],
 
       [/घ/g, "ꞓ"],
-      [/झ/g, "ƶ"],
+      [/झ/g, "ɏ"],
       [/ढ/g, "ḏ",],
       [/ध/g, "đ"],
       [/भ/g, "ƀ"],
@@ -97,6 +97,10 @@ export default () => {
     ])
   }()
 
+  const td = c =>
+    <td>{c}<br />{convert(c).replace(/a/, '')}</td>
+
+
   return <>
     <h2>sanskrit</h2>
     <Textareas lang='sa' convert={convert}>{
@@ -105,7 +109,7 @@ export default () => {
 सर्वे मानवाः स्वतन्त्राः समुत्पन्नाः वर्तन्ते अपि च, गौरवदृशा अधिकारदृशा च समानाः एव वर्तन्ते। एते सर्वे चेतना-तर्क-शक्तिभ्यां सुसम्पन्नाः सन्ति।
 अपि च, सर्वेऽपि बन्धुत्व-भावनया परस्परं व्यवहरन्तु।`
     }</Textareas>
-    <a href='https://unicode.org/udhr/d/udhr_pol.html'>source of default text</a>
+    <a href='https://unicode.org/udhr/d/udhr_san.html'>source of default text</a>
 
     <div className='tables'>
       <table className="no-top">
@@ -123,7 +127,7 @@ export default () => {
           <th colSpan={4}>vowel</th>
         </tr>
         <tr>
-          <th rowSpan={2}>fricative</th>
+          <th rowSpan={2} className='v'>fricative</th>
           <th colSpan={4}>plossive</th>
           <th rowSpan={2} className='v'>nasal</th>
           <th rowSpan={2} className='v'>approximant</th>
@@ -131,8 +135,8 @@ export default () => {
           <th colSpan={2}>complex</th>
         </tr>
         <tr className='v-parent'>
-          <th>- aspirated</th>
           <th>+ aspirated</th>
+          <th>- aspirated</th>
           <th>- aspirated</th>
           <th>+ aspirated</th>
           <th>- long</th>
@@ -143,81 +147,81 @@ export default () => {
         <tr>
           <th>guttural</th>
           <td></td>
-          <td>क<br />q</td>
-          <td>ख<br />ꝗ</td>
-          <td>ग<br />c</td>
-          <td>घ<br />ꞓ</td>
-          <td>ङ<br />g</td>
-          <td>ह<br />h</td>
-          <td>अ<br />a</td>
-          <td>आ<br />ā</td>
+          {td('ख')}
+          {td('क')}
+          {td('ग')}
+          {td('घ')}
+          {td('ङ')}
+          {td('ह')}
+          <td>अ<br />{convert('अ')}</td>
+          <td>आ<br />{convert('आ')}</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <th>palatal</th>
-          <td>श<br />x</td>
-          <td>च<br />k</td>
-          <td>छ<br />ꝁ</td>
-          <td>ज<br />z</td>
-          <td>झ<br />ƶ</td>
-          <td>ञ<br />n</td>
-          <td>य<br />j</td>
-          <td>इ<br />j</td>
-          <td>ई<br />i</td>
-          <td>ए<br />ai</td>
-          <td>ऐ<br />āi</td>
+          {td('श')}
+          {td('छ')}
+          {td('च')}
+          {td('ज')}
+          {td('झ')}
+          {td('ञ')}
+          {td('य')}
+          {td('इ')}
+          <td>ई<br />{convert('ई')}</td>
+          <td>ए<br />{convert('ए')}</td>
+          <td>ए<br />{convert('ऐ')}</td>
         </tr>
         <tr>
           <th>retroflex</th>
-          <td>ष<br />ṣ</td>
-          <td>ट<br />ṭ</td>
-          <td>ठ<br />ṯ</td>
-          <td>ड<br />ḍ</td>
-          <td>ढ<br />ḏ</td>
-          <td>ण<br />ṇ</td>
-          <td>र<br />r</td>
-          <td>ऋ<br />r</td>
-          <td>ॠ<br />ṝ</td>
+          {td('ष')}
+          {td('ठ')}
+          {td('ट')}
+          {td('ड')}
+          {td('ढ')}
+          {td('ण')}
+          {td('र')}
+          <td>ऋ<br />{convert('ऋ')}</td>
+          <td>ॠ<br />{convert('ॠ')}</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <th>dental</th>
-          <td>स<br />s</td>
-          <td>त<br />t</td>
-          <td>थ<br />ŧ</td>
-          <td>द<br />d</td>
-          <td>ध<br />đ</td>
-          <td>न<br />n</td>
-          <td>ल<br />l</td>
-          <td>ऌ<br />l</td>
-          <td>ॡ<br />ḹ</td>
+          {td('स')}
+          {td('थ')}
+          {td('त')}
+          {td('द')}
+          {td('ध')}
+          {td('न')}
+          {td('ल')}
+          <td>ऌ<br />{convert('ऌ')}</td>
+          <td>ॡ<br />{convert('ॡ')}</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <th>labial</th>
           <td></td>
-          <td>प<br />p</td>
-          <td>फ<br />ꝑ</td>
-          <td>ब<br />b</td>
-          <td>भ<br />ƀ</td>
-          <td>म<br />m</td>
-          <td>व<br />v</td>
-          <td>उ<br />v</td>
-          <td>ऊ<br />u</td>
-          <td>ओ<br />au</td>
-          <td>औ<br />āu</td>
+          {td('फ')}
+          {td('प')}
+          {td('ब')}
+          {td('भ')}
+          {td('म')}
+          {td('व')}
+          {td('उ')}
+          {td('ऊ')}
+          <td>ओ<br />{convert('ओ')}</td>
+          <td>औ<br />{convert('औ')}</td>
         </tr>
         <tr>
           <th></th>
-          <td>ः<br />s</td>
+          <td>कः<br />{convert('कः').replace(/qa/, '')}</td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td>ं<br />n</td>
+          <td>कं<br />{convert('कं').replace(/qa/, '')}</td>
           <td></td>
           <td></td>
           <td></td>
